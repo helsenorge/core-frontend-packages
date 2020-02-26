@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Adobeanalytics Remove name and other ids from url 1`] = `"https://helsenorge.no/koordinator/"`;
+
+exports[`Adobeanalytics Should track SelfService Intent 1`] = `"self service intent"`;
+
+exports[`Adobeanalytics Should track Service alert 1`] = `"Har innhold"`;
+
+exports[`Adobeanalytics Should track Service alert 2`] = `"Har ikke innhold"`;
+
+exports[`Adobeanalytics Should track Service alert 3`] = `"service alert"`;
+
+exports[`Adobeanalytics Should track Url change 1`] = `
+Object {
+  "pageInfo": Object {
+    "pageName": "Tjenester:avtaler:avtale:endre",
+    "pageURL": "helsenorge.no/avtaler/avtale/{id}/endre",
+  },
+}
+`;
+
+exports[`Adobeanalytics Should track donor card 1`] = `"donor card NextOfKin"`;
+
+exports[`Adobeanalytics Should track donor card 2`] = `"donor card NextOfKin"`;
+
+exports[`Adobeanalytics Should track empty Url change correctly 1`] = `
+Object {
+  "pageInfo": Object {
+    "pageName": "Tjenester:",
+  },
+}
+`;
+
+exports[`Adobeanalytics Should track error 1`] = `
+Object {
+  "siteError": "Nivå 1: Teknisk feil",
+}
+`;
+
+exports[`Adobeanalytics Should track error 2`] = `"site error"`;
+
+exports[`Adobeanalytics Should track error 3`] = `
+Object {
+  "siteError": "Nivå 2: Driftsmelding",
+}
+`;
+
+exports[`Adobeanalytics Should track error 4`] = `"site error"`;
+
+exports[`Adobeanalytics Should track error 5`] = `
+Object {
+  "siteError": "Nivå 3: JavaScript feil",
+}
+`;
+
+exports[`Adobeanalytics Should track error 6`] = `"site error"`;
+
+exports[`Adobeanalytics Should track filter expand 1`] = `"true"`;
+
+exports[`Adobeanalytics Should track filter expand 2`] = `"filter expand"`;
+
+exports[`Adobeanalytics Should track filter usage 1`] = `"true"`;
+
+exports[`Adobeanalytics Should track filter usage 2`] = `"filter use"`;
+
+exports[`Adobeanalytics Should track page partner 1`] = `""`;
+
+exports[`Adobeanalytics Should track profile interaction 1`] = `"profile interaction"`;
+
+exports[`Adobeanalytics Should track search 1`] = `"internal search"`;
+
+exports[`Adobeanalytics Should track search 2`] = `"search null results"`;
+
+exports[`Adobeanalytics Should track search 3`] = `"search click through"`;
+
+exports[`Adobeanalytics Should track self service 1`] = `
+Object {
+  "selfServiceFunnelStep": "Step1",
+  "selfServiceFunnelStepNumber": 1,
+  "selfServiceName": "SelfService1",
+  "selfServiceStart": "true",
+}
+`;
+
+exports[`Adobeanalytics Should track self service 2`] = `"self service start"`;
+
+exports[`Adobeanalytics Should track self service 3`] = `
+Object {
+  "selfServiceFunnel": "true",
+  "selfServiceFunnelStep": "Step2",
+  "selfServiceFunnelStepNumber": 2,
+  "selfServiceName": "SelfService2",
+}
+`;
+
+exports[`Adobeanalytics Should track self service 4`] = `"self service funnel"`;
+
+exports[`Adobeanalytics Should track self service 5`] = `
+Object {
+  "selfServiceComplete": "true",
+  "selfServiceFunnelStep": "Step3",
+  "selfServiceFunnelStepNumber": 3,
+  "selfServiceName": "SelfService3",
+}
+`;
+
+exports[`Adobeanalytics Should track self service 6`] = `"self service complete"`;
+
+exports[`Adobeanalytics Should track self service 7`] = `
+Object {
+  "pasientreiserApplication": "Standardsøknad",
+  "pasientreiserOnBehalfOf": "Pasient",
+  "selfServiceComplete": "true",
+  "selfServiceFunnelStep": "TestStep",
+  "selfServiceFunnelStepNumber": 4,
+  "selfServiceName": "SelfServicePasientreiser",
+}
+`;
+
+exports[`Adobeanalytics Should track self service 8`] = `
+Object {
+  "pasientreiserApplication": "Utvidet søknad",
+  "pasientreiserOnBehalfOf": "Foresatt",
+  "selfServiceComplete": "true",
+  "selfServiceFunnelStep": "TestStep2",
+  "selfServiceFunnelStepNumber": 4,
+  "selfServiceName": "SelfServicePasientreiser2",
+}
+`;
+
+exports[`Adobeanalytics Should track tabs 1`] = `"tab click"`;
