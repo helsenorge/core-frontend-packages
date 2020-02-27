@@ -15,21 +15,13 @@
     "allowUnreachableCode": false,
     "skipLibCheck": true,
     "baseUrl": "./src",
-      "declaration": true,
+    "declaration": true,
     "rootDir": "./src",
     "outDir": "./lib",
-    "lib": [
-      "es5",
-      "es2015.core",
-      "es2015.promise",
-      "es6",
-      "dom",
-      "scripthost"
-    ],
+    "lib": ["es5", "es2015.core", "es2015.promise", "es6", "dom", "scripthost"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strictNullChecks": true,
     "noEmit": false
   }
 }
- 
