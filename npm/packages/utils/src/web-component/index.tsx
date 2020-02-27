@@ -52,8 +52,7 @@ export default function config(ChildComponent: React.ComponentType<WebcompProps>
       this.props = this.value;
       this.mountPoint = document.createElement('div');
       const templatename = name + '-template';
-
-       
+      
       // TEMPLATE
       // Her settes id til templatet
       const tmpl: HTMLTemplateElement = document.getElementById(templatename) as HTMLTemplateElement;
