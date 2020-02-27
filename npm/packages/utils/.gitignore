@@ -2,3 +2,4 @@ dist
 .env
 .jest-cache
 node_modules
+test-report.xml
