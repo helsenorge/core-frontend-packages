@@ -31,14 +31,12 @@ describe('Git når: withstore brukes', () => {
       return <div id="testdiv">{state.tester}</div>;
     };
     let stata: typesting = { tester: 'test' };
-
     const props = {
       StateContext: StateContext,
       DispatchContext: stateDispatch,
       reducer: reducer,
       initialState: stata,
     };
-
     let wrapper = mount(
       <WithStore<typesting, action> {...props}>
         <Test />

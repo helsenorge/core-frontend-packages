@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import retargetEvents from 'react-shadow-dom-retarget-events';
@@ -50,13 +52,13 @@ export default function config(ChildComponent: React.ComponentType<WebcompProps>
       this.props = this.value;
       this.mountPoint = document.createElement('div');
       const templatename = name + '-template';
-
+      
       // TEMPLATE
       // Her settes id til templatet
       const tmpl: HTMLTemplateElement = document.getElementById(templatename) as HTMLTemplateElement;
-      if (!tmpl) {
-        console.log('finner ikke template');
-      }
+         if (!tmpl) {
+           console.log('finner ikke template');
+         }
       // SHADOW-DOM
       // Create an attach to the shadowDOM's root. This is necessary before querying the DOM
       const shadowRoot = this.attachShadow({ mode: 'open' });
