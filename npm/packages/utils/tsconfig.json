@@ -1,0 +1,17 @@
+{
+  "extends": "./node_modules/@helsenorge/core-build/config/tsconfig.global.json",
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["**/__tests__/*"],
+
+  "compilerOptions": {
+    "noUnusedLocals": false,
+    "strictNullChecks": true,
+    "noUnusedParameters": false,
+    "noEmit": false,
+    "declaration": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "suppressImplicitAnyIndexErrors": true,
+   
+  }
+}
