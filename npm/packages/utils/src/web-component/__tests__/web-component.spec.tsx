@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import WithStore from '../utils/withStore';
-import { shallow, ReactWrapper, mount } from 'enzyme';
+import { mount } from 'enzyme';
 import config from '../index';
 declare global {
   namespace JSX {
