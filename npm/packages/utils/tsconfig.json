@@ -1,17 +1,35 @@
 {
-  "extends": "./node_modules/@helsenorge/core-build/config/tsconfig.global.json",
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["**/__tests__/*"],
-
   "compilerOptions": {
-    "noUnusedLocals": false,
-    "strictNullChecks": true,
-    "noUnusedParameters": false,
-    "noEmit": false,
-    "declaration": true,
-    "resolveJsonModule": true,
-    "baseUrl": "./src",
+    "target": "ES2015",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "jsx": "react",
+    "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
-   
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "newLine": "CRLF",
+    "allowUnreachableCode": false,
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+      "declaration": true,
+    "rootDir": "./src",
+    "outDir": "./lib",
+    "lib": [
+      "es5",
+      "es2015.core",
+      "es2015.promise",
+      "es6",
+      "dom",
+      "scripthost"
+    ],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "noEmit": false
   }
 }
+ 

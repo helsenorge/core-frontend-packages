@@ -1,20 +1,41 @@
 {
-  "name": "utils",
+  "name": "@helsenorge/utils",
   "version": "1.0.0",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "devDependencies": {
-    "@types/react-shadow-dom-retarget-events": "1.0.0",
-    "@types/styled-components": "4.4.2",
-    "react-shadow-dom-retarget-events": "^1.0.11",
-    "styled-components": "^5.0.1"
+    "build": "helsenorge-scripts build --env.entry ./src/web-component/index.tsx --env.name web-component",
+    "publish:beta": "cd lib && npm publish --tag=beta"
   },
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "fs-extra": "^8.1.0"
+  },
   "dependencies": {
-    "@helsenorge/core-build": "^11.0.4-beta01"
+    "@types/react-dom": "^16.9.5",
+    "@types/react-shadow-dom-retarget-events": "1.0.0",
+    "@types/styled-components": "4.4.2",
+  
+    "react-shadow-dom-retarget-events": "^1.0.11"
+
+  },
+  "peerDependencies": {
+  "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
