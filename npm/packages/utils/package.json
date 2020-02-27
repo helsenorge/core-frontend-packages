@@ -21,6 +21,11 @@
     "@types/styled-components": "4.4.2",
     "react-shadow-dom-retarget-events": "^1.0.11"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "bash node_modules/@helsenorge/core-build/precommit.sh"
+    }
+  },
   "peerDependencies": {
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
