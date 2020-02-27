@@ -2,7 +2,7 @@
 
 <html>
   <!-- TEMPLATE FOR hn-webcomp-header -->
-  <template id="example-component-template">
+  <template id="test-component-template">
     <% for (var css in htmlWebpackPlugin.files.css) { %>
     <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" />
     <% } %>
@@ -12,7 +12,7 @@
   </template>
   <head> </head>
   <body>
-    <example-component id="example-component" tester="yooo" lester="asdasd"></example-component>
+    <test-component id="example-component" tester="yooo" lester="asdasd"></test-component>
     <div class="tester">
       This text comes from the /public/index-html file
       <button onclick="func()">
@@ -27,12 +27,12 @@
 
     <!-- USUALLY YOU WOULD IMPORT htmlWebpackPlugin.tags.headTags HERE TO GET CSS FROM VENDORS AND VERTICAL BUT YOU DON'T WANT IT HERE CAUSE WE JUST WORK WITH OUR WEBCOMP -->
     <script>
-    let doc = document.getElementById("example-component")
-            const func = () => {
-                if(doc && doc.dispatchEvent){
-                doc.dispatchEvent(new CustomEvent('subevent', { detail: {test :"hei"} }))
-                }
-            }
+      let doc = document.getElementById('example-component');
+      const func = () => {
+        if (doc && doc.dispatchEvent) {
+          doc.dispatchEvent(new CustomEvent('subevent', { detail: { test: 'hei' } }));
+        }
+      };
     </script>
   </body>
 </html>
