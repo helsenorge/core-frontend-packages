@@ -3,16 +3,16 @@ import React, { useEffect } from 'react';
 
 interface WebCompProps {
   domain: string;
-  componentname: string;
+  componentName: string;
   componentProps?: Props;
-  entryname: string;
+  entryName: string;
 }
 
 interface Props {
   [key: string]: string | number | boolean;
 }
 const WebCompWrapper: React.FC<WebCompProps> = (props: WebCompProps) => {
-  const { domain, entryname, componentname, componentProps } = props;
+  const { domain, entryName, componentName, componentProps } = props;
   useEffect(() => {
     fetch(`${domain}/assets.json`)
       .then(response => {
@@ -23,11 +23,11 @@ const WebCompWrapper: React.FC<WebCompProps> = (props: WebCompProps) => {
         return Promise.reject(Error('Error while fetching asset-manifest.json'));
       })
       .then(assets => {
-        const header = componentname + '-template';
+        const header = componentName + '-template';
         const tmpl: HTMLTemplateElement = document.getElementById(header) as HTMLTemplateElement;
         tmpl.innerHTML = '';
         //gets scripts and css from entrypoints
-        assets.entrypoints[entryname].map((e: string) => {
+        assets.entrypoints[entryName].map((e: string) => {
           if (!e.includes('.map')) {
             if (e.includes('.css')) {
               // vendors css
@@ -50,8 +50,8 @@ const WebCompWrapper: React.FC<WebCompProps> = (props: WebCompProps) => {
       });
   }, []);
 
-  const WebCompFromMicroFrontend = React.createElement(componentname, componentProps);
-  console.log(WebCompFromMicroFrontend);
+  const WebCompFromMicroFrontend = React.createElement(componentName, componentProps);
+
   return <>{WebCompFromMicroFrontend}</>;
 };
 export default WebCompWrapper;
