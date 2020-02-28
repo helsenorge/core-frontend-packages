@@ -10,8 +10,8 @@ render(
   <div className="forside">
     <WebCompWrapper
       domain={'http://localhost:5000'}
-      componentname="hn-webcomp-header"
-      entryname="header-footer"
+      componentName="hn-webcomp-header"
+      entryName="header-footer"
       componentProps={{ test: 'lol', id: 'hn-webcomp-header' }}
     />
 
