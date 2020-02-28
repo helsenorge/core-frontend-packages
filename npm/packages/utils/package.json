@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "node build.js",
-    "publish:beta": "cd lib && npm publish --tag=beta"
+    "publish:beta": "cd lib && npm publish --tag=beta",
+    "test": "helsenorge-scripts test",
+    "start:webcomponent": "helsenorge-scripts start --env.entry ./src/web-component/development/index.tsx --env.name webcomps --env.css"
   },
   "author": "",
   "license": "ISC",

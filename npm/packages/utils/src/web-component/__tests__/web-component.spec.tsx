@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from 'react';
-import WithStore from '../core-utils/withStore';
+import WithStore from '../utils/withStore';
 import { mount } from 'enzyme';
 import config from '../index';
 declare global {

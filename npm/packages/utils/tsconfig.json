@@ -1,6 +1,6 @@
 {
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["**/__tests__/*"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "development/index.tsx"],
+  "exclude": ["**/__tests__/*", "**/development/**"],
   "compilerOptions": {
     "target": "ES2015",
     "module": "commonjs",
