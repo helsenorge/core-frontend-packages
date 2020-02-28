@@ -1,10 +1,10 @@
 {
-  "name": "@helsenorge/utils",
+  "name": "@helsenorge/core-utils",
   "version": "1.0.0",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
-    "build": "helsenorge-scripts build --env.entry ./src/web-component/index.tsx --env.name web-component",
+    "build": "node build.js",
     "publish:beta": "cd lib && npm publish --tag=beta"
   },
   "author": "",
