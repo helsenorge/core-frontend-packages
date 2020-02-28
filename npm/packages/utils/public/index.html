@@ -2,29 +2,15 @@
 
 <html>
   <!-- TEMPLATE FOR hn-webcomp-header -->
-  <template id="test-component-template">
-    <% for (var css in htmlWebpackPlugin.files.css) { %>
-    <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet" />
-    <% } %>
+  <template id="hn-webcomp-header-template">
     <section>
       <slot></slot>
     </section>
   </template>
   <head> </head>
   <body>
-    <test-component id="example-component" tester="yooo" lester="asdasd"></test-component>
-    <div class="tester">
-      This text comes from the /public/index-html file
-      <button onclick="func()">
-        asdasd
-      </button>
-    </div>
     <div id="main-content-wrapper"></div>
     <!-- THIS IS FOR ALL THE OTHER JS CHUNKS - WE MAKE IT PROD ONLY SO WEBBACK-DEV-SERVE CAN OUTPUT WITH HOT RELOAD INSTEAD  -->
-
-    <% if (htmlWebpackPlugin.options.environment.production){ %> <% for (var js in htmlWebpackPlugin.files.js) { %>
-    <script src="<%= htmlWebpackPlugin.files.js[js] %>"></script>
-    <% } %> <% } %>
 
     <!-- USUALLY YOU WOULD IMPORT htmlWebpackPlugin.tags.headTags HERE TO GET CSS FROM VENDORS AND VERTICAL BUT YOU DON'T WANT IT HERE CAUSE WE JUST WORK WITH OUR WEBCOMP -->
     <script>
@@ -35,5 +21,7 @@
         }
       };
     </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.production.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.12.0/umd/react-dom.production.min.js"></script>
   </body>
 </html>
