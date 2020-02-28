@@ -4,12 +4,12 @@ import React, { useEffect } from 'react';
 interface WebCompProps {
   domain: string;
   componentname: string;
-  componentProps: Props;
+  componentProps?: Props;
   entryname: string;
 }
 
 interface Props {
-  [key: string]: string;
+  [key: string]: string | number | boolean;
 }
 const WebCompWrapper: React.FC<WebCompProps> = (props: WebCompProps) => {
   const { domain, entryname, componentname, componentProps } = props;
@@ -26,7 +26,7 @@ const WebCompWrapper: React.FC<WebCompProps> = (props: WebCompProps) => {
         const header = componentname + '-template';
         const tmpl: HTMLTemplateElement = document.getElementById(header) as HTMLTemplateElement;
         tmpl.innerHTML = '';
-        // All those should be checked towards existing hash and conditionnally added from backend
+        //gets scripts and css from entrypoints
         assets.entrypoints[entryname].map((e: string) => {
           if (!e.includes('.map')) {
             if (e.includes('.css')) {
@@ -34,6 +34,7 @@ const WebCompWrapper: React.FC<WebCompProps> = (props: WebCompProps) => {
               const vendorsInlineCSS = document.createElement('link');
               vendorsInlineCSS.setAttribute('href', `${domain}/${e}`);
               vendorsInlineCSS.rel = 'stylesheet';
+              //cant append to a document fragment
               tmpl.innerHTML += vendorsInlineCSS.outerHTML;
             } else {
               // vendors js
