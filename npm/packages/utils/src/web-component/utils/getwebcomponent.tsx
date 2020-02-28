@@ -3,15 +3,16 @@ import React, { useEffect } from 'react';
 
 interface WebCompProps {
   domain: string;
-  name: string;
+  componentname: string;
   componentProps: Props;
+  entryname: string;
 }
 
 interface Props {
   [key: string]: string;
 }
 const WebCompWrapper: React.FC<WebCompProps> = (props: WebCompProps) => {
-  const { domain, name, componentProps } = props;
+  const { domain, entryname, componentname, componentProps } = props;
   useEffect(() => {
     fetch(`${domain}/assets.json`)
       .then(response => {
@@ -22,45 +23,33 @@ const WebCompWrapper: React.FC<WebCompProps> = (props: WebCompProps) => {
         return Promise.reject(Error('Error while fetching asset-manifest.json'));
       })
       .then(assets => {
-        // All those should be checked towards existing hash and conditionnally added from backend
-
-        // vendors css
-        const vendorsInlineCSS = document.createElement('link');
-        const header = name + '-template';
+        const header = componentname + '-template';
         const tmpl: HTMLTemplateElement = document.getElementById(header) as HTMLTemplateElement;
-        vendorsInlineCSS.setAttribute('src', `${domain}/${assets.assets['vendors.css']}`);
-        vendorsInlineCSS.rel = 'stylesheet';
-        vendorsInlineCSS.type = 'text/css';
-        tmpl.appendChild(vendorsInlineCSS);
-
-        // header-footer css
-        const headerfooterInlineCSS = document.createElement('link');
-        headerfooterInlineCSS.setAttribute('src', `${domain}/${assets.assets['header-footer.css']}`);
-        headerfooterInlineCSS.rel = 'stylesheet';
-        headerfooterInlineCSS.type = 'text/css';
-        tmpl.appendChild(headerfooterInlineCSS);
-
-        // Polyfill script - should be checked towards existing hash and conditionnally downloaded
-        const polyfillInlineScript = document.createElement('script');
-        polyfillInlineScript.setAttribute('src', `${domain}/${assets.assets['polyfills.js']}`);
-        document.head.appendChild(polyfillInlineScript);
-
-        // Vendors script
-        const vendorsInlineScript = document.createElement('script');
-        vendorsInlineScript.setAttribute('src', `${domain}/${assets.assets['vendors.js']}`);
-        document.head.appendChild(vendorsInlineScript);
-
-        // header-footer script
-        const headerfooterInlineScript = document.createElement('script');
-        headerfooterInlineScript.setAttribute('src', `${domain}/${assets.assets['header-footer.js']}`);
-        document.head.appendChild(headerfooterInlineScript);
+        tmpl.innerHTML = '';
+        // All those should be checked towards existing hash and conditionnally added from backend
+        assets.entrypoints[entryname].map((e: string) => {
+          if (!e.includes('.map')) {
+            if (e.includes('.css')) {
+              // vendors css
+              const vendorsInlineCSS = document.createElement('link');
+              vendorsInlineCSS.setAttribute('href', `${domain}/${e}`);
+              vendorsInlineCSS.rel = 'stylesheet';
+              tmpl.innerHTML += vendorsInlineCSS.outerHTML;
+            } else {
+              // vendors js
+              const vendorsInlineScript = document.createElement('script');
+              vendorsInlineScript.setAttribute('src', `${domain}/${e}`);
+              document.head.appendChild(vendorsInlineScript);
+            }
+          }
+        });
       })
       .catch(error => {
         return Promise.reject(Error(error.message));
       });
   }, []);
 
-  const WebCompFromMicroFrontend = React.createElement(name, componentProps);
+  const WebCompFromMicroFrontend = React.createElement(componentname, componentProps);
   console.log(WebCompFromMicroFrontend);
   return <>{WebCompFromMicroFrontend}</>;
 };
