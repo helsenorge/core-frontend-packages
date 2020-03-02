@@ -1,23 +1,32 @@
 {
-  "name": "@helsenorge/utils",
-  "version": "1.0.0",
+  "name": "@helsenorge/core-utils",
+  "version": "1.0.1",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
-    "build": "helsenorge-scripts build --env.entry ./src/web-component/index.tsx --env.name web-component",
-    "publish:beta": "cd lib && npm publish --tag=beta"
+    "build": "node build.js",
+    "publish:beta": "cd lib && npm publish --tag=beta",
+    "test": "helsenorge-scripts test",
+    "start:webcomponent": "helsenorge-scripts start --env.entry ./src/web-component/development/index.tsx --env.name webcomps --env.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "fs-extra": "^8.1.0"
+    "fs-extra": "^8.1.0",
+    "@helsenorge/core-build": "11.0.4"
   },
   "dependencies": {
+    "@helsenorge/core-build": "^11.0.4",
     "@types/react-dom": "^16.9.5",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/styled-components": "4.4.2",
     "react-shadow-dom-retarget-events": "^1.0.11"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "bash node_modules/@helsenorge/core-build/precommit.sh"
+    }
   },
   "peerDependencies": {
     "react": "^16.12.0",
