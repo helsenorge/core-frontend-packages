@@ -1,3 +1,8 @@
+/**
+ * Get tjenester from window
+ * @param tjenesteId id of tjeneste
+ */
+
 import { TjenesteTilgang } from './generated-types/minhelseentities';
 import { TjenesteType, TjenesteTilgangStatus } from '@helsenorge/core-framework/generated-types/minhelseenums';
 

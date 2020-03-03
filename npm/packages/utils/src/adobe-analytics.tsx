@@ -17,7 +17,7 @@
  * setValueForSelectedUser();
  * trackProsesshjelp('Prosesshjelp' , 'Hjelp' , 'Om Timeavtaler', 'Open' );
  */
-
+//used 50
 interface DigitalData {
   selfService?: SelfService | ConsentSelfService;
   filters?: Filters;

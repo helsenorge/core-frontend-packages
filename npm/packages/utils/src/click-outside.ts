@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+//used 14
 /**
  * Custom hook for klikk eller fokus utenfor et gitt element
  * @param ref Sjekker om det klikkes utenfor dette elementet

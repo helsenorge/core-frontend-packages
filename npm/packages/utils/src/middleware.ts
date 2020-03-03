@@ -2,6 +2,7 @@ import { Store, Action, Dispatch, AnyAction, Middleware } from 'redux';
 import { error } from './logger';
 import { debounce } from './debounce';
 
+//ubrukt
 interface Console {
   group: (type: string) => void;
   info: (type: string, action: Action) => void;

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-inferrable-types */
+//ubrukt
 export const loadScriptES6 = (source: string, beforeEl?: HTMLScriptElement, async: boolean = true, defer: boolean = true) => {
   return new Promise((resolve, reject) => {
     let script: any = document.createElement('script');

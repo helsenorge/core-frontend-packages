@@ -1,3 +1,10 @@
+/**
+ * debounce limits time a function can be executed
+ * @param func function to debounce
+ * @param wait wait for x time
+ * @param immediate run now
+ */
+
 export function debounce(func: Function, wait: number, immediate?: boolean): () => void {
   let timeout: ReturnType<typeof setTimeout> | null;
   /* eslint-disable @typescript-eslint/no-this-alias, prefer-rest-params*/

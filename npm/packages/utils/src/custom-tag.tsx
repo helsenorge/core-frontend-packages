@@ -1,5 +1,11 @@
 import * as React from 'react';
 
+/**
+ * CustomTagName
+ * @param props JSX.Element props + tagname
+ *
+ */
+
 export interface CustomTagProps {
   id?: string;
   tabIndex?: number;

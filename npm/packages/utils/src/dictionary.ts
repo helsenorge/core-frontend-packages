@@ -1,3 +1,9 @@
+/**
+ * js dictonary implementation
+ * @param key
+ * @param value
+ */
+
 interface KeyValue<TKey, TValue> {
   key: TKey;
   value: TValue;
