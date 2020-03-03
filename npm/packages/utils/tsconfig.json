@@ -7,7 +7,7 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "jsx": "react",
-    "typeRoots": ["node_modules/@types", "./src/types"],
+    "typeRoots": ["src/types"],
     "skipLibCheck": true,
     "baseUrl": "./src",
     "declaration": true,
