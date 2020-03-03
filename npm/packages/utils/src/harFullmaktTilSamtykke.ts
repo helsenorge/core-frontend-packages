@@ -1,3 +1,8 @@
+/**
+ * Checks if user has Fullmakt
+ * @param tjenesteTilgang id of tjeneste
+ */
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function harFullmaktTilSamtykke(tjenesteTilgang: any): boolean {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

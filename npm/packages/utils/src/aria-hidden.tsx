@@ -21,6 +21,7 @@
  * until it reaches the body element.
  *
  */
+//used 2 times
 
 export interface Siblings {
   allSiblings: Array<Element>;

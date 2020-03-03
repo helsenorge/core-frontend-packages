@@ -1,3 +1,8 @@
+/**
+ * Check if cookie exist, and also if it has value
+ * @param cookieName navn på cookie
+ * @param onClickOutside value
+ */
 export function hasCookie(cookieName: string, value?: string | boolean): boolean {
   const cookie: string = document.cookie;
   if (cookie === undefined) {

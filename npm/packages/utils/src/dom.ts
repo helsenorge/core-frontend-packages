@@ -1,3 +1,9 @@
+/**
+ * dom class manipulation
+ * @param el
+ * @param classname
+ */
+//ubrukt
 export default {
   isDescendant(parent: Element, child: Element): boolean {
     let node: Node | null = child.parentNode;

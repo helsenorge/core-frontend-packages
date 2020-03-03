@@ -2,6 +2,10 @@ import { isMobileUA } from './is-mobile-ua';
 import { isTabletUA } from './is-tablet-ua';
 import { getAssets } from './page';
 import { loadScriptES6 } from './loadscript-utils';
+/**
+ * Checks if user has Fullmakt
+ * @param tjenesteTilgang id of tjeneste
+ */
 
 interface PluginDetectInterface {
   onDetectionDone?: (plugin: string, f: () => void, dummyPDF: string) => void;
