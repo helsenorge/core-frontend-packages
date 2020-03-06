@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "1.0.2-beta01",
+  "version": "1.0.1",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
