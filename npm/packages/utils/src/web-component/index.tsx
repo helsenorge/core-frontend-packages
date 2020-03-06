@@ -3,7 +3,7 @@ import ReactDOM, { render } from 'react-dom';
 import retargetEvents from 'react-shadow-dom-retarget-events';
 import { styleInjector, ConfigSetup } from './utils/helpers';
 
-export type Props = { ChildComponent: React.ComponentType<WebcompProps>; name: string; config: Config; templateName: string };
+export type Props = { ChildComponent: React.ComponentType<WebcompProps>; name: string; config: Config };
 
 export interface WebcompProps {
   [key: string]: string;
@@ -14,12 +14,7 @@ export interface Config {
   styledComponents: boolean;
 }
 
-export default function config(
-  ChildComponent: React.ComponentType<WebcompProps>,
-  name: string,
-  config: Config,
-  templateName: string
-): void {
+export default function config(ChildComponent: React.ComponentType<WebcompProps>, name: string, config: Config): void {
   class WebComponent extends HTMLElement {
     mountPoint: HTMLElement;
     props: WebcompProps;
@@ -54,10 +49,11 @@ export default function config(
     mountReactApp() {
       this.props = this.value;
       this.mountPoint = document.createElement('div');
+      const templatename = name + '-template';
 
       // TEMPLATE
       // Her settes id til templatet
-      const tmpl: HTMLTemplateElement = document.getElementById(templateName) as HTMLTemplateElement;
+      const tmpl: HTMLTemplateElement = document.getElementById(templatename) as HTMLTemplateElement;
       if (!tmpl) {
         console.log('finner ikke template');
       }
