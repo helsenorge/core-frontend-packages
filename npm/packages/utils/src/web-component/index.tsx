@@ -55,11 +55,16 @@ export default function config(
       this.props = this.value;
       this.mountPoint = document.createElement('div');
 
+      if (!templateName) {
+        console.error('finner ikke template name');
+        return null;
+      }
       // TEMPLATE
       // Her settes id til templatet
       const tmpl: HTMLTemplateElement = document.getElementById(templateName) as HTMLTemplateElement;
       if (!tmpl) {
-        console.log('finner ikke template');
+        console.error(`Kunne ikke finne html <template> med id: ${templateName} sjekk i index-html at <template> er oppgitt med riktig id`);
+        return null;
       }
       // SHADOW-DOM
       // Create an attach to the shadowDOM's root. This is necessary before querying the DOM

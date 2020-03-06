@@ -1,5 +1,5 @@
 import { PersonvernInnstillingDefinisjonGuids } from './constants/personvernInnstillingDefinisjonIds';
-import { Samtykke } from './generated-types/minhelseentities';
+import { Samtykke } from '../../../src/types/MinHelseEntities';
 
 window.HN = window.HN || {};
 window.HN.Commands = window.HN.Commands || {};
