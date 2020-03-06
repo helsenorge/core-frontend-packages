@@ -1,3 +1,4 @@
+import {} from 'jest';
 import { hasDigitaleHelsetjenesteSamtykke, hasPasientreiserSamtykke } from '../samtykke-util';
 import { Samtykke } from '../generated-types/minhelseentities';
 import { PersonvernInnstillingDefinisjonGuids } from '../constants/personvernInnstillingDefinisjonIds';

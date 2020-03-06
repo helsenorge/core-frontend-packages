@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Component, ComponentClass } from 'react';
 
-//ubrukt
 export interface Props {
   mount?: () => void;
 }
 
-export default function mount<T>(WrappedComponent: ComponentClass<T & Props> | React.SFC<T & Props>): ComponentClass<T & Props> {
+export default function mount<T>(WrappedComponent: ComponentClass<T & Props> | React.FC<T & Props>): ComponentClass<T & Props> {
   const componentName: string = WrappedComponent.displayName || WrappedComponent.name || 'Component';
+
   class Mount extends Component<T & Props, {}> {
     componentDidMount(): void {
       const mount = (this.props as Props).mount;
@@ -17,7 +17,9 @@ export default function mount<T>(WrappedComponent: ComponentClass<T & Props> | R
     }
 
     render(): JSX.Element {
-      return <WrappedComponent {...(this.props as T)} />;
+      /* eslint-disable @typescript-eslint/no-explicit-any */
+      return <WrappedComponent {...(this.props as any)} />;
+      /* eslint-enable @typescript-eslint/no-explicit-any */
     }
   }
 

@@ -1,5 +1,5 @@
-import { SamtykkeLevel, FullmaktType } from '@helsenorge/core-framework/generated-types/minhelseenums';
-import { FullmaktEgenskaper } from './generated-types/minhelseentities';
+import { SamtykkeLevel, FullmaktType } from '../../../src/types/MinHelseEnums';
+import { FullmaktEgenskaper } from '../../../src/types/MinHelseEntities';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare let HN: any;

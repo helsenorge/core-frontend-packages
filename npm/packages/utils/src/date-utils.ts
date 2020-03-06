@@ -23,6 +23,7 @@ interface ResourcesWithMonthNames {
 
 export function todaysDate(): string {
   const today = new Date();
+
   const dd = String(today.getDate());
   const mm = String(today.getMonth());
   const yyyy = today.getFullYear();

@@ -3,8 +3,8 @@
  * @param tjenesteId id of tjeneste
  */
 
-import { TjenesteTilgang } from './generated-types/minhelseentities';
-import { TjenesteType, TjenesteTilgangStatus } from '@helsenorge/core-framework/generated-types/minhelseenums';
+import { TjenesteTilgang } from '../../../src/types/MinHelseEntities';
+import { TjenesteType, TjenesteTilgangStatus } from '../../../src/types/MinHelseEnums';
 
 export function harTilgangTilTjeneste(tjenesteId: TjenesteType): boolean {
   if (
