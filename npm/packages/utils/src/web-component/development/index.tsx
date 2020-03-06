@@ -11,6 +11,7 @@ render(
     <WebCompWrapper
       domain={'http://localhost:5000'}
       componentName="hn-webcomp-header"
+      templateName="hn-webcomp-header-footer-template"
       entryName="header-footer"
       componentProps={{ test: 'lol', id: 'hn-webcomp-header' }}
     />
