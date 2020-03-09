@@ -7,9 +7,9 @@ import CustomTag from '../custom-tag';
 import {
   todaysDate,
   toDate,
+  getMonthName,
   toServerDate,
   getFormattedDateString,
-  getMonthName,
   addDifference,
   toLocalISOString,
   toLocalISOStringUsingDateTimezoneOffset,
@@ -23,6 +23,21 @@ import {
   isBefore,
   isDotNetMinDate,
 } from '../date-utils';
+
+interface ResourcesWithMonthNames {
+  monthNameApril: string;
+  monthNameAugust: string;
+  monthNameDecember: string;
+  monthNameFebruary: string;
+  monthNameJanuary: string;
+  monthNameJuly: string;
+  monthNameJune: string;
+  monthNameMarch: string;
+  monthNameMay: string;
+  monthNameNovember: string;
+  monthNameOctober: string;
+  monthNameSeptember: string;
+}
 
 describe('Cookie', () => {
   setCookie('test', 'cookie');
@@ -73,6 +88,11 @@ describe('date-utils', () => {
       let date = toDate(new Date('04.20.2020'));
       let d = new Date(new Date('04.20.2020'));
       expect(date).toMatchObject(d);
+    });
+  });
+  describe('gitt at getMonthName blir kalt', () => {
+    it('Så returneres måneden', () => {
+      expect(getMonthName(new Date('04-20-2020'), { monthNameApril: 'April' } as ResourcesWithMonthNames)).toBe('april');
     });
   });
 });
