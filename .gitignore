@@ -18,6 +18,8 @@ lib-cov
 # Coverage directory used by tools like istanbul
 coverage
 
+.jest-cache
+
 # nyc test coverage
 .nyc_output
 
