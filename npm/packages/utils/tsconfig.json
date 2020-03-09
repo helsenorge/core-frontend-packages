@@ -14,6 +14,7 @@
     "typeRoots": ["src/types"],
     "newLine": "CRLF",
     "allowUnreachableCode": false,
+
     "skipLibCheck": true,
     "baseUrl": "./src",
     "declaration": true,
