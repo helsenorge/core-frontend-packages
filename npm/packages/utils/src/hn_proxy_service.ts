@@ -13,9 +13,9 @@ type RequestParamArrayType = string | number;
 type RequestParamType = Record<string, string | number | boolean | Array<RequestParamArrayType>>;
 // ProxyOperationResponse returneres bare ved feil fra proxy-tjenester
 export interface ProxyErrorResponse extends Response {
-  Code: string;
-  ErrorCategory: number;
-  Message: string;
+  code: string;
+  errorCategory: number;
+  message: string;
 }
 const getBaseUrl = (): string => {
   return HN.Rest.__MinHelseUrl__ !== undefined && HN.Rest.__MinHelseUrl__ !== null ? HN.Rest.__MinHelseUrl__ : '';
@@ -60,7 +60,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
       return response.json();
     }
     return response.json().then((err: Response) => {
-      if ((err as ProxyErrorResponse).Code === 'SEC-110000') {
+      if ((err as ProxyErrorResponse).code === 'SEC-110000') {
         // redirect dersom token er utgått eller ugyldig
         window.location.href = `${getBaseUrl()}/auth/autosignout`;
       }
