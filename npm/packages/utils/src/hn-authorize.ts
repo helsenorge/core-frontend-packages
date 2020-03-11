@@ -6,4 +6,4 @@ interface HNPage {
 
 declare const HN: HNPage;
 
-export const isAuthorized = !!HN.Rest.__Authorized__;
+export const isAuthorized = () => !!HN.Rest.__Authorized__;
