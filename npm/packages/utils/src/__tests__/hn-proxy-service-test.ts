@@ -1,4 +1,4 @@
-import { link } from '../hn_proxy_service';
+import { link } from '../hn-proxy-service';
 
 window.HN = window.HN || {};
 window.HN.Rest = window.HN.Rest || {};
