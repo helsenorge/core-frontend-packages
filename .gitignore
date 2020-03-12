@@ -20,6 +20,7 @@ coverage
 
 # Jets generated files
 .jest-cache
+
 test-report.xml
 
 # nyc test coverage
