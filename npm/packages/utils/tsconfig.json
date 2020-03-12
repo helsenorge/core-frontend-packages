@@ -11,8 +11,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
+    "typeRoots": ["src/types"],
     "newLine": "CRLF",
     "allowUnreachableCode": false,
+
     "skipLibCheck": true,
     "baseUrl": "./src",
     "declaration": true,

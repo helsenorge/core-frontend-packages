@@ -3,7 +3,7 @@ import ReactDOM, { render } from 'react-dom';
 import retargetEvents from 'react-shadow-dom-retarget-events';
 import { styleInjector, ConfigSetup } from './utils/helpers';
 
-export type Props = { ChildComponent: React.ComponentType<WebcompProps>; name: string; config: Config };
+export type Props = { ChildComponent: React.ComponentType<WebcompProps>; name: string; config: Config; templateName: string };
 
 export interface WebcompProps {
   [key: string]: string;
@@ -14,7 +14,12 @@ export interface Config {
   styledComponents: boolean;
 }
 
-export default function config(ChildComponent: React.ComponentType<WebcompProps>, name: string, config: Config): void {
+export default function config(
+  ChildComponent: React.ComponentType<WebcompProps>,
+  name: string,
+  config: Config,
+  templateName: string
+): void {
   class WebComponent extends HTMLElement {
     mountPoint: HTMLElement;
     props: WebcompProps;
@@ -49,13 +54,17 @@ export default function config(ChildComponent: React.ComponentType<WebcompProps>
     mountReactApp() {
       this.props = this.value;
       this.mountPoint = document.createElement('div');
-      const templatename = name + '-template';
 
+      if (!templateName) {
+        console.error('finner ikke template name');
+        return null;
+      }
       // TEMPLATE
       // Her settes id til templatet
-      const tmpl: HTMLTemplateElement = document.getElementById(templatename) as HTMLTemplateElement;
+      const tmpl: HTMLTemplateElement = document.getElementById(templateName) as HTMLTemplateElement;
       if (!tmpl) {
-        console.log('finner ikke template');
+        console.error(`Kunne ikke finne html <template> med id: ${templateName} sjekk i index-html at <template> er oppgitt med riktig id`);
+        return null;
       }
       // SHADOW-DOM
       // Create an attach to the shadowDOM's root. This is necessary before querying the DOM
