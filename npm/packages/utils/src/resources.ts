@@ -1,6 +1,6 @@
 ///<reference path="./types/dev.d.ts"/>
 import { Dispatch, Action } from 'redux';
-import { get, ProxyOperationResponse } from './hn_proxy_service';
+import { get, ProxyOperationResponse } from './hn-proxy-service';
 
 import { getVersion } from './page';
 import { EmptyAction } from './reducer';
