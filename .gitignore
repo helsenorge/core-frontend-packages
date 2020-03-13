@@ -45,9 +45,11 @@ jspm_packages/
 # TypeScript v1 declaration files
 typings/
 
+__diff_output__
+
 # Optional npm cache directory
 .npm
-
+screenshots
 # Optional eslint cache
 .eslintcache
 
