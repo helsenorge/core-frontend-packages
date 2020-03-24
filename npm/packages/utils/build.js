@@ -6,6 +6,7 @@ const utilsFiles = ['src/types/dev.d.ts', 'src/types/tabbable.d.ts', 'src/utils/
 
 rimraf('./lib', () => {
   exec('tsc');
+
   fs.copySync('src/types/dev.d.ts', './lib/dev.d.ts');
   fs.copySync('./package.json', './lib/package.json');
   fs.copySync('./.npmrc', './lib/.npmrc');

@@ -17,13 +17,4 @@ export default {
   isThreeTwoFourColumn: function(): boolean {
     return window.matchMedia(`screen and (max-width: ${LayoutConstants.THREE_TO_FOUR_COLUMN})`).matches;
   },
-  isXsToSm: function(): boolean {
-    return window.matchMedia(`screen and (max-width: ${LayoutConstants.XS_TO_SM})`).matches;
-  },
-  isSmToMd: function(): boolean {
-    return window.matchMedia(`screen and (max-width: ${LayoutConstants.SM_TO_MD})`).matches;
-  },
-  isMdToLg: function(): boolean {
-    return window.matchMedia(`screen and (max-width: ${LayoutConstants.MD_TO_LG})`).matches;
-  },
 };

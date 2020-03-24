@@ -12,18 +12,12 @@ export interface LayoutState {
   oneToTwoColumn?: boolean;
   twoToThreeColumn?: boolean;
   threeTwoFourColumn?: boolean;
-  xsToSm?: boolean;
-  smToMd?: boolean;
-  mdToLg?: boolean;
 }
 
 export interface Props {
   oneToTwoColumn?: boolean;
   twoToThreeColumn?: boolean;
   threeTwoFourColumn?: boolean;
-  xsToSm?: boolean;
-  smToMd?: boolean;
-  mdToLg?: boolean;
 }
 
 export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Props> | React.FC<T & Props>): React.ComponentClass<T> {
@@ -34,9 +28,6 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
         twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
         threeTwoFourColumn: LayoutUtils.isThreeTwoFourColumn(),
-        xsToSm: LayoutUtils.isXsToSm(),
-        smToMd: LayoutUtils.isSmToMd(),
-        mdToLg: LayoutUtils.isMdToLg(),
       };
       this.processResizeEvent = this.processResizeEvent.bind(this);
       this.processLayoutChangeEvent = this.processLayoutChangeEvent.bind(this);
@@ -72,9 +63,6 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
         twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
         threeTwoFourColumn: LayoutUtils.isThreeTwoFourColumn(),
-        xsToSm: LayoutUtils.isXsToSm(),
-        smToMd: LayoutUtils.isSmToMd(),
-        mdToLg: LayoutUtils.isMdToLg(),
       });
     }
 
@@ -86,9 +74,6 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
           oneToTwoColumn={this.state.oneToTwoColumn}
           twoToThreeColumn={this.state.twoToThreeColumn}
           threeTwoFourColumn={this.state.threeTwoFourColumn}
-          xsToSm={this.state.xsToSm}
-          smToMd={this.state.smToMd}
-          mdToLg={this.state.mdToLg}
         />
       );
     }
