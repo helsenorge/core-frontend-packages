@@ -1,4 +1,5 @@
 import { PersonvernInnstillingDefinisjonGuids } from './constants/personvernInnstillingDefinisjonIds';
+// @ts-ignore
 import { Samtykke } from '../../../src/types/MinHelseEntities';
 
 window.HN = window.HN || {};

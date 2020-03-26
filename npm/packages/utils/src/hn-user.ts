@@ -1,4 +1,7 @@
+// @ts-ignore
+
 import { SamtykkeLevel, FullmaktType } from '../../../src/types/MinHelseEnums';
+// @ts-ignore
 import { FullmaktEgenskaper } from '../../../src/types/MinHelseEntities';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

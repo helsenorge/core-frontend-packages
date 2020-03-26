@@ -219,7 +219,7 @@ function createHeaders(type = 'application/json'): Headers {
   if (!!HN.Rest?.__AuthenticatedHash__ && !!HN.Rest?.__AnonymousHash__) {
     headers.append('HNAnonymousHash', HN.Rest.__AnonymousHash__);
     headers.append('HNAuthenticatedHash', HN.Rest.__AuthenticatedHash__);
-    headers.append('HNTimeStamp', HN.Rest?.__TimeStamp__ || HN.Rest?.__CSRF_Token__);
+    headers.append('HNTimeStamp', HN.Rest.__TimeStamp__);
     headers.append('HNTjeneste', HN.Rest.__TjenesteType__);
     headers.append('x-hn-hendelselogg', HN.Rest.__HendelseLoggType__);
   } else {
