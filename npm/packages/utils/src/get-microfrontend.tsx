@@ -4,6 +4,7 @@ interface WebCompProps {
   templateName: string;
 }
 
+//getMicrofrontend can be used to import web-components in react
 const getMicrofrontend = (props: WebCompProps) => {
   const { domain, entryName, templateName } = props;
 
