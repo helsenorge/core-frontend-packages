@@ -1,15 +1,5 @@
 import { trackError } from './adobe-analytics';
 
-declare global {
-  interface Window {
-    HN?: {
-      Rest?: {
-        __CmsContentApiUrl__: string;
-      };
-    };
-  }
-}
-
 function getContentApiUrl() {
   return !!window.HN && !!window.HN.Rest && !!window.HN.Rest.__CmsContentApiUrl__ ? window.HN.Rest.__CmsContentApiUrl__ : '';
 }
