@@ -18,7 +18,7 @@ const getMicrofrontend = (props: WebCompProps) => {
     .then(assets => {
       const header = templateName;
       const tmpl: HTMLTemplateElement = document.getElementById(header) as HTMLTemplateElement;
-
+      tmpl.innerHTML = '';
       //gets scripts and css from entrypoints
       assets.entrypoints[entryName].map((e: string) => {
         if (!e.includes('.map')) {
