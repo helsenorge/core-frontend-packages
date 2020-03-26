@@ -216,11 +216,17 @@ function createHeaders(type = 'application/json'): Headers {
   const headers: Headers = new Headers();
   headers.append('Accept', type);
   headers.append('Content-Type', type);
-  headers.append('HNAnonymousHash', HN.Rest.__AnonymousHash__);
-  headers.append('HNAuthenticatedHash', HN.Rest.__AuthenticatedHash__);
-  headers.append('HNTjeneste', HN.Rest.__TjenesteType__);
-  headers.append('HNTimeStamp', HN.Rest.__TimeStamp__);
-  headers.append('x-hn-hendelselogg', HN.Rest.__HendelseLoggType__);
+  if (!!HN.Rest?.__AuthenticatedHash__ && !!HN.Rest?.__AnonymousHash__) {
+    headers.append('HNAnonymousHash', HN.Rest.__AnonymousHash__);
+    headers.append('HNAuthenticatedHash', HN.Rest.__AuthenticatedHash__);
+    headers.append('HNTimeStamp', HN.Rest?.__TimeStamp__ || HN.Rest?.__CSRF_Token__);
+    headers.append('HNTjeneste', HN.Rest.__TjenesteType__);
+    headers.append('x-hn-hendelselogg', HN.Rest.__HendelseLoggType__);
+  } else {
+    headers.append('X-HN-CSRF-Token', HN.Rest.__CSRF_Token__);
+    headers.append('X-HN-CSRF-Timestamp', HN.Rest.__CSRF_Timestamp__);
+  }
+
   return headers;
 }
 
