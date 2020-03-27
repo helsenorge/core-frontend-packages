@@ -36,8 +36,7 @@ const versionSetter = async () => {
     let install = newPackages.map(e => {
       return cmd('npm i ', { cwd: e.path });
     });
-    await Promise.all(changeVersion);
-    let output = await Promise.all(install);
+    await Promise.all([...install, ...changeVersion]);
     console.log('done');
     process.exit(0);
   } catch (e) {
