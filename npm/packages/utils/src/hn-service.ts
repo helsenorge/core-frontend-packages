@@ -223,8 +223,8 @@ function createHeaders(type = 'application/json'): Headers {
     headers.append('HNTjeneste', HN.Rest.__TjenesteType__);
     headers.append('x-hn-hendelselogg', HN.Rest.__HendelseLoggType__);
   } else {
-    headers.append('X-HN-CSRF-Token', HN.Rest.__CSRF_Token__);
-    headers.append('X-HN-CSRF-Timestamp', HN.Rest.__CSRF_Timestamp__);
+    headers.append('X-HN-CSRF-Token', HN.Rest?.__CSRF_Token__);
+    headers.append('X-HN-CSRF-Timestamp', HN.Rest?.__CSRF_Timestamp__);
   }
 
   return headers;

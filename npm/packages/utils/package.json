@@ -4,7 +4,8 @@
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
-    "build": "node build.js",
+    "build": "node scripts/build.js",
+    "change-versions": "node scripts/change-versions.js",
     "publish:beta": "cd lib && npm publish --tag=beta",
     "precommit-script": "pretty-quick --staged",
     "test": "helsenorge-scripts test",
