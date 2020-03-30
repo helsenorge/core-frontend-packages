@@ -4,8 +4,8 @@ import { get } from './hn-proxy-service';
 
 import { getVersion } from './page';
 import { EmptyAction } from './reducer';
-// @ts-ignore
-import { OperationResponse, TextMessage } from '../../../src/types/MinHelseEntities';
+
+import { OperationResponse, TextMessage } from './types/entities';
 
 interface SotProxyOperationResponse {
   resources: string;
