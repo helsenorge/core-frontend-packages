@@ -1,5 +1,4 @@
-import { SamtykkeLevel, FullmaktType } from './types/MinHelseEnums';
-import { FullmaktEgenskaper } from './types/MinHelseEntities';
+import { SamtykkeLevel, FullmaktType, FullmaktEgenskaper } from './types/entities';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 declare let HN: any;
