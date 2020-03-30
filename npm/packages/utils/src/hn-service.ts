@@ -1,3 +1,4 @@
+import 'whatwg-fetch';
 import { trackError } from './adobe-analytics';
 import * as DateUtils from './date-utils';
 
