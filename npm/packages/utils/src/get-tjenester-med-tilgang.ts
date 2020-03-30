@@ -3,9 +3,9 @@
  * @param tjenesteId id of tjeneste
  */
 // @ts-ignore
-import { TjenesteTilgang } from '../../../src/types/MinHelseEntities';
+import { TjenesteTilgang } from '../../../src/generated-types/MinHelseEntities';
 // @ts-ignore
-import { TjenesteType, TjenesteTilgangStatus } from '../../../src/types/MinHelseEnums';
+import { TjenesteType, TjenesteTilgangStatus } from '../../../src/generated-types/MinHelseEnums';
 
 export function harTilgangTilTjeneste(tjenesteId: TjenesteType): boolean {
   if (
