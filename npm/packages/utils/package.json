@@ -1,10 +1,9 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "1.4.0-beta07",
+  "version": "1.4.0-beta08",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
-    "start:testpage": "helsenorge-scripts start --env.entry ./src/_devonly/index.tsx --env.name webcomps --env.css",
     "build": "node scripts/build.js",
     "postbuild": "rimraf lib/_devonly",
     "change-versions": "node scripts/change-versions.js",

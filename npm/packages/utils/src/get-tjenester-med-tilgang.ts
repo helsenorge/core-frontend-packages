@@ -2,10 +2,8 @@
  * Get tjenester from window
  * @param tjenesteId id of tjeneste
  */
-// @ts-ignore
-import { TjenesteTilgang } from '../../../src/generated-types/MinHelseEntities';
-// @ts-ignore
-import { TjenesteType, TjenesteTilgangStatus } from '../../../src/generated-types/MinHelseEnums';
+
+import { TjenesteType, TjenesteTilgang, TjenesteTilgangStatus } from './types/entities';
 
 export function harTilgangTilTjeneste(tjenesteId: TjenesteType): boolean {
   if (
