@@ -7735,7 +7735,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   servicepanelNoServiceDescription: string;
   /** 
-  * Få veiledning
+  * Få veiledning før timebestilling
   */
   commonBestillTimeVelgerVeiviser: string;
   /** 

@@ -1922,7 +1922,7 @@
     "commonFastlegeVideoEventsEmptyText": "Ingen videotimer tilgjengelig" , 
     "servicepanelInfoHeading": "Informasjon fra legekontoret" , 
     "servicepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge." , 
-    "commonBestillTimeVelgerVeiviser": "Få veiledning" , 
+    "commonBestillTimeVelgerVeiviser": "Få veiledning før timebestilling" , 
     "commonBestillTimeVelgerVeiviserBeskrivelse": "Se hvordan du kan hjelpe deg selv og andre å unngå smitte." , 
     "commonBestillTimeVelgerAnnet": "Gå direkte til timebestilling" , 
     "commonBestillTimeVelgerAnnetBeskrivelse": "" , 
