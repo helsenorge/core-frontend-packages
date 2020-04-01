@@ -24126,6 +24126,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   oppsummeringKost: string;
   /** 
+  * Du kan ikke registrere dato som er lik eller mellom start- og sluttdato for behandlingen.
+  */
+  datoOvernattingMellomBehandlingerErrorStartSluttDato: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
