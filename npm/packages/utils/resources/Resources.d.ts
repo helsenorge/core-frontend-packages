@@ -24158,6 +24158,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   transportmiddelTilValgDrosjeOgHelseekspressRettighetstekst: string;
   /** 
+  * Vedtak på yrkesskade
+  */
+  dokumentasjonVedtakYrkesskade: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
