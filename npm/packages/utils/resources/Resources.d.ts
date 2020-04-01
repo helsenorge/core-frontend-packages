@@ -24130,6 +24130,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   datoOvernattingMellomBehandlingerErrorStartSluttDato: string;
   /** 
+  * Distansen må være 0 til 3000 km.
+  */
+  distanseValideringUgyldig: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
