@@ -6018,6 +6018,7 @@
     "oppsummeringKost": "Kost" , 
     "datoOvernattingMellomBehandlingerErrorStartSluttDato": "Du kan ikke registrere dato som er lik eller mellom start- og sluttdato for behandlingen." , 
     "distanseValideringUgyldig": "Distansen må være 0 til 3000 km." , 
+    "dokumentasjonFeilInfoFrister": "Dokumentasjon om feil informasjon om frister" , 
     "reisegodsTitle": "Hva kostet frakten av reisegods?" , 
     "etapperDistanserTitle": "Distanse" , 
     "minDateTreAarNy": "Du kan ikke søke om å få dekket en pasientreise som ble foretatt for mer enn 3 år siden." , 
