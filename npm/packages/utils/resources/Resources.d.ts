@@ -24178,6 +24178,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   error_IkkeKronologisk_Title: string;
   /** 
+  * Format må være dd.mm.åååå - tt:mm.
+  */
+  datoBehandlingErrorInvalidDateTime: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
