@@ -3084,14 +3084,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_VelgBehandlingssted_Desc: string;
   /** 
-  * Meldingssystem for smittsomme sykdommer (MSIS)
-  */
-  page_msis_Title: string;
-  /** 
-  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
-  */
-  page_msis_Desc: string;
-  /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
   page_Dokumenter_Desc: string;
@@ -3380,6 +3372,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Meldinger
   */
   page_Messages_Title: string;
+  /** 
+  * Meldingssystem for smittsomme sykdommer (MSIS)
+  */
+  page_msis_Title: string;
+  /** 
+  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+  */
+  page_msis_Desc: string;
   /** 
   * Personverninnstillinger
   */
@@ -7606,14 +7606,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsAppointmentStatusEnteredInError: string;
   /** 
-  * Timer på legekontoret
-  */
-  commonFastlegeOrdinaryEventsHeading: string;
-  /** 
-  * Ingen videotimer tilgjengelig
-  */
-  commonFastlegeVideoEventsEmptyText: string;
-  /** 
   * Tilbake
   */
   commonFormTilbake: string;
@@ -7726,6 +7718,14 @@ behandlingsstedet ved eventuelle spørsmål.
   * Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.
   */
   conversationItemInnkallingsbrevErSlettet: string;
+  /** 
+  * Timer på legekontoret
+  */
+  commonFastlegeOrdinaryEventsHeading: string;
+  /** 
+  * Ingen videotimer tilgjengelig
+  */
+  commonFastlegeVideoEventsEmptyText: string;
   /** 
   * Informasjon fra legekontoret
   */
@@ -24141,6 +24141,22 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   * Dokumentasjon på medisinsk behov for å reise med dette transportmiddelet
   */
   dokumentasjonBehandlingMedisinskBehov: string;
+  /** 
+  * Dokumentasjon på medisinsk behov for å overnatte
+  */
+  dokumentasjonBehovOvernatting: string;
+  /** 
+  * Dokumentasjon fra behandler for å ha reist til behandling med fritak for egenandel
+  */
+  dokumentasjonFritaksgrunnEgenandel: string;
+  /** 
+  * Dokumentasjon på behov for frakt av nødvendig reisegods
+  */
+  dokumentasjonReisegods: string;
+  /** 
+  * Reise med drosje dekkes med en fast sats per kilometer (standardsats). Du kan ha rett til å få dekket drosjeutgifter hvis reisen din var for å få øyeblikkelig hjelp, eller hvis det ikke var mulig å bruke offentlig transport, og behandler eller pasientreisekontor ikke kunne bestille drosje. Reiser med Helseekspress dekkes av helseforetaket, og du betaler bare egenandel for reisen.
+  */
+  transportmiddelTilValgDrosjeOgHelseekspressRettighetstekst: string;
   /** 
   * Hva kostet frakten av reisegods?
   */
