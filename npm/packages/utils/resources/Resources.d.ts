@@ -24170,6 +24170,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   maxDateValidationReisestartForBehandlingsstart: string;
   /** 
+  * Innsendingen av søknad til Pasientreiser har feilet
+  */
+  varselmeny_InnsendingFeilet_Emne: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
