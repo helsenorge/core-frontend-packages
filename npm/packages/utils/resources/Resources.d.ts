@@ -24134,6 +24134,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   distanseValideringUgyldig: string;
   /** 
+  * Dokumentasjon om feil informasjon om frister
+  */
+  dokumentasjonFeilInfoFrister: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
