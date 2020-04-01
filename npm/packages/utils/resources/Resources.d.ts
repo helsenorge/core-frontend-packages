@@ -24122,6 +24122,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   oppsummeringBilagskode29: string;
   /** 
+  * Kost
+  */
+  oppsummeringKost: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
