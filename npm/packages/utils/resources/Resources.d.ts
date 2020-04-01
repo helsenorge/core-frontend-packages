@@ -24118,6 +24118,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   maxTegn999: string;
   /** 
+  * Båtbillett med lugar
+  */
+  oppsummeringBilagskode29: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
