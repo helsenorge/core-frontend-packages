@@ -24138,6 +24138,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   dokumentasjonFeilInfoFrister: string;
   /** 
+  * Dokumentasjon på medisinsk behov for å reise med dette transportmiddelet
+  */
+  dokumentasjonBehandlingMedisinskBehov: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
