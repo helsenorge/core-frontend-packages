@@ -6027,6 +6027,7 @@
     "dokumentasjonVedtakYrkesskade": "Vedtak på yrkesskade" , 
     "dokumentasjonTaptArbeidsinntekt": "Dokumentasjon på tapt arbeidsinntekt" , 
     "maxDateValidationReisestartForBehandlingsstart": "Tidspunktet for når reisen startet, må være tidligere enn møtetidspunktet for behandlingen." , 
+    "varselmeny_InnsendingFeilet_Emne": "Innsendingen av søknad til Pasientreiser har feilet" , 
     "reisegodsTitle": "Hva kostet frakten av reisegods?" , 
     "etapperDistanserTitle": "Distanse" , 
     "minDateTreAarNy": "Du kan ikke søke om å få dekket en pasientreise som ble foretatt for mer enn 3 år siden." , 
