@@ -24106,6 +24106,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   rekvisisjonerRekvirertReiseBlockStatusNyeFly: string;
   /** 
+  * Tapt arbeidsinntekt
+  */
+  oppsummeringTaptArbeidsinntekt: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
