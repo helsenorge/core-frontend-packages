@@ -24102,6 +24102,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   rekvirertEtapperDelvisValideringError: string;
   /** 
+  * Du må ringe Pasientreiser på 05515 så snart som mulig for å bekrefte at du skal ha denne flyreisen.
+  */
+  rekvisisjonerRekvirertReiseBlockStatusNyeFly: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
