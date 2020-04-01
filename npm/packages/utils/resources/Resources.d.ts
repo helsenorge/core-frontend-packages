@@ -3092,10 +3092,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_msis_Desc: string;
   /** 
-  * Personverninnstillinger
-  */
-  page_Personverninnstillinger_Title: string;
-  /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
   page_Dokumenter_Desc: string;
@@ -3384,6 +3380,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Meldinger
   */
   page_Messages_Title: string;
+  /** 
+  * Personverninnstillinger
+  */
+  page_Personverninnstillinger_Title: string;
 }
 
 export type HNMinHelseDialogGPStrings = { 
@@ -7606,22 +7606,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsAppointmentStatusEnteredInError: string;
   /** 
-  * Informasjon fra legekontoret
-  */
-  servicepanelInfoHeading: string;
-  /** 
-  * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
-  */
-  servicepanelNoServiceDescription: string;
-  /** 
-  * Timer på legekontoret
-  */
-  commonFastlegeOrdinaryEventsHeading: string;
-  /** 
-  * Ingen videotimer tilgjengelig
-  */
-  commonFastlegeVideoEventsEmptyText: string;
-  /** 
   * Få veiledning før timebestilling
   */
   commonBestillTimeVelgerVeiviser: string;
@@ -7645,6 +7629,14 @@ behandlingsstedet ved eventuelle spørsmål.
   * /veileder?Query=Questionnaire%2F303
   */
   commonBestillTimeVelgerVeiviserUrl: string;
+  /** 
+  * Timer på legekontoret
+  */
+  commonFastlegeOrdinaryEventsHeading: string;
+  /** 
+  * Ingen videotimer tilgjengelig
+  */
+  commonFastlegeVideoEventsEmptyText: string;
   /** 
   * Tilbake
   */
@@ -7758,6 +7750,14 @@ behandlingsstedet ved eventuelle spørsmål.
   * Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.
   */
   conversationItemInnkallingsbrevErSlettet: string;
+  /** 
+  * Informasjon fra legekontoret
+  */
+  servicepanelInfoHeading: string;
+  /** 
+  * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
+  */
+  servicepanelNoServiceDescription: string;
 }
 
 export type HNMinHelseDialog = { 
@@ -24097,6 +24097,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   * Kan ikke beregnes
   */
   egenandelKanIkkeBeregnes: string;
+  /** 
+  * Du kan ikke krysse av at alle strekninger på reisen er rekvirerte. Du må gå tilbake i søknaden og velge at hele reisen er rekvirert.
+  */
+  rekvirertEtapperDelvisValideringError: string;
   /** 
   * Hva kostet frakten av reisegods?
   */

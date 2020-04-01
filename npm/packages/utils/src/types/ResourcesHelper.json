@@ -767,7 +767,6 @@
     "page_VelgBehandlingssted_Desc": "Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til." , 
     "page_msis_Title": "Meldingssystem for smittsomme sykdommer (MSIS)" , 
     "page_msis_Desc": "MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge." , 
-    "page_Personverninnstillinger_Title": "Personverninnstillinger" , 
     "page_Dokumenter_Desc": "Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din." , 
     "page_Forskning_Desc": "Forskning i forbindelse med kliniske studier har som formål å undersøke effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.<br/>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden." , 
     "page_Forskning_Title": "Forskning" , 
@@ -836,7 +835,8 @@
     "page_Appointments_Desc": "Her kan du se dine timer hos fastlegen, sykehus, kommunal helse- og omsorgstjeneste og enkelte andre aktører. Foreløpig er ikke alle timeavtaler tilgjengelige på Helsenorge." , 
     "page_Appointments_Title": "Timeavtaler" , 
     "page_Messages_Desc": "Her ser du meldinger du har sendt og mottatt via helsenorge.no." , 
-    "page_Messages_Title": "Meldinger" 
+    "page_Messages_Title": "Meldinger" , 
+    "page_Personverninnstillinger_Title": "Personverninnstillinger" 
   }, 
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. " , 
@@ -1890,16 +1890,14 @@
     "bookingEmptyTextHelsetilbud": "Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her." , 
     "videoEventAlertHelsetilbudDescription": "Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved behandlerkontoret. Du betaler samme egenandel som ved vanlig legetime." , 
     "appointmentDetailsAppointmentStatusEnteredInError": "Feilregistrert" , 
-    "servicepanelInfoHeading": "Informasjon fra legekontoret" , 
-    "servicepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge." , 
-    "commonFastlegeOrdinaryEventsHeading": "Timer på legekontoret" , 
-    "commonFastlegeVideoEventsEmptyText": "Ingen videotimer tilgjengelig" , 
     "commonBestillTimeVelgerVeiviser": "Få veiledning før timebestilling" , 
     "commonBestillTimeVelgerVeiviserBeskrivelse": "Se hvordan du kan hjelpe deg selv og andre å unngå smitte." , 
     "commonBestillTimeVelgerAnnet": "Gå direkte til timebestilling" , 
     "commonBestillTimeVelgerAnnetBeskrivelse": "" , 
     "commonBestillTimeVelgerTittel": "Hva slags time trenger du?" , 
     "commonBestillTimeVelgerVeiviserUrl": "/veileder?Query=Questionnaire%2F303" , 
+    "commonFastlegeOrdinaryEventsHeading": "Timer på legekontoret" , 
+    "commonFastlegeVideoEventsEmptyText": "Ingen videotimer tilgjengelig" , 
     "commonFormTilbake": "Tilbake" , 
     "commonSpesialistMeldingHeader": "Henvendelse til" , 
     "commonSpesialistMeldingBeskrivelse": "Tjenesten er gratis. Meldingen kan leses av helsepersonell ved {0}. Du vil bli kontaktet innen fem arbeidsdager." , 
@@ -1927,7 +1925,9 @@
     "conversationItemInnkallingsbrevErErstattet": "Du har fått en ny versjon av innkallingsbrevet. Les brevet for å se om du må gjøre forberedelser i forkant av timen." , 
     "conversationItemInnkallingsbrevErGjenopprettet": "Innkallingsbrevet er gyldig igjen. Kontakt behandlingsstedet hvis du har spørsmål." , 
     "conversationItemInnkallingsbrevErNytt": "Du har fått en melding med et innkallingsbrev. Les brevet for å se om du må gjøre forberedelser til timen." , 
-    "conversationItemInnkallingsbrevErSlettet": "Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv." 
+    "conversationItemInnkallingsbrevErSlettet": "Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv." , 
+    "servicepanelInfoHeading": "Informasjon fra legekontoret" , 
+    "servicepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge." 
   }, 
   "HNMinHelseDialog": { 
     "varselmeny_NegativAppRec_Emne": "Sending av melding har feilet" , 
@@ -6009,6 +6009,7 @@
   }, 
   "HNMinHelsePasientreiserStegvisningJS": { 
     "egenandelKanIkkeBeregnes": "Kan ikke beregnes" , 
+    "rekvirertEtapperDelvisValideringError": "Du kan ikke krysse av at alle strekninger på reisen er rekvirerte. Du må gå tilbake i søknaden og velge at hele reisen er rekvirert." , 
     "reisegodsTitle": "Hva kostet frakten av reisegods?" , 
     "etapperDistanserTitle": "Distanse" , 
     "minDateTreAarNy": "Du kan ikke søke om å få dekket en pasientreise som ble foretatt for mer enn 3 år siden." , 
