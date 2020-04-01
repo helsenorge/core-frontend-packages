@@ -6026,6 +6026,7 @@
     "transportmiddelTilValgDrosjeOgHelseekspressRettighetstekst": "Reise med drosje dekkes med en fast sats per kilometer (standardsats). Du kan ha rett til å få dekket drosjeutgifter hvis reisen din var for å få øyeblikkelig hjelp, eller hvis det ikke var mulig å bruke offentlig transport, og behandler eller pasientreisekontor ikke kunne bestille drosje. Reiser med Helseekspress dekkes av helseforetaket, og du betaler bare egenandel for reisen." , 
     "dokumentasjonVedtakYrkesskade": "Vedtak på yrkesskade" , 
     "dokumentasjonTaptArbeidsinntekt": "Dokumentasjon på tapt arbeidsinntekt" , 
+    "maxDateValidationReisestartForBehandlingsstart": "Tidspunktet for når reisen startet, må være tidligere enn møtetidspunktet for behandlingen." , 
     "reisegodsTitle": "Hva kostet frakten av reisegods?" , 
     "etapperDistanserTitle": "Distanse" , 
     "minDateTreAarNy": "Du kan ikke søke om å få dekket en pasientreise som ble foretatt for mer enn 3 år siden." , 

@@ -24166,6 +24166,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   dokumentasjonTaptArbeidsinntekt: string;
   /** 
+  * Tidspunktet for når reisen startet, må være tidligere enn møtetidspunktet for behandlingen.
+  */
+  maxDateValidationReisestartForBehandlingsstart: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
