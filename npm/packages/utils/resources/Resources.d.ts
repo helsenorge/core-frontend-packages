@@ -24162,6 +24162,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   dokumentasjonVedtakYrkesskade: string;
   /** 
+  * Dokumentasjon på tapt arbeidsinntekt
+  */
+  dokumentasjonTaptArbeidsinntekt: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
