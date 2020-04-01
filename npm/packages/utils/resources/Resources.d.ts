@@ -24174,6 +24174,10 @@ export type HNMinHelsePasientreiserStegvisningJS = {
   */
   varselmeny_InnsendingFeilet_Emne: string;
   /** 
+  * Sluttdato før startdato
+  */
+  error_IkkeKronologisk_Title: string;
+  /** 
   * Hva kostet frakten av reisegods?
   */
   reisegodsTitle: string;
