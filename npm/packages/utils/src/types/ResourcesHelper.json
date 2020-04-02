@@ -7996,7 +7996,7 @@
     "page_verktoy_ingress_innlogget": "Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler." , 
     "page_verktoy_ingress_apenside": "Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler." , 
     "expandableSectionHeader": "Les mer om verktøyet" , 
-    "maForskrivesAvBehandler": "Kun tilgjengelig for deg som har behandler hos Rask psykisk helsehjelp i Bærum kommune." , 
+    "maForskrivesAvBehandler": "Kun tilgjengelig for utsending fra enkelte behandlere." , 
     "hjelpetrigger_maForskrivesAvBehandler": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Kun tilgjengelig for deg som har behandler hos Rask psykisk helsehjelp i Bærum kommune\",\"seksjonstekst_brodtekst\":\"Det er i dag få behandlere som har tatt i bruk verktøy. Dette verktøyet er kun tilgjengelig for deg som mottar behandling fra Rask psykisk helsehjelp i Bærum kommune. I fremtiden vil tilbudet utvides og verktøy tilbys av flere behandlere og i flere kommuner.\"}" , 
     "removeVerktoyButtonText": "Fjern fra mine verktøy" , 
     "confirmFjernVerktoyHeader": "Er du sikker på at du vil fjerne {0}?" , 

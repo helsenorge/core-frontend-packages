@@ -32252,7 +32252,7 @@ export type HNMinHelseVerktoy = {
   */
   expandableSectionHeader: string;
   /** 
-  * Kun tilgjengelig for deg som har behandler hos Rask psykisk helsehjelp i Bærum kommune.
+  * Kun tilgjengelig for utsending fra enkelte behandlere.
   */
   maForskrivesAvBehandler: string;
   /** 
