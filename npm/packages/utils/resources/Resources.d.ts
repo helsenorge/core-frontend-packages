@@ -3099,6 +3099,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_VelgBehandlingssted_Desc: string;
   /** 
+  * Meldingssystem for smittsomme sykdommer (MSIS)
+  */
+  page_msis_Title: string;
+  /** 
+  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+  */
+  page_msis_Desc: string;
+  /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
   page_Dokumenter_Desc: string;
@@ -3387,14 +3395,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Meldinger
   */
   page_Messages_Title: string;
-  /** 
-  * Meldingssystem for smittsomme sykdommer (MSIS)
-  */
-  page_msis_Title: string;
-  /** 
-  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
-  */
-  page_msis_Desc: string;
   /** 
   * Personverninnstillinger
   */
@@ -7621,6 +7621,38 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsAppointmentStatusEnteredInError: string;
   /** 
+  * Få veiledning før timebestilling
+  */
+  commonBestillTimeVelgerVeiviser: string;
+  /** 
+  * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
+  */
+  commonBestillTimeVelgerVeiviserBeskrivelse: string;
+  /** 
+  * Gå direkte til timebestilling
+  */
+  commonBestillTimeVelgerAnnet: string;
+  /** 
+  * 
+  */
+  commonBestillTimeVelgerAnnetBeskrivelse: string;
+  /** 
+  * Hva slags time trenger du?
+  */
+  commonBestillTimeVelgerTittel: string;
+  /** 
+  * /veileder?Query=Questionnaire%2F303
+  */
+  commonBestillTimeVelgerVeiviserUrl: string;
+  /** 
+  * Timer på legekontoret
+  */
+  commonFastlegeOrdinaryEventsHeading: string;
+  /** 
+  * Ingen videotimer tilgjengelig
+  */
+  commonFastlegeVideoEventsEmptyText: string;
+  /** 
   * Tilbake
   */
   commonFormTilbake: string;
@@ -7734,14 +7766,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationItemInnkallingsbrevErSlettet: string;
   /** 
-  * Timer på legekontoret
-  */
-  commonFastlegeOrdinaryEventsHeading: string;
-  /** 
-  * Ingen videotimer tilgjengelig
-  */
-  commonFastlegeVideoEventsEmptyText: string;
-  /** 
   * Informasjon fra legekontoret
   */
   servicepanelInfoHeading: string;
@@ -7749,30 +7773,6 @@ behandlingsstedet ved eventuelle spørsmål.
   * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
   */
   servicepanelNoServiceDescription: string;
-  /** 
-  * Få veiledning før timebestilling
-  */
-  commonBestillTimeVelgerVeiviser: string;
-  /** 
-  * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
-  */
-  commonBestillTimeVelgerVeiviserBeskrivelse: string;
-  /** 
-  * Gå direkte til timebestilling
-  */
-  commonBestillTimeVelgerAnnet: string;
-  /** 
-  * 
-  */
-  commonBestillTimeVelgerAnnetBeskrivelse: string;
-  /** 
-  * Hva slags time trenger du?
-  */
-  commonBestillTimeVelgerTittel: string;
-  /** 
-  * /veileder?Query=Questionnaire%2F303
-  */
-  commonBestillTimeVelgerVeiviserUrl: string;
 }
 
 export type HNMinHelseDialog = { 
@@ -15018,6 +15018,14 @@ export type HNMinHelseLegemidler = {
 
 export type HNMinHelseMfr = { 
   /** 
+  * Medisinsk fødselsregister (MFR)
+  */
+  page_Title: string;
+  /** 
+  * Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.
+  */
+  page_Desc: string;
+  /** 
   * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
   */
   innsyn_footer_content: string;
@@ -15044,6 +15052,14 @@ export type HNMinHelseMfr = {
 }
 
 export type HNMinHelseMsis = { 
+  /** 
+  * Meldingssystem for smittsomme sykdommer (MSIS)
+  */
+  page_Title: string;
+  /** 
+  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+  */
+  page_Desc: string;
   /** 
   * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
   */
@@ -16848,6 +16864,10 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInformasjon_TextMessage_Body_Self: string;
   /** 
+  * Varsel om ny melding på helsenorge.no
+  */
+  paminnelseFormidling_EmailMessage_Subject_Self: string;
+  /** 
   * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. ${Lokasjon}Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
   paminnelsePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
@@ -17051,10 +17071,6 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   * Din timeavtale hos {0} {1} var registrert ved en feil.
   */
   varselMeny_PrimarhelsetjenesteTimeavtale_Feilregistrert_Emne: string;
-  /** 
-  * Varsel om ny melding på helsenorge.no
-  */
-  paminnelseFormidling_EmailMessage_Subject_Self: string;
 }
 
 export type HNMinHelsePages = { 
@@ -32000,6 +32016,10 @@ export type HNMinHelseSysvak = {
   * Nasjonalt vaksinasjonsregister SYSVAK
   */
   page_Tilte: string;
+  /** 
+  * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
+  */
+  page_Desc: string;
 }
 
 export type HNMinHelseVerktoy = { 
