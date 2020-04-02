@@ -182,6 +182,13 @@ export type HNCoreFrontendNPMPackagesCMS = {
   searchPlaceholder: string;
 }
 
+export type HNCoreFrontendWebForside = { 
+  /** 
+  * Søk i kvalitetssikret helseinformasjon
+  */
+  searchcontainertitle: string;
+}
+
 export type HNMinHelseByttFastlegeJS = { 
   /** 
   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Utekontor","seksjonstekst_brodtekst":"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>"}
