@@ -2385,6 +2385,14 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   seAlleTjenester: string;
   /** 
+  * Vis færre tjenester
+  */
+  visFarreTjenester: string;
+  /** 
+  * Tjenester utenfor Helsenorge
+  */
+  tjenesterUtenforHelsenorge: string;
+  /** 
   * Innholdsfortegnelse
   */
   innholdsfortegnelse: string;

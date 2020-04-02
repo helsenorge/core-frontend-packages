@@ -597,6 +597,8 @@
     "askForMoreServicesDialog": "Dialog med helsekontakter" , 
     "askForMoreServicesButtonText": "Endre samtykke" , 
     "seAlleTjenester": "Se alle tjenester" , 
+    "visFarreTjenester": "Vis færre tjenester" , 
+    "tjenesterUtenforHelsenorge": "Tjenester utenfor Helsenorge" , 
     "innholdsfortegnelse": "Innholdsfortegnelse" , 
     "helpDrawerCloseHelpButton": "Lukk hjelpesenteret" , 
     "helpDrawerTitle": "Hjelp" , 
