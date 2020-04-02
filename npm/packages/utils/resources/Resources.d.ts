@@ -186,7 +186,7 @@ export type HNCoreFrontendWebForside = {
   /** 
   * Søk i kvalitetssikret helseinformasjon
   */
-  searchcontainertitle: string;
+  searchContainerTitle: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 
