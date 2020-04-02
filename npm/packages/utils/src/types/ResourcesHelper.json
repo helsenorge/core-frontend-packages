@@ -7935,7 +7935,7 @@
     "innsyn_tab_loggoverbruk": "Logg over bruk" , 
     "innsyn_loggoverbruk_content": "Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret." , 
     "innsyn_not_available": "Denne tjenesten er ikke tilgjengelig" , 
-    "page_Tilte": "Nasjonalt vaksinasjonsregister SYSVAK" , 
+    "page_Title": "Nasjonalt vaksinasjonsregister SYSVAK" , 
     "page_Desc": "Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus." 
   }, 
   "HNMinHelseVerktoy": { 
