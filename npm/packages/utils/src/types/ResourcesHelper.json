@@ -47,6 +47,9 @@
     "searchErrorSuggestionFetch": "Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere." , 
     "searchPlaceholder": "Søk" 
   }, 
+  "HNCoreFrontendWebForside": { 
+    "searchcontainertitle": "Søk i kvalitetssikret helseinformasjon" 
+  }, 
   "HNMinHelseByttFastlegeJS": { 
     "hjelpetrigger_bflUtekontor": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Utekontor\",\"seksjonstekst_brodtekst\":\"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>\"}" , 
     "bfl_ResultPage_Byttedialog_Print_Info": "Denne kvitteringen er også tilgjengelig under Meldinger." , 
