@@ -32015,7 +32015,7 @@ export type HNMinHelseSysvak = {
   /** 
   * Nasjonalt vaksinasjonsregister SYSVAK
   */
-  page_Tilte: string;
+  page_Title: string;
   /** 
   * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
   */
