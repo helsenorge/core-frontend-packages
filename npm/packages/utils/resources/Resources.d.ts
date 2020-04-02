@@ -58,7 +58,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuProfileLinksTitle: string;
   /** 
-  * Du var sist innlogget:
+  * Du var sist innlogget :
   */
   headerMenuProfileSistInnlogget: string;
   /** 
