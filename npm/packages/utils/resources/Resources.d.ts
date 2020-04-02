@@ -2381,6 +2381,10 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   askForMoreServicesButtonText: string;
   /** 
+  * Se alle tjenester
+  */
+  seAlleTjenester: string;
+  /** 
   * Innholdsfortegnelse
   */
   innholdsfortegnelse: string;
@@ -3051,6 +3055,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Start_Title: string;
   /** 
+  * Meldingssystem for smittsomme sykdommer (MSIS)
+  */
+  page_msis_Title: string;
+  /** 
+  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+  */
+  page_msis_Desc: string;
+  /** 
   * Tilgangstyring av helseopplysninger
   */
   page_Tilgangsstyring_Title: string;
@@ -3098,14 +3110,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.
   */
   page_VelgBehandlingssted_Desc: string;
-  /** 
-  * Meldingssystem for smittsomme sykdommer (MSIS)
-  */
-  page_msis_Title: string;
-  /** 
-  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
-  */
-  page_msis_Desc: string;
   /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
@@ -7621,38 +7625,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsAppointmentStatusEnteredInError: string;
   /** 
-  * Få veiledning før timebestilling
-  */
-  commonBestillTimeVelgerVeiviser: string;
-  /** 
-  * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
-  */
-  commonBestillTimeVelgerVeiviserBeskrivelse: string;
-  /** 
-  * Gå direkte til timebestilling
-  */
-  commonBestillTimeVelgerAnnet: string;
-  /** 
-  * 
-  */
-  commonBestillTimeVelgerAnnetBeskrivelse: string;
-  /** 
-  * Hva slags time trenger du?
-  */
-  commonBestillTimeVelgerTittel: string;
-  /** 
-  * /veileder?Query=Questionnaire%2F303
-  */
-  commonBestillTimeVelgerVeiviserUrl: string;
-  /** 
-  * Timer på legekontoret
-  */
-  commonFastlegeOrdinaryEventsHeading: string;
-  /** 
-  * Ingen videotimer tilgjengelig
-  */
-  commonFastlegeVideoEventsEmptyText: string;
-  /** 
   * Tilbake
   */
   commonFormTilbake: string;
@@ -7765,6 +7737,38 @@ behandlingsstedet ved eventuelle spørsmål.
   * Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.
   */
   conversationItemInnkallingsbrevErSlettet: string;
+  /** 
+  * Få veiledning før timebestilling
+  */
+  commonBestillTimeVelgerVeiviser: string;
+  /** 
+  * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
+  */
+  commonBestillTimeVelgerVeiviserBeskrivelse: string;
+  /** 
+  * Gå direkte til timebestilling
+  */
+  commonBestillTimeVelgerAnnet: string;
+  /** 
+  * 
+  */
+  commonBestillTimeVelgerAnnetBeskrivelse: string;
+  /** 
+  * Hva slags time trenger du?
+  */
+  commonBestillTimeVelgerTittel: string;
+  /** 
+  * /veileder?Query=Questionnaire%2F303
+  */
+  commonBestillTimeVelgerVeiviserUrl: string;
+  /** 
+  * Timer på legekontoret
+  */
+  commonFastlegeOrdinaryEventsHeading: string;
+  /** 
+  * Ingen videotimer tilgjengelig
+  */
+  commonFastlegeVideoEventsEmptyText: string;
   /** 
   * Informasjon fra legekontoret
   */
