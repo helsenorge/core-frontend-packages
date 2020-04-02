@@ -31996,6 +31996,10 @@ export type HNMinHelseSysvak = {
   * Denne tjenesten er ikke tilgjengelig
   */
   innsyn_not_available: string;
+  /** 
+  * Nasjonalt vaksinasjonsregister SYSVAK
+  */
+  page_Tilte: string;
 }
 
 export type HNMinHelseVerktoy = { 

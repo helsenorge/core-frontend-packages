@@ -7930,7 +7930,8 @@
     "innsyn_tab_innhold": "Innhold" , 
     "innsyn_tab_loggoverbruk": "Logg over bruk" , 
     "innsyn_loggoverbruk_content": "Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret." , 
-    "innsyn_not_available": "Denne tjenesten er ikke tilgjengelig" 
+    "innsyn_not_available": "Denne tjenesten er ikke tilgjengelig" , 
+    "page_Tilte": "Nasjonalt vaksinasjonsregister SYSVAK" 
   }, 
   "HNMinHelseVerktoy": { 
     "varselMeny_Verktoy_Emne": "Nytt digitalt verktøy fra" , 
