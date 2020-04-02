@@ -2946,7 +2946,7 @@
     "hjelpekontekst_kjernejournal_innsyn": "{\"defaulttekst_overskrift\":\"Kjernejournal innsyn\",\"defaulttekst_brodtekst\":\"<p>Du kan selv bidra til at riktige opplysninger er registrert om deg i din kjernejournal. Du finner informasjon om hvor du kan registrere og endre opplysninger på siden <a href=\\\"/kjernejournal\\\">Kjernejournal</a>.</p>\"}" , 
     "kritiskinfoErrorForbiddenTitle": "KRITISK INFORMASJON I KJERNEJOURNAL KAN IKKE VISES" , 
     "kritiskinfoErrorForbiddenBody": "Opplysninger om kritisk informasjon i kjernejournal er ikke tilgjengelige når du representerer barn mellom 12 og 16 år. For å få lagt kritisk helseinformasjon inn i barnets kjernejournal må du ta kontakt med fastlegen." , 
-    "innsynKjernejournalErrorForbiddenBody": "Digitalt innsyn i kjernejournal er ikke tilgjengelig når du representerer barn mellom 12 og 16 år. Du kan kontakte barnets fastlege eller annen lege som behandler barnet og be om en utskrift." , 
+    "innsynKjernejournalErrorForbiddenBody": "Digitalt innsyn i kjernejournal er ikke tilgjengelig når du representerer barn mellom 12 og 16 år. Du kan i stedet kontakte barnets fastlege eller annen lege som behandler barnet." , 
     "innsynKjernejournalErrorForbiddenTitle": "KJERNEJOURNAL KAN IKKE VISES" , 
     "page_SykdomOgKritiskInfo_Empty": "Ingen opplysninger registrert" , 
     "page_SykdomOgKritiskInfo_Arstall": "År" , 

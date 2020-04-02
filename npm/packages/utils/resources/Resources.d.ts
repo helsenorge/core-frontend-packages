@@ -11805,7 +11805,7 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   kritiskinfoErrorForbiddenBody: string;
   /** 
-  * Digitalt innsyn i kjernejournal er ikke tilgjengelig når du representerer barn mellom 12 og 16 år. Du kan kontakte barnets fastlege eller annen lege som behandler barnet og be om en utskrift.
+  * Digitalt innsyn i kjernejournal er ikke tilgjengelig når du representerer barn mellom 12 og 16 år. Du kan i stedet kontakte barnets fastlege eller annen lege som behandler barnet.
   */
   innsynKjernejournalErrorForbiddenBody: string;
   /** 
