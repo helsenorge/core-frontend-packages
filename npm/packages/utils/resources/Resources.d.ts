@@ -5296,7 +5296,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationListElementParticipantFallback: string;
   /** 
-  * Time ved
+  * Vis timeavtale
   */
   appointmentReference: string;
   /** 

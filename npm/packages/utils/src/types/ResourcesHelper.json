@@ -1316,7 +1316,7 @@
     "conversationDeleteMessage": "Slett" , 
     "conversationItemSubjectChangeUnconfirmed": "Endre tidspunkt" , 
     "conversationListElementParticipantFallback": "Fastlegekontoret" , 
-    "appointmentReference": "Time ved" , 
+    "appointmentReference": "Vis timeavtale" , 
     "replyMessageServiceUnavailableContactGP": "Kontakt fastlegekontoret hvis du har noen spørsmål." , 
     "replyMessageServiceUnavailableOnBehalf": "Denne tjenesten er ikke tilgjengelig på vegne av andre." , 
     "dialogFullmaktSender": "Helsenorge" , 
