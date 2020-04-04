@@ -3067,6 +3067,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_InnsynSmittestopp_Title: string;
   /** 
+  * TODO: beskrivelse av innsyn smittestopp
+  */
+  page_InnsynSmittestopp_Desc: string;
+  /** 
   * Meldingssystem for smittsomme sykdommer (MSIS)
   */
   page_msis_Title: string;
