@@ -762,6 +762,7 @@
     "page_Fullmakter_Title": "Fullmakter" , 
     "page_Start_Title": "Min helse" , 
     "page_InnsynSmittestopp_Title": "TODO: Innsyn smittestopp" , 
+    "page_InnsynSmittestopp_Desc": "TODO: beskrivelse av innsyn smittestopp" , 
     "page_msis_Title": "Meldingssystem for smittsomme sykdommer (MSIS)" , 
     "page_msis_Desc": "MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge." , 
     "page_Tilgangsstyring_Title": "Tilgangstyring av helseopplysninger" , 
