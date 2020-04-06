@@ -30,74 +30,6 @@ export type HNCommon = {
 
 export type HNCoreFrontendMicrowebHeaderFooter = { 
   /** 
-  * meny
-  */
-  headerButtonMeny: string;
-  /** 
-  * søk
-  */
-  headerButtonSok: string;
-  /** 
-  * Logg inn
-  */
-  headerButtonLogin: string;
-  /** 
-  * Logg ut
-  */
-  headerButtonLogout: string;
-  /** 
-  * Dette har skjedd siden sist
-  */
-  headerMenuProfileVarslingerTitle: string;
-  /** 
-  * Hvem vil du bruke Helsenorge på vegne av?
-  */
-  headerMenuProfileRepresentasjonerTitle: string;
-  /** 
-  * Profil og innstillinger
-  */
-  headerMenuProfileLinksTitle: string;
-  /** 
-  * Du var sist innlogget:
-  */
-  headerMenuProfileSistInnlogget: string;
-  /** 
-  * deg selv
-  */
-  headerMenuProfileRepresentasjonerDegSelv: string;
-  /** 
-  * du har fullmakt
-  */
-  headerMenuProfileRepresentasjonerDuHarFullmakt: string;
-  /** 
-  * du har foreldreansvar
-  */
-  headerMenuProfileRepresentasjonerDuHarForeldreansvar: string;
-  /** 
-  * Du har
-  */
-  headerMenuProfileVarslingerDuHar: string;
-  /** 
-  * nye meldinger
-  */
-  headerMenuProfileVarslingerMeldinger: string;
-  /** 
-  * nye hendelser
-  */
-  headerMenuProfileVarslingerHendelser: string;
-  /** 
-  * Hva leter du etter?
-  */
-  headerMenuSearchTitle: string;
-  /** 
-  * Søk
-  */
-  headerMenuSearchInput: string;
-  /** 
-  * Søk
-  */
-  headerMenuSearchSubmit: string;
-  /** 
   * /kontaktinformasjon-og-varseloppsett
   */
   headerMenuProfileLinksKontaktinformasjonOgVarseloppsettUrl: string;
@@ -165,9 +97,81 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * https://helsenorge.no/en/
   */
   headerMenuBasicEngelskUrl: string;
+  /** 
+  * meny
+  */
+  headerButtonMeny: string;
+  /** 
+  * søk
+  */
+  headerButtonSok: string;
+  /** 
+  * Logg inn
+  */
+  headerButtonLogin: string;
+  /** 
+  * Logg ut
+  */
+  headerButtonLogout: string;
+  /** 
+  * Dette har skjedd siden sist
+  */
+  headerMenuProfileVarslingerTitle: string;
+  /** 
+  * Hvem vil du bruke Helsenorge på vegne av?
+  */
+  headerMenuProfileRepresentasjonerTitle: string;
+  /** 
+  * Profil og innstillinger
+  */
+  headerMenuProfileLinksTitle: string;
+  /** 
+  * Du var sist innlogget:
+  */
+  headerMenuProfileSistInnlogget: string;
+  /** 
+  * deg selv
+  */
+  headerMenuProfileRepresentasjonerDegSelv: string;
+  /** 
+  * du har fullmakt
+  */
+  headerMenuProfileRepresentasjonerDuHarFullmakt: string;
+  /** 
+  * du har foreldreansvar
+  */
+  headerMenuProfileRepresentasjonerDuHarForeldreansvar: string;
+  /** 
+  * Du har
+  */
+  headerMenuProfileVarslingerDuHar: string;
+  /** 
+  * nye meldinger
+  */
+  headerMenuProfileVarslingerMeldinger: string;
+  /** 
+  * nye hendelser
+  */
+  headerMenuProfileVarslingerHendelser: string;
+  /** 
+  * Hva leter du etter?
+  */
+  headerMenuSearchTitle: string;
+  /** 
+  * Søk
+  */
+  headerMenuSearchInput: string;
+  /** 
+  * Søk
+  */
+  headerMenuSearchSubmit: string;
 }
 
 export type HNCoreFrontendNPMPackagesCMS = { 
+  /** 
+  * Søk
+  */
+  searchPlaceholder: string;
   /** 
   * Søk
   */
@@ -176,10 +180,6 @@ export type HNCoreFrontendNPMPackagesCMS = {
   * Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere.
   */
   searchErrorSuggestionFetch: string;
-  /** 
-  * Søk
-  */
-  searchPlaceholder: string;
 }
 
 export type HNCoreFrontendWebForside = { 
@@ -229,6 +229,26 @@ export type HNCoreFrontendWebForside = {
   * <p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href="/bruk-av-helsetjenester-og-ordninger" class="document" target="_blank">Les mer om dette ved å gå til Bruk av helsetjenester og ordninger.</a></p>
   */
   confirmationReservation: string;
+  /** 
+  * Jeg forstår og vil gå videre
+  */
+  confirmationButton: string;
+  /** 
+  * Avbryt
+  */
+  confirmationCancel: string;
+  /** 
+  * Denne siden er visst ikke helt frisk
+  */
+  pageNotFoundHeader: string;
+  /** 
+  * Se etter en skrivefeil i URL-adressen, eller <a href="/">gå til Min helse</a>
+  */
+  pageNotFoundDescription: string;
+  /** 
+  * Gå til min helse
+  */
+  pageNotFoundToStart: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 

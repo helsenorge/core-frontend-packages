@@ -7,23 +7,6 @@
     "iKKE_BRUK_KUN_FOR_TEST": "test" 
   }, 
   "HNCoreFrontendMicrowebHeaderFooter": { 
-    "headerButtonMeny": "meny" , 
-    "headerButtonSok": "søk" , 
-    "headerButtonLogin": "Logg inn" , 
-    "headerButtonLogout": "Logg ut" , 
-    "headerMenuProfileVarslingerTitle": "Dette har skjedd siden sist" , 
-    "headerMenuProfileRepresentasjonerTitle": "Hvem vil du bruke Helsenorge på vegne av?" , 
-    "headerMenuProfileLinksTitle": "Profil og innstillinger" , 
-    "headerMenuProfileSistInnlogget": "Du var sist innlogget:" , 
-    "headerMenuProfileRepresentasjonerDegSelv": "deg selv" , 
-    "headerMenuProfileRepresentasjonerDuHarFullmakt": "du har fullmakt" , 
-    "headerMenuProfileRepresentasjonerDuHarForeldreansvar": "du har foreldreansvar" , 
-    "headerMenuProfileVarslingerDuHar": "Du har" , 
-    "headerMenuProfileVarslingerMeldinger": "nye meldinger" , 
-    "headerMenuProfileVarslingerHendelser": "nye hendelser" , 
-    "headerMenuSearchTitle": "Hva leter du etter?" , 
-    "headerMenuSearchInput": "Søk" , 
-    "headerMenuSearchSubmit": "Søk" , 
     "headerMenuProfileLinksKontaktinformasjonOgVarseloppsettUrl": "/kontaktinformasjon-og-varseloppsett" , 
     "headerMenuProfileLinksKontaktinformasjonOgVarseloppsettTitle": "Kontaktinformasjon og varseloppsett" , 
     "headerMenuProfileLinksPersonopplysningerUrl": "/personopplysninger" , 
@@ -40,12 +23,29 @@
     "headerMenuBasicInnholdAAATitle": "Innhold A-Å" , 
     "headerMenuBasicInnholdAAAUrl": "https://helsenorge.no/en" , 
     "headerMenuBasicEngelskTitle": "Engelsk" , 
-    "headerMenuBasicEngelskUrl": "https://helsenorge.no/en/" 
+    "headerMenuBasicEngelskUrl": "https://helsenorge.no/en/" , 
+    "headerButtonMeny": "meny" , 
+    "headerButtonSok": "søk" , 
+    "headerButtonLogin": "Logg inn" , 
+    "headerButtonLogout": "Logg ut" , 
+    "headerMenuProfileVarslingerTitle": "Dette har skjedd siden sist" , 
+    "headerMenuProfileRepresentasjonerTitle": "Hvem vil du bruke Helsenorge på vegne av?" , 
+    "headerMenuProfileLinksTitle": "Profil og innstillinger" , 
+    "headerMenuProfileSistInnlogget": "Du var sist innlogget:" , 
+    "headerMenuProfileRepresentasjonerDegSelv": "deg selv" , 
+    "headerMenuProfileRepresentasjonerDuHarFullmakt": "du har fullmakt" , 
+    "headerMenuProfileRepresentasjonerDuHarForeldreansvar": "du har foreldreansvar" , 
+    "headerMenuProfileVarslingerDuHar": "Du har" , 
+    "headerMenuProfileVarslingerMeldinger": "nye meldinger" , 
+    "headerMenuProfileVarslingerHendelser": "nye hendelser" , 
+    "headerMenuSearchTitle": "Hva leter du etter?" , 
+    "headerMenuSearchInput": "Søk" , 
+    "headerMenuSearchSubmit": "Søk" 
   }, 
   "HNCoreFrontendNPMPackagesCMS": { 
+    "searchPlaceholder": "Søk" , 
     "searchSubmitLabel": "Søk" , 
-    "searchErrorSuggestionFetch": "Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere." , 
-    "searchPlaceholder": "Søk" 
+    "searchErrorSuggestionFetch": "Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere." 
   }, 
   "HNCoreFrontendWebForside": { 
     "searchContainerTitle": "Søk i kvalitetssikret helseinformasjon" , 
@@ -58,7 +58,12 @@
     "nyttFnrHeader": "Vi beklager!" , 
     "nyttFnrDescription": "På grunn av overgang til nytt fødselsnummer, kan enkelte tjenester være utilgjengelige en periode." , 
     "confirmationText": "<p>Denne tjenesten gir deg innsyn i dokumenter som ligger lagret i pasientjournalene dine ved norske sykehus. Foreløpig dekker tjenesten kun sykehus i Helse Nord, Helse Vest og Helse Sør-Øst.</p>\n<p>Du vil kunne åpne, lese og lagre en kopi av journaldokumentene dine kun mens du er logget inn på helsenorge.no. Du får også oversikt over helsepersonell som har hatt tilgang til din journal.</p>\n<p>Dokumentene inneholder sensitive helseopplysninger. Tenk over dette hvis du bruker tjenesten på et offentlig sted eller sammen med andre.</p>" , 
-    "confirmationReservation": "<p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href=\"/bruk-av-helsetjenester-og-ordninger\" class=\"document\" target=\"_blank\">Les mer om dette ved å gå til Bruk av helsetjenester og ordninger.</a></p>" 
+    "confirmationReservation": "<p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href=\"/bruk-av-helsetjenester-og-ordninger\" class=\"document\" target=\"_blank\">Les mer om dette ved å gå til Bruk av helsetjenester og ordninger.</a></p>" , 
+    "confirmationButton": "Jeg forstår og vil gå videre" , 
+    "confirmationCancel": "Avbryt" , 
+    "pageNotFoundHeader": "Denne siden er visst ikke helt frisk" , 
+    "pageNotFoundDescription": "Se etter en skrivefeil i URL-adressen, eller <a href=\"/\">gå til Min helse</a>" , 
+    "pageNotFoundToStart": "Gå til min helse" 
   }, 
   "HNMinHelseByttFastlegeJS": { 
     "hjelpetrigger_bflUtekontor": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Utekontor\",\"seksjonstekst_brodtekst\":\"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>\"}" , 
