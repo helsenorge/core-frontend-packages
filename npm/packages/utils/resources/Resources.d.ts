@@ -273,6 +273,14 @@ export type HNCoreFrontendWebForside = {
   * Pasientreiser
   */
   savnerDuTjenesterPasientreiser: string;
+  /** 
+  * Dialog med helsekontakter
+  */
+  savnerDuTjenesterDialog: string;
+  /** 
+  * Endre samtykke
+  */
+  savnerDuTjenesterButton: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 
