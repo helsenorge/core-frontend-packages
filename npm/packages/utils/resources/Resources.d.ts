@@ -2381,18 +2381,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   askForMoreServicesButtonText: string;
   /** 
-  * Se alle tjenester
-  */
-  seAlleTjenester: string;
-  /** 
-  * Vis færre tjenester
-  */
-  visFarreTjenester: string;
-  /** 
-  * Tjenester utenfor Helsenorge
-  */
-  tjenesterUtenforHelsenorge: string;
-  /** 
   * Innholdsfortegnelse
   */
   innholdsfortegnelse: string;
@@ -2752,6 +2740,18 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   * Innhold i ulike helseregistre
   */
   innsynstjenesterTitle: string;
+  /** 
+  * Se alle tjenester
+  */
+  seAlleTjenester: string;
+  /** 
+  * Vis færre tjenester
+  */
+  visFarreTjenester: string;
+  /** 
+  * Tjenester utenfor Helsenorge
+  */
+  tjenesterUtenforHelsenorge: string;
 }
 
 export type HNMinHelseCommon = { 
@@ -3063,22 +3063,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Start_Title: string;
   /** 
-  * TODO: Innsyn smittestopp
-  */
-  page_InnsynSmittestopp_Title: string;
-  /** 
-  * TODO: beskrivelse av innsyn smittestopp
-  */
-  page_InnsynSmittestopp_Desc: string;
-  /** 
-  * Meldingssystem for smittsomme sykdommer (MSIS)
-  */
-  page_msis_Title: string;
-  /** 
-  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
-  */
-  page_msis_Desc: string;
-  /** 
   * Tilgangstyring av helseopplysninger
   */
   page_Tilgangsstyring_Title: string;
@@ -3126,6 +3110,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.
   */
   page_VelgBehandlingssted_Desc: string;
+  /** 
+  * Meldingssystem for smittsomme sykdommer (MSIS)
+  */
+  page_msis_Title: string;
+  /** 
+  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+  */
+  page_msis_Desc: string;
   /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
@@ -3415,6 +3407,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Meldinger
   */
   page_Messages_Title: string;
+  /** 
+  * TODO: Innsyn smittestopp
+  */
+  page_InnsynSmittestopp_Title: string;
+  /** 
+  * TODO: beskrivelse av innsyn smittestopp
+  */
+  page_InnsynSmittestopp_Desc: string;
   /** 
   * Personverninnstillinger
   */
@@ -7641,6 +7641,38 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsAppointmentStatusEnteredInError: string;
   /** 
+  * Få veiledning før timebestilling
+  */
+  commonBestillTimeVelgerVeiviser: string;
+  /** 
+  * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
+  */
+  commonBestillTimeVelgerVeiviserBeskrivelse: string;
+  /** 
+  * Gå direkte til timebestilling
+  */
+  commonBestillTimeVelgerAnnet: string;
+  /** 
+  * 
+  */
+  commonBestillTimeVelgerAnnetBeskrivelse: string;
+  /** 
+  * Hva slags time trenger du?
+  */
+  commonBestillTimeVelgerTittel: string;
+  /** 
+  * /veileder?Query=Questionnaire%2F303
+  */
+  commonBestillTimeVelgerVeiviserUrl: string;
+  /** 
+  * Timer på legekontoret
+  */
+  commonFastlegeOrdinaryEventsHeading: string;
+  /** 
+  * Ingen videotimer tilgjengelig
+  */
+  commonFastlegeVideoEventsEmptyText: string;
+  /** 
   * Tilbake
   */
   commonFormTilbake: string;
@@ -7753,38 +7785,6 @@ behandlingsstedet ved eventuelle spørsmål.
   * Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.
   */
   conversationItemInnkallingsbrevErSlettet: string;
-  /** 
-  * Få veiledning før timebestilling
-  */
-  commonBestillTimeVelgerVeiviser: string;
-  /** 
-  * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
-  */
-  commonBestillTimeVelgerVeiviserBeskrivelse: string;
-  /** 
-  * Gå direkte til timebestilling
-  */
-  commonBestillTimeVelgerAnnet: string;
-  /** 
-  * 
-  */
-  commonBestillTimeVelgerAnnetBeskrivelse: string;
-  /** 
-  * Hva slags time trenger du?
-  */
-  commonBestillTimeVelgerTittel: string;
-  /** 
-  * /veileder?Query=Questionnaire%2F303
-  */
-  commonBestillTimeVelgerVeiviserUrl: string;
-  /** 
-  * Timer på legekontoret
-  */
-  commonFastlegeOrdinaryEventsHeading: string;
-  /** 
-  * Ingen videotimer tilgjengelig
-  */
-  commonFastlegeVideoEventsEmptyText: string;
   /** 
   * Informasjon fra legekontoret
   */
@@ -9487,6 +9487,73 @@ export type HNMinHelseDinFastlegeJS = {
   * Digitale tjenester på Helsenorge
   */
   dfl_DinFastlegeBanner_Digitaletjenester: string;
+}
+
+export type HNMinHelseDirekteinnsynJS = { 
+  /** 
+  * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
+  */
+  sysvak_innsyn_footer_content: string;
+  /** 
+  * Her ser du en oversikt over dine vaksinasjoner.
+  */
+  sysvak_innsyn_innhold_content: string;
+  /** 
+  * Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret.
+  */
+  sysvak_innsyn_loggoverbruk_content: string;
+  /** 
+  * Denne tjenesten er ikke tilgjengelig
+  */
+  sysvak_innsyn_not_available: string;
+  /** 
+  * Innhold
+  */
+  sysvak_innsyn_tab_innhold: string;
+  /** 
+  * Logg over bruk
+  */
+  sysvak_innsyn_tab_loggoverbruk: string;
+  /** 
+  * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
+  */
+  sysvak_Page_Desc: string;
+  /** 
+  * Nasjonalt vaksinasjonsregister SYSVAK
+  */
+  sysvak_Page_Title: string;
+  /** 
+  * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
+  */
+  mfr_innsyn_footer_content: string;
+  /** 
+  * Her ser du et utvalg av opplysninger i registeret.
+  */
+  mfr_innsyn_innhold_content: string;
+  /** 
+  * Her ser du en oversikt over hvem som har sett på data som er registrert om deg i registeret.
+  */
+  mfr_innsyn_loggoverbruk_content: string;
+  /** 
+  * Denne tjenesten er ikke tilgjengelig
+  */
+  mfr_innsyn_not_available: string;
+  /** 
+  * Innhold
+  */
+  mfr_innsyn_tab_innhold: string;
+  /** 
+  * Logg over bruk
+  */
+  mfr_innsyn_tab_loggoverbruk: string;
+  /** 
+  * Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.
+  */
+  mfr_Page_Desc: string;
+  /** 
+  * Medisinsk fødselsregister (MFR)
+  */
+  mfr_Page_Title: string;
 }
 
 export type HNMinHelseDonorkort = { 
