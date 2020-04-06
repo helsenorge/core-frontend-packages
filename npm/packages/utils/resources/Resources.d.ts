@@ -211,6 +211,14 @@ export type HNCoreFrontendWebForside = {
   * Tjenester utenfor Helsenorge
   */
   tjenestepanelEksterne: string;
+  /** 
+  * Vi beklager!
+  */
+  nyttFnrHeader: string;
+  /** 
+  * På grunn av overgang til nytt fødselsnummer, kan enkelte tjenester være utilgjengelige en periode.
+  */
+  nyttFnrDescription: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 

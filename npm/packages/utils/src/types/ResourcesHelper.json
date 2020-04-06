@@ -54,7 +54,9 @@
     "searchContainerLink": "/innholdsoversikt" , 
     "tjenestepanelVisFlere": "Se alle tjenester" , 
     "tjenestepanelVisFarre": "Vis færre tjenester" , 
-    "tjenestepanelEksterne": "Tjenester utenfor Helsenorge" 
+    "tjenestepanelEksterne": "Tjenester utenfor Helsenorge" , 
+    "nyttFnrHeader": "Vi beklager!" , 
+    "nyttFnrDescription": "På grunn av overgang til nytt fødselsnummer, kan enkelte tjenester være utilgjengelige en periode." 
   }, 
   "HNMinHelseByttFastlegeJS": { 
     "hjelpetrigger_bflUtekontor": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Utekontor\",\"seksjonstekst_brodtekst\":\"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>\"}" , 
