@@ -249,6 +249,22 @@ export type HNCoreFrontendWebForside = {
   * Gå til min helse
   */
   pageNotFoundToStart: string;
+  /** 
+  * Savner du noen tjenester?
+  */
+  savnerDuTjenesterTitle: string;
+  /** 
+  * Du har ikke samtykket til følgende tjenester:
+  */
+  savnerDuTjenesterDescription: string;
+  /** 
+  * Pasientjournal
+  */
+  savnerDuTjenesterPasientjournal: string;
+  /** 
+  * Legemidler og vaksiner
+  */
+  savnerDuTjenesterLegemidler: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 
