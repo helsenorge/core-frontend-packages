@@ -265,6 +265,14 @@ export type HNCoreFrontendWebForside = {
   * Legemidler og vaksiner
   */
   savnerDuTjenesterLegemidler: string;
+  /** 
+  * Timeavtaler og henvisninger
+  */
+  savnerDuTjenesterTimeavtaler: string;
+  /** 
+  * Pasientreiser
+  */
+  savnerDuTjenesterPasientreiser: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 
