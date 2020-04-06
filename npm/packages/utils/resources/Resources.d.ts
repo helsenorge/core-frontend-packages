@@ -195,6 +195,10 @@ export type HNCoreFrontendWebForside = {
   * Gå til Innhold A til Å
   */
   searchContainerAnchor: string;
+  /** 
+  * /innholdsoversikt
+  */
+  searchContainerLink: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 

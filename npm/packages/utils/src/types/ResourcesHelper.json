@@ -50,7 +50,8 @@
   "HNCoreFrontendWebForside": { 
     "searchContainerTitle": "Søk i kvalitetssikret helseinformasjon" , 
     "searchContainerPlaceholder": "Hva leter du etter?" , 
-    "searchContainerAnchor": "Gå til Innhold A til Å" 
+    "searchContainerAnchor": "Gå til Innhold A til Å" , 
+    "searchContainerLink": "/innholdsoversikt" 
   }, 
   "HNMinHelseByttFastlegeJS": { 
     "hjelpetrigger_bflUtekontor": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Utekontor\",\"seksjonstekst_brodtekst\":\"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>\"}" , 
