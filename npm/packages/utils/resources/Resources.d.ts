@@ -199,6 +199,18 @@ export type HNCoreFrontendWebForside = {
   * /innholdsoversikt
   */
   searchContainerLink: string;
+  /** 
+  * Se alle tjenester
+  */
+  tjenestepanelVisFlere: string;
+  /** 
+  * Vis færre tjenester
+  */
+  tjenestepanelVisFarre: string;
+  /** 
+  * Tjenester utenfor Helsenorge
+  */
+  tjenestepanelEksterne: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 
