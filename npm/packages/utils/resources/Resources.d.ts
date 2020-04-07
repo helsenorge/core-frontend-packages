@@ -22,80 +22,12 @@ export type HNCommon = {
    */
   webPart_PagePromotion_SelectPage_Text: string;
   /**
-   * test.
+   * test
    */
   iKKE_BRUK_KUN_FOR_TEST: string;
 };
 
 export type HNCoreFrontendMicrowebHeaderFooter = {
-  /**
-   * meny
-   */
-  headerButtonMeny: string;
-  /**
-   * søk
-   */
-  headerButtonSok: string;
-  /**
-   * Logg inn
-   */
-  headerButtonLogin: string;
-  /**
-   * Logg ut
-   */
-  headerButtonLogout: string;
-  /**
-   * Dette har skjedd siden sist
-   */
-  headerMenuProfileVarslingerTitle: string;
-  /**
-   * Hvem vil du bruke Helsenorge på vegne av?
-   */
-  headerMenuProfileRepresentasjonerTitle: string;
-  /**
-   * Profil og innstillinger
-   */
-  headerMenuProfileLinksTitle: string;
-  /**
-   * Du var sist innlogget :
-   */
-  headerMenuProfileSistInnlogget: string;
-  /**
-   * deg selv
-   */
-  headerMenuProfileRepresentasjonerDegSelv: string;
-  /**
-   * du har fullmakt
-   */
-  headerMenuProfileRepresentasjonerDuHarFullmakt: string;
-  /**
-   * du har foreldreansvar
-   */
-  headerMenuProfileRepresentasjonerDuHarForeldreansvar: string;
-  /**
-   * Du har
-   */
-  headerMenuProfileVarslingerDuHar: string;
-  /**
-   * nye meldinger
-   */
-  headerMenuProfileVarslingerMeldinger: string;
-  /**
-   * nye hendelser
-   */
-  headerMenuProfileVarslingerHendelser: string;
-  /**
-   * Hva leter du etter?
-   */
-  headerMenuSearchTitle: string;
-  /**
-   * Søk
-   */
-  headerMenuSearchInput: string;
-  /**
-   * Søk
-   */
-  headerMenuSearchSubmit: string;
   /**
    * /kontaktinformasjon-og-varseloppsett
    */
@@ -164,9 +96,81 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    * https://helsenorge.no/en/
    */
   headerMenuBasicEngelskUrl: string;
+  /**
+   * meny
+   */
+  headerButtonMeny: string;
+  /**
+   * søk
+   */
+  headerButtonSok: string;
+  /**
+   * Logg inn
+   */
+  headerButtonLogin: string;
+  /**
+   * Logg ut
+   */
+  headerButtonLogout: string;
+  /**
+   * Dette har skjedd siden sist
+   */
+  headerMenuProfileVarslingerTitle: string;
+  /**
+   * Hvem vil du bruke Helsenorge på vegne av?
+   */
+  headerMenuProfileRepresentasjonerTitle: string;
+  /**
+   * Profil og innstillinger
+   */
+  headerMenuProfileLinksTitle: string;
+  /**
+   * Du var sist innlogget:
+   */
+  headerMenuProfileSistInnlogget: string;
+  /**
+   * deg selv
+   */
+  headerMenuProfileRepresentasjonerDegSelv: string;
+  /**
+   * du har fullmakt
+   */
+  headerMenuProfileRepresentasjonerDuHarFullmakt: string;
+  /**
+   * du har foreldreansvar
+   */
+  headerMenuProfileRepresentasjonerDuHarForeldreansvar: string;
+  /**
+   * Du har
+   */
+  headerMenuProfileVarslingerDuHar: string;
+  /**
+   * nye meldinger
+   */
+  headerMenuProfileVarslingerMeldinger: string;
+  /**
+   * nye hendelser
+   */
+  headerMenuProfileVarslingerHendelser: string;
+  /**
+   * Hva leter du etter?
+   */
+  headerMenuSearchTitle: string;
+  /**
+   * Søk
+   */
+  headerMenuSearchInput: string;
+  /**
+   * Søk
+   */
+  headerMenuSearchSubmit: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = {
+  /**
+   * Søk
+   */
+  searchPlaceholder: string;
   /**
    * Søk
    */
@@ -175,10 +179,6 @@ export type HNCoreFrontendNPMPackagesCMS = {
    * Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere.
    */
   searchErrorSuggestionFetch: string;
-  /**
-   * Søk
-   */
-  searchPlaceholder: string;
 };
 
 export type HNCoreFrontendWebForside = {
@@ -194,6 +194,92 @@ export type HNCoreFrontendWebForside = {
    * Gå til Innhold A til Å
    */
   searchContainerAnchor: string;
+  /**
+   * /innholdsoversikt
+   */
+  searchContainerLink: string;
+  /**
+   * Se alle tjenester
+   */
+  tjenestepanelVisFlere: string;
+  /**
+   * Vis færre tjenester
+   */
+  tjenestepanelVisFarre: string;
+  /**
+   * Tjenester utenfor Helsenorge
+   */
+  tjenestepanelEksterne: string;
+  /**
+   * Vi beklager!
+   */
+  nyttFnrHeader: string;
+  /**
+   * På grunn av overgang til nytt fødselsnummer, kan enkelte tjenester være utilgjengelige en periode.
+   */
+  nyttFnrDescription: string;
+  /** 
+  * <p>Denne tjenesten gir deg innsyn i dokumenter som ligger lagret i pasientjournalene dine ved norske sykehus. Foreløpig dekker tjenesten kun sykehus i Helse Nord, Helse Vest og Helse Sør-Øst.</p>
+<p>Du vil kunne åpne, lese og lagre en kopi av journaldokumentene dine kun mens du er logget inn på helsenorge.no. Du får også oversikt over helsepersonell som har hatt tilgang til din journal.</p>
+<p>Dokumentene inneholder sensitive helseopplysninger. Tenk over dette hvis du bruker tjenesten på et offentlig sted eller sammen med andre.</p>
+  */
+  confirmationText: string;
+  /**
+   * <p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href="/bruk-av-helsetjenester-og-ordninger" class="document" target="_blank">Les mer om dette ved å gå til Bruk av helsetjenester og ordninger.</a></p>
+   */
+  confirmationReservation: string;
+  /**
+   * Jeg forstår og vil gå videre
+   */
+  confirmationButton: string;
+  /**
+   * Avbryt
+   */
+  confirmationCancel: string;
+  /**
+   * Denne siden er visst ikke helt frisk
+   */
+  pageNotFoundHeader: string;
+  /**
+   * Se etter en skrivefeil i URL-adressen, eller <a href="/">gå til Min helse</a>
+   */
+  pageNotFoundDescription: string;
+  /**
+   * Gå til min helse
+   */
+  pageNotFoundToStart: string;
+  /**
+   * Savner du noen tjenester?
+   */
+  savnerDuTjenesterTitle: string;
+  /**
+   * Du har ikke samtykket til følgende tjenester:
+   */
+  savnerDuTjenesterDescription: string;
+  /**
+   * Pasientjournal
+   */
+  savnerDuTjenesterPasientjournal: string;
+  /**
+   * Legemidler og vaksiner
+   */
+  savnerDuTjenesterLegemidler: string;
+  /**
+   * Timeavtaler og henvisninger
+   */
+  savnerDuTjenesterTimeavtaler: string;
+  /**
+   * Pasientreiser
+   */
+  savnerDuTjenesterPasientreiser: string;
+  /**
+   * Dialog med helsekontakter
+   */
+  savnerDuTjenesterDialog: string;
+  /**
+   * Endre samtykke
+   */
+  savnerDuTjenesterButton: string;
 };
 
 export type HNMinHelseByttFastlegeJS = {
@@ -2380,18 +2466,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
    */
   askForMoreServicesButtonText: string;
   /**
-   * Se alle tjenester
-   */
-  seAlleTjenester: string;
-  /**
-   * Vis færre tjenester
-   */
-  visFarreTjenester: string;
-  /**
-   * Tjenester utenfor Helsenorge
-   */
-  tjenesterUtenforHelsenorge: string;
-  /**
    * Innholdsfortegnelse
    */
   innholdsfortegnelse: string;
@@ -2751,6 +2825,18 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
    * Innhold i ulike helseregistre
    */
   innsynstjenesterTitle: string;
+  /**
+   * Se alle tjenester
+   */
+  seAlleTjenester: string;
+  /**
+   * Vis færre tjenester
+   */
+  visFarreTjenester: string;
+  /**
+   * Tjenester utenfor Helsenorge
+   */
+  tjenesterUtenforHelsenorge: string;
 };
 
 export type HNMinHelseCommon = {
@@ -3062,14 +3148,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_Start_Title: string;
   /**
-   * Meldingssystem for smittsomme sykdommer (MSIS)
-   */
-  page_msis_Title: string;
-  /**
-   * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
-   */
-  page_msis_Desc: string;
-  /**
    * Tilgangstyring av helseopplysninger
    */
   page_Tilgangsstyring_Title: string;
@@ -3117,6 +3195,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    * Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.
    */
   page_VelgBehandlingssted_Desc: string;
+  /**
+   * Meldingssystem for smittsomme sykdommer (MSIS)
+   */
+  page_msis_Title: string;
+  /**
+   * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+   */
+  page_msis_Desc: string;
   /**
    * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
    */
@@ -3406,6 +3492,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    * Meldinger
    */
   page_Messages_Title: string;
+  /**
+   * TODO: Innsyn smittestopp
+   */
+  page_InnsynSmittestopp_Title: string;
+  /**
+   * TODO: beskrivelse av innsyn smittestopp
+   */
+  page_InnsynSmittestopp_Desc: string;
   /**
    * Personverninnstillinger
    */
@@ -5295,7 +5389,7 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   conversationListElementParticipantFallback: string;
   /**
-   * Time ved
+   * Vis timeavtale
    */
   appointmentReference: string;
   /**
@@ -7632,6 +7726,38 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentDetailsAppointmentStatusEnteredInError: string;
   /**
+   * Få veiledning før timebestilling
+   */
+  commonBestillTimeVelgerVeiviser: string;
+  /**
+   * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
+   */
+  commonBestillTimeVelgerVeiviserBeskrivelse: string;
+  /**
+   * Gå direkte til timebestilling
+   */
+  commonBestillTimeVelgerAnnet: string;
+  /**
+   *
+   */
+  commonBestillTimeVelgerAnnetBeskrivelse: string;
+  /**
+   * Hva slags time trenger du?
+   */
+  commonBestillTimeVelgerTittel: string;
+  /**
+   * /veileder?Query=Questionnaire%2F303
+   */
+  commonBestillTimeVelgerVeiviserUrl: string;
+  /**
+   * Timer på legekontoret
+   */
+  commonFastlegeOrdinaryEventsHeading: string;
+  /**
+   * Ingen videotimer tilgjengelig
+   */
+  commonFastlegeVideoEventsEmptyText: string;
+  /**
    * Tilbake
    */
   commonFormTilbake: string;
@@ -7744,38 +7870,6 @@ behandlingsstedet ved eventuelle spørsmål.
    * Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.
    */
   conversationItemInnkallingsbrevErSlettet: string;
-  /**
-   * Få veiledning før timebestilling
-   */
-  commonBestillTimeVelgerVeiviser: string;
-  /**
-   * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
-   */
-  commonBestillTimeVelgerVeiviserBeskrivelse: string;
-  /**
-   * Gå direkte til timebestilling
-   */
-  commonBestillTimeVelgerAnnet: string;
-  /**
-   *
-   */
-  commonBestillTimeVelgerAnnetBeskrivelse: string;
-  /**
-   * Hva slags time trenger du?
-   */
-  commonBestillTimeVelgerTittel: string;
-  /**
-   * /veileder?Query=Questionnaire%2F303
-   */
-  commonBestillTimeVelgerVeiviserUrl: string;
-  /**
-   * Timer på legekontoret
-   */
-  commonFastlegeOrdinaryEventsHeading: string;
-  /**
-   * Ingen videotimer tilgjengelig
-   */
-  commonFastlegeVideoEventsEmptyText: string;
   /**
    * Informasjon fra legekontoret
    */
@@ -9478,6 +9572,73 @@ export type HNMinHelseDinFastlegeJS = {
    * Digitale tjenester på Helsenorge
    */
   dfl_DinFastlegeBanner_Digitaletjenester: string;
+};
+
+export type HNMinHelseDirekteinnsynJS = {
+  /**
+   * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
+   */
+  sysvak_innsyn_footer_content: string;
+  /**
+   * Her ser du en oversikt over dine vaksinasjoner.
+   */
+  sysvak_innsyn_innhold_content: string;
+  /**
+   * Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret.
+   */
+  sysvak_innsyn_loggoverbruk_content: string;
+  /**
+   * Denne tjenesten er ikke tilgjengelig
+   */
+  sysvak_innsyn_not_available: string;
+  /**
+   * Innhold
+   */
+  sysvak_innsyn_tab_innhold: string;
+  /**
+   * Logg over bruk
+   */
+  sysvak_innsyn_tab_loggoverbruk: string;
+  /**
+   * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
+   */
+  sysvak_Page_Desc: string;
+  /**
+   * Nasjonalt vaksinasjonsregister SYSVAK
+   */
+  sysvak_Page_Title: string;
+  /**
+   * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
+   */
+  mfr_innsyn_footer_content: string;
+  /**
+   * Her ser du et utvalg av opplysninger i registeret.
+   */
+  mfr_innsyn_innhold_content: string;
+  /**
+   * Her ser du en oversikt over hvem som har sett på data som er registrert om deg i registeret.
+   */
+  mfr_innsyn_loggoverbruk_content: string;
+  /**
+   * Denne tjenesten er ikke tilgjengelig
+   */
+  mfr_innsyn_not_available: string;
+  /**
+   * Innhold
+   */
+  mfr_innsyn_tab_innhold: string;
+  /**
+   * Logg over bruk
+   */
+  mfr_innsyn_tab_loggoverbruk: string;
+  /**
+   * Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.
+   */
+  mfr_Page_Desc: string;
+  /**
+   * Medisinsk fødselsregister (MFR)
+   */
+  mfr_Page_Title: string;
 };
 
 export type HNMinHelseDonorkort = {
