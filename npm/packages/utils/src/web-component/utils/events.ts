@@ -1,6 +1,6 @@
-export const refreshUlesteMeldingerEvent = 'refreshUlesteMeldinger';
+export const refreshUlesteMeldingerEvent = 'hn-refreshUlesteMeldinger';
 
-export const fireRefreshUlesteMeldinger = (): void => {
+export const dispatchRefreshUlesteMeldingerEvent = (): void => {
   const webcompheader = document.querySelector('hn-webcomp-header');
 
   if (webcompheader && webcompheader.dispatchEvent) {
