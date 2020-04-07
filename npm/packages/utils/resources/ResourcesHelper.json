@@ -40,7 +40,9 @@
     "headerMenuProfileVarslingerHendelser": "nye hendelser",
     "headerMenuSearchTitle": "Hva leter du etter?",
     "headerMenuSearchInput": "Søk",
-    "headerMenuSearchSubmit": "Søk"
+    "headerMenuSearchSubmit": "Søk",
+    "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger",
+    "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger"
   },
   "HNCoreFrontendNPMPackagesCMS": {
     "searchPlaceholder": "Søk",

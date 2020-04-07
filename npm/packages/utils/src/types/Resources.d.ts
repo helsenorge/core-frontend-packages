@@ -164,6 +164,14 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    * Søk
    */
   headerMenuSearchSubmit: string;
+  /**
+   * /deling-av-helseopplysninger
+   */
+  headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
+  /**
+   * Deling av helseopplysninger
+   */
+  headerMenuProfileLinksDelingAvHelseopplysningerTitle: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = {
