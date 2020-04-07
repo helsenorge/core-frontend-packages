@@ -169,6 +169,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * /deling-av-helseopplysninger
   */
   headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
+  /** 
+  * Deling av helseopplysninger
+  */
+  headerMenuProfileLinksDelingAvHelseopplysningerTitle: string;
 }
 
 export type HNCoreFrontendNPMPackagesCMS = { 
