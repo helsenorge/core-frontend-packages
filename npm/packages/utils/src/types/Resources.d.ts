@@ -15409,7 +15409,7 @@ export type HNMinHelseNavigation = {
   */
   tile_DokumentArkiv_Description: string;
   /** 
-  * Koronavirus
+  * Korona-verktøy
   */
   tile_Korona_Title: string;
   /** 
