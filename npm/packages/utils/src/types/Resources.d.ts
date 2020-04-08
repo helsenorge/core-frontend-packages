@@ -15413,7 +15413,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Korona_Title: string;
   /** 
-  * Meld fra ved mistanke om koronavirus
+  * Verktøy du kan bruke for å hjelpe til å stoppe spredningen av koronaviruset
   */
   tile_Korona_Description: string;
   /** 
