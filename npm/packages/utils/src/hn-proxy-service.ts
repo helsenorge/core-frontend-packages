@@ -96,13 +96,23 @@ const baseCrud = <T, R>(method: string, url: string, proxyName: string, params?:
 export const get = <T extends Response | {}>(url: string, proxyName: string, params?: RequestParamType): Promise<T | null> => {
   return baseCrud<T, {}>('get', url, proxyName, params);
 };
-export const post = <T extends Response, R>(url: string, proxyName: string, data: R, params?: RequestParamType): Promise<T | null> => {
+export const post = <T extends Response | {}, R>(
+  url: string,
+  proxyName: string,
+  data?: R,
+  params?: RequestParamType
+): Promise<T | null> => {
   return baseCrud<T, R>('post', url, proxyName, params, data);
 };
-export const put = <T extends Response, R>(url: string, proxyName: string, data?: R, params?: RequestParamType): Promise<T | null> => {
+export const put = <T extends Response | {}, R>(url: string, proxyName: string, data?: R, params?: RequestParamType): Promise<T | null> => {
   return baseCrud<T, R>('put', url, proxyName, params, data);
 };
-export const remove = <T extends Response, R>(url: string, proxyName: string, data?: R, params?: RequestParamType): Promise<T | null> => {
+export const remove = <T extends Response | {}, R>(
+  url: string,
+  proxyName: string,
+  data?: R,
+  params?: RequestParamType
+): Promise<T | null> => {
   return baseCrud<T, R>('delete', url, proxyName, params, data);
 };
 export const link = (url: string, proxyName: string, params?: RequestParamType): string => {
