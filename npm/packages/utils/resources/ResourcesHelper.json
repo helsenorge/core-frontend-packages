@@ -3839,6 +3839,7 @@
     "tile_Korona_Title": "Koronavirus" , 
     "tile_Korona_Description": "Meld fra ved mistanke om koronavirus" , 
     "tile_Provesvar_Title": "Prøvesvar" , 
+    "tile_Provesvar_Description": "Foreløpig vises kun prøvesvar for koronavirus" , 
     "tile_Legemidler_Title": "Legemidler" , 
     "tile_Legemidler_Description": "Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk" , 
     "tile_Donorkort_Title": "Donorkort" , 

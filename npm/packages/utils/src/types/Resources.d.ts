@@ -15421,6 +15421,10 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Title: string;
   /** 
+  * Foreløpig vises kun prøvesvar for koronavirus
+  */
+  tile_Provesvar_Description: string;
+  /** 
   * Legemidler
   */
   tile_Legemidler_Title: string;
