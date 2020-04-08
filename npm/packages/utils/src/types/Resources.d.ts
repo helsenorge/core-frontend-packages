@@ -15417,6 +15417,10 @@ export type HNMinHelseNavigation = {
   */
   tile_Korona_Description: string;
   /** 
+  * Prøvesvar
+  */
+  tile_Provesvar_Title: string;
+  /** 
   * Legemidler
   */
   tile_Legemidler_Title: string;
@@ -16949,6 +16953,10 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_TextMessage_Body_Self_FunksjonellMotpart: string;
   /** 
+  * Varsel om ny melding på helsenorge.no
+  */
+  paminnelseFormidling_EmailMessage_Subject_Self: string;
+  /** 
   * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
   */
   oppgaveBesvarelse_EmailMessage_Body_Representation: string;
@@ -17044,10 +17052,6 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   * ${FirstName}, du har fått et skjema  med informasjon fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
   */
   oppgaveInformasjon_TextMessage_Body_Self: string;
-  /** 
-  * Varsel om ny melding på helsenorge.no
-  */
-  paminnelseFormidling_EmailMessage_Subject_Self: string;
   /** 
   * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. ${Lokasjon}Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
