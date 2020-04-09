@@ -3502,7 +3502,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   page_Messages_Title: string;
   /** 
-  * TODO: Innsyn smittestopp
+  * Innsyn i personopplysninger samlet om deg i Smittestopp
   */
   page_InnsynSmittestopp_Title: string;
   /** 
