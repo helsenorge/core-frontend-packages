@@ -798,6 +798,7 @@
     "page_VelgBehandlingssted_Desc": "Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til." , 
     "page_msis_Title": "Meldingssystem for smittsomme sykdommer (MSIS)" , 
     "page_msis_Desc": "MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge." , 
+    "page_Provesvar_Title": "Prøvesvar" , 
     "page_Dokumenter_Desc": "Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din." , 
     "page_Forskning_Desc": "Forskning i forbindelse med kliniske studier har som formål å undersøke effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.<br/>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden." , 
     "page_Forskning_Title": "Forskning" , 
@@ -3838,8 +3839,6 @@
     "tile_DokumentArkiv_Description": "Dokumenter som du har lagret på helsenorge.no" , 
     "tile_Korona_Title": "Korona-verktøy" , 
     "tile_Korona_Description": "Verktøy du kan bruke for å hjelpe til å stoppe spredningen av koronaviruset" , 
-    "tile_Provesvar_Title": "Prøvesvar" , 
-    "tile_Provesvar_Description": "Foreløpig vises kun prøvesvar for koronavirus" , 
     "tile_Legemidler_Title": "Legemidler" , 
     "tile_Legemidler_Description": "Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk" , 
     "tile_Donorkort_Title": "Donorkort" , 
@@ -3854,7 +3853,9 @@
     "tile_Vaksiner_Title": "Vaksiner" , 
     "tile_Vaksiner_Description": "Oversikt over alle vaksiner som er registrert på deg" , 
     "tile_Velgbehandlingssted_Title": "Velg behandlingssted" , 
-    "tile_Velgbehandlingssted_Description": "Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet" 
+    "tile_Velgbehandlingssted_Description": "Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet" , 
+    "tile_Provesvar_Title": "Prøvesvar" , 
+    "tile_Provesvar_Description": "Foreløpig vises kun prøvesvar for koronavirus" 
   }, 
   "HNMinHelseNHNStrings": { 
     "error_HprPersonNotFound_Title": "Ugyldig nummer" , 
@@ -4223,7 +4224,6 @@
     "default_EmailMessage_Subject_Self_FunksjonellMotpart": "Varsel om ny melding på helsenorge.no" , 
     "default_TextMessage_Body_Representation_FunksjonellMotpart": "${FirstName} har fått en melding fra helsenorge.no. Logg inn på helsenorge.no for å lese den." , 
     "default_TextMessage_Body_Self_FunksjonellMotpart": "${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den." , 
-    "paminnelseFormidling_EmailMessage_Subject_Self": "Varsel om ny melding på helsenorge.no" , 
     "oppgaveBesvarelse_EmailMessage_Body_Representation": "${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut." , 
     "oppgaveBesvarelse_EmailMessage_Body_Self": "${FirstName}, du har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut." , 
     "oppgaveBesvarelse_EmailMessage_Subject_Representation": "Varsel om ny melding på helsenorge.no" , 
@@ -4248,6 +4248,7 @@
     "oppgaveInformasjon_EmailMessage_Subject_Self": "Varsel om ny melding på helsenorge.no" , 
     "oppgaveInformasjon_TextMessage_Body_Representation": "${FirstName} har fått et skjema  med informasjon fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut." , 
     "oppgaveInformasjon_TextMessage_Body_Self": "${FirstName}, du har fått et skjema  med informasjon fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut." , 
+    "paminnelseFormidling_EmailMessage_Subject_Self": "Varsel om ny melding på helsenorge.no" , 
     "paminnelsePrimarhelsetjenesteTime_TextMessage_Body_Self": "${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. ${Lokasjon}Ved mistanke om koronasmitte, ta kontakt på telefon først." , 
     "paminnelsePrimarhelsetjenesteVideoTime_EmailMessage_Body_Representation": "Husk at ${FirstName} har en videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer." , 
     "paminnelsePrimarhelsetjenesteVideoTime_EmailMessage_Body_Self": "${FirstName}, husk videotimen hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer." , 
