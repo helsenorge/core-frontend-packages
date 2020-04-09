@@ -3217,6 +3217,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Provesvar_Title: string;
   /** 
+  * Her vises en oversikt over dine prøvesvar for koronavirus (SARS-CoV-2).
+  */
+  page_Provesvar_Desc: string;
+  /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
   page_Dokumenter_Desc: string;
