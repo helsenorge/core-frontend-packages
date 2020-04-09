@@ -3213,6 +3213,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_msis_Desc: string;
   /** 
+  * Prøvesvar
+  */
+  page_Provesvar_Title: string;
+  /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
   page_Dokumenter_Desc: string;
@@ -15417,14 +15421,6 @@ export type HNMinHelseNavigation = {
   */
   tile_Korona_Description: string;
   /** 
-  * Prøvesvar
-  */
-  tile_Provesvar_Title: string;
-  /** 
-  * Foreløpig vises kun prøvesvar for koronavirus
-  */
-  tile_Provesvar_Description: string;
-  /** 
   * Legemidler
   */
   tile_Legemidler_Title: string;
@@ -15484,6 +15480,14 @@ export type HNMinHelseNavigation = {
   * Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet
   */
   tile_Velgbehandlingssted_Description: string;
+  /** 
+  * Prøvesvar
+  */
+  tile_Provesvar_Title: string;
+  /** 
+  * Foreløpig vises kun prøvesvar for koronavirus
+  */
+  tile_Provesvar_Description: string;
 }
 
 export type HNMinHelseNHNStrings = { 
@@ -16957,10 +16961,6 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_TextMessage_Body_Self_FunksjonellMotpart: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
-  */
-  paminnelseFormidling_EmailMessage_Subject_Self: string;
-  /** 
   * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
   */
   oppgaveBesvarelse_EmailMessage_Body_Representation: string;
@@ -17056,6 +17056,10 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   * ${FirstName}, du har fått et skjema  med informasjon fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
   */
   oppgaveInformasjon_TextMessage_Body_Self: string;
+  /** 
+  * Varsel om ny melding på helsenorge.no
+  */
+  paminnelseFormidling_EmailMessage_Subject_Self: string;
   /** 
   * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. ${Lokasjon}Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
