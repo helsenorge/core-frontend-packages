@@ -28161,6 +28161,10 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
+  * Innsyn i Smittestopp
+  */
+  page_HendelsesLogg_38: string;
+  /** 
   * Samtykke gitt av {0} {1}.
   */
   page_foreldresamtykke_consentStatusText: string;
