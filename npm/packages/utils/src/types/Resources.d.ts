@@ -11143,6 +11143,10 @@ export type HNMinHelseHFTStringsJS = {
   */
   endre_adresse_lenke_v3_1: string;
   /** 
+  * Folkeregistret
+  */
+  endre_adresse_lenke_v3_2: string;
+  /** 
   * Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.
   */
   egenandeler_behandles: string;
