@@ -2782,6 +2782,7 @@
     "egenandeler_vedtaksdato": "Vedtaksdato:" , 
     "egenandeler_gyldig": "Gyldig til: 31.12" , 
     "endre_adresse_lenke_v3_1": "Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte" , 
+    "endre_adresse_lenke_v3_2": "Folkeregistret" , 
     "egenandeler_behandles": "Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager." 
   }, 
   "HNMinHelseHFTStrings": { 
