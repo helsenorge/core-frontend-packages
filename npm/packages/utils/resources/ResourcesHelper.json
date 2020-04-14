@@ -42,7 +42,8 @@
     "headerMenuSearchInput": "Søk" , 
     "headerMenuSearchSubmit": "Søk" , 
     "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger" , 
-    "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" 
+    "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" , 
+    "hoppTilInnholdet": "Hopp til innholdet" 
   }, 
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk" , 
