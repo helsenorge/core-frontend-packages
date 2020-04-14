@@ -3213,14 +3213,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_msis_Desc: string;
   /** 
-  * Prøvesvar
-  */
-  page_Provesvar_Title: string;
-  /** 
-  * Her vises en oversikt over dine prøvesvar for koronavirus (SARS-CoV-2).
-  */
-  page_Provesvar_Desc: string;
-  /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
   page_Dokumenter_Desc: string;
@@ -3521,6 +3513,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Personverninnstillinger
   */
   page_Personverninnstillinger_Title: string;
+  /** 
+  * Prøvesvar
+  */
+  page_Provesvar_Title: string;
+  /** 
+  * Her vises en oversikt over dine prøvesvar for koronavirus (SARS-CoV-2).
+  */
+  page_Provesvar_Desc: string;
 }
 
 export type HNMinHelseDialogGPStrings = { 
@@ -11138,6 +11138,10 @@ export type HNMinHelseHFTStringsJS = {
   * Gyldig til: 31.12
   */
   egenandeler_gyldig: string;
+  /** 
+  * Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte
+  */
+  endre_adresse_lenke_v3_1: string;
   /** 
   * Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.
   */

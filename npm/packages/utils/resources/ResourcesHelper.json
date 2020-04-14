@@ -798,8 +798,6 @@
     "page_VelgBehandlingssted_Desc": "Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til." , 
     "page_msis_Title": "Meldingssystem for smittsomme sykdommer (MSIS)" , 
     "page_msis_Desc": "MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge." , 
-    "page_Provesvar_Title": "Prøvesvar" , 
-    "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus (SARS-CoV-2)." , 
     "page_Dokumenter_Desc": "Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din." , 
     "page_Forskning_Desc": "Forskning i forbindelse med kliniske studier har som formål å undersøke effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.<br/>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden." , 
     "page_Forskning_Title": "Forskning" , 
@@ -871,7 +869,9 @@
     "page_Messages_Title": "Meldinger" , 
     "page_InnsynSmittestopp_Title": "Innsyn i personopplysninger samlet om deg i Smittestopp" , 
     "page_InnsynSmittestopp_Desc": "TODO: beskrivelse av innsyn smittestopp" , 
-    "page_Personverninnstillinger_Title": "Personverninnstillinger" 
+    "page_Personverninnstillinger_Title": "Personverninnstillinger" , 
+    "page_Provesvar_Title": "Prøvesvar" , 
+    "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus (SARS-CoV-2)." 
   }, 
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. " , 
@@ -2781,6 +2781,7 @@
     "egenandeler_frikort_utgaatt": "Frikort er utgått" , 
     "egenandeler_vedtaksdato": "Vedtaksdato:" , 
     "egenandeler_gyldig": "Gyldig til: 31.12" , 
+    "endre_adresse_lenke_v3_1": "Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte" , 
     "egenandeler_behandles": "Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager." 
   }, 
   "HNMinHelseHFTStrings": { 
