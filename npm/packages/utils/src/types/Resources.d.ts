@@ -22,7 +22,7 @@ export type HNCommon = {
    */
   webPart_PagePromotion_SelectPage_Text: string;
   /**
-   * test
+   * test11
    */
   iKKE_BRUK_KUN_FOR_TEST: string;
 };
@@ -3212,6 +3212,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_msis_Desc: string;
   /**
+   * Prøvesvar
+   */
+  page_Provesvar_Title: string;
+  /**
+   * Her vises en oversikt over dine prøvesvar for koronavirus (SARS-CoV-2).
+   */
+  page_Provesvar_Desc: string;
+  /**
    * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
    */
   page_Dokumenter_Desc: string;
@@ -3501,7 +3509,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   page_Messages_Title: string;
   /**
-   * TODO: Innsyn smittestopp
+   * Innsyn i personopplysninger samlet om deg i Smittestopp
    */
   page_InnsynSmittestopp_Title: string;
   /**
@@ -15408,11 +15416,11 @@ export type HNMinHelseNavigation = {
    */
   tile_DokumentArkiv_Description: string;
   /**
-   * Koronavirus
+   * Korona-verktøy
    */
   tile_Korona_Title: string;
   /**
-   * Meld fra ved mistanke om koronavirus
+   * Verktøy du kan bruke for å hjelpe til å stoppe spredningen av koronaviruset
    */
   tile_Korona_Description: string;
   /**
@@ -15475,6 +15483,14 @@ export type HNMinHelseNavigation = {
    * Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet
    */
   tile_Velgbehandlingssted_Description: string;
+  /**
+   * Prøvesvar
+   */
+  tile_Provesvar_Title: string;
+  /**
+   * Foreløpig vises kun prøvesvar for koronavirus
+   */
+  tile_Provesvar_Description: string;
 };
 
 export type HNMinHelseNHNStrings = {
@@ -28143,6 +28159,10 @@ export type HNMinHelsePasientReiserStrings = {
 };
 
 export type HNMinHelsePersonvernStrings = {
+  /**
+   * Innsyn i Smittestopp
+   */
+  page_HendelsesLogg_38: string;
   /**
    * Samtykke gitt av {0} {1}.
    */
