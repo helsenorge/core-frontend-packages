@@ -1,13 +1,13 @@
 ///<reference path="./types/dev.d.ts"/>
 import { Dispatch, Action } from 'redux';
-import { get, ProxyOperationResponse } from './hn-proxy-service';
+import { get } from './hn-proxy-service';
 
 import { getVersion } from './page';
 import { EmptyAction } from './reducer';
 
-import { OperationResponse, TextMessage } from '../../../src/types/MinHelseEntities';
+import { OperationResponse, TextMessage } from './types/entities';
 
-interface SotProxyOperationResponse extends ProxyOperationResponse {
+interface SotProxyOperationResponse {
   resources: string;
 }
 

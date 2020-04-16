@@ -10,17 +10,7 @@
   <head> </head>
   <body>
     <div id="main-content-wrapper"></div>
-    <!-- THIS IS FOR ALL THE OTHER JS CHUNKS - WE MAKE IT PROD ONLY SO WEBBACK-DEV-SERVE CAN OUTPUT WITH HOT RELOAD INSTEAD  -->
 
-    <!-- USUALLY YOU WOULD IMPORT htmlWebpackPlugin.tags.headTags HERE TO GET CSS FROM VENDORS AND VERTICAL BUT YOU DON'T WANT IT HERE CAUSE WE JUST WORK WITH OUR WEBCOMP -->
-    <script>
-      let doc = document.getElementById('example-component');
-      const func = () => {
-        if (doc && doc.dispatchEvent) {
-          doc.dispatchEvent(new CustomEvent('subevent', { detail: { test: 'hei' } }));
-        }
-      };
-    </script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/16.12.0/umd/react.production.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.12.0/umd/react-dom.production.min.js"></script>
   </body>
