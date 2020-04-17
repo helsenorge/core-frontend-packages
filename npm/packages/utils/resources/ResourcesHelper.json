@@ -4223,7 +4223,7 @@
     "samtykkeForesporsel_EmailMessage_Body_Representation": "${FirstName} har en samtykkeforespørsel som snart utløper. Logg inn på helsenorge.no for å se den." , 
     "samtykkeForesporsel_TextMessage_Body_Self": "${FirstName}, du har en samtykkeforespørsel som snart utløper. Logg inn på helsenorge.no for å se den." , 
     "donorkort_parorende_sms_tekst": "I dag har ${DonorName} fylt ut et digitalt donorkort og oppført deg, ${HeirName}, som pårørende. Les mer om din rolle som pårørende på nettsidene for Stiftelsen Organdonasjon. Du kan ikke svare på denne SMSen." , 
-    "default_EmailMessage_Body_Representation_FunksjonellMotpart": "${FirstName} har fått en melding fra helsenorge.no. Logg inn på helsenorge.no for å lese den." , 
+    "default_EmailMessage_Body_Representation_FunksjonellMotpart": "${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den." , 
     "default_EmailMessage_Body_Self_FunksjonellMotpart": "${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den." , 
     "default_EmailMessage_Subject_Representation_FunksjonellMotpart": "Varsel om ny melding på helsenorge.no" , 
     "default_EmailMessage_Subject_Self_FunksjonellMotpart": "Varsel om ny melding på helsenorge.no" , 
