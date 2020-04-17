@@ -3860,7 +3860,7 @@
     "tile_Velgbehandlingssted_Title": "Velg behandlingssted" , 
     "tile_Velgbehandlingssted_Description": "Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet" , 
     "tile_Provesvar_Title": "Prøvesvar" , 
-    "tile_Provesvar_Description": "Foreløpig vises kun prøvesvar for koronavirus" 
+    "tile_Provesvar_Description": "Resultat av test for koronavirus" 
   }, 
   "HNMinHelseNHNStrings": { 
     "error_HprPersonNotFound_Title": "Ugyldig nummer" , 
