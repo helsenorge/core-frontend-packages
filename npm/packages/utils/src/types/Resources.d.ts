@@ -16973,7 +16973,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_EmailMessage_Subject_Self_FunksjonellMotpart: string;
   /** 
-  * ${FirstName} har fått en melding fra helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
   */
   default_TextMessage_Body_Representation_FunksjonellMotpart: string;
   /** 
