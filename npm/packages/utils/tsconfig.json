@@ -1,29 +1,22 @@
 {
-  "include": ["src/**/*.ts", "src/**/*.tsx", "development/index.tsx"],
-  "exclude": ["**/__tests__/*", "**/development/**"],
+  "extends": "./node_modules/@helsenorge/core-build/config/tsconfig.global.json",
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "sourceMap": true,
-    "jsx": "react",
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
-    "allowSyntheticDefaultImports": true,
-    "esModuleInterop": true,
-    "typeRoots": ["src/types"],
-    "newLine": "CRLF",
-    "allowUnreachableCode": false,
-    "types": ["node"],
-    "skipLibCheck": true,
-    "baseUrl": "./src",
-    "declaration": true,
-    "rootDir": "./src",
-    "outDir": "./lib",
-    "lib": ["es5", "es2015.core", "es2015.promise", "es6", "dom", "scripthost", "es2019"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strictNullChecks": true,
-    "noEmit": false
-  }
+    "target": "es5",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "baseUrl": "./src",
+    "jsx": "react",
+    "rootDir": "./src",
+    "noEmit": false,
+
+    "sourceMap": false,
+    "declaration": true,
+    "outDir": "./lib",
+    "typeRoots": ["node_modules/@types", "src/types"]
+  },
+  "exclude": ["**/__tests__/*", "**/__devonly/**"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "development/index.tsx"]
 }
