@@ -2150,7 +2150,7 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
    */
   dateMinutes: string;
   /**
-   * Til Forsiden
+   * Til forsiden
    */
   breadCrumb_home: string;
   /**
@@ -3525,7 +3525,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   page_Provesvar_Title: string;
   /**
-   * Her vises en oversikt over dine prøvesvar for koronavirus (SARS-CoV-2).
+   * Her vises en oversikt over dine prøvesvar for koronavirus SARS-CoV-2.
    */
   page_Provesvar_Desc: string;
 };
@@ -15504,7 +15504,7 @@ export type HNMinHelseNavigation = {
    */
   tile_Provesvar_Title: string;
   /**
-   * Foreløpig vises kun prøvesvar for koronavirus
+   * Resultat av test for koronavirus
    */
   tile_Provesvar_Description: string;
 };
@@ -16956,7 +16956,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   donorkort_parorende_sms_tekst: string;
   /**
-   * ${FirstName} har fått en melding fra helsenorge.no. Logg inn på helsenorge.no for å lese den.
+   * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
    */
   default_EmailMessage_Body_Representation_FunksjonellMotpart: string;
   /**
@@ -16972,7 +16972,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   default_EmailMessage_Subject_Self_FunksjonellMotpart: string;
   /**
-   * ${FirstName} har fått en melding fra helsenorge.no. Logg inn på helsenorge.no for å lese den.
+   * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
    */
   default_TextMessage_Body_Representation_FunksjonellMotpart: string;
   /**
