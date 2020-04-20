@@ -9,7 +9,6 @@
     "resolveJsonModule": true,
     "baseUrl": "./src",
     "jsx": "react",
-    "module": "es6",
     "rootDir": "./src",
     "noEmit": false,
     "sourceMap": false,
