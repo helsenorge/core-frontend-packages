@@ -89,6 +89,7 @@ export default function config(
       retargetEvents(shadowRoot);
     }
   }
+
   //her settes navnet til web component elementet
   if (!window.customElements.get(name)) {
     window.customElements.define(name, WebComponent);
