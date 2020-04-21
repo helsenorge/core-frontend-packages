@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,8 @@
     "publish:beta": "cd lib && npm publish --tag=beta",
     "precommit-script": "pretty-quick --staged",
     "test": "helsenorge-scripts test",
-    "test:watch": "helsenorge-scripts test --watch"
+    "test:watch": "helsenorge-scripts test --watch",
+    "helsenorge-notify": "helsenorge-scripts notify"
   },
   "author": "",
   "license": "ISC",
