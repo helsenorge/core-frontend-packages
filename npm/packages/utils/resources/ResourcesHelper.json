@@ -4428,6 +4428,7 @@
     "filterHeading": "Filtrer visning" , 
     "filterHideFilter": "Finn dokument" , 
     "records_save_PHA_main": "Du finner igjen dokumentet under <a href='/dokumenter'>Dokumenter</a>." , 
+    "xDS_LokasjonFeil_HN": "Helse Nord" , 
     "cannotOpen_Title": "Kan ikke åpne tjenesten Pasientjournal." , 
     "cannotOpen_Body": "For å åpne tjenesten for elektronisk innsyn i pasientjournalen din for første gang, må du gå til <a href=\"/\">forsiden på Min helse</a> og starte Pasientjournal derfra. Da får du informasjon om hva tjenesten innebærer og kan bekrefte at du vil ta den i bruk." , 
     "tableFetchMoreResults": "Hent flere" , 

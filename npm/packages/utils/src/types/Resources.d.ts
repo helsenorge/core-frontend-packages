@@ -17769,6 +17769,10 @@ export type HNMinHelsePasientjournal = {
   */
   records_save_PHA_main: string;
   /** 
+  * Helse Nord
+  */
+  xDS_LokasjonFeil_HN: string;
+  /** 
   * Kan ikke åpne tjenesten Pasientjournal.
   */
   cannotOpen_Title: string;
