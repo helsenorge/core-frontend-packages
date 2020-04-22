@@ -7783,6 +7783,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonFastlegeVideoEventsEmptyText: string;
   /** 
+  * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
+  */
+  appointmentCancelHelsestasjonDescription: string;
+  /** 
   * Tilbake
   */
   commonFormTilbake: string;
@@ -11147,6 +11151,10 @@ export type HNMinHelseHFTStringsJS = {
   */
   egenandeler_gyldig: string;
   /** 
+  * Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.
+  */
+  egenandeler_behandles: string;
+  /** 
   * Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte
   */
   endre_adresse_lenke_v3_1: string;
@@ -11154,10 +11162,6 @@ export type HNMinHelseHFTStringsJS = {
   * Folkeregistret
   */
   endre_adresse_lenke_v3_2: string;
-  /** 
-  * Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.
-  */
-  egenandeler_behandles: string;
 }
 
 export type HNMinHelseHFTStrings = { 

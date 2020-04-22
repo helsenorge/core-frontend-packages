@@ -1935,6 +1935,7 @@
     "commonBestillTimeVelgerVeiviserUrl": "/veileder?Query=Questionnaire%2F303" , 
     "commonFastlegeOrdinaryEventsHeading": "Timer på legekontoret" , 
     "commonFastlegeVideoEventsEmptyText": "Ingen videotimer tilgjengelig" , 
+    "appointmentCancelHelsestasjonDescription": "Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg." , 
     "commonFormTilbake": "Tilbake" , 
     "commonSpesialistMeldingHeader": "Henvendelse til" , 
     "commonSpesialistMeldingBeskrivelse": "Tjenesten er gratis. Meldingen kan leses av helsepersonell ved {0}. Du vil bli kontaktet innen fem arbeidsdager." , 
@@ -2783,9 +2784,9 @@
     "egenandeler_frikort_utgaatt": "Frikort er utgått" , 
     "egenandeler_vedtaksdato": "Vedtaksdato:" , 
     "egenandeler_gyldig": "Gyldig til: 31.12" , 
+    "egenandeler_behandles": "Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager." , 
     "endre_adresse_lenke_v3_1": "Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte" , 
-    "endre_adresse_lenke_v3_2": "Folkeregistret" , 
-    "egenandeler_behandles": "Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager." 
+    "endre_adresse_lenke_v3_2": "Folkeregistret" 
   }, 
   "HNMinHelseHFTStrings": { 
     "webPart_MyDeductibles_ShowAddress": "Hent adresse/kontonummer" , 
