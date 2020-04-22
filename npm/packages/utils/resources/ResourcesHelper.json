@@ -538,7 +538,7 @@
     "dateAnd": "og",
     "dateMinute": "minutt",
     "dateMinutes": "minutter",
-    "breadCrumb_home": "Til Forsiden",
+    "breadCrumb_home": "Til forsiden",
     "breadCrumb_MinHelse": "Min helse",
     "footer_social_blog": "Les bloggen til helsenorge.no",
     "footer_disclaimer_endtext": ".",
@@ -873,7 +873,7 @@
     "page_InnsynSmittestopp_Desc": "TODO: beskrivelse av innsyn smittestopp",
     "page_Personverninnstillinger_Title": "Personverninnstillinger",
     "page_Provesvar_Title": "Prøvesvar",
-    "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus (SARS-CoV-2)."
+    "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus SARS-CoV-2."
   },
   "HNMinHelseDialogGPStrings": {
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
@@ -3860,7 +3860,7 @@
     "tile_Velgbehandlingssted_Title": "Velg behandlingssted",
     "tile_Velgbehandlingssted_Description": "Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet",
     "tile_Provesvar_Title": "Prøvesvar",
-    "tile_Provesvar_Description": "Foreløpig vises kun prøvesvar for koronavirus"
+    "tile_Provesvar_Description": "Resultat av test for koronavirus"
   },
   "HNMinHelseNHNStrings": {
     "error_HprPersonNotFound_Title": "Ugyldig nummer",
@@ -4223,11 +4223,11 @@
     "samtykkeForesporsel_EmailMessage_Body_Representation": "${FirstName} har en samtykkeforespørsel som snart utløper. Logg inn på helsenorge.no for å se den.",
     "samtykkeForesporsel_TextMessage_Body_Self": "${FirstName}, du har en samtykkeforespørsel som snart utløper. Logg inn på helsenorge.no for å se den.",
     "donorkort_parorende_sms_tekst": "I dag har ${DonorName} fylt ut et digitalt donorkort og oppført deg, ${HeirName}, som pårørende. Les mer om din rolle som pårørende på nettsidene for Stiftelsen Organdonasjon. Du kan ikke svare på denne SMSen.",
-    "default_EmailMessage_Body_Representation_FunksjonellMotpart": "${FirstName} har fått en melding fra helsenorge.no. Logg inn på helsenorge.no for å lese den.",
+    "default_EmailMessage_Body_Representation_FunksjonellMotpart": "${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.",
     "default_EmailMessage_Body_Self_FunksjonellMotpart": "${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.",
     "default_EmailMessage_Subject_Representation_FunksjonellMotpart": "Varsel om ny melding på helsenorge.no",
     "default_EmailMessage_Subject_Self_FunksjonellMotpart": "Varsel om ny melding på helsenorge.no",
-    "default_TextMessage_Body_Representation_FunksjonellMotpart": "${FirstName} har fått en melding fra helsenorge.no. Logg inn på helsenorge.no for å lese den.",
+    "default_TextMessage_Body_Representation_FunksjonellMotpart": "${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.",
     "default_TextMessage_Body_Self_FunksjonellMotpart": "${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.",
     "oppgaveBesvarelse_EmailMessage_Body_Representation": "${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.",
     "oppgaveBesvarelse_EmailMessage_Body_Self": "${FirstName}, du har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.",

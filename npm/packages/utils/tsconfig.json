@@ -11,7 +11,6 @@
     "jsx": "react",
     "rootDir": "./src",
     "noEmit": false,
-
     "sourceMap": false,
     "declaration": true,
     "outDir": "./lib",
