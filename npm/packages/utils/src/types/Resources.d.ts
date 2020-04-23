@@ -3225,6 +3225,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Provesvar_NavigateBackLinkURL: string;
   /** 
+  * Tilbake til Prøvesvar
+  */
+  page_Provesvar_NavigateBackLinkTitle: string;
+  /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
   page_Dokumenter_Desc: string;
