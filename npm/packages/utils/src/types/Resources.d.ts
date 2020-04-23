@@ -23,7 +23,7 @@ export type HNCommon = {
   */
   webPart_PagePromotion_SelectPage_Text: string;
   /** 
-  * test123
+  * test1
   */
   iKKE_BRUK_KUN_FOR_TEST: string;
 }
