@@ -1967,7 +1967,7 @@
     "conversationItemInnkallingsbrevErSlettet": "Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv." , 
     "servicepanelInfoHeading": "Informasjon fra legekontoret" , 
     "servicepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge." , 
-    "appointmentCancelHelsestasjonDescription": "Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg." 
+    "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?" 
   }, 
   "HNMinHelseDialog": { 
     "varselmeny_NegativAppRec_Emne": "Sending av melding har feilet" , 
