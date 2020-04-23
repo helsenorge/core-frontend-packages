@@ -3221,6 +3221,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_msis_Desc: string;
   /** 
+  * /provesvar
+  */
+  page_Provesvar_NavigateBackLinkURL: string;
+  /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
   page_Dokumenter_Desc: string;
@@ -7783,10 +7787,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonFastlegeVideoEventsEmptyText: string;
   /** 
-  * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
-  */
-  appointmentCancelHelsestasjonDescription: string;
-  /** 
   * Tilbake
   */
   commonFormTilbake: string;
@@ -7907,6 +7907,10 @@ behandlingsstedet ved eventuelle spørsmål.
   * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
   */
   servicepanelNoServiceDescription: string;
+  /** 
+  * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
+  */
+  appointmentCancelHelsestasjonDescription: string;
 }
 
 export type HNMinHelseDialog = { 
@@ -17769,10 +17773,6 @@ export type HNMinHelsePasientjournal = {
   */
   records_save_PHA_main: string;
   /** 
-  * Helse Nord
-  */
-  xDS_LokasjonFeil_HN: string;
-  /** 
   * Kan ikke åpne tjenesten Pasientjournal.
   */
   cannotOpen_Title: string;
@@ -18008,6 +18008,10 @@ export type HNMinHelsePasientjournal = {
   * Sykehuset Innlandet HF
   */
   xDS_LokasjonFeil_SIHF: string;
+  /** 
+  * Helse Nord
+  */
+  xDS_LokasjonFeil_HN: string;
 }
 
 export type HNMinHelsePasientreiserJS = { 
