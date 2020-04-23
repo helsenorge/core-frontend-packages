@@ -875,7 +875,7 @@
     "page_InnsynSmittestopp_Desc": "TODO: beskrivelse av innsyn smittestopp" , 
     "page_Personverninnstillinger_Title": "Personverninnstillinger" , 
     "page_Provesvar_Title": "Prøvesvar" , 
-    "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus SARS-CoV-2." 
+    "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus." 
   }, 
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. " , 

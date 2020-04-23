@@ -3534,7 +3534,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   page_Provesvar_Title: string;
   /** 
-  * Her vises en oversikt over dine prøvesvar for koronavirus SARS-CoV-2.
+  * Her vises en oversikt over dine prøvesvar for koronavirus.
   */
   page_Provesvar_Desc: string;
 }
