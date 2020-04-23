@@ -7912,7 +7912,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   servicepanelNoServiceDescription: string;
   /** 
-  * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
+  * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
 }
