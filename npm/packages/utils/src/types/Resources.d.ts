@@ -22,7 +22,7 @@ export type HNCommon = {
    */
   webPart_PagePromotion_SelectPage_Text: string;
   /**
-   * test11
+   * test1
    */
   iKKE_BRUK_KUN_FOR_TEST: string;
 };
@@ -3220,6 +3220,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_msis_Desc: string;
   /**
+   * /provesvar
+   */
+  page_Provesvar_NavigateBackLinkURL: string;
+  /**
+   * Tilbake til Prøvesvar
+   */
+  page_Provesvar_NavigateBackLinkTitle: string;
+  /**
    * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
    */
   page_Dokumenter_Desc: string;
@@ -3525,7 +3533,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   page_Provesvar_Title: string;
   /**
-   * Her vises en oversikt over dine prøvesvar for koronavirus SARS-CoV-2.
+   * Her vises en oversikt over dine prøvesvar for koronavirus.
    */
   page_Provesvar_Desc: string;
 };
@@ -7902,6 +7910,10 @@ behandlingsstedet ved eventuelle spørsmål.
    * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
    */
   servicepanelNoServiceDescription: string;
+  /**
+   * Er du sikker på at du vil avbestille?
+   */
+  appointmentCancelHelsestasjonDescription: string;
 };
 
 export type HNMinHelseDialog = {
@@ -11146,6 +11158,10 @@ export type HNMinHelseHFTStringsJS = {
    */
   egenandeler_gyldig: string;
   /**
+   * Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.
+   */
+  egenandeler_behandles: string;
+  /**
    * Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte
    */
   endre_adresse_lenke_v3_1: string;
@@ -11153,10 +11169,6 @@ export type HNMinHelseHFTStringsJS = {
    * Folkeregistret
    */
   endre_adresse_lenke_v3_2: string;
-  /**
-   * Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.
-   */
-  egenandeler_behandles: string;
 };
 
 export type HNMinHelseHFTStrings = {
@@ -17999,6 +18011,10 @@ export type HNMinHelsePasientjournal = {
    * Sykehuset Innlandet HF
    */
   xDS_LokasjonFeil_SIHF: string;
+  /**
+   * Helse Nord
+   */
+  xDS_LokasjonFeil_HN: string;
 };
 
 export type HNMinHelsePasientreiserJS = {

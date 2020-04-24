@@ -4,7 +4,7 @@
     "webPart_FlexibleText_BiggerEditor": "Større editor",
     "webPart_FlexibleText_ToolPartTitle": "Redigerbare tekster",
     "webPart_PagePromotion_SelectPage_Text": "Select Page",
-    "iKKE_BRUK_KUN_FOR_TEST": "test11"
+    "iKKE_BRUK_KUN_FOR_TEST": "test1"
   },
   "HNCoreFrontendMicrowebHeaderFooter": {
     "headerMenuProfileLinksKontaktinformasjonOgVarseloppsettUrl": "/kontaktinformasjon-og-varseloppsett",
@@ -800,6 +800,8 @@
     "page_VelgBehandlingssted_Desc": "Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.",
     "page_msis_Title": "Meldingssystem for smittsomme sykdommer (MSIS)",
     "page_msis_Desc": "MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.",
+    "page_Provesvar_NavigateBackLinkURL": "/provesvar",
+    "page_Provesvar_NavigateBackLinkTitle": "Tilbake til Prøvesvar",
     "page_Dokumenter_Desc": "Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.",
     "page_Forskning_Desc": "Forskning i forbindelse med kliniske studier har som formål å undersøke effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.<br/>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden.",
     "page_Forskning_Title": "Forskning",
@@ -873,7 +875,7 @@
     "page_InnsynSmittestopp_Desc": "TODO: beskrivelse av innsyn smittestopp",
     "page_Personverninnstillinger_Title": "Personverninnstillinger",
     "page_Provesvar_Title": "Prøvesvar",
-    "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus SARS-CoV-2."
+    "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus."
   },
   "HNMinHelseDialogGPStrings": {
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
@@ -1964,7 +1966,8 @@
     "conversationItemInnkallingsbrevErNytt": "Du har fått en melding med et innkallingsbrev. Les brevet for å se om du må gjøre forberedelser til timen.",
     "conversationItemInnkallingsbrevErSlettet": "Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.",
     "servicepanelInfoHeading": "Informasjon fra legekontoret",
-    "servicepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge."
+    "servicepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.",
+    "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?"
   },
   "HNMinHelseDialog": {
     "varselmeny_NegativAppRec_Emne": "Sending av melding har feilet",
@@ -2783,9 +2786,9 @@
     "egenandeler_frikort_utgaatt": "Frikort er utgått",
     "egenandeler_vedtaksdato": "Vedtaksdato:",
     "egenandeler_gyldig": "Gyldig til: 31.12",
+    "egenandeler_behandles": "Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.",
     "endre_adresse_lenke_v3_1": "Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte",
-    "endre_adresse_lenke_v3_2": "Folkeregistret",
-    "egenandeler_behandles": "Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager."
+    "endre_adresse_lenke_v3_2": "Folkeregistret"
   },
   "HNMinHelseHFTStrings": {
     "webPart_MyDeductibles_ShowAddress": "Hent adresse/kontonummer",
@@ -4485,7 +4488,8 @@
     "pdfCompatibilityBodyPreview": "Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?",
     "pdfCompatibilityPreview": "Se forhåndsvisning",
     "documentIsRestricted": "Unntatt fra visning på nett",
-    "xDS_LokasjonFeil_SIHF": "Sykehuset Innlandet HF"
+    "xDS_LokasjonFeil_SIHF": "Sykehuset Innlandet HF",
+    "xDS_LokasjonFeil_HN": "Helse Nord"
   },
   "HNMinHelsePasientreiserJS": {
     "valideringsfeil_ADRESSE_GATE_MAX_TEGN": "Adresse kan ha opp til 150 tegn.",
