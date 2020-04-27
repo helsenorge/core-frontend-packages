@@ -16528,19 +16528,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   paminnelseFastlegeVideoTime_TextMessage_Body_Self: string;
   /**
-   * Husk at ${FirstName} har en videotime hos fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
+   * Husk at ${FirstName} har en videotime med fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
    */
   paminnelseFastlegeVideoTime_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName}, husk videotimen hos fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
+   * ${FirstName}, husk videotimen med fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
    */
   paminnelseFastlegeVideoTime_EmailMessage_Body_Self: string;
   /**
-   * Påminnelse om videotime hos fastlegen
+   * Påminnelse om videotime med fastlegen
    */
   paminnelseFastlegeVideoTime_EmailMessage_Subject_Representation: string;
   /**
-   * Påminnelse om videotime hos fastlegen
+   * Påminnelse om videotime med fastlegen
    */
   paminnelseFastlegeVideoTime_EmailMessage_Subject_Self: string;
   /**
@@ -16592,35 +16592,35 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   manglendeAppRec_TextMessage_Body_Self: string;
   /**
-   * Husk at ${FirstName} har en timeavtale hos fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * Husk at ${FirstName} har en timeavtale med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_TextMessage_Body_Representation: string;
   /**
-   * Husk at ${FirstName} har en timeavtale hos fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * Husk at ${FirstName} har en timeavtale med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName}, husk timeavtalen hos fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * ${FirstName}, husk timeavtalen med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_TextMessage_Body_Self: string;
   /**
-   * ${FirstName}, husk timeavtalen hos fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * ${FirstName}, husk timeavtalen med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_EmailMessage_Body_Self: string;
   /**
-   * Påminnelse om timeavtale hos fastlegen
+   * Påminnelse om timeavtale med fastlegen
    */
   paminnelseFastlegeTime_EmailMessage_Subject_Representation: string;
   /**
-   * Påminnelse om timeavtale hos fastlegen
+   * Påminnelse om timeavtale med fastlegen
    */
   paminnelseFastlegeTime_EmailMessage_Subject_Self: string;
   /**
-   * Påminnelse om timeavtale hos fastlegen
+   * Påminnelse om timeavtale med fastlegen
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self: string;
   /**
-   * Påminnelse om timeavtale hos fastlegen
+   * Påminnelse om timeavtale med fastlegen
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation: string;
   /**
@@ -29029,7 +29029,7 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
    */
   hjelpetrigger_profilFullmakt_journalinnsyn: string;
   /**
-   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Digitale helsetjenester","seksjonstekst_brodtekst":"<p>Den du gir fullmakt til vil kunne se dialog du har hatt med helsepersonell, samt informasjon om timer, brev, skjemaer for utfylling og lignende. Husk at informasjon du får på Helsenorge kan erstatte det å få et fysisk brev hjem i postkassen din.</p>\n \n<p>\nMed dette valget gir du tilgang til å:\n</p>\n\n<ul>\n<li>bestille og administrere dine timeavtaler</li>\n<li>få oversikt over dine henvisninger</li>\n<li>få oversikt over dine helsekontakter</li>\n<li>kommunisere med dine behandlere og andre helsekontakter</li>\n<li>se dine legemidler og fornye dine resepter</li>\n<li>se ditt vaksinekort</li>\n<li>registrere opplysninger i din kjernejournal</li>\n<li>bruke nye tjenester som er direkte knyttet til forebygging, behandling eller oppfølging av din helse</li>\n</ul>"}
+   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Digitale helsetjenester","seksjonstekst_brodtekst":"<p>Den du gir fullmakt til vil kunne se dialog du har hatt med helsepersonell, samt informasjon om timer, brev, skjemaer for utfylling og lignende. Husk at informasjon du får på Helsenorge kan erstatte det å få et fysisk brev hjem i postkassen din.</p>\n \n<p>\nMed dette valget gir du tilgang til å:\n</p>\n\n<ul>\n<li>bestille og administrere dine timeavtaler</li>\n<li>få oversikt over dine henvisninger</li>\n<li>få oversikt over dine helsekontakter</li>\n<li>kommunisere med dine behandlere og andre helsekontakter</li>\n<li>se dine legemidler og fornye dine resepter</li>\n<li>se ditt vaksinekort</li>\n<li>registrere opplysninger i din kjernejournal</li>\n<li>bruke nye tjenester som er direkte knyttet til forebygging, behandling eller oppfølging av din helse</li>\n<li>se dine prøvesvar</li>\n</ul>"}
    */
   hjelpetrigger_profilFullmakt_helsetjeneste: string;
   /**
