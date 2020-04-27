@@ -16529,19 +16529,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeVideoTime_TextMessage_Body_Self: string;
   /** 
-  * Husk at ${FirstName} har en videotime hos fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * Husk at ${FirstName} har en videotime med fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
   */
   paminnelseFastlegeVideoTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk videotimen hos fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, husk videotimen med fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
   */
   paminnelseFastlegeVideoTime_EmailMessage_Body_Self: string;
   /** 
-  * Påminnelse om videotime hos fastlegen
+  * Påminnelse om videotime med fastlegen
   */
   paminnelseFastlegeVideoTime_EmailMessage_Subject_Representation: string;
   /** 
-  * Påminnelse om videotime hos fastlegen
+  * Påminnelse om videotime med fastlegen
   */
   paminnelseFastlegeVideoTime_EmailMessage_Subject_Self: string;
   /** 
@@ -16601,7 +16601,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk timeavtalen hos fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * ${FirstName}, husk timeavtalen med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
   paminnelseFastlegeTime_TextMessage_Body_Self: string;
   /** 
@@ -16609,19 +16609,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeTime_EmailMessage_Body_Self: string;
   /** 
-  * Påminnelse om timeavtale hos fastlegen
+  * Påminnelse om timeavtale med fastlegen
   */
   paminnelseFastlegeTime_EmailMessage_Subject_Representation: string;
   /** 
-  * Påminnelse om timeavtale hos fastlegen
+  * Påminnelse om timeavtale med fastlegen
   */
   paminnelseFastlegeTime_EmailMessage_Subject_Self: string;
   /** 
-  * Påminnelse om timeavtale hos fastlegen
+  * Påminnelse om timeavtale med fastlegen
   */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self: string;
   /** 
-  * Påminnelse om timeavtale hos fastlegen
+  * Påminnelse om timeavtale med fastlegen
   */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation: string;
   /** 
