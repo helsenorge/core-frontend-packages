@@ -31515,7 +31515,7 @@ export type HNMinHelseSamtykkeflytJS = {
   samtykkeflyt_bekreft_type1_juridisk_samykke_html: string;
   /** 
   * <h3 class="h6">Med «Full» kan du få tilgang til følgende tjenester:</h3>
-<p>Kjernejournal, reseptformidleren, vaksinasjonsregisteret og andre helseregistre, bytte fastlege, frikort og egenandeler, administrere samtykker og reservasjoner, pasientjournal, legemidler og vaksiner, dialog med helsekontakter, timeavtaler, henvisninger, donorkort, andre tjenester som er knyttet til forebygging, behandling og oppfølging av din helse.</p>
+<p>Kjernejournal, reseptformidleren, vaksinasjonsregisteret og andre helseregistre, bytte fastlege, frikort og egenandeler, administrere samtykker og reservasjoner, pasientjournal, legemidler og vaksiner, dialog med helsekontakter, timeavtaler, henvisninger, pasientreiser, donorkort og andre tjenester som er knyttet til forebygging, behandling og oppfølging av din helse.</p>
   */
   samtykkeflyt_bekreft_type3_html: string;
   /** 
