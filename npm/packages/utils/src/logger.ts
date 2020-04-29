@@ -69,6 +69,7 @@ function generateEntry(level: LogLevel, message?: string, ...optionalParams: any
 
 function logToServer(level: LogLevel, message?: string, ...optionalParams: any[]) {
   if (ServerLogLevel === undefined) {
+    SetupLogLevel();
     logQueue.push(generateEntry(level, message, optionalParams));
   } else if (level >= ServerLogLevel) {
     postAuto('Log', generateEntry(level, message, optionalParams)).catch();
@@ -229,7 +230,5 @@ export default {
   trace,
   warn,
 };
-
-SetupLogLevel();
 
 /* eslint-enable @typescript-eslint/no-explicit-any */
