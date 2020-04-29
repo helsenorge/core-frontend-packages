@@ -60,7 +60,11 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
       return response.json();
     }
     return response.json().then((err: Response) => {
-      if ((err as ProxyErrorResponse).code === 'SEC-110000') {
+      if (
+        (err as ProxyErrorResponse).code === 'SEC-110000' &&
+        document.location &&
+        document.location.href.indexOf('autosignout=1') === -1
+      ) {
         // redirect dersom token er utgått eller ugyldig
         window.location.href = `${getBaseUrl()}/auth/autosignout`;
       }
