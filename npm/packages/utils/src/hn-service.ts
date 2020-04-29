@@ -277,7 +277,7 @@ function checkStatus<T extends OperationResponse>(response: Response): Promise<T
       return response.json();
     }
     return response.json().then((err: OperationResponse) => {
-      if (response.status === 403 && err.RedirectUrl) {
+      if (response.status === 403 && err.RedirectUrl && document.location && document.location.href.indexOf('autosignout=1') === -1) {
         window.location.href = err.RedirectUrl;
       }
       trackError('level1');
