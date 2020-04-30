@@ -411,6 +411,20 @@ export function trackUnreadMessage(hasUnReadMessages: boolean) {
   }
 }
 
+// For tracking content-types on read messages
+export function trackReadMessageType(contentType: string) {
+  const digitalData: DigitalData = window.digitalData || undefined;
+
+  if (digitalData && digitalData.page && digitalData.page.category) {
+    digitalData.page.category.contentType = contentType;
+  }
+
+  const _satellite: Satellite = window._satellite || undefined;
+  if (_satellite) {
+    _satellite.track('message content type');
+  }
+}
+
 // For tracking article tab name
 export function trackArticleTab(tabName: string) {
   const digitalData: DigitalData = window.digitalData || undefined;
