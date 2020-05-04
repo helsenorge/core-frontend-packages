@@ -7762,6 +7762,10 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentDetailsAppointmentStatusEnteredInError: string;
   /**
+   * Videotime
+   */
+  appointmentVideoTitle: string;
+  /**
    * Få veiledning før timebestilling
    */
   commonBestillTimeVelgerVeiviser: string;
