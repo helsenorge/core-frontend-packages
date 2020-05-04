@@ -1,4 +1,5 @@
-dist
+dist/
+dist_dev/
 .env
 .jest-cache
 node_modules
