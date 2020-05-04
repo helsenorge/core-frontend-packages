@@ -15445,7 +15445,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Meldinger_Description: string;
   /** 
-  * Meldinger
+  * Innboks
   */
   tile_Meldinger_Title: string;
   /** 
