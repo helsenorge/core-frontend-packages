@@ -1930,6 +1930,7 @@
     "bookingEmptyTextHelsetilbud": "Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her.",
     "videoEventAlertHelsetilbudDescription": "Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved behandlerkontoret. Du betaler samme egenandel som ved vanlig legetime.",
     "appointmentDetailsAppointmentStatusEnteredInError": "Feilregistrert",
+    "appointmentVideoTitle": "Videotime",
     "commonBestillTimeVelgerVeiviser": "Få veiledning før timebestilling",
     "commonBestillTimeVelgerVeiviserBeskrivelse": "Se hvordan du kan hjelpe deg selv og andre å unngå smitte.",
     "commonBestillTimeVelgerAnnet": "Gå direkte til timebestilling",
