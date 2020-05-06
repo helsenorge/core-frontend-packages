@@ -7,6 +7,7 @@ export type Props<S, A> = {
   initialState: S;
   children: JSX.Element;
 };
+
 function withStore<S, A>(props: Props<S, A>) {
   const { StateContext, initialState, DispatchContext, reducer } = props;
   const [state, dispatch] = useReducer(reducer, initialState);

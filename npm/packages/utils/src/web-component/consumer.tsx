@@ -1,6 +1,22 @@
 import React, { useEffect } from 'react';
-import { getAssetsUrl } from '../../hn-service';
-import { error } from '../../logger';
+import { getAssetsUrl } from '../hn-service';
+import { error } from '../logger';
+
+/** Denne kan brukes for å konsumere en web component som finnes.
+ * Legger til <link> og <script> tags for relevant webcomponent så riktig js og css lastes.
+ *
+ * Tilsvarer "metode 2" for konsumering av web component som er dokumentert på confluence-siden for microfrontend:
+ * https://confluence.helsedirektoratet.no/display/HR2/@helsenorge+Microfrontend
+ *
+ * Eksempel:
+ * <template id="hn-webcomp-cms-block-promopanel-template"></template>
+ * <WebCompCreator
+ *    domain={`${getAssetsUrl()}/cms-blocks`}
+ *    entryName="cms-blocks"
+ *    componentName="hn-webcomp-cms-block-promopanel"
+ *    includeResetCss
+ *  />
+ */
 
 interface ComponentProps {
   [key: string]: string | number | boolean;

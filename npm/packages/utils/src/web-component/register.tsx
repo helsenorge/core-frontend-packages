@@ -1,7 +1,14 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import retargetEvents from 'react-shadow-dom-retarget-events';
-import { styleInjector, ConfigSetup } from './utils/helpers';
+import { styleInjector, RegisterWebCompSetup } from './helpers';
+
+/** Denne kan brukes for å konsumere en web component som finnes.
+ * Legger til <link> og <script> tags for relevant webcomponent så riktig js og css lastes.
+ *
+ * Tilsvarer "metode 1" for konsumering av web component som er dokumentert på confluence-siden for microfrontend:
+ * https://confluence.helsedirektoratet.no/display/HR2/@helsenorge+Microfrontend
+ */
 
 export type Props = { ChildComponent: React.ComponentType<WebcompProps>; name: string; config: Config; templateName: string };
 
@@ -75,14 +82,14 @@ export default function registerWebComp(
       shadowRoot.appendChild(this.mountPoint);
 
       render(
-        <ConfigSetup
+        <RegisterWebCompSetup
           config={config}
           eventDispatcher={this.eventDispatcher}
           subscribeDispatcher={this.subscribeDispatcher}
           mountPoint={this.mountPoint}
         >
           <ChildComponent {...this.props} />
-        </ConfigSetup>,
+        </RegisterWebCompSetup>,
         this.mountPoint
       );
       styleInjector(this.props, shadowRoot);
