@@ -1,7 +1,14 @@
 import React from 'react';
-import { WebcompProps } from '..';
+import { WebcompProps } from './register';
 import { EventProvider, SubscribeProvider } from './context';
 import { StyleSheetManager } from 'styled-components';
+
+interface ConfigSetupProps {
+  config: { events: boolean; styledComponents: boolean };
+  eventDispatcher: (event: Event) => void;
+  subscribeDispatcher: (eventname: string, callback: Function) => void;
+  mountPoint: HTMLElement;
+}
 
 export const styleInjector = (props: WebcompProps, shadowroot: ShadowRoot) => {
   if (props.styleoverwrite) {
@@ -10,15 +17,10 @@ export const styleInjector = (props: WebcompProps, shadowroot: ShadowRoot) => {
     shadowroot.appendChild(styleTag);
   }
 };
-interface configSetupProps {
-  config: { events: boolean; styledComponents: boolean };
-  eventDispatcher: (event: Event) => void;
-  subscribeDispatcher: (eventname: string, callback: Function) => void;
-  mountPoint: HTMLElement;
-}
 
-export const ConfigSetup = (props: React.PropsWithChildren<configSetupProps>): JSX.Element => {
+export const RegisterWebCompSetup = (props: React.PropsWithChildren<ConfigSetupProps>): JSX.Element => {
   const { config, eventDispatcher, subscribeDispatcher, mountPoint } = props;
+
   switch (true) {
     case config.events && !config.styledComponents:
       return (

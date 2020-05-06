@@ -1,6 +1,6 @@
 import React, { createContext, useContext } from 'react';
-import WithStore from '../utils/withStore';
 import { mount } from 'enzyme';
+import WithStore from '../with-store';
 
 interface State {
   tester: string;
