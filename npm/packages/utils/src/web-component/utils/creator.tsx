@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { getAssetsUrl } from '../../hn-service';
 import { error } from '../../logger';
 
 interface ComponentProps {
@@ -30,7 +31,7 @@ const WebCompCreator: React.FC<Props> = (props: Props) => {
 
         if (includeResetCss) {
           const resetcssInlineCss = document.createElement('link');
-          resetcssInlineCss.setAttribute('href', `/forside/static/css/resetcss/resetcss.css`);
+          resetcssInlineCss.setAttribute('href', `${getAssetsUrl()}/forside/static/css/resetcss/resetcss.css`);
           resetcssInlineCss.rel = 'stylesheet';
           tmpl.innerHTML += resetcssInlineCss.outerHTML;
         }
