@@ -10,7 +10,7 @@ import { error } from '../logger';
  *
  * Eksempel:
  * <template id="hn-webcomp-cms-block-promopanel-template"></template>
- * <WebCompCreator
+ * <WebCompConsumer
  *    domain={`${getAssetsUrl()}/cms-blocks`}
  *    entryName="cms-blocks"
  *    componentName="hn-webcomp-cms-block-promopanel"
@@ -30,7 +30,7 @@ interface Props {
   includeResetCss?: boolean;
 }
 
-const WebCompCreator: React.FC<Props> = (props: Props) => {
+const WebCompConsumer: React.FC<Props> = (props: Props) => {
   const { domain, entryName, componentName, componentProps, includeResetCss } = props;
 
   useEffect(() => {
@@ -79,4 +79,4 @@ const WebCompCreator: React.FC<Props> = (props: Props) => {
 
   return <React.Fragment>{webCompFromMicroFrontend}</React.Fragment>;
 };
-export default WebCompCreator;
+export default WebCompConsumer;
