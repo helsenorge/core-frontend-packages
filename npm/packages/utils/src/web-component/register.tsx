@@ -3,11 +3,10 @@ import ReactDOM, { render } from 'react-dom';
 import retargetEvents from 'react-shadow-dom-retarget-events';
 import { styleInjector, RegisterWebCompSetup } from './helpers';
 
-/** Denne kan brukes for å konsumere en web component som finnes.
- * Legger til <link> og <script> tags for relevant webcomponent så riktig js og css lastes, og oppretter element i dom'en.
+/** Registrerer/oppretter ny web-komponent.
  *
- * Tilsvarer "metode 1" for konsumering av web component som er dokumentert på confluence-siden for microfrontend:
- * https://confluence.helsedirektoratet.no/display/HR2/@helsenorge+Microfrontend
+ * Eksempel:
+ * registerWebComp(HeaderWrapper, 'hn-webcomp-header', { events: true, styledComponents: true }, 'hn-webcomp-header-footer-template');
  */
 
 export type Props = { ChildComponent: React.ComponentType<WebcompProps>; name: string; config: Config; templateName: string };
