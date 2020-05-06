@@ -14,7 +14,7 @@ export interface Config {
   styledComponents: boolean;
 }
 
-export default function config(
+export default function registerWebComp(
   ChildComponent: React.ComponentType<WebcompProps>,
   name: string,
   config: Config,
@@ -29,29 +29,29 @@ export default function config(
       this.mountReactApp();
     }
 
-    disconnectedCallback() {
+    disconnectedCallback(): void {
       ReactDOM.unmountComponentAtNode(this.mountPoint);
     }
 
-    get value() {
+    get value(): WebcompProps {
       return Array.from(this.attributes).reduce((p, c) => {
         p[c.name] = c.value;
         return p;
       }, {}) as WebcompProps;
     }
 
-    eventDispatcher = (event: Event) => {
+    eventDispatcher = (event: Event): void => {
       this.dispatchEvent(event);
     };
 
     // Listen to Events from outside
-    subscribeDispatcher = (eventname: string, callback: Function) => {
+    subscribeDispatcher = (eventname: string, callback: Function): void => {
       this.addEventListener(eventname, e => {
         return callback(e);
       });
     };
 
-    mountReactApp() {
+    mountReactApp(): void | null {
       this.props = this.value;
       this.mountPoint = document.createElement('div');
 
@@ -89,7 +89,6 @@ export default function config(
       retargetEvents(shadowRoot);
     }
   }
-
   //her settes navnet til web component elementet
   if (!window.customElements.get(name)) {
     window.customElements.define(name, WebComponent);
