@@ -44,9 +44,11 @@ function SetupLogLevel() {
     });
 }
 
-function unwrapError(potentialError: Error | any[]): string {
+function unwrapError(potentialError: Error | any[] | string): string {
   if (potentialError instanceof Error) {
     return potentialError.message + ' Stack: ' + potentialError.stack;
+  } else if (typeof potentialError === 'string' || potentialError instanceof String) {
+    return (potentialError as unknown) as string;
   } else if (potentialError.length > 0) {
     const innerError = potentialError[0];
     return unwrapError(innerError);
@@ -57,7 +59,7 @@ function unwrapError(potentialError: Error | any[]): string {
 
 function generateEntry(level: LogLevel, message?: string, ...optionalParams: any[]): LogEntry {
   let fullMessage = message;
-  fullMessage = optionalParams.reduce((previous, current) => {
+  fullMessage = optionalParams.reduce((previous: string, current: Error | any[] | string) => {
     return previous + ' ' + unwrapError(current);
   }, fullMessage);
   return {

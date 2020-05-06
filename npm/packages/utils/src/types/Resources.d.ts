@@ -3220,17 +3220,9 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_msis_Desc: string;
   /**
-   * /provesvar
+   * Innboks
    */
-  page_Provesvar_NavigateBackLinkURL: string;
-  /**
-   * Tilbake til Prøvesvar
-   */
-  page_Provesvar_NavigateBackLinkTitle: string;
-  /**
-   * Page_Kontaktinformasjon_Title
-   */
-  kontaktinformasjon: string;
+  page_Innboks_Title: string;
   /**
    * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
    */
@@ -3540,6 +3532,18 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    * Her vises en oversikt over dine prøvesvar for koronavirus.
    */
   page_Provesvar_Desc: string;
+  /**
+   * /provesvar
+   */
+  page_Provesvar_NavigateBackLinkURL: string;
+  /**
+   * Tilbake til Prøvesvar
+   */
+  page_Provesvar_NavigateBackLinkTitle: string;
+  /**
+   * Page_Kontaktinformasjon_Title
+   */
+  kontaktinformasjon: string;
 };
 
 export type HNMinHelseDialogGPStrings = {
@@ -7762,10 +7766,6 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentDetailsAppointmentStatusEnteredInError: string;
   /**
-   * Videotime
-   */
-  appointmentVideoTitle: string;
-  /**
    * Få veiledning før timebestilling
    */
   commonBestillTimeVelgerVeiviser: string;
@@ -7910,6 +7910,10 @@ behandlingsstedet ved eventuelle spørsmål.
    * Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.
    */
   conversationItemInnkallingsbrevErSlettet: string;
+  /**
+   * Videotime
+   */
+  appointmentVideoTitle: string;
   /**
    * Informasjon fra legekontoret
    */
@@ -15440,7 +15444,7 @@ export type HNMinHelseNavigation = {
    */
   tile_Meldinger_Description: string;
   /**
-   * Meldinger
+   * Innboks
    */
   tile_Meldinger_Title: string;
   /**
@@ -31947,7 +31951,7 @@ export type HNMinHelseSkjemautfyller = {
    */
   errorBeforeMinDate: string;
   /**
-   * Oppgi en dato
+   * Velg dato, eller skriv dato på denne måten: dd.mm.åååå.
    */
   dateRequired: string;
   /**
@@ -31967,7 +31971,7 @@ export type HNMinHelseSkjemautfyller = {
    */
   ugyldigDatoTid: string;
   /**
-   * Oppgi en verdi
+   * Velg ett av alternativene.
    */
   oppgiVerdi: string;
   /**
@@ -32007,7 +32011,7 @@ export type HNMinHelseSkjemautfyller = {
    */
   validationSummaryHeader: string;
   /**
-   * Velg...
+   * Velg ett av alternativene.
    */
   selectDefaultPlaceholder: string;
   /**
