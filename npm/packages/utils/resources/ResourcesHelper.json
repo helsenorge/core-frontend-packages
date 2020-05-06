@@ -7935,7 +7935,7 @@
     "oppgavenFinsIkke": "Oppgaven fins ikke." , 
     "deleteButtonText": "Slett" , 
     "validationSummaryHeader": "Sjekk at følgende er riktig utfylt:" , 
-    "selectDefaultPlaceholder": "Velg..." , 
+    "selectDefaultPlaceholder": "Velg ett av alternativene." , 
     "resetTime": "Nullstill tidspunkt" , 
     "validationFileMax": "Filstørrelsen må være mindre enn 25MB" , 
     "validationFileType": "Filtypen må være jpeg, png, eller pdf" , 

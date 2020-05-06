@@ -32012,7 +32012,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   validationSummaryHeader: string;
   /** 
-  * Velg...
+  * Velg ett av alternativene.
   */
   selectDefaultPlaceholder: string;
   /** 
