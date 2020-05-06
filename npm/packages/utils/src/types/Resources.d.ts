@@ -31952,7 +31952,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   errorBeforeMinDate: string;
   /** 
-  * Oppgi en dato
+  * Velg dato, eller skriv dato på denne måten: dd.mm.åååå.
   */
   dateRequired: string;
   /** 
@@ -31972,7 +31972,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   ugyldigDatoTid: string;
   /** 
-  * Oppgi en verdi
+  * Velg ett av alternativene.
   */
   oppgiVerdi: string;
   /** 
