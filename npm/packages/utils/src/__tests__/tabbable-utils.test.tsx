@@ -1,5 +1,7 @@
 import React from 'react';
 import tabbable from 'tabbable';
+import jsdom from 'jsdom';
+
 const fixtures = require('./../_devonly/fixtures');
 
 import { shallow, mount } from 'enzyme';
@@ -88,9 +90,11 @@ describe('Gitt at det finnes en container med flere knapper', () => {
 
       //jest.spyOn(document, 'querySelectorAll').mockReturnValue();
 
-      const wrapper = mount(<TabbableTestContainer />, { attachTo: document.body });
+      //const wrapper = mount(<TabbableTestContainer />, { attachTo: document.body });
       //var node = wrapper.getDOMNode();
       //expect(node).toBeInstanceOf(HTMLDivElement);
+
+      document.body.innerHTML = '<div id="container"><button></button><button></button></div>';
 
       const node = window.document.getElementById('container');
 
@@ -98,9 +102,9 @@ describe('Gitt at det finnes en container med flere knapper', () => {
       console.log('node', node);
       console.log('a', a);
 
-      const updatedTabbableContent: TabbableContentWithTabIndexes = setTabIndex(node);
-      expect(updatedTabbableContent.previousTabIndexes).toEqual([]);
-      expect(updatedTabbableContent.tabbableElements).toEqual([]);
+      //const updatedTabbableContent: TabbableContentWithTabIndexes = setTabIndex(node);
+      //expect(updatedTabbableContent.previousTabIndexes).toEqual([]);
+      //expect(updatedTabbableContent.tabbableElements).toEqual([]);
     });
   });
 });
