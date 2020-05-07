@@ -2835,7 +2835,7 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   helpBubbleClose: string;
   /** 
-  * Helsetjenester
+  * Min helse
   */
   helsetjenesterTitle: string;
   /** 
