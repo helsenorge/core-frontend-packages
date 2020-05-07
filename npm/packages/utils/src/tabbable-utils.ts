@@ -11,7 +11,8 @@ export interface TabbableContentWithTabIndexes {
  */
 export const setTabIndex = (element: HTMLElement): TabbableContentWithTabIndexes => {
   const newPrevTabIndexes: Array<number | null> = [];
-  const updatedTabbableElements: Array<TabbableElement> = tabbable(element) as Array<TabbableElement>;
+  const updatedTabbableElements: Array<TabbableElement> = tabbable(element);
+  console.log('updatedTabbableElements', updatedTabbableElements);
   updatedTabbableElements.forEach(el => {
     if (el.hasAttribute('tabindex')) {
       newPrevTabIndexes.push(el.tabIndex);
