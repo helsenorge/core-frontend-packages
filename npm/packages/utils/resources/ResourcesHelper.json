@@ -1026,7 +1026,7 @@
     "messagesEmptyNoFilterDesc": "Velg færre filtre og prøv igjen." , 
     "newItemLabel": "Ny" , 
     "appointmentRequestInfoConfirmationButtonText": "OK" , 
-    "appointmentRequestInfoConfirmationDescription": "Takk for din henvendelse. Du vil bli kontaktet." , 
+    "appointmentRequestInfoConfirmationDescription": "Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger." , 
     "appointmentRequestInfoConfirmationHeading": "Meldingen er sendt" , 
     "appointmentRequestInfoDescription": "Du vil få svar innen to arbeidsdager." , 
     "appointmentRequestInfoErrorDescription": "Meldingen ble ikke sendt. Du kan prøve på nytt senere eller kontakte oss på telefon." , 

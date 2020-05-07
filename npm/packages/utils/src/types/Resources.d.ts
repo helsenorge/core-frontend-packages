@@ -4131,7 +4131,7 @@ export type HNMinHelseDialogJS = {
   */
   appointmentRequestInfoConfirmationButtonText: string;
   /** 
-  * Takk for din henvendelse. Du vil bli kontaktet.
+  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger.
   */
   appointmentRequestInfoConfirmationDescription: string;
   /** 
