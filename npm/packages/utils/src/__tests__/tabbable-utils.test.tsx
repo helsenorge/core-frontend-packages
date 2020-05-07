@@ -1,15 +1,12 @@
 import React from 'react';
-import tabbable from 'tabbable';
-import jsdom from 'jsdom';
 
-const fixtures = require('./../_devonly/fixtures');
+// const fixtures = require('./../_devonly/fixtures');
 
 import { shallow, mount } from 'enzyme';
-
 import TabbableTestContainer from './../_devonly/tabbable-test-container';
-
 import { setTabIndex, resetTabIndex, TabbableContentWithTabIndexes } from '../tabbable-utils';
 
+/*
 let fixtureRoots = [];
 
 function getTabbableIds(node, options) {
@@ -43,12 +40,9 @@ function cleanupFixtures() {
   });
   fixtureRoots = [];
 }
+*/
 
 describe('Gitt at det finnes en container med flere knapper', () => {
-  afterEach(() => {
-    cleanupFixtures();
-  });
-
   describe('Når ...', () => {
     it('Så ...', () => {
       /*
@@ -88,22 +82,29 @@ describe('Gitt at det finnes en container med flere knapper', () => {
 
       */
 
-      //jest.spyOn(document, 'querySelectorAll').mockReturnValue();
+      /* tslint:disable */
+      const wrapper = mount(<TabbableTestContainer />, { attachTo: document.body });
+      var node = wrapper.getDOMNode();
+      const returnedChildren = node.children;
+      const updatedReturnedChildren = (returnedChildren[0].offsetParent = {});
 
-      //const wrapper = mount(<TabbableTestContainer />, { attachTo: document.body });
-      //var node = wrapper.getDOMNode();
-      //expect(node).toBeInstanceOf(HTMLDivElement);
+      const returnedNodeList = Array.from(updatedReturnedChildren);
+      /*
+      returnedNodeList.forEach(child => {
+        console.log('vhild', child);
+        child.offsetParent = {};
+      });
+      */
+      jest.spyOn(node, 'querySelectorAll').mockReturnValue(returnedNodeList);
 
-      document.body.innerHTML = '<div id="container"><button></button><button></button></div>';
-
-      const node = window.document.getElementById('container');
-
-      const a = window.document.querySelectorAll('button');
+      //const node = window.document.getElementById('container');
+      //const antallButtons = node.querySelectorAll('button');
       console.log('node', node);
-      console.log('a', a);
+      //console.log('liste over nested nodes - should not be empty', antallButtons);
 
-      //const updatedTabbableContent: TabbableContentWithTabIndexes = setTabIndex(node);
-      //expect(updatedTabbableContent.previousTabIndexes).toEqual([]);
+      expect(node).toBeInstanceOf(HTMLDivElement);
+      const updatedTabbableContent: TabbableContentWithTabIndexes = setTabIndex(node);
+      expect(updatedTabbableContent.previousTabIndexes).toEqual(['null', '2']);
       //expect(updatedTabbableContent.tabbableElements).toEqual([]);
     });
   });
