@@ -32223,6 +32223,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   hourPlaceholder: string;
   /** 
+  * Skjemaet er lagret i Dokumenter.
+  */
+  lagreSkjemaDokumenterBody: string;
+  /** 
   * er ikke tillatt
   */
   validationNotAllowed: string;
