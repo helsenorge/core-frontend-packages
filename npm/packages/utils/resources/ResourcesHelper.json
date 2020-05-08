@@ -1131,7 +1131,7 @@
     "appointmentCancelGPServiceNotAvailableDescription": "Avbestill av time ble ikke registrert" , 
     "conversationBookingGeneralPractitioner": "Bestill time" , 
     "conversationCancelGeneralPractitioner": "Avbestill time" , 
-    "appointmentRescheduleConfirmationDescription": "Takk for din henvendelse. Du vil bli kontaktet." , 
+    "appointmentRescheduleConfirmationDescription": "Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger." , 
     "appointmentRescheduleConfirmationHeading": "Meldingen er sendt" , 
     "appointmentRescheduleDescription": "Du kan foreslå tidspunkter selv slik at vi kan prøve å finne en time som passer. Vær likevel oppmerksom på at endring av timen kan medføre lengre ventetid. Du vil bli kontaktet innen to arbeidsdager." , 
     "appointmentRescheduleErrorDescription": "Meldingen ble ikke sendt. Du kan prøve igjen senere." , 
