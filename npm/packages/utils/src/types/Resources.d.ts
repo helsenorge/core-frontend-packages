@@ -2835,7 +2835,7 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   helpBubbleClose: string;
   /** 
-  * Helsetjenester
+  * Min helse
   */
   helsetjenesterTitle: string;
   /** 
@@ -3224,6 +3224,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Innboks
   */
   page_Innboks_Title: string;
+  /** 
+  * Samvalg
+  */
+  page_Samvalg_NavigateBackLinkTitle: string;
+  /** 
+  * /samvalg
+  */
+  page_Samvalg_NavigateBackLinkURL: string;
   /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
@@ -4131,7 +4139,7 @@ export type HNMinHelseDialogJS = {
   */
   appointmentRequestInfoConfirmationButtonText: string;
   /** 
-  * Takk for din henvendelse. Du vil bli kontaktet.
+  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger.
   */
   appointmentRequestInfoConfirmationDescription: string;
   /** 
