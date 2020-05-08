@@ -19,8 +19,6 @@ export const setTabIndex = (element: HTMLElement): TabbableContentWithTabIndexes
       newPrevTabIndexes.push(null);
     }
     el.tabIndex = -1;
-    // console.log('EL-.tabindex', el.tabIndex);
-    //console.log('EL', el);
   });
   return {
     tabbableElements: updatedTabbableElements,
