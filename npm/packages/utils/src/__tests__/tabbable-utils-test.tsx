@@ -26,7 +26,7 @@ interface TabbableElement extends HTMLInputElement {
   removeAttribute: (attribute: string) => void;
 }
 
-describe('Tabbable-utils test', () => {
+describe('Tabbable-utils', () => {
   describe('Gitt at det finnes en container med flere knapper', () => {
     const wrapper = mount(<TabbableTestHelper />, { attachTo: document.body });
     const node = wrapper.getDOMNode();
