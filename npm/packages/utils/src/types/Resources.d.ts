@@ -3225,9 +3225,13 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Innboks_Title: string;
   /** 
-  * samvalg
+  * Samvalg
   */
   page_Samvalg_NavigateBackLinkTitle: string;
+  /** 
+  * /samvalg
+  */
+  page_Samvalg_NavigateBackLinkURL: string;
   /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
