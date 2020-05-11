@@ -7989,6 +7989,7 @@
     "hourPlaceholder": "tt" , 
     "lagreSkjemaDokumenterBody": "Skjemaet er lagret i Dokumenter." , 
     "lagretConfirmation": "Skjemaet er lagret" , 
+    "formFinish": "Fullfør" , 
     "validationNotAllowed": "er ikke tillatt" , 
     "ugyldigInputISkjema": "Skjemaet inneholder ugyldige tegn eller verdier. Sjekk at alt er riktig utfylt før du sender inn skjemaet." , 
     "helpButtonTooltip": "Vis hjelp" , 
