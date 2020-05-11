@@ -32227,6 +32227,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   lagreSkjemaDokumenterBody: string;
   /** 
+  * Skjemaet er lagret
+  */
+  lagretConfirmation: string;
+  /** 
   * er ikke tillatt
   */
   validationNotAllowed: string;
