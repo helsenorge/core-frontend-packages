@@ -1,15 +1,18 @@
+import { getAutoCommand } from './hn-service';
+
 /**
- * Get Features from window
+ * Get feature-toggle from window.HN.
+ * If logged in, uses: HN.Commands.__GetFeatureToggles__.FeatureToggles
+ * If not logged in, uses: HN.PortalCommands.__GetFeatureToggles__.FeatureToggles
  * @param featureName name of feature
  */
-
 export default function getFeatureToggle(featureName: string): boolean {
-  if (window && window.HN && window.HN.Commands.__GetFeatureToggles__ && window.HN.Commands.__GetFeatureToggles__.FeatureToggles) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const commands: any = getAutoCommand();
+
+  if (!!commands && !!commands.__GetFeatureToggles__ && !!commands.__GetFeatureToggles__.FeatureToggles) {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const feature = (window.HN.Commands.__GetFeatureToggles__.FeatureToggles as Record<string, any>)[featureName];
-    if (feature) {
-      return true;
-    }
+    return !!(commands.__GetFeatureToggles__.FeatureToggles as Record<string, any>)[featureName];
   }
   return false;
 }
