@@ -32231,6 +32231,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   lagretConfirmation: string;
   /** 
+  * Fullfør
+  */
+  formFinish: string;
+  /** 
   * er ikke tillatt
   */
   validationNotAllowed: string;
