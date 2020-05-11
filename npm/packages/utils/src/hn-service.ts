@@ -187,7 +187,7 @@ function getCookie(name: string) {
   return value !== null ? unescape(value[1]) : null;
 }
 
-function getAutoCommand(): string {
+export function getAutoCommand(): string {
   return isAuthorized() === true ? HN.Commands : HN.PortalCommands;
 }
 

@@ -1,7 +1,13 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import retargetEvents from 'react-shadow-dom-retarget-events';
-import { styleInjector, ConfigSetup } from './utils/helpers';
+import { styleInjector, RegisterWebCompSetup } from './helpers';
+
+/** Registrerer/oppretter ny web-komponent.
+ *
+ * Eksempel:
+ * registerWebComp(HeaderWrapper, 'hn-webcomp-header', { events: true, styledComponents: true }, 'hn-webcomp-header-footer-template');
+ */
 
 export type Props = { ChildComponent: React.ComponentType<WebcompProps>; name: string; config: Config; templateName: string };
 
@@ -14,7 +20,7 @@ export interface Config {
   styledComponents: boolean;
 }
 
-export default function config(
+export default function registerWebComp(
   ChildComponent: React.ComponentType<WebcompProps>,
   name: string,
   config: Config,
@@ -29,29 +35,29 @@ export default function config(
       this.mountReactApp();
     }
 
-    disconnectedCallback() {
+    disconnectedCallback(): void {
       ReactDOM.unmountComponentAtNode(this.mountPoint);
     }
 
-    get value() {
+    get value(): WebcompProps {
       return Array.from(this.attributes).reduce((p, c) => {
         p[c.name] = c.value;
         return p;
       }, {}) as WebcompProps;
     }
 
-    eventDispatcher = (event: Event) => {
+    eventDispatcher = (event: Event): void => {
       this.dispatchEvent(event);
     };
 
     // Listen to Events from outside
-    subscribeDispatcher = (eventname: string, callback: Function) => {
+    subscribeDispatcher = (eventname: string, callback: Function): void => {
       this.addEventListener(eventname, e => {
         return callback(e);
       });
     };
 
-    mountReactApp() {
+    mountReactApp(): void | null {
       this.props = this.value;
       this.mountPoint = document.createElement('div');
 
@@ -75,14 +81,14 @@ export default function config(
       shadowRoot.appendChild(this.mountPoint);
 
       render(
-        <ConfigSetup
+        <RegisterWebCompSetup
           config={config}
           eventDispatcher={this.eventDispatcher}
           subscribeDispatcher={this.subscribeDispatcher}
           mountPoint={this.mountPoint}
         >
           <ChildComponent {...this.props} />
-        </ConfigSetup>,
+        </RegisterWebCompSetup>,
         this.mountPoint
       );
       styleInjector(this.props, shadowRoot);
