@@ -1,24 +1,26 @@
 /* Events from header-footer webcomp */
 
-export const HNeventSetHiddenHeader = (): void => {
+export const HNeventSetHiddenHeader = (isHidden: boolean = true): void => {
   const webcompheader = document.querySelector('hn-webcomp-header');
   if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent('hn-webcomp-header-footer-event-sethiddenheader', { detail: { hiddenHeader: true } }));
+    webcompheader.dispatchEvent(new CustomEvent('hn-webcomp-header-footer-event-sethiddenheader', { detail: { hiddenHeader: isHidden } }));
   }
 };
 
-export const HNeventSetHiddenFooter = (): void => {
+export const HNeventSetHiddenFooter = (isHidden: boolean = true): void => {
   const webcompheader = document.querySelector('hn-webcomp-footer');
   if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent('hn-webcomp-header-footer-event-sethiddenfooter', { detail: { hiddenFooter: true } }));
+    webcompheader.dispatchEvent(new CustomEvent('hn-webcomp-header-footer-event-sethiddenfooter', { detail: { hiddenFooter: isHidden } }));
   }
 };
 
-export const HNeventSetSimplifiedFooter = (text: string): void => {
+export const HNeventSetSimplifiedFooter = (text: string, isSimplified: boolean = true): void => {
   const webcompheader = document.querySelector('hn-webcomp-footer');
   if (webcompheader && webcompheader.dispatchEvent) {
     webcompheader.dispatchEvent(
-      new CustomEvent('hn-webcomp-header-footer-event-sethiddenfooter', { detail: { simplifiedFooter: true, simplifiedFooterText: text } })
+      new CustomEvent('hn-webcomp-header-footer-event-sethiddenfooter', {
+        detail: { simplifiedFooter: isSimplified, simplifiedFooterText: text },
+      })
     );
   }
 };
