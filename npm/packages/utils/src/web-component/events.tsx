@@ -18,7 +18,7 @@ export const HNeventSetSimplifiedFooter = (text: string, isSimplified: boolean =
   const webcompheader = document.querySelector('hn-webcomp-footer');
   if (webcompheader && webcompheader.dispatchEvent) {
     webcompheader.dispatchEvent(
-      new CustomEvent('hn-webcomp-header-footer-event-sethiddenfooter', {
+      new CustomEvent('hn-webcomp-header-footer-event-setsimplifiedfooter', {
         detail: { simplifiedFooter: isSimplified, simplifiedFooterText: text },
       })
     );
