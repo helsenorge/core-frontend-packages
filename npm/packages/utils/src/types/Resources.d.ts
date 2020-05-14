@@ -181,6 +181,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Personverninnstillinger
   */
   headerMenuProfileLinksPersonverninnstillingerTitle: string;
+  /** 
+  * /personverninnstillinger
+  */
+  headerMenuProfileLinksPersonverninnstillingerUrl: string;
 }
 
 export type HNCoreFrontendNPMPackagesCMS = { 
