@@ -882,7 +882,8 @@
     "page_Appointments_Title": "Timeavtaler" , 
     "page_Messages_Desc": "Her ser du meldinger du har sendt og mottatt via helsenorge.no." , 
     "page_Messages_Title": "Meldinger" , 
-    "page_Kontaktinformasjon_Title": "Kontaktinformasjon" 
+    "page_Kontaktinformasjon_Title": "Kontaktinformasjon" , 
+    "page_Kontaktinformasjon_Description": "Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren." 
   }, 
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. " , 
