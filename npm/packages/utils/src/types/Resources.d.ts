@@ -54,7 +54,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuProfileLinksBrukAvHelsetjenesterUrl: string;
   /** 
-  * /fullmakter
+  * /fullmakt
   */
   headerMenuProfileLinksFullmakterUrl: string;
   /** 
