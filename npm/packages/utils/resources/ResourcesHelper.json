@@ -44,7 +44,8 @@
     "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger" , 
     "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" , 
     "hoppTilInnholdet": "Hopp til innholdet" , 
-    "headerMenuProfileLinksPersonverninnstillingerTitle": "Personverninnstillinger" 
+    "headerMenuProfileLinksPersonverninnstillingerTitle": "Personverninnstillinger" , 
+    "headerMenuProfileLinksPersonverninnstillingerUrl": "/personverninnstillinger" 
   }, 
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk" , 
