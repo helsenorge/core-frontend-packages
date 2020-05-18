@@ -45,6 +45,8 @@
     "headerMenuProfileLinksPersonverninnstillingerTitle": "Personverninnstillinger" , 
     "headerMenuProfileLinksPersonverninnstillingerUrl": "/personverninnstillinger" , 
     "inactivity_SignedOut_Button_GoToRoot": "Gå til forsiden" , 
+    "inactivity_SignedOut_Button_SignInAgain": "Logg inn på nytt" , 
+    "inactivity_SignedOut_Title": "Du var stille en stund og har blitt logget ut" , 
     "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger" , 
     "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" 
   }, 

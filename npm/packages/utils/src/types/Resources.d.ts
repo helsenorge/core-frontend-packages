@@ -182,6 +182,14 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   inactivity_SignedOut_Button_GoToRoot: string;
   /** 
+  * Logg inn på nytt
+  */
+  inactivity_SignedOut_Button_SignInAgain: string;
+  /** 
+  * Du var stille en stund og har blitt logget ut
+  */
+  inactivity_SignedOut_Title: string;
+  /** 
   * /deling-av-helseopplysninger
   */
   headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
