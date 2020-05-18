@@ -3205,7 +3205,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   kontaktinformasjon: string;
   /** 
-  * Innboks
+  * Meldinger
   */
   page_Innboks_Title: string;
   /** 
@@ -15489,7 +15489,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Meldinger_Description: string;
   /** 
-  * Innboks
+  * Meldinger
   */
   tile_Meldinger_Title: string;
   /** 
