@@ -190,6 +190,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   inactivity_SignedOut_Title: string;
   /** 
+  * Logg ut
+  */
+  lightbox_Inactivity_Button_SignOut: string;
+  /** 
   * /deling-av-helseopplysninger
   */
   headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
