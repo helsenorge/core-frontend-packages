@@ -7956,6 +7956,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsSpecialistVideoButtonText: string;
   /** 
+  * Dette er en videotime
+  */
+  appointmentDetailsSpecialistVideoHeader: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;

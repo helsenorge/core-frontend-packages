@@ -1978,6 +1978,7 @@
     "servicepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge." , 
     "appointmentDetailsSpecialistVideoTekst": "Spesialisten vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Hvis dette er din første videotime, må du beregne litt ekstra tid. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Ta kontakt med spesialist den ved feil." , 
     "appointmentDetailsSpecialistVideoButtonText": "Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med {0} ved feil." , 
+    "appointmentDetailsSpecialistVideoHeader": "Dette er en videotime" , 
     "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?" 
   }, 
   "HNMinHelseDialog": { 
