@@ -14689,11 +14689,11 @@ Du kan legge inn nye begrensninger når du ønsker det.
   */
   mho_communication_registered: string;
   /** 
-  * 
+  * Det har skjedd en teknisk feil
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
   /** 
-  * 
+  * Årstall for hendelse kan ikke være mindre enn fødselsår, og heller ikke høyere enn nåværende år.
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message: string;
 }
