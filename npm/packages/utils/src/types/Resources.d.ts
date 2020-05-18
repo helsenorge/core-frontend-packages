@@ -7952,7 +7952,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsSpecialistVideoTekst: string;
   /** 
-  * Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med {0} ved feil.
+  * Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med spesialist ved feil.
   */
   appointmentDetailsSpecialistVideoButtonText: string;
   /** 
