@@ -7948,6 +7948,14 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   servicepanelNoServiceDescription: string;
   /** 
+  * Spesialisten vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Hvis dette er din første videotime, må du beregne litt ekstra tid. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Ta kontakt med spesialist den ved feil.
+  */
+  appointmentDetailsSpesialistVideoTekst: string;
+  /** 
+  * Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med {0} ved feil.
+  */
+  appointmentDetailsSpesialistVideoButtonText: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
@@ -12430,6 +12438,10 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   * 
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
+  /** 
+  * 
+  */
+  page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message: string;
 }
 
 export type HNMinHelseKJStrings = { 
