@@ -3104,9 +3104,7 @@
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Year": "Årstall" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Visits": "Besøk" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Fagenhet": "Fagenhet/Spesialitet" , 
-    "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak": "HF/Institusjon" , 
-    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title": "" , 
-    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message": "" 
+    "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak": "HF/Institusjon" 
   }, 
   "HNMinHelseKJStrings": { 
     "clientOperation_GetResepter_RF_EndpointError_Title": "For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig." , 
@@ -3651,7 +3649,9 @@
     "mho_communication_name": "Kontaktperson" , 
     "mho_communication_needs": "Dine spesielle kommunikasjonsbehov:" , 
     "mho_communication_need_an_interpreter": "trenger tolk" , 
-    "mho_communication_registered": " registrert" 
+    "mho_communication_registered": " registrert" , 
+    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title": "" , 
+    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message": "" 
   }, 
   "HNMinHelseLegemidlerJS": { 
     "hjelpetrigger_lib_hjelpeskuff": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Om legemiddellisten\",\"seksjonstekst_brodtekst\":\"<p> Her vises din legemiddelliste, samt dine resepter og informasjon om utleverte legemidler, næringsmidler og forbruksmateriell .<br>\\nLegemiddellisten gir deg og helsepersonell en oppdatert oversikt over hvilke legemidler du skal bruke. </p>\\n<p>I fanen «Legemiddelliste» vises din legemiddelliste, i tillegg til  aktive resepter og resepter med utleveringer de siste 12 månedene.  I fanen «Resepthistorikk» vises alle resepter  og utleveringer  tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller hos bandasjisten. Reseptene er merket med kilden.</p>\\n<p> På siden om <a href='/reseptformidleren'>reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href='/kjernejournal-innsyn'>kjernejournal</a>.</p>\\n<p><a href=\\\"{HelsenorgeUrl}/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\\\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>\"}" , 
