@@ -41,11 +41,12 @@
     "headerMenuSearchTitle": "Hva leter du etter?" , 
     "headerMenuSearchInput": "Søk" , 
     "headerMenuSearchSubmit": "Søk" , 
-    "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger" , 
-    "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" , 
     "hoppTilInnholdet": "Hopp til innholdet" , 
     "headerMenuProfileLinksPersonverninnstillingerTitle": "Personverninnstillinger" , 
-    "headerMenuProfileLinksPersonverninnstillingerUrl": "/personverninnstillinger" 
+    "headerMenuProfileLinksPersonverninnstillingerUrl": "/personverninnstillinger" , 
+    "inactivity_SignedOut_Button_GoToRoot": "Gå til forsiden" , 
+    "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger" , 
+    "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" 
   }, 
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk" , 
