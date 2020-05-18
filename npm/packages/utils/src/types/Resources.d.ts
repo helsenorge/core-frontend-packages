@@ -206,6 +206,14 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   lightbox_Inactivity_DoYouWantToStay: string;
   /** 
+  * Du blir automatisk logget ut om {min}:{sec} minutter.
+  */
+  lightbox_Inactivity_Timer: string;
+  /** 
+  * Er du der fortsatt?
+  */
+  lightbox_Inactivity_Title: string;
+  /** 
   * /deling-av-helseopplysninger
   */
   headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
