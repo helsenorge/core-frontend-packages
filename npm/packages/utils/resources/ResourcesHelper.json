@@ -614,7 +614,7 @@
     "barnAnnenAdresseInfo_messagebox_description": "Barn som ikke er registrert på samme folkeregistrerte adresse som sine foreldre vises ikke på Helsenorge. <a href=\"https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no \" target=\"_blank\">Les mer om foreldrerepresentasjon</a>." , 
     "helpDrawerHelpIconLabel": "Hjelp om" , 
     "innsyn_image_error": "Bildet kan ikke vises" , 
-    "backbar_meldinger": "Innboks" , 
+    "backbar_meldinger": "Meldinger" , 
     "askForMoreServicesTitle": "Savner du noen tjenester?" , 
     "askForMoreServicesMessage": "Du har ikke samtykket til følgende tjenester:" , 
     "askForMoreServicesPasientjournal": "Pasientjournal" , 

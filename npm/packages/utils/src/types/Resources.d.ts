@@ -2455,7 +2455,7 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   innsyn_image_error: string;
   /** 
-  * Innboks
+  * Meldinger
   */
   backbar_meldinger: string;
   /** 
