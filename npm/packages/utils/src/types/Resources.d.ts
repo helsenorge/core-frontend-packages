@@ -166,14 +166,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuSearchSubmit: string;
   /** 
-  * /deling-av-helseopplysninger
-  */
-  headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
-  /** 
-  * Deling av helseopplysninger
-  */
-  headerMenuProfileLinksDelingAvHelseopplysningerTitle: string;
-  /** 
   * Hopp til innholdet
   */
   hoppTilInnholdet: string;
@@ -185,6 +177,18 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * /personverninnstillinger
   */
   headerMenuProfileLinksPersonverninnstillingerUrl: string;
+  /** 
+  * Gå til forsiden
+  */
+  inactivity_SignedOut_Button_GoToRoot: string;
+  /** 
+  * /deling-av-helseopplysninger
+  */
+  headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
+  /** 
+  * Deling av helseopplysninger
+  */
+  headerMenuProfileLinksDelingAvHelseopplysningerTitle: string;
 }
 
 export type HNCoreFrontendNPMPackagesCMS = { 
