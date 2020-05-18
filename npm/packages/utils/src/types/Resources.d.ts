@@ -202,6 +202,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   lightbox_Inactivity_Description: string;
   /** 
+  * Vil du fortsatt være innlogget på Min helse?
+  */
+  lightbox_Inactivity_DoYouWantToStay: string;
+  /** 
   * /deling-av-helseopplysninger
   */
   headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
