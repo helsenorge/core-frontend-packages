@@ -12426,6 +12426,10 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   * HF/Institusjon
   */
   page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak: string;
+  /** 
+  * 
+  */
+  page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
 }
 
 export type HNMinHelseKJStrings = { 

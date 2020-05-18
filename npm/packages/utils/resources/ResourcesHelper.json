@@ -3101,7 +3101,8 @@
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Year": "Årstall" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Visits": "Besøk" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Fagenhet": "Fagenhet/Spesialitet" , 
-    "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak": "HF/Institusjon" 
+    "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak": "HF/Institusjon" , 
+    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title": "" 
   }, 
   "HNMinHelseKJStrings": { 
     "clientOperation_GetResepter_RF_EndpointError_Title": "For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig." , 
