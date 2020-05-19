@@ -7984,11 +7984,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   servicepanelNoServiceDescription: string;
   /** 
-  * Spesialisten vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Hvis dette er din første videotime, må du beregne litt ekstra tid. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Ta kontakt med spesialist den ved feil.
+  * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset den ved feil.
   */
   appointmentDetailsSpecialistVideoTekst: string;
   /** 
-  * Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med spesialist ved feil.
+  * Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
   */
   appointmentDetailsSpecialistVideoButtonText: string;
   /** 
@@ -14733,7 +14733,7 @@ Du kan legge inn nye begrensninger når du ønsker det.
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
   /** 
-  * Årstall for hendelse kan ikke være mindre enn fødselsår, og heller ikke høyere enn nåværende år.
+  * Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår.
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message: string;
 }
