@@ -14729,7 +14729,7 @@ Du kan legge inn nye begrensninger når du ønsker det.
   */
   mho_communication_registered: string;
   /** 
-  * Det har skjedd en teknisk feil
+  * Årstallet er ikke gyldig
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
   /** 
