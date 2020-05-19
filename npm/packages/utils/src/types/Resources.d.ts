@@ -18113,7 +18113,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_HN: string;
   /** 
-  * Lovisenberg Diakonale Sykehus
+  * Lovisenberg Diakonale Sykehus AS
   */
   xDS_LokasjonFeil_LDS: string;
 }

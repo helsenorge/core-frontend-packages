@@ -4514,7 +4514,7 @@
     "documentIsRestricted": "Unntatt fra visning på nett" , 
     "xDS_LokasjonFeil_SIHF": "Sykehuset Innlandet HF" , 
     "xDS_LokasjonFeil_HN": "Helse Nord" , 
-    "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus" 
+    "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS" 
   }, 
   "HNMinHelsePasientreiserJS": { 
     "valideringsfeil_ADRESSE_GATE_MAX_TEGN": "Adresse kan ha opp til 150 tegn." , 
