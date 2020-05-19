@@ -7996,6 +7996,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsSpecialistVideoHeader: string;
   /** 
+  * Bestill time
+  */
+  appointmentBestillTime: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
