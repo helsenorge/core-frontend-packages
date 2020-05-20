@@ -32330,6 +32330,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Lagre
   */
   formSave: string;
+  /** 
+  * Du må fylle ut dette feltet
+  */
+  formRequiredErrorMessage: string;
 }
 
 export type HNMinHelseSysvak = { 

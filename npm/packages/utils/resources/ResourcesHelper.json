@@ -8013,7 +8013,8 @@
     "validationNotAllowed": "er ikke tillatt" , 
     "ugyldigInputISkjema": "Skjemaet inneholder ugyldige tegn eller verdier. Sjekk at alt er riktig utfylt før du sender inn skjemaet." , 
     "helpButtonTooltip": "Vis hjelp" , 
-    "formSave": "Lagre" 
+    "formSave": "Lagre" , 
+    "formRequiredErrorMessage": "Du må fylle ut dette feltet" 
   }, 
   "HNMinHelseSysvak": { 
     "innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>" , 
