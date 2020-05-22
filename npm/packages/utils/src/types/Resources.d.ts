@@ -345,6 +345,10 @@ export type HNCoreFrontendWebForside = {
   * Hei
   */
   varslingpanelHei: string;
+  /** 
+  * Du bruker nå Helsenorge på vegne av
+  */
+  varslingpanelDuBrukernaa: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 
