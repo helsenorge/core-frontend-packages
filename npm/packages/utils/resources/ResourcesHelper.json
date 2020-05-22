@@ -56,7 +56,8 @@
     "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger" , 
     "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" , 
     "headerMenuProfileLinksLoggOverBrukV2Url": "/logg-over-bruk" , 
-    "headerMenuProfileLinksKontaktinformasjonTitle": "Kontaktinformasjon" 
+    "headerMenuProfileLinksKontaktinformasjonTitle": "Kontaktinformasjon" , 
+    "headerMenuProfileLinksKontaktinformasjonURL": "/kontaktinformasjon" 
   }, 
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk" , 
