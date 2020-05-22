@@ -55,7 +55,8 @@
     "lightbox_Inactivity_Title": "Er du der fortsatt?" , 
     "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger" , 
     "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" , 
-    "headerMenuProfileLinksLoggOverBrukV2Url": "/logg-over-bruk" 
+    "headerMenuProfileLinksLoggOverBrukV2Url": "/logg-over-bruk" , 
+    "headerMenuProfileLinksKontaktinformasjonTitle": "Kontaktinformasjon" 
   }, 
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk" , 
