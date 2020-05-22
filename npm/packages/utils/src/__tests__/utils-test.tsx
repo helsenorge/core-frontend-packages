@@ -2,7 +2,7 @@ import React from 'react';
 
 import { mount, shallow } from 'enzyme';
 
-import { setCookie, hasCookie } from '../cookie';
+import { setCookie, hasCookie, getCookieSuffix } from '../cookie';
 import CustomTag from '../custom-tag';
 import {
   todaysDate,
@@ -41,15 +41,25 @@ interface ResourcesWithMonthNames {
 
 describe('Cookie', () => {
   setCookie('test', 'cookie');
+  setCookie('MH_LoggedIn_st', 'test');
+  setCookie('MH_SessionId_st', 'test');
   describe('Gitt at cookie settes', () => {
     it('Så er cookie i dokument test=cookie ', () => {
-      expect(document.cookie).toBe('test=cookie');
+      expect(document.cookie).toBe('test=cookie; MH_LoggedIn_st=test; MH_SessionId_st=test');
     });
   });
 
   describe('Gitt at cookie kan hentes', () => {
+    setCookie('test', 'cookie');
     it('Så er hasCookie sant', () => {
       expect(hasCookie('test', 'cookie')).toBe(true);
+    });
+  });
+  describe('Gitt at cookie har MH_LoggedIn satt', () => {
+    window.HN = { Rest: { __Environment__: 'st' } };
+
+    it('Så er getCookieSuffix sant', () => {
+      expect(getCookieSuffix()).toBe(true);
     });
   });
 });
