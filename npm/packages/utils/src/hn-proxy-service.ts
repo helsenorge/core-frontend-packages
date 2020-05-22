@@ -1,4 +1,6 @@
 import { trackError } from './adobe-analytics';
+import { parseParams, addParams, OperationResponse } from './hn-service';
+import * as DateUtils from './date-utils';
 declare const HN: {
   Rest: {
     __MinHelseUrl__: string;
@@ -38,6 +40,16 @@ const createHeaders = (type = 'application/json'): Headers => {
   headers.append('Content-Type', type);
   return headers;
 };
+
+export function getErrorFromHTML(html: string) {
+  const first = html.indexOf('{');
+  const last = html.lastIndexOf('}');
+  const everything = html.substring(first, last + 1);
+  if (everything === '') {
+    return null;
+  }
+  return JSON.parse(everything);
+}
 const createQueryString = (params: RequestParamType): string => {
   return (
     '?' +
@@ -122,3 +134,69 @@ export const remove = <T extends Response | {}, R>(
 export const link = (url: string, proxyName: string, params?: RequestParamType): string => {
   return getProxyEnvironmentPath(proxyName) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
 };
+
+export function download(cmd: string, proxyName: string, params?: any): Promise<OperationResponse> {
+  let url = getProxyEnvironmentPath(proxyName) + cmd + parseParams(addParams(params), true);
+  const headers = createHeaders();
+  headers.set('Content-Type', 'multipart/form-data');
+
+  return new Promise(function(resolve, reject) {
+    fetch(url, {
+      method: 'get',
+      credentials: 'include',
+      headers,
+    })
+      .then(function(res) {
+        const contentDisposition = res.headers.get('content-disposition');
+        const match =
+          contentDisposition && contentDisposition.match(/filename="(.+)"/) ? contentDisposition.match(/filename="(.+)"/) : false;
+        let fileName = 'nedlasting-' + DateUtils.todaysDate() + '-helseNorge';
+        if (match) {
+          fileName = match[1];
+        }
+        const blobPromise = res.blob();
+        return { blobPromise, fileName };
+      })
+      .then(function(respObj) {
+        const fileName = respObj.fileName;
+
+        respObj.blobPromise.then(function(blob) {
+          if (window.navigator && window.navigator.msSaveOrOpenBlob) {
+            window.navigator.msSaveOrOpenBlob(blob, fileName);
+            resolve();
+          } else {
+            const a = document.createElement('a');
+            document.body.appendChild(a);
+            url = window.URL.createObjectURL(blob);
+            a.href = url;
+            a.download = fileName;
+            a.click();
+            window.URL.revokeObjectURL(url);
+            resolve();
+          }
+        });
+      })
+      .catch(function(responseHtml) {
+        if (responseHtml === '401') {
+          document.location.reload(true);
+        } else {
+          console.error('responseHtml', responseHtml);
+          const errorResponse = getErrorFromHTML(responseHtml);
+          let response;
+          if (errorResponse && errorResponse.ErrorMessage) {
+            response = errorResponse;
+          } else {
+            response = {
+              ErrorMessage: {
+                Title:
+                  typeof errorResponse === 'string' || errorResponse instanceof String ? errorResponse : 'Det har skjedd en teknisk feil.',
+                Body: '',
+              },
+            };
+          }
+          trackError('level1');
+          reject(response);
+        }
+      });
+  });
+}
