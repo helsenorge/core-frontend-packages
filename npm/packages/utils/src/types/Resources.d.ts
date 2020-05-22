@@ -225,6 +225,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * /logg-over-bruk
   */
   headerMenuProfileLinksLoggOverBrukV2Url: string;
+  /** 
+  * Kontaktinformasjon
+  */
+  headerMenuProfileLinksKontaktinformasjonTitle: string;
 }
 
 export type HNCoreFrontendNPMPackagesCMS = { 
