@@ -229,6 +229,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Kontaktinformasjon
   */
   headerMenuProfileLinksKontaktinformasjonTitle: string;
+  /** 
+  * /kontaktinformasjon
+  */
+  headerMenuProfileLinksKontaktinformasjonURL: string;
 }
 
 export type HNCoreFrontendNPMPackagesCMS = { 
