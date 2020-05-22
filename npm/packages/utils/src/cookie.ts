@@ -31,5 +31,5 @@ export function getCookieSuffix(): boolean {
   if (window.HN.Rest.__Environment__) {
     suffix = '_' + window.HN.Rest.__Environment__;
   }
-  return hasCookie('MH_LoggedIn' + suffix);
+  return hasCookie('MH_LoggedIn' + suffix) || hasCookie('MH_SessionId' + suffix);
 }
