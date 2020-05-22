@@ -25,3 +25,11 @@ export function hasCookie(cookieName: string, value?: string | boolean): boolean
 export function setCookie(name: string, value: string | boolean = ''): void {
   document.cookie = `${name}=${value};path=/;`;
 }
+
+export function getCookieSuffix(): boolean {
+  let suffix = '';
+  if (window.HN.Rest.__Environment__) {
+    suffix = '_' + window.HN.Rest.__Environment__;
+  }
+  return hasCookie('MH_LoggedIn' + suffix);
+}
