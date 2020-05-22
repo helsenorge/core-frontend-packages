@@ -5,5 +5,5 @@ export enum HeaderFooterEvents {
   refreshmeldinger = 'hn-webcomp-header-footer-event-refreshmeldinger',
   getmeldingeroghendelser = 'hn-webcomp-header-footer-event-getmeldingeroghendelser',
   setmeldingeroghendelser = 'hn-webcomp-header-footer-event-setmeldingeroghendelser',
-  setListenerReady = 'hn-webcomp-header-footer-event-setlistenerready',
+  setlistenerready = 'hn-webcomp-header-footer-event-setlistenerready',
 }

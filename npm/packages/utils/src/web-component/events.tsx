@@ -45,7 +45,7 @@ export const HNeventGetMeldingerOgHendelser = (): void => {
 export const HNaddEventListener = (
   event: HeaderFooterEvents,
   element: Element | null,
-  handler: (Event: CustomEvent) => void,
+  handler: <T>(EvenCustomEvent: CustomEvent<T>) => void,
   passive = false
 ) => {
   useEffect(() => {
