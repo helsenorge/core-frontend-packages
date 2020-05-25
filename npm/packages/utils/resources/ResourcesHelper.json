@@ -812,7 +812,7 @@
     "kontaktinformasjon": "Page_Kontaktinformasjon_Title" , 
     "page_Innboks_Title": "Meldinger" , 
     "page_Samvalg_NavigateBackLinkTitle": "Samvalg" , 
-    "page_Samvalg_NavigateBackLinkURL": "/samvalg" , 
+    "page_Samvalg_NavigateBackLinkURL": "https://helsenorge.no/samvalg" , 
     "page_msis_Title": "Meldingssystem for smittsomme sykdommer (MSIS)" , 
     "page_msis_Desc": "MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge." , 
     "page_Tilgangsstyring_Title": "Tilgangstyring av helseopplysninger" , 

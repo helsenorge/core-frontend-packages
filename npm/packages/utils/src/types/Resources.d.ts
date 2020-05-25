@@ -3269,7 +3269,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Samvalg_NavigateBackLinkTitle: string;
   /** 
-  * /samvalg
+  * https://helsenorge.no/samvalg
   */
   page_Samvalg_NavigateBackLinkURL: string;
   /** 
