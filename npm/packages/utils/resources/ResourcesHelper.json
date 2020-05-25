@@ -54,7 +54,10 @@
     "lightbox_Inactivity_Timer": "Du blir automatisk logget ut om {min}:{sec} minutter." , 
     "lightbox_Inactivity_Title": "Er du der fortsatt?" , 
     "headerMenuProfileLinksDelingAvHelseopplysningerUrl": "/deling-av-helseopplysninger" , 
-    "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" 
+    "headerMenuProfileLinksDelingAvHelseopplysningerTitle": "Deling av helseopplysninger" , 
+    "headerMenuProfileLinksLoggOverBrukV2Url": "/logg-over-bruk" , 
+    "headerMenuProfileLinksKontaktinformasjonTitle": "Kontaktinformasjon" , 
+    "headerMenuProfileLinksKontaktinformasjonURL": "/kontaktinformasjon" 
   }, 
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk" , 
@@ -1987,7 +1990,7 @@
     "appointmentVideoTitle": "Videotime" , 
     "servicepanelInfoHeading": "Informasjon fra legekontoret" , 
     "servicepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge." , 
-    "appointmentDetailsSpecialistVideoTekst": "Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset den ved feil." , 
+    "appointmentDetailsSpecialistVideoTekst": "Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil." , 
     "appointmentDetailsSpecialistVideoButtonText": "Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil." , 
     "appointmentDetailsSpecialistVideoHeader": "Dette er en videotime" , 
     "appointmentBestillTime": "Bestill time" , 
@@ -2500,7 +2503,7 @@
     "emptyList": "Du er foreløpig ikke registrert som deltager i noen forskningsprosjekter som vises i tjenesten." , 
     "informasjonLenkePrefix": "Les mer om" , 
     "innsynsrettLenkePrefix": "Les mer om innsynsrett i" , 
-    "databehandlingsansvarlig": "er ansvarlig for registeret." , 
+    "databehandlingsansvarlig": "er dataansvarlig." , 
     "expandButtonText": "Les mer" , 
     "hjelpekontekst_forskning": "{\"defaulttekst_overskrift\":\"Om Forskning\",\"defaulttekst_brodtekst\":\"<p>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden. </p>\\n<p>For øyeblikket er det kun Helseundersøkelsen i Nord-Trøndelag (HUNT) som er med i denne tjenesten på helsenorge.no. Flere helseundersøkelser vil bli lagt til etter hvert. Er du ikke med i noen av helseundersøkelsene som er omfattet av tjenesten, vil siden vises uten innhold. </p>\\n\\n<p>Du har rett til innsyn i opplysningene som er lagret om deg. Under hver oppføring finner du informasjon om hvor du kan henvende deg for å få slikt innsyn. </p>\\n<p>De som behandler opplysningene har taushetsplikt, og opplysninger som kan kobles til identifiserbare personer er strengt regulert. </p>\\n\\n<p><a href=\\\"https://helsenorge.no/om-min-helse/forskning\\\">Her kan du lese mer om Forskning og helseundersøkelser</a>.</p>\"}" 
   }, 
@@ -2707,7 +2710,7 @@
     "messageSubmitSaksbehandler": "Saksbehandler" , 
     "messageSubmitSubjectHeading": "Emne" , 
     "registermeldingerBeskrivelse": "Hvis du ønsker innsyn eller vil melde fra om feil, send en melding til saksbehandler ved registeret." , 
-    "databehandlingsansvarlig": "er ansvarlig for registeret." , 
+    "databehandlingsansvarlig": "er dataansvarlig." , 
     "expandButtonText": "Les mer" , 
     "hjelpekontekst_helseregistre": "{\"defaulttekst_overskrift\":\"Om helseregistre\",\"defaulttekst_brodtekst\":\"<p>Du har rett til innsyn i opplysningene som er lagret om deg. Enkelte helseregistre tilbyr digitalt innsyn via Helsenorge, men ikke alle.</p>\\n<p>Under hvert register finner du lenke til generell informasjon om registeret, og hvor du kan henvende deg for å få innsyn i registre som ikke tilbyr innsyn via Helsenorge.</p>\\n<p>Dine helseopplysninger er ikke nødvendigvis registrert i alle helseregistrene som vises på siden. Listen viser kun utvalgte helseregistre.</p>\\n<p>Medisinske kvalitetsregistre vil også vises i listen dersom du er registrert i et slikt register og registeret tilbyr innsyn via Helsenorge. Dette er registre som bidrar til å forbedre kvalitet på diagnostikk og behandling av sykdom. <a href=\\\"https://www.kvalitetsregistre.no/registeroversikt\\\"  target=\\\"_blank\\\" class=\\\"external\\\">Her kan du finne en oversikt over medisinske kvalitetsregistre</a>.</p>\\n<p><a href=\\\"https://helsenorge.no/om-min-helse/helseregistre\\\">Her kan du lese mer om helseregistre</a>.</p>\"}" , 
     "informasjonLenkePrefix": "Les mer om " , 
