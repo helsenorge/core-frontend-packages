@@ -28,17 +28,17 @@ export const HNeventSetSimplifiedFooter = (text: string, isSimplified: boolean =
   }
 };
 
-export const HNeventRefreshMeldinger = (): void => {
+export const HNeventRefreshVarslinger = (): void => {
   const webcompheader = document.querySelector('hn-webcomp-header');
   if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.refreshmeldinger, { detail: {} }));
+    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.refreshvarslinger, { detail: {} }));
   }
 };
 
-export const HNeventGetMeldingerOgHendelser = (): void => {
+export const HNeventRefreshVarslingerOgHendelsesmeny = (): void => {
   const webcompheader = document.querySelector('hn-webcomp-header');
   if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.getmeldingeroghendelser, { detail: {} }));
+    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.refreshvarslingeroghendelsesmeny, { detail: {} }));
   }
 };
 
