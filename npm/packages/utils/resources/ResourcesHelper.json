@@ -2710,7 +2710,7 @@
     "messageSubmitSaksbehandler": "Saksbehandler" , 
     "messageSubmitSubjectHeading": "Emne" , 
     "registermeldingerBeskrivelse": "Hvis du ønsker innsyn eller vil melde fra om feil, send en melding til saksbehandler ved registeret." , 
-    "databehandlingsansvarlig": "er ansvarlig for registeret." , 
+    "databehandlingsansvarlig": "er dataansvarlig." , 
     "expandButtonText": "Les mer" , 
     "hjelpekontekst_helseregistre": "{\"defaulttekst_overskrift\":\"Om helseregistre\",\"defaulttekst_brodtekst\":\"<p>Du har rett til innsyn i opplysningene som er lagret om deg. Enkelte helseregistre tilbyr digitalt innsyn via Helsenorge, men ikke alle.</p>\\n<p>Under hvert register finner du lenke til generell informasjon om registeret, og hvor du kan henvende deg for å få innsyn i registre som ikke tilbyr innsyn via Helsenorge.</p>\\n<p>Dine helseopplysninger er ikke nødvendigvis registrert i alle helseregistrene som vises på siden. Listen viser kun utvalgte helseregistre.</p>\\n<p>Medisinske kvalitetsregistre vil også vises i listen dersom du er registrert i et slikt register og registeret tilbyr innsyn via Helsenorge. Dette er registre som bidrar til å forbedre kvalitet på diagnostikk og behandling av sykdom. <a href=\\\"https://www.kvalitetsregistre.no/registeroversikt\\\"  target=\\\"_blank\\\" class=\\\"external\\\">Her kan du finne en oversikt over medisinske kvalitetsregistre</a>.</p>\\n<p><a href=\\\"https://helsenorge.no/om-min-helse/helseregistre\\\">Her kan du lese mer om helseregistre</a>.</p>\"}" , 
     "informasjonLenkePrefix": "Les mer om " , 
