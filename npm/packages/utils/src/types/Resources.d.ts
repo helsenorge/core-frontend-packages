@@ -10858,7 +10858,7 @@ export type HNMinHelseHelseregistreJS = {
   */
   registermeldingerBeskrivelse: string;
   /** 
-  * er ansvarlig for registeret.
+  * er dataansvarlig.
   */
   databehandlingsansvarlig: string;
   /** 
