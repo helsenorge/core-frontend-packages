@@ -7988,7 +7988,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonFastlegeOrdinaryEventsHeading: string;
   /** 
-  * Ingen videotimer tilgjengelig
+  * Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor.
   */
   commonFastlegeVideoEventsEmptyText: string;
   /** 
