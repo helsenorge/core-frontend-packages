@@ -7984,7 +7984,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonBestillTimeVelgerVeiviserUrl: string;
   /** 
-  * Timer på legekontoret
+  * Timer på legekontoret, om ønskelig på video/telefon
   */
   commonFastlegeOrdinaryEventsHeading: string;
   /** 
