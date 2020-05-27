@@ -2918,6 +2918,10 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   * Innhold i ulike helseregistre
   */
   innsynstjenesterTitle: string;
+  /** 
+  * Til forsiden
+  */
+  breadCrumb_Forsiden: string;
 }
 
 export type HNMinHelseCommon = { 

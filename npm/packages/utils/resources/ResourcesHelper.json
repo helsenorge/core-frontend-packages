@@ -729,7 +729,8 @@
     "unreadMessageCount": "Antall nye meldinger" , 
     "helpBubbleClose": "Lukk" , 
     "helsetjenesterTitle": "Min helse" , 
-    "innsynstjenesterTitle": "Innhold i ulike helseregistre" 
+    "innsynstjenesterTitle": "Innhold i ulike helseregistre" , 
+    "breadCrumb_Forsiden": "Til forsiden" 
   }, 
   "HNMinHelseCommon": { 
     "bruksvilkarPopup_ErrorDescription": "Du kan prøve igjen senere." , 
