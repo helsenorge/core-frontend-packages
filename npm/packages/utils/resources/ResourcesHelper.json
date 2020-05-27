@@ -1985,7 +1985,7 @@
     "commonBestillTimeVelgerAnnetBeskrivelse": "" , 
     "commonBestillTimeVelgerTittel": "Hva slags time trenger du?" , 
     "commonBestillTimeVelgerVeiviserUrl": "/veileder?Query=Questionnaire%2F303" , 
-    "commonFastlegeOrdinaryEventsHeading": "Timer på legekontoret" , 
+    "commonFastlegeOrdinaryEventsHeading": "Timer på legekontoret, om ønskelig på video/telefon" , 
     "commonFastlegeVideoEventsEmptyText": "Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor." , 
     "appointmentVideoTitle": "Videotime" , 
     "servicepanelInfoHeading": "Informasjon fra legekontoret" , 
