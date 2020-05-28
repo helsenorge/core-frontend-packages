@@ -79,7 +79,7 @@
     "confirmationButton": "Jeg forstår og vil gå videre" , 
     "confirmationCancel": "Avbryt" , 
     "pageNotFoundHeader": "Denne siden er visst ikke helt frisk" , 
-    "pageNotFoundDescription": "Se etter en skrivefeil i URL-adressen, eller <a href=\"/\">gå til Min helse</a>" , 
+    "pageNotFoundDescription": "Se etter en skrivefeil i URL-adressen, eller gå til forsiden." , 
     "pageNotFoundToStart": "Gå til min helse" , 
     "savnerDuTjenesterTitle": "Savner du noen tjenester?" , 
     "savnerDuTjenesterDescription": "Du har ikke samtykket til følgende tjenester:" , 

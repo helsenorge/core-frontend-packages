@@ -310,7 +310,7 @@ export type HNCoreFrontendWebForside = {
   */
   pageNotFoundHeader: string;
   /** 
-  * Se etter en skrivefeil i URL-adressen, eller <a href="/">gå til Min helse</a>
+  * Se etter en skrivefeil i URL-adressen, eller gå til forsiden.
   */
   pageNotFoundDescription: string;
   /** 
