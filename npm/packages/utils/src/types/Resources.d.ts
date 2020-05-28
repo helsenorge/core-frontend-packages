@@ -8032,6 +8032,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentCancelHelsestasjonHeader: string;
   /** 
+  * Bekreft avbestilling
+  */
+  appointmentCancelHelsestasjonConfirmButtonText: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;

@@ -1997,6 +1997,7 @@
     "appointmentBestillTime": "Bestill time" , 
     "appointmentCancelHelsestasjonTimeMessageLabel": "Årsak til avbestilling" , 
     "appointmentCancelHelsestasjonHeader": "Avbestill time" , 
+    "appointmentCancelHelsestasjonConfirmButtonText": "Bekreft avbestilling" , 
     "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?" 
   }, 
   "HNMinHelseDialog": { 
