@@ -13,7 +13,10 @@
     "test:watch": "helsenorge-scripts test --watch",
     "helsenorge-notify": "helsenorge-scripts notify"
   },
-  "author": "",
+  "author": "Helsenorge",
+  "maintainers": [
+    "ROX"
+  ],
   "license": "ISC",
   "devDependencies": {
     "@helsenorge/core-build": "12.1.9",
