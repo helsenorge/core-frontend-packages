@@ -1996,6 +1996,7 @@
     "appointmentDetailsSpecialistVideoHeader": "Dette er en videotime" , 
     "appointmentBestillTime": "Bestill time" , 
     "appointmentCancelHelsestasjonTimeMessageLabel": "Årsak til avbestilling" , 
+    "appointmentCancelHelsestasjonHeader": "Avbestill time" , 
     "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?" 
   }, 
   "HNMinHelseDialog": { 

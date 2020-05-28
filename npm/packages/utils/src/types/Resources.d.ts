@@ -8028,6 +8028,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentCancelHelsestasjonTimeMessageLabel: string;
   /** 
+  * Avbestill time
+  */
+  appointmentCancelHelsestasjonHeader: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
