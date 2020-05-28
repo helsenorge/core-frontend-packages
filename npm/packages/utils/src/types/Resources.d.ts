@@ -314,7 +314,7 @@ export type HNCoreFrontendWebForside = {
   */
   pageNotFoundDescription: string;
   /** 
-  * Gå til min helse
+  * Gå til forside
   */
   pageNotFoundToStart: string;
   /** 
