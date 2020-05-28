@@ -356,11 +356,11 @@ export type HNCoreFrontendWebForside = {
   /** 
   * Hei
   */
-  varslingspanelHei: string;
+  varslingspanelTitle: string;
   /** 
   * Du bruker nå Helsenorge på vegne av
   */
-  varslingspanelDuBrukernaa: string;
+  varslingspanelTitleDescription: string;
 }
 
 export type HNMinHelseByttFastlegeJS = { 
