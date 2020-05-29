@@ -90,7 +90,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuBasicInnholdAAAUrl: string;
   /** 
-  * Engelsk
+  * English
   */
   headerMenuBasicEngelskTitle: string;
   /** 
