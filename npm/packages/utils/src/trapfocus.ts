@@ -1,6 +1,8 @@
 import keyCode from './key-code';
 import tabbable from 'tabbable';
 
+import { getDocumentActiveElement } from './focus-utils';
+
 export class TrapFocus {
   private domNode: TabbableElement | null;
   private previouslyFocusedItem: TabbableElement | null;
@@ -8,7 +10,8 @@ export class TrapFocus {
 
   constructor(domNode: HTMLElement | string) {
     this.domNode = typeof domNode === 'string' ? (document.querySelector(domNode) as TabbableElement) : (domNode as TabbableElement);
-    this.previouslyFocusedItem = document.activeElement as TabbableElement;
+    const activeElement = getDocumentActiveElement(domNode);
+    this.previouslyFocusedItem = activeElement ? (activeElement as TabbableElement) : (document.activeElement as TabbableElement);
 
     // Get focusable elements
     this.updateFocusableItems();
