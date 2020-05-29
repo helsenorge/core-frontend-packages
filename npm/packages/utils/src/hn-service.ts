@@ -154,7 +154,7 @@ export function useBetaTjeneste() {
 }
 
 export function getTjenesteUrl() {
-  return HN.Rest.__TjensterUrl__ !== undefined && HN.Rest.__TjensterUrl__ !== null ? HN.Rest.__TjensterUrl__ : '';
+  return getMinHelseUrl(); // TODO: Skal på sikt benytte __TjenesterUrl__ når skrivefeil (Tjenster uten e) er rettet opp i backend
 }
 
 export function getMinHelseUrl() {
