@@ -43,9 +43,10 @@ describe('Cookie', () => {
   setCookie('test', 'cookie');
   setCookie('MH_LoggedIn_st', 'test');
   setCookie('MH_SessionId_st', 'test');
+  setCookie('testRandomvalue', 'testetstest');
   describe('Gitt at cookie settes', () => {
     it('Så er cookie i dokument test=cookie ', () => {
-      expect(document.cookie).toBe('test=cookie; MH_LoggedIn_st=test; MH_SessionId_st=test');
+      expect(document.cookie).toBe('test=cookie; MH_LoggedIn_st=test; MH_SessionId_st=test; testRandomvalue=testetstest');
     });
   });
 
@@ -55,9 +56,15 @@ describe('Cookie', () => {
       expect(hasCookie('test', 'cookie')).toBe(true);
     });
   });
+
+  describe('Gitt at cookie finnes men value kan være hva som helst', () => {
+    setCookie('test', 'cookie');
+    it('Så er hasCookie sant', () => {
+      expect(hasCookie('testRandomvalue')).toBe(true);
+    });
+  });
   describe('Gitt at cookie har MH_LoggedIn satt', () => {
     window.HN = { Rest: { __Environment__: 'st' } };
-
     it('Så er getCookieSuffix sant', () => {
       expect(getCookieSuffix()).toBe(true);
     });

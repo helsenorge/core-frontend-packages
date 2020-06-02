@@ -10,11 +10,12 @@ export function hasCookie(cookieName: string, value?: string | boolean): boolean
   }
 
   if (value === undefined) {
-    return true;
+    return cookie.split('; ').find(e => e.split('=')[0] === cookieName) !== undefined;
   }
 
   const cookieValue: string = '; '.concat(document.cookie);
   const parts: Array<string> = cookieValue.split('; '.concat(cookieName).concat('='));
+
   if (parts.length === 2) {
     const lastPart: string | undefined = parts.pop();
     return lastPart ? lastPart.split(';').shift() === value.toString() : false;
