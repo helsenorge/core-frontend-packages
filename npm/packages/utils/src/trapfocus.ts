@@ -2,6 +2,7 @@ import keyCode from './key-code';
 import tabbable from 'tabbable';
 
 import { getDocumentActiveElement } from './focus-utils';
+import { getEventTarget } from './web-component/events';
 
 export class TrapFocus {
   private domNode: TabbableElement | null;
@@ -38,17 +39,18 @@ export class TrapFocus {
     }
     e.stopPropagation();
     e.preventDefault();
+    const target = getEventTarget(e);
     this.updateFocusableItems();
-    const currentFocusIndex: number = this.getItemIndex(e.target as TabbableElement);
+    const currentFocusIndex: number = this.getItemIndex(target as TabbableElement);
 
     // Element focused not in list, return the first focusable element
     if (currentFocusIndex === -1) {
       return this.focusableItems[0];
     }
     if (e.shiftKey) {
-      this.previousFocusableItem(e.target as TabbableElement).focus();
+      this.previousFocusableItem(target as TabbableElement).focus();
     } else {
-      this.nexFocusableItem(e.target as TabbableElement).focus();
+      this.nexFocusableItem(target as TabbableElement).focus();
     }
     return null;
   }
