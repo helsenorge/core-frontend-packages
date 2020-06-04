@@ -50,7 +50,7 @@ export class TrapFocus {
     if (e.shiftKey) {
       this.previousFocusableItem(target as TabbableElement).focus();
     } else {
-      this.nexFocusableItem(target as TabbableElement).focus();
+      this.nextFocusableItem(target as TabbableElement).focus();
     }
     return null;
   }
@@ -102,7 +102,7 @@ export class TrapFocus {
     return this.getSelectedRadioInGroup(itemWithFocus);
   }
 
-  nexFocusableItem(itemWithFocus: TabbableElement): TabbableElement {
+  nextFocusableItem(itemWithFocus: TabbableElement): TabbableElement {
     const currentFocusIndex: number = this.getItemIndex(itemWithFocus);
     if (!this.isRadioButton(itemWithFocus)) {
       let nextFocusIndex: number = currentFocusIndex + 1;
