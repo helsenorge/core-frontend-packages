@@ -8043,6 +8043,18 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentBookingTitle: string;
   /** 
+  * Fastlege
+  */
+  appointmentBookingFastlege: string;
+  /** 
+  * Du kan ikke bestille time
+  */
+  appointmentNoBookingTitle: string;
+  /** 
+  * Du har ingen helsekontakter som tilbyr timebestilling.
+  */
+  appointmentNoBookingContent: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
