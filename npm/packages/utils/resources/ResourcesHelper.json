@@ -2000,6 +2000,9 @@
     "appointmentCancelHelsestasjonConfirmButtonText": "Bekreft avbestilling" , 
     "appointmentCancelHelsestasjonCancelButtonText": "Avbryt" , 
     "appointmentBookingTitle": "Hvem vil du bestille time hos?" , 
+    "appointmentBookingFastlege": "Fastlege" , 
+    "appointmentNoBookingTitle": "Du kan ikke bestille time" , 
+    "appointmentNoBookingContent": "Du har ingen helsekontakter som tilbyr timebestilling." , 
     "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?" 
   },
   "HNMinHelseDialog": { 
