@@ -1,6 +1,9 @@
 import keyCode from './key-code';
 import tabbable from 'tabbable';
 
+import { getDocumentActiveElement } from './focus-utils';
+import { getEventTarget } from './web-component/events';
+
 export class TrapFocus {
   private domNode: TabbableElement | null;
   private previouslyFocusedItem: TabbableElement | null;
@@ -8,7 +11,8 @@ export class TrapFocus {
 
   constructor(domNode: HTMLElement | string) {
     this.domNode = typeof domNode === 'string' ? (document.querySelector(domNode) as TabbableElement) : (domNode as TabbableElement);
-    this.previouslyFocusedItem = document.activeElement as TabbableElement;
+    const activeElement = getDocumentActiveElement(domNode);
+    this.previouslyFocusedItem = activeElement ? (activeElement as TabbableElement) : (document.activeElement as TabbableElement);
 
     // Get focusable elements
     this.updateFocusableItems();
@@ -35,17 +39,18 @@ export class TrapFocus {
     }
     e.stopPropagation();
     e.preventDefault();
+    const target = getEventTarget(e);
     this.updateFocusableItems();
-    const currentFocusIndex: number = this.getItemIndex(e.target as TabbableElement);
+    const currentFocusIndex: number = this.getItemIndex(target as TabbableElement);
 
     // Element focused not in list, return the first focusable element
     if (currentFocusIndex === -1) {
       return this.focusableItems[0];
     }
     if (e.shiftKey) {
-      this.previousFocusableItem(e.target as TabbableElement).focus();
+      this.previousFocusableItem(target as TabbableElement).focus();
     } else {
-      this.nexFocusableItem(e.target as TabbableElement).focus();
+      this.nextFocusableItem(target as TabbableElement).focus();
     }
     return null;
   }
@@ -97,7 +102,7 @@ export class TrapFocus {
     return this.getSelectedRadioInGroup(itemWithFocus);
   }
 
-  nexFocusableItem(itemWithFocus: TabbableElement): TabbableElement {
+  nextFocusableItem(itemWithFocus: TabbableElement): TabbableElement {
     const currentFocusIndex: number = this.getItemIndex(itemWithFocus);
     if (!this.isRadioButton(itemWithFocus)) {
       let nextFocusIndex: number = currentFocusIndex + 1;
