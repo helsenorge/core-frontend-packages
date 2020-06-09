@@ -2004,6 +2004,7 @@
     "appointmentNoBookingTitle": "Du kan ikke bestille time" , 
     "appointmentNoBookingContent": "Du har ingen helsekontakter som tilbyr timebestilling." , 
     "appointmentDetailsTypeLabel": "Timetype:" , 
+    "appointmentDetailsTypeGroup": "Gruppetime" , 
     "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?" 
   },
   "HNMinHelseDialog": { 
