@@ -2006,6 +2006,8 @@
     "appointmentDetailsTypeLabel": "Timetype:" , 
     "appointmentDetailsTypeGroup": "Gruppetime" , 
     "kommunalHelsetilbudInfoLabel": "Informasjon fra kommunen" , 
+    "kommunalHelsetilbudHjemmesideLabel": "Hjemmeside" , 
+    "kommunalHelsetilbudKontaktmuligheterLabel": "Kontaktmuligheter" , 
     "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?" 
   },
   "HNMinHelseDialog": { 

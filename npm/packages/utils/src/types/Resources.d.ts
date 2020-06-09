@@ -8067,6 +8067,14 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   kommunalHelsetilbudInfoLabel: string;
   /** 
+  * Hjemmeside
+  */
+  kommunalHelsetilbudHjemmesideLabel: string;
+  /** 
+  * Kontaktmuligheter
+  */
+  kommunalHelsetilbudKontaktmuligheterLabel: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
