@@ -8059,6 +8059,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsTypeLabel: string;
   /** 
+  * Gruppetime
+  */
+  appointmentDetailsTypeGroup: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
