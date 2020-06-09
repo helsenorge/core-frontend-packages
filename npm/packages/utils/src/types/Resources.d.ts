@@ -8063,6 +8063,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsTypeGroup: string;
   /** 
+  * Informasjon fra kommunen
+  */
+  kommunalHelsetilbudInfoLabel: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
