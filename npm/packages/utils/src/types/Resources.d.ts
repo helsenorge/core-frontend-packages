@@ -8055,6 +8055,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentNoBookingContent: string;
   /** 
+  * Timetype:
+  */
+  appointmentDetailsTypeLabel: string;
+  /** 
   * Er du sikker på at du vil avbestille?
   */
   appointmentCancelHelsestasjonDescription: string;
