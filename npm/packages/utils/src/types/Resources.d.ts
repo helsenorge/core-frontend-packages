@@ -17467,6 +17467,10 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   * Din timeavtale hos {0} {1} var registrert ved en feil.
   */
   varselMeny_PrimarhelsetjenesteTimeavtale_Feilregistrert_Emne: string;
+  /** 
+  * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
+  */
+  videreformidling_TextMessage_Body_Self: string;
 };
 
 export type HNMinHelsePages = { 
@@ -18184,13 +18188,13 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_SIHF: string;
   /** 
-  * Helse Nord
-  */
-  xDS_LokasjonFeil_HN: string;
-  /** 
   * Lovisenberg Diakonale Sykehus AS
   */
   xDS_LokasjonFeil_LDS: string;
+  /** 
+  * Helse Nord
+  */
+  xDS_LokasjonFeil_HN: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 

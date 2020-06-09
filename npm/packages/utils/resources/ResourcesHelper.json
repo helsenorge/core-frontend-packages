@@ -4350,7 +4350,8 @@
     "feilregistreringTime_EmailMessage_Subject_Self": "Feilregistrert time" , 
     "feilregistreringTime_TextMessage_Body_Representation": "${FirstName} sin timeavtale hos ${ActorName} ${DateTime} var registrert ved en feil. Logg inn på Helsenorge og gå til Timeavtaler for å se mer." , 
     "feilregistreringTime_TextMessage_Body_Self": "${FirstName}, din timeavtale hos ${ActorName} ${DateTime} var registrert ved en feil. Logg inn på Helsenorge og gå til Timeavtaler for å se mer." , 
-    "varselMeny_PrimarhelsetjenesteTimeavtale_Feilregistrert_Emne": "Din timeavtale hos {0} {1} var registrert ved en feil." 
+    "varselMeny_PrimarhelsetjenesteTimeavtale_Feilregistrert_Emne": "Din timeavtale hos {0} {1} var registrert ved en feil." , 
+    "videreformidling_TextMessage_Body_Self": "${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det." 
   },
   "HNMinHelsePages": { 
     "noInfoAvailable": "Ingen informasjon tilgjengelig" , 
@@ -4532,8 +4533,8 @@
     "pdfCompatibilityPreview": "Se forhåndsvisning" , 
     "documentIsRestricted": "Unntatt fra visning på nett" , 
     "xDS_LokasjonFeil_SIHF": "Sykehuset Innlandet HF" , 
-    "xDS_LokasjonFeil_HN": "Helse Nord" , 
-    "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS" 
+    "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS" , 
+    "xDS_LokasjonFeil_HN": "Helse Nord" 
   },
   "HNMinHelsePasientreiserJS": { 
     "valideringsfeil_ADRESSE_GATE_MAX_TEGN": "Adresse kan ha opp til 150 tegn." , 
