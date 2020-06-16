@@ -24553,6 +24553,14 @@ export type HNMinHelsePasientreiserJS = {
   * Vil du delta i en brukerundersøkelse om Pasientreiser?
   */
   kvittering_undersokelseTittel: string;
+  /** 
+  * Det tar ca. 3 minutter å svare på undersøkelsen.
+  */
+  kvittering_undersokelseIngress: string;
+  /** 
+  * https://vg.no
+  */
+  kvittering_undersokelseLenke: string;
 };
 
 export type HNMinHelsePasientreiserStegvisningJS = { 
