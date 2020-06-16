@@ -22,7 +22,7 @@ export type HNCommon = {
   */
   webPart_PagePromotion_SelectPage_Text: string;
   /** 
-  * test1
+  * test
   */
   iKKE_BRUK_KUN_FOR_TEST: string;
 };
@@ -24558,7 +24558,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   kvittering_undersokelseIngress: string;
   /** 
-  * https://vg.no
+  * https://response.questback.com/pasientreiserhf/rur2020
   */
   kvittering_undersokelseLenke: string;
 };
