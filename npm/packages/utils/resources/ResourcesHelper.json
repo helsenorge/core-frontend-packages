@@ -6122,7 +6122,8 @@
     "krav_kostnadskoder_REFUSJON_TRANSPORT_REISEGODS_RETUR": "Transport av reisegods på retur reisen" , 
     "krav_kostnadskoder_RENGJORING_AV_BIL": "Rengjøring av bil på tur reisen" , 
     "krav_kostnadskoder_RENGJORING_AV_BIL_RETUR": "Rengjøring av bil på retur reisen" , 
-    "krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT": "Tapt arbeidsinntekt" 
+    "krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT": "Tapt arbeidsinntekt" , 
+    "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?" 
   },
   "HNMinHelsePasientreiserStegvisningJS": { 
     "egenandelKanIkkeBeregnes": "Kan ikke beregnes" , 

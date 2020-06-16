@@ -24549,6 +24549,10 @@ export type HNMinHelsePasientreiserJS = {
   * Tapt arbeidsinntekt
   */
   krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT: string;
+  /** 
+  * Vil du delta i en brukerundersøkelse om Pasientreiser?
+  */
+  kvittering_undersokelseTittel: string;
 };
 
 export type HNMinHelsePasientreiserStegvisningJS = { 
