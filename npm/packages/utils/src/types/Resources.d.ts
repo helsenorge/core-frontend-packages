@@ -5529,7 +5529,7 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   dialogFullmaktSender: string;
   /**
-   * {"defaulttekst_overskrift":"Om helsekontakter","defaulttekst_brodtekst":"<p>Her finner du en oversikt over dine kontaktpersoner og behandlere i helsetjenesten. Noen helsekontakter, som for eksempel fastlege, kan du velge selv. Andre, som for eksempel forløpskoordinator for kreft, får du tildelt når du har rett til det.</p>\n<p>Aktive helsekontakter er dine kontaktpersoner og behandlere nå. Når forholdet er over flyttes helsekontaktene til Tidligere helsekontakter.</p>\n<p>Du kan selv registrere andre helsekontakter i din kjernejournal, dersom du ønsker at helsepersonell skal vite om disse.</p>\n<p><a href=\"https://helsenorge.no/om-min-helse/helsekontakter\">Her kan du lese mer om Helsekontakter</a>.</p>"}
+   * {"defaulttekst_overskrift":"Om helsekontakter","defaulttekst_brodtekst":"<p>Her finner du en oversikt over dine kontaktpersoner og behandlere i helsetjenesten. Noen helsekontakter, som for eksempel fastlege, kan du velge selv. Andre, som for eksempel forløpskoordinator for kreft, får du tildelt når du har rett til det.</p>\n<p>Du vil også se informasjon om helse- og omsorgstilbudet i din kommune.</p>\n<p>Aktive helsekontakter er dine kontaktpersoner og behandlere nå. Når forholdet er over flyttes helsekontaktene til Tidligere helsekontakter.</p>\n<p>Du kan selv registrere andre helsekontakter i din kjernejournal, dersom du ønsker at helsepersonell skal vite om disse.</p>\n<p><a href=\"https://helsenorge.no/om-min-helse/helsekontakter\">Her kan du lese mer om Helsekontakter</a>.</p>"}
    */
   hjelpekontekst_helsekontakter: string;
   /**
