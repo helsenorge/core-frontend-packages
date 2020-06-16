@@ -6123,7 +6123,9 @@
     "krav_kostnadskoder_RENGJORING_AV_BIL": "Rengjøring av bil på tur reisen" , 
     "krav_kostnadskoder_RENGJORING_AV_BIL_RETUR": "Rengjøring av bil på retur reisen" , 
     "krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT": "Tapt arbeidsinntekt" , 
-    "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?" 
+    "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?" , 
+    "kvittering_undersokelseIngress": "Det tar ca. 3 minutter å svare på undersøkelsen." , 
+    "kvittering_undersokelseLenke": "https://vg.no" 
   },
   "HNMinHelsePasientreiserStegvisningJS": { 
     "egenandelKanIkkeBeregnes": "Kan ikke beregnes" , 
