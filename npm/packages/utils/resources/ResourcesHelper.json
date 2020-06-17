@@ -4,7 +4,7 @@
     "webPart_FlexibleText_BiggerEditor": "Større editor",
     "webPart_FlexibleText_ToolPartTitle": "Redigerbare tekster",
     "webPart_PagePromotion_SelectPage_Text": "Select Page",
-    "iKKE_BRUK_KUN_FOR_TEST": "test1"
+    "iKKE_BRUK_KUN_FOR_TEST": "test"
   },
   "HNCoreFrontendMicrowebHeaderFooter": {
     "headerMenuProfileLinksKontaktinformasjonOgVarseloppsettUrl": "/kontaktinformasjon-og-varseloppsett",
@@ -6122,7 +6122,10 @@
     "krav_kostnadskoder_REFUSJON_TRANSPORT_REISEGODS_RETUR": "Transport av reisegods på retur reisen",
     "krav_kostnadskoder_RENGJORING_AV_BIL": "Rengjøring av bil på tur reisen",
     "krav_kostnadskoder_RENGJORING_AV_BIL_RETUR": "Rengjøring av bil på retur reisen",
-    "krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT": "Tapt arbeidsinntekt"
+    "krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT": "Tapt arbeidsinntekt",
+    "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?",
+    "kvittering_undersokelseIngress": "Det tar ca. 3 minutter å svare på undersøkelsen.",
+    "kvittering_undersokelseLenke": "https://response.questback.com/pasientreiserhf/rur2020"
   },
   "HNMinHelsePasientreiserStegvisningJS": {
     "egenandelKanIkkeBeregnes": "Kan ikke beregnes",
