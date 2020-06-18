@@ -2510,7 +2510,7 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   innsyn_image_error: string;
   /** 
-  * Meldinger
+  * Innboks
   */
   backbar_meldinger: string;
   /** 
@@ -3569,7 +3569,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   page_Messages_Title: string;
   /** 
-  * Meldinger
+  * Innboks
   */
   page_Innboks_Title: string;
   /** 
@@ -15620,7 +15620,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Meldinger_Description: string;
   /** 
-  * Meldinger
+  * Innboks
   */
   tile_Meldinger_Title: string;
   /** 
