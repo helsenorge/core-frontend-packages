@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 
+import { ShowSignOutBoxData, SessionTimeoutAction } from '../types/entities';
+
 /* Events from header-footer webcomp */
 import { HeaderFooterEvents } from './constants';
 
@@ -55,6 +57,13 @@ export const HNeventRefreshVarslingerOgHendelsesmeny = (): void => {
   const webcompheader = document.querySelector('hn-webcomp-header');
   if (webcompheader && webcompheader.dispatchEvent) {
     webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.refreshvarslingeroghendelsesmeny, { detail: {} }));
+  }
+};
+
+export const HNeventSetOnShowSignoutbox = (fn: (data: ShowSignOutBoxData) => SessionTimeoutAction): void => {
+  const webcompheader = document.querySelector('hn-webcomp-footer');
+  if (webcompheader && webcompheader.dispatchEvent) {
+    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.setonshowsignoutbox, { detail: { onShowSignOutBox: fn } }));
   }
 };
 
