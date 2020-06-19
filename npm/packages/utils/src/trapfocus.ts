@@ -9,7 +9,7 @@ export class TrapFocus {
   private previouslyFocusedItem: TabbableElement | null;
   private focusableItems: Array<TabbableElement>;
 
-  constructor(domNode: HTMLElement | string) {
+  constructor(domNode: HTMLElement | string, isTriggerWithinTrappedArea: boolean = false) {
     this.domNode = typeof domNode === 'string' ? (document.querySelector(domNode) as TabbableElement) : (domNode as TabbableElement);
     const activeElement = getDocumentActiveElement(domNode);
     this.previouslyFocusedItem = activeElement ? (activeElement as TabbableElement) : (document.activeElement as TabbableElement);
@@ -18,7 +18,7 @@ export class TrapFocus {
     this.updateFocusableItems();
 
     // Set focus to element to be able to listen for keypress
-    if (this.focusableItems.length) {
+    if (!isTriggerWithinTrappedArea && this.focusableItems.length) {
       this.focusableItems[0].focus();
     }
     window.addEventListener('keydown', this, false);
