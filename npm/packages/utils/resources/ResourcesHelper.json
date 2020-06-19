@@ -21,7 +21,7 @@
     "headerButtonLogoutUrl": "/auth/signout" , 
     "headerMenuProfileVarslingerIngen": "ingen" , 
     "headerMenuBasicInnholdAAATitle": "Innhold A-Å" , 
-    "headerMenuBasicInnholdAAAUrl": "https://helsenorge.no/en" , 
+    "headerMenuBasicInnholdAAAUrl": "/innholdsoversikt" , 
     "headerMenuBasicEngelskTitle": "English" , 
     "headerMenuBasicEngelskUrl": "/en" , 
     "headerButtonMeny": "meny" , 
