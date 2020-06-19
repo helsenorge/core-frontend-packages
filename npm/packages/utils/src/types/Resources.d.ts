@@ -4158,7 +4158,7 @@ export type HNMinHelseDialogJS = {
   */
   hjelpekontekst_henvisningInfo: string;
   /** 
-  * {"defaulttekst_overskrift":"Om meldinger","defaulttekst_brodtekst":"<p>\nHer vil du få oversikt over alle meldinger du har fått og sendt. Du kan også skrive melding til de av dine helsekontakter som tilbyr digital dialog. \n</p>\n\n<p>\nForeløpig kan du motta og sende meldinger knyttet til:\n<ul>\n<li>fastleger som tilbyr digitale tjenester</li>\n<li>forløpskoordinator og ulike helsekontakter i Helse Vest</li>\n<li>timer fra Helse Vest</li>\n<li>helse- og omsorgstjenester i utvalgte kommuner</li>\n<li>resultater fra helseundersøkelser eller prøveprosjekter du deltar i</li>\n</ul>\n</p>\n\n<p>\nI tillegg kan du blant annet se kvitteringer for bytte av fastlege, meldinger om fullmakt eller få svar fra saksbehandler hvis du for eksempel har meldt feil i kjernejournal. \n</p>\n<h3>\nMeldinger om timeavtaler\n</h3>\n\n<p>\nSkal du sende en melding angående en time i Helse Vest, må du gå til den timen i Timeavtaler.\n</p>"}
+  * {"defaulttekst_overskrift":"Om innboks","defaulttekst_brodtekst":"<p>\nHer vil du få oversikt over alle meldinger du har fått og sendt. Du kan også skrive melding til de av dine helsekontakter som tilbyr digital dialog. \n</p>\n\n<p>\nForeløpig kan du motta og sende meldinger knyttet til:\n<ul>\n<li>fastleger som tilbyr digitale tjenester</li>\n<li>forløpskoordinator og ulike helsekontakter i Helse Vest</li>\n<li>timer fra Helse Vest</li>\n<li>helse- og omsorgstjenester i utvalgte kommuner</li>\n<li>resultater fra helseundersøkelser eller prøveprosjekter du deltar i</li>\n</ul>\n</p>\n\n<p>\nI tillegg kan du blant annet se kvitteringer for bytte av fastlege, meldinger om fullmakt eller få svar fra saksbehandler hvis du for eksempel har meldt feil i kjernejournal. \n</p>\n<h3>\nMeldinger om timeavtaler\n</h3>\n\n<p>\nSkal du sende en melding angående en time i Helse Vest, må du gå til den timen i Timeavtaler.\n</p>"}
   */
   hjelpekontekst_meldingerTimeavtaler: string;
   /** 
@@ -13474,7 +13474,7 @@ Ved flytting sender du flyttemelding til <a href="http://skatteetaten.no/no/pers
   */
   mho_healthepisodes_receipt_description_no_phone: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger under <a href="/min-helse/meldinger">Meldinger</a></p>
+  * <p>Du finner sendte og mottatte meldinger under <a href="/min-helse/meldinger">Innboks</a></p>
   */
   mho_healthepisodes_receipt_messages: string;
   /** 
@@ -16128,11 +16128,11 @@ export type HNMinHelseNotificationStrings = {
   */
   oppgavePaminnelse_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et skjema. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
+  * ${FirstName} har fått et skjema. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
   */
   oppgave_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
+  * ${FirstName}, du har fått et skjema. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
   */
   oppgave_EmailMessage_Body_Self: string;
   /** 
@@ -16144,11 +16144,11 @@ export type HNMinHelseNotificationStrings = {
   */
   oppgave_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått et skjema. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
+  * ${FirstName} har fått et skjema. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
   */
   oppgave_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
+  * ${FirstName}, du har fått et skjema. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
   */
   oppgave_TextMessage_Body_Self: string;
   /** 
@@ -16884,11 +16884,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   negativAppRec_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
+  * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
   */
   oppgaveBesvarelse_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Meldinger for å fylle det ut.
+  * ${FirstName}, du har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
   */
   oppgaveBesvarelse_EmailMessage_Body_Self: string;
   /** 
@@ -28767,7 +28767,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   loadSkjemaErrorBody: string;
   /** 
-  * Skjemaet er lagret i Meldinger
+  * Skjemaet er lagret i Innboks
   */
   lagreSkjemaBody: string;
   /** 
@@ -28783,7 +28783,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   lagreSkjemaTittel: string;
   /** 
-  * Ditt skjema mellomlagres i <strong>Meldinger</strong> og du kan fortsette utfyllingen derfra senere.
+  * Ditt skjema mellomlagres i <strong>Innboks</strong> og du kan fortsette utfyllingen derfra senere.
   */
   mellomlagringsMessage: string;
   /** 
