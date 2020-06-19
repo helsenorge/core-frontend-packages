@@ -207,3 +207,15 @@ export interface Samtykke {
   StatusKodeType: StatusKodeType;
   ErAktiv: boolean;
 }
+
+export interface ShowSignOutBoxData {
+  tokenCountdown: number;
+  tokenWarnUserWhenRemaining: number;
+  tokenLifetime: number;
+}
+
+export enum SessionTimeoutAction {
+  Default = 0,
+  RequestExtension = 1,
+  RequestLogout = 2,
+}
