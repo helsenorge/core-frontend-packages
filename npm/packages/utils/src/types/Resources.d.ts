@@ -17272,11 +17272,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingNyTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Meldinger for å lese det.
+  * ${FirstName} har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Meldinger for å lese det.
+  * ${FirstName}, du har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_EmailMessage_Body_Self: string;
   /** 
@@ -17288,19 +17288,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseInnkallingsbrev_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Meldinger for å lese det.
+  * ${FirstName} har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Meldinger for å lese det.
+  * ${FirstName}, du har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Meldinger for å lese det.
+  * ${FirstName} har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
   */
   paminnelseFormidling_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Meldinger for å lese det.
+  * ${FirstName}, du har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
   */
   paminnelseFormidling_EmailMessage_Body_Self: string;
   /** 
@@ -17308,11 +17308,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFormidling_EmailMessage_Subject_Representation: string;
   /** 
-  * ${FirstName} har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Meldinger for å lese det.
+  * ${FirstName} har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
   */
   paminnelseFormidling_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Meldinger for å lese det.
+  * ${FirstName}, du har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
   */
   paminnelseFormidling_TextMessage_Body_Self: string;
   /** 
@@ -28703,7 +28703,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   sendtConfirmation: string;
   /** 
-  * Sendte meldinger finner du igjen under <strong>Meldinger</strong>.
+  * Sendte meldinger finner du igjen under <strong>Innboks</strong>.
   */
   sendtConfirmationText: string;
   /** 
@@ -28886,7 +28886,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   berikingFailedOnRetrievalTitle: string;
   /** 
-  * Du jobber på en gammel versjon. Det finnes en nyere versjon av skjemaet. Dette kan du finne ved å gå til Meldinger.
+  * Du jobber på en gammel versjon. Det finnes en nyere versjon av skjemaet. Dette kan du finne ved å gå til Innboks.
   */
   skjemaOldVersion: string;
   /** 
