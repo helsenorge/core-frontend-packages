@@ -6,4 +6,5 @@ export enum HeaderFooterEvents {
   setvarslinger = 'hn-webcomp-header-footer-event-setvarslinger',
   refreshvarslinger = 'hn-webcomp-header-footer-event-refreshvarslinger',
   refreshvarslingeroghendelsesmeny = 'hn-webcomp-header-footer-event-refreshvarslingeroghendelsesmeny',
+  setonshowsignoutbox = 'hn-webcomp-header-footer-event-setonshowsignoutbox',
 }
