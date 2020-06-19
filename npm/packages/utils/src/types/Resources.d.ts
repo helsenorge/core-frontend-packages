@@ -368,7 +368,7 @@ export type HNMinHelseByttFastlegeJS = {
   */
   hjelpetrigger_bflUtekontor: string;
   /** 
-  * Denne kvitteringen er også tilgjengelig under Meldinger.
+  * Denne kvitteringen er også tilgjengelig under Innboks.
   */
   bfl_ResultPage_Byttedialog_Print_Info: string;
   /** 
@@ -1460,7 +1460,7 @@ export type HNMinHelseByttFastlegeJS = {
   */
   hjelpetrigger_digitaleFastlegetjenester: string;
   /** 
-  * Du kan finne igjen kvitteringen under Meldinger.
+  * Du kan finne igjen kvitteringen under Innboks.
   */
   bfl_ResultPage_VentelisteDialog_Receipt_PHAInfo: string;
   /** 
@@ -1591,7 +1591,7 @@ export type HNMinHelseByttFastlege = {
   */
   bFL_PDF_Receipt_FooterTextHelfo: string;
   /** 
-  * Du kan finne igjen kvitteringen under Meldinger.
+  * Du kan finne igjen kvitteringen under Innboks.
   */
   bFL_PDF_Receipt_FooterTextPha: string;
   /** 
@@ -4214,7 +4214,7 @@ export type HNMinHelseDialogJS = {
   */
   appointmentRequestInfoConfirmationButtonText: string;
   /** 
-  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger.
+  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.
   */
   appointmentRequestInfoConfirmationDescription: string;
   /** 
@@ -4626,7 +4626,7 @@ export type HNMinHelseDialogJS = {
   */
   conversationCancelGeneralPractitioner: string;
   /** 
-  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger.
+  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.
   */
   appointmentRescheduleConfirmationDescription: string;
   /** 
@@ -4778,7 +4778,7 @@ Du kan prøve på nytt senere eller kontakte oss på telefon.
   conversationLabelWaitingAppRec: string;
   /** 
   * <span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet.</span>
-<span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger.</span>
+<span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.</span>
   */
   bookingSubmitChangeDraftSavedDescription: string;
   /** 
@@ -5339,19 +5339,19 @@ Finner du ingen tilgjengelige timer som passer deg, kan du kontakte legekontoret
   */
   changeBookingSubmitSuccessHeader: string;
   /** 
-  * Du finner informasjon om timebestillingen under Meldinger.
+  * Du finner informasjon om timebestillingen under Innboks.
   */
   bookingSubmitSuccessBody: string;
   /** 
-  * Du finner sendte og mottatte meldinger under Meldinger.
+  * Du finner sendte og mottatte meldinger under Innboks.
   */
   bookingSubmitOfflineSuccessBody: string;
   /** 
-  * Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger.
+  * Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.
   */
   changeBookingSubmitSuccessBody: string;
   /** 
-  * Du finner informasjon om endringen under Meldinger.
+  * Du finner informasjon om endringen under Innboks.
   */
   changeBookingSubmitOnlineSuccessBody: string;
   /** 
@@ -5453,11 +5453,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   coordinatorPanelFastlegeNoneRegistered_2: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger under Meldinger.</p>
+  * <p>Du finner sendte og mottatte meldinger under Innboks.</p>
   */
   conversationSubmitConfirmationDescriptionBody: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger.</p>
+  * <p>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.</p>
   */
   conversationSubmitConfirmationDescriptionBodySpecialist: string;
   /** 
@@ -5465,11 +5465,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationSubmitConfirmationDescriptionTitle: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Meldinger.
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.
   */
   conversationSubmitReplyError: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger under Meldinger.</p>
+  * <p>Du finner sendte og mottatte meldinger under Innboks.</p>
   */
   coordinatorMessageConfirmationDescriptionBody: string;
   /** 
@@ -5477,7 +5477,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   coordinatorMessageConfirmationDescriptionTitle: string;
   /** 
-  * <span>Meldingen er lagret som et utkast. Du finner utkastet igjen under Meldinger.</span>
+  * <span>Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.</span>
   */
   coordinatorMessageSubmitErrorBody: string;
   /** 
@@ -5990,7 +5990,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   changeAppointmentSpecialistFailTitle: string;
   /** 
-  * Du finner informasjon om endringen under Meldinger.
+  * Du finner informasjon om endringen under Innboks.
   */
   changeBookingSubmitCalendarSuccessBody: string;
   /** 
@@ -6271,7 +6271,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   tilFastlegeHeading: string;
   /** 
-  * Du kan finne avbestillingen under Meldinger.
+  * Du kan finne avbestillingen under Innboks.
   */
   appointmentCancelKommuneConfirmationPostfix: string;
   /** 
@@ -6862,13 +6862,13 @@ behandlingsstedet ved eventuelle spørsmål.
   appointmentCancelKommuneConfirmHeader: string;
   /** 
   * <p>Avbestillingen gjelder avtalen <strong>{0}.</strong></p>
-<p>Du kan finne avbestillingen under Meldinger.</p>
+<p>Du kan finne avbestillingen under Innboks.</p>
   */
   appointmentCancelKommuneConfirmDescription: string;
   /** 
   * <p>Avbestillingen gjelder alle avtaler i perioden <strong>{0} til {1}:</strong></p>
 <ul><li>{2}, {3}</li></ul>
-<p>Du kan finne avbestillingen under Meldinger.</p>
+<p>Du kan finne avbestillingen under Innboks.</p>
   */
   appointmentCancelKommuneTimeIntervalConfirmDescription: string;
   /** 
@@ -7368,7 +7368,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationSubmitConfirmationHeadingDraft: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Meldinger.
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.
   */
   conversationSubmitConfirmationDescriptionDraft: string;
   /** 
@@ -7472,11 +7472,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonDraftEdit: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Meldinger.
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.
   */
   commonSubmitConfirmationDraftDescription: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Meldinger.
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.
   */
   changeBookingSubmitSuccessDraftDescription: string;
   /** 
@@ -7508,7 +7508,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonEkontaktFastlegeSvarBeskrivelse: string;
   /** 
-  * Du finner sendte og mottatte meldinger under Meldinger.
+  * Du finner sendte og mottatte meldinger under Innboks.
   */
   commonSubmitConfirmationDescription2: string;
   /** 
@@ -8420,7 +8420,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   persistentMessage_UnsupportedService_Title: string;
   /** 
-  * <span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet.</span><span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Meldinger.</span>
+  * <span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet.</span><span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.</span>
   */
   clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Body: string;
   /** 
@@ -28851,7 +28851,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   confirmDiscretionTitle: string;
   /** 
-  * En kopi av skjemaet vil normalt bli lagret i <strong>Meldinger</strong>. Du kan unngå denne lagringen hvis du vil.
+  * En kopi av skjemaet vil normalt bli lagret i <strong>Innboks</strong>. Du kan unngå denne lagringen hvis du vil.
   */
   confirmDiscretionText: string;
   /** 
