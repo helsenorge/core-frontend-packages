@@ -3565,7 +3565,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   page_Messages_Desc: string;
   /** 
-  * Meldinger
+  * Innboks
   */
   page_Messages_Title: string;
   /** 
@@ -12434,7 +12434,7 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_KI_CheckBox_ShowAll: string;
   /** 
-  * .<br>Når feilen er registrert vil du få en kvittering på siden <a href="/meldinger">Meldinger</a>, og det vil opprettes en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil.
+  * .<br>Når feilen er registrert vil du få en kvittering på siden <a href="/meldinger">Innboks</a>, og det vil opprettes en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil.
   */
   page_KJ_besokshistorikk_Desc2: string;
   /** 
