@@ -85,7 +85,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuBasicInnholdAAATitle: string;
   /** 
-  * https://helsenorge.no/en
+  * /innholdsoversikt
   */
   headerMenuBasicInnholdAAAUrl: string;
   /** 
