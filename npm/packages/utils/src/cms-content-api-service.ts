@@ -42,7 +42,22 @@ function checkStatus(response: Response) {
   }
 }
 
+function hostnameHashCode() {
+  const hostname = window.location.hostname;
+  let hash = 0;
+  if (hostname.length == 0) {
+    return hash;
+  }
+  for (var i = 0; i < hostname.length; i++) {
+    const char = hostname.charCodeAt(i);
+    hash = (hash << 5) - hash + char;
+    hash = hash & hash; // Convert to 32bit integer
+  }
+  return hash;
+}
+
 export function get(cmd: string, params?: object) {
+  params = { hash: hostnameHashCode(), ...params };
   return fetch(getContentApiUrl() + '/contentapi/internal/v1/' + cmd + parseParams(params), {
     method: 'get',
     credentials: 'include',
