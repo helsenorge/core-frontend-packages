@@ -23,7 +23,7 @@
     "headerMenuBasicInnholdAAATitle": "Innhold A-Å" , 
     "headerMenuBasicInnholdAAAUrl": "https://helsenorge.no/en" , 
     "headerMenuBasicEngelskTitle": "English" , 
-    "headerMenuBasicEngelskUrl": "https://helsenorge.no/en/" , 
+    "headerMenuBasicEngelskUrl": "/en" , 
     "headerButtonMeny": "meny" , 
     "headerButtonSok": "søk" , 
     "headerButtonLogin": "Logg inn" , 
