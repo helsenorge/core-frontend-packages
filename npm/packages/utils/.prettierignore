@@ -1,3 +1,5 @@
 public
 __test__
 *.html
+resources/*.json
+src/type/Resources.d.ts
