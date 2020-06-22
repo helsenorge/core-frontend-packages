@@ -8,3 +8,7 @@ export enum HeaderFooterEvents {
   refreshvarslingeroghendelsesmeny = 'hn-webcomp-header-footer-event-refreshvarslingeroghendelsesmeny',
   setonshowsignoutbox = 'hn-webcomp-header-footer-event-setonshowsignoutbox',
 }
+
+export enum CmsBlocksEvents {
+  setHiddenPromopanel = 'hn-webcomp-cms-blocks-event-sethiddenpromopanel',
+}
