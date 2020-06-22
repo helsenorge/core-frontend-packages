@@ -3593,6 +3593,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   page_feilmelding_title: string;
   /** 
+  * Se etter en skrivefeil i URL-adressen, eller gå til forsiden.
+  */
+  page_feilmelding_description: string;
+  /** 
   * Innsyn i personopplysninger samlet om deg i Smittestopp
   */
   page_InnsynSmittestopp_Title: string;
