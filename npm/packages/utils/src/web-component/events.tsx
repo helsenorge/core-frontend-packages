@@ -2,8 +2,8 @@ import { useEffect } from 'react';
 
 import { ShowSignOutBoxData, SessionTimeoutAction } from '../types/entities';
 
-/* Events from header-footer webcomp */
-import { HeaderFooterEvents } from './constants';
+/* Events from header-footer and cms-blocks webcomp */
+import { HeaderFooterEvents, CmsBlocksEvents } from './constants';
 
 /* This is a custom interface to be able to access and typecheck path on Events */
 export interface WebComponentEvent<T extends EventTarget> extends Event {
@@ -67,16 +67,24 @@ export const HNeventSetOnShowSignoutbox = (fn: (data: ShowSignOutBoxData) => Ses
   }
 };
 
+export const HNeventSetHiddenPromopanel = (isHidden: boolean): void => {
+  const webcomppromopanel = document.querySelector('hn-webcomp-cms-block-promopanel');
+
+  if (webcomppromopanel && webcomppromopanel.dispatchEvent) {
+    webcomppromopanel.dispatchEvent(new CustomEvent(CmsBlocksEvents.setHiddenPromopanel, { detail: { hiddenPromopanel: isHidden } }));
+  }
+};
+
 export const HNaddEventListener = (
   event: HeaderFooterEvents,
   element: Element | null,
   handler: <T>(EvenCustomEvent: CustomEvent<T>) => void,
   passive = false
-) => {
+): void => {
   useEffect(() => {
     if (element) element.addEventListener(event, handler, passive);
 
-    return function cleanup() {
+    return function cleanup(): void {
       if (element) element.removeEventListener(event, handler);
     };
   });
