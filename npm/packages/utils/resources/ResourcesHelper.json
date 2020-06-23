@@ -4359,7 +4359,12 @@
     "videreformidling_EmailMessage_Body_Representation": "${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det." , 
     "videreformidling_EmailMessage_Subject_Self": "Varsel om nytt brev på helsenorge.no" , 
     "videreformidling_EmailMessage_Subject_Representation": "Varsel om nytt brev på helsenorge.no" , 
-    "videreformidling_EmailMessage_Body_Representation_IkkeSensitivAvsender": "${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det." 
+    "videreformidling_EmailMessage_Body_Representation_IkkeSensitivAvsender": "${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." , 
+    "videreformidling_EmailMessage_Body_Self_IkkeSensitivAvsender": "${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." , 
+    "videreformidling_EmailMessage_Subject_Representation_IkkeSensitivAvsender": "Varsel om nytt brev på helsenorge.no" , 
+    "videreformidling_EmailMessage_Subject_Self_IkkeSensitivAvsender": "Varsel om nytt brev på helsenorge.no" , 
+    "videreformidling_TextMessage_Body_Representation_IkkeSensitivAvsender": "${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." , 
+    "videreformidling_TextMessage_Body_Self_IkkeSensitivAvsender": "${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." 
   },
   "HNMinHelsePages": { 
     "noInfoAvailable": "Ingen informasjon tilgjengelig" , 

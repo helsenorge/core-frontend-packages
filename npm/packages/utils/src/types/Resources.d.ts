@@ -17500,9 +17500,29 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   videreformidling_EmailMessage_Subject_Representation: string;
   /** 
-  * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
   */
   videreformidling_EmailMessage_Body_Representation_IkkeSensitivAvsender: string;
+  /** 
+  * ${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
+  */
+  videreformidling_EmailMessage_Body_Self_IkkeSensitivAvsender: string;
+  /** 
+  * Varsel om nytt brev på helsenorge.no
+  */
+  videreformidling_EmailMessage_Subject_Representation_IkkeSensitivAvsender: string;
+  /** 
+  * Varsel om nytt brev på helsenorge.no
+  */
+  videreformidling_EmailMessage_Subject_Self_IkkeSensitivAvsender: string;
+  /** 
+  * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
+  */
+  videreformidling_TextMessage_Body_Representation_IkkeSensitivAvsender: string;
+  /** 
+  * ${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
+  */
+  videreformidling_TextMessage_Body_Self_IkkeSensitivAvsender: string;
 };
 
 export type HNMinHelsePages = { 
