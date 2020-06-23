@@ -71,5 +71,7 @@ screenshots
 # next.js build output
 .next
 
+# MacOS file
+.DS_Store
 
 test-report.xml
