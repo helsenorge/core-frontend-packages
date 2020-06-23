@@ -23,7 +23,6 @@ export default {
   PASIENTREISER: 'HN.MinHelse.Pasientreiser.JS',
   MFR: 'HN.MinHelse.Mfr',
   DONORKORT: 'HN.MinHelse.Donorkort',
-  SAMTYKKEFLYT: 'HN.MinHelse.Samtykkeflyt.JS',
   VERKTOY: 'HN.MinHelse.Verktoy',
   SECURITY: 'HN.MinHelse.SecurityFramework',
 };
