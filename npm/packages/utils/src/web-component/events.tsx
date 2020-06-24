@@ -75,8 +75,16 @@ export const HNeventSetHiddenPromopanel = (isHidden: boolean): void => {
   }
 };
 
+export const HNeventHasMountedPromopanel = (): void => {
+  const webcomppromopanel = document.querySelector('hn-webcomp-cms-block-promopanel');
+
+  if (webcomppromopanel && webcomppromopanel.dispatchEvent) {
+    webcomppromopanel.dispatchEvent(new CustomEvent(CmsBlocksEvents.hasMountedPromopanel));
+  }
+};
+
 export const HNaddEventListener = (
-  event: HeaderFooterEvents,
+  event: HeaderFooterEvents | CmsBlocksEvents,
   element: Element | null,
   handler: <T>(EvenCustomEvent: CustomEvent<T>) => void,
   passive = false
