@@ -15512,7 +15512,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Timeavtaler_Title: string;
   /** 
-  * Finn og bytt fastlege, sett deg på venteliste, og se hvem som er fastlegen din nå
+  * Finn og bytt fastlege, eller stå på venteliste.
   */
   tile_ByttFastlege_Description: string;
   /** 
@@ -15520,7 +15520,7 @@ export type HNMinHelseNavigation = {
   */
   tile_ByttFastlege_Title: string;
   /** 
-  * Se dine registrerte egenandeler, og om du har fått frikort for helsetjenester
+  * Registrerte egenandeler og frikortstatus.
   */
   tile_Egenandeler_Description: string;
   /** 
@@ -15528,7 +15528,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Egenandeler_Title: string;
   /** 
-  * Meld bivirkninger
+  * Meld bivirkninger (altinn)
   */
   tile_EksterneTjenester_Bivirkninger_Title: string;
   /** 
@@ -15544,7 +15544,7 @@ export type HNMinHelseNavigation = {
   */
   tile_EksterneTjenester_Title: string;
   /** 
-  * Europeisk helsetrygdkort
+  * Bestill europeisk helsetrygdkort (nav)
   */
   tile_EksterneTjenester_Trygdekort_Title: string;
   /** 
@@ -15552,7 +15552,7 @@ export type HNMinHelseNavigation = {
   */
   tile_EksterneTjenester_Vaksiner_Title: string;
   /** 
-  * Oversikt over dine kontaktpersoner og behandlere i helsetjenesten
+  * Behandlere og kontaktpersoner.
   */
   tile_Helsekontakter_Description: string;
   /** 
@@ -15560,7 +15560,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Helsekontakter_Title: string;
   /** 
-  * Oversikt over offentlige helseregistre hvor du har rett til innsyn, for eksempel Reseptformidleren og vaksinasjonsregisteret
+  * Opplysninger og bruk av helseregistre.
   */
   tile_Helseregistre_Description: string;
   /** 
@@ -15568,7 +15568,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Helseregistre_Title: string;
   /** 
-  * Status på henvisningene dine til sykehus/spesialist
+  * Henvisninger til sykehus eller spesialist.
   */
   tile_Henvisninger_Description: string;
   /** 
@@ -15576,7 +15576,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Henvisninger_Title: string;
   /** 
-  * Innsyn i din kjernejournal
+  * Opplysninger og bruk av kjernejournal.
   */
   tile_Kjernejournal_Description: string;
   /** 
@@ -15596,7 +15596,7 @@ export type HNMinHelseNavigation = {
   */
   tile_MinHelseForside_Title: string;
   /** 
-  * Innsyn i journaldokumenter ved norske sykehus
+  * Journaldokumenter fra sykehus.
   */
   tile_Pasientjournal_Description: string;
   /** 
@@ -15604,7 +15604,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Pasientjournal_Title: string;
   /** 
-  * Pasientreiser er reiser som dekkes av det offentlige. Søk og se innsendte søknader til pasientreiser her
+  * Søk om få dekket en reise til behandling.
   */
   tile_Pasientreiser_Description: string;
   /** 
@@ -15612,7 +15612,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Pasientreiser_Title: string;
   /** 
-  * Dokumenter som du har lagret på helsenorge.no
+  * Egne dokumenter lagret på Helsenorge.
   */
   tile_PersonligHelsearkiv_Description: string;
   /** 
@@ -15620,7 +15620,7 @@ export type HNMinHelseNavigation = {
   */
   tile_PersonligHelsearkiv_Title: string;
   /** 
-  * Meldinger du har sendt og mottatt via helsenorge.no
+  * Meldinger og brev fra helsetjenesten.
   */
   tile_Meldinger_Description: string;
   /** 
@@ -15632,7 +15632,7 @@ export type HNMinHelseNavigation = {
   */
   category_Innsynstjenester_Title: string;
   /** 
-  * Dokumenter som du har lagret på helsenorge.no
+  * Egne dokumenter lagret på Helsenorge.
   */
   tile_DokumentArkiv_Description: string;
   /** 
@@ -15640,7 +15640,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Legemidler_Title: string;
   /** 
-  * Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk
+  * Resepter på medisiner og utstyr.
   */
   tile_Legemidler_Description: string;
   /** 
@@ -15648,7 +15648,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Donorkort_Title: string;
   /** 
-  * Opprett et digitalt donorkort
+  * Digitalt donorkort for organdonasjon.
   */
   tile_Donorkort_Description: string;
   /** 
@@ -15656,7 +15656,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Forskning_Title: string;
   /** 
-  * Helseundersøkelser og kliniske studier du deltar i
+  * Helseundersøkelser og kliniske studier.
   */
   tile_Forskning_Description: string;
   /** 
@@ -15664,7 +15664,7 @@ export type HNMinHelseNavigation = {
   */
   tile_SykdomOgKritiskInfo_Title: string;
   /** 
-  * Her vises helseopplysninger om deg som helsepersonell skal kjenne til ved undersøkelser og behandling
+  * Viktige opplysninger til helsepersonell.
   */
   tile_SykdomOgKritiskInfo_Description: string;
   /** 
@@ -15676,7 +15676,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Verktoy_Description: string;
   /** 
-  * Søk Helfo om refusjon
+  * Søk Helfo om refusjon (altinn)
   */
   tile_EksterneTjenester_Refusjon_Title: string;
   /** 
@@ -15684,7 +15684,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Vaksiner_Title: string;
   /** 
-  * Oversikt over alle vaksiner som er registrert på deg
+  * Oversikt over registrerte vaksiner.
   */
   tile_Vaksiner_Description: string;
   /** 
@@ -15700,15 +15700,15 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Title: string;
   /** 
-  * Resultat av test for koronavirus
+  * Prøvesvar fra spesialisthelsetjenesten.
   */
   tile_Provesvar_Description: string;
   /** 
-  * Korona-verktøy
+  * Koronaverktøy
   */
   tile_Korona_Title: string;
   /** 
-  * Verktøy du kan bruke for å hjelpe til å stoppe spredningen av koronaviruset
+  * Hjelp til å stoppe spredningen av viruset.
   */
   tile_Korona_Description: string;
 };
