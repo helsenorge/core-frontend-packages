@@ -6,7 +6,7 @@ import {
   getErRepresentasjon,
   getErOrdinaerAnalogFullmakt,
   getErMellom12Og16,
-} from 'hn-user';
+} from './hn-user';
 
 window.HN = window.HN || {};
 window.HN.Commands = window.HN.Commands || {};
