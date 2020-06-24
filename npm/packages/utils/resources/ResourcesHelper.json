@@ -1994,10 +1994,6 @@
     "commonBestillTimeVelgerAnnetBeskrivelse": "" , 
     "commonBestillTimeVelgerTittel": "Hva slags time trenger du?" , 
     "commonBestillTimeVelgerVeiviserUrl": "/veileder?Query=Questionnaire%2F303" , 
-    "appointmentDetailsSpecialistVideoTekst": "Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil." , 
-    "appointmentDetailsSpecialistVideoButtonText": "Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil." , 
-    "appointmentDetailsSpecialistVideoHeader": "Dette er en videotime" , 
-    "appointmentBestillTime": "Bestill time" , 
     "appointmentCancelHelsestasjonTimeMessageLabel": "Årsak til avbestilling" , 
     "appointmentCancelHelsestasjonHeader": "Avbestill time" , 
     "appointmentCancelHelsestasjonConfirmButtonText": "Bekreft avbestilling" , 
@@ -2010,7 +2006,11 @@
     "appointmentDetailsTypeGroup": "Gruppetime" , 
     "kommunalHelsetilbudInfoLabel": "Informasjon fra kommunen" , 
     "kommunalHelsetilbudHjemmesideLabel": "Hjemmeside" , 
-    "kommunalHelsetilbudKontaktmuligheterLabel": "Kontaktmuligheter" 
+    "kommunalHelsetilbudKontaktmuligheterLabel": "Kontaktmuligheter" , 
+    "appointmentDetailsSpecialistVideoTekst": "Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil." , 
+    "appointmentDetailsSpecialistVideoButtonText": "Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil." , 
+    "appointmentDetailsSpecialistVideoHeader": "Dette er en videotime" , 
+    "appointmentBestillTime": "Bestill time" 
   },
   "HNMinHelseDialog": { 
     "journalAccess_EmneSporsmal": "Kopi av pasientjournal" , 
@@ -3135,9 +3135,13 @@
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Year": "Årstall" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Visits": "Besøk" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Fagenhet": "Fagenhet/Spesialitet" , 
-    "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak": "HF/Institusjon" 
+    "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak": "HF/Institusjon" , 
+    "page_SykdomOgKritiskInfo_Table_Caption": "Tabell som viser sykdomshistorikk" 
   },
   "HNMinHelseKJStrings": { 
+    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title": "Årstallet er ikke gyldig" , 
+    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message": "Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår." , 
+    "besokshistorikk_ReportError_Error_Title": "Meldingen ble ikke sendt." , 
     "clientOperation_GetResepter_RF_EndpointError_Title": "For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig." , 
     "clientOperation_GetResepter_RF_EndpointError_Body": "For øyeblikket hentes reseptinformasjon kun fra kjernejournalen din. Det er mulig at enkelte resepter vises med feil status. Vennligst prøv igjen senere." , 
     "clientOperation_GetResepter_KJ_EndpointError_Body": "For øyeblikket vises kun aktive e-resepter. For historikk og eventuelle papirresepter, prøv igjen senere." , 
@@ -3679,10 +3683,7 @@
     "mho_communication_name": "Kontaktperson" , 
     "mho_communication_needs": "Dine spesielle kommunikasjonsbehov:" , 
     "mho_communication_need_an_interpreter": "trenger tolk" , 
-    "mho_communication_registered": " registrert" , 
-    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title": "Årstallet er ikke gyldig" , 
-    "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message": "Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår." , 
-    "besokshistorikk_ReportError_Error_Title": "Meldingen ble ikke sendt." 
+    "mho_communication_registered": " registrert" 
   },
   "HNMinHelseLegemidlerJS": { 
     "hjelpetrigger_lib_hjelpeskuff": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Om legemiddellisten\",\"seksjonstekst_brodtekst\":\"<p> Her vises din legemiddelliste, samt dine resepter og informasjon om utleverte legemidler, næringsmidler og forbruksmateriell .<br>\\nLegemiddellisten gir deg og helsepersonell en oppdatert oversikt over hvilke legemidler du skal bruke. </p>\\n<p>I fanen «Legemiddelliste» vises din legemiddelliste, i tillegg til  aktive resepter og resepter med utleveringer de siste 12 månedene.  I fanen «Resepthistorikk» vises alle resepter  og utleveringer  tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller hos bandasjisten. Reseptene er merket med kilden.</p>\\n<p> På siden om <a href='/reseptformidleren'>reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href='/kjernejournal-innsyn'>kjernejournal</a>.</p>\\n<p><a href=\\\"{HelsenorgeUrl}/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\\\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>\"}" , 
@@ -3855,10 +3856,6 @@
     "innsyn_tab_loggoverbruk": "Logg over bruk" 
   },
   "HNMinHelseNavigation": { 
-    "tile_Provesvar_Title": "Prøvesvar" , 
-    "tile_Provesvar_Description": "Resultat av test for koronavirus" , 
-    "tile_Korona_Title": "Korona-verktøy" , 
-    "tile_Korona_Description": "Verktøy du kan bruke for å hjelpe til å stoppe spredningen av koronaviruset" , 
     "tile_Resepter_Description": "Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk" , 
     "tile_Resepter_Title": "Resepter" , 
     "tile_Timeavtaler_Description": "Dine timer og avtaler med helsetjenesten" , 
@@ -3908,7 +3905,11 @@
     "tile_Vaksiner_Title": "Vaksiner" , 
     "tile_Vaksiner_Description": "Oversikt over alle vaksiner som er registrert på deg" , 
     "tile_Velgbehandlingssted_Title": "Velg behandlingssted" , 
-    "tile_Velgbehandlingssted_Description": "Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet" 
+    "tile_Velgbehandlingssted_Description": "Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet" , 
+    "tile_Provesvar_Title": "Prøvesvar" , 
+    "tile_Provesvar_Description": "Resultat av test for koronavirus" , 
+    "tile_Korona_Title": "Korona-verktøy" , 
+    "tile_Korona_Description": "Verktøy du kan bruke for å hjelpe til å stoppe spredningen av koronaviruset" 
   },
   "HNMinHelseNHNStrings": { 
     "error_HprPersonNotFound_Title": "Ugyldig nummer" , 
@@ -4353,18 +4354,18 @@
     "default_TextMessage_Body_Representation_FunksjonellMotpart": "${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den." , 
     "default_TextMessage_Body_Self_FunksjonellMotpart": "${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den." , 
     "paminnelseFormidling_EmailMessage_Subject_Self": "Varsel om ny melding på helsenorge.no" , 
-    "videreformidling_TextMessage_Body_Self": "${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det." , 
-    "videreformidling_TextMessage_Body_Representation": "${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det." , 
-    "videreformidling_EmailMessage_Body_Self": "${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det." , 
-    "videreformidling_EmailMessage_Body_Representation": "${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det." , 
-    "videreformidling_EmailMessage_Subject_Self": "Varsel om nytt brev på helsenorge.no" , 
-    "videreformidling_EmailMessage_Subject_Representation": "Varsel om nytt brev på helsenorge.no" , 
     "videreformidling_EmailMessage_Body_Representation_IkkeSensitivAvsender": "${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." , 
     "videreformidling_EmailMessage_Body_Self_IkkeSensitivAvsender": "${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." , 
     "videreformidling_EmailMessage_Subject_Representation_IkkeSensitivAvsender": "Varsel om nytt brev på helsenorge.no" , 
     "videreformidling_EmailMessage_Subject_Self_IkkeSensitivAvsender": "Varsel om nytt brev på helsenorge.no" , 
     "videreformidling_TextMessage_Body_Representation_IkkeSensitivAvsender": "${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." , 
-    "videreformidling_TextMessage_Body_Self_IkkeSensitivAvsender": "${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." 
+    "videreformidling_TextMessage_Body_Self_IkkeSensitivAvsender": "${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det." , 
+    "videreformidling_TextMessage_Body_Self": "${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det." , 
+    "videreformidling_TextMessage_Body_Representation": "${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det." , 
+    "videreformidling_EmailMessage_Body_Self": "${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det." , 
+    "videreformidling_EmailMessage_Body_Representation": "${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det." , 
+    "videreformidling_EmailMessage_Subject_Self": "Varsel om nytt brev på helsenorge.no" , 
+    "videreformidling_EmailMessage_Subject_Representation": "Varsel om nytt brev på helsenorge.no" 
   },
   "HNMinHelsePages": { 
     "noInfoAvailable": "Ingen informasjon tilgjengelig" , 
@@ -4546,8 +4547,8 @@
     "pdfCompatibilityBodyPreview": "Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?" , 
     "pdfCompatibilityPreview": "Se forhåndsvisning" , 
     "xDS_LokasjonFeil_SIHF": "Sykehuset Innlandet HF" , 
-    "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS" , 
-    "xDS_LokasjonFeil_HN": "Helse Nord" 
+    "xDS_LokasjonFeil_HN": "Helse Nord" , 
+    "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS" 
   },
   "HNMinHelsePasientreiserJS": { 
     "reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone": "En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter." , 
