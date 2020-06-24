@@ -8019,22 +8019,6 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   commonBestillTimeVelgerVeiviserUrl: string;
   /**
-   * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
-   */
-  appointmentDetailsSpecialistVideoTekst: string;
-  /**
-   * Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
-   */
-  appointmentDetailsSpecialistVideoButtonText: string;
-  /**
-   * Dette er en videotime
-   */
-  appointmentDetailsSpecialistVideoHeader: string;
-  /**
-   * Bestill time
-   */
-  appointmentBestillTime: string;
-  /**
    * Årsak til avbestilling
    */
   appointmentCancelHelsestasjonTimeMessageLabel: string;
@@ -8086,6 +8070,22 @@ behandlingsstedet ved eventuelle spørsmål.
    * Kontaktmuligheter
    */
   kommunalHelsetilbudKontaktmuligheterLabel: string;
+  /**
+   * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
+   */
+  appointmentDetailsSpecialistVideoTekst: string;
+  /**
+   * Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
+   */
+  appointmentDetailsSpecialistVideoButtonText: string;
+  /**
+   * Dette er en videotime
+   */
+  appointmentDetailsSpecialistVideoHeader: string;
+  /**
+   * Bestill time
+   */
+  appointmentBestillTime: string;
 };
 
 export type HNMinHelseDialog = {
@@ -10084,6 +10084,10 @@ Det er uansett viktig at du diskuterer dine ønsker om organdonasjon med dine n�
    * Bekreft nummeret
    */
   donorkort_nummer_validering_tittel: string;
+  /**
+   * Tabell over kontaktpersoner
+   */
+  donorkort_kontaktpersoner_table_caption: string;
 };
 
 export type HNMinHelseForskningJS = {
@@ -12561,9 +12565,29 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
    * HF/Institusjon
    */
   page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak: string;
+  /**
+   * Tabell som viser sykdomshistorikk
+   */
+  page_SykdomOgKritiskInfo_Table_Caption: string;
+  /**
+   * Tabell som viser besøkshistorikk
+   */
+  page_Besokshistorikk_Table_Caption: string;
 };
 
 export type HNMinHelseKJStrings = {
+  /**
+   * Årstallet er ikke gyldig
+   */
+  page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
+  /**
+   * Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår.
+   */
+  page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message: string;
+  /**
+   * Meldingen ble ikke sendt.
+   */
+  besokshistorikk_ReportError_Error_Title: string;
   /**
    * For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig.
    */
@@ -14807,18 +14831,6 @@ Du kan legge inn nye begrensninger når du ønsker det.
    *  registrert
    */
   mho_communication_registered: string;
-  /**
-   * Årstallet er ikke gyldig
-   */
-  page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
-  /**
-   * Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår.
-   */
-  page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message: string;
-  /**
-   * Meldingen ble ikke sendt.
-   */
-  besokshistorikk_ReportError_Error_Title: string;
 };
 
 export type HNMinHelseLegemidlerJS = {
@@ -15484,22 +15496,6 @@ export type HNMinHelseMsis = {
 
 export type HNMinHelseNavigation = {
   /**
-   * Prøvesvar
-   */
-  tile_Provesvar_Title: string;
-  /**
-   * Resultat av test for koronavirus
-   */
-  tile_Provesvar_Description: string;
-  /**
-   * Korona-verktøy
-   */
-  tile_Korona_Title: string;
-  /**
-   * Verktøy du kan bruke for å hjelpe til å stoppe spredningen av koronaviruset
-   */
-  tile_Korona_Description: string;
-  /**
    * Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk
    */
   tile_Resepter_Description: string;
@@ -15699,6 +15695,22 @@ export type HNMinHelseNavigation = {
    * Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet
    */
   tile_Velgbehandlingssted_Description: string;
+  /**
+   * Prøvesvar
+   */
+  tile_Provesvar_Title: string;
+  /**
+   * Resultat av test for koronavirus
+   */
+  tile_Provesvar_Description: string;
+  /**
+   * Korona-verktøy
+   */
+  tile_Korona_Title: string;
+  /**
+   * Verktøy du kan bruke for å hjelpe til å stoppe spredningen av koronaviruset
+   */
+  tile_Korona_Description: string;
 };
 
 export type HNMinHelseNHNStrings = {
@@ -17476,30 +17488,6 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   paminnelseFormidling_EmailMessage_Subject_Self: string;
   /**
-   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
-   */
-  videreformidling_TextMessage_Body_Self: string;
-  /**
-   * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
-   */
-  videreformidling_TextMessage_Body_Representation: string;
-  /**
-   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
-   */
-  videreformidling_EmailMessage_Body_Self: string;
-  /**
-   * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
-   */
-  videreformidling_EmailMessage_Body_Representation: string;
-  /**
-   * Varsel om nytt brev på helsenorge.no
-   */
-  videreformidling_EmailMessage_Subject_Self: string;
-  /**
-   * Varsel om nytt brev på helsenorge.no
-   */
-  videreformidling_EmailMessage_Subject_Representation: string;
-  /**
    * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
    */
   videreformidling_EmailMessage_Body_Representation_IkkeSensitivAvsender: string;
@@ -17523,6 +17511,30 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * ${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
    */
   videreformidling_TextMessage_Body_Self_IkkeSensitivAvsender: string;
+  /**
+   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
+   */
+  videreformidling_TextMessage_Body_Self: string;
+  /**
+   * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
+   */
+  videreformidling_TextMessage_Body_Representation: string;
+  /**
+   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
+   */
+  videreformidling_EmailMessage_Body_Self: string;
+  /**
+   * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
+   */
+  videreformidling_EmailMessage_Body_Representation: string;
+  /**
+   * Varsel om nytt brev på helsenorge.no
+   */
+  videreformidling_EmailMessage_Subject_Self: string;
+  /**
+   * Varsel om nytt brev på helsenorge.no
+   */
+  videreformidling_EmailMessage_Subject_Representation: string;
 };
 
 export type HNMinHelsePages = {
@@ -18240,16 +18252,28 @@ export type HNMinHelsePasientjournal = {
    */
   xDS_LokasjonFeil_SIHF: string;
   /**
-   * Lovisenberg Diakonale Sykehus AS
-   */
-  xDS_LokasjonFeil_LDS: string;
-  /**
    * Helse Nord
    */
   xDS_LokasjonFeil_HN: string;
+  /**
+   * Lovisenberg Diakonale Sykehus AS
+   */
+  xDS_LokasjonFeil_LDS: string;
 };
 
 export type HNMinHelsePasientreiserJS = {
+  /**
+   * Vil du delta i en brukerundersøkelse om Pasientreiser?
+   */
+  kvittering_undersokelseTittel: string;
+  /**
+   * Det tar ca. 3 minutter å svare på undersøkelsen.
+   */
+  kvittering_undersokelseIngress: string;
+  /**
+   * https://response.questback.com/pasientreiserhf/rur2020
+   */
+  kvittering_undersokelseLenke: string;
   /**
    * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter.
    */
@@ -24581,18 +24605,6 @@ export type HNMinHelsePasientreiserJS = {
    * Tapt arbeidsinntekt
    */
   krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT: string;
-  /**
-   * Vil du delta i en brukerundersøkelse om Pasientreiser?
-   */
-  kvittering_undersokelseTittel: string;
-  /**
-   * Det tar ca. 3 minutter å svare på undersøkelsen.
-   */
-  kvittering_undersokelseIngress: string;
-  /**
-   * https://response.questback.com/pasientreiserhf/rur2020
-   */
-  kvittering_undersokelseLenke: string;
 };
 
 export type HNMinHelsePasientReiserStrings = {
