@@ -11,5 +11,8 @@ export enum HeaderFooterEvents {
 
 export enum CmsBlocksEvents {
   setHiddenPromopanel = 'hn-webcomp-cms-blocks-event-sethiddenpromopanel',
-  hasMountedPromopanel = 'hn-webcomp-cms-blocks-event-hasmountedpromopanel',
+}
+
+export enum CommonEvents {
+  isMounted = 'hn-webcomp-common-ismounted',
 }
