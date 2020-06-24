@@ -7168,7 +7168,7 @@
     "berikingFailedOnSend": "Det er ikke mulig å sende inn skjemaet akkurat nå grunnet teknisk feil. Du kan lagre skjemaet og prøve igjen senere." , 
     "berikingFailedOnRetrievalBody": "Det er ikke mulig å sende inn skjemaet akkurat nå grunnet en teknisk feil. Du kan fortsatt fylle ut og lagre skjemaet, men må sende inn skjemaet senere." , 
     "berikingFailedOnRetrievalTitle": "Et problem har oppstått" , 
-    "skjemaOldVersion": "Du jobber på en gammel versjon. Det finnes en nyere versjon av skjemaet. Dette kan du finne ved å gå til Innboks." , 
+    "skjemaOldVersion": "Du jobber på en gammel versjon. Det finnes en nyere versjon av skjemaet. Dette kan du finne ved å gå til innboksen." , 
     "formSave": "Lagre" , 
     "ugyldigInputISkjema": "Skjemaet inneholder ugyldige tegn eller verdier. Sjekk at alt er riktig utfylt før du sender inn skjemaet." , 
     "validationNotAllowed": "er ikke tillatt" , 
