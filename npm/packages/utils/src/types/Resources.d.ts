@@ -368,7 +368,7 @@ export type HNMinHelseByttFastlegeJS = {
   */
   hjelpetrigger_bflUtekontor: string;
   /** 
-  * Denne kvitteringen er også tilgjengelig under Innboks.
+  * Denne kvitteringen er også tilgjengelig i innboksen.
   */
   bfl_ResultPage_Byttedialog_Print_Info: string;
   /** 
@@ -1460,7 +1460,7 @@ export type HNMinHelseByttFastlegeJS = {
   */
   hjelpetrigger_digitaleFastlegetjenester: string;
   /** 
-  * Du kan finne igjen kvitteringen under Innboks.
+  * Du kan finne igjen kvitteringen i innboksen.
   */
   bfl_ResultPage_VentelisteDialog_Receipt_PHAInfo: string;
   /** 
@@ -1591,7 +1591,7 @@ export type HNMinHelseByttFastlege = {
   */
   bFL_PDF_Receipt_FooterTextHelfo: string;
   /** 
-  * Du kan finne igjen kvitteringen under Innboks.
+  * Du kan finne igjen kvitteringen i innboksen.
   */
   bFL_PDF_Receipt_FooterTextPha: string;
   /** 
@@ -4222,7 +4222,7 @@ export type HNMinHelseDialogJS = {
   */
   appointmentRequestInfoConfirmationButtonText: string;
   /** 
-  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.
+  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem i innboksen.
   */
   appointmentRequestInfoConfirmationDescription: string;
   /** 
@@ -4634,7 +4634,7 @@ export type HNMinHelseDialogJS = {
   */
   conversationCancelGeneralPractitioner: string;
   /** 
-  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.
+  * Takk for din henvendelse. Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem i innboksen.
   */
   appointmentRescheduleConfirmationDescription: string;
   /** 
@@ -4786,7 +4786,7 @@ Du kan prøve på nytt senere eller kontakte oss på telefon.
   conversationLabelWaitingAppRec: string;
   /** 
   * <span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet.</span>
-<span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.</span>
+<span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem i innboksen.</span>
   */
   bookingSubmitChangeDraftSavedDescription: string;
   /** 
@@ -5347,19 +5347,19 @@ Finner du ingen tilgjengelige timer som passer deg, kan du kontakte legekontoret
   */
   changeBookingSubmitSuccessHeader: string;
   /** 
-  * Du finner informasjon om timebestillingen under Innboks.
+  * Du finner informasjon om timebestillingen i innboksen.
   */
   bookingSubmitSuccessBody: string;
   /** 
-  * Du finner sendte og mottatte meldinger under Innboks.
+  * Du finner sendte og mottatte meldinger i innboksen.
   */
   bookingSubmitOfflineSuccessBody: string;
   /** 
-  * Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.
+  * Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem i innboksen.
   */
   changeBookingSubmitSuccessBody: string;
   /** 
-  * Du finner informasjon om endringen under Innboks.
+  * Du finner informasjon om endringen i innboksen.
   */
   changeBookingSubmitOnlineSuccessBody: string;
   /** 
@@ -5461,11 +5461,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   coordinatorPanelFastlegeNoneRegistered_2: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger under Innboks.</p>
+  * <p>Du finner sendte og mottatte meldinger i innboksen.</p>
   */
   conversationSubmitConfirmationDescriptionBody: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.</p>
+  * <p>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem i innboksen.</p>
   */
   conversationSubmitConfirmationDescriptionBodySpecialist: string;
   /** 
@@ -5473,11 +5473,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationSubmitConfirmationDescriptionTitle: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
   */
   conversationSubmitReplyError: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger under Innboks.</p>
+  * <p>Du finner sendte og mottatte meldinger i innboksen.</p>
   */
   coordinatorMessageConfirmationDescriptionBody: string;
   /** 
@@ -5485,7 +5485,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   coordinatorMessageConfirmationDescriptionTitle: string;
   /** 
-  * <span>Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.</span>
+  * <span>Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.</span>
   */
   coordinatorMessageSubmitErrorBody: string;
   /** 
@@ -5998,7 +5998,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   changeAppointmentSpecialistFailTitle: string;
   /** 
-  * Du finner informasjon om endringen under Innboks.
+  * Du finner informasjon om endringen i innboksen.
   */
   changeBookingSubmitCalendarSuccessBody: string;
   /** 
@@ -6279,7 +6279,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   tilFastlegeHeading: string;
   /** 
-  * Du kan finne avbestillingen under Innboks.
+  * Du kan finne avbestillingen i innboksen.
   */
   appointmentCancelKommuneConfirmationPostfix: string;
   /** 
@@ -6870,13 +6870,13 @@ behandlingsstedet ved eventuelle spørsmål.
   appointmentCancelKommuneConfirmHeader: string;
   /** 
   * <p>Avbestillingen gjelder avtalen <strong>{0}.</strong></p>
-<p>Du kan finne avbestillingen under Innboks.</p>
+<p>Du kan finne avbestillingen i innboksen.</p>
   */
   appointmentCancelKommuneConfirmDescription: string;
   /** 
   * <p>Avbestillingen gjelder alle avtaler i perioden <strong>{0} til {1}:</strong></p>
 <ul><li>{2}, {3}</li></ul>
-<p>Du kan finne avbestillingen under Innboks.</p>
+<p>Du kan finne avbestillingen i innboksen.</p>
   */
   appointmentCancelKommuneTimeIntervalConfirmDescription: string;
   /** 
@@ -7376,7 +7376,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationSubmitConfirmationHeadingDraft: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
   */
   conversationSubmitConfirmationDescriptionDraft: string;
   /** 
@@ -7480,11 +7480,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonDraftEdit: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
   */
   commonSubmitConfirmationDraftDescription: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen under Innboks.
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
   */
   changeBookingSubmitSuccessDraftDescription: string;
   /** 
@@ -7516,7 +7516,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonEkontaktFastlegeSvarBeskrivelse: string;
   /** 
-  * Du finner sendte og mottatte meldinger under Innboks.
+  * Du finner sendte og mottatte meldinger i innboksen.
   */
   commonSubmitConfirmationDescription2: string;
   /** 
@@ -8428,7 +8428,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   persistentMessage_UnsupportedService_Title: string;
   /** 
-  * <span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet.</span><span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem under Innboks.</span>
+  * <span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet.</span><span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem i innboksen.</span>
   */
   clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Body: string;
   /** 
@@ -11769,7 +11769,7 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_Besokshistorikk_Lightbox_ReportError_Reciept_Close: string;
   /** 
-  * <p>Denne meldingen om feil vil du også finne under <strong>Innboks</strong> på Helsenorge.</p><p>Det er opprettet en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil i din besøkshistorikk. Henvendelsen blir behandlet av Helsedirektoratet, som eier Norsk Pasientregister (NPR), der opplysningene er hentet fra. De vil undersøke saken videre med sykehus og/eller spesialist, men det kan ta flere måneder før du ser eventuelle endringer i din besøkshistorikk. Hvis det er nødvendig for saksbehandlingen kan Direktoratet for e-helse gjøre oppslag i kjernejournalen din. Et endelig svarbrev vil bli sendt til din folkeregistrerte adresse når henvendelsen er ferdig behandlet.</p>
+  * <p>Denne meldingen om feil vil du også finne i innboksen på Helsenorge.</p><p>Det er opprettet en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil i din besøkshistorikk. Henvendelsen blir behandlet av Helsedirektoratet, som eier Norsk Pasientregister (NPR), der opplysningene er hentet fra. De vil undersøke saken videre med sykehus og/eller spesialist, men det kan ta flere måneder før du ser eventuelle endringer i din besøkshistorikk. Hvis det er nødvendig for saksbehandlingen kan Direktoratet for e-helse gjøre oppslag i kjernejournalen din. Et endelig svarbrev vil bli sendt til din folkeregistrerte adresse når henvendelsen er ferdig behandlet.</p>
   */
   page_Besokshistorikk_Lightbox_ReportError_Reciept_Description: string;
   /** 
@@ -12442,7 +12442,7 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_KI_CheckBox_ShowAll: string;
   /** 
-  * .<br>Når feilen er registrert vil du få en kvittering på siden <a href="/meldinger">Innboks</a>, og det vil opprettes en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil.
+  * .<br>Når feilen er registrert vil du få en kvittering i innboksen, og det vil opprettes en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil.
   */
   page_KJ_besokshistorikk_Desc2: string;
   /** 
@@ -13482,7 +13482,7 @@ Ved flytting sender du flyttemelding til <a href="http://skatteetaten.no/no/pers
   */
   mho_healthepisodes_receipt_description_no_phone: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger under <a href="/min-helse/meldinger">Innboks</a></p>
+  * <p>Du finner sendte og mottatte meldinger i <a href="/min-helse/meldinger">innboksen</a></p>
   */
   mho_healthepisodes_receipt_messages: string;
   /** 
@@ -28735,7 +28735,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   sendtConfirmation: string;
   /** 
-  * Sendte meldinger finner du igjen under <strong>Innboks</strong>.
+  * Sendte meldinger finner du igjen i innboksen.
   */
   sendtConfirmationText: string;
   /** 
@@ -28799,7 +28799,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   loadSkjemaErrorBody: string;
   /** 
-  * Skjemaet er lagret i Innboks
+  * Skjemaet er lagret i innboksen
   */
   lagreSkjemaBody: string;
   /** 
@@ -28815,7 +28815,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   lagreSkjemaTittel: string;
   /** 
-  * Ditt skjema mellomlagres i <strong>Innboks</strong> og du kan fortsette utfyllingen derfra senere.
+  * Ditt skjema mellomlagres i innboksen og du kan fortsette utfyllingen derfra senere.
   */
   mellomlagringsMessage: string;
   /** 
@@ -28883,7 +28883,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   confirmDiscretionTitle: string;
   /** 
-  * En kopi av skjemaet vil normalt bli lagret i <strong>Innboks</strong>. Du kan unngå denne lagringen hvis du vil.
+  * En kopi av skjemaet vil normalt bli lagret i innboksen. Du kan unngå denne lagringen hvis du vil.
   */
   confirmDiscretionText: string;
   /** 
