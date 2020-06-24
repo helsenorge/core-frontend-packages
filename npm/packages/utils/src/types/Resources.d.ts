@@ -15692,7 +15692,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Velgbehandlingssted_Title: string;
   /** 
-  * Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet
+  * Ventetider og informasjon om behandlingssteder.
   */
   tile_Velgbehandlingssted_Description: string;
   /** 

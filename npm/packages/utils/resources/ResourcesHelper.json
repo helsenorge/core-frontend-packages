@@ -3907,7 +3907,7 @@
     "tile_Vaksiner_Title": "Vaksiner" , 
     "tile_Vaksiner_Description": "Oversikt over alle vaksiner som er registrert på deg" , 
     "tile_Velgbehandlingssted_Title": "Velg behandlingssted" , 
-    "tile_Velgbehandlingssted_Description": "Ventetider til et utvalg behandlinger og informasjon som gjør det lettere å velge behandlingsstedet" , 
+    "tile_Velgbehandlingssted_Description": "Ventetider og informasjon om behandlingssteder." , 
     "tile_Provesvar_Title": "Prøvesvar" , 
     "tile_Provesvar_Description": "Resultat av test for koronavirus" , 
     "tile_Korona_Title": "Korona-verktøy" , 
