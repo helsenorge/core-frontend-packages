@@ -15504,7 +15504,7 @@ export type HNMinHelseNavigation = {
    */
   tile_Resepter_Title: string;
   /**
-   * Dine timer og avtaler med helsetjenesten
+   * Timer og avtaler med helsetjenesten.
    */
   tile_Timeavtaler_Description: string;
   /**
