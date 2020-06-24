@@ -554,7 +554,7 @@
     "dateAnd": "og" , 
     "dateMinute": "minutt" , 
     "dateMinutes": "minutter" , 
-    "breadCrumb_home": "Min helse" , 
+    "breadCrumb_home": "Forside" , 
     "breadCrumb_MinHelse": "Min helse" , 
     "footer_social_blog": "Les bloggen til helsenorge.no" , 
     "footer_disclaimer_endtext": "." , 
@@ -730,7 +730,7 @@
     "seAlleTjenester": "Se alle tjenester" , 
     "visFarreTjenester": "Vis færre tjenester" , 
     "tjenesterUtenforHelsenorge": "Tjenester utenfor Helsenorge" , 
-    "breadCrumb_Forsiden": "Til forsiden" 
+    "breadCrumb_Forsiden": "Forside" 
   },
   "HNMinHelseCommon": { 
     "bruksvilkarPopup_ErrorDescription": "Du kan prøve igjen senere." , 
