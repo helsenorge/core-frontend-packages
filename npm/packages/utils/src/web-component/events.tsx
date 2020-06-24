@@ -61,7 +61,7 @@ export const HNeventRefreshVarslingerOgHendelsesmeny = (): void => {
 };
 
 export const HNeventSetOnShowSignoutbox = (fn: (data: ShowSignOutBoxData) => SessionTimeoutAction): void => {
-  const webcompheader = document.querySelector('hn-webcomp-footer');
+  const webcompheader = document.querySelector('hn-webcomp-header');
   if (webcompheader && webcompheader.dispatchEvent) {
     webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.setonshowsignoutbox, { detail: { onShowSignOutBox: fn } }));
   }
