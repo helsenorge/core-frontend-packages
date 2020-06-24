@@ -10084,6 +10084,10 @@ Det er uansett viktig at du diskuterer dine ønsker om organdonasjon med dine n�
   * Bekreft nummeret
   */
   donorkort_nummer_validering_tittel: string;
+  /** 
+  * Tabell over kontaktpersoner
+  */
+  donorkort_kontaktpersoner_table_caption: string;
 };
 
 export type HNMinHelseForskningJS = { 
@@ -12565,6 +12569,10 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   * Tabell som viser sykdomshistorikk
   */
   page_SykdomOgKritiskInfo_Table_Caption: string;
+  /** 
+  * Tabell som viser besøkshistorikk
+  */
+  page_Besokshistorikk_Table_Caption: string;
 };
 
 export type HNMinHelseKJStrings = { 
@@ -18254,6 +18262,18 @@ export type HNMinHelsePasientjournal = {
 };
 
 export type HNMinHelsePasientreiserJS = { 
+  /** 
+  * Vil du delta i en brukerundersøkelse om Pasientreiser?
+  */
+  kvittering_undersokelseTittel: string;
+  /** 
+  * Det tar ca. 3 minutter å svare på undersøkelsen.
+  */
+  kvittering_undersokelseIngress: string;
+  /** 
+  * https://response.questback.com/pasientreiserhf/rur2020
+  */
+  kvittering_undersokelseLenke: string;
   /** 
   * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter.
   */
@@ -24585,18 +24605,6 @@ export type HNMinHelsePasientreiserJS = {
   * Tapt arbeidsinntekt
   */
   krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT: string;
-  /** 
-  * Vil du delta i en brukerundersøkelse om Pasientreiser?
-  */
-  kvittering_undersokelseTittel: string;
-  /** 
-  * Det tar ca. 3 minutter å svare på undersøkelsen.
-  */
-  kvittering_undersokelseIngress: string;
-  /** 
-  * https://response.questback.com/pasientreiserhf/rur2020
-  */
-  kvittering_undersokelseLenke: string;
 };
 
 export type HNMinHelsePasientReiserStrings = { 

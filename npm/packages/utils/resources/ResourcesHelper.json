@@ -2511,7 +2511,8 @@
     "donorkort_nummer_validering_feil_tittel": "Pårørende er registrert, men SMS ble ikke sendt" , 
     "donorkort_nummer_validering_feil_ingress": "Navnet på din pårørende er lagt til donorkortet, men nummeret du la inn ble ikke gjentatt riktig. \nSMS ble ikke sendt, fordi nummeret ikke ble bekreftet.<br/>\nDet er uansett viktig at du diskuterer dine ønsker om organdonasjon med dine nærmeste. Ta gjerne en prat med dem om det." , 
     "donorkort_nummer_validering_ingress": "Vennligst gjenta nummeret til {0} for å bekrefte at det er riktig." , 
-    "donorkort_nummer_validering_tittel": "Bekreft nummeret" 
+    "donorkort_nummer_validering_tittel": "Bekreft nummeret" , 
+    "donorkort_kontaktpersoner_table_caption": "Tabell over kontaktpersoner" 
   },
   "HNMinHelseForskningJS": { 
     "kliniskeStudierLinkText": "Her kan du lese mer om" , 
@@ -3136,7 +3137,8 @@
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Visits": "Besøk" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Fagenhet": "Fagenhet/Spesialitet" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak": "HF/Institusjon" , 
-    "page_SykdomOgKritiskInfo_Table_Caption": "Tabell som viser sykdomshistorikk" 
+    "page_SykdomOgKritiskInfo_Table_Caption": "Tabell som viser sykdomshistorikk" , 
+    "page_Besokshistorikk_Table_Caption": "Tabell som viser besøkshistorikk" 
   },
   "HNMinHelseKJStrings": { 
     "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title": "Årstallet er ikke gyldig" , 
@@ -4551,6 +4553,9 @@
     "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS" 
   },
   "HNMinHelsePasientreiserJS": { 
+    "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?" , 
+    "kvittering_undersokelseIngress": "Det tar ca. 3 minutter å svare på undersøkelsen." , 
+    "kvittering_undersokelseLenke": "https://response.questback.com/pasientreiserhf/rur2020" , 
     "reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone": "En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter." , 
     "reiseoversikt_refusjonsdetaljer_FORESATT_lokalMinstetakst_content": "Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen." , 
     "reiseoversikt_refusjonsdetaljer_FORESATT_minstetakstsone": "En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter." , 
@@ -6131,10 +6136,7 @@
     "krav_kostnadskoder_REFUSJON_TRANSPORT_REISEGODS_RETUR": "Transport av reisegods på retur reisen" , 
     "krav_kostnadskoder_RENGJORING_AV_BIL": "Rengjøring av bil på tur reisen" , 
     "krav_kostnadskoder_RENGJORING_AV_BIL_RETUR": "Rengjøring av bil på retur reisen" , 
-    "krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT": "Tapt arbeidsinntekt" , 
-    "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?" , 
-    "kvittering_undersokelseIngress": "Det tar ca. 3 minutter å svare på undersøkelsen." , 
-    "kvittering_undersokelseLenke": "https://response.questback.com/pasientreiserhf/rur2020" 
+    "krav_kostnadskoder_PASIENT_TAPT_ARBEIDSINNTEKT": "Tapt arbeidsinntekt" 
   },
   "HNMinHelsePasientReiserStrings": { 
     "pr_skuff_default": "{\"defaulttekst_overskrift\":\"Pasientreiser\",\"defaulttekst_brodtekst\":\"<p>Hovedregelen er at du får dekket utgiftene med en reisegodtgjørelse (standardsats) per kilometer, uansett hvilket transportmiddel du har brukt. Hvis reisen er på over 300 kilometer én vei, kan du få dekket reiseutgifter tilsvarende kostnaden for billigste rutegående transportmiddel. </p>\\n\\n<p>I tillegg kan du ha rett på å få dekket nødvendige tilleggsutgifter som for eksempel parkering, bom, kost, overnatting og reiseledsager, hvis du har dokumentasjon på at dette var nødvendig for deg. </p>\\n\\n<p>For å få dekket reiseutgiftene, forutsettes det at avstanden til behandlingsstedet er over ti kilometer én vei, og at reisen koster mer enn lokal minstetakst med rutegående transport. Merk at du kan søke om å få dekket reiser under ti kilometer, eller reiser i områder der det er offentlig transporttilbud til minstetakst, hvis du har dokumentasjon på at du var nødt til å bruke bil eller drosje av helsemessige årsaker. </p>\\n\\n<p>Du kan begynne på en søknad, for å fortsette senere. Søknaden autolagres underveis.</p>\\n\\n<p><a href=\\\"https://helsenorge.no/rettigheter/pasientreiser\\\" target=\\\"_blank\\\">Les mer om pasientreiser.</a></p>\\n\\n<p>Hvis du trenger hjelp, kan du ringe Pasientreiser på telefon 915 05 515.</p>\"}" , 
