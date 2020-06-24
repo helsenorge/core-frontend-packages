@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { ShowSignOutBoxData, SessionTimeoutAction } from '../types/entities';
 
 /* Events from header-footer and cms-blocks webcomp */
-import { HeaderFooterEvents, CmsBlocksEvents } from './constants';
+import { HeaderFooterEvents, CmsBlocksEvents, CommonEvents } from './constants';
 
 /* This is a custom interface to be able to access and typecheck path on Events */
 export interface WebComponentEvent<T extends EventTarget> extends Event {
@@ -75,16 +75,16 @@ export const HNeventSetHiddenPromopanel = (isHidden: boolean): void => {
   }
 };
 
-export const HNeventHasMountedPromopanel = (): void => {
-  const webcomppromopanel = document.querySelector('hn-webcomp-cms-block-promopanel');
+export const HNeventIsMicroFrontendMounted = (webcomponentName: string): void => {
+  const webcomponent = document.querySelector(webcomponentName);
 
-  if (webcomppromopanel && webcomppromopanel.dispatchEvent) {
-    webcomppromopanel.dispatchEvent(new CustomEvent(CmsBlocksEvents.hasMountedPromopanel));
+  if (webcomponent && webcomponent.dispatchEvent) {
+    webcomponent.dispatchEvent(new CustomEvent(CommonEvents.isMounted));
   }
 };
 
 export const HNaddEventListener = (
-  event: HeaderFooterEvents | CmsBlocksEvents,
+  event: HeaderFooterEvents | CmsBlocksEvents | CommonEvents,
   element: Element | null,
   handler: <T>(EvenCustomEvent: CustomEvent<T>) => void,
   passive = false
