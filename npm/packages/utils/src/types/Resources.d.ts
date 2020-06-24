@@ -15672,7 +15672,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Verktoy_Title: string;
   /** 
-  * Kurs og andre verktøy for læring og mestring
+  * Kurs og andre verktøy for læring og mestring.
   */
   tile_Verktoy_Description: string;
   /** 
