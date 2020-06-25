@@ -2882,7 +2882,526 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
    */
   regionPopup_HelseVest: string;
   /**
-g
+   * Du kan se pasientjournalen din i regionene Helse Nord og Helse Vest.
+   */
+  regionPopup_Intro: string;
+  /**
+   * Lukk
+   */
+  regionPopup_Lukk: string;
+  /**
+   * Antall nye meldinger
+   */
+  unreadMessageCount: string;
+  /**
+   * Lukk
+   */
+  helpBubbleClose: string;
+  /**
+   * Min helse
+   */
+  helsetjenesterTitle: string;
+  /**
+   * Innhold i ulike helseregistre
+   */
+  innsynstjenesterTitle: string;
+  /**
+   * Se alle tjenester
+   */
+  seAlleTjenester: string;
+  /**
+   * Vis færre tjenester
+   */
+  visFarreTjenester: string;
+  /**
+   * Tjenester utenfor Helsenorge
+   */
+  tjenesterUtenforHelsenorge: string;
+  /**
+   * Forside
+   */
+  breadCrumb_Forsiden: string;
+};
+
+export type HNMinHelseCommon = {
+  /**
+   * Du kan prøve igjen senere.
+   */
+  bruksvilkarPopup_ErrorDescription: string;
+  /**
+   * Det gikk ikke å lagre samtykket ditt.
+   */
+  bruksvilkarPopup_ErrorMessage: string;
+  /**
+   * Bruksvilkår for Min helse
+   */
+  bruksvilkarPopup_Header: string;
+  /**
+   * Logg ut
+   */
+  bruksvilkarPopup_LogOutButton: string;
+  /**
+   * Jeg samtykker
+   */
+  bruksvilkarPopup_OkButton: string;
+  /** 
+  * <p>
+Når du logger inn på helsenorge.no, kommer du til Min helse. Min helse gir deg sikre helsetjenester på nett. Her kan du se informasjon relatert til deg og helsen din, for eksempel hvem som er fastlegen din og egenandeler du har betalt. Dette er informasjon som hentes og vises når du er logget inn, men den lagres ikke og forsvinner fra helsenorge.no når du logger ut. Fra nå av vil imidlertid enkelte av dine opplysninger lagres fordi du kan velge å ta i bruk nye tjenester.  Derfor må du samtykke til bruksvilkårene før du fortsetter.</p>
+
+<p>
+Helsenorge.no behandler opplysninger om deg på en sikker måte og i henhold til personopplysningsloven. Når du logger inn, oppgir du fødselsnummeret ditt, og følgende informasjon vil bli lagret knyttet til dette:
+</p>
+
+<ul>
+<li>Hva du har samtykket til, og andre innstillinger du gjør som styrer bruken av tjenestene på helsenorge.no.</li>
+<li>Opplysninger du velger å registrere, slik som for eksempel oppsett av SMS-varsel, reservasjoner og fullmakter.</li>
+</ul>
+
+<p>
+I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, men ingen detaljer om bruken. Denne «Logg over bruk» kan du se ved å gå inn på din <i>Profil</i>.
+</p>
+
+<p><a href="https://helsenorge.no/om-min-helse?lesemodus=1" target="_blank" class="document">Les mer om tjenestene på Min helse</a><br/>                
+<a href="https://helsenorge.no/bruksvilkar-for-min-helse?lesemodus=1" target="_blank" class="document">Les mer om bruksvilkårene for Min helse</a>                
+ </p>
+  */
+  bruksvilkarPopup_Text: string;
+  /**
+   * Helse Nord
+   */
+  regionPopup_HelseNord: string;
+  /**
+   * Helse Vest
+   */
+  regionPopup_HelseVest: string;
+  /**
+   * Lukk
+   */
+  regionPopup_Lukk: string;
+  /**
+   * Velg helseregion
+   */
+  regionPopup_Heading: string;
+  /**
+   * Du kan se pasientjournalen din i regionene Helse Nord og Helse Vest.
+   */
+  regionPopup_Intro: string;
+};
+
+export type HNMinHelseContent = {
+  /**
+   *
+   */
+  page_Pasientreisersoknad_Desc: string;
+  /**
+   * Pasientreiser
+   */
+  page_Pasientreisersoknad_Title: string;
+  /**
+   *
+   */
+  page_Pasientreiser_Desc: string;
+  /**
+   * Pasientreiser
+   */
+  page_Pasientreiser_Title: string;
+  /**
+   * Dette er en oversikt over aktiviteter i kjernejournalen din. Du kan se hvem som har åpnet den, og om det er gjort registreringer eller endringer.
+   */
+  page_KJLogg_Desc: string;
+  /**
+   * Logg over bruk
+   */
+  page_KJLogg_Title: string;
+  /**
+   * Her vises en oversikt over offentlige helseregistre. Helseregistre bidrar til blant annet å ivareta og forbedre helsetjenester og behandlingstilbud. Du har rett til innsyn i hva som er registrert om deg i registrene.
+   */
+  page_Helseregistre_Desc: string;
+  /**
+   * Helseregistre
+   */
+  page_Helseregistre_Title: string;
+  /**
+   * Her kan du finne og bytte fastlege, og se hvem som er fastlegen din nå.
+   */
+  page_BytteFastlege_RollupLead: string;
+  /**
+   * Bytte fastlege
+   */
+  page_BytteFastlege_RollupTitle: string;
+  /** 
+  * På denne siden får du innsyn i pasientjournal ved sykehusene i valgt helseregion. &nbsp;<a href="https://helsenorge.no/rettigheter/pasientjournal?lesemodus=1" target="_blank" class="document">Les mer om innsyn i pasientjournal</a>
+<br/>
+<br/>
+Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformatikk: <a class="dictionary" href="https://nhi.no/ordliste/" target="_blank">Ordforklaringer</a>
+  */
+  page_DocumentList_Desc: string;
+  /**
+   * Dokumentoversikt
+   */
+  page_DocumentList_Title: string;
+  /**
+   *
+   */
+  group_ManageHierarchy_Description: string;
+  /**
+   * Min Helse-behandle hierarki
+   */
+  group_ManageHierarchy_Title: string;
+  /**
+   *
+   */
+  group_Members_Description: string;
+  /**
+   * Min Helse-medlemmer
+   */
+  group_Members_Title: string;
+  /**
+   *
+   */
+  group_Owners_Description: string;
+  /**
+   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest og Helse Nord tilgjengelig.
+   */
+  page_Referrals_Desc: string;
+  /**
+   * Henvisninger til spesialisthelsetjenesten
+   */
+  page_Referrals_Title: string;
+  /**
+   *
+   */
+  page_Pdf_Desc: string;
+  /**
+   * Pdf
+   */
+  page_Pdf_Title: string;
+  /**
+   * Her vises dokumenter som er lagret på helsenorge.no. Dette kan være vedlegg som er utvekslet i meldinger til og fra helsetjenesten, eller journaldokumenter du har kopiert fra pasientjournalen din. Det kan finnes mer oppdaterte versjoner av journaldokumentene for eksempel hos din behandler.
+   */
+  page_Archive_Desc: string;
+  /**
+   * Dokumenter
+   */
+  page_Archive_Title: string;
+  /** 
+  * Denne siden gir deg innsyn i kritisk helseinformasjon som legen i samråd med deg har registrert i din kjernejournal. Det er viktig at helsepersonell kjenner til disse opplysningene ved valg av behandling og undersøkelser. 
+<br/><br/>
+<b>Er det feil eller mangler i opplysningene, ta kontakt med din fastlege.</b>
+  */
+  page_KJCriticalInfo_Desc: string;
+  /**
+   * Kritisk informasjon
+   */
+  page_KJCriticalInfo_Title: string;
+  /**
+   * Her finner du dine registrerte egenandeler for helsetjenester både for egenandelstak 1 og for egenandelstak 2
+   */
+  page_Egenandeler_Desc: string;
+  /**
+   * Frikort og egenandeler
+   */
+  page_Egenandeler_Title: string;
+  /**
+   * På denne siden ser du hvilke sykehusansatte som har arbeidet i pasientjournalen din. Hvis den ansatte har åpnet journaldokumenter, finner du en liste med disse dokumentene under "Handlinger".
+   */
+  page_Tilgangslogg_Desc: string;
+  /**
+   * Tilgangslogg
+   */
+  page_Tilgangslogg_Title: string;
+  /**
+   * Her samles tjenester du kan benytte for å følge opp din helse. Flere er under utvikling. Du ser også tjenester som er under utprøving i utvalgte områder i Norge. Enkelte tjenester kan du benytte på vegne av dine barn og de som har gitt deg fullmakt. Slik tilgang vil bli tilgjengelig for flere tjenester etter hvert.
+   */
+  page_Start_Desc: string;
+  /**
+   *
+   */
+  group_Approvers_Description: string;
+  /**
+   * Min Helse-godkjennere
+   */
+  group_Approvers_Title: string;
+  /**
+   *
+   */
+  group_Designers_Description: string;
+  /**
+   * Min Helse-utformere
+   */
+  group_Designers_Title: string;
+  /** 
+  * <section class="section">
+<div class="atom_messagebox lvl1 alert">
+<div class="content-wrapper">
+<div class="content">
+<strong class="atom_messagebox__heading">Du har ikke tilgang til denne tjenesten</strong>
+<p>Du har forsøkt å bruke en tjeneste du ikke har tilgang til via gjeldende fullmakt. Kontakt den som har gitt deg fullmakten og be om en utvidet fullmakt for å få tilgang til tjenesten på deres vegne.<br/><a href="/">Gå til Min helse for å se hvilke tjenester du har tilgang til</a>.</p>
+</div>
+</div>
+</div>
+</section>
+  */
+  page_AskForAccessToService_Desc: string;
+  /**
+   * Bruk av helsetjenester og ordninger
+   */
+  page_BrukAvHelsetjenester_Title: string;
+  /**
+   * Dette er kjernejournalen din. For å se innholdet i din kjernejournal klikk på en av lenkene over. Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk. Du kan registrere dine sykdommer og viktige kontaktpersoner i kjernejournal ved å gå til <a href="/min-helse/Egne-registreringer-i-kjernejournal">Egne registreringer</a> i kjernejournal.
+   */
+  page_KJAboutMe_Description: string;
+  /**
+   * Om deg og din kjernejournal
+   */
+  page_KJAboutMe_Title: string;
+  /**
+   * Praktisk informasjon
+   */
+  page_DigitalDialogGP_Info_Title: string;
+  /**
+   * Fastlege/Praktisk-informasjon.aspx
+   */
+  page_DigitalDialogGP_Info_Url: string;
+  /**
+   * Fastlege/Tidslinje.aspx
+   */
+  page_DigitalDialogGP_Name: string;
+  /**
+   * Tjenester hos fastlegen
+   */
+  page_DigitalDialogGP_Title: string;
+  /**
+   * Fastlege/Tidslinje.aspx
+   */
+  page_DigitalDialogGP_Url: string;
+  /**
+   * <p class="ingress">Her finner du en samlet oversikt over dine resepter. Opplysningene hentes fra reseptformidleren og din kjernejournal, og vil være tydelig merket med kilden. Fra reseptformidleren er det kun aktive e-resepter som vises, mens fra kjernejournalen vises resepter, inkludert papir- og telefonresepter, tre år tilbake i tid.</p>
+   */
+  page_Prescription_Desc: string;
+  /**
+   * Resepter
+   */
+  page_Prescription_Title: string;
+  /**
+   * Resepter.aspx
+   */
+  page_Prescription_Url: string;
+  /**
+   * Resepter
+   */
+  page_My_Prescription_Title: string;
+  /**
+   * Mine-resepter.aspx
+   */
+  page_My_Prescription_Url: string;
+  /**
+   *
+   */
+  site_Description: string;
+  /**
+   * Min Helse
+   */
+  site_Title: string;
+  /**
+   * Samtykker til PHA og innbyggerprofil
+   */
+  webPart_CreateUserProfile_Desc: string;
+  /**
+   * Dialogtjenester samtykker
+   */
+  webPart_CreateUserProfile_Title: string;
+  /**
+   * Varselprofil webdel
+   */
+  webPart_NotificationProfile_Desc: string;
+  /**
+   * Verselprofil
+   */
+  webPart_NotificationProfile_Title: string;
+  /**
+   * Personverninnstillinger
+   */
+  page_PrivacySettings_Title: string;
+  /**
+   * Fullmakter
+   */
+  page_Fullmakter_Title: string;
+  /**
+   * Min helse
+   */
+  page_Start_Title: string;
+  /**
+   * Tilgangstyring av helseopplysninger
+   */
+  page_Tilgangsstyring_Title: string;
+  /**
+   * Du kan selv gjøre endringer i egne eller andres tilgang til dine tjenester og helseopplysninger.
+   */
+  page_Tilgangsstyring_Desc: string;
+  /**
+   * Personverninnstillinger
+   */
+  page_Tilgangsstyring_NavigateBackLinkTitle: string;
+  /**
+   * /personverninnstillinger
+   */
+  page_Tilgangsstyring_NavigateBackLinkURL: string;
+  /**
+   * Tilgangstyring av helseopplysninger
+   */
+  page_TilgangsstyringReseptformidleren_NavigateBackLinkTitle: string;
+  /**
+   * /tilgangsstyring-av-helseopplysninger
+   */
+  page_TilgangsstyringReseptformidleren_NavigateBackLinkURL: string;
+  /**
+   * Reseptformidleren
+   */
+  page_TilgangsstyringReseptformidleren_Title: string;
+  /**
+   * Du kan begrense helsepersonells tilgang til legemiddelinformasjonen din, slik at de ikke kan se hvilke legemidler du bruker. Du må imidlertid være oppmerksom på at dersom du begrenser tilgangen kan det hindre deg i å motta forsvarlig helsehjelp.
+   */
+  page_TilgangsstyringReseptformidleren_Desc: string;
+  /**
+   * Søk Helfo om refusjon
+   */
+  page_Okonomi_Title: string;
+  /**
+   * Du sender søknad til Helfo ved å bruke et skjema i Altinn.
+   */
+  page_Okonomi_Desc: string;
+  /**
+   * Meldingssystem for smittsomme sykdommer (MSIS)
+   */
+  page_msis_Title: string;
+  /**
+   * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+   */
+  page_msis_Desc: string;
+  /**
+   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
+   */
+  page_Dokumenter_Desc: string;
+  /**
+   * Forskning i forbindelse med kliniske studier har som formål å undersøke effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.<br/>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden.
+   */
+  page_Forskning_Desc: string;
+  /**
+   * Forskning
+   */
+  page_Forskning_Title: string;
+  /**
+   * Her kan du finne og bytte fastlege, og se hvem som er fastlegen din nå.
+   */
+  page_BytteFastlege_MetaDesc: string;
+  /**
+   * Her finner du tjenester som hjelper deg å følge opp din egen helse. Etter hvert kan du benytte flere tjenester på vegne av dine barn og de som har gitt deg fullmakt.
+   */
+  page_Start_MetaDesc: string;
+  /**
+   * Sykdom og kritisk informasjon
+   */
+  page_SykdomOgKritiskInfo_Title: string;
+  /**
+   * Her vises helseopplysninger som helsepersonell skal kjenne til ved undersøkelser og behandling.
+   */
+  page_SykdomOgKritiskInfo_Desc: string;
+  /**
+   * Kjernejournal - innsyn
+   */
+  page_Kjernejournal_Innsyn_Title: string;
+  /**
+   * Her ser du alt som er registrert om deg i din kjernejournal.
+   */
+  page_Kjernejournal_Innsyn_Desc: string;
+  /**
+   * Nasjonalt vaksinasjonsregister SYSVAK
+   */
+  page_Sysvak_Title: string;
+  /**
+   * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
+   */
+  page_Sysvak_Desc: string;
+  /**
+   * til Helseregistre
+   */
+  page_Helseregistre_NavigateBackLinkTitle: string;
+  /**
+   * /helseregistre
+   */
+  page_Helseregistre_NavigateBackLinkURL: string;
+  /**
+   * Medisinsk fødselsregister (MFR)
+   */
+  page_Mfr_Title: string;
+  /**
+   * Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.
+   */
+  page_Mfr_Desc: string;
+  /**
+   * Innsyn
+   */
+  page_Visregisterinnsyn_Title: string;
+  /**
+   * Donorkort
+   */
+  page_Donorkort_Title: string;
+  /**
+   * Her kan du opprette et digitalt donorkort i kjernejournalen din. Du bør også fortelle dine nærmeste om ditt ønske om å være organdonor. Les mer på <a href="https://organdonasjon.no/donorkort/" class="external" target="_blank">donorkort.no</a>.
+   */
+  page_Donorkort_Desc: string;
+  /**
+   * Reseptformidleren er en nasjonal database for elektroniske resepter, og inneholder blant annet  informasjon om hvilke legemidler du har resept på.
+   */
+  page_Reseptformidleren_Desc: string;
+  /**
+   * Reseptformidleren
+   */
+  page_Reseptformidleren_Title: string;
+  /**
+   * Her finner du en samlet oversikt over dine resepter. Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og din <a href='/kjernejournal-innsyn'>kjernejournal</a>, og vil være tydelig merket med kilden. Fra reseptformidleren er det kun aktive e-resepter som vises, mens fra kjernejournalen vises resepter, inkludert papir- og telefonresepter, tre år tilbake i tid.
+   */
+  page_My_Prescription_Description: string;
+  /**
+   * Legemidler
+   */
+  page_Legemidler_Title: string;
+  /**
+   * Her finner du en samlet oversikt over dine resepter på legemidler og andre varer. Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og din <a href='/kjernejournal-innsyn'>kjernejournal</a>, hvor du også kan se logg over bruk.
+   */
+  page_Legemidler_Description: string;
+  /**
+   * Opplysninger om hvilke sykdommer du er vaksinert mot og når vaksinen er satt, er basert på innrapportering fra vaksinasjonsstedet.
+   */
+  page_Vaksiner_Desc: string;
+  /**
+   * Test registerinnsyn
+   */
+  page_TestRegisterInnsyn_Title: string;
+  /**
+   * Vaksiner
+   */
+  page_Vaksiner_Title: string;
+  /**
+   * Samvalg
+   */
+  page_Samvalg_Title: string;
+  /**
+   * Samvalg
+   */
+  page_Samvalg_Desc: string;
+  /**
+   * Beriking av skjema
+   */
+  page_BerikingAvSkjema_Title: string;
+  /**
+   * Beriking av Skjema
+   */
+  page_BerikingAvSkjema_Desc: string;
+  /**
+   * Skjemautfyller
+   */
   page_Skjemautfyller_Title: string;
   /**
    * Skjemautfyller
@@ -3140,6 +3659,7 @@ export type HNMinHelseDialogGPStrings = {
    * Ansvarlig jordmor
    */
   webPart_Appointment_RelationToPatient_14: string;
+  /**
    * Vikar for fastlege
    */
   webPart_Appointment_RelationToPatient_15: string;
@@ -3598,7 +4118,64 @@ export type HNMinHelseDialogJS = {
    */
   bookingSend: string;
   /**
-/
+   * Send
+   */
+  bookingSendChange: string;
+  /**
+   * Ansvarlig jordmor
+   */
+  bookingAnsvarligJordmor: string;
+  /**
+   * Behandlingsansvarlig lege
+   */
+  bookingBehandlingsansvarligLege: string;
+  /**
+   * Faglig ansvarlig for vedtak i psykisk helsevern
+   */
+  bookingFagligAnsvarligPsykiskHelsevern: string;
+  /**
+   * Fastlege
+   */
+  bookingFastlege: string;
+  /**
+   * Forløpskoordinator kreft
+   */
+  bookingForlopskoordinatorKreft: string;
+  /**
+   * Velg hvilken behandler du ønsker
+   */
+  bookingHiddenExplanation: string;
+  /**
+   * Informasjonsansvarlig
+   */
+  bookingInformasjonsansvarlig: string;
+  /**
+   * Innleggende lege
+   */
+  bookingInnleggendeLege: string;
+  /**
+   * {"defaulttekst_overskrift":"Om timeavtaler","defaulttekst_brodtekst":"<p>\nHer kan du se timeavtaler hos:\n</p>\n<ul>\n<li>fastleger som tilbyr tjenester på Helsenorge: Både framtidige og tidligere timer</li>\n<li>sykehus i Helse Vest: Bare framtidige timer. Du kan også sende meldinger.</li>\n<li>sykehus i Helse Midt: Både framtidige og tidligere timer</li>\n<li>enkelte avdelinger ved sykehus i Helse Nord: Noen avdelinger viser framtidige timer. Du kan også sende meldinger.</li>\n<li>kommunale helse- og omsorgstjenester i enkelte kommuner og bydeler: Både framtidige og tidligere timer</li>\n<li>enkelte andre aktører, for eksempel Studentsamskipnaden i Oslo: Både framtidige og tidligere timer</li>\n</ul>\n\n<p>\nHvis du har foreldreansvar for barn mellom 12 og 16 år vil du også se deres timeavtaler med fastlegen og kommunal helse- og omsorgstjeneste, men ikke timeavtaler fra spesialisthelsetjenesten.\n</p>\n\n<p>\nMerk at telefonkonsultasjoner fra Helse Vest ikke vil vises i Timeavtaler-tjenesten.\n</p>\n\n<p><a href=\"https://helsenorge.no/om-min-helse/timeavtaler\">Her kan du lese mer om Timeavtaler</a>.</p>"}
+   */
+  hjelpekontekst_timeavtale: string;
+  /**
+   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Forberedelser til timen","seksjonstekst_brodtekst":"<p>Mer informasjon?</p><p>I innkallingsbrevet finner du mye nyttig informasjon. Får du ikke svar på det du lurer på, kan du sende en elektronisk melding direkte til avdelingen, eller ta kontakt per telefon.</p><p>Hvor lenge varer timen?</p><p>Noen ganger står det oppført hvor lenge timeavtalen din skal vare. Timen kan vare både kortere eller lenger enn det som står angitt, avhengig av om du må gjennomføre ekstra undersøkelser eller prøver.</p><p>Kan du ikke møte?</p><p>Dersom du ikke møter opp og ikke har varslet oss senest 24 timer på forhånd, må du betale gebyr. Dette gjelder selv om du har frikort eller av andre årsaker er fritatt for egenandel. Har du ikke anledning til å møte, må du ta kontakt snarest mulig, enten ved å sende en elektronisk melding, eller per telefon. Vær oppmerksom på at endring av timen kan medføre lengre ventetid.</p><em><p>Når alle møter, blir ventetida kortere.</p></em>"}
+   */
+  hjelpetrigger_timeavtaleForberedelser: string;
+  /**
+   * {"defaulttekst_overskrift":"Om henvisninger","defaulttekst_brodtekst":"<p>\nDet er to frister du som pasient må forholde deg til:\n</p>\n\n<h3>\nVurderingsfrist:\n</h3>\n\n<p>\nDet skal gå maksimum 10 virkedager fra en henvisning er mottatt i spesialisthelsetjenesten til den er vurdert.\n</p>\n\n<h3>\nFrist for helsehjelp:\n</h3>\n\n<p>\nVurderingen vil få ett av følgende utfall:\n</p>\n\n<ul>\n<li>Du får rett til nødvendig helsehjelp i spesialisthelsetjenesten, og du får en fristdato for når spesialisthelsetjenesten senest skal ha startet helsehjelpen, enten i form av behandling eller i form av utredning.</li>\n<li>Vurderingen konkluderer med at du ikke har behov for helsehjelp fra spesialisthelsetjenesten. Det innebærer at vi har vurdert dine behov for helsehjelp til å bli best ivaretatt av fastlegen eller andre deler av helsetjenesten.</li>\n</ul>\n\n<p>\nInformasjon om vurderingen, frister og rettigheter vil du motta per brev.\n</p>\n\n<p>\nFor henvisninger fra Helse Vest vil du kun se informasjon om henvisninger mottatt fra og med 01.01.2014. Helse Nord viser informasjon om henvisninger så langt tilbake som det er teknisk mulig. Det kan av tekniske årsaker være informasjon som ikke vises.\n</p>\n\n<p>\nStatus for en henvisning for barn i Helse Nord vil vises i Henvisninger, men det vil ta ti dager før henvisningsbrevet vises i Pasientjournal.\n</p>\n\n<p>\n<a href=\"https://helsenorge.no/om-min-helse/henvisninger\">Her kan du lese mer om Henvisninger</a>.\n</p>"}
+   */
+  hjelpekontekst_henvisningInfo: string;
+  /**
+   * {"defaulttekst_overskrift":"Om innboks","defaulttekst_brodtekst":"<p>\nHer vil du få oversikt over alle meldinger du har fått og sendt. Du kan også skrive melding til de av dine helsekontakter som tilbyr digital dialog. \n</p>\n\n<p>\nForeløpig kan du motta og sende meldinger knyttet til:\n<ul>\n<li>fastleger som tilbyr digitale tjenester</li>\n<li>forløpskoordinator og ulike helsekontakter i Helse Vest</li>\n<li>timer fra Helse Vest</li>\n<li>helse- og omsorgstjenester i utvalgte kommuner</li>\n<li>resultater fra helseundersøkelser eller prøveprosjekter du deltar i</li>\n</ul>\n</p>\n\n<p>\nI tillegg kan du blant annet se kvitteringer for bytte av fastlege, meldinger om fullmakt eller få svar fra saksbehandler hvis du for eksempel har meldt feil i kjernejournal. \n</p>\n<h3>\nMeldinger om timeavtaler\n</h3>\n\n<p>\nSkal du sende en melding angående en time i Helse Vest, må du gå til den timen i Timeavtaler.\n</p>"}
+   */
+  hjelpekontekst_meldingerTimeavtaler: string;
+  /**
+   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Henvisningsstatus","seksjonstekst_brodtekst":"​​​<p>En henvisning kan ha ​​ulike statuser. ​​Her kan du se en oversikt over hvilke statuser henvisningen kan ha og hva de betyr.</p>            <dl>            <dt>Til vurdering</dt>            <dd>Henvisningen er mottatt og vil bli vurdert innen gjeldende frister.</dd>            <dt>Vurdering pågår</dt>            <dd>Henvisningen er mottatt og utredning av rett til helsehjelp pågår.</dd>            <dt>Vurdert</dt>            <dd>Henvisningen er vurdert. Tidspunkt for time/behandling vil bli tildelt.</dd>            <dt>Time tildelt</dt>            <dd>Tidspunkt for time/behandling er tildelt.</dd>            <dt>Behandling pågår</dt>            <dd>Behandlingen din relatert til denne henvisningen er startet.</dd>            <dt>Behandling avsluttet</dt>            <dd>Behandlingen din relatert til denne henvisningen er avsluttet. Kontakt fastlege eller henviser ved spørsmål.</dd>            <dt>Avsluttet</dt>            <dd>Henvisningen er avsluttet. Kontakt fastlege eller henviser ved spørsmål.</dd>            <dt>Videresendt</dt>            <dd>Henvisningen er videresendt til et annet behandlingssted. Henvisningen beholder sin plass   i køen. Kontakt fastlege eller henviser ved spørsmål.</dd>            <dt>Avvist</dt>            <dd>Henvisningen er vurdert, men avvist. Kontakt fastlege eller henviser ved spørsmål.</dd>\n<dt>Forespørsel besvart</dt> \n<dd>Behandlingsstedet har besvart en forespørsel i forbindelse med din behandling. Kontakt fastlege eller henviser ved spørsmål.</dd>            </dl>"}
+   */
+  hjelpetrigger_henvisningsstatus: string;
+  /**
+   * Bekreftelsen ble ikke registrert
+   */
   confirmAppointmentFailedTitle: string;
   /**
    * Prøv på nytt senere, eller kontakt behandlingsstedet.
@@ -3652,7 +4229,8 @@ export type HNMinHelseDialogJS = {
    * Meldingen er sendt
    */
   appointmentRequestInfoConfirmationHeading: string;
-  /** 
+  /**
+   * Du vil få svar innen to arbeidsdager.
    */
   appointmentRequestInfoDescription: string;
   /**
@@ -3858,7 +4436,64 @@ export type HNMinHelseDialogJS = {
   /**
    * Instituerende lege
    */
-*
+  bookingInstituerendeLege: string;
+  /**
+   * Journalansvarlig
+   */
+  bookingJournalansvarlig: string;
+  /**
+   * Koordinator Individuell plan
+   */
+  bookingKoordinatorIndividuellPlan: string;
+  /**
+   * Koordinator (spesialisthelsetjenesteloven) Spesialisthelsetjenesteloven § 2-5a
+   */
+  bookingKoordinatorSpesialisthelsetjenesteLoven: string;
+  /**
+   * Velg behandler
+   */
+  bookingPeoplepickerHeader: string;
+  /**
+   * Primærkontakt
+   */
+  bookingPrimarkontakt: string;
+  /**
+   * Turnuslege
+   */
+  bookingTurnuslege: string;
+  /**
+   * Ukjent
+   */
+  bookingUkjent: string;
+  /**
+   * Utskrivende lege
+   */
+  bookingUtskrivendeLege: string;
+  /**
+   * i din egen eller en annen kommune dersom det er ledige plasser der, eller kontakte Veiledning for helsenorge.no (
+   */
+  coordinatorPanelFastlegeNoneRegistered_3: string;
+  /**
+   * ) for mer informasjon og hjelp.
+   */
+  coordinatorPanelFastlegeNoneRegistered_4: string;
+  /**
+   * For øyeblikket kan det være at ikke alle kontaktene dine vises
+   */
+  healthContactsWarning: string;
+  /**
+   * Prøv igjen senere.
+   */
+  healthContactsWarningDesc: string;
+  /**
+   * Sletter fil
+   */
+  attachmentUploadDeleteProcessing: string;
+  /**
+   * Telefonnummer:
+   */
+  servicepanelInfoPhoneNumberMobile: string;
+  /**
    * På timeavtaler er det bare utkast som kan slettes, ikke meldinger som er sendt eller mottatt.
    */
   conversationConfirmPreventDeleteBody: string;
@@ -3912,7 +4547,8 @@ export type HNMinHelseDialogJS = {
   pdfCompatibilityBody: string;
   /**
    * Avbryt
-   */m
+   */
+  pdfCompatibilityCancel: string;
   /**
    * Last ned
    */
@@ -11929,13 +12565,13 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
    * HF/Institusjon
    */
   page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak: string;
-  /** 
-  * Logg over bruk
-  */
+  /**
+   * Logg over bruk
+   */
   page_logg_tableCaption: string;
-  /** 
-  * Tabell som viser sykdomshistorikk
-  */
+  /**
+   * Tabell som viser sykdomshistorikk
+   */
   page_SykdomOgKritiskInfo_Table_Caption: string;
   /**
    * Tabell som viser besøkshistorikk
@@ -15067,9 +15703,9 @@ export type HNMinHelseNavigation = {
    * Prøvesvar
    */
   tile_Provesvar_Title: string;
-  /** 
-  * Resultat av test for koronavirus.
-  */
+  /**
+   * Resultat av test for koronavirus.
+   */
   tile_Provesvar_Description: string;
   /**
    * Koronaverktøy
