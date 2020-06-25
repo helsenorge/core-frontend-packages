@@ -90,3 +90,21 @@ export function getSamtykkeStatus(): SamtykkeStatus {
   }
   return SamtykkeStatus.Default;
 }
+
+export const getSamtykkeLevel = (): SamtykkeLevel => {
+  if (harSamtykket(PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste)) {
+    return SamtykkeLevel.Helsetjeneste;
+  }
+  if (harSamtykket(PersonvernInnstillingDefinisjonGuids.InnsynIPasientjournal)) {
+    return SamtykkeLevel.Journalinnsyn;
+  }
+  if (harSamtykket(PersonvernInnstillingDefinisjonGuids.InnsynIOpplysningerRegistrertOmMeg)) {
+    return SamtykkeLevel.Registerinnsyn;
+  }
+  return SamtykkeLevel.None;
+};
+
+export const ikkeSamtykketTilHelsenorge = (): boolean => {
+  const samtykkeLevel = getSamtykkeLevel();
+  return samtykkeLevel === null || samtykkeLevel === SamtykkeLevel.None;
+};

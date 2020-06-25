@@ -1,12 +1,19 @@
 import {} from 'jest';
-import { hasDigitaleHelsetjenesteSamtykke, hasPasientreiserSamtykke, getSamtykkeStatus, SamtykkeStatus } from '../samtykke-util';
-import { Samtykke } from '../generated-types/minhelseentities';
+import {
+  hasDigitaleHelsetjenesteSamtykke,
+  hasPasientreiserSamtykke,
+  getSamtykkeStatus,
+  SamtykkeStatus,
+  ikkeSamtykketTilHelsenorge,
+} from '../samtykke-util';
+import { Samtykke, SamtykkeLevel } from '../types/entities';
 import { PersonvernInnstillingDefinisjonGuids } from '../constants/personvernInnstillingDefinisjonIds';
+import { setCurrentSamtykkeLevel } from '../samtykke-util-test-util';
 
 declare global {
   interface Window {
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    HN: any;
+    HN?: any;
   }
 }
 window.HN = window.HN || {};
@@ -120,6 +127,31 @@ describe('SamtykkeUtil', () => {
           expect(getSamtykkeStatus()).toBe(SamtykkeStatus.Bruksvilkar);
         });
       });
+    });
+  });
+  window.HN.Commands.__GetTjenesterMedTilgang__ = window.HN.Commands.__GetTjenesterMedTilgang__ || {};
+  describe('Når innbygger ikke har samtykket til helsenorge', () => {
+    it('Så forteller hjelpefunksjonen at innbygger ikke har samtykket', () => {
+      window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker = [];
+      expect(ikkeSamtykketTilHelsenorge()).toBe(true);
+    });
+  });
+  describe('Når innbygger har samtykket fullt til helsenorge', () => {
+    it('Så forteller hjelpefunksjonen at innbygger har samtykket', () => {
+      setCurrentSamtykkeLevel(SamtykkeLevel.Helsetjeneste);
+      expect(ikkeSamtykketTilHelsenorge()).toBe(false);
+    });
+  });
+  describe('Når innbygger har samtykket med kun Journalinnsyn til helsenorge', () => {
+    it('Så forteller hjelpefunksjonen at innbygger har samtykket', () => {
+      setCurrentSamtykkeLevel(SamtykkeLevel.Journalinnsyn);
+      expect(ikkeSamtykketTilHelsenorge()).toBe(false);
+    });
+  });
+  describe('Når innbygger har samtykket kun til registerinnsyn til helsenorge', () => {
+    it('Så forteller hjelpefunksjonen at innbygger har samtykket', () => {
+      setCurrentSamtykkeLevel(SamtykkeLevel.Registerinnsyn);
+      expect(ikkeSamtykketTilHelsenorge()).toBe(false);
     });
   });
 });
