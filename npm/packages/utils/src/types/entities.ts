@@ -219,3 +219,8 @@ export enum SessionTimeoutAction {
   RequestExtension = 1,
   RequestLogout = 2,
 }
+export enum PersonverninnstillingKategori {
+  Samtykke = 1,
+  Reservasjon = 2,
+  Tilgangsbegrensning = 3,
+}
