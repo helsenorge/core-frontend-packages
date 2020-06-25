@@ -3910,7 +3910,7 @@
     "tile_Velgbehandlingssted_Title": "Velg behandlingssted" , 
     "tile_Velgbehandlingssted_Description": "Ventetider og informasjon om behandlingssteder." , 
     "tile_Provesvar_Title": "Prøvesvar" , 
-    "tile_Provesvar_Description": "Prøvesvar fra spesialisthelsetjenesten." , 
+    "tile_Provesvar_Description": "Resultat av test for koronavirus." , 
     "tile_Korona_Title": "Koronaverktøy" , 
     "tile_Korona_Description": "Hjelp til å stoppe spredningen av viruset." 
   },

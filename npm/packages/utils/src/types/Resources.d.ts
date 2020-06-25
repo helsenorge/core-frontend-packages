@@ -15704,7 +15704,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Title: string;
   /** 
-  * Prøvesvar fra spesialisthelsetjenesten.
+  * Resultat av test for koronavirus.
   */
   tile_Provesvar_Description: string;
   /** 
