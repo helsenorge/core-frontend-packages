@@ -12566,6 +12566,10 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak: string;
   /** 
+  * Logg over bruk
+  */
+  page_logg_tableCaption: string;
+  /** 
   * Tabell som viser sykdomshistorikk
   */
   page_SykdomOgKritiskInfo_Table_Caption: string;

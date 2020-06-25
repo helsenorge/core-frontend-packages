@@ -3137,6 +3137,7 @@
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Visits": "Besøk" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Fagenhet": "Fagenhet/Spesialitet" , 
     "page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak": "HF/Institusjon" , 
+    "page_logg_tableCaption": "Logg over bruk" , 
     "page_SykdomOgKritiskInfo_Table_Caption": "Tabell som viser sykdomshistorikk" , 
     "page_Besokshistorikk_Table_Caption": "Tabell som viser besøkshistorikk" 
   },
