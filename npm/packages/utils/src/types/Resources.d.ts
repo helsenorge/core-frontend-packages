@@ -2214,7 +2214,7 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
    */
   dateMinutes: string;
   /**
-   * Min helse
+   * Forside
    */
   breadCrumb_home: string;
   /**
@@ -2918,7 +2918,7 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
    */
   tjenesterUtenforHelsenorge: string;
   /**
-   * Til forsiden
+   * Forside
    */
   breadCrumb_Forsiden: string;
 };
