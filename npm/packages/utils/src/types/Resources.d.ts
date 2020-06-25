@@ -11929,11 +11929,6 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
    * HF/Institusjon
    */
   page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak: string;
-<<<<<<< HEAD
-  /**
-   * Tabell som viser sykdomshistorikk
-   */
-=======
   /** 
   * Logg over bruk
   */
@@ -11941,7 +11936,6 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   /** 
   * Tabell som viser sykdomshistorikk
   */
->>>>>>> 1db9084bebc672380c977b18956b769290cac07d
   page_SykdomOgKritiskInfo_Table_Caption: string;
   /**
    * Tabell som viser besøkshistorikk
@@ -15073,15 +15067,9 @@ export type HNMinHelseNavigation = {
    * Prøvesvar
    */
   tile_Provesvar_Title: string;
-<<<<<<< HEAD
-  /**
-   * Prøvesvar fra spesialisthelsetjenesten.
-   */
-=======
   /** 
   * Resultat av test for koronavirus.
   */
->>>>>>> 1db9084bebc672380c977b18956b769290cac07d
   tile_Provesvar_Description: string;
   /**
    * Koronaverktøy
