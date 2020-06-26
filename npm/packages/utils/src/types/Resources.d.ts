@@ -213,14 +213,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   lightbox_Inactivity_Title: string;
   /** 
-  * /deling-av-helseopplysninger
-  */
-  headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
-  /** 
-  * Deling av helseopplysninger
-  */
-  headerMenuProfileLinksDelingAvHelseopplysningerTitle: string;
-  /** 
   * /logg-over-bruk
   */
   headerMenuProfileLinksLoggOverBrukV2Url: string;
@@ -232,6 +224,22 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * /kontaktinformasjon
   */
   headerMenuProfileLinksKontaktinformasjonURL: string;
+  /** 
+  * Det oppstod en feil ved henting av data om innlogget bruker.
+  */
+  errorInnloggetBruker: string;
+  /** 
+  * Det oppstod en feil ved henting av fullmakter.
+  */
+  errorFullmakter: string;
+  /** 
+  * /deling-av-helseopplysninger
+  */
+  headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
+  /** 
+  * Deling av helseopplysninger
+  */
+  headerMenuProfileLinksDelingAvHelseopplysningerTitle: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
@@ -8074,6 +8082,18 @@ behandlingsstedet ved eventuelle spørsmål.
   * Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.
   */
   appointmentDetailsCancellationReasonService: string;
+  /** 
+  * Avtalen ble avlyst fordi ingen var hjemme.
+  */
+  appointmentDetailsCancellationReasonAway: string;
+  /** 
+  * Avtalen ble avlyst av innbygger.
+  */
+  appointmentDetailsCancellationReasonInhabitant: string;
+  /** 
+  * Avtalen ble avlyst av person med fullmakt for innbygger.
+  */
+  appointmentDetailsCancellationReasonProxy: string;
   /** 
   * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
   */
