@@ -1,17 +1,17 @@
 import { trackError } from './adobe-analytics';
 
-function getContentApiUrl() {
+function getContentApiUrl(): string {
   return !!window.HN && !!window.HN.Rest && !!window.HN.Rest.__CmsContentApiUrl__ ? window.HN.Rest.__CmsContentApiUrl__ : '';
 }
 
-function createHeaders() {
+function createHeaders(): Headers {
   const headers = new Headers();
   headers.append('Accept', 'application/json');
   headers.append('Content-Type', 'application/json');
   return headers;
 }
 
-function parseParams(params?: object) {
+function parseParams(params?: object): string {
   if (params) {
     return (
       `?` +
@@ -26,7 +26,7 @@ function parseParams(params?: object) {
   return '';
 }
 
-function checkStatus(response: Response) {
+function checkStatus(response: Response): Promise<{}> | undefined {
   const contentType = response.headers.get('content-type');
   if (contentType && contentType.indexOf('application/json') !== -1) {
     if (response.status === 204) {
@@ -42,25 +42,10 @@ function checkStatus(response: Response) {
   }
 }
 
-function hostnameHashCode() {
-  const hostname = window.location.hostname;
-  let hash = 0;
-  if (hostname.length == 0) {
-    return hash;
-  }
-  for (var i = 0; i < hostname.length; i++) {
-    const char = hostname.charCodeAt(i);
-    hash = (hash << 5) - hash + char;
-    hash = hash & hash; // Convert to 32bit integer
-  }
-  return hash;
-}
-
-export function get(cmd: string, params?: object) {
-  params = { hash: hostnameHashCode(), ...params };
+export function get(cmd: string, params?: object): Promise<{} | Response | undefined> {
   return fetch(getContentApiUrl() + '/contentapi/internal/v1/' + cmd + parseParams(params), {
     method: 'get',
-    credentials: 'include',
+    credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
     headers: createHeaders(),
   }).then(checkStatus);
 }
