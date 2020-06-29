@@ -3612,7 +3612,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_feilmelding_description: string;
   /** 
-  * Gå til Min helse for å se hvilke tjenester du har tilgang til.
+  * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
   */
   page_NotAccessToService_Link_Text: string;
   /** 
@@ -24982,6 +24982,10 @@ export type HNMinHelsePersonvernStrings = {
   * Innsyn i Smittestopp
   */
   page_HendelsesLogg_38: string;
+  /** 
+  * Prøvesvar
+  */
+  page_HendelsesLogg_39: string;
   /** 
   * Samtykke gitt av {0} {1}.
   */
