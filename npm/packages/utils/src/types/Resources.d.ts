@@ -3595,17 +3595,21 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Kontaktinformasjon_Description: string;
   /** 
-  * Denne siden er visst ikke helt frisk
+  * Noe gikk dessverre galt
   */
   page_feilmelding_title: string;
   /** 
-  * Se etter en skrivefeil i URL-adressen, eller gå til forsiden.
+  * Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.
   */
   page_feilmelding_description: string;
   /** 
   * <a class="Page_AskForAccessToService_Link_Text" href="personverninnstillinger/samtykker/velg">Gå til Min helse for å se hvilke tjenester du har tilgang til.</a>
   */
   page_AskForAccessToService_Link_Text: string;
+  /** 
+  * Gå til min helse
+  */
+  page_feilmelding_link_text: string;
   /** 
   * Innsyn i personopplysninger samlet om deg i Smittestopp
   */
