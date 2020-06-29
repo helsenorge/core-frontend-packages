@@ -24978,7 +24978,7 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
-  * Prøvesvar
+  * Provesvar
   */
   page_HendelsesLogg_39: string;
   /** 
