@@ -883,7 +883,7 @@
     "page_Fastlegen_Title": "Fastlegen" , 
     "title_HelpTrigger_Prefix": "Åpne hjelp for" , 
     "page_AskForAccessToService_Title": "Du har ikke tilgang til denne tjenesten" , 
-    "page_NotAccessToService_Desc": "Du har forsøkt å bruke en tjeneste du ikke har tilgang til via gjeldende fullmakt. Kontakt den som har gitt deg fullmakten og be om en utvidet fullmakt for å få tilgang til tjenesten på deres vegne." , 
+    "page_NotAccessToService_Desc": "Du har forsøkt å bruke en tjeneste som ikke er tilgjengelig for deg eller den du representerer. Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tillater at du bruker denne tjenesten eller at du som forelder ikke har lov til å bruke tjenesten for barnet ditt." , 
     "page_NotAccessToService_Title": "Du har ikke tilgang til denne tjenesten" , 
     "page_HendelsesLogg_Desc": "Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også." , 
     "page_HendelsesLogg_Title": "Logg over bruk" , 

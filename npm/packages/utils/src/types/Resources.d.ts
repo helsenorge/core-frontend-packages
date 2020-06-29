@@ -3552,7 +3552,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_AskForAccessToService_Title: string;
   /** 
-  * Du har forsøkt å bruke en tjeneste du ikke har tilgang til via gjeldende fullmakt. Kontakt den som har gitt deg fullmakten og be om en utvidet fullmakt for å få tilgang til tjenesten på deres vegne.
+  * Du har forsøkt å bruke en tjeneste som ikke er tilgjengelig for deg eller den du representerer. Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tillater at du bruker denne tjenesten eller at du som forelder ikke har lov til å bruke tjenesten for barnet ditt.
   */
   page_NotAccessToService_Desc: string;
   /** 
