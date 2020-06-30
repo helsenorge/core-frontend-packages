@@ -898,7 +898,7 @@
     "page_Kontaktinformasjon_Description": "Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren." , 
     "page_feilmelding_title": "Noe gikk dessverre galt" , 
     "page_feilmelding_description": "Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse." , 
-    "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"fullmakt\">Gå til Min helse for å se hvilke tjenester du har tilgang til.</a>" , 
+    "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"personverninnstillinger/samtykker/velg\">Gå til Min helse for å se hvilke tjenester du har tilgang til.</a>" , 
     "page_feilmelding_link_text": "Gå til min helse" , 
     "page_InnsynSmittestopp_Title": "Innsyn i personopplysninger samlet om deg i Smittestopp" , 
     "page_InnsynSmittestopp_Desc": "TODO: beskrivelse av innsyn smittestopp" , 
