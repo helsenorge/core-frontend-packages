@@ -3603,7 +3603,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_feilmelding_description: string;
   /** 
-  * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt">Gå til Min helse for å se hvilke tjenester du har tilgang til.</a>
+  * <a class="Page_AskForAccessToService_Link_Text" href="personverninnstillinger/samtykker/velg">Gå til Min helse for å se hvilke tjenester du har tilgang til.</a>
   */
   page_AskForAccessToService_Link_Text: string;
   /** 
