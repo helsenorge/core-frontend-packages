@@ -529,9 +529,9 @@ export function trackProsesshjelp(name: string, toolType: string, label: string,
   }
 }
 
-export type ErrorType = 'level1' | 'level2' | 'level3';
+export type ErrorType = 'level1' | 'level2' | 'level3' | 'level4';
 // For tracking error
-export function trackError(level: ErrorType) {
+export function trackError(level: ErrorType, details?: string): void {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -543,11 +543,13 @@ export function trackError(level: ErrorType) {
       errorType = 'Nivå 2: Driftsmelding';
     } else if (level === 'level3') {
       errorType = 'Nivå 3: JavaScript feil';
+    } else if (level === 'level4') {
+      errorType = 'Nivå 4: Interaksjonsfeil';
     } else {
       return;
     }
     digitalData.error = {
-      siteError: errorType,
+      siteError: !details ? errorType : `${errorType} – ${details}`,
     };
     _satellite.track('site error');
   }
