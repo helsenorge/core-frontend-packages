@@ -23,14 +23,41 @@ export function hasCookie(cookieName: string, value?: string | boolean): boolean
   return false;
 }
 
-export function setCookie(name: string, value: string | boolean = ''): void {
-  document.cookie = `${name}=${value};path=/;`;
-}
-
-export function getCookieSuffix(): boolean {
+export function getSuffix(cookieName: string): string {
   let suffix = '';
   if (window.HN.Rest.__Environment__) {
     suffix = '_' + window.HN.Rest.__Environment__;
   }
-  return hasCookie('MH_LoggedIn' + suffix) || hasCookie('MH_SessionId' + suffix);
+  return cookieName + suffix;
+}
+
+export function getCookieSuffix(): boolean {
+  return getCustomCookieWithSuffix('MH_LoggedIn') || getCustomCookieWithSuffix('MH_SessionId');
+}
+
+export function getCustomCookieWithSuffix(cookieName: string): boolean {
+  return hasCookie(getSuffix(cookieName));
+}
+
+export function setCookie(name: string, value: string | boolean = ''): void {
+  document.cookie = `${name}=${value};path=/;`;
+}
+
+export function deleteCookie(name: string): void {
+  document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
+}
+
+export function getCookieValue(name: string): string | number | boolean | undefined {
+  const cookie = hasCookie(name);
+  const cookieWithSuffix = getCustomCookieWithSuffix(name);
+
+  if (!cookie && !cookieWithSuffix) {
+    return undefined;
+  }
+  const cookieName = cookieWithSuffix ? getSuffix(name) : name;
+
+  return document.cookie
+    .split('; ')
+    .find(e => e.split('=')[0] === cookieName)
+    ?.split('=')[1];
 }
