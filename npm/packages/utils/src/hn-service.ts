@@ -1,5 +1,6 @@
 import { trackError } from './adobe-analytics';
 import * as DateUtils from './date-utils';
+import { getCookieValue } from 'cookie';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
@@ -226,6 +227,8 @@ function createHeaders(type = 'application/json'): Headers {
   if (!!HN.Rest?.__CSRF_Token__ && !!HN.Rest?.__CSRF_Timestamp__) {
     headers.append('X-HN-CSRF-Token', HN.Rest?.__CSRF_Token__);
     headers.append('X-HN-CSRF-Timestamp', HN.Rest?.__CSRF_Timestamp__);
+  } else {
+    headers['X-HN-CSRF-Token'] = getCookieValue('HN_CSRF_Token') as string;
   }
 
   return headers;
