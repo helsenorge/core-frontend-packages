@@ -1,6 +1,6 @@
 import { trackError } from './adobe-analytics';
 import * as DateUtils from './date-utils';
-import { getCookieValue } from 'cookie';
+import { getCookieValue } from './cookie';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
