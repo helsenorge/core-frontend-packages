@@ -3167,7 +3167,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_BrukAvHelsetjenester_Title: string;
   /** 
-  * Dette er kjernejournalen din. For å se innholdet i din kjernejournal klikk på en av lenkene over. Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk. Du kan registrere dine sykdommer og viktige kontaktpersoner i kjernejournal ved å gå til <a href="/min-helse/Egne-registreringer-i-kjernejournal">Egne registreringer</a> i kjernejournal.
+  * Dette er kjernejournalen din. For å se innholdet i din kjernejournal klikk på en av lenkene over. Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk. Du kan registrere dine sykdommer og viktige kontaktpersoner i kjernejournal ved å gå til <a href="https://tjenester.helsenorge.no/kjernejournal-innsyn">Dine registreringer</a> i kjernejournal.
   */
   page_KJAboutMe_Description: string;
   /** 
@@ -13272,9 +13272,8 @@ innholdet kan du prøve og bytte mellom lese- og skrivemodus.
     Dette er kjernejournalen din. For å se innholdet i din kjernejournal klikk på en av lenkene over.
     Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk.
     Du kan registrere dine sykdommer og viktige kontaktpersoner i kjernejournal ved å gå til 
-    <a href="/min-helse/Egne-registreringer-i-kjernejournal">Egne registreringer</a> i kjernejournal.
+    <a href="https://tjenester.helsenorge.no/kjernejournal-innsyn">Dine registreringer</a> i kjernejournal.
     </p>
-
   */
   page_AboutMe_Desc: string;
   /** 
@@ -14663,7 +14662,7 @@ Logg over bruk vil bli tilgjengelig i "Min helse" senere i 2013.
   */
   webPart_BlockForPersonnel_InfoPanelText: string;
   /** 
-  * Det er strenge krav til helsepersonell for bruk av kjernejournalen din. Du kan i tillegg velge å begrense deres tilgang til utvalgte deler av informasjonen. Helsepersonell må da be om ditt samtykke for tilgang til den begrensede informasjonen. Hvis du er i en akuttsituasjon og trenger øyeblikkelig hjelp, kan helsepersonell likevel få tilgang til denne informasjonen.<br/><br/>I <a href="/min-helse/logg-over-bruk">Logg over bruk</a> kan du se hvem som har åpnet og eventuelt registrert opplysninger i kjernejournalen din.
+  * Det er strenge krav til helsepersonell for bruk av kjernejournalen din. Du kan i tillegg velge å begrense deres tilgang til utvalgte deler av informasjonen. Helsepersonell må da be om ditt samtykke for tilgang til den begrensede informasjonen. Hvis du er i en akuttsituasjon og trenger øyeblikkelig hjelp, kan helsepersonell likevel få tilgang til denne informasjonen.<br/><br/>I <a href="https://tjenester.helsenorge.no/logg-over-bruk">Logg over bruk</a> kan du se hvem som har åpnet og eventuelt registrert opplysninger i kjernejournalen din.
   */
   webPart_BlockForPersonnel_InfoText: string;
   /** 
@@ -32105,7 +32104,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   webPart_ContactForm_EmailErrorMessage: string;
   /** 
-  * Url må starte med https://helsenorge.no/ eller https://minhelse.helsenorge.no/
+  * Url må starte med https://helsenorge.no/ eller https://tjenester.helsenorge.no/
   */
   webPart_ContactForm_UrlErrorMessage: string;
   /** 
