@@ -253,6 +253,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   errorGlobalMeny: string;
   /** 
+  * Det oppstod en feil ved henting av representasjoner.
+  */
+  errorRepresentasjoner: string;
+  /** 
   * /deling-av-helseopplysninger
   */
   headerMenuProfileLinksDelingAvHelseopplysningerUrl: string;
