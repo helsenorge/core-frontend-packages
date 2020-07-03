@@ -22,7 +22,7 @@ export type HNCommon = {
   */
   webPart_PagePromotion_SelectPage_Text: string;
   /** 
-  * test
+  * test ikke i bruk enda altså
   */
   iKKE_BRUK_KUN_FOR_TEST: string;
 };
@@ -3167,7 +3167,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_BrukAvHelsetjenester_Title: string;
   /** 
-  * Dette er kjernejournalen din. For å se innholdet i din kjernejournal klikk på en av lenkene over. Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk. Du kan registrere dine sykdommer og viktige kontaktpersoner i kjernejournal ved å gå til <a href="/min-helse/Egne-registreringer-i-kjernejournal">Egne registreringer</a> i kjernejournal.
+  * Dette er kjernejournalen din. For å se innholdet i din kjernejournal klikk på en av lenkene over. Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk. Du kan registrere dine sykdommer og viktige kontaktpersoner i kjernejournal ved å gå til <a href="https://tjenester.helsenorge.no/kjernejournal-innsyn">Dine registreringer</a> i kjernejournal.
   */
   page_KJAboutMe_Description: string;
   /** 
@@ -12516,7 +12516,7 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   hjelpekontekst_kjernejournal_root: string;
   /** 
-  * <p>Du kan registrere helseopplysninger som du ønsker helsepersonell skal kjenne til på siden <a href="/sykdom-og-kritisk-info">Sykdom og kritisk informasjon</a>. Viktige kontaktpersoner kan registreres under <a href="/personopplysninger">Personopplysninger</a> og <a href="/helsekontakter">Helsekontakter</a>.</p>
+  * <p>Du kan registrere helseopplysninger som du ønsker helsepersonell skal kjenne til på siden <a href="/sykdom-og-kritisk-info">Sykdom og kritisk informasjon</a>. Viktige kontaktpersoner kan registreres under <a href="/kontaktinformasjon">Kontaktinformasjon</a> og <a href="/helsekontakter">Helsekontakter</a>.</p>
   */
   page_KJ_RegInfo: string;
   /** 
@@ -13272,9 +13272,8 @@ innholdet kan du prøve og bytte mellom lese- og skrivemodus.
     Dette er kjernejournalen din. For å se innholdet i din kjernejournal klikk på en av lenkene over.
     Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk.
     Du kan registrere dine sykdommer og viktige kontaktpersoner i kjernejournal ved å gå til 
-    <a href="/min-helse/Egne-registreringer-i-kjernejournal">Egne registreringer</a> i kjernejournal.
+    <a href="https://tjenester.helsenorge.no/kjernejournal-innsyn">Dine registreringer</a> i kjernejournal.
     </p>
-
   */
   page_AboutMe_Desc: string;
   /** 
@@ -13544,7 +13543,7 @@ Ved flytting sender du flyttemelding til <a href="http://skatteetaten.no/no/pers
   */
   mho_healthepisodes_receipt_description_no_phone: string;
   /** 
-  * <p>Du finner sendte og mottatte meldinger i <a href="/min-helse/meldinger">innboksen</a></p>
+  * <p>Du finner sendte og mottatte meldinger i <a href="http://tjenester.helsenorge.no/meldinger">innboksen</a></p>
   */
   mho_healthepisodes_receipt_messages: string;
   /** 
@@ -14663,7 +14662,7 @@ Logg over bruk vil bli tilgjengelig i "Min helse" senere i 2013.
   */
   webPart_BlockForPersonnel_InfoPanelText: string;
   /** 
-  * Det er strenge krav til helsepersonell for bruk av kjernejournalen din. Du kan i tillegg velge å begrense deres tilgang til utvalgte deler av informasjonen. Helsepersonell må da be om ditt samtykke for tilgang til den begrensede informasjonen. Hvis du er i en akuttsituasjon og trenger øyeblikkelig hjelp, kan helsepersonell likevel få tilgang til denne informasjonen.<br/><br/>I <a href="/min-helse/logg-over-bruk">Logg over bruk</a> kan du se hvem som har åpnet og eventuelt registrert opplysninger i kjernejournalen din.
+  * Det er strenge krav til helsepersonell for bruk av kjernejournalen din. Du kan i tillegg velge å begrense deres tilgang til utvalgte deler av informasjonen. Helsepersonell må da be om ditt samtykke for tilgang til den begrensede informasjonen. Hvis du er i en akuttsituasjon og trenger øyeblikkelig hjelp, kan helsepersonell likevel få tilgang til denne informasjonen.<br/><br/>I <a href="https://tjenester.helsenorge.no/logg-over-bruk">Logg over bruk</a> kan du se hvem som har åpnet og eventuelt registrert opplysninger i kjernejournalen din.
   */
   webPart_BlockForPersonnel_InfoText: string;
   /** 
@@ -17652,7 +17651,7 @@ export type HNMinHelsePasientjournal = {
   */
   documentMessageTitle: string;
   /** 
-  * {"defaulttekst_overskrift":"Om pasientjournalen","defaulttekst_brodtekst":"<p>\nTjenesten gir deg kun lesetilgang – du kan ikke på egen hånd endre innholdet i pasientjournalen din.\n</p>\n\n<p>\nDokumenter fra andre regioner enn Helse Nord, Helse Vest og Helse Sør-Øst er foreløpig ikke tilgjengelige i tjenesten.\n</p>\n\n<p>\nDatoen som vises ved dokumentnavnet viser når journaldokumentet ble opprettet - ikke nødvendigvis når det sist ble endret. Når du åpner et dokument vil du alltid se den nyeste versjonen av det.\n</p>\n\n<h3>\nIkke alle dokumenter kan vises digitalt\n</h3>\n\n<p>Pasientjournalen din kan inneholde dokumenter som ikke kan vises digitalt. Disse kan være tilgjengelige på papir, eller ved å kontakte sykehuset.</p>\n\n<p>\nHer finner du mer informasjon om hva hver helseregion kan tilby digitalt, og hvordan du går frem:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-vest\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-nord\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-sor-ost\">Sykehus i Helse Sør-Øst</a></li>\n</ul>\n\n<h3>\nSlik kan du få papirkopier, melde om feil eller stille spørsmål\n</h3>\n\n<p>Vil du ha mer informasjon enn den digitale tjenesten kan tilby, eller melde om feil, må du kontakte sykehuset.</p>\n\n<p>\nFor sykehus i Helse Vest og Helse Sør-Øst kan du bruke digitale skjema:\n</p>\n\n<ul>\n<li><a href=\"https://minhelse.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UJ-1\">Be om utskrift av pasientjournal</a></li>\n<li><a href=\"https://minhelse.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UI-1\">Be om utskrift av tilgangslogg</a></li>\n<li><a href=\"https://minhelse.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-ej-1\">Be om endring i pasientjournalen</a></li>\n<li><a href=\"https://minhelse.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-SI-1\">Stille spørsmål om oppslag i pasientjournalen</a></li>\n</ul>\n\n<p>\nHelse Nord tilbyr ikke digitale skjema, men du kan i stedet bruke <a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-nord#Andre-m%C3%A5ter-%C3%A5-f%C3%A5-innsyn-i-pasientjournalen-p%C3%A5\">PDF-skjema for å få innsyn i pasientjournal og tilgangslogg fra Helse Nord</a>.\n</p>\n\n<h3>\nVed alvorlige feil i pasientjournalen\n</h3>\n\n<p>\nHvis du finner dokumenter som tilhører andre, må du straks ringe det aktuelle sykehuset. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-vest#Feil,-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-nord#Feil,-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-sor-ost#Feil,-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Sør-Øst</a></li>\n</ul>\n\n<p>\n<strong>Det er ikke nødvendig å ringe hvis du vil melde om andre feil. Bruk i stedet skjemaene nevnt ovenfor.</strong>\n</p>"}
+  * {"defaulttekst_overskrift":"Om pasientjournalen","defaulttekst_brodtekst":"<p>\nTjenesten gir deg kun lesetilgang – du kan ikke på egen hånd endre innholdet i pasientjournalen din.\n</p>\n\n<p>\nDokumenter fra andre regioner enn Helse Nord, Helse Vest og Helse Sør-Øst er foreløpig ikke tilgjengelige i tjenesten.\n</p>\n\n<p>\nDatoen som vises ved dokumentnavnet viser når journaldokumentet ble opprettet - ikke nødvendigvis når det sist ble endret. Når du åpner et dokument vil du alltid se den nyeste versjonen av det.\n</p>\n\n<h3>\nIkke alle dokumenter kan vises digitalt\n</h3>\n\n<p>Pasientjournalen din kan inneholde dokumenter som ikke kan vises digitalt. Disse kan være tilgjengelige på papir, eller ved å kontakte sykehuset.</p>\n\n<p>\nHer finner du mer informasjon om hva hver helseregion kan tilby digitalt, og hvordan du går frem:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-vest\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-nord\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-sor-ost\">Sykehus i Helse Sør-Øst</a></li>\n</ul>\n\n<h3>\nSlik kan du få papirkopier, melde om feil eller stille spørsmål\n</h3>\n\n<p>Vil du ha mer informasjon enn den digitale tjenesten kan tilby, eller melde om feil, må du kontakte sykehuset.</p>\n\n<p>\nFor sykehus i Helse Vest og Helse Sør-Øst kan du bruke digitale skjema:\n</p>\n\n<ul>\n<li><a href=\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UJ-1\">Be om utskrift av pasientjournal</a></li>\n<li><a href=\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UI-1\">Be om utskrift av tilgangslogg</a></li>\n<li><a href=\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-ej-1\">Be om endring i pasientjournalen</a></li>\n<li><a href=\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-SI-1\">Stille spørsmål om oppslag i pasientjournalen</a></li>\n</ul>\n\n<p>\nHelse Nord tilbyr ikke digitale skjema, men du kan i stedet bruke <a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-nord#Andre-m%C3%A5ter-%C3%A5-f%C3%A5-innsyn-i-pasientjournalen-p%C3%A5\">PDF-skjema for å få innsyn i pasientjournal og tilgangslogg fra Helse Nord</a>.\n</p>\n\n<h3>\nVed alvorlige feil i pasientjournalen\n</h3>\n\n<p>\nHvis du finner dokumenter som tilhører andre, må du straks ringe det aktuelle sykehuset. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-vest#Feil,-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-nord#Feil,-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/se-pasientjournalen-din-fra-helse-sor-ost#Feil,-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Sør-Øst</a></li>\n</ul>\n\n<p>\n<strong>Det er ikke nødvendig å ringe hvis du vil melde om andre feil. Bruk i stedet skjemaene nevnt ovenfor.</strong>\n</p>"}
   */
   hjelpeKontekstDokumentoversikt: string;
   /** 
@@ -32105,7 +32104,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   webPart_ContactForm_EmailErrorMessage: string;
   /** 
-  * Url må starte med https://helsenorge.no/ eller https://minhelse.helsenorge.no/
+  * Url må starte med https://helsenorge.no/ eller https://tjenester.helsenorge.no/
   */
   webPart_ContactForm_UrlErrorMessage: string;
   /** 
