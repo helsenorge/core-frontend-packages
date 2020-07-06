@@ -3587,7 +3587,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Samvalg_NavigateBackLinkTitle: string;
   /** 
-  * https://helsenorge.no/samvalg
+  * {HelsenorgeUrl}/samvalg
   */
   page_Samvalg_NavigateBackLinkURL: string;
   /** 
