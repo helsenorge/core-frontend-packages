@@ -894,7 +894,7 @@
     "page_Messages_Title": "Innboks",
     "page_Innboks_Title": "Innboks",
     "page_Samvalg_NavigateBackLinkTitle": "Samvalg",
-    "page_Samvalg_NavigateBackLinkURL": "https://helsenorge.no/samvalg",
+    "page_Samvalg_NavigateBackLinkURL": "{HelsenorgeUrl}/samvalg",
     "page_Kontaktinformasjon_Title": "Kontaktinformasjon",
     "page_Kontaktinformasjon_Description": "Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.",
     "page_feilmelding_title": "Noe gikk dessverre galt",
