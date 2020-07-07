@@ -9,7 +9,9 @@ export default {
   ONE_TO_TWO_COLUMN: '39rem',
   TWO_TO_THREE_COLUMN: '59rem',
   THREE_TO_FOUR_COLUMN: '79rem',
+  NULL_TO_XS: '360px',
   XS_TO_SM: '564px',
-  SM_TO_MD: '682px',
+  SM_TO_MD: '768px',
   MD_TO_LG: '1088px',
+  LG_TO_XL: '1450px',
 };
