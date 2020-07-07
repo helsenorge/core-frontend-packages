@@ -2326,7 +2326,7 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   samtykkeInfoPopupKonvertertOverskrift: string;
   /** 
-  * Helsenorge har oppdatert samtykket ditt på grunn av nytt personvernregelverk. Dette medfører ingen endringer for din bruk av Helsenorge. Dersom du ønsker, kan du <a href="/Bruk-av-helsetjenester-og-ordninger">forandre på samtykkene dine</a>.
+  * Helsenorge har oppdatert samtykket ditt på grunn av nytt personvernregelverk. Dette medfører ingen endringer for din bruk av Helsenorge. Dersom du ønsker, kan du <a href="https://tjenester.helsenorge.no/personverninnstillinger">forandre på samtykkene dine</a>.
   */
   samtykkeInfoPopupKonvertertInnhold: string;
   /** 
@@ -28947,7 +28947,7 @@ export type HNMinHelseSkjemautfyller = {
   * <p>Du har forsøkt å bruke en tjeneste som ikke er tilgjengelig for deg eller den du representerer.<br/>
 Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tillater at du bruker denne tjenesten eller at du som forelder ikke har lov til å bruke tjenesten for barnet ditt.</p>
 
-<p>Dersom du ønsker, kan du <a href="/Bruk-av-helsetjenester-og-ordninger?samtykke">forandre på samtykket ditt</a>.</p>
+<p>Dersom du ønsker, kan du <a href="https://tjenester.helsenorge.no/personverninnstillinger">forandre på samtykket ditt</a>.</p>
   */
   skjemaAccessDeniedNoAccessToTjenesteErrorBody: string;
   /** 
