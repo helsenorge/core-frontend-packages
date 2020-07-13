@@ -24797,6 +24797,10 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_38: string;
   /** 
+  * {"defaulttekst_overskrift":"Kjernejournal innsyn","defaulttekst_brodtekst":"<p>Du kan selv bidra til at riktige opplysninger er registrert om deg i din kjernejournal. Du finner informasjon om hvor du kan registrere og endre opplysninger på siden <a href=\"/kjernejournal\">Kjernejournal</a>.</p>"}
+  */
+  hjelpekontekst_kjernejournal_innsyn: string;
+  /** 
   * Helsenorge
   */
   organisasjonsnavn_fullmakt: string;
