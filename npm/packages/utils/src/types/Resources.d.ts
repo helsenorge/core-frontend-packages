@@ -27982,77 +27982,6 @@ export type HNMinHelseResepter = {
   clientOperation_GetRFInnhold_EndpointError_Body: string;
 };
 
-export type HNMinHelseSamtykkeflytJS = { 
-  /** 
-  * Info
-  */
-  samtykkeflyt_info_steptitle: string;
-  /** 
-  * Dette må du vite for å bruke Helsenorge
-  */
-  samtykkeflyt_info_title: string;
-  /** 
-  * Bruk
-  */
-  samtykkeflyt_bruk_steptitle: string;
-  /** 
-  * Beklager, det har skjedd en teknisk feil.
-  */
-  kontaktinfo_error_title: string;
-  /** 
-  * Kunne ikke hente din kontaktinformasjon. Gå til <a href="https://brukerprofil.difi.no/minprofil/" target="_blank" class="external">digitalt kontaktregister (ID-porten)</a> om du vil sjekke hvilken epost/mobil som er registrert.
-  */
-  kotnaktinfo_error_html: string;
-  /** 
-  * Ikke registert kontaktinfo for varsling
-  */
-  kontaktinfo_missing_title: string;
-  /** 
-  * Du må velge hvordan du vil bruke helsenorge.
-  */
-  samtykkeflyt_bruk_validationerror: string;
-  /** 
-  * Steg
-  */
-  samtykkeflyt_steg: string;
-  /** 
-  * av
-  */
-  samtykkeflyt_av: string;
-  /** 
-  * aktiv
-  */
-  samtykkeflyt_aktiv: string;
-  /** 
-  * inaktiv
-  */
-  samtykkeflyt_inaktiv: string;
-  /** 
-  * Neste
-  */
-  samtykkeflyt_neste: string;
-  /** 
-  * Avbryt
-  */
-  samtykkeflyt_avbryt: string;
-  /** 
-  * Tilbake
-  */
-  samtykkeflyt_tilbake: string;
-  /** 
-  * Bekreft ditt samtykke
-  */
-  samtykkeflyt_bekreft_title: string;
-  /** 
-  * Samtykke
-  */
-  samtykkeflyt_bekreft_steptitle: string;
-  /** 
-  * Jeg samtykker
-  */
-  samtykkeflyt_bekreft_save: string;
-};
-
 export type HNMinHelseSecurityFramework = { 
   /** 
   * Gå til forsiden
@@ -28503,6 +28432,114 @@ export type HNMinHelseSysvak = {
 
 export type HNMinHelseVerktoy = { 
   /** 
+  * Eldre
+  */
+  verktoyDetails_MalgruppeType_Eldre: string;
+  /** 
+  * min
+  */
+  verktoyDetails_minutes: string;
+  /** 
+  * Dette verktøyet er ikke lenger tilgjengelig.
+  */
+  verktoyTrukketTilbakeMessage: string;
+  /** 
+  * Ny
+  */
+  newStatusText: string;
+  /** 
+  * Les mer
+  */
+  readMoreButtonText: string;
+  /** 
+  * Lagt til av deg
+  */
+  createdByYouLabel: string;
+  /** 
+  * Sendt til deg fra
+  */
+  createdByOtherLabel: string;
+  /** 
+  * mine verktøy
+  */
+  mineVerktoyTabTitle: string;
+  /** 
+  * Beskrivelse
+  */
+  descriptionLabel: string;
+  /** 
+  * Faglig ansvarlig
+  */
+  technicalResponsibleLabel: string;
+  /** 
+  * Utviklet av
+  */
+  developedByLabel: string;
+  /** 
+  * Åpne verktøy
+  */
+  openButtonText: string;
+  /** 
+  * Du har ingen verktøy. Gå til <a href"#"> Alle verktøy</a> for å legge til.
+  */
+  laeringsAktivitetsEmpty: string;
+  /** 
+  * {"defaulttekst_overskrift":"Om verktøy","defaulttekst_brodtekst":"<p>\nVerktøyoversikten viser digitale verktøy som kan være nettkurs eller videoer som hjelper deg å mestre din helse- og livssituasjon. Ved å logge inn får du tilgang til å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.\n</p>\n\n<p>\nNoen verktøy er tilgjengelig for alle. Andre må din behandler sende til deg. Dersom du har fått tilsendt et verktøy fra din behandler må du logge inn for å se det. Når du er logget inn kan du samle verktøy i din egen liste.\n</p>\n\n<p>\nFor å se mer informasjon kan du klikke deg inn på verktøyet. Der vil du også kunne starte verktøyet. Når du starter verktøyet, vil du sendes videre til en annen nettside.\n</p>\n\n<p>\n<p><a href=\"https://helsenorge.no/om-min-helse/verktoy\">Her kan du lese mer om verktøy-tjenesten</a>.</p>\n</p>"}
+  */
+  hjelpekontekst_verktoy: string;
+  /** 
+  * kl.
+  */
+  createdDateTimeTimeOfDayPrefix: string;
+  /** 
+  * Kartleggingsverktoy
+  */
+  verktoyDetails_VerktoyType_Kartleggingsverktoy: string;
+  /** 
+  * Nettbasert kurs
+  */
+  verktoyDetails_VerktoyType_NettbasertKurs: string;
+  /** 
+  * Chat
+  */
+  verktoyDetails_VerktoyType_Chat: string;
+  /** 
+  * Telefon
+  */
+  verktoyDetails_VerktoyType_Telefon: string;
+  /** 
+  * Video
+  */
+  verktoyDetails_VerktoyType_Video: string;
+  /** 
+  * Brosjyre
+  */
+  verktoyDetails_VerktoyType_Brosjyre: string;
+  /** 
+  * Podcast
+  */
+  verktoyDetails_VerktoyType_Podcast: string;
+  /** 
+  * Barn
+  */
+  verktoyDetails_MalgruppeType_Barn: string;
+  /** 
+  * Ungdom
+  */
+  verktoyDetails_MalgruppeType_Ungdom: string;
+  /** 
+  * Voksne
+  */
+  verktoyDetails_MalgruppeType_Voksne: string;
+  /** 
+  * Placeholder tekst
+  */
+  learningResourceAlreadyPickedByUserMessage: string;
+  /** 
+  * Placeholder tittel
+  */
+  learningResourceAlreadyPickedByUserTitle: string;
+  /** 
   * Les mer om verktøyet
   */
   expandableSectionHeader: string;
@@ -28818,114 +28855,6 @@ export type HNMinHelseVerktoy = {
   * Avbryt
   */
   behandlerInnsynWarningAvbryt: string;
-  /** 
-  * Eldre
-  */
-  verktoyDetails_MalgruppeType_Eldre: string;
-  /** 
-  * min
-  */
-  verktoyDetails_minutes: string;
-  /** 
-  * Dette verktøyet er ikke lenger tilgjengelig.
-  */
-  verktoyTrukketTilbakeMessage: string;
-  /** 
-  * Ny
-  */
-  newStatusText: string;
-  /** 
-  * Les mer
-  */
-  readMoreButtonText: string;
-  /** 
-  * Lagt til av deg
-  */
-  createdByYouLabel: string;
-  /** 
-  * Sendt til deg fra
-  */
-  createdByOtherLabel: string;
-  /** 
-  * mine verktøy
-  */
-  mineVerktoyTabTitle: string;
-  /** 
-  * Beskrivelse
-  */
-  descriptionLabel: string;
-  /** 
-  * Faglig ansvarlig
-  */
-  technicalResponsibleLabel: string;
-  /** 
-  * Utviklet av
-  */
-  developedByLabel: string;
-  /** 
-  * Åpne verktøy
-  */
-  openButtonText: string;
-  /** 
-  * Du har ingen verktøy. Gå til <a href"#"> Alle verktøy</a> for å legge til.
-  */
-  laeringsAktivitetsEmpty: string;
-  /** 
-  * {"defaulttekst_overskrift":"Om verktøy","defaulttekst_brodtekst":"<p>\nVerktøyoversikten viser digitale verktøy som kan være nettkurs eller videoer som hjelper deg å mestre din helse- og livssituasjon. Ved å logge inn får du tilgang til å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.\n</p>\n\n<p>\nNoen verktøy er tilgjengelig for alle. Andre må din behandler sende til deg. Dersom du har fått tilsendt et verktøy fra din behandler må du logge inn for å se det. Når du er logget inn kan du samle verktøy i din egen liste.\n</p>\n\n<p>\nFor å se mer informasjon kan du klikke deg inn på verktøyet. Der vil du også kunne starte verktøyet. Når du starter verktøyet, vil du sendes videre til en annen nettside.\n</p>\n\n<p>\n<p><a href=\"https://helsenorge.no/om-min-helse/verktoy\">Her kan du lese mer om verktøy-tjenesten</a>.</p>\n</p>"}
-  */
-  hjelpekontekst_verktoy: string;
-  /** 
-  * kl.
-  */
-  createdDateTimeTimeOfDayPrefix: string;
-  /** 
-  * Kartleggingsverktoy
-  */
-  verktoyDetails_VerktoyType_Kartleggingsverktoy: string;
-  /** 
-  * Nettbasert kurs
-  */
-  verktoyDetails_VerktoyType_NettbasertKurs: string;
-  /** 
-  * Chat
-  */
-  verktoyDetails_VerktoyType_Chat: string;
-  /** 
-  * Telefon
-  */
-  verktoyDetails_VerktoyType_Telefon: string;
-  /** 
-  * Video
-  */
-  verktoyDetails_VerktoyType_Video: string;
-  /** 
-  * Brosjyre
-  */
-  verktoyDetails_VerktoyType_Brosjyre: string;
-  /** 
-  * Podcast
-  */
-  verktoyDetails_VerktoyType_Podcast: string;
-  /** 
-  * Barn
-  */
-  verktoyDetails_MalgruppeType_Barn: string;
-  /** 
-  * Ungdom
-  */
-  verktoyDetails_MalgruppeType_Ungdom: string;
-  /** 
-  * Voksne
-  */
-  verktoyDetails_MalgruppeType_Voksne: string;
-  /** 
-  * Placeholder tekst
-  */
-  learningResourceAlreadyPickedByUserMessage: string;
-  /** 
-  * Placeholder tittel
-  */
-  learningResourceAlreadyPickedByUserTitle: string;
 };
 
 export type HNPortal = { 
