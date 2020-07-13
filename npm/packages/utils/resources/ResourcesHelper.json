@@ -875,13 +875,14 @@
     "page_Samvalg_NavigateBackLinkURL": "{HelsenorgeUrl}/samvalg",
     "page_Kontaktinformasjon_Title": "Kontaktinformasjon",
     "page_Kontaktinformasjon_Description": "Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.",
-    "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"fullmakt\">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>",
-    "page_feilmelding_link_text": "Gå til min helse",
+    "page_HendelsesLogg_Title": "Logg over bruk",
     "page_feilmelding_title": "Noe gikk dessverre galt",
     "page_feilmelding_description": "Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.",
     "page_Provesvar_NavigateBackLinkURL": "/provesvar",
     "page_Provesvar_NavigateBackLinkTitle": "Tilbake til Prøvesvar",
-    "page_NotAccessToService_Link_Text": "Dersom du ønsker, kan du <a class=\"Page_NotAccessToService_Link_Text\" href=\"/personverninnstillinger/samtykker/velg\">forandre på samtykket ditt.</a>"
+    "page_NotAccessToService_Link_Text": "Dersom du ønsker, kan du <a class=\"Page_NotAccessToService_Link_Text\" href=\"/personverninnstillinger/samtykker/velg\">forandre på samtykket ditt.</a>",
+    "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"fullmakt\">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>",
+    "page_feilmelding_link_text": "Gå til min helse"
   },
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
@@ -6201,8 +6202,8 @@
   },
   "HNMinHelsePersonvernStrings": { 
     "page_HendelsesLogg_39": "Prøvesvar",
-    "page_HendelsesLogg_38": "Innsyn i Smittestopp",
     "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
+    "page_HendelsesLogg_38": "Innsyn i Smittestopp",
     "organisasjonsnavn_fullmakt": "Helsenorge",
     "page_foreldresamtykke_consentStatusText": "Samtykke gitt av {0} {1}.",
     "hjelpetrigger_foreldresamtykke": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Foreldreinitiert tilgang\",\"seksjonstekst_brodtekst\":\"<p>Du som forelder med foreldreansvar og daglig omsorg for et barn mellom 12 og 16 år har mulighet til å gi barnet ditt tilgang til selv å logge inn på helsenorge.no. For å gjøre det må du samtykke til dette på denne siden.  Tjenester som blir tilgjengelig for barnet er henvisninger, timeavtaler, helsekontakter og resepter. Det vil også være mulig å sende og motta meldinger. Det vil ikke være mulig for barnet å avbestille eller endre time, og heller ikke fornye resept. Når det blir tilgjengelig ytterligere tjenester for barn mellom 12-16 år, vil du bli varslet om dette.</p><p>Forelderen som har samtykket til å gi barnet egen tilgang, kan når som helst trekke dette samtykke tilbake. Dette innebærer at barnet ikke lenger kan logge inn og benytte tjenester på helsenorge.no.</p><p>Ungdom som har fylt 16 kan logge inn i helsenorge.no uten et slikt samtykke fra en forelder.</p>\"}",
