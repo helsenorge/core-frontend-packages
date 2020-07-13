@@ -3475,13 +3475,9 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Kontaktinformasjon_Description: string;
   /** 
-  * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>
+  * Logg over bruk
   */
-  page_AskForAccessToService_Link_Text: string;
-  /** 
-  * Gå til min helse
-  */
-  page_feilmelding_link_text: string;
+  page_HendelsesLogg_Title: string;
   /** 
   * Noe gikk dessverre galt
   */
@@ -3502,6 +3498,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
   */
   page_NotAccessToService_Link_Text: string;
+  /** 
+  * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>
+  */
+  page_AskForAccessToService_Link_Text: string;
+  /** 
+  * Gå til min helse
+  */
+  page_feilmelding_link_text: string;
 };
 
 export type HNMinHelseDialogGPStrings = { 
@@ -24793,13 +24797,13 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_39: string;
   /** 
-  * Innsyn i Smittestopp
-  */
-  page_HendelsesLogg_38: string;
-  /** 
   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
   */
   hjelpekontekst_profilLogg: string;
+  /** 
+  * Innsyn i Smittestopp
+  */
+  page_HendelsesLogg_38: string;
   /** 
   * Helsenorge
   */
