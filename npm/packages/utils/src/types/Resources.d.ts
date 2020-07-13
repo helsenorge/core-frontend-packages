@@ -2046,28 +2046,6 @@ export type HNMinHelseCommonJS = {
   */
   bruksvilkar_popup_ok_button: string;
   /** 
-  * <p>
-Når du logger inn på helsenorge.no, kommer du til Min helse. Min helse gir deg sikre helsetjenester på nett. Her kan du se informasjon relatert til deg og helsen din, for eksempel hvem som er fastlegen din og egenandeler du har betalt. Dette er informasjon som hentes og vises når du er logget inn, men den lagres ikke og forsvinner fra helsenorge.no når du logger ut. Fra nå av vil imidlertid enkelte av dine opplysninger lagres fordi du kan velge å ta i bruk nye tjenester.  Derfor må du samtykke til bruksvilkårene før du fortsetter.</p>
-
-<p>
-Helsenorge.no behandler opplysninger om deg på en sikker måte og i henhold til personopplysningsloven. Når du logger inn, oppgir du fødselsnummeret ditt, og følgende informasjon vil bli lagret knyttet til dette:
-</p>
-
-<ul>
-<li>Hva du har samtykket til, og andre innstillinger du gjør som styrer bruken av tjenestene på helsenorge.no.</li>
-<li>Opplysninger du velger å registrere, slik som for eksempel oppsett av SMS-varsel, reservasjoner og fullmakter.</li>
-</ul>
-
-<p>
-I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, men ingen detaljer om bruken. Denne «Logg over bruk» kan du se ved å gå inn på din <i>Profil</i>.
-</p>
-
-<p><a href="https://helsenorge.no/om-min-helse?lesemodus=1" target="_blank" class="document">Les mer om tjenestene på Min helse</a><br/>                
-<a href="https://helsenorge.no/bruksvilkar-for-min-helse?lesemodus=1" target="_blank" class="document">Les mer om bruksvilkårene for Min helse</a>                
- </p>
-  */
-  bruksvilkar_popup_text: string;
-  /** 
   * Lukk
   */
   unsupported_close: string;
@@ -2646,10 +2624,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   personvelgerSamtykkeHeaderSelf: string;
   /** 
-  * <p>Alle opplysningene som vises er knyttet til denne personen, og eventuelle oppdateringer du gjør vil være på dennes vegne.</p><p>Når du bruker tjenester på vegne av andre, vil det registreres i Logg over bruk. Den du representerer vil kunne se dette under Profil og innstillinger.</p>
-  */
-  personvelgerSamtykkeInfo: string;
-  /** 
   * Fjern dette elementet
   */
   helpItemCloseButton: string;
@@ -2798,10 +2772,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   innbyggermenyInnloggetPrefix: string;
   /** 
-  * /logg-over-bruk-av-tjenester
-  */
-  innbyggermenyLoggOverBrukUrl: string;
-  /** 
   * Logg ut
   */
   innbyggermenyLoggUt: string;
@@ -2900,28 +2870,6 @@ export type HNMinHelseCommon = {
   * Jeg samtykker
   */
   bruksvilkarPopup_OkButton: string;
-  /** 
-  * <p>
-Når du logger inn på helsenorge.no, kommer du til Min helse. Min helse gir deg sikre helsetjenester på nett. Her kan du se informasjon relatert til deg og helsen din, for eksempel hvem som er fastlegen din og egenandeler du har betalt. Dette er informasjon som hentes og vises når du er logget inn, men den lagres ikke og forsvinner fra helsenorge.no når du logger ut. Fra nå av vil imidlertid enkelte av dine opplysninger lagres fordi du kan velge å ta i bruk nye tjenester.  Derfor må du samtykke til bruksvilkårene før du fortsetter.</p>
-
-<p>
-Helsenorge.no behandler opplysninger om deg på en sikker måte og i henhold til personopplysningsloven. Når du logger inn, oppgir du fødselsnummeret ditt, og følgende informasjon vil bli lagret knyttet til dette:
-</p>
-
-<ul>
-<li>Hva du har samtykket til, og andre innstillinger du gjør som styrer bruken av tjenestene på helsenorge.no.</li>
-<li>Opplysninger du velger å registrere, slik som for eksempel oppsett av SMS-varsel, reservasjoner og fullmakter.</li>
-</ul>
-
-<p>
-I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, men ingen detaljer om bruken. Denne «Logg over bruk» kan du se ved å gå inn på din <i>Profil</i>.
-</p>
-
-<p><a href="https://helsenorge.no/om-min-helse?lesemodus=1" target="_blank" class="document">Les mer om tjenestene på Min helse</a><br/>                
-<a href="https://helsenorge.no/bruksvilkar-for-min-helse?lesemodus=1" target="_blank" class="document">Les mer om bruksvilkårene for Min helse</a>                
- </p>
-  */
-  bruksvilkarPopup_Text: string;
   /** 
   * Helse Nord
   */
@@ -3370,10 +3318,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.
   */
   page_HendelsesLogg_Desc: string;
-  /** 
-  * Logg over bruk
-  */
-  page_HendelsesLogg_Title: string;
   /** 
   * Her kan du se dine timer hos fastlegen, sykehus, kommunal helse- og omsorgstjeneste og enkelte andre aktører. Foreløpig er ikke alle timeavtaler tilgjengelige på Helsenorge.
   */
@@ -27407,10 +27351,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * Endre innstillinger
   */
   shared_EndreInnstillinger: string;
-  /** 
-  * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
-  */
-  hjelpekontekst_profilLogg: string;
   /** 
   * Ja, fjern tilgangen min
   */
