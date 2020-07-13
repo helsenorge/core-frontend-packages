@@ -2494,10 +2494,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   innsyn_image_error: string;
   /** 
-  * Innboks
-  */
-  backbar_meldinger: string;
-  /** 
   * Savner du noen tjenester?
   */
   askForMoreServicesTitle: string;
@@ -2529,6 +2525,10 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   * Endre samtykke
   */
   askForMoreServicesButtonText: string;
+  /** 
+  * Innboks
+  */
+  backbar_meldinger: string;
   /** 
   * Innholdsfortegnelse
   */
@@ -3179,6 +3179,22 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Start_Title: string;
   /** 
+  * Meldingssystem for smittsomme sykdommer (MSIS)
+  */
+  page_msis_Title: string;
+  /** 
+  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+  */
+  page_msis_Desc: string;
+  /** 
+  * Velg behandlingssted
+  */
+  page_VelgBehandlingssted_Title: string;
+  /** 
+  * Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.
+  */
+  page_VelgBehandlingssted_Desc: string;
+  /** 
   * Tilgangstyring av helseopplysninger
   */
   page_Tilgangsstyring_Title: string;
@@ -3218,14 +3234,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Du sender søknad til Helfo ved å bruke et skjema i Altinn.
   */
   page_Okonomi_Desc: string;
-  /** 
-  * Meldingssystem for smittsomme sykdommer (MSIS)
-  */
-  page_msis_Title: string;
-  /** 
-  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
-  */
-  page_msis_Desc: string;
   /** 
   * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
   */
@@ -3487,14 +3495,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Messages_Title: string;
   /** 
-  * Kontaktinformasjon
-  */
-  page_Kontaktinformasjon_Title: string;
-  /** 
-  * Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.
-  */
-  page_Kontaktinformasjon_Description: string;
-  /** 
   * Noe gikk dessverre galt
   */
   page_feilmelding_title: string;
@@ -3555,13 +3555,13 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Samvalg_NavigateBackLinkURL: string;
   /** 
-  * Velg behandlingssted
+  * Kontaktinformasjon
   */
-  page_VelgBehandlingssted_Title: string;
+  page_Kontaktinformasjon_Title: string;
   /** 
-  * Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.
+  * Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.
   */
-  page_VelgBehandlingssted_Desc: string;
+  page_Kontaktinformasjon_Description: string;
   /** 
   * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
   */
@@ -7066,6 +7066,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationConfirmDeleteInnsendtSkjema: string;
   /** 
+  * Du kan ikke lenger fylle ut og sende inn dette skjemaet.
+  */
+  oppgaveInvalid: string;
+  /** 
   * Feilet
   */
   errorLabel: string;
@@ -7170,186 +7174,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonReseptfornyelseHelsetilbudBeskrivelse: string;
   /** 
-  * Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med {0} ved feil.
-  */
-  appointmentDetailsVideoButtonTekst: string;
-  /** 
-  * Start video
-  */
-  appointmentDetailsStartVideoButtonTekst: string;
-  /** 
-  * utsteder av skjema
-  */
-  skjemautsteder: string;
-  /** 
-  * Du kan ikke lenger fylle ut og sende inn dette skjemaet.
-  */
-  oppgaveInvalid: string;
-  /** 
-  * Henvendelsen vil bli journalført.
-  */
-  innsynJournalBottomInfo: string;
-  /** 
-  * Du har fått en ny versjon av innkallingsbrevet. Les brevet for å se om du må gjøre forberedelser i forkant av timen.
-  */
-  conversationItemInnkallingsbrevErErstattet: string;
-  /** 
-  * Innkallingsbrevet er gyldig igjen. Kontakt behandlingsstedet hvis du har spørsmål.
-  */
-  conversationItemInnkallingsbrevErGjenopprettet: string;
-  /** 
-  * Du har fått en melding med et innkallingsbrev. Les brevet for å se om du må gjøre forberedelser til timen.
-  */
-  conversationItemInnkallingsbrevErNytt: string;
-  /** 
-  * Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.
-  */
-  conversationItemInnkallingsbrevErSlettet: string;
-  /** 
-  * Kontakt tjenesten hvis du har noen spørsmål.
-  */
-  commonUnavailableHelsetilbudDescription: string;
-  /** 
-  * Feilregistrert
-  */
-  appointmentDetailsAppointmentStatusEnteredInError: string;
-  /** 
-  * Sendt melding er ikke bekreftet mottatt
-  */
-  missingAppRecErrorTitle: string;
-  /** 
-  * Mottakeren har ikke bekreftet at meldingen er mottatt, og det kan dermed hende at meldingen ikke har kommet frem. Prøv igjen senere, eller kontakt mottakeren på en annen måte.
-  */
-  missingAppRecErrorDescription: string;
-  /** 
-  * Valgt kalendertime
-  */
-  commonSelectedEventIconLabel: string;
-  /** 
-  * Still et praktisk spørsmål til resepsjonen. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  commonEkontaktHelsetilbudBeskrivelse: string;
-  /** 
-  * Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  commonEkontaktHelsetilbudSvarBeskrivelse: string;
-  /** 
-  * For øyeblikket er det ikke mulig å avbestille time her
-  */
-  appointmentCancelTimeadministrasjonStotteWarningTitle: string;
-  /** 
-  * Ta kontakt med behandlingsstedet på annen måte for avbestilling.
-  */
-  appointmentCancelTimeadministrasjonStotteWarningDescription: string;
-  /** 
-  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
-  */
-  commonBestillTimeHelsetilbudIngenBehandlereInfo: string;
-  /** 
-  * Bestill time
-  */
-  helsetilbudBestillTime: string;
-  /** 
-  * Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her.
-  */
-  bookingEmptyTextHelsetilbud: string;
-  /** 
-  * Legen kan ikke svare på meldingen din.
-  */
-  conversationItemFastlegeRejectedHeader: string;
-  /** 
-  * Kontakt fastlegekontoret ved eventuelle spørsmål.
-  */
-  conversationItemFastlegeRejectedBody: string;
-  /** 
-  * Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved behandlerkontoret. Du betaler samme egenandel som ved vanlig legetime.
-  */
-  videoEventAlertHelsetilbudDescription: string;
-  /** 
-  * Du har ikke tilgang til tjenesten.
-  */
-  conversationItemFastlegeAccessDeniedHeader: string;
-  /** 
-  * Kontakt fastlegekontoret ved eventuelle spørsmål.
-  */
-  conversationItemFastlegeAccessDeniedBody: string;
-  /** 
-  * Det har skjedd en teknisk feil.
-  */
-  conversationItemFastlegeGeneralErrorHeader: string;
-  /** 
-  * Prøv igjen senere, eller kontakt ditt legekontor.
-  */
-  conversationItemFastlegeGeneralErrorBody: string;
-  /** 
-  * Legen/legekontoret kan for tiden ikke svare på meldinger.
-  */
-  conversationItemFastlegeServiceNotSupportedHeader: string;
-  /** 
-  * Ved spørsmål, kontakt ditt legekontor.
-  */
-  conversationItemFastlegeServiceNotSupportedBody: string;
-  /** 
-  * Skriv melding til
-  */
-  commonEkontaktHeaderSkrivMelding: string;
-  /** 
-  * Du har valgt en hastetime
-  */
-  hastetimeEventAlertTitle: string;
-  /** 
-  * Denne timen er forbeholdt hastesaker. Hvis du kan vente, velg heller et annet tidspunkt.
-  */
-  hastetimeEventAlertDescription: string;
-  /** 
-  * Jeg ønsker en digital kopi av min pasientjournal
-  */
-  commonInnsynPasientjournalBeskrivelseBody: string;
-  /** 
-  * Skriv melding til
-  */
-  commonKommuneMeldingHeader: string;
-  /** 
-  * Forventet svartid på meldinger er første virkedag. Akutte henvendelser skal ikke sendes via melding.
-  */
-  commonKommuneMeldingBeskrivelse: string;
-  /** 
-  * <p>Henvendelsen vil bli journalført.</p>
-  */
-  commonKommuneMeldingBottomInfo: string;
-  /** 
-  * Skriv melding til
-  */
-  commonKoordinatorMeldingHeader: string;
-  /** 
-  * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
-  */
-  commonKoordinatorMeldingBeskrivelse: string;
-  /** 
-  * <p>Henvendelsen vil bli journalført.</p>
-  */
-  commonKoordinatorMeldingBottomInfo: string;
-  /** 
-  * Skriv melding til
-  */
-  commonHelsefagligKontaktHeader: string;
-  /** 
-  * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
-  */
-  commonHelsefagligKontaktBeskrivelse: string;
-  /** 
-  * <p>Henvendelsen vil bli journalført.</p>
-  */
-  commonHelsefagligKontaktBottomInfo: string;
-  /** 
-  * er ikke tillatt
-  */
-  commonValidationNotAllowed: string;
-  /** 
-  * Timeendring bekreftet
-  */
-  conversationItemSubjectChangeConfirmed: string;
-  /** 
   * OK
   */
   commonSubmitConfirmationButtonText: string;
@@ -7398,29 +7222,222 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonVelgBehandlerTilHeader: string;
   /** 
-  * Send
+  * Gjør deg klar minst 5 minutter før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med {0} ved feil.
   */
-  commonDraftSend: string;
+  appointmentDetailsVideoButtonTekst: string;
   /** 
-  * Endre
+  * Start video
   */
-  commonDraftEdit: string;
+  appointmentDetailsStartVideoButtonTekst: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+  * utsteder av skjema
   */
-  commonSubmitConfirmationDraftDescription: string;
+  skjemautsteder: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+  * Tilbake
   */
-  changeBookingSubmitSuccessDraftDescription: string;
+  commonFormTilbake: string;
   /** 
-  * Melding lagret som utkast
+  * Henvendelse til
   */
-  conversationSubmitConfirmationHeadingDraft: string;
+  commonSpesialistMeldingHeader: string;
   /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+  * Tjenesten er gratis. Meldingen kan leses av helsepersonell ved {0}. Du vil bli kontaktet innen fem arbeidsdager.
   */
-  conversationSubmitConfirmationDescriptionDraft: string;
+  commonSpesialistMeldingBeskrivelse: string;
+  /** 
+  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
+<p>Henvendelsen vil bli journalført.</p>
+  */
+  commonSpesialistMeldingBottomInfo: string;
+  /** 
+  * Få veiledning før timebestilling
+  */
+  commonBestillTimeVelgerVeiviser: string;
+  /** 
+  * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
+  */
+  commonBestillTimeVelgerVeiviserBeskrivelse: string;
+  /** 
+  * Gå direkte til timebestilling
+  */
+  commonBestillTimeVelgerAnnet: string;
+  /** 
+  * 
+  */
+  commonBestillTimeVelgerAnnetBeskrivelse: string;
+  /** 
+  * Hva slags time trenger du?
+  */
+  commonBestillTimeVelgerTittel: string;
+  /** 
+  * /veileder?Query=Questionnaire%2F303
+  */
+  commonBestillTimeVelgerVeiviserUrl: string;
+  /** 
+  * Valgt kalendertime
+  */
+  commonSelectedEventIconLabel: string;
+  /** 
+  * Henvendelsen vil bli journalført.
+  */
+  innsynJournalBottomInfo: string;
+  /** 
+  * Du har fått en ny versjon av innkallingsbrevet. Les brevet for å se om du må gjøre forberedelser i forkant av timen.
+  */
+  conversationItemInnkallingsbrevErErstattet: string;
+  /** 
+  * Innkallingsbrevet er gyldig igjen. Kontakt behandlingsstedet hvis du har spørsmål.
+  */
+  conversationItemInnkallingsbrevErGjenopprettet: string;
+  /** 
+  * Du har fått en melding med et innkallingsbrev. Les brevet for å se om du må gjøre forberedelser til timen.
+  */
+  conversationItemInnkallingsbrevErNytt: string;
+  /** 
+  * Innkallingsbrevet er ikke lenger gyldig. Kontakt behandlingsstedet hvis du har spørsmål. Brevet er fortsatt lagret i ditt personlige helsearkiv.
+  */
+  conversationItemInnkallingsbrevErSlettet: string;
+  /** 
+  * er ikke tillatt
+  */
+  commonValidationNotAllowed: string;
+  /** 
+  * Timeendring bekreftet
+  */
+  conversationItemSubjectChangeConfirmed: string;
+  /** 
+  * Legen kan ikke svare på meldingen din.
+  */
+  conversationItemFastlegeRejectedHeader: string;
+  /** 
+  * Kontakt fastlegekontoret ved eventuelle spørsmål.
+  */
+  conversationItemFastlegeRejectedBody: string;
+  /** 
+  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
+  */
+  commonBestillTimeHelsetilbudIngenBehandlereInfo: string;
+  /** 
+  * Bestill time
+  */
+  helsetilbudBestillTime: string;
+  /** 
+  * Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her.
+  */
+  bookingEmptyTextHelsetilbud: string;
+  /** 
+  * Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved behandlerkontoret. Du betaler samme egenandel som ved vanlig legetime.
+  */
+  videoEventAlertHelsetilbudDescription: string;
+  /** 
+  * Kontakt tjenesten hvis du har noen spørsmål.
+  */
+  commonUnavailableHelsetilbudDescription: string;
+  /** 
+  * Feilregistrert
+  */
+  appointmentDetailsAppointmentStatusEnteredInError: string;
+  /** 
+  * Sendt melding er ikke bekreftet mottatt
+  */
+  missingAppRecErrorTitle: string;
+  /** 
+  * Mottakeren har ikke bekreftet at meldingen er mottatt, og det kan dermed hende at meldingen ikke har kommet frem. Prøv igjen senere, eller kontakt mottakeren på en annen måte.
+  */
+  missingAppRecErrorDescription: string;
+  /** 
+  * Du har ikke tilgang til tjenesten.
+  */
+  conversationItemFastlegeAccessDeniedHeader: string;
+  /** 
+  * Kontakt fastlegekontoret ved eventuelle spørsmål.
+  */
+  conversationItemFastlegeAccessDeniedBody: string;
+  /** 
+  * Det har skjedd en teknisk feil.
+  */
+  conversationItemFastlegeGeneralErrorHeader: string;
+  /** 
+  * Prøv igjen senere, eller kontakt ditt legekontor.
+  */
+  conversationItemFastlegeGeneralErrorBody: string;
+  /** 
+  * Legen/legekontoret kan for tiden ikke svare på meldinger.
+  */
+  conversationItemFastlegeServiceNotSupportedHeader: string;
+  /** 
+  * Ved spørsmål, kontakt ditt legekontor.
+  */
+  conversationItemFastlegeServiceNotSupportedBody: string;
+  /** 
+  * Skriv melding til
+  */
+  commonEkontaktHeaderSkrivMelding: string;
+  /** 
+  * Skriv melding til
+  */
+  commonKommuneMeldingHeader: string;
+  /** 
+  * Forventet svartid på meldinger er første virkedag. Akutte henvendelser skal ikke sendes via melding.
+  */
+  commonKommuneMeldingBeskrivelse: string;
+  /** 
+  * <p>Henvendelsen vil bli journalført.</p>
+  */
+  commonKommuneMeldingBottomInfo: string;
+  /** 
+  * Skriv melding til
+  */
+  commonKoordinatorMeldingHeader: string;
+  /** 
+  * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
+  */
+  commonKoordinatorMeldingBeskrivelse: string;
+  /** 
+  * <p>Henvendelsen vil bli journalført.</p>
+  */
+  commonKoordinatorMeldingBottomInfo: string;
+  /** 
+  * Skriv melding til
+  */
+  commonHelsefagligKontaktHeader: string;
+  /** 
+  * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
+  */
+  commonHelsefagligKontaktBeskrivelse: string;
+  /** 
+  * <p>Henvendelsen vil bli journalført.</p>
+  */
+  commonHelsefagligKontaktBottomInfo: string;
+  /** 
+  * Still et praktisk spørsmål til resepsjonen. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkontaktHelsetilbudBeskrivelse: string;
+  /** 
+  * Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkontaktHelsetilbudSvarBeskrivelse: string;
+  /** 
+  * For øyeblikket er det ikke mulig å avbestille time her
+  */
+  appointmentCancelTimeadministrasjonStotteWarningTitle: string;
+  /** 
+  * Ta kontakt med behandlingsstedet på annen måte for avbestilling.
+  */
+  appointmentCancelTimeadministrasjonStotteWarningDescription: string;
+  /** 
+  * Du har valgt en hastetime
+  */
+  hastetimeEventAlertTitle: string;
+  /** 
+  * Denne timen er forbeholdt hastesaker. Hvis du kan vente, velg heller et annet tidspunkt.
+  */
+  hastetimeEventAlertDescription: string;
+  /** 
+  * Jeg ønsker en digital kopi av min pasientjournal
+  */
+  commonInnsynPasientjournalBeskrivelseBody: string;
   /** 
   * Merk at meldingen kan bli lest av andre ved legekontoret enn fastlegen. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
@@ -7461,6 +7478,30 @@ behandlingsstedet ved eventuelle spørsmål.
   * Beskrivelse
   */
   commonInnsynPasientjournalBeskrivelse: string;
+  /** 
+  * Send
+  */
+  commonDraftSend: string;
+  /** 
+  * Endre
+  */
+  commonDraftEdit: string;
+  /** 
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+  */
+  commonSubmitConfirmationDraftDescription: string;
+  /** 
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+  */
+  changeBookingSubmitSuccessDraftDescription: string;
+  /** 
+  * Melding lagret som utkast
+  */
+  conversationSubmitConfirmationHeadingDraft: string;
+  /** 
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+  */
+  conversationSubmitConfirmationDescriptionDraft: string;
   /** 
   * Ukjent
   */
@@ -7812,66 +7853,33 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonMeldingsvelgerFastlegeKontaktLegekontoret: string;
   /** 
-  * Er du sikker på at du vil avbestille?
+  * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
   */
-  appointmentCancelHelsestasjonDescription: string;
+  appointmentDetailsSpecialistVideoTekst: string;
   /** 
-  * Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.
+  * Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
   */
-  appointmentDetailsCancellationReasonService: string;
+  appointmentDetailsSpecialistVideoButtonText: string;
   /** 
-  * Avtalen ble avlyst fordi ingen var hjemme.
+  * Dette er en videotime
   */
-  appointmentDetailsCancellationReasonAway: string;
+  appointmentDetailsSpecialistVideoHeader: string;
   /** 
-  * Avtalen ble avlyst av innbygger.
+  * Bestill time
   */
-  appointmentDetailsCancellationReasonInhabitant: string;
+  appointmentBestillTime: string;
   /** 
-  * Avtalen ble avlyst av person med fullmakt for innbygger.
+  * Videotime
   */
-  appointmentDetailsCancellationReasonProxy: string;
+  appointmentVideoTitle: string;
   /** 
-  * Tilbake
+  * Informasjon fra legekontoret
   */
-  commonFormTilbake: string;
+  servicepanelInfoHeading: string;
   /** 
-  * Henvendelse til
+  * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
   */
-  commonSpesialistMeldingHeader: string;
-  /** 
-  * Tjenesten er gratis. Meldingen kan leses av helsepersonell ved {0}. Du vil bli kontaktet innen fem arbeidsdager.
-  */
-  commonSpesialistMeldingBeskrivelse: string;
-  /** 
-  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
-<p>Henvendelsen vil bli journalført.</p>
-  */
-  commonSpesialistMeldingBottomInfo: string;
-  /** 
-  * Få veiledning før timebestilling
-  */
-  commonBestillTimeVelgerVeiviser: string;
-  /** 
-  * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
-  */
-  commonBestillTimeVelgerVeiviserBeskrivelse: string;
-  /** 
-  * Gå direkte til timebestilling
-  */
-  commonBestillTimeVelgerAnnet: string;
-  /** 
-  * 
-  */
-  commonBestillTimeVelgerAnnetBeskrivelse: string;
-  /** 
-  * Hva slags time trenger du?
-  */
-  commonBestillTimeVelgerTittel: string;
-  /** 
-  * /veileder?Query=Questionnaire%2F303
-  */
-  commonBestillTimeVelgerVeiviserUrl: string;
+  servicepanelNoServiceDescription: string;
   /** 
   * Timer på legekontoret, om ønskelig på video/telefon
   */
@@ -7941,33 +7949,25 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsVideoUserManualLinkText: string;
   /** 
-  * Videotime
+  * Er du sikker på at du vil avbestille?
   */
-  appointmentVideoTitle: string;
+  appointmentCancelHelsestasjonDescription: string;
   /** 
-  * Informasjon fra legekontoret
+  * Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.
   */
-  servicepanelInfoHeading: string;
+  appointmentDetailsCancellationReasonService: string;
   /** 
-  * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
+  * Avtalen ble avlyst fordi ingen var hjemme.
   */
-  servicepanelNoServiceDescription: string;
+  appointmentDetailsCancellationReasonAway: string;
   /** 
-  * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
+  * Avtalen ble avlyst av innbygger.
   */
-  appointmentDetailsSpecialistVideoTekst: string;
+  appointmentDetailsCancellationReasonInhabitant: string;
   /** 
-  * Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
+  * Avtalen ble avlyst av person med fullmakt for innbygger.
   */
-  appointmentDetailsSpecialistVideoButtonText: string;
-  /** 
-  * Dette er en videotime
-  */
-  appointmentDetailsSpecialistVideoHeader: string;
-  /** 
-  * Bestill time
-  */
-  appointmentBestillTime: string;
+  appointmentDetailsCancellationReasonProxy: string;
   /** 
   * Årsak til avbestilling
   */
@@ -8052,10 +8052,6 @@ export type HNMinHelseDialog = {
   */
   clientOperation_NewJournalAccess_SendError_Body: string;
   /** 
-  * Sending av melding via Helsenorge kan ha feilet
-  */
-  varselmeny_ManglendeAppRec_Emne: string;
-  /** 
   * Videotime hos {0} for {1}
   */
   downloadCalendar_PrimarhelsetjenesteVideoAppointment_Summary: string;
@@ -8087,6 +8083,10 @@ export type HNMinHelseDialog = {
   * Din time hos {0} {1} kunne ikke avbestilles.
   */
   varselMeny_PrimarhelsetjenesteTimeavtale_KanIkkeAvbestille_Emne: string;
+  /** 
+  * Sending av melding via Helsenorge kan ha feilet
+  */
+  varselmeny_ManglendeAppRec_Emne: string;
   /** 
   * Dialog ikke tilgjengelig
   */
@@ -10193,46 +10193,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   pdfCompatibilityPreview: string;
   /** 
-  * Du er i ferd med å slette dokumentet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Er du helt sikker på at du vil slette?
-  */
-  deleteDialogConfirmationMessage: string;
-  /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"Her kan du legge til stikkord som beskriver dokumentet. Dette gjør det lettere for deg å finne dokumentet senere.","seksjonstekst_overskrift":"","seksjonstekst_brodtekst":""}
-  */
-  hjelpetrigger_dokumentEmneord: string;
-  /** 
-  * Emneord
-  */
-  label_emneord: string;
-  /** 
-  * F.eks. røntgen, prøvesvar
-  */
-  emneord_placeholderText: string;
-  /** 
-  * Arkivert dato
-  */
-  label_arkivertDato: string;
-  /** 
-  * Filtype
-  */
-  label_filtype: string;
-  /** 
-  * Innholdstype
-  */
-  label_innholdstype: string;
-  /** 
-  * Kommer fra
-  */
-  label_kontekst: string;
-  /** 
-  * Lagre
-  */
-  dialog_save: string;
-  /** 
-  * Avbryt
-  */
-  dialog_cancel: string;
-  /** 
   * Fortsett
   */
   actionContinue: string;
@@ -10281,13 +10241,45 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   aria_continueDraft: string;
   /** 
-  * Sjekk at alt er riktig utfylt
+  * Du er i ferd med å slette dokumentet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Er du helt sikker på at du vil slette?
   */
-  egenskaper_validationError: string;
+  deleteDialogConfirmationMessage: string;
   /** 
-  * Du må skrive inn et navn
+  * {"synlig":"True","sporsmalstekst":"","bobletekst":"Her kan du legge til stikkord som beskriver dokumentet. Dette gjør det lettere for deg å finne dokumentet senere.","seksjonstekst_overskrift":"","seksjonstekst_brodtekst":""}
   */
-  egenskaper_navnError: string;
+  hjelpetrigger_dokumentEmneord: string;
+  /** 
+  * Emneord
+  */
+  label_emneord: string;
+  /** 
+  * F.eks. røntgen, prøvesvar
+  */
+  emneord_placeholderText: string;
+  /** 
+  * Arkivert dato
+  */
+  label_arkivertDato: string;
+  /** 
+  * Filtype
+  */
+  label_filtype: string;
+  /** 
+  * Innholdstype
+  */
+  label_innholdstype: string;
+  /** 
+  * Kommer fra
+  */
+  label_kontekst: string;
+  /** 
+  * Lagre
+  */
+  dialog_save: string;
+  /** 
+  * Avbryt
+  */
+  dialog_cancel: string;
   /** 
   * Sorter liste
   */
@@ -10308,6 +10300,14 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Fra-dato kan ikke være senere enn til-dato.
   */
   dokument_filter_errorBeforeMinDate: string;
+  /** 
+  * Sjekk at alt er riktig utfylt
+  */
+  egenskaper_validationError: string;
+  /** 
+  * Du må skrive inn et navn
+  */
+  egenskaper_navnError: string;
   /** 
   * Deling
   */
@@ -10545,14 +10545,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   dokument_filter_kontekstType_pasientjournal: string;
   /** 
-  * Prøv igjen senere.
-  */
-  default_ErrorMessage_Body: string;
-  /** 
-  * Det har skjedd en teknisk feil
-  */
-  default_ErrorMessage_Title: string;
-  /** 
   * Notat
   */
   dokument_filter_innholdTypeValue_1: string;
@@ -10585,13 +10577,13 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   dokument_filter_kontekstTypeValue_2: string;
   /** 
-  * arkivert
+  * Prøv igjen senere.
   */
-  arkivert: string;
+  default_ErrorMessage_Body: string;
   /** 
-  * Arkivert
+  * Det har skjedd en teknisk feil
   */
-  arkivert_med_stor_a: string;
+  default_ErrorMessage_Title: string;
   /** 
   * {"synlig":"True","sporsmalstekst":"","bobletekst":"Dersom du vil gi dokumentet et annet visningsnavn kan du gjøre det her. Opprinnelig filnavn endres ikke.","seksjonstekst_overskrift":"","seksjonstekst_brodtekst":""}
   */
@@ -10600,6 +10592,14 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Navn
   */
   gammelt_navn: string;
+  /** 
+  * arkivert
+  */
+  arkivert: string;
+  /** 
+  * Arkivert
+  */
+  arkivert_med_stor_a: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
@@ -10610,6 +10610,90 @@ export type HNMinHelseHealthArchiveStrings = {
 };
 
 export type HNMinHelseHelseregistreJS = { 
+  /** 
+  * Ingen registre
+  */
+  filterIngenRegistre: string;
+  /** 
+  * Sist oppdatert:
+  */
+  registerSistOppdatert: string;
+  /** 
+  * Registre som tilbyr innsyn på helsenorge.no
+  */
+  filterDigitaltInnsyn: string;
+  /** 
+  * Vis kun
+  */
+  filterRegistreHeader: string;
+  /** 
+  * ... er registrert
+  */
+  filterRegistreFinnes: string;
+  /** 
+  * ... kan være registrert
+  */
+  filterRegistreKanFinnes: string;
+  /** 
+  * registre
+  */
+  filterRegistreUnit: string;
+  /** 
+  * av
+  */
+  filterRegistreAv: string;
+  /** 
+  * Spørsmål eller melding om feil i opplysninger som er registrert om meg
+  */
+  meldeFeilSubject: string;
+  /** 
+  * Din forespørsel vil normalt bli besvart i løpet av 30 dager.
+  */
+  messageSubmitDescription: string;
+  /** 
+  * Se {0}
+  */
+  innsynslenkePrefix: string;
+  /** 
+  * Logg inn for å få komplett helseregisteroversikt
+  */
+  loginButtonText: string;
+  /** 
+  * Logg inn for å kommunisere med registeret
+  */
+  communicateWithRegisterButtonText: string;
+  /** 
+  * Bestill
+  */
+  bestillInnsynBestill: string;
+  /** 
+  * OK
+  */
+  bestillInnsynKvitteringOk: string;
+  /** 
+  * Prøv igjen senere.
+  */
+  default_ErrorMessage_Body: string;
+  /** 
+  * Det har skjedd en teknisk feil
+  */
+  default_ErrorMessage_Title: string;
+  /** 
+  * Emneord
+  */
+  label_emneord: string;
+  /** 
+  * arkivert
+  */
+  arkivert: string;
+  /** 
+  * Arkivert
+  */
+  arkivert_med_stor_a: string;
+  /** 
+  * Innsyn kan ikke lastes
+  */
+  innsynKanIkkeLastes: string;
   /** 
   * Velg innsynsrapport
   */
@@ -10699,38 +10783,6 @@ export type HNMinHelseHelseregistreJS = {
   */
   varselmeny_RegisterInnsyn_Svar_tekst: string;
   /** 
-  * Bestill
-  */
-  bestillInnsynBestill: string;
-  /** 
-  * OK
-  */
-  bestillInnsynKvitteringOk: string;
-  /** 
-  * Prøv igjen senere.
-  */
-  default_ErrorMessage_Body: string;
-  /** 
-  * Det har skjedd en teknisk feil
-  */
-  default_ErrorMessage_Title: string;
-  /** 
-  * Emneord
-  */
-  label_emneord: string;
-  /** 
-  * arkivert
-  */
-  arkivert: string;
-  /** 
-  * Arkivert
-  */
-  arkivert_med_stor_a: string;
-  /** 
-  * Innsyn kan ikke lastes
-  */
-  innsynKanIkkeLastes: string;
-  /** 
   * Teknisk feil
   */
   clientOperation_GetRegisterInnsyn_Error_Title: string;
@@ -10782,58 +10834,6 @@ export type HNMinHelseHelseregistreJS = {
   * Det oppstod en feil og en eller flere rapporter ble ikke bestilt. Vennligst prøv på nytt senere.
   */
   clientOperation_SendRegisterInnsyn_Error_Body: string;
-  /** 
-  * Se {0}
-  */
-  innsynslenkePrefix: string;
-  /** 
-  * Logg inn for å få komplett helseregisteroversikt
-  */
-  loginButtonText: string;
-  /** 
-  * Logg inn for å kommunisere med registeret
-  */
-  communicateWithRegisterButtonText: string;
-  /** 
-  * Ingen registre
-  */
-  filterIngenRegistre: string;
-  /** 
-  * Sist oppdatert:
-  */
-  registerSistOppdatert: string;
-  /** 
-  * Registre som tilbyr innsyn på helsenorge.no
-  */
-  filterDigitaltInnsyn: string;
-  /** 
-  * Vis kun
-  */
-  filterRegistreHeader: string;
-  /** 
-  * ... er registrert
-  */
-  filterRegistreFinnes: string;
-  /** 
-  * ... kan være registrert
-  */
-  filterRegistreKanFinnes: string;
-  /** 
-  * registre
-  */
-  filterRegistreUnit: string;
-  /** 
-  * av
-  */
-  filterRegistreAv: string;
-  /** 
-  * Spørsmål eller melding om feil i opplysninger som er registrert om meg
-  */
-  meldeFeilSubject: string;
-  /** 
-  * Din forespørsel vil normalt bli besvart i løpet av 30 dager.
-  */
-  messageSubmitDescription: string;
   /** 
   * Skriv melding til
   */
@@ -11168,62 +11168,6 @@ export type HNMinHelseHFTStringsJS = {
   */
   utbetalingsskuff: string;
   /** 
-  * Vi mangler kontonummeret ditt
-  */
-  egenandeler_mangler_kontonummer_title: string;
-  /** 
-  * Du er fritatt for å betale egenandeler for medisiner/utstyr på blå resept, siden du har minste pensjonsnivå.
-  */
-  egenandeler_minste_pensjon_content: string;
-  /** 
-  * Fritak for egenandel
-  */
-  egenandeler_minste_pensjon_title: string;
-  /** 
-  * Navn:
-  */
-  egenandeler_navn: string;
-  /** 
-  * Vi bruker disse opplysningene for å sende deg frikort og utbetale beløp du har til gode.
-  */
-  egenandeler_nav_info: string;
-  /** 
-  * Velg året du vil se egenandeler for
-  */
-  vis_egenandeler_aar_v2: string;
-  /** 
-  * Egenandelstak {number} nådd for {aar}
-  */
-  egenandeler_naadd: string;
-  /** 
-  * Registrerte egenandeler
-  */
-  egenandeler_registrerte_sum_v2: string;
-  /** 
-  * Gjenstår til frikort
-  */
-  egenandeler_mangler_sum_v2: string;
-  /** 
-  * Egenandelstak
-  */
-  egenandelstak_er_v2: string;
-  /** 
-  * Til utbetaling
-  */
-  egenandeler_status_til_utbetaling_v2: string;
-  /** 
-  * Minstebeløp for utbetaling er
-  */
-  egenandeler_status_minste_belop_v2: string;
-  /** 
-  * Utbetales fra Helfo
-  */
-  egenandeler_status_neste_dato_v2: string;
-  /** 
-  * Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.
-  */
-  egenandeler_behandles: string;
-  /** 
   * Frikortnummer:
   */
   egenandeler_frikortnummer: string;
@@ -11267,6 +11211,62 @@ export type HNMinHelseHFTStringsJS = {
   * Gyldig til: 31.12
   */
   egenandeler_gyldig: string;
+  /** 
+  * Beløpet utbetales fra Helfo og vil være på kontoen din innen 3 virkedager.
+  */
+  egenandeler_behandles: string;
+  /** 
+  * Velg året du vil se egenandeler for
+  */
+  vis_egenandeler_aar_v2: string;
+  /** 
+  * Egenandelstak {number} nådd for {aar}
+  */
+  egenandeler_naadd: string;
+  /** 
+  * Registrerte egenandeler
+  */
+  egenandeler_registrerte_sum_v2: string;
+  /** 
+  * Gjenstår til frikort
+  */
+  egenandeler_mangler_sum_v2: string;
+  /** 
+  * Egenandelstak
+  */
+  egenandelstak_er_v2: string;
+  /** 
+  * Til utbetaling
+  */
+  egenandeler_status_til_utbetaling_v2: string;
+  /** 
+  * Minstebeløp for utbetaling er
+  */
+  egenandeler_status_minste_belop_v2: string;
+  /** 
+  * Utbetales fra Helfo
+  */
+  egenandeler_status_neste_dato_v2: string;
+  /** 
+  * Vi mangler kontonummeret ditt
+  */
+  egenandeler_mangler_kontonummer_title: string;
+  /** 
+  * Du er fritatt for å betale egenandeler for medisiner/utstyr på blå resept, siden du har minste pensjonsnivå.
+  */
+  egenandeler_minste_pensjon_content: string;
+  /** 
+  * Fritak for egenandel
+  */
+  egenandeler_minste_pensjon_title: string;
+  /** 
+  * Navn:
+  */
+  egenandeler_navn: string;
+  /** 
+  * Vi bruker disse opplysningene for å sende deg frikort og utbetale beløp du har til gode.
+  */
+  egenandeler_nav_info: string;
   /** 
   * Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte
   */
@@ -12023,6 +12023,251 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_logg_sjekkboksFilter: string;
   /** 
+  * <p>Dette kan du opprette og endre selv, på siden <a href="/donorkort">Donorkort</a>.</p>
+  */
+  page_KJ_donorkort_Desc: string;
+  /** 
+  * Donorkort
+  */
+  page_KJ_donorkort_Title: string;
+  /** 
+  * Velg besøk
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Title: string;
+  /** 
+  * Tilbake til steg 1: Velg besøk
+  */
+  page_Besokshistorikk_Lightbox_ReportError_BackToChooseVisit: string;
+  /** 
+  * Velg
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Button: string;
+  /** 
+  * Besøksdato(er)
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Info_Dates: string;
+  /** 
+  * Helseforetak
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Info_Institution: string;
+  /** 
+  * {0} besøk registrert siden 2008
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Caption: string;
+  /** 
+  * Per i dag finnes det ingen besøk registrert på deg.
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Empty: string;
+  /** 
+  * Periode
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Period: string;
+  /** 
+  * Antall
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Count: string;
+  /** 
+  * Fagenhet/spesialist
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Spesialist: string;
+  /** 
+  * Tjenesteenhet
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Service: string;
+  /** 
+  * Helseforetak
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Institution: string;
+  /** 
+  * Årstall
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Year: string;
+  /** 
+  * Besøk
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Visits: string;
+  /** 
+  * Fagenhet/Spesialitet
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Fagenhet: string;
+  /** 
+  * HF/Institusjon
+  */
+  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak: string;
+  /** 
+  * Helsekontakter
+  */
+  page_KJ_helsekontaker_title: string;
+  /** 
+  * <p>Dette kan du endre selv, på siden <a href="/helsekontakter">Helsekontakter</a>.</p>
+  */
+  page_KJ_helsekontaker_Desc: string;
+  /** 
+  * Fortsett redigering
+  */
+  discardProceedButtonText: string;
+  /** 
+  * Forkast endringer
+  */
+  discardCancelButtonText: string;
+  /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  discardHeading: string;
+  /** 
+  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
+  */
+  discardDescription: string;
+  /** 
+  * (valgfritt)
+  */
+  page_SykdomOgKritiskInfo_Specification_Optional_Label: string;
+  /** 
+  * <p>Dette kan du redigere i <a class="external" target="_blank" href="https://www.difi.no">Digitalt kontaktregister (ID-porten)</a></p>
+  */
+  page_KJ_kontaktinfo_Desc: string;
+  /** 
+  * Kontaktinformasjon
+  */
+  page_KJ_personopplysninger_Title: string;
+  /** 
+  * <p>Pårørende, arbeidsgiver og kommunikasjon kan du endre selv på siden <a href="/kontaktinformasjon">Kontaktinformasjon</a>.<br>
+Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med <a class="external" target="_blank" href="http://www.skatteetaten.no/Person/Folkeregister">folkeregisteret</a></p>
+  */
+  page_KJ_personopplysninger_Desc: string;
+  /** 
+  * Sykdomshistorikk
+  */
+  page_KJ_sykdomshistorikk_Title: string;
+  /** 
+  * <p>Dette kan du endre selv, på siden <a href="/sykdom-og-kritisk-info">Sykdom og kritisk informasjon</a>.</p>
+  */
+  page_KJ_sykdomshistorikk_Desc: string;
+  /** 
+  * Kritisk informasjon
+  */
+  page_KJ_kritiskInfo_Title: string;
+  /** 
+  * <p>Ta kontakt med din fastlege. Se kontaktinformasjon på <a href="/Fastlegen">fastlegesiden</>.</p>
+  */
+  page_KJ_kritiskInfo_Desc: string;
+  /** 
+  * Andre endringer i kjernejournal
+  */
+  page_KJ_andreEndringer_Title: string;
+  /** 
+  * <p>Hvis du ønsker å endre andre opplysninger i kjernejournalen, gå til artikkelen <a href="https://helsenorge.no/kjernejournal/skjemaer-for-endring-i-kjernejournal">Skjemaer for endring i kjernejournal</a>.</p>
+  */
+  page_KJ_andreEndringer_Desc: string;
+  /** 
+  * Besøkshistorikk i spesialisthelsetjenesten
+  */
+  page_KJ_besokshistorikk_Title: string;
+  /** 
+  * Bruk
+  */
+  page_KJ_besokshistorikk_Desc1: string;
+  /** 
+  * <p>Her kan du registrere sykdommer eller helsetilstander som du ønsker helsepersonell skal kjenne til. Opplysningene deles med behandlere via din <a href="/kjernejournal">kjernejournal</a>.</p>
+  */
+  page_SykdomOgKritiskInfo_sykdomIntro: string;
+  /** 
+  * Innhold
+  */
+  page_innsynkj_innholdTab: string;
+  /** 
+  * Logg over bruk
+  */
+  page_innsynkj_loggTab: string;
+  /** 
+  * Dette er en oversikt over aktiviteter i kjernejournalen din. Du kan se hvem som har åpnet den, og om det er gjort registreringer eller endringer.
+  */
+  page_innsynkj_loggDesc: string;
+  /** 
+  * Sterkt hørselshemmet
+  */
+  page_Opplysninger_Kommunikasjon_sterktHoerselshemmet: string;
+  /** 
+  * Døv
+  */
+  page_Opplysninger_Kommunikasjon_doev: string;
+  /** 
+  * Sterkt synshemmet
+  */
+  page_Opplysninger_Kommunikasjon_sterktSynshemmet: string;
+  /** 
+  * Blind
+  */
+  page_Opplysninger_Kommunikasjon_blind: string;
+  /** 
+  * Bruker kontaktlinser
+  */
+  page_Opplysninger_Kommunikasjon_brukerKontaktlinser: string;
+  /** 
+  * <p>Her vises kritiske helseopplysninger som legen i samråd med deg har registrert i din <a href="/kjernejournal">kjernejournal</a>.</p><p>Er det feil eller mangler i opplysningene, ta kontakt med din fastlege.</p>
+  */
+  page_SykdomOgKritiskInfo_kiIntro: string;
+  /** 
+  * Vis også utdaterte og avkreftede opplysninger
+  */
+  page_KI_CheckBox_ShowAll: string;
+  /** 
+  * .<br>Når feilen er registrert vil du få en kvittering i innboksen, og det vil opprettes en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil.
+  */
+  page_KJ_besokshistorikk_Desc2: string;
+  /** 
+  * feilmeldingsskjemaet
+  */
+  page_KJ_besokshistorikk_OpenFormLabel: string;
+  /** 
+  * Se din kjernejournal
+  */
+  page_KJ_openButton: string;
+  /** 
+  * Hvordan endre, rette eller slette opplysninger i din kjernejournal
+  */
+  page_KJ_ekspanderbarSeksjon: string;
+  /** 
+  * Kognitive vansker som påvirker kommunikasjon
+  */
+  page_Opplysninger_Kommunikasjon_kognitiveVansker: string;
+  /** 
+  * Trenger tolk
+  */
+  page_Opplysninger_Kommunikasjon_trengerTolk: string;
+  /** 
+  * Talevansker (Afasi mm)
+  */
+  page_Opplysninger_Kommunikasjon_talevansker: string;
+  /** 
+  * Stum
+  */
+  page_Opplysninger_Kommunikasjon_stum: string;
+  /** 
+  * {"defaulttekst_overskrift":"Kjernejournal","defaulttekst_brodtekst":"<p>Kjernejournal er en elektronisk tjeneste som inneholder viktige opplysninger om helsen din.\nBlir du akutt syk, har helsepersonell rask og sikker tilgang til opplysningene i din kjernejournal.</p>\n\n<p>Du kan selv bidra til å gjøre kjernejournal bedre ved å registrere opplysninger i din kjernejournal. Det vil gi helsepersonell et mer utfyllende bilde av deg og din helse.</p>\n\n<p><a href=\"https://helsenorge.no/kjernejournal\">Her kan du lese mer om Kjernejournal</a>.</p>"}
+  */
+  hjelpekontekst_kjernejournal_root: string;
+  /** 
+  * <p>Du kan registrere helseopplysninger som du ønsker helsepersonell skal kjenne til på siden <a href="/sykdom-og-kritisk-info">Sykdom og kritisk informasjon</a>. Viktige kontaktpersoner kan registreres under <a href="/kontaktinformasjon">Kontaktinformasjon</a> og <a href="/helsekontakter">Helsekontakter</a>.</p>
+  */
+  page_KJ_RegInfo: string;
+  /** 
+  * Hvis du oppdager feil i din kjernejournal er det viktig å få den rettet. Hvordan du får korrigert din kjernejournal varierer fra seksjon til seksjon:
+  */
+  page_KJ_feiInfo: string;
+  /** 
+  * Egen kontaktinformasjon
+  */
+  page_KJ_kontaktinfo_Title: string;
+  /** 
+  * Du kan maksimalt registrere 30 sykdommer. Du må slette noen før du kan registrere nye.
+  */
+  page_SykdomOgKritiskInfo_legge_til_ny_sykdom_validering: string;
+  /** 
+  * Du prøver å registrere for mange sykdommer. Det totale antallet registrerte sykdommer kan ikke overstige 30. Du må ta bort noen valg eller slette noen sykdommer før du kan registrere nye.
+  */
+  page_SykdomOgKritiskInfo_Step1_ValidationMessage_for_mange_sykdommer: string;
+  /** 
   * Besøk
   */
   page_Besokshistorikk_Lightbox_ReportError_VisitIsPartiallyWrong_VisitCount: string;
@@ -12074,14 +12319,6 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   inputStringOverMaxLength: string;
-  /** 
-  * Du kan maksimalt registrere 30 sykdommer. Du må slette noen før du kan registrere nye.
-  */
-  page_SykdomOgKritiskInfo_legge_til_ny_sykdom_validering: string;
-  /** 
-  * Du prøver å registrere for mange sykdommer. Det totale antallet registrerte sykdommer kan ikke overstige 30. Du må ta bort noen valg eller slette noen sykdommer før du kan registrere nye.
-  */
-  page_SykdomOgKritiskInfo_Step1_ValidationMessage_for_mange_sykdommer: string;
   /** 
   * {"defaulttekst_overskrift":"Kjernejournal innsyn","defaulttekst_brodtekst":"<p>Du kan selv bidra til at riktige opplysninger er registrert om deg i din kjernejournal. Du finner informasjon om hvor du kan registrere og endre opplysninger på siden <a href=\"/kjernejournal\">Kjernejournal</a>.</p>"}
   */
@@ -12259,243 +12496,6 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_SykdomOgKritiskInfo_Update_Year_Error: string;
   /** 
-  * Helsekontakter
-  */
-  page_KJ_helsekontaker_title: string;
-  /** 
-  * <p>Dette kan du endre selv, på siden <a href="/helsekontakter">Helsekontakter</a>.</p>
-  */
-  page_KJ_helsekontaker_Desc: string;
-  /** 
-  * Fortsett redigering
-  */
-  discardProceedButtonText: string;
-  /** 
-  * Forkast endringer
-  */
-  discardCancelButtonText: string;
-  /** 
-  * Det finnes endringer som ikke er lagret
-  */
-  discardHeading: string;
-  /** 
-  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
-  */
-  discardDescription: string;
-  /** 
-  * (valgfritt)
-  */
-  page_SykdomOgKritiskInfo_Specification_Optional_Label: string;
-  /** 
-  * <p>Dette kan du redigere i <a class="external" target="_blank" href="https://www.difi.no">Digitalt kontaktregister (ID-porten)</a></p>
-  */
-  page_KJ_kontaktinfo_Desc: string;
-  /** 
-  * Kontaktinformasjon
-  */
-  page_KJ_personopplysninger_Title: string;
-  /** 
-  * <p>Pårørende, arbeidsgiver og kommunikasjon kan du endre selv på siden <a href="/kontaktinformasjon">Kontaktinformasjon</a>.<br>
-Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med <a class="external" target="_blank" href="http://www.skatteetaten.no/Person/Folkeregister">folkeregisteret</a></p>
-  */
-  page_KJ_personopplysninger_Desc: string;
-  /** 
-  * Sykdomshistorikk
-  */
-  page_KJ_sykdomshistorikk_Title: string;
-  /** 
-  * <p>Dette kan du endre selv, på siden <a href="/sykdom-og-kritisk-info">Sykdom og kritisk informasjon</a>.</p>
-  */
-  page_KJ_sykdomshistorikk_Desc: string;
-  /** 
-  * Kritisk informasjon
-  */
-  page_KJ_kritiskInfo_Title: string;
-  /** 
-  * <p>Ta kontakt med din fastlege. Se kontaktinformasjon på <a href="/Fastlegen">fastlegesiden</>.</p>
-  */
-  page_KJ_kritiskInfo_Desc: string;
-  /** 
-  * Andre endringer i kjernejournal
-  */
-  page_KJ_andreEndringer_Title: string;
-  /** 
-  * <p>Hvis du ønsker å endre andre opplysninger i kjernejournalen, gå til artikkelen <a href="https://helsenorge.no/kjernejournal/skjemaer-for-endring-i-kjernejournal">Skjemaer for endring i kjernejournal</a>.</p>
-  */
-  page_KJ_andreEndringer_Desc: string;
-  /** 
-  * Besøkshistorikk i spesialisthelsetjenesten
-  */
-  page_KJ_besokshistorikk_Title: string;
-  /** 
-  * Bruk
-  */
-  page_KJ_besokshistorikk_Desc1: string;
-  /** 
-  * <p>Her kan du registrere sykdommer eller helsetilstander som du ønsker helsepersonell skal kjenne til. Opplysningene deles med behandlere via din <a href="/kjernejournal">kjernejournal</a>.</p>
-  */
-  page_SykdomOgKritiskInfo_sykdomIntro: string;
-  /** 
-  * Innhold
-  */
-  page_innsynkj_innholdTab: string;
-  /** 
-  * Logg over bruk
-  */
-  page_innsynkj_loggTab: string;
-  /** 
-  * Dette er en oversikt over aktiviteter i kjernejournalen din. Du kan se hvem som har åpnet den, og om det er gjort registreringer eller endringer.
-  */
-  page_innsynkj_loggDesc: string;
-  /** 
-  * Sterkt hørselshemmet
-  */
-  page_Opplysninger_Kommunikasjon_sterktHoerselshemmet: string;
-  /** 
-  * Døv
-  */
-  page_Opplysninger_Kommunikasjon_doev: string;
-  /** 
-  * Sterkt synshemmet
-  */
-  page_Opplysninger_Kommunikasjon_sterktSynshemmet: string;
-  /** 
-  * Blind
-  */
-  page_Opplysninger_Kommunikasjon_blind: string;
-  /** 
-  * Bruker kontaktlinser
-  */
-  page_Opplysninger_Kommunikasjon_brukerKontaktlinser: string;
-  /** 
-  * <p>Her vises kritiske helseopplysninger som legen i samråd med deg har registrert i din <a href="/kjernejournal">kjernejournal</a>.</p><p>Er det feil eller mangler i opplysningene, ta kontakt med din fastlege.</p>
-  */
-  page_SykdomOgKritiskInfo_kiIntro: string;
-  /** 
-  * Vis også utdaterte og avkreftede opplysninger
-  */
-  page_KI_CheckBox_ShowAll: string;
-  /** 
-  * .<br>Når feilen er registrert vil du få en kvittering i innboksen, og det vil opprettes en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil.
-  */
-  page_KJ_besokshistorikk_Desc2: string;
-  /** 
-  * feilmeldingsskjemaet
-  */
-  page_KJ_besokshistorikk_OpenFormLabel: string;
-  /** 
-  * Se din kjernejournal
-  */
-  page_KJ_openButton: string;
-  /** 
-  * Hvordan endre, rette eller slette opplysninger i din kjernejournal
-  */
-  page_KJ_ekspanderbarSeksjon: string;
-  /** 
-  * Kognitive vansker som påvirker kommunikasjon
-  */
-  page_Opplysninger_Kommunikasjon_kognitiveVansker: string;
-  /** 
-  * Trenger tolk
-  */
-  page_Opplysninger_Kommunikasjon_trengerTolk: string;
-  /** 
-  * Talevansker (Afasi mm)
-  */
-  page_Opplysninger_Kommunikasjon_talevansker: string;
-  /** 
-  * Stum
-  */
-  page_Opplysninger_Kommunikasjon_stum: string;
-  /** 
-  * {"defaulttekst_overskrift":"Kjernejournal","defaulttekst_brodtekst":"<p>Kjernejournal er en elektronisk tjeneste som inneholder viktige opplysninger om helsen din.\nBlir du akutt syk, har helsepersonell rask og sikker tilgang til opplysningene i din kjernejournal.</p>\n\n<p>Du kan selv bidra til å gjøre kjernejournal bedre ved å registrere opplysninger i din kjernejournal. Det vil gi helsepersonell et mer utfyllende bilde av deg og din helse.</p>\n\n<p><a href=\"https://helsenorge.no/kjernejournal\">Her kan du lese mer om Kjernejournal</a>.</p>"}
-  */
-  hjelpekontekst_kjernejournal_root: string;
-  /** 
-  * <p>Du kan registrere helseopplysninger som du ønsker helsepersonell skal kjenne til på siden <a href="/sykdom-og-kritisk-info">Sykdom og kritisk informasjon</a>. Viktige kontaktpersoner kan registreres under <a href="/kontaktinformasjon">Kontaktinformasjon</a> og <a href="/helsekontakter">Helsekontakter</a>.</p>
-  */
-  page_KJ_RegInfo: string;
-  /** 
-  * Hvis du oppdager feil i din kjernejournal er det viktig å få den rettet. Hvordan du får korrigert din kjernejournal varierer fra seksjon til seksjon:
-  */
-  page_KJ_feiInfo: string;
-  /** 
-  * Egen kontaktinformasjon
-  */
-  page_KJ_kontaktinfo_Title: string;
-  /** 
-  * <p>Dette kan du opprette og endre selv, på siden <a href="/donorkort">Donorkort</a>.</p>
-  */
-  page_KJ_donorkort_Desc: string;
-  /** 
-  * Donorkort
-  */
-  page_KJ_donorkort_Title: string;
-  /** 
-  * Velg besøk
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Title: string;
-  /** 
-  * Tilbake til steg 1: Velg besøk
-  */
-  page_Besokshistorikk_Lightbox_ReportError_BackToChooseVisit: string;
-  /** 
-  * Velg
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Button: string;
-  /** 
-  * Besøksdato(er)
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Info_Dates: string;
-  /** 
-  * Helseforetak
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Info_Institution: string;
-  /** 
-  * {0} besøk registrert siden 2008
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Caption: string;
-  /** 
-  * Per i dag finnes det ingen besøk registrert på deg.
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Empty: string;
-  /** 
-  * Periode
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Period: string;
-  /** 
-  * Antall
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Count: string;
-  /** 
-  * Fagenhet/spesialist
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Spesialist: string;
-  /** 
-  * Tjenesteenhet
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Service: string;
-  /** 
-  * Helseforetak
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Institution: string;
-  /** 
-  * Årstall
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Year: string;
-  /** 
-  * Besøk
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Visits: string;
-  /** 
-  * Fagenhet/Spesialitet
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Fagenhet: string;
-  /** 
-  * HF/Institusjon
-  */
-  page_Besokshistorikk_Lightbox_ReportError_ChooseVisit_Column_Helseforetak: string;
-  /** 
   * Tabell som viser sykdomshistorikk
   */
   page_SykdomOgKritiskInfo_Table_Caption: string;
@@ -12511,10 +12511,6 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
 
 export type HNMinHelseKJStrings = { 
   /** 
-  * Meldingen ble ikke sendt.
-  */
-  besokshistorikk_ReportError_Error_Title: string;
-  /** 
   * Årstallet er ikke gyldig
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
@@ -12522,22 +12518,6 @@ export type HNMinHelseKJStrings = {
   * Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår.
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message: string;
-  /** 
-  * For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig.
-  */
-  clientOperation_GetResepter_RF_EndpointError_Title: string;
-  /** 
-  * For øyeblikket hentes reseptinformasjon kun fra kjernejournalen din. Det er mulig at enkelte resepter vises med feil status. Vennligst prøv igjen senere.
-  */
-  clientOperation_GetResepter_RF_EndpointError_Body: string;
-  /** 
-  * For øyeblikket vises kun aktive e-resepter. For historikk og eventuelle papirresepter, prøv igjen senere.
-  */
-  clientOperation_GetResepter_KJ_EndpointError_Body: string;
-  /** 
-  * For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig.
-  */
-  clientOperation_GetResepter_KJ_EndpointError_Title: string;
   /** 
   * Må vurderes hos apotek
   */
@@ -12622,6 +12602,26 @@ export type HNMinHelseKJStrings = {
   * Prøv på nytt senere, eller bruk <a href="https://helsenorge.no/kjernejournal/skjemaer-for-endring-i-kjernejournal">papirskjema</a> på helsenorge.no for å melde om feil i besøkshistorikk.
   */
   besokshistorikk_ReportError_Error_Body: string;
+  /** 
+  * Meldingen ble ikke sendt.
+  */
+  besokshistorikk_ReportError_Error_Title: string;
+  /** 
+  * For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig.
+  */
+  clientOperation_GetResepter_RF_EndpointError_Title: string;
+  /** 
+  * For øyeblikket hentes reseptinformasjon kun fra kjernejournalen din. Det er mulig at enkelte resepter vises med feil status. Vennligst prøv igjen senere.
+  */
+  clientOperation_GetResepter_RF_EndpointError_Body: string;
+  /** 
+  * For øyeblikket vises kun aktive e-resepter. For historikk og eventuelle papirresepter, prøv igjen senere.
+  */
+  clientOperation_GetResepter_KJ_EndpointError_Body: string;
+  /** 
+  * For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig.
+  */
+  clientOperation_GetResepter_KJ_EndpointError_Title: string;
   /** 
   * Avbryt
   */
@@ -15561,6 +15561,26 @@ export type HNMinHelseNavigation = {
   */
   category_Innsynstjenester_Title: string;
   /** 
+  * Søk Helfo om refusjon (altinn)
+  */
+  tile_EksterneTjenester_Refusjon_Title: string;
+  /** 
+  * Vaksiner
+  */
+  tile_Vaksiner_Title: string;
+  /** 
+  * Oversikt over registrerte vaksiner.
+  */
+  tile_Vaksiner_Description: string;
+  /** 
+  * Velg behandlingssted
+  */
+  tile_Velgbehandlingssted_Title: string;
+  /** 
+  * Ventetider og informasjon om behandlingssteder.
+  */
+  tile_Velgbehandlingssted_Description: string;
+  /** 
   * Egne dokumenter lagret på Helsenorge.
   */
   tile_DokumentArkiv_Description: string;
@@ -15604,26 +15624,6 @@ export type HNMinHelseNavigation = {
   * Kurs og andre verktøy for læring og mestring.
   */
   tile_Verktoy_Description: string;
-  /** 
-  * Søk Helfo om refusjon (altinn)
-  */
-  tile_EksterneTjenester_Refusjon_Title: string;
-  /** 
-  * Vaksiner
-  */
-  tile_Vaksiner_Title: string;
-  /** 
-  * Oversikt over registrerte vaksiner.
-  */
-  tile_Vaksiner_Description: string;
-  /** 
-  * Velg behandlingssted
-  */
-  tile_Velgbehandlingssted_Title: string;
-  /** 
-  * Ventetider og informasjon om behandlingssteder.
-  */
-  tile_Velgbehandlingssted_Description: string;
   /** 
   * Prøvesvar
   */
@@ -16665,57 +16665,13 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   pasientreiserInnsendingFeilet_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. ${Lokasjon}Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * ${FirstName} har mottatt et digitalt verktøy fra ${ActorName}. Logg inn på helsenorge.no for å lese mer.
   */
-  paminnelsePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
+  nyttDigitaltVerktoy_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
+  * ${FirstName}, du har mottatt et digitalt verktøy fra ${ActorName}. Logg inn på helsenorge.no for å lese mer.
   */
-  helseregisterNyInnsynsrapport_EmailMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
-  */
-  helseregisterNyInnsynsrapport_EmailMessage_Body_Self: string;
-  /** 
-  * Varsel om ny innsynsrapport på helsenorge.no
-  */
-  helseregisterNyInnsynsrapport_EmailMessage_Subject_Representation: string;
-  /** 
-  * Varsel om ny innsynsrapport på helsenorge.no
-  */
-  helseregisterNyInnsynsrapport_EmailMessage_Subject_Self: string;
-  /** 
-  * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
-  */
-  helseregisterNyInnsynsrapport_TextMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
-  */
-  helseregisterNyInnsynsrapport_TextMessage_Body_Self: string;
-  /** 
-  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt ${ActorName}.
-  */
-  kanIkkeAvbestillePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt ${ActorName}.
-  */
-  kanIkkeAvbestillePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
-  /** 
-  * Varsel om ny melding på helsenorge.no
-  */
-  kanIkkeAvbestillePrimarhelsetjenesteTime_EmailMessage_Subject_Representation: string;
-  /** 
-  * Varsel om ny melding på helsenorge.no
-  */
-  kanIkkeAvbestillePrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
-  /** 
-  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt ${ActorName}.
-  */
-  kanIkkeAvbestillePrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt ${ActorName}.
-  */
-  kanIkkeAvbestillePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
+  nyttDigitaltVerktoy_EmailMessage_Body_Self: string;
   /** 
   * Husk at ${FirstName} har en videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
   */
@@ -16761,13 +16717,57 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelsePrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName} har mottatt et digitalt verktøy fra ${ActorName}. Logg inn på helsenorge.no for å lese mer.
+  * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. ${Lokasjon}Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
-  nyttDigitaltVerktoy_EmailMessage_Body_Representation: string;
+  paminnelsePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName}, du har mottatt et digitalt verktøy fra ${ActorName}. Logg inn på helsenorge.no for å lese mer.
+  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt ${ActorName}.
   */
-  nyttDigitaltVerktoy_EmailMessage_Body_Self: string;
+  kanIkkeAvbestillePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
+  /** 
+  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt ${ActorName}.
+  */
+  kanIkkeAvbestillePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
+  /** 
+  * Varsel om ny melding på helsenorge.no
+  */
+  kanIkkeAvbestillePrimarhelsetjenesteTime_EmailMessage_Subject_Representation: string;
+  /** 
+  * Varsel om ny melding på helsenorge.no
+  */
+  kanIkkeAvbestillePrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
+  /** 
+  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt ${ActorName}.
+  */
+  kanIkkeAvbestillePrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
+  /** 
+  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt ${ActorName}.
+  */
+  kanIkkeAvbestillePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
+  /** 
+  * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
+  */
+  helseregisterNyInnsynsrapport_EmailMessage_Body_Representation: string;
+  /** 
+  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
+  */
+  helseregisterNyInnsynsrapport_EmailMessage_Body_Self: string;
+  /** 
+  * Varsel om ny innsynsrapport på helsenorge.no
+  */
+  helseregisterNyInnsynsrapport_EmailMessage_Subject_Representation: string;
+  /** 
+  * Varsel om ny innsynsrapport på helsenorge.no
+  */
+  helseregisterNyInnsynsrapport_EmailMessage_Subject_Self: string;
+  /** 
+  * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
+  */
+  helseregisterNyInnsynsrapport_TextMessage_Body_Representation: string;
+  /** 
+  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
+  */
+  helseregisterNyInnsynsrapport_TextMessage_Body_Self: string;
   /** 
   * Varsel om nytt digitalt verktøy
   */
@@ -16808,6 +16808,10 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   * ${FirstName}, en melding du har sendt via Helsenorge har kanskje ikke kommet frem. Logg inn for å se mer.
   */
   manglendeAppRec_TextMessage_Body_Self: string;
+  /** 
+  * Varsel om ny melding på helsenorge.no
+  */
+  paminnelseFormidling_EmailMessage_Subject_Self: string;
   /** 
   * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
   */
@@ -16961,6 +16965,30 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   varselmeny_Helsekontakt_Tekst: string;
   /** 
+  * Sending av melding for ${FirstName} fra helsenorge.no har feilet.
+  */
+  negativAppRec_EmailMessage_Body_Representation: string;
+  /** 
+  * Sending av melding fra helsenorge.no har feilet.
+  */
+  negativAppRec_EmailMessage_Body_Self: string;
+  /** 
+  * Sending av melding har feilet
+  */
+  negativAppRec_EmailMessage_Subject_Representation: string;
+  /** 
+  * Sending av melding har feilet
+  */
+  negativAppRec_EmailMessage_Subject_Self: string;
+  /** 
+  * Sending av melding for ${FirstName} fra helsenorge.no har feilet.
+  */
+  negativAppRec_TextMessage_Body_Representation: string;
+  /** 
+  * Sending av melding fra helsenorge.no har feilet.
+  */
+  negativAppRec_TextMessage_Body_Self: string;
+  /** 
   * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} var registrert ved en feil. Logg inn på Helsenorge og gå til Timeavtaler for å se mer.
   */
   feilregistreringTime_EmailMessage_Body_Representation: string;
@@ -16988,30 +17016,6 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   * Din timeavtale hos {0} {1} var registrert ved en feil.
   */
   varselMeny_PrimarhelsetjenesteTimeavtale_Feilregistrert_Emne: string;
-  /** 
-  * Sending av melding for ${FirstName} fra helsenorge.no har feilet.
-  */
-  negativAppRec_EmailMessage_Body_Representation: string;
-  /** 
-  * Sending av melding fra helsenorge.no har feilet.
-  */
-  negativAppRec_EmailMessage_Body_Self: string;
-  /** 
-  * Sending av melding har feilet
-  */
-  negativAppRec_EmailMessage_Subject_Representation: string;
-  /** 
-  * Sending av melding har feilet
-  */
-  negativAppRec_EmailMessage_Subject_Self: string;
-  /** 
-  * Sending av melding for ${FirstName} fra helsenorge.no har feilet.
-  */
-  negativAppRec_TextMessage_Body_Representation: string;
-  /** 
-  * Sending av melding fra helsenorge.no har feilet.
-  */
-  negativAppRec_TextMessage_Body_Self: string;
   /** 
   * Husk at ${FirstName} har en timeavtale med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
@@ -17412,10 +17416,6 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.
   */
   default_TextMessage_Body_Self_FunksjonellMotpart: string;
-  /** 
-  * Varsel om ny melding på helsenorge.no
-  */
-  paminnelseFormidling_EmailMessage_Subject_Self: string;
   /** 
   * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
   */
@@ -18181,13 +18181,13 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_SIHF: string;
   /** 
-  * Lovisenberg Diakonale Sykehus AS
-  */
-  xDS_LokasjonFeil_LDS: string;
-  /** 
   * Helse Nord
   */
   xDS_LokasjonFeil_HN: string;
+  /** 
+  * Lovisenberg Diakonale Sykehus AS
+  */
+  xDS_LokasjonFeil_LDS: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
@@ -18204,10 +18204,6 @@ export type HNMinHelsePasientreiserJS = {
   */
   kvittering_undersokelseLenke: string;
   /** 
-  * Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen.
-  */
-  reiseoversikt_refusjonsdetaljer_FORESATT_lokalMinstetakst_content: string;
-  /** 
   * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.
   */
   reiseoversikt_refusjonsdetaljer_FORESATT_minstetakstsone: string;
@@ -18216,13 +18212,13 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone: string;
   /** 
+  * Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen.
+  */
+  reiseoversikt_refusjonsdetaljer_FORESATT_lokalMinstetakst_content: string;
+  /** 
   * Vedtaket er revidert
   */
   overview_statuser_statusTypeRekvisjon_soknad_VEDTAK_OMGJORT: string;
-  /** 
-  * kan behandle søknaden min automatisk.
-  */
-  samtykke_pasientreiser_avsnitt4: string;
   /** 
   * <ul>
 <li>henter inn opplysninger fra Databasen for Kontroll og Utbetaling av Helserefusjon (KUHR) og Norsk Pasientregister (NPR).</li>
@@ -18232,6 +18228,10 @@ export type HNMinHelsePasientreiserJS = {
 </ul>
   */
   samtykke_pasientreiser_paragraph: string;
+  /** 
+  * kan behandle søknaden min automatisk.
+  */
+  samtykke_pasientreiser_avsnitt4: string;
   /** 
   * Adresse kan ha opp til 150 tegn.
   */
@@ -25698,9 +25698,49 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   page_Fullmakt_Lightbox_Configure_Tjenesteomrade_Journalinnsyn: string;
   /** 
+  * Registrering
+  */
+  page_Helsetjenester_Bakgrunn_Registrering: string;
+  /** 
+  * Samtykket
+  */
+  page_Helsetjenester_Hendelse_Samtykket: string;
+  /** 
   * Skjemautfyller
   */
   page_HendelsesLogg_35: string;
+  /** 
+  * Samtykket er registrert {0}.
+  */
+  page_Helseopplysninger_GeneriskSamtykke_SamtykketDato: string;
+  /** 
+  * Samtykket er trukket {0}
+  */
+  page_Helseopplysninger_GeneriskSamtykke_SamtykkeTrukketDato: string;
+  /** 
+  * Reservasjonen er opprettet {0}.
+  */
+  page_Helseopplysninger_GeneriskReservasjon_ReservertDato: string;
+  /** 
+  * Reservasjonen er opphevet {0}.
+  */
+  page_Helseopplysninger_GeneriskReservasjon_OpphevetReservasjonDato: string;
+  /** 
+  * Fullstendig tekst for
+  */
+  page_Helseopplysninger_GeneriskPersonverninnstilling_FullstendigTekst: string;
+  /** 
+  * Her vises historikk over innstillingsendringer.
+  */
+  page_Helseopplysninger_GeneriskPersonverninnstilling_HistorikkHeader: string;
+  /** 
+  * Ingen historiske deltagelser
+  */
+  page_Helseopplysninger_GeneriskPersonverninnstilling_HistorikkTom: string;
+  /** 
+  * Trukket samtykke
+  */
+  page_Helsetjenester_Historikk_PhaNoConsentPendingConfirmation: string;
   /** 
   * Din deltagelse
   */
@@ -25773,46 +25813,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * Ditt samtykke er trukket
   */
   page_Helseopplysninger_GeneriskSamtykke_SamtykkeTrukket: string;
-  /** 
-  * Registrering
-  */
-  page_Helsetjenester_Bakgrunn_Registrering: string;
-  /** 
-  * Samtykket
-  */
-  page_Helsetjenester_Hendelse_Samtykket: string;
-  /** 
-  * Samtykket er registrert {0}.
-  */
-  page_Helseopplysninger_GeneriskSamtykke_SamtykketDato: string;
-  /** 
-  * Samtykket er trukket {0}
-  */
-  page_Helseopplysninger_GeneriskSamtykke_SamtykkeTrukketDato: string;
-  /** 
-  * Reservasjonen er opprettet {0}.
-  */
-  page_Helseopplysninger_GeneriskReservasjon_ReservertDato: string;
-  /** 
-  * Reservasjonen er opphevet {0}.
-  */
-  page_Helseopplysninger_GeneriskReservasjon_OpphevetReservasjonDato: string;
-  /** 
-  * Fullstendig tekst for
-  */
-  page_Helseopplysninger_GeneriskPersonverninnstilling_FullstendigTekst: string;
-  /** 
-  * Her vises historikk over innstillingsendringer.
-  */
-  page_Helseopplysninger_GeneriskPersonverninnstilling_HistorikkHeader: string;
-  /** 
-  * Ingen historiske deltagelser
-  */
-  page_Helseopplysninger_GeneriskPersonverninnstilling_HistorikkTom: string;
-  /** 
-  * Trukket samtykke
-  */
-  page_Helsetjenester_Historikk_PhaNoConsentPendingConfirmation: string;
   /** 
   * Du er i ferd med å trekke samtykket ditt til Helsenorge
   */
@@ -27984,10 +27984,6 @@ export type HNMinHelseResepter = {
 
 export type HNMinHelseSamtykkeflytJS = { 
   /** 
-  * Pasientreiser
-  */
-  samtykkeflyt_bruk_table_pasientreiser: string;
-  /** 
   * Enkelte samtykker er ikke mulige å velge fordi fullmakten ikke omfatter disse.
   */
   samtykkeflyt_bruk_fullmakt_advarsel: string;
@@ -28008,10 +28004,6 @@ export type HNMinHelseSamtykkeflytJS = {
   */
   samtykkeflyt_bruk_table_dialog: string;
   /** 
-  * Timeavtaler og henvisninger
-  */
-  samtykkeflyt_bruk_table_timeavtaleroghenvisninger: string;
-  /** 
   * Henvisninger
   */
   samtykkeflyt_bruk_table_henvisninger: string;
@@ -28019,10 +28011,6 @@ export type HNMinHelseSamtykkeflytJS = {
   * Legemidler og vaksiner
   */
   samtykkeflyt_bruk_table_legemidler: string;
-  /** 
-  * Fremtidig funksjonalitet knyttet til tjenestene over
-  */
-  samtykkeflyt_bruk_table_fremtidige: string;
   /** 
   * Oversikt over tjenester man kan få tilgang til
   */
@@ -28043,10 +28031,6 @@ export type HNMinHelseSamtykkeflytJS = {
   * Sjekk at alt er riktig utfylt
   */
   formError: string;
-  /** 
-  * Innsyn i offentlige helseregistre
-  */
-  samtykkeflyt_bruk_table_helseregistre: string;
   /** 
   * Bytte fastlege
   */
@@ -28144,33 +28128,6 @@ export type HNMinHelseSamtykkeflytJS = {
   */
   samtykkeflyt_bruk_henvisninger: string;
   /** 
-  * Fremtidig funksjonalitet knyttet til tjenestene over
-  */
-  samtykkeflyt_bruk_fremtidige_tjenester: string;
-  /** 
-  * <p>Formålet med innsynstjenestene er å tilby deg et samlet sted for å kunne se opplysninger som er registrert om deg i helse- og omsorgssektoren.</p>
-
-<p>For å få innsyn må det gjøres et søk mot registre som kan tilby digitalt innsyn. Det vil lagres en innholdsfortegnelse med navn på registre som har opplysninger om deg. Du vil få innsyn inn i registrene og kan be om retting, sletting og sperring av opplysninger.</p>
-
-<p>Når du samtykker aksepterer du at aktører som har tillatelse til å sende meddelelser til deg, og som tilbyr digitale tjenester kan initiere dialog med deg.</p>
-
-<p>Du kan reservere deg mot enkelte ordninger, slik som feks fastlegeordningen og kjernejournal, eller motsette deg at opplysninger om deg behandles i enkelte registre eller utleveres til andre.</p>
-
-<p>Du kan blokkere helsepersonells tilgang til utvalgte opplysninger. Det er viktig å forstå at disse da kan være forhindret fra å yte forsvarlig helsehjelp til deg.</p>
-
-<p>Du får også innsyn i dine resepter, egenandeler og vaksiner og du kan bytte fastlege og svare på undersøkelser.</p>
-
-<p>For å få innsyn i din pasientjournal må du samtykke til «Innsyn i pasientjournal».</p>
-
-<p>Du samtykker til at det i fremtiden kan legges til ny funksjonalitet knyttet til tjenestene du har valgt.</p>
-  */
-  samtykkeflyt_bekreft_type1_juridisk_samykke_html: string;
-  /** 
-  * <h3 class="h6">Med «Full» kan du få tilgang til følgende tjenester:</h3>
-<p>Kjernejournal, reseptformidleren, vaksinasjonsregisteret og andre helseregistre, bytte fastlege, frikort og egenandeler, administrere samtykker og reservasjoner, pasientjournal, legemidler og vaksiner, dialog med helsekontakter, timeavtaler, henvisninger, pasientreiser, donorkort og andre tjenester som er knyttet til forebygging, behandling og oppfølging av din helse.</p>
-  */
-  samtykkeflyt_bekreft_type3_html: string;
-  /** 
   * Du har gitt samtykke som gir deg innsyn i dine legemidler, kjernejournal, fastlege og andre opplysninger om deg (Basis)
   */
   kontaktinfo_samtykke_type1_lagret: string;
@@ -28194,10 +28151,6 @@ export type HNMinHelseSamtykkeflytJS = {
   * Ikke registert kontaktinfo for varsling
   */
   kontaktinfo_missing_title: string;
-  /** 
-  * Det er ikke registert kontaktinfo for deg i digitalt kontaktregister. Du vil ikke kunne motta varsler fra Helsenorge om hendelser som angår deg. Gå til <a href="https://brukerprofil.difi.no/minprofil/" target="_blank" class="external">digitalt kontaktregister (ID-porten)</a> dersom du ønsker å kunne motta slike varsler.
-  */
-  kontaktinfo_missing_html: string;
   /** 
   * ikke registrert
   */
@@ -28230,62 +28183,6 @@ export type HNMinHelseSamtykkeflytJS = {
   * For å få «Full» må du samtykke til følgende:
   */
   samtykkeflyt_bekreft_type3_juridisk_samykke_tittel: string;
-  /** 
-  * <p>
-Du har rett til innsyn i opplysninger som er registrert om deg. Når du samtykker aksepterer du at aktører som har tillatelse til å sende meddelelser til deg og som tilbyr digitale tjenester, kan initiere dialog med deg. 
-</p>
-
-<p>
-For å få innsyn må det gjøres et søk ut mot registre som kan tilby digitalt innsyn. Resultatet lagres i en oversikt som utvides etter hvert som nye registre tilbyr digitalt innsyn.
-</p>
-
-<p>
-Du har rett til innsyn i hvilke dokumenter pasientjournalen din består av og hvem som har sett på dem.
-</p>
-
-<p>
-Når du samtykker til Innsyn i pasientjournal vil du kunne gjøre et søk mot sykehus som kan ha opplysninger registrert om deg. Det vil vises en oversikt over dokumenter som helsepersonell har gjort digitalt tilgjengelig. Dersom du ønsker fullt innsyn, må du kontakte sykehuset hvor du har vært til behandling.
-</p>
-
-<p>
-Dokumentene du velger å se på vil ikke lagres på helsenorge med mindre du selv velger dette.
-</p>
-
-<p>
-<a href="https://helsenorge.no/pasientjournal" target="_blank">Les mer om tjenesten Innsyn i pasientjournal her</a>.
-</p>
-
-<p>Du samtykker til at det i fremtiden kan legges til ny funksjonalitet knyttet til tjenestene du har valgt.</p>
-  */
-  samtykkeflyt_bekreft_type2_juridisk_samykke_html: string;
-  /** 
-  * <p>
-Du har rett til innsyn i opplysninger som er registrert om deg. Når du samtykker aksepterer du at aktører som har tillatelse til å sende meddelelser til deg og som tilbyr digitale tjenester, kan initiere dialog med deg.
-</p>
-
-<p>
-For å få innsyn må det gjøres et søk ut mot registre som kan tilby digitalt innsyn. Resultatet lagres i en oversikt som utvides etter hvert som nye registre tilbyr digitalt innsyn.
-</p>
-
-<p>
-Du har rett til innsyn i pasientjournalen din. Når du samtykker aksepterer du at det kan gjøres et søk mot sykehus som kan ha opplysninger om deg. Du vil få en oversikt over dokumenter som helsepersonell har gjort digitalt tilgjengelige. Dersom du ønsker fullt innsyn, må du ta kontakt med sykehuset hvor du har vært til behandling.
-</p>
-
-<p>
-<a href="https://helsenorge.no/pasientjournal" target="_blank">Les mer om tjenesten Innsyn i pasientjournal her</a>.
-</p>
-
-<p>
-Når du samtykker til bruk av digitale helsetjenester aksepterer du at aktører som har tillatelse til å sende meddelelser til deg, og som tilbyr digitale tjenester, kan initiere dialog med deg. Aktørene kan sende deg informasjon om timer, prøvesvar, brev, skjemaer for utfylling ol. Dette lagres på helsenorge slik at du får en samlet oversikt. Meldingene kan erstatte tilsvarende kommunikasjon via ordinær post.
-</p>
-
-<p>
-Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er relevant for helsesituasjonen din. Disse tjenestene har egne vilkår og det skjer ingen behandling av opplysninger før du velger å ta de i bruk.
-</p>
-
-<p>Du samtykker til at det i fremtiden kan legges til ny funksjonalitet knyttet til tjenestene du har valgt.</p>
-  */
-  samtykkeflyt_bekreft_type3_juridisk_samykke_html: string;
   /** 
   * Jeg vil slutte å bruke Helsenorge og vil ikke ha tilgang til min helseinformasjon og tjenester på Helsenorge
   */
@@ -28322,14 +28219,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   */
   samtykkeflyt_trekke_samtykke_failed_fullmakt_label: string;
   /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Jeg vil slutte å bruke Helsenorge","seksjonstekst_brodtekst":"<p>Du kan trekke samtykket ditt til bruksvilkår for Helsenorge.<br /> Hvis du trekker samtykket, kan du ikke lenger bruke tjenestene på Helsenorge. I tilfelle du skulle ombestemme deg, ligger informasjonen lagret i 30 dager. Etter dette slettes opplysningene for godt.</p>\n\n<p>Uten gyldig samtykke kan du ikke lenger hente fram helseopplysningene dine eller bruke dialogtjenester på helsenorge.no. Andre vil heller ikke kunne gjøre dette på dine vegne, og din personlige informasjon vil slettes. Det samme vil også gjelde for eventuelle barn du har foreldreansvar for, med mindre barnet har en annen forelder som har et gyldig samtykke.</p>\n\n<p>Reservasjoner og samtykker for ordninger utenfor Helsenorge, vil ikke bli slettet. Disse er blant annet: </br>\n<ul>\n  <li>Reservasjon mot kjernejournal</li>\n  <li>Reservasjon mot utlevering av personidentifiserbare opplysninger fra Kommunalt pasient- og brukerregister (KPR)</li>\n  <li>Samtykke til behandling av søknader hos Pasientreiser</li>\n</ul>\n</p>\n\n<p>\nFør du kan trekke samtykke sjekkes det om det finnes aktive fullmaktsforhold i profilen din. Hvis du har gitt eller mottatt fullmakter, må du selv slette disse før du kan trekke samtykket.\n</p>"}
-  */
-  hjelpetrigger_samtykkeflyt_trekke_samtykke: string;
-  /** 
-  * Hvordan vil du bruke Helsenorge?
-  */
-  samtykkeflyt_bruk_title: string;
-  /** 
   * Neste
   */
   samtykkeflyt_neste: string;
@@ -28353,20 +28242,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   * Jeg samtykker
   */
   samtykkeflyt_bekreft_save: string;
-  /** 
-  * <h3 class="h6">Med «Basis» kan du få tilgang til følgende tjenester:</h3>
-<p>Kjernejournal, reseptformidleren, vaksinasjonsregisteret og andre helseregistre, bytte fastlege, frikort og egenandeler, administrere samtykker og reservasjoner.</p>
-<h3 class="h6">Du får ikke tilgang til:</h3>
-<p>Pasientjournal, legemidler og vaksiner, dialog med helsekontakter, timeavtaler, henvisninger, andre tjenester som er knyttet til forebygging, behandling og oppfølging av din helse.</p>
-  */
-  samtykkeflyt_bekreft_type1_html: string;
-  /** 
-  * <h3 class="h6">Med «Basis+» kan du få tilgang til følgende tjenester:</h3>
-<p>Kjernejournal, reseptformidleren, vaksinasjonsregisteret og andre helseregistre, bytte fastlege, frikort og egenandeler, administrere samtykker og reservasjoner, pasientjournal.</p>
-<h3 class="h6">Du får ikke tilgang til:</h3>
-<p>Legemidler og vaksiner, dialog med helsekontakter, timeavtaler, henvisninger, andre tjenester som er knyttet til forebygging, behandling og oppfølging av din helse.</p>
-  */
-  samtykkeflyt_bekreft_type2_html: string;
   /** 
   * OK
   */
@@ -28399,18 +28274,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   * Endre
   */
   changeButton_text: string;
-  /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Velg samtykkenivå","seksjonstekst_brodtekst":"<h3>\nBasis\n</h3>\n\n<p>\nMed basistilgang vil du ha mulighet til å se opplysninger som er registrert om deg i helse-og omsorgssektoren, og be om retting og sletting av enkelte av disse opplysningene.\n</p>\n\n<p>\nDet vil si at du med dette valget får tilgang til å:\n</p>\n\n<ul>\n<li>se informasjon om din fastlege</li>\n<li>se status på ditt frikort og egenandeler</li>\n<li>se data som er registrert om deg i helseregister-tjenesten, som for eksempel i kjernejournal, Reseptformidleren, og vaksineregisteret SYSVAK</li>\n<li>se informasjon om forskningsprosjekter du deltar i</li>\n<li>bytte fastlege, og sette deg på venteliste til en fastlege som ikke har ledig plass</li>\n<li>be om retting av feil i registre</li>\n<li>styre dine profilinnstillinger</li>\n<li>få oversikt over dine samtykker</li>\n</ul>\n\n<h3>\nBasis+\n</h3>\n\n<p>\nMed dette valget får du tilgang til det samme som med basistilgang, i tillegg til å se de journaldokumentene fra sykehus som helsepersonell har gjort digitalt tilgjengelig.\n</p>\n\n<p>\nDet vil si at du kan gjøre alt som er nevnt ovenfor, i tillegg til å:\n</p>\n\n<ul>\n<li>se utvalgte dokumenter i din pasientjournal og helsepersonells oppslag i den</li>\n<li>be om retting av feil i din pasientjournal</li>\n</ul>\n\n<h3>\nFull\n</h3>\n\n<p>\nMed full tilgang får du tilgang til å bruke alle tjenester på Helsenorge. Det vil si alt som er nevnt over, i tillegg til å se informasjon om for eksempel timer og prøvesvar, og motta brev, skjema og lignende for utfylling. Med dette valget kan du også:\n</p>\n\n<ul>\n<li>fornye resepter</li>\n<li>bestille timer og administrere dine timeavtaler</li>\n<li>kommunisere med dine behandlere og andre helsekontakter</li>\n<li>registrere egne opplysninger i din kjernejournal</li>\n<li>bruke nye tjenester som er direkte knyttet til forebygging, behandling eller oppfølging av din helse</li>\n<li>få oversikt over dine henvisninger</li>\n<li>få oversikt over dine helsekontakter</li>\n</ul>\n\n<p>\nHusk at informasjon du får på Helsenorge kan erstatte det å få et fysisk brev hjem i postkassen din.\n</p>"}
-  */
-  hjelpetrigger_samtykkeflyt_samtykkenivaa: string;
-  /** 
-  * Velg samtykkenivået som dekker de tjenestene som du ønsker å bruke.
-  */
-  samtykkeflyt_velg_samtykkenivaa: string;
-  /** 
-  * Jeg vil trekke mitt samtykke til Helsenorge. Jeg forstår at alle mine data som er lagret på Helsenorge vil bli slettet og at jeg umiddelbart mister tilgang til mine tjenester på Helsenorge.
-  */
-  samtykkeflyt_bruk_trekke_samtykke_infobox: string;
 };
 
 export type HNMinHelseSecurityFramework = { 
@@ -28478,6 +28341,30 @@ export type HNMinHelseSkjemautfyller = {
   */
   skjemaAccessDeniedDiscretionSubjectOnlyErrorBody: string;
   /** 
+  * Sendt inn {0} via helsenorge.no
+  */
+  skjema_rendition_timestamp: string;
+  /** 
+  * Skjema sendt inn til {0} via helsenorge.
+  */
+  innsendtSkjema: string;
+  /** 
+  * Din kopi av utfylt skjema vedlagt.
+  */
+  skjemaKopi: string;
+  /** 
+  * Skjemaet er forfalt eller allerede ferdigstilt og kan ikke lenger endres.
+  */
+  skjemaErForfaltFerdigstilt: string;
+  /** 
+  * Skjemaet har blitt endret. Last inn skjema på nytt.
+  */
+  skjemaErUtdatert: string;
+  /** 
+  * Oppgaven fins ikke.
+  */
+  oppgavenFinsIkke: string;
+  /** 
   * Slett
   */
   deleteButtonText: string;
@@ -28509,30 +28396,6 @@ export type HNMinHelseSkjemautfyller = {
   * Ikke besvart
   */
   ikkeBesvart: string;
-  /** 
-  * Sendt inn {0} via helsenorge.no
-  */
-  skjema_rendition_timestamp: string;
-  /** 
-  * Skjema sendt inn til {0} via helsenorge.
-  */
-  innsendtSkjema: string;
-  /** 
-  * Din kopi av utfylt skjema vedlagt.
-  */
-  skjemaKopi: string;
-  /** 
-  * Skjemaet er forfalt eller allerede ferdigstilt og kan ikke lenger endres.
-  */
-  skjemaErForfaltFerdigstilt: string;
-  /** 
-  * Skjemaet har blitt endret. Last inn skjema på nytt.
-  */
-  skjemaErUtdatert: string;
-  /** 
-  * Oppgaven fins ikke.
-  */
-  oppgavenFinsIkke: string;
   /** 
   * helsenorge.no
   */
@@ -28654,22 +28517,6 @@ export type HNMinHelseSkjemautfyller = {
   */
   loadSkjemaErrorBody: string;
   /** 
-  * Skjemaet er lagret i innboksen
-  */
-  lagreSkjemaBody: string;
-  /** 
-  * Fortsett senere
-  */
-  lagreSkjemaButtonFortsettSenere: string;
-  /** 
-  * Fortsett å fylle ut
-  */
-  lagreSkjemaButtonFortsettUtfylling: string;
-  /** 
-  * Skjemaet er lagret
-  */
-  lagreSkjemaTittel: string;
-  /** 
   * Ditt skjema mellomlagres i innboksen og du kan fortsette utfyllingen derfra senere.
   */
   mellomlagringsMessage: string;
@@ -28773,6 +28620,22 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   berikingFailedOnRetrievalTitle: string;
   /** 
+  * Skjemaet er lagret i innboksen
+  */
+  lagreSkjemaBody: string;
+  /** 
+  * Fortsett senere
+  */
+  lagreSkjemaButtonFortsettSenere: string;
+  /** 
+  * Fortsett å fylle ut
+  */
+  lagreSkjemaButtonFortsettUtfylling: string;
+  /** 
+  * Skjemaet er lagret
+  */
+  lagreSkjemaTittel: string;
+  /** 
   * Du jobber på en gammel versjon. Det finnes en nyere versjon av skjemaet. Dette kan du finne ved å gå til innboksen.
   */
   skjemaOldVersion: string;
@@ -28809,6 +28672,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   hourPlaceholder: string;
   /** 
+  * Du må fylle ut dette feltet
+  */
+  formRequiredErrorMessage: string;
+  /** 
   * Skjemaet er lagret i Dokumenter.
   */
   lagreSkjemaDokumenterBody: string;
@@ -28820,10 +28687,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Fullfør
   */
   formFinish: string;
-  /** 
-  * Du må fylle ut dette feltet
-  */
-  formRequiredErrorMessage: string;
 };
 
 export type HNMinHelseSysvak = { 
@@ -28862,6 +28725,194 @@ export type HNMinHelseSysvak = {
 };
 
 export type HNMinHelseVerktoy = { 
+  /** 
+  * Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.
+  */
+  page_verktoy_ingress_innlogget: string;
+  /** 
+  * Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.
+  */
+  page_verktoy_ingress_apenside: string;
+  /** 
+  * Kun tilgjengelig for utsending fra enkelte behandlere.
+  */
+  maForskrivesAvBehandler: string;
+  /** 
+  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Kun tilgjengelig for deg som har behandler hos Rask psykisk helsehjelp i Bærum kommune","seksjonstekst_brodtekst":"Det er i dag få behandlere som har tatt i bruk verktøy. Dette verktøyet er kun tilgjengelig for deg som mottar behandling fra Rask psykisk helsehjelp i Bærum kommune. I fremtiden vil tilbudet utvides og verktøy tilbys av flere behandlere og i flere kommuner."}
+  */
+  hjelpetrigger_maForskrivesAvBehandler: string;
+  /** 
+  * Fjern fra mine verktøy
+  */
+  removeVerktoyButtonText: string;
+  /** 
+  * Er du sikker på at du vil fjerne {0}?
+  */
+  confirmFjernVerktoyHeader: string;
+  /** 
+  * Er du sikker på at du vil slette {0}?
+  */
+  confirmSlettVerktoyHeader: string;
+  /** 
+  * Verktøyet vil bli borte fra mine verktøy, men du kan legge det til på nytt når du vil.
+  */
+  confirmFjernVerktoyBody: string;
+  /** 
+  * Du er i ferd med å slette verktøyet. Dersom du ønsker å bruke verktøyet i fremtiden må du be behandleren din om å sende det til deg på nytt.
+  */
+  confirmSlettVerktoyBody: string;
+  /** 
+  * Les mindre om verktøyet
+  */
+  readLessButtonText: string;
+  /** 
+  * Logg inn for å se dine verktøy
+  */
+  loginButtonText: string;
+  /** 
+  * Vis kun verktøy som jeg kan åpne uten å logge inn
+  */
+  visKunVerktoySomKanApnesAnonymt: string;
+  /** 
+  * Du er i ferd med å slette verktøyet. Det vil bli borte fra mine verktøy og det vil ikke være mulig å legge det til på nytt.
+  */
+  confirmSlettUtgattVerktoyBody: string;
+  /** 
+  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Dette verktøyet er ikke lenger tilgjengelig","seksjonstekst_brodtekst":"Verktøy som ikke lenger er tilgjengelig kan ikke åpnes selv om du har brukt dem tidligere. Verktøy kan trekkes tilbake fordi innholdet er utdatert eller fordi det kun er tilgjengelig i en begrenset periode."}
+  */
+  hjelpetrigger_verktoyIkkeTilgjengelig: string;
+  /** 
+  * Les mer om verktøyet
+  */
+  expandableSectionHeader: string;
+  /** 
+  * Les mer om verktøyet og personvern
+  */
+  expandableSectionCollapsed: string;
+  /** 
+  * Les mindre om verktøyet og personvern
+  */
+  expandableSectionExpanded: string;
+  /** 
+  * Du går nå over i et digitalt verktøy som ligger utenfor Helsenorge og dermed har sine egne bruksvilkår som du bør sette deg inn i. Alle digitale løsninger skal informere om bruksvilkår til sine brukere.
+  */
+  eksterntVerktoyVillkar: string;
+  /** 
+  * Ved å ta i bruk verktøyet samtykker du til at Helsenorge kan overføre opplysninger om deg.
+  */
+  generiskDataoverforingTekst: string;
+  /** 
+  * Helsenorges bruksvilkår gjelder også for dette verktøyet.
+  */
+  defaultBruksvillkarTekst: string;
+  /** 
+  * Behandleren din vil ha tilgang til å følge med på din bruk av verktøyet. Det betyr at eventuell informasjon du legger inn, kan være synlig for behandler.
+  */
+  behandlerInnsynAlltid: string;
+  /** 
+  * Du vil kunne gi behandleren din tilgang til å følge med på bruken av verktøyet.
+  */
+  behandlerInnsynVelges: string;
+  /** 
+  * Behandling av personopplysninger
+  */
+  personvernLabel: string;
+  /** 
+  * Psykisk helse
+  */
+  fagomradePsykiskHelse: string;
+  /** 
+  * Fysisk helse
+  */
+  fagomradeFysiskHelse: string;
+  /** 
+  * Livsstil
+  */
+  fagomradeLivsstil: string;
+  /** 
+  * Norsk bokmål
+  */
+  sprakNorskBokmal: string;
+  /** 
+  * Norsk nynorsk
+  */
+  sprakNorskNynorsk: string;
+  /** 
+  * Engelsk
+  */
+  sprakEngelsk: string;
+  /** 
+  * Det har skjedd en teknisk feil. Du kan prøve igjen litt senere.
+  */
+  verktoyErrorGeneric: string;
+  /** 
+  * Helseområde
+  */
+  verktoyFilterHelseomrade: string;
+  /** 
+  * Søk
+  */
+  verktoyFilterSok: string;
+  /** 
+  * F. eks søvn
+  */
+  verktoyFilterSokPlaceholder: string;
+  /** 
+  * Vis resultat
+  */
+  verktoyFilterVisResultat: string;
+  /** 
+  * Flere filtre
+  */
+  verktoyFilterFlereFiltre: string;
+  /** 
+  * Visning filtrert på
+  */
+  verktoyFilterVisningFiltrertPa: string;
+  /** 
+  * Nullstill filter
+  */
+  verktoyFilterResetFilter: string;
+  /** 
+  * Filtrer på
+  */
+  verktoyFilterFilterOn: string;
+  /** 
+  * Finn verktøy
+  */
+  verktoyFilterMobileToggleFilter: string;
+  /** 
+  * Filtrer visning
+  */
+  verktoyFilterFiltrerVisning: string;
+  /** 
+  * verktøy
+  */
+  verktoyFilterVerktoyUnit: string;
+  /** 
+  * Informasjon
+  */
+  verktoyFormalInformasjon: string;
+  /** 
+  * Læring
+  */
+  verktoyFormalLaering: string;
+  /** 
+  * Veiledning
+  */
+  verktoyFormalVeiledning: string;
+  /** 
+  * Behandling
+  */
+  verktoyFormalBehandling: string;
+  /** 
+  * Kartlegging
+  */
+  verktoyFormalKartlegging: string;
+  /** 
+  * Nytt digitalt verktøy fra
+  */
+  varselMeny_Verktoy_Emne: string;
   /** 
   * Er du sikker på at du vil slette verktøyet?
   */
@@ -28922,10 +28973,6 @@ export type HNMinHelseVerktoy = {
   * Lagt til i <a href="">Mine Verktøy</a>
   */
   infoTextAddedToMineVerktoy: string;
-  /** 
-  * Tekst og bilder
-  */
-  verktoyInnholdstype_TekstOgBilder: string;
   /** 
   * Video
   */
@@ -28991,193 +29038,9 @@ export type HNMinHelseVerktoy = {
   */
   behandlerInnsynWarningAvbryt: string;
   /** 
-  * Nytt digitalt verktøy fra
+  * Tekst og bilder
   */
-  varselMeny_Verktoy_Emne: string;
-  /** 
-  * Les mer om verktøyet
-  */
-  expandableSectionHeader: string;
-  /** 
-  * Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.
-  */
-  page_verktoy_ingress_innlogget: string;
-  /** 
-  * Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.
-  */
-  page_verktoy_ingress_apenside: string;
-  /** 
-  * Kun tilgjengelig for utsending fra enkelte behandlere.
-  */
-  maForskrivesAvBehandler: string;
-  /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Kun tilgjengelig for deg som har behandler hos Rask psykisk helsehjelp i Bærum kommune","seksjonstekst_brodtekst":"Det er i dag få behandlere som har tatt i bruk verktøy. Dette verktøyet er kun tilgjengelig for deg som mottar behandling fra Rask psykisk helsehjelp i Bærum kommune. I fremtiden vil tilbudet utvides og verktøy tilbys av flere behandlere og i flere kommuner."}
-  */
-  hjelpetrigger_maForskrivesAvBehandler: string;
-  /** 
-  * Fjern fra mine verktøy
-  */
-  removeVerktoyButtonText: string;
-  /** 
-  * Er du sikker på at du vil fjerne {0}?
-  */
-  confirmFjernVerktoyHeader: string;
-  /** 
-  * Er du sikker på at du vil slette {0}?
-  */
-  confirmSlettVerktoyHeader: string;
-  /** 
-  * Verktøyet vil bli borte fra mine verktøy, men du kan legge det til på nytt når du vil.
-  */
-  confirmFjernVerktoyBody: string;
-  /** 
-  * Du er i ferd med å slette verktøyet. Dersom du ønsker å bruke verktøyet i fremtiden må du be behandleren din om å sende det til deg på nytt.
-  */
-  confirmSlettVerktoyBody: string;
-  /** 
-  * Les mindre om verktøyet
-  */
-  readLessButtonText: string;
-  /** 
-  * Logg inn for å se dine verktøy
-  */
-  loginButtonText: string;
-  /** 
-  * Vis kun verktøy som jeg kan åpne uten å logge inn
-  */
-  visKunVerktoySomKanApnesAnonymt: string;
-  /** 
-  * Du er i ferd med å slette verktøyet. Det vil bli borte fra mine verktøy og det vil ikke være mulig å legge det til på nytt.
-  */
-  confirmSlettUtgattVerktoyBody: string;
-  /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Dette verktøyet er ikke lenger tilgjengelig","seksjonstekst_brodtekst":"Verktøy som ikke lenger er tilgjengelig kan ikke åpnes selv om du har brukt dem tidligere. Verktøy kan trekkes tilbake fordi innholdet er utdatert eller fordi det kun er tilgjengelig i en begrenset periode."}
-  */
-  hjelpetrigger_verktoyIkkeTilgjengelig: string;
-  /** 
-  * Søk
-  */
-  verktoyFilterSok: string;
-  /** 
-  * F. eks søvn
-  */
-  verktoyFilterSokPlaceholder: string;
-  /** 
-  * Vis resultat
-  */
-  verktoyFilterVisResultat: string;
-  /** 
-  * Flere filtre
-  */
-  verktoyFilterFlereFiltre: string;
-  /** 
-  * Visning filtrert på
-  */
-  verktoyFilterVisningFiltrertPa: string;
-  /** 
-  * Nullstill filter
-  */
-  verktoyFilterResetFilter: string;
-  /** 
-  * Filtrer på
-  */
-  verktoyFilterFilterOn: string;
-  /** 
-  * Finn verktøy
-  */
-  verktoyFilterMobileToggleFilter: string;
-  /** 
-  * Filtrer visning
-  */
-  verktoyFilterFiltrerVisning: string;
-  /** 
-  * verktøy
-  */
-  verktoyFilterVerktoyUnit: string;
-  /** 
-  * Informasjon
-  */
-  verktoyFormalInformasjon: string;
-  /** 
-  * Læring
-  */
-  verktoyFormalLaering: string;
-  /** 
-  * Veiledning
-  */
-  verktoyFormalVeiledning: string;
-  /** 
-  * Behandling
-  */
-  verktoyFormalBehandling: string;
-  /** 
-  * Kartlegging
-  */
-  verktoyFormalKartlegging: string;
-  /** 
-  * Behandling av personopplysninger
-  */
-  personvernLabel: string;
-  /** 
-  * Psykisk helse
-  */
-  fagomradePsykiskHelse: string;
-  /** 
-  * Fysisk helse
-  */
-  fagomradeFysiskHelse: string;
-  /** 
-  * Livsstil
-  */
-  fagomradeLivsstil: string;
-  /** 
-  * Norsk bokmål
-  */
-  sprakNorskBokmal: string;
-  /** 
-  * Norsk nynorsk
-  */
-  sprakNorskNynorsk: string;
-  /** 
-  * Engelsk
-  */
-  sprakEngelsk: string;
-  /** 
-  * Les mer om verktøyet og personvern
-  */
-  expandableSectionCollapsed: string;
-  /** 
-  * Les mindre om verktøyet og personvern
-  */
-  expandableSectionExpanded: string;
-  /** 
-  * Du går nå over i et digitalt verktøy som ligger utenfor Helsenorge og dermed har sine egne bruksvilkår som du bør sette deg inn i. Alle digitale løsninger skal informere om bruksvilkår til sine brukere.
-  */
-  eksterntVerktoyVillkar: string;
-  /** 
-  * Ved å ta i bruk verktøyet samtykker du til at Helsenorge kan overføre opplysninger om deg.
-  */
-  generiskDataoverforingTekst: string;
-  /** 
-  * Helsenorges bruksvilkår gjelder også for dette verktøyet.
-  */
-  defaultBruksvillkarTekst: string;
-  /** 
-  * Behandleren din vil ha tilgang til å følge med på din bruk av verktøyet. Det betyr at eventuell informasjon du legger inn, kan være synlig for behandler.
-  */
-  behandlerInnsynAlltid: string;
-  /** 
-  * Du vil kunne gi behandleren din tilgang til å følge med på bruken av verktøyet.
-  */
-  behandlerInnsynVelges: string;
-  /** 
-  * Det har skjedd en teknisk feil. Du kan prøve igjen litt senere.
-  */
-  verktoyErrorGeneric: string;
-  /** 
-  * Helseområde
-  */
-  verktoyFilterHelseomrade: string;
+  verktoyInnholdstype_TekstOgBilder: string;
   /** 
   * Placeholder tekst
   */
@@ -31582,6 +31445,50 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   field_ImageCaption_Title: string;
   /** 
+  * Toppsak
+  */
+  webPart_PromotedArticle_Title: string;
+  /** 
+  * Webdel for å legge til toppsak
+  */
+  webPart_PromotedArticle_Desc: string;
+  /** 
+  * Referanser
+  */
+  page_ReferenceList_Title: string;
+  /** 
+  * Hjelpeinformasjon
+  */
+  webPart_SupportInfo_Title: string;
+  /** 
+  * Webdel for å få listet ut hjelpeinformasjon.
+  */
+  webPart_SupportInfo_Desc: string;
+  /** 
+  * Inkluder følgende enkeltsider
+  */
+  field_IncludePages_Title: string;
+  /** 
+  * Felt for å inkludere enkeltsider
+  */
+  field_IncludePages_Desc: string;
+  /** 
+  * Ekskluder følgende enkeltsider
+  */
+  field_ExcludePages_Title: string;
+  /** 
+  * Felt for å ekskludere enkeltsider
+  */
+  field_ExcludePages_Desc: string;
+  /** 
+  * Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?
+  */
+  pdfCompatibilityBodyPreview: string;
+  /** 
+  * Se forhåndsvisning
+  */
+  pdfCompatibilityPreview: string;
+  /** 
   * For å benytte denne siden når du er innlogget må du samtykke til digitale helsetjenester.
   */
   samvalg_HelsetjenesteText_TextString: string;
@@ -31597,14 +31504,6 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   * Digitale helsetjenester
   */
   samvalg_HelsetjenesteText_Header: string;
-  /** 
-  * Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?
-  */
-  pdfCompatibilityBodyPreview: string;
-  /** 
-  * Se forhåndsvisning
-  */
-  pdfCompatibilityPreview: string;
   /** 
   * 
   */
@@ -31669,42 +31568,6 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   * Kampanjer-eiere
   */
   group_Kampanje_Owners_Title: string;
-  /** 
-  * Toppsak
-  */
-  webPart_PromotedArticle_Title: string;
-  /** 
-  * Webdel for å legge til toppsak
-  */
-  webPart_PromotedArticle_Desc: string;
-  /** 
-  * Referanser
-  */
-  page_ReferenceList_Title: string;
-  /** 
-  * Hjelpeinformasjon
-  */
-  webPart_SupportInfo_Title: string;
-  /** 
-  * Webdel for å få listet ut hjelpeinformasjon.
-  */
-  webPart_SupportInfo_Desc: string;
-  /** 
-  * Inkluder følgende enkeltsider
-  */
-  field_IncludePages_Title: string;
-  /** 
-  * Felt for å inkludere enkeltsider
-  */
-  field_IncludePages_Desc: string;
-  /** 
-  * Ekskluder følgende enkeltsider
-  */
-  field_ExcludePages_Title: string;
-  /** 
-  * Felt for å ekskludere enkeltsider
-  */
-  field_ExcludePages_Desc: string;
   /** 
   * Tilleggsinfo tittel seksjon 2
   */
@@ -32734,10 +32597,6 @@ export type HNVelgBehandlingssted = {
 
 export type HNVidereformidling = { 
   /** 
-  * 
-  */
-  videreformidling_Post_Ved_Foresatte: string;
-  /** 
   * Du har fått et brev fra {aktørnavn}
   */
   videreformidling_Sms_Varsel: string;
@@ -32745,6 +32604,10 @@ export type HNVidereformidling = {
   * Du har fått et brev fra {aktørnavn}
   */
   videreformidling_Epost_Varsel: string;
+  /** 
+  * 
+  */
+  videreformidling_Post_Ved_Foresatte: string;
 };
 
 /* tslint:enable */
