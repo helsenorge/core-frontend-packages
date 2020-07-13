@@ -2866,10 +2866,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   innbyggermenyProfilHeader: string;
   /** 
-  * Bruk av helsetjenester og ordninger
-  */
-  innbyggermenySamtykkerOgReservasjoner: string;
-  /** 
   * /Bruk-av-helsetjenester-og-ordninger
   */
   innbyggermenySamtykkerOgReservasjonerUrl: string;
@@ -3162,10 +3158,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Du har forsøkt å bruke en tjeneste som ikke er tilgjengelig for deg eller den du representerer. Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tillater at du bruker denne tjenesten eller at du som forelder ikke har lov til å bruke tjenesten for barnet ditt.
   */
   page_AskForAccessToService_Desc: string;
-  /** 
-  * Bruk av helsetjenester og ordninger
-  */
-  page_BrukAvHelsetjenester_Title: string;
   /** 
   * Dette er kjernejournalen din. For å se innholdet i din kjernejournal klikk på en av lenkene over. Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk. Du kan registrere dine sykdommer og viktige kontaktpersoner i kjernejournal ved å gå til <a href="https://tjenester.helsenorge.no/kjernejournal-innsyn">Dine registreringer</a> i kjernejournal.
   */
@@ -18357,7 +18349,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   velgSoknadssjemaValidationError: string;
   /** 
-  * Gå til Bruk av helsetjenester og ordninger for å gi samtykke.
+  * Gå til Personverninnstillinger for å gi samtykke.
   */
   samtykke_digitalehelsetjenester_link: string;
   /** 
@@ -22691,7 +22683,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   samtykke_pasientreiser_confirmButton: string;
   /** 
-  * Gå til Bruk av helsetjenester og ordninger for å gi samtykke.
+  * Gå til personverninnstillinger for å gi samtykke.
   */
   samtykke_pasientreiserInfobox_profilLink: string;
   /** 
@@ -25263,7 +25255,7 @@ av den forelderen som har gitt samtykke.
   */
   page_Kontakt_NotificationProfile_Representasjon_Foreldre_NoPha_Information: string;
   /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Barn du ikke vil motta varsler for","seksjonstekst_brodtekst":"For å kunne motta varsler for barn, må man <a href=\"/Bruk-av-helsetjenester-og-ordninger \">samtykke til bruk av Helsenorge</a> for barnet. Du kan gjøre det på vegne av barnet ved å gå inn på barnets profil."}
+  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Barn du ikke vil motta varsler for","seksjonstekst_brodtekst":"For å kunne motta varsler for barn, må man <a href=\"/personverninnstillinger/samtykker \">samtykke til bruk av Helsenorge</a> for barnet. Du kan gjøre det på vegne av barnet ved å gå inn på barnets profil."}
   */
   hjelpetrigger_barnDuIkkeMottaVarslerFor: string;
   /** 
@@ -27148,10 +27140,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   hjelpekontekst_profilHelseopplysninger: string;
   /** 
-  * {"defaulttekst_overskrift":"Bruk av helsetjenester og ordninger","defaulttekst_brodtekst":"<p>Her vises ulike tjenester og ordninger, og hvordan ditt forhold til dem er akkurat nå.</p><h3>Tjenester og ordninger du kan samtykke til å bruke</h3> <p>Dette vil si at du må gi ditt samtykke for å kunne benytte tjenesten eller ordningen. Hvis ikke vil du ikke ha tilgang til den. Du kan trekke tilbake samtykket ditt for kortere eller lengre tid, men du vil da samtidig miste tilgangen til tjenesten. Gjenoppretter du samtykket vil du igjen kunne benytte tjenesten.</p><h3>Tjenester og ordninger du kan reservere deg mot å bruke</h3><p>Dette vil si at tjenesten automatisk er tilgjengelig for deg, og du kan benytte den uten å først gjøre noe selv, som for eksempel gi et samtykke. Dersom du reserverer deg mot å bruke tjenesten eller ordningen, og du senere ombestemmer deg, må du kontakte brukerstøtte for helsenorge.no for å oppheve reservasjonen.</p>"}
-  */
-  hjelpekontekst_profilHelsetjenester: string;
-  /** 
   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Fullmakten gjelder","seksjonstekst_brodtekst":"<p>\nDu kan gi andre tilgang til alle tilgjengelige tjenester ved å velge alle de tre tjenesteområdene, eller kun utvalgte tjenesteområder.\n</p>\n\n<p>\nHvert tjenesteområde inneholder én eller flere tjenester, som blir gjort tilgjengelig for den du gir fullmakten til.\n</p>"}
   */
   hjelpetrigger_profilFullmaktItem: string;
@@ -28586,7 +28574,7 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   */
   kontaktinfo_title: string;
   /** 
-  * Du kan når som helst endre dine samtykker under dine profilinnstillinger: <a href="/Bruk-av-helsetjenester-og-ordninger">Bruk av helsetjenester og ordninger</a>
+  * Du kan når som helst endre dine samtykker under dine personverninnstillinger: <a href="/personverninnstillinger/samtykker">Samtykke</a>
   */
   kontaktinfo_endresamtykke_html: string;
   /** 
@@ -30034,7 +30022,7 @@ export type HNPortal = {
   */
   userControl_Start_ConfirmText: string;
   /** 
-  * <p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href="/bruk-av-helsetjenester-og-ordninger" class="document" target="_blank">Les mer om dette ved å gå til Bruk av helsetjenester og ordninger.</a></p>
+  * <p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href="/personverninnstillinger" class="document" target="_blank">Les mer om dette ved å gå til Personverninnstillinger.</a></p>
   */
   userControl_Start_Reservation: string;
   /** 
