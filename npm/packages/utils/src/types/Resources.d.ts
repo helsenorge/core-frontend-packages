@@ -15658,10 +15658,6 @@ export type HNMinHelseNHNStrings = {
   */
   concentDontAskNowText_LoggedInUser: string;
   /** 
-  * <p>Alle opplysningene som vises er knyttet til denne personen, og eventuelle oppdateringer du gjør vil være på dennes vegne.</p><p>Når du bruker tjenester på vegne av andre, vil det registreres i Logg over bruk. Den du representerer vil kunne se dette under Profil og innstillinger.</p>
-  */
-  webPart_AccessToChildrenMenu_SamtykkeInfo: string;
-  /** 
   * Jeg samtykker i at min aktivitet på vegne av andre logges
   */
   webPart_AccessToChildrenMenu_SamtykkeChkLabel: string;

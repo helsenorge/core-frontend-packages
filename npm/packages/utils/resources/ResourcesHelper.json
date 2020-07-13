@@ -3914,7 +3914,6 @@
     "consentInfoText_LoggedInUser": "<p>For å bruke dialogtjenestene må du gi ditt samtykke.</p>\n<p>Ønsker du å samtykke nå?</p>",
     "concentDontAskNowText_Child": "Nei, ikke nå.",
     "concentDontAskNowText_LoggedInUser": "Ikke nå, men minn meg på det neste gang.",
-    "webPart_AccessToChildrenMenu_SamtykkeInfo": "<p>Alle opplysningene som vises er knyttet til denne personen, og eventuelle oppdateringer du gjør vil være på dennes vegne.</p><p>Når du bruker tjenester på vegne av andre, vil det registreres i Logg over bruk. Den du representerer vil kunne se dette under Profil og innstillinger.</p>",
     "webPart_AccessToChildrenMenu_SamtykkeChkLabel": "Jeg samtykker i at min aktivitet på vegne av andre logges",
     "webPart_AccessToChildrenMenu_Avbryt": "Avbryt",
     "webPart_AccessToChildrenMenu_OK": "OK",
