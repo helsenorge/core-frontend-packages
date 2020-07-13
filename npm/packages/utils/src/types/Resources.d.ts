@@ -2306,14 +2306,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   samtykkeInfoPopupFornyeInnhold: string;
   /** 
-  * Personopplysninger
-  */
-  innbyggermenyPersonopplysninger: string;
-  /** 
-  * /personopplysninger
-  */
-  innbyggermenyPersonopplysningerUrl: string;
-  /** 
   * Filtrer visning
   */
   filterHeading: string;
@@ -28373,16 +28365,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   * Tilbake
   */
   samtykkeflyt_tilbake: string;
-  /** 
-  * <h3 class="h6">Du må samtykke for å bruke innloggede tjenester</h3>
-<p>For å ta i bruk innloggede tjenester må du samtykke til hvordan du ønsker å bruke Helsenorge. Samtykket kan endres eller trekkes når som helst. Helsenorge innhenter og lagrer opplysninger om deg fra Folkeregisteret, Kontakt- og reservasjonsregisteret til DIFI og Fastlegeregisteret.</p>
-
-<h3 class="h6">Vi ivaretar ditt personvern</h3>
-<p>Opplysningene som lagres om deg vil bare lagres så lenge det er nødvendig for å bruke tjenestene. Hvis du trekker samtykket ditt vil alle opplysninger om deg slettes med unntak av informasjon om samtykker og reservasjoner.</p>
-
-<p><a href="https://helsenorge.no/bruksvilkar-for-min-helse" target="_blank" class="external">Les mer om vår behandling av personopplysninger her</a></p>
-  */
-  samtykkeflyt_info_html: string;
   /** 
   * Bekreft ditt samtykke
   */
