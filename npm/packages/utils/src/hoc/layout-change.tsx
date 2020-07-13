@@ -12,18 +12,22 @@ export interface LayoutState {
   oneToTwoColumn?: boolean;
   twoToThreeColumn?: boolean;
   threeTwoFourColumn?: boolean;
+  nullToXs?: boolean;
   xsToSm?: boolean;
   smToMd?: boolean;
   mdToLg?: boolean;
+  lgToXl?: boolean;
 }
 
 export interface Props {
   oneToTwoColumn?: boolean;
   twoToThreeColumn?: boolean;
   threeTwoFourColumn?: boolean;
+  nullToXs?: boolean;
   xsToSm?: boolean;
   smToMd?: boolean;
   mdToLg?: boolean;
+  lgToXl?: boolean;
 }
 
 export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Props> | React.FC<T & Props>): React.ComponentClass<T> {
@@ -34,9 +38,11 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
         twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
         threeTwoFourColumn: LayoutUtils.isThreeTwoFourColumn(),
+        nullToXs: LayoutUtils.isNullToXs(),
         xsToSm: LayoutUtils.isXsToSm(),
         smToMd: LayoutUtils.isSmToMd(),
         mdToLg: LayoutUtils.isMdToLg(),
+        lgToXl: LayoutUtils.isLgToXl(),
       };
       this.processResizeEvent = this.processResizeEvent.bind(this);
       this.processLayoutChangeEvent = this.processLayoutChangeEvent.bind(this);
@@ -72,9 +78,11 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
         twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
         threeTwoFourColumn: LayoutUtils.isThreeTwoFourColumn(),
+        nullToXs: LayoutUtils.isNullToXs(),
         xsToSm: LayoutUtils.isXsToSm(),
         smToMd: LayoutUtils.isSmToMd(),
         mdToLg: LayoutUtils.isMdToLg(),
+        lgToXl: LayoutUtils.isLgToXl(),
       });
     }
 
@@ -86,9 +94,11 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
           oneToTwoColumn={this.state.oneToTwoColumn}
           twoToThreeColumn={this.state.twoToThreeColumn}
           threeTwoFourColumn={this.state.threeTwoFourColumn}
+          nullToXs={this.state.nullToXs}
           xsToSm={this.state.xsToSm}
           smToMd={this.state.smToMd}
           mdToLg={this.state.mdToLg}
+          lgToXl={this.state.lgToXl}
         />
       );
     }
