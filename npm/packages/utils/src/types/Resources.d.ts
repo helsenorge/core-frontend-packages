@@ -2262,10 +2262,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   footer_disclaimer_endtext: string;
   /** 
-  * <p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href="/bruk-av-helsetjenester-og-ordninger" class="document" target="_blank">Les mer om dette ved å gå til Bruk av helsetjenester og ordninger.</a></p>
-  */
-  start_reservation: string;
-  /** 
   * Jeg forstår og vil gå videre
   */
   start_confirmation_button: string;
