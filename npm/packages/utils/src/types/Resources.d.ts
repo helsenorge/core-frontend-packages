@@ -2798,10 +2798,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   innbyggermenyInnloggetPrefix: string;
   /** 
-  * Logg over bruk
-  */
-  innbyggermenyLoggOverBruk: string;
-  /** 
   * /logg-over-bruk-av-tjenester
   */
   innbyggermenyLoggOverBrukUrl: string;

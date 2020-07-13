@@ -700,7 +700,6 @@
     "innbyggermenyInnloggetBruker": "Deg",
     "innbyggermenyValgtBruker": "Valgt",
     "innbyggermenyInnloggetPrefix": "Innlogget som:",
-    "innbyggermenyLoggOverBruk": "Logg over bruk",
     "innbyggermenyLoggOverBrukUrl": "/logg-over-bruk-av-tjenester",
     "innbyggermenyLoggUt": "Logg ut",
     "innbyggermenyLoggUtUrl": "/auth/signout",
