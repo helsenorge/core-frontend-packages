@@ -45,10 +45,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuProfileLinksPersonopplysningerTitle: string;
   /** 
-  * Bruk av helsetjenester og ordninger
-  */
-  headerMenuProfileLinksBrukAvHelsetjenesterTitle: string;
-  /** 
   * /Bruk-av-helsetjenester-og-ordninger
   */
   headerMenuProfileLinksBrukAvHelsetjenesterUrl: string;
