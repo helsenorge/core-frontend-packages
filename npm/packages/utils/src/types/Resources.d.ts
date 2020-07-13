@@ -3455,18 +3455,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Provesvar_Desc: string;
   /** 
-  * /provesvar
-  */
-  page_Provesvar_NavigateBackLinkURL: string;
-  /** 
-  * Tilbake til Prøvesvar
-  */
-  page_Provesvar_NavigateBackLinkTitle: string;
-  /** 
-  * Page_Kontaktinformasjon_Title
-  */
-  kontaktinformasjon: string;
-  /** 
   * Innboks
   */
   page_Innboks_Title: string;
@@ -3479,14 +3467,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Samvalg_NavigateBackLinkURL: string;
   /** 
-  * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>
-  */
-  page_AskForAccessToService_Link_Text: string;
-  /** 
-  * Gå til min helse
-  */
-  page_feilmelding_link_text: string;
-  /** 
   * Kontaktinformasjon
   */
   page_Kontaktinformasjon_Title: string;
@@ -3495,6 +3475,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Kontaktinformasjon_Description: string;
   /** 
+  * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>
+  */
+  page_AskForAccessToService_Link_Text: string;
+  /** 
+  * Gå til min helse
+  */
+  page_feilmelding_link_text: string;
+  /** 
   * Noe gikk dessverre galt
   */
   page_feilmelding_title: string;
@@ -3502,6 +3490,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.
   */
   page_feilmelding_description: string;
+  /** 
+  * /provesvar
+  */
+  page_Provesvar_NavigateBackLinkURL: string;
+  /** 
+  * Tilbake til Prøvesvar
+  */
+  page_Provesvar_NavigateBackLinkTitle: string;
   /** 
   * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
   */
@@ -7885,6 +7881,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsCancellationReasonProxy: string;
   /** 
+  * Videotime
+  */
+  appointmentVideoTitle: string;
+  /** 
   * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
   */
   appointmentDetailsSpecialistVideoTekst: string;
@@ -7900,10 +7900,6 @@ behandlingsstedet ved eventuelle spørsmål.
   * Bestill time
   */
   appointmentBestillTime: string;
-  /** 
-  * Videotime
-  */
-  appointmentVideoTitle: string;
   /** 
   * Er du sikker på at du vil avbestille?
   */
