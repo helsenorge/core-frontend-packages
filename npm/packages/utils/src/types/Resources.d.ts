@@ -8578,10 +8578,6 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   clientServiceHost_Samtykke_Pha_Body: string;
   /** 
-  * For å kunne bruke denne tjenesten må du samtykke til personlig helsearkiv. <a href="/bruk-av-helsetjenester-og-ordninger#phasamtykke">Gå til profil og innstillinger for å gi ditt samtykke.</a>
-  */
-  clientServiceHost_Samtykke_Pha_Title: string;
-  /** 
   * 
   */
   clientServiceHost_Samtykke_RefusjonPasientreiser_Body: string;
