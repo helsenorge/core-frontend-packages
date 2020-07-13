@@ -2140,7 +2140,6 @@
     "clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Title": "Meldingen ble ikke sendt",
     "clientServiceHost_Samtykke_Default_Title": "Du har ikke gitt samtykke",
     "clientServiceHost_Samtykke_Pha_Body": "",
-    "clientServiceHost_Samtykke_Pha_Title": "For å kunne bruke denne tjenesten må du samtykke til personlig helsearkiv. <a href=\"/bruk-av-helsetjenester-og-ordninger#phasamtykke\">Gå til profil og innstillinger for å gi ditt samtykke.</a>",
     "clientServiceHost_Samtykke_RefusjonPasientreiser_Body": "",
     "clientServiceHost_Samtykke_RefusjonPasientreiser_Title": "SamtykkePr",
     "clientServiceHost_ServiceNotSupported_Body": "",
