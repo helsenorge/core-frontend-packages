@@ -2802,25 +2802,9 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   innbyggermenyInnloggetPrefix: string;
   /** 
-  * Kontaktinformasjon og varseloppsett
-  */
-  innbyggermenyKontaktinformasjonOgVarseloppsett: string;
-  /** 
-  * /kontaktinformasjon-og-varseloppsett
-  */
-  innbyggermenyKontaktinformasjonOgVarseloppsettUrl: string;
-  /** 
   * Logg over bruk
   */
   innbyggermenyLoggOverBruk: string;
-  /** 
-  * Deling av helseopplysninger
-  */
-  innbyggermenyDelingAvHelseopplysninger: string;
-  /** 
-  * /deling-av-helseopplysninger
-  */
-  innbyggermenyDelingAvHelseopplysningerUrl: string;
   /** 
   * /logg-over-bruk-av-tjenester
   */
@@ -3463,17 +3447,9 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_CitizenProfile_Title: string;
   /** 
-  * Kontaktinformasjon og varseloppsett
-  */
-  page_Contact_Title: string;
-  /** 
   * Fastlege/Praktisk-informasjon.aspx
   */
   page_DigitalDialogGP_Info_Name: string;
-  /** 
-  * Deling av helseopplysninger
-  */
-  page_DelingAvHelseopplysninger_Title: string;
   /** 
   * På denne siden kan du bestemme hvordan dine helseopplysninger skal deles for bruk i pasientbehandling, statistikk, forebyggende arbeid, beredskap, analyser og helsefaglig forskning.
   */
@@ -19759,10 +19735,6 @@ export type HNMinHelsePasientreiserJS = {
   */
   behandlingstidVarsel_feilEpostEllerTlf: string;
   /** 
-  * Du får varsel når vedtaket ditt er ferdig på epost {0} eller nummer {1}. Epostadresse og telefonnummer kan endres under «Kontaktinformasjon og varseloppsett».
-  */
-  behandlingstidVarsel_varslingspreferanse: string;
-  /** 
   * Når vedtaket er klart, vil du få SMS til telefon {0}
   */
   behandlingstidVarsel_behandlingsvarsel_telefon: string;
@@ -19779,10 +19751,6 @@ export type HNMinHelsePasientreiserJS = {
   */
   behandlingstidVarsel_behandlingsvarsel_ikkeSatt_info: string;
   /** 
-  * «Kontaktinformasjon og varseloppsett»
-  */
-  behandlingstidVarsel_behandlingsvarsel_ikkeSatt_dinProfil: string;
-  /** 
   * for å endre dette.
   */
   behandlingstidVarsel_behandlingsvarsel_ikkeSatt_endreDette: string;
@@ -19790,10 +19758,6 @@ export type HNMinHelsePasientreiserJS = {
   * Du har valgt å ikke motta varsler. Du vil derfor ikke motta noe varsel på e-post eller SMS når søknaden er behandlet. Gå inn på
   */
   behandlingstidVarsel_behandlingsvarsel_none_info: string;
-  /** 
-  * «Kontaktinformasjon og varseloppsett»
-  */
-  behandlingstidVarsel_behandlingsvarsel_none_dinProfil: string;
   /** 
   * for å endre dette.
   */
@@ -25670,10 +25634,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   page_Helsetjenester_Pasientreiser_Concent_Date: string;
   /** 
-  * Når den du representerer får tilsendt ny informasjon, sendes epost til <epostadresse>. <p>Du kan <a href="/Kontaktinformasjon-og-varseloppsett#varselprofil">endre varseloppsettet her</a>. <br /> Du kan motta varsler på vegne av den du representerer ved å oppdatere ditt eget varseloppsett.</p>
-  */
-  page_Helsetjenester_Pha_HasNoPhoneButHasEmail_OtherUser: string;
-  /** 
   * Utsatt samtykke
   */
   page_Helsetjenester_Historikk_PhaDelayedConsent: string;
@@ -27076,10 +27036,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   hjelpekontekst_profilFullmakt: string;
   /** 
-  * {"defaulttekst_overskrift":"Deling av helseopplysninger","defaulttekst_brodtekst":"<p>Her vises hvem du har gitt fullmakt til eller fått fullmakt fra, og hvor lenge fullmaktene er gyldige. Du vil også finne eventuelle fullmakter du ikke har gitt selv, som for eksempel vergemål. Her kan du også endre eller avslutte fullmakter du har gitt, eller opprette en ny fullmakt.</p><p>Du må være over 18 år for å kunne gi eller få fullmakt til å benytte tjenester på vegne av andre.</p><h3>Samtykke</h3><p>For at tjenestene skal fungere for den som får en fullmakt, må du samtykke til bruk av dialogtjenester og personlig helsearkiv. Du kan også velge å gi fullmakt til området profil, slik at den du gir fullmakt skal kunne samtykke på vegne av deg.</p><h3>Begrensninger og endringer?</h3><p>En fullmakt kan være gyldig i en begrenset periode, eller på ubestemt tid. Fullmakter som fremdeles er gyldige kan endres. Når en fullmakt endres vil den slettes, og en ny blir da automatisk opprettet, med endringene. Slettede fullmakter og fullmakter som ikke lenger er gyldige vil automatisk flyttes over i historikken.</p><p>Du kan gi fullmakt til alle tjenester som er tilgjengelige via fullmakt, eller til alle tilgjengelige tjenester innen et område. Fullmakten vil automatisk gjelde for nye tjenester innen de valgte områdene, når de blir tilgjengelige.</p>"}
-  */
-  hjelpekontekst_profilHelseopplysninger: string;
-  /** 
   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Fullmakten gjelder","seksjonstekst_brodtekst":"<p>\nDu kan gi andre tilgang til alle tilgjengelige tjenester ved å velge alle de tre tjenesteområdene, eller kun utvalgte tjenesteområder.\n</p>\n\n<p>\nHvert tjenesteområde inneholder én eller flere tjenester, som blir gjort tilgjengelig for den du gir fullmakten til.\n</p>"}
   */
   hjelpetrigger_profilFullmaktItem: string;
@@ -27087,10 +27043,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Velg person","seksjonstekst_brodtekst":"<p>Du må først angi hvem du ønsker å gi fullmakt til. Du kan enten velge et registrert familiemedlem, eller finne en annen person å gi fullmakt til. Både etternavn og fødselsnummer (11 siffer) må være riktig skrevet, så sjekk en ekstra gang før du trykker neste.</p><p>D-nummer kan legges inn dersom vedkommende ikke har norsk fødselsnummer. Personen du gir fullmakt til må være over 18 år.</p> "}
   */
   hjelpetrigger_profilFullmaktLightboxVelg: string;
-  /** 
-  * {"defaulttekst_overskrift":"Kontaktinformasjon og varseloppsett","defaulttekst_brodtekst":"<p>Her kan du se hvilke kontaktopplysninger du er registrert med i Kontakt- og reservasjonsregisteret (ID-porten).</p><p>Her kan du også angi hvilke typer varsler du vil motta, og hvor du ønsker dem sendt. Har du fullmakt til å representere andre, kan du motta samme varsler på deres vegne. </p><p>Varsler sendes kun i forbindelse med tjenester på helsenorge.no.</p>"}
-  */
-  hjelpekontekst_profilKontakt: string;
   /** 
   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Tidligere fullmakter","seksjonstekst_brodtekst":"<div>Tidligere fullmakter som gjelder enkelttjenester kan ikke endres. Disse må avsluttes og en ny fullmakt opprettes for det tjenesteområdet den gamle fullmakten falt inn under.</div>"}
   */
@@ -27388,10 +27340,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Helsetjenester_WithdrawConcent_Title: string;
   /** 
-  * Når den du representerer får tilsendt ny informasjon, sendes SMS-varsel til <telefonnr>. <p>Du kan <a href="/Kontaktinformasjon-og-varseloppsett#varselprofil">endre varseloppsettet her</a>. <br /> Du kan motta varsler på vegne av den du representerer ved å oppdatere ditt eget varseloppsett.</p>
-  */
-  page_Helsetjenester_Pha_Phone_OtherUser: string;
-  /** 
   * For å få tilgang må du samtykke til å:
   */
   page_Helsetjenester_Pha_ConcentTitle: string;
@@ -27683,33 +27631,9 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   shared_Button_OK: string;
   /** 
-  * Kontaktregisteret er ikke tilgjengelig, og du vil ikke få tilsendt varsler. Du kan <a href="/Kontaktinformasjon-og-varseloppsett#varselprofil">endre varseloppsettet ditt her</a>.
-  */
-  page_Helsetjenester_Pha_Error_CurrentUser: string;
-  /** 
-  * Kontaktregisteret er ikke tilgjengelig, og den du representerer vil ikke få tilsendt varsler. Du kan <a href="/Kontaktinformasjon-og-varseloppsett#varselprofil">endre varseloppsettet her</a>. <br/> Du kan motta varsler på vegne av den du representerer ved å oppdatere ditt eget varseloppsett.
-  */
-  page_Helsetjenester_Pha_Error_OtherUser: string;
-  /** 
   * Med disse tjenestene kan du kommunisere digitalt med stadig flere behandlere og lagre informasjon i det personlige helsearkivet ditt.
   */
   page_Helsetjenester_Pha_Description: string;
-  /** 
-  * Du har ikke oppgitt mobilnummer eller e-postadresse, og vil ikke få tilsendt varsler. Du kan <a href="/Kontaktinformasjon-og-varseloppsett#varselprofil">endre varseloppsettet ditt her</a>.
-  */
-  page_Helsetjenester_Pha_NoPhoneOrEmail_CurrentUser: string;
-  /** 
-  * Den du representerer har ikke oppgitt mobilnummer eller e-postadresse, og vil ikke få tilsendt varsler. Du kan <a href="/Kontaktinformasjon-og-varseloppsett#varselprofil">endre varseloppsettet her</a>. <br/> Du kan motta varsler på vegne av den du representerer ved å oppdatere ditt eget varseloppsett.
-  */
-  page_Helsetjenester_Pha_NoPhoneOrEmail_OtherUser: string;
-  /** 
-  * Når du får tilsendt ny informasjon, får du SMS-varsel til <telefonnr>. Du kan <a href="/Kontaktinformasjon-og-varseloppsett#varselprofil">endre varseloppsettet ditt her</a>.
-  */
-  page_Helsetjenester_Pha_Phone_CurrentUser: string;
-  /** 
-  * Når du får tilsendt ny informasjon, får du epost til <epostadresse>. Du kan <a href="/Kontaktinformasjon-og-varseloppsett#varselprofil">endre varseloppsettet ditt her</a>.
-  */
-  page_Helsetjenester_Pha_HasNoPhoneButHasEmail_CurrentUser: string;
   /** 
   * Jeg trekker samtykket
   */
@@ -28191,10 +28115,6 @@ export type HNMinHelseSamtykkeflytJS = {
   * Varselinnstillinger
   */
   kontaktinfo_varselinnstillinger_title: string;
-  /** 
-  * Du har nå standard varseloppsett. Du kan endre hvilke varsler du vil motta og hvordan under din profil: <a href="/kontaktinformasjon-og-varseloppsett">Kontaktinformasjon og varseloppsett</a>
-  */
-  kontaktinfo_varselinnstillinger_html: string;
   /** 
   * 
   */
