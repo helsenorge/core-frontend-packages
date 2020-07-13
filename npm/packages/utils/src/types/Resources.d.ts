@@ -28392,10 +28392,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   */
   kontaktinfo_title: string;
   /** 
-  * Du kan når som helst endre dine samtykker under dine personverninnstillinger: <a href="/personverninnstillinger/samtykker">Samtykke</a>
-  */
-  kontaktinfo_endresamtykke_html: string;
-  /** 
   * Dine kontaktopplysninger
   */
   kontaktinfo_kontakt_title: string;
