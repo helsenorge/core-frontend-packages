@@ -12311,7 +12311,7 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_KJ_personopplysninger_Title: string;
   /** 
-  * <p>Pårørende, arbeidsgiver og kommunikasjon kan du endre selv på siden <a href="/personopplysninger">Personopplysninger</a>.<br>
+  * <p>Pårørende, arbeidsgiver og kommunikasjon kan du endre selv på siden <a href="/kontaktinformasjon">Kontaktinformasjon</a>.<br>
 Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med <a class="external" target="_blank" href="http://www.skatteetaten.no/Person/Folkeregister">folkeregisteret</a></p>
   */
   page_KJ_personopplysninger_Desc: string;
@@ -25106,10 +25106,6 @@ av den forelderen som har gitt samtykke.
   * Innsyn i opplysninger registrert om meg
   */
   page_Helsetjenester_InnsynIOpplysningerRegistrertOmMeg_Tittel: string;
-  /** 
-  * {"defaulttekst_overskrift":"Personopplysninger","defaulttekst_brodtekst":"<p>Mange av personopplysningene dine hentes fra folkeregisteret. Dette kan være for eksempel din fødselsdato, adresse, sivilstatus og hvem som er dine foreldre, ektefelle eller barn. Finner du feil i disse opplysningene er det viktig at du melder fra til folkeregisteret om dette.</p>\n\n<p>Du kan også supplere opplysningene ved å selv legge inn pårørende, arbeidsgiver, og angi om du har noen spesielle behov rundt kommunikasjon.\n</p>"}
-  */
-  hjelpekontekst_profilPersonopplysninger: string;
   /** 
   * {date} trakk {bruker} tilbake samtykke til bruk av digitale dialogtjenester og personlig helsearkiv.
   */
