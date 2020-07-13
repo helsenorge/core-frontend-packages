@@ -29,14 +29,6 @@ export type HNCommon = {
 
 export type HNCoreFrontendMicrowebHeaderFooter = { 
   /** 
-  * /personopplysninger
-  */
-  headerMenuProfileLinksPersonopplysningerUrl: string;
-  /** 
-  * Personopplysninger
-  */
-  headerMenuProfileLinksPersonopplysningerTitle: string;
-  /** 
   * /fullmakt
   */
   headerMenuProfileLinksFullmakterUrl: string;
@@ -3386,14 +3378,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Kjernejournal gir helsepersonell rask tilgang til opplysninger om din helse. Det er spesielt nyttig hvis du blir akutt syk.
   */
   page_KJ_Description: string;
-  /** 
-  * Personopplysninger
-  */
-  page_Personopplysninger_Title: string;
-  /** 
-  * Denne siden inneholder informasjon om deg som kan være viktig for helsepersonell å kjenne til.
-  */
-  page_Personopplysninger_Desc: string;
   /** 
   * Resepter
   */
@@ -12307,7 +12291,7 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_KJ_kontaktinfo_Desc: string;
   /** 
-  * Personopplysninger
+  * Kontaktinformasjon
   */
   page_KJ_personopplysninger_Title: string;
   /** 
@@ -26793,10 +26777,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * Det har skjedd en teknisk feil
   */
   error_UnavailablePersonalInformation: string;
-  /** 
-  * Personopplysninger er ikke tilgjengelig. Enkelte tjenester kan derfor ha begrenset funksjonalitet.
-  */
-  error_UnavailablePersonalInformation_Description: string;
   /** 
   * Jeg opphever reservasjonen
   */
