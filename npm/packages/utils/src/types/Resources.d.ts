@@ -321,7 +321,7 @@ export type HNCoreFrontendWebForside = {
   */
   confirmationText: string;
   /** 
-  * <p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href="/bruk-av-helsetjenester-og-ordninger" class="document" target="_blank">Les mer om dette ved å gå til Bruk av helsetjenester og ordninger.</a></p>
+  * <p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href="/personverninnstillinger/tilgang-til-helseopplysninger/pasientjournal" class="document" target="_blank">Les mer om dette ved å gå til Personverninnstillinger.</a></p>
   */
   confirmationReservation: string;
   /** 
