@@ -3896,6 +3896,7 @@
     "tile_Provesvar_Description": "Resultat av test for koronavirus."
   },
   "HNMinHelseNHNStrings": { 
+    "page_Pasientjournal_Title": "Pasientjournal",
     "error_HprPersonNotFound_Title": "Ugyldig nummer",
     "error_HprPersonNotFound_Body": "Ugyldig nummer. Sjekk at HPR-nummeret er korrekt. Trenger du hjelp kan du ringe Veiledning helsenorge.no på telefon 23 32 70 00.",
     "webPart_MHOAddress_AddressLabel": "Adresse:",

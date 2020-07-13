@@ -15584,6 +15584,10 @@ export type HNMinHelseNavigation = {
 
 export type HNMinHelseNHNStrings = { 
   /** 
+  * Pasientjournal
+  */
+  page_Pasientjournal_Title: string;
+  /** 
   * Ugyldig nummer
   */
   error_HprPersonNotFound_Title: string;
