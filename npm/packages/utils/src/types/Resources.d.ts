@@ -2862,10 +2862,6 @@ I tillegg registreres tidspunkt for innlogging og hvilke tjenester du benytter, 
   */
   innbyggermenyProfilHeader: string;
   /** 
-  * /Bruk-av-helsetjenester-og-ordninger
-  */
-  innbyggermenySamtykkerOgReservasjonerUrl: string;
-  /** 
   * Sist innlogget:
   */
   innbyggermenySistInnlogget: string;
@@ -6216,10 +6212,6 @@ behandlingsstedet ved eventuelle spørsmål.
   * nye
   */
   newLabelPlural: string;
-  /** 
-  * Du har ingen lagrede meldinger. Hvis du ønsker å sende og motta meldinger via helsenorge.no, må du først samtykke til å ta i bruk digitale dialogtjenester. <a href="/Bruk-av-helsetjenester-og-ordninger#phasamtykke">Gå til profil og innstillinger for å gi ditt samtykke.</a>
-  */
-  conversationNoConsent: string;
   /** 
   * Avbryt
   */
@@ -25637,10 +25629,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * Du har ikke samtykket til Personlig helsearkiv
   */
   page_Kontakt_NotificationProfile_NoPha: string;
-  /** 
-  * <div>Du kan derfor ikke motta varsler fra helsetjenesten. Hvis du ønsker å endre dine innstillinger, kan du gjøre det under <a href="/Bruk-av-helsetjenester-og-ordninger#phasamtykke" >Profil og innstillinger.</a></div>
-  */
-  page_Kontakt_NotificationProfile_NoPha_Description: string;
   /** 
   * Hvilke typer varsel vil du ha?
   */
