@@ -2847,6 +2847,10 @@ export type HNMinHelseCommonJS = {
    * Forside
    */
   breadCrumb_Forsiden: string;
+  /**
+   * Se samtykke1
+   */
+  askForMoreServicesButtonTextSecondary: string;
 };
 
 export type HNMinHelseCommon = {
@@ -3475,10 +3479,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_Kontaktinformasjon_Description: string;
   /**
-   * Logg over bruk
-   */
-  page_HendelsesLogg_Title: string;
-  /**
    * Noe gikk dessverre galt
    */
   page_feilmelding_title: string;
@@ -3506,6 +3506,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    * Gå til min helse
    */
   page_feilmelding_link_text: string;
+  /**
+   * Logg over bruk
+   */
+  page_HendelsesLogg_Title: string;
 };
 
 export type HNMinHelseDialogGPStrings = {
@@ -17357,30 +17361,6 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   default_TextMessage_Body_Self_FunksjonellMotpart: string;
   /**
-   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
-   */
-  videreformidling_TextMessage_Body_Self: string;
-  /**
-   * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
-   */
-  videreformidling_TextMessage_Body_Representation: string;
-  /**
-   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
-   */
-  videreformidling_EmailMessage_Body_Self: string;
-  /**
-   * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
-   */
-  videreformidling_EmailMessage_Body_Representation: string;
-  /**
-   * Varsel om nytt brev på helsenorge.no
-   */
-  videreformidling_EmailMessage_Subject_Self: string;
-  /**
-   * Varsel om nytt brev på helsenorge.no
-   */
-  videreformidling_EmailMessage_Subject_Representation: string;
-  /**
    * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
    */
   videreformidling_EmailMessage_Body_Representation_IkkeSensitivAvsender: string;
@@ -17404,6 +17384,30 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * ${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
    */
   videreformidling_TextMessage_Body_Self_IkkeSensitivAvsender: string;
+  /**
+   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
+   */
+  videreformidling_TextMessage_Body_Self: string;
+  /**
+   * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
+   */
+  videreformidling_TextMessage_Body_Representation: string;
+  /**
+   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
+   */
+  videreformidling_EmailMessage_Body_Self: string;
+  /**
+   * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
+   */
+  videreformidling_EmailMessage_Body_Representation: string;
+  /**
+   * Varsel om nytt brev på helsenorge.no
+   */
+  videreformidling_EmailMessage_Subject_Self: string;
+  /**
+   * Varsel om nytt brev på helsenorge.no
+   */
+  videreformidling_EmailMessage_Subject_Representation: string;
 };
 
 export type HNMinHelsePages = {
@@ -18121,13 +18125,13 @@ export type HNMinHelsePasientjournal = {
    */
   documentIsRestricted: string;
   /**
-   * Lovisenberg Diakonale Sykehus AS
-   */
-  xDS_LokasjonFeil_LDS: string;
-  /**
    * Helse Nord
    */
   xDS_LokasjonFeil_HN: string;
+  /**
+   * Lovisenberg Diakonale Sykehus AS
+   */
+  xDS_LokasjonFeil_LDS: string;
 };
 
 export type HNMinHelsePasientreiserJS = {
@@ -24797,17 +24801,17 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = {
   /**
-   * Prøvesvar
+   * Innsyn i Smittestopp
    */
-  page_HendelsesLogg_39: string;
+  page_HendelsesLogg_38: string;
   /**
    * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
    */
   hjelpekontekst_profilLogg: string;
   /**
-   * Innsyn i Smittestopp
+   * Prøvesvar
    */
-  page_HendelsesLogg_38: string;
+  page_HendelsesLogg_39: string;
   /**
    * Helsenorge
    */
