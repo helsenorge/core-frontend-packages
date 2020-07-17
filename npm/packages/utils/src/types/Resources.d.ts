@@ -2848,7 +2848,7 @@ export type HNMinHelseCommonJS = {
   */
   breadCrumb_Forsiden: string;
   /** 
-  * Se samtykke
+  * Se samtykke1
   */
   askForMoreServicesButtonTextSecondary: string;
 };
