@@ -718,7 +718,7 @@
     "innsynstjenesterTitle": "Innhold i ulike helseregistre",
     "breadCrumb_Forsiden": "Forside",
     "askForMoreServicesButtonTextSecondary": "Se samtykke",
-    "askForMoreServicesButtonTextOnlyLook": "Se endringer"
+    "askForMoreServicesButtonTextOnlyLook": "Se samtykke"
   },
   "HNMinHelseCommon": { 
     "bruksvilkarPopup_ErrorDescription": "Du kan prøve igjen senere.",

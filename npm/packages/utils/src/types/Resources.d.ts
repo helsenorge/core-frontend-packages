@@ -2852,7 +2852,7 @@ export type HNMinHelseCommonJS = {
   */
   askForMoreServicesButtonTextSecondary: string;
   /** 
-  * Se endringer
+  * Se samtykke
   */
   askForMoreServicesButtonTextOnlyLook: string;
 };
