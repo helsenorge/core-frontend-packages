@@ -1,3 +1,12 @@
+export function isEmpty(string: string | undefined | null): boolean {
+  if (string && string.trim) string = string.trim();
+  return string === '' || string === null || string === undefined;
+}
+
+export function hasInvalidCharacters(string: string): boolean {
+  return /[""!#¤%=?`´^¨~*:;£${[\]}|§€><\|]/.test(string);
+}
+
 export function capitalize(capitalizeMe: string): string {
   const capitalized: string = capitalizeMe.charAt(0).toUpperCase() + capitalizeMe.substring(1);
   return capitalized;
