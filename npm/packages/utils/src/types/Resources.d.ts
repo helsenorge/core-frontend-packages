@@ -2848,9 +2848,13 @@ export type HNMinHelseCommonJS = {
    */
   breadCrumb_Forsiden: string;
   /**
-   * Se samtykke1
+   * Se samtykke
    */
   askForMoreServicesButtonTextSecondary: string;
+  /**
+   * Se samtykke
+   */
+  askForMoreServicesButtonTextOnlyLook: string;
 };
 
 export type HNMinHelseCommon = {
