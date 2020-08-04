@@ -222,12 +222,7 @@ function createHeaders(type = 'application/json'): Headers {
     headers.append('HNTimeStamp', HN.Rest.__TimeStamp__);
     headers.append('HNTjeneste', HN.Rest.__TjenesteType__);
     headers.append('x-hn-hendelselogg', HN.Rest.__HendelseLoggType__);
-  }
-
-  if (!!HN.Rest?.__CSRF_Token__ && !!HN.Rest?.__CSRF_Timestamp__) {
-    headers.append('X-HN-CSRF-Token', HN.Rest?.__CSRF_Token__);
-    headers.append('X-HN-CSRF-Timestamp', HN.Rest?.__CSRF_Timestamp__);
-  } else {
+  } else if (getCookieValue('HN_CSRF_Token')) {
     headers['X-HN-CSRF-Token'] = getCookieValue('HN_CSRF_Token') as string;
   }
 
