@@ -5169,7 +5169,7 @@ Finner du ingen tilgjengelige timer som passer deg, kan du kontakte legekontoret
   */
   bookingMarkAppointmentWith: string;
   /** 
-  * UtskrivendeSykepleier
+  * Utskrivende sykepleier
   */
   bookingUtskrivendeSykepleier: string;
   /** 
@@ -7142,7 +7142,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonRoleToPatientUtskrivendeLege: string;
   /** 
-  * UtskrivendeSykepleier
+  * Utskrivende sykepleier
   */
   commonRoleToPatientUtskrivendeSykepleier: string;
   /** 
