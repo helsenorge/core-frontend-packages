@@ -141,54 +141,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuSearchSubmit: string;
   /** 
-  * Hopp til innholdet
-  */
-  hoppTilInnholdet: string;
-  /** 
-  * Personverninnstillinger
-  */
-  headerMenuProfileLinksPersonverninnstillingerTitle: string;
-  /** 
-  * /personverninnstillinger
-  */
-  headerMenuProfileLinksPersonverninnstillingerUrl: string;
-  /** 
-  * Gå til forsiden
-  */
-  inactivity_SignedOut_Button_GoToRoot: string;
-  /** 
-  * Logg inn på nytt
-  */
-  inactivity_SignedOut_Button_SignInAgain: string;
-  /** 
-  * Du var stille en stund og har blitt logget ut
-  */
-  inactivity_SignedOut_Title: string;
-  /** 
-  * Logg ut
-  */
-  lightbox_Inactivity_Button_SignOut: string;
-  /** 
-  * Ja
-  */
-  lightbox_Inactivity_Button_Yes: string;
-  /** 
-  * Du blir snart logget ut av Min helse fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
-  */
-  lightbox_Inactivity_Description: string;
-  /** 
-  * Vil du fortsatt være innlogget på Min helse?
-  */
-  lightbox_Inactivity_DoYouWantToStay: string;
-  /** 
-  * Du blir automatisk logget ut om {min}:{sec} minutter.
-  */
-  lightbox_Inactivity_Timer: string;
-  /** 
-  * Er du der fortsatt?
-  */
-  lightbox_Inactivity_Title: string;
-  /** 
   * /logg-over-bruk
   */
   headerMenuProfileLinksLoggOverBrukV2Url: string;
@@ -248,6 +200,58 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Hvem sine helseopplysninger vil du se?
   */
   personvelgerHeader: string;
+  /** 
+  * Deg
+  */
+  personvelgerDeg: string;
+  /** 
+  * Hopp til innholdet
+  */
+  hoppTilInnholdet: string;
+  /** 
+  * Personverninnstillinger
+  */
+  headerMenuProfileLinksPersonverninnstillingerTitle: string;
+  /** 
+  * /personverninnstillinger
+  */
+  headerMenuProfileLinksPersonverninnstillingerUrl: string;
+  /** 
+  * Gå til forsiden
+  */
+  inactivity_SignedOut_Button_GoToRoot: string;
+  /** 
+  * Logg inn på nytt
+  */
+  inactivity_SignedOut_Button_SignInAgain: string;
+  /** 
+  * Du var stille en stund og har blitt logget ut
+  */
+  inactivity_SignedOut_Title: string;
+  /** 
+  * Logg ut
+  */
+  lightbox_Inactivity_Button_SignOut: string;
+  /** 
+  * Ja
+  */
+  lightbox_Inactivity_Button_Yes: string;
+  /** 
+  * Du blir snart logget ut av Min helse fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
+  */
+  lightbox_Inactivity_Description: string;
+  /** 
+  * Vil du fortsatt være innlogget på Min helse?
+  */
+  lightbox_Inactivity_DoYouWantToStay: string;
+  /** 
+  * Du blir automatisk logget ut om {min}:{sec} minutter.
+  */
+  lightbox_Inactivity_Timer: string;
+  /** 
+  * Er du der fortsatt?
+  */
+  lightbox_Inactivity_Title: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
