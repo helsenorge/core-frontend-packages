@@ -233,11 +233,11 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   errorRepresentasjoner: string;
   /** 
-  * lorem ipsum
+  * Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href="https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no " target="_blank">Les mer om foreldrerepresentasjon</a>.
   */
   headerMenuProfileNotificationPanelBarn16Plus: string;
   /** 
-  * lorem ipsum
+  * Barn som ikke er registrert på samme folkeregistrerte adresse som sine foreldre vises ikke på Helsenorge. <a href="https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no " target="_blank">Les mer om foreldrerepresentasjon</a>.
   */
   headerMenuProfileNotificationPanelBarnAnnenAdresse: string;
 };
