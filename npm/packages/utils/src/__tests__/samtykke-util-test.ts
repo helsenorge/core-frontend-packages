@@ -5,6 +5,7 @@ import {
   getSamtykkeStatus,
   SamtykkeStatus,
   ikkeSamtykketTilHelsenorge,
+  harSamtykket,
 } from '../samtykke-util';
 import { Samtykke, SamtykkeLevel } from '../types/entities';
 import { PersonvernInnstillingDefinisjonGuids } from '../constants/personvernInnstillingDefinisjonIds';
@@ -33,10 +34,36 @@ describe('SamtykkeUtil', () => {
   };
   const samtykker: Array<Samtykke> = [samtykkeDigitaleHelsetjenester as Samtykke, samtykkePasientreiser as Samtykke];
   it('Should have pasientreise samtykke', () => {
-    expect(hasDigitaleHelsetjenesteSamtykke(samtykker)).toBe(true);
+    expect(hasPasientreiserSamtykke(samtykker)).toBe(true);
   });
   it('Should have digitale helsetjenester samtykke', () => {
-    expect(hasPasientreiserSamtykke(samtykker)).toBe(true);
+    expect(hasDigitaleHelsetjenesteSamtykke(samtykker)).toBe(true);
+  });
+
+  describe('harSamtykket', () => {
+    it('Skal returnere true hvis samtykket ligger i listen med samtykker som blir sendt med som parameter', () => {
+      expect(harSamtykket(PersonvernInnstillingDefinisjonGuids.Pasientreiser, [samtykkePasientreiser as Samtykke])).toBe(true);
+    });
+
+    it('Skal returnere false hvis samtykket ikke ligger i listen med samtykker som blir sendt med som parameter', () => {
+      expect(harSamtykket(PersonvernInnstillingDefinisjonGuids.Pasientreiser, [samtykkeDigitaleHelsetjenester as Samtykke])).toBe(false);
+    });
+
+    it('Skal returnere true hvis det ikke sendes med samtykker og samtykket ligger i global state', () => {
+      const originalSamtykker = window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker;
+      window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker = [samtykkeDigitaleHelsetjenester];
+
+      expect(harSamtykket(PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste)).toBe(true);
+      window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker = originalSamtykker;
+    });
+
+    it('Skal returnere false hvis det ikke sendes med samtykker og samtykket ikke ligger i global state', () => {
+      const originalSamtykker = window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker;
+      window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker = [samtykkePasientreiser];
+
+      expect(harSamtykket(PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste)).toBe(false);
+      window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker = originalSamtykker;
+    });
   });
 
   const samtykkeDigitaleHelsetjenesterIkkeAktiv = {
