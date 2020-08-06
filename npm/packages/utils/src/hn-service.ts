@@ -223,7 +223,7 @@ function createHeaders(type = 'application/json'): Headers {
     headers.append('HNTjeneste', HN.Rest.__TjenesteType__);
     headers.append('x-hn-hendelselogg', HN.Rest.__HendelseLoggType__);
   } else if (getCookieValue('HN_CSRF_Token')) {
-    headers.append('X-HN-CSRF-Token', getCookieValue('HN_CSRF_Token') as string);
+    headers.append['X-HN-CSRF-Token'] = getCookieValue('HN_CSRF_Token') as string;
   }
 
   return headers;
