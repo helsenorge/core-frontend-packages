@@ -57,7 +57,9 @@
     "errorMeldinger": "Det oppstod en feil ved henting av meldinger og/eller hendelser.",
     "errorHendelser": "Det oppstod en feil ved henting av hendelser.",
     "errorGlobalMeny": "Det oppstod en feil ved henting av globalmenyen.",
-    "errorRepresentasjoner": "Det oppstod en feil ved henting av representasjoner."
+    "errorRepresentasjoner": "Det oppstod en feil ved henting av representasjoner.",
+    "headerMenuProfileNotificationPanelBarn16Plus": "lorem ipsum",
+    "headerMenuProfileNotificationPanelBarnAnnenAdresse": "lorem ipsum"
   },
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk",

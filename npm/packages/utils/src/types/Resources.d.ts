@@ -232,6 +232,14 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Det oppstod en feil ved henting av representasjoner.
   */
   errorRepresentasjoner: string;
+  /** 
+  * lorem ipsum
+  */
+  headerMenuProfileNotificationPanelBarn16Plus: string;
+  /** 
+  * lorem ipsum
+  */
+  headerMenuProfileNotificationPanelBarnAnnenAdresse: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
