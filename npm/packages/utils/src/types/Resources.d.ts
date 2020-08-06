@@ -244,6 +244,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.
   */
   personvelgerIngress: string;
+  /** 
+  * Hvem sine helseopplysninger vil du se?
+  */
+  personvelgerHeader: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
