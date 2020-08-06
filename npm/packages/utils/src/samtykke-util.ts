@@ -42,8 +42,8 @@ export function getSamtykker(): Array<Samtykke> {
   return [];
 }
 
-export function harSamtykket(guid: PersonvernInnstillingDefinisjonGuids): boolean {
-  const samtykker = getSamtykker();
+export function harSamtykket(guid: PersonvernInnstillingDefinisjonGuids, samtykker: Array<Samtykke> | undefined = undefined): boolean {
+  samtykker = samtykker || getSamtykker();
   if (samtykker.length === 0) {
     return false;
   }
