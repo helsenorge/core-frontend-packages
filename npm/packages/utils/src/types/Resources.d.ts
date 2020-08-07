@@ -3143,7 +3143,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Fullmakter_Title: string;
   /** 
-  * Min helse
+  * Forside
   */
   page_Start_Title: string;
   /** 
