@@ -141,54 +141,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuSearchSubmit: string;
   /** 
-  * Hopp til innholdet
-  */
-  hoppTilInnholdet: string;
-  /** 
-  * Personverninnstillinger
-  */
-  headerMenuProfileLinksPersonverninnstillingerTitle: string;
-  /** 
-  * /personverninnstillinger
-  */
-  headerMenuProfileLinksPersonverninnstillingerUrl: string;
-  /** 
-  * Gå til forsiden
-  */
-  inactivity_SignedOut_Button_GoToRoot: string;
-  /** 
-  * Logg inn på nytt
-  */
-  inactivity_SignedOut_Button_SignInAgain: string;
-  /** 
-  * Du var stille en stund og har blitt logget ut
-  */
-  inactivity_SignedOut_Title: string;
-  /** 
-  * Logg ut
-  */
-  lightbox_Inactivity_Button_SignOut: string;
-  /** 
-  * Ja
-  */
-  lightbox_Inactivity_Button_Yes: string;
-  /** 
-  * Du blir snart logget ut av Min helse fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
-  */
-  lightbox_Inactivity_Description: string;
-  /** 
-  * Vil du fortsatt være innlogget på Min helse?
-  */
-  lightbox_Inactivity_DoYouWantToStay: string;
-  /** 
-  * Du blir automatisk logget ut om {min}:{sec} minutter.
-  */
-  lightbox_Inactivity_Timer: string;
-  /** 
-  * Er du der fortsatt?
-  */
-  lightbox_Inactivity_Title: string;
-  /** 
   * /logg-over-bruk
   */
   headerMenuProfileLinksLoggOverBrukV2Url: string;
@@ -248,6 +200,54 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Hvem sine helseopplysninger vil du se?
   */
   personvelgerHeader: string;
+  /** 
+  * Hopp til innholdet
+  */
+  hoppTilInnholdet: string;
+  /** 
+  * Personverninnstillinger
+  */
+  headerMenuProfileLinksPersonverninnstillingerTitle: string;
+  /** 
+  * /personverninnstillinger
+  */
+  headerMenuProfileLinksPersonverninnstillingerUrl: string;
+  /** 
+  * Gå til forsiden
+  */
+  inactivity_SignedOut_Button_GoToRoot: string;
+  /** 
+  * Logg inn på nytt
+  */
+  inactivity_SignedOut_Button_SignInAgain: string;
+  /** 
+  * Du var stille en stund og har blitt logget ut
+  */
+  inactivity_SignedOut_Title: string;
+  /** 
+  * Logg ut
+  */
+  lightbox_Inactivity_Button_SignOut: string;
+  /** 
+  * Ja
+  */
+  lightbox_Inactivity_Button_Yes: string;
+  /** 
+  * Du blir snart logget ut av Min helse fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
+  */
+  lightbox_Inactivity_Description: string;
+  /** 
+  * Vil du fortsatt være innlogget på Min helse?
+  */
+  lightbox_Inactivity_DoYouWantToStay: string;
+  /** 
+  * Du blir automatisk logget ut om {min}:{sec} minutter.
+  */
+  lightbox_Inactivity_Timer: string;
+  /** 
+  * Er du der fortsatt?
+  */
+  lightbox_Inactivity_Title: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
@@ -368,6 +368,10 @@ export type HNCoreFrontendWebForside = {
   * {"defaulttekst_overskrift":"Helsetjenester","defaulttekst_brodtekst":"<p>\nVed å logge deg inn på helsenorge.no får du tilgang til en rekke tjenester du kan benytte for å følge opp din helse. Noen tjenester kan du også benytte på vegne av dine barn og de som har gitt deg fullmakt. Foreldre med foreldreansvar har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år og har ingen tilgang etter fylte 16 år.\n</p>\n\n<p>\n<a href=\"https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no\">Foreldrerepresentasjon finner du mer om i denne artikkelen</a>.\n</p>\n\n<p>\nHelsetjenestene på denne siden er tjenester hvor du selv kan utføre handlinger, uten hjelp fra helsepersonell eller andre. For eksempel kan du bytte fastlege, søke om refusjon for en pasientreise, eller sjekke hvor mye du har betalt i egenandel for helsetjenester. Du kan også sende og motta meldinger, lagre dokumenter, eller se dine resepter, henvisninger og helsekontakter.\n</p>\n\n<p>\nFlere av tjenestene er under utvikling, og noen tjenester er under utprøving i utvalgte områder.\n</p>\n\n<p>\n<a href=\"https://helsenorge.no/om-min-helse/tjenester\">Oversikt over tjenestene på helsenorge.no</a>.\n</p>\n\n<h3>Profil og innstillinger</h3>\n\n<p>\nNår du er logget inn vil du også finne en meny ved navnet ditt, hvor du i tillegg finner følgende tjenester:\n</p>\n\n<ul>\n<li><strong>Kontaktinformasjon</strong><br>\nHer kan du se opplysninger som deg selv og hvilke kontaktopplysninger du er registrert med. Du kan også angi hvilke typer varsler du vil motta, og hvor du ønsker dem sendt. Har du fullmakt til å representere andre, kan du motta samme varsler på deres vegne.</li>\n<li><strong>Personverninnstillinger</strong><br>\nHer kan du styre dine samtykker, reservasjoner og tilganger til tjenestene dine på helsenorge.no, og hvordan du vil bruke andre typer helsetjenester.\n</li>\n<li><strong>Fullmakter</strong><br>\nHer vises hvem du har gitt fullmakt til eller fått fullmakt fra, og hvor lenge fullmaktene er gyldige. Du vil også finne eventuelle fullmakter du ikke har gitt selv, som for eksempel vergemål. Her kan du også endre eller avslutte fullmakter du har gitt, eller opprette en ny fullmakt.</li>\n<li><strong>Logg over bruk</strong><br>\nHer vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</li>\n</ul>\n\n<a href=\"https://helsenorge.no/om-min-helse/profil\">Profil og innstillinger kan du lese mer om her</a>.\n\n<h3>Fastlege med eventuelle digitale tjenester</h3>\n\n<p>Hvis du er logget inn vil din fastlegeinformasjon vises her, dersom du deltar i fastlegeordningen. Informasjonen vises også for barn under 16 år. Hvis din fastlege tilbyr digitale tjenester vil du også få tilgang til disse tjenestene:</p>\n<ul>\n<li>bestill time</li>\n<li>forny resept</li>\n<li>start e-konsultasjon</li>\n<li>kontakt legekontoret</li>\n</ul>\n\n<p>Foreløpig er det kun enkelte fastleger som prøver ut tjenestene. Bruk av digitale tjenester hos fastlegen forutsetter samtykke til digital helsetjeneste.</p>\n\n<a href=\"https://helsenorge.no/kontakt-fastlegen/kom-i-kontakt\">Fastleger og digitale tjenester kan du lese om i denne artikkelen</a>."}
   */
   hjelpekontekst: string;
+  /** 
+  * Se samtykke
+  */
+  savnerDuTjenesterFullmektigButton: string;
   /** 
   * Hei
   */
