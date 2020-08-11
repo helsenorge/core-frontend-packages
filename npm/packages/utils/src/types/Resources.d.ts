@@ -17329,11 +17329,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   helsefagligKontakt_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et nytt innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser i forkant av timen.
+  * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et nytt innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser i forkant av timen.
+  * ${FirstName}, du har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Self: string;
   /** 
@@ -17345,11 +17345,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   spesialistInnkallingsbrev_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått et nytt innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser i forkant av timen.
+  * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et nytt innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser i forkant av timen.
+  * ${FirstName}, du har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Self: string;
   /** 
