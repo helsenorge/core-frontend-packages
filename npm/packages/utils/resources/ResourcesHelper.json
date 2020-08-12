@@ -70,7 +70,9 @@
   },
   "HNCoreFrontendNPMPackagesFramework": { 
     "pendingChangesConfirm": "Fortsett redigering",
-    "pendingChangesClose": "Forkast endringer"
+    "pendingChangesClose": "Forkast endringer",
+    "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
+    "pendingChangesDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort."
   },
   "HNCoreFrontendWebForside": { 
     "searchContainerTitle": "Søk i kvalitetssikret helseinformasjon",
