@@ -45,7 +45,7 @@ export class TrapFocus {
 
     // When the element focused is not in list, sets focus on the first focusable element of the list
     if (currentFocusIndex === -1) {
-      if (this.focusableItems.length > 0 && this.focusableItems[0] && this.focusableItems[0]) {
+      if (this.focusableItems.length > 0 && this.focusableItems[0]) {
         this.focusableItems[0].focus();
       }
       return null;
