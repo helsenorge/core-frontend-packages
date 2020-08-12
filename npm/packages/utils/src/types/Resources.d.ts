@@ -265,6 +265,17 @@ export type HNCoreFrontendNPMPackagesCMS = {
   searchErrorSuggestionFetch: string;
 };
 
+export type HNCoreFrontendNPMPackagesFramework = { 
+  /** 
+  * Fortsett redigering
+  */
+  pendingChangesConfirm: string;
+  /** 
+  * Forkast endringer
+  */
+  pendingChangesClose: string;
+};
+
 export type HNCoreFrontendWebForside = { 
   /** 
   * Søk i kvalitetssikret helseinformasjon
