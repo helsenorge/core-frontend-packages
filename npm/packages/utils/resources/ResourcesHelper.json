@@ -68,6 +68,10 @@
     "searchSubmitLabel": "Søk",
     "searchErrorSuggestionFetch": "Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere."
   },
+  "HNCoreFrontendNPMPackagesFramework": { 
+    "pendingChangesConfirm": "Fortsett redigering",
+    "pendingChangesClose": "Forkast endringer"
+  },
   "HNCoreFrontendWebForside": { 
     "searchContainerTitle": "Søk i kvalitetssikret helseinformasjon",
     "searchContainerPlaceholder": "Hva leter du etter?",
