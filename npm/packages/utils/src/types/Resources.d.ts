@@ -274,6 +274,14 @@ export type HNCoreFrontendNPMPackagesFramework = {
   * Forkast endringer
   */
   pendingChangesClose: string;
+  /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  pendingChangesHeader: string;
+  /** 
+  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
+  */
+  pendingChangesDescription: string;
 };
 
 export type HNCoreFrontendWebForside = { 
