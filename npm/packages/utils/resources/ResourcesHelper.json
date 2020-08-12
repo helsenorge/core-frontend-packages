@@ -73,7 +73,13 @@
     "pendingChangesClose": "Forkast endringer",
     "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
     "pendingChangesDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort.",
-    "representasjonerBarn16Plus": "Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href=\"https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no \" target=\"_blank\">Les mer om foreldrerepresentasjon</a>."
+    "representasjonerBarn16Plus": "Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href=\"https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no \" target=\"_blank\">Les mer om foreldrerepresentasjon</a>.",
+    "representasjonerBarnAnnenAdresse": "Barn som ikke er registrert på samme folkeregistrerte adresse som sine foreldre vises ikke på Helsenorge. <a href=\"https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no \" target=\"_blank\">Les mer om foreldrerepresentasjon</a>.",
+    "representasjonerDegSelv": "deg selv",
+    "representasjonerDuHarForeldreansvar": "du har foreldreansvar",
+    "representasjonerDuHarFullmakt": "du har fullmakt",
+    "personvelgerIngress": "Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.",
+    "personvelgerHeader": "Hvem sine helseopplysninger vil du se?"
   },
   "HNCoreFrontendWebForside": { 
     "searchContainerTitle": "Søk i kvalitetssikret helseinformasjon",
