@@ -43,10 +43,14 @@ export class TrapFocus {
     this.updateFocusableItems();
     const currentFocusIndex: number = this.getItemIndex(target as TabbableElement);
 
-    // Element focused not in list, return the first focusable element
+    // When the element focused is not in list, sets focus on the first focusable element of the list
     if (currentFocusIndex === -1) {
-      return this.focusableItems[0];
+      if (this.focusableItems.length > 0 && this.focusableItems[0] && this.focusableItems[0]) {
+        this.focusableItems[0].focus();
+      }
+      return null;
     }
+
     if (e.shiftKey) {
       this.previousFocusableItem(target as TabbableElement).focus();
     } else {
