@@ -5,6 +5,13 @@ import { ShowSignOutBoxData, SessionTimeoutAction } from '../types/entities';
 /* Events from header-footer and cms-blocks webcomp */
 import { HeaderFooterEvents, CmsBlocksEvents, CommonEvents } from './constants';
 
+export interface KeyboardEventWithPath extends KeyboardEvent {
+  path?: string;
+}
+export interface MouseEventWithPath extends MouseEvent {
+  path?: string;
+}
+
 /* This is a custom interface to be able to access and typecheck path on Events */
 export interface WebComponentEvent<T extends EventTarget> extends Event {
   target: T;
