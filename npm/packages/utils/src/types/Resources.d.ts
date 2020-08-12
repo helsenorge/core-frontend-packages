@@ -282,6 +282,10 @@ export type HNCoreFrontendNPMPackagesFramework = {
   * Hvis du forlater siden, vil du miste alle endringer du har gjort.
   */
   pendingChangesDescription: string;
+  /** 
+  * Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href="https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no " target="_blank">Les mer om foreldrerepresentasjon</a>.
+  */
+  representasjonerBarn16Plus: string;
 };
 
 export type HNCoreFrontendWebForside = { 
