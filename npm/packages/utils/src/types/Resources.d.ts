@@ -265,6 +265,53 @@ export type HNCoreFrontendNPMPackagesCMS = {
   searchErrorSuggestionFetch: string;
 };
 
+export type HNCoreFrontendNPMPackagesFramework = {
+  /**
+   * Fortsett redigering
+   */
+  pendingChangesConfirm: string;
+  /**
+   * Forkast endringer
+   */
+  pendingChangesClose: string;
+  /**
+   * Det finnes endringer som ikke er lagret
+   */
+  pendingChangesHeader: string;
+  /**
+   * Hvis du forlater siden, vil du miste alle endringer du har gjort.
+   */
+  pendingChangesDescription: string;
+  /**
+   * Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href="https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no " target="_blank">Les mer om foreldrerepresentasjon</a>.
+   */
+  representasjonerBarn16Plus: string;
+  /**
+   * Barn som ikke er registrert på samme folkeregistrerte adresse som sine foreldre vises ikke på Helsenorge. <a href="https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no " target="_blank">Les mer om foreldrerepresentasjon</a>.
+   */
+  representasjonerBarnAnnenAdresse: string;
+  /**
+   * deg selv
+   */
+  representasjonerDegSelv: string;
+  /**
+   * du har foreldreansvar
+   */
+  representasjonerDuHarForeldreansvar: string;
+  /**
+   * du har fullmakt
+   */
+  representasjonerDuHarFullmakt: string;
+  /**
+   * Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.
+   */
+  personvelgerIngress: string;
+  /**
+   * Hvem sine helseopplysninger vil du se?
+   */
+  personvelgerHeader: string;
+};
+
 export type HNCoreFrontendWebForside = {
   /**
    * Søk i kvalitetssikret helseinformasjon
@@ -17329,11 +17376,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   helsefagligKontakt_TextMessage_Body_Self: string;
   /**
-   * ${FirstName} har fått et nytt innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser i forkant av timen.
+   * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
    */
   spesialistInnkallingsbrev_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName}, du har fått et nytt innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser i forkant av timen.
+   * ${FirstName}, du har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
    */
   spesialistInnkallingsbrev_EmailMessage_Body_Self: string;
   /**
@@ -17345,11 +17392,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   spesialistInnkallingsbrev_EmailMessage_Subject_Self: string;
   /**
-   * ${FirstName} har fått et nytt innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser i forkant av timen.
+   * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
    */
   spesialistInnkallingsbrev_TextMessage_Body_Representation: string;
   /**
-   * ${FirstName}, du har fått et nytt innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser i forkant av timen.
+   * ${FirstName}, du har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
    */
   spesialistInnkallingsbrev_TextMessage_Body_Self: string;
   /**
