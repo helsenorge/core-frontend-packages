@@ -141,66 +141,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    */
   headerMenuSearchSubmit: string;
   /**
-   * /logg-over-bruk
-   */
-  headerMenuProfileLinksLoggOverBrukV2Url: string;
-  /**
-   * Kontaktinformasjon
-   */
-  headerMenuProfileLinksKontaktinformasjonTitle: string;
-  /**
-   * /kontaktinformasjon
-   */
-  headerMenuProfileLinksKontaktinformasjonURL: string;
-  /**
-   * Det oppstod en feil ved henting av data om innlogget bruker.
-   */
-  errorInnloggetBruker: string;
-  /**
-   * Det oppstod en feil ved henting av fullmakter.
-   */
-  errorFullmakter: string;
-  /**
-   * Det oppstod en feil da du valgte denne personen.
-   */
-  errorValgtPerson: string;
-  /**
-   * Det oppstod en feil ved henting av brukeren.
-   */
-  errorHentBruker: string;
-  /**
-   * Det oppstod en feil ved henting av meldinger og/eller hendelser.
-   */
-  errorMeldinger: string;
-  /**
-   * Det oppstod en feil ved henting av hendelser.
-   */
-  errorHendelser: string;
-  /**
-   * Det oppstod en feil ved henting av globalmenyen.
-   */
-  errorGlobalMeny: string;
-  /**
-   * Det oppstod en feil ved henting av representasjoner.
-   */
-  errorRepresentasjoner: string;
-  /**
-   * Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href="https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no " target="_blank">Les mer om foreldrerepresentasjon</a>.
-   */
-  headerMenuProfileNotificationPanelBarn16Plus: string;
-  /**
-   * Barn som ikke er registrert på samme folkeregistrerte adresse som sine foreldre vises ikke på Helsenorge. <a href="https://helsenorge.no/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no " target="_blank">Les mer om foreldrerepresentasjon</a>.
-   */
-  headerMenuProfileNotificationPanelBarnAnnenAdresse: string;
-  /**
-   * Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.
-   */
-  personvelgerIngress: string;
-  /**
-   * Hvem sine helseopplysninger vil du se?
-   */
-  personvelgerHeader: string;
-  /**
    * Hopp til innholdet
    */
   hoppTilInnholdet: string;
@@ -248,6 +188,58 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    * Er du der fortsatt?
    */
   lightbox_Inactivity_Title: string;
+  /**
+   * /logg-over-bruk
+   */
+  headerMenuProfileLinksLoggOverBrukV2Url: string;
+  /**
+   * Kontaktinformasjon
+   */
+  headerMenuProfileLinksKontaktinformasjonTitle: string;
+  /**
+   * /kontaktinformasjon
+   */
+  headerMenuProfileLinksKontaktinformasjonURL: string;
+  /**
+   * Det oppstod en feil ved henting av data om innlogget bruker.
+   */
+  errorInnloggetBruker: string;
+  /**
+   * Det oppstod en feil ved henting av fullmakter.
+   */
+  errorFullmakter: string;
+  /**
+   * Det oppstod en feil da du valgte denne personen.
+   */
+  errorValgtPerson: string;
+  /**
+   * Det oppstod en feil ved henting av brukeren.
+   */
+  errorHentBruker: string;
+  /**
+   * Det oppstod en feil ved henting av meldinger og/eller hendelser.
+   */
+  errorMeldinger: string;
+  /**
+   * Det oppstod en feil ved henting av hendelser.
+   */
+  errorHendelser: string;
+  /**
+   * Det oppstod en feil ved henting av globalmenyen.
+   */
+  errorGlobalMeny: string;
+  /**
+   * Det oppstod en feil ved henting av representasjoner.
+   */
+  errorRepresentasjoner: string;
+  /**
+   * Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.
+   */
+  personvelgerIngress: string;
+  /**
+   * Hvem sine helseopplysninger vil du se?
+   */
+  personvelgerHeader: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = {
