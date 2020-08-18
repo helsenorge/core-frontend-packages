@@ -4550,7 +4550,9 @@
     "pdfCompatibilityPreview": "Se forhåndsvisning",
     "documentIsRestricted": "Unntatt fra visning på nett",
     "xDS_LokasjonFeil_HN": "Helse Nord",
-    "tilgangsloggBakgrunnForInnsynClinicalCare": "Her kommer tekst for: Clinical care provision to an individual subject of care",
+    "tilgangsloggBakgrunnForInnsynClinicalCare": "Her kommer oversatt tekst for: Clinical care provision to an individual subject of care",
+    "tilgangsloggBakgrunnForInnsynHealthService": "Her kommer oversatt tekst for: Health service management and quality assurance",
+    "tilgangsloggBakgrunnForInnsynEmergencyCare": "Her kommer oversatt tekst for: Emergency care provision to an individual subject of care",
     "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS"
   },
   "HNMinHelsePasientreiserJS": { 

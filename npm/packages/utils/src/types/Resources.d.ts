@@ -18192,9 +18192,17 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_HN: string;
   /** 
-  * Her kommer tekst for: Clinical care provision to an individual subject of care
+  * Her kommer oversatt tekst for: Clinical care provision to an individual subject of care
   */
   tilgangsloggBakgrunnForInnsynClinicalCare: string;
+  /** 
+  * Her kommer oversatt tekst for: Health service management and quality assurance
+  */
+  tilgangsloggBakgrunnForInnsynHealthService: string;
+  /** 
+  * Her kommer oversatt tekst for: Emergency care provision to an individual subject of care
+  */
+  tilgangsloggBakgrunnForInnsynEmergencyCare: string;
   /** 
   * Lovisenberg Diakonale Sykehus AS
   */
