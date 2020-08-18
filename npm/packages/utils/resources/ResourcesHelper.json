@@ -886,6 +886,14 @@
     "page_Resepter_Service_Name": "Reseptoversikt",
     "page_Verktoy_Desc": "Verktøy kan være et nettkurs, app eller video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang til å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.",
     "page_Verktoy_Title": "Verktøy",
+    "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"fullmakt\">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>",
+    "page_feilmelding_link_text": "Gå til min helse",
+    "page_HendelsesLogg_Title": "Logg over bruk",
+    "page_NotAccessToService_Link_Text": "Dersom du ønsker, kan du <a class=\"Page_NotAccessToService_Link_Text\" href=\"/personverninnstillinger/samtykker/velg\">forandre på samtykket ditt.</a>",
+    "page_feilmelding_title": "Noe gikk dessverre galt",
+    "page_feilmelding_description": "Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.",
+    "page_Provesvar_NavigateBackLinkURL": "/provesvar",
+    "page_Provesvar_NavigateBackLinkTitle": "Tilbake til Prøvesvar",
     "page_Provesvar_Title": "Prøvesvar",
     "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus.",
     "page_Innboks_Title": "Innboks",
@@ -893,14 +901,7 @@
     "page_Samvalg_NavigateBackLinkURL": "{HelsenorgeUrl}/samvalg",
     "page_Kontaktinformasjon_Title": "Kontaktinformasjon",
     "page_Kontaktinformasjon_Description": "Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.",
-    "page_feilmelding_title": "Noe gikk dessverre galt",
-    "page_feilmelding_description": "Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.",
-    "page_Provesvar_NavigateBackLinkURL": "/provesvar",
-    "page_Provesvar_NavigateBackLinkTitle": "Tilbake til Prøvesvar",
-    "page_NotAccessToService_Link_Text": "Dersom du ønsker, kan du <a class=\"Page_NotAccessToService_Link_Text\" href=\"/personverninnstillinger/samtykker/velg\">forandre på samtykket ditt.</a>",
-    "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"fullmakt\">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>",
-    "page_feilmelding_link_text": "Gå til min helse",
-    "page_HendelsesLogg_Title": "Logg over bruk"
+    "page_Fullmakt_Title": "Fullmakter"
   },
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
@@ -1989,15 +1990,6 @@
     "commonBestillTimeHelsetilbudIngenBehandlereInfo": "Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.",
     "helsetilbudBestillTime": "Bestill time",
     "bookingEmptyTextHelsetilbud": "Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her.",
-    "appointmentDetailsCancellationReasonService": "Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.",
-    "appointmentDetailsCancellationReasonAway": "Avtalen ble avlyst fordi ingen var hjemme.",
-    "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
-    "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger.",
-    "appointmentVideoTitle": "Videotime",
-    "appointmentDetailsSpecialistVideoTekst": "Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.",
-    "appointmentDetailsSpecialistVideoButtonText": "Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.",
-    "appointmentDetailsSpecialistVideoHeader": "Dette er en videotime",
-    "appointmentBestillTime": "Bestill time",
     "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?",
     "appointmentCancelHelsestasjonTimeMessageLabel": "Årsak til avbestilling",
     "appointmentCancelHelsestasjonHeader": "Avbestill time",
@@ -2011,7 +2003,16 @@
     "appointmentDetailsTypeGroup": "Gruppetime",
     "kommunalHelsetilbudInfoLabel": "Informasjon fra kommunen",
     "kommunalHelsetilbudHjemmesideLabel": "Hjemmeside",
-    "kommunalHelsetilbudKontaktmuligheterLabel": "Kontaktmuligheter"
+    "kommunalHelsetilbudKontaktmuligheterLabel": "Kontaktmuligheter",
+    "appointmentVideoTitle": "Videotime",
+    "appointmentDetailsSpecialistVideoTekst": "Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.",
+    "appointmentDetailsSpecialistVideoButtonText": "Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.",
+    "appointmentDetailsSpecialistVideoHeader": "Dette er en videotime",
+    "appointmentBestillTime": "Bestill time",
+    "appointmentDetailsCancellationReasonService": "Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.",
+    "appointmentDetailsCancellationReasonAway": "Avtalen ble avlyst fordi ingen var hjemme.",
+    "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
+    "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger."
   },
   "HNMinHelseDialog": { 
     "journalAccess_EmneSporsmal": "Kopi av pasientjournal",
@@ -3137,9 +3138,9 @@
     "page_SykdomOgKritiskInfo_Action_Delete": "Slett",
     "page_SykdomOgKritiskInfo_Update_Year_Error": "Årstallet er ikke gyldig",
     "hjelpekontekst_sykdomogkritiskinfo": "{\"defaulttekst_overskrift\":\"Om sykdom og kritisk informasjon\",\"defaulttekst_brodtekst\":\"<p>Her vises helseopplysninger som helsepersonell skal kjenne til ved undersøkelser og behandling.</p>\\n\\n<h3>Sykdomshistorikk</h3>\\n<p>Her kan du selv legge inn sykdommer eller helsetilstander som du har eller har hatt, og som du ønsker helsepersonell skal vite om når du mottar behandling.</p>\\n\\n<h3>Kritisk informasjon</h3>\\n<p>Kritisk informasjon er informasjon om din helse som de som behandler deg trenger for å gi rask og riktig helsehjelp.</p>\\n<p>Kritisk informasjon er informasjon som lege, og i noen tilfeller sykepleier eller psykolog, må registrere for deg i din kjernejournal.</p>\\n\\n<p><a href=\\\"https://helsenorge.no/kjernejournal/kritisk-informasjon-i-kjernejournal\\\">Her kan du lese mer om Sykdom og kritisk informasjon</a>.</p>\"}",
+    "page_logg_tableCaption": "Logg over bruk",
     "page_SykdomOgKritiskInfo_Table_Caption": "Tabell som viser sykdomshistorikk",
-    "page_Besokshistorikk_Table_Caption": "Tabell som viser besøkshistorikk",
-    "page_logg_tableCaption": "Logg over bruk"
+    "page_Besokshistorikk_Table_Caption": "Tabell som viser besøkshistorikk"
   },
   "HNMinHelseKJStrings": { 
     "besokshistorikk_ReportError_Error_Title": "Meldingen ble ikke sendt.",
@@ -4550,10 +4551,10 @@
     "pdfCompatibilityPreview": "Se forhåndsvisning",
     "documentIsRestricted": "Unntatt fra visning på nett",
     "xDS_LokasjonFeil_HN": "Helse Nord",
+    "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS",
     "tilgangsloggBakgrunnForInnsynClinicalCare": "Her kommer oversatt tekst for: Clinical care provision to an individual subject of care",
     "tilgangsloggBakgrunnForInnsynHealthService": "Her kommer oversatt tekst for: Health service management and quality assurance",
-    "tilgangsloggBakgrunnForInnsynEmergencyCare": "Her kommer oversatt tekst for: Emergency care provision to an individual subject of care",
-    "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS"
+    "tilgangsloggBakgrunnForInnsynEmergencyCare": "Her kommer oversatt tekst for: Emergency care provision to an individual subject of care"
   },
   "HNMinHelsePasientreiserJS": { 
     "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?",
@@ -6223,9 +6224,9 @@
     "error_FeatureNotSupported_Title": "Funksjon ikke støttet"
   },
   "HNMinHelsePersonvernStrings": { 
-    "page_HendelsesLogg_38": "Innsyn i Smittestopp",
     "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "page_HendelsesLogg_39": "Prøvesvar",
+    "page_HendelsesLogg_38": "Innsyn i Smittestopp",
     "organisasjonsnavn_fullmakt": "Helsenorge",
     "page_foreldresamtykke_consentStatusText": "Samtykke gitt av {0} {1}.",
     "hjelpetrigger_foreldresamtykke": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Foreldreinitiert tilgang\",\"seksjonstekst_brodtekst\":\"<p>Du som forelder med foreldreansvar og daglig omsorg for et barn mellom 12 og 16 år har mulighet til å gi barnet ditt tilgang til selv å logge inn på helsenorge.no. For å gjøre det må du samtykke til dette på denne siden.  Tjenester som blir tilgjengelig for barnet er henvisninger, timeavtaler, helsekontakter og resepter. Det vil også være mulig å sende og motta meldinger. Det vil ikke være mulig for barnet å avbestille eller endre time, og heller ikke fornye resept. Når det blir tilgjengelig ytterligere tjenester for barn mellom 12-16 år, vil du bli varslet om dette.</p><p>Forelderen som har samtykket til å gi barnet egen tilgang, kan når som helst trekke dette samtykke tilbake. Dette innebærer at barnet ikke lenger kan logge inn og benytte tjenester på helsenorge.no.</p><p>Ungdom som har fylt 16 kan logge inn i helsenorge.no uten et slikt samtykke fra en forelder.</p>\"}",
