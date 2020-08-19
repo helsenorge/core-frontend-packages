@@ -10611,6 +10611,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Navn
   */
   gammelt_navn: string;
+  /** 
+  * Skjemaet er fullført og lagret i Dokumenter
+  */
+  lightbox_til_deling_title: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
