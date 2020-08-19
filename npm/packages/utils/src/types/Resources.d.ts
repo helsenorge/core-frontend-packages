@@ -3182,10 +3182,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_PrivacySettings_Title: string;
   /**
-   * Fullmakter
-   */
-  page_Fullmakter_Title: string;
-  /**
    * Forside
    */
   page_Start_Title: string;
@@ -3514,6 +3510,38 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_Verktoy_Title: string;
   /**
+   * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>
+   */
+  page_AskForAccessToService_Link_Text: string;
+  /**
+   * Gå til min helse
+   */
+  page_feilmelding_link_text: string;
+  /**
+   * Logg over bruk
+   */
+  page_HendelsesLogg_Title: string;
+  /**
+   * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
+   */
+  page_NotAccessToService_Link_Text: string;
+  /**
+   * Noe gikk dessverre galt
+   */
+  page_feilmelding_title: string;
+  /**
+   * Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.
+   */
+  page_feilmelding_description: string;
+  /**
+   * /provesvar
+   */
+  page_Provesvar_NavigateBackLinkURL: string;
+  /**
+   * Tilbake til Prøvesvar
+   */
+  page_Provesvar_NavigateBackLinkTitle: string;
+  /**
    * Prøvesvar
    */
   page_Provesvar_Title: string;
@@ -3542,37 +3570,13 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_Kontaktinformasjon_Description: string;
   /**
-   * Noe gikk dessverre galt
+   * Fullmakter
    */
-  page_feilmelding_title: string;
+  page_Fullmakt_Title: string;
   /**
-   * Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.
+   * <p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
    */
-  page_feilmelding_description: string;
-  /**
-   * /provesvar
-   */
-  page_Provesvar_NavigateBackLinkURL: string;
-  /**
-   * Tilbake til Prøvesvar
-   */
-  page_Provesvar_NavigateBackLinkTitle: string;
-  /**
-   * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
-   */
-  page_NotAccessToService_Link_Text: string;
-  /**
-   * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>
-   */
-  page_AskForAccessToService_Link_Text: string;
-  /**
-   * Gå til min helse
-   */
-  page_feilmelding_link_text: string;
-  /**
-   * Logg over bruk
-   */
-  page_HendelsesLogg_Title: string;
+  page_Fullmakt_Description: string;
 };
 
 export type HNMinHelseDialogGPStrings = {
@@ -7936,42 +7940,6 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   bookingEmptyTextHelsetilbud: string;
   /**
-   * Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.
-   */
-  appointmentDetailsCancellationReasonService: string;
-  /**
-   * Avtalen ble avlyst fordi ingen var hjemme.
-   */
-  appointmentDetailsCancellationReasonAway: string;
-  /**
-   * Avtalen ble avlyst av innbygger.
-   */
-  appointmentDetailsCancellationReasonInhabitant: string;
-  /**
-   * Avtalen ble avlyst av person med fullmakt for innbygger.
-   */
-  appointmentDetailsCancellationReasonProxy: string;
-  /**
-   * Videotime
-   */
-  appointmentVideoTitle: string;
-  /**
-   * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
-   */
-  appointmentDetailsSpecialistVideoTekst: string;
-  /**
-   * Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
-   */
-  appointmentDetailsSpecialistVideoButtonText: string;
-  /**
-   * Dette er en videotime
-   */
-  appointmentDetailsSpecialistVideoHeader: string;
-  /**
-   * Bestill time
-   */
-  appointmentBestillTime: string;
-  /**
    * Er du sikker på at du vil avbestille?
    */
   appointmentCancelHelsestasjonDescription: string;
@@ -8027,6 +7995,42 @@ behandlingsstedet ved eventuelle spørsmål.
    * Kontaktmuligheter
    */
   kommunalHelsetilbudKontaktmuligheterLabel: string;
+  /**
+   * Videotime
+   */
+  appointmentVideoTitle: string;
+  /**
+   * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
+   */
+  appointmentDetailsSpecialistVideoTekst: string;
+  /**
+   * Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
+   */
+  appointmentDetailsSpecialistVideoButtonText: string;
+  /**
+   * Dette er en videotime
+   */
+  appointmentDetailsSpecialistVideoHeader: string;
+  /**
+   * Bestill time
+   */
+  appointmentBestillTime: string;
+  /**
+   * Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.
+   */
+  appointmentDetailsCancellationReasonService: string;
+  /**
+   * Avtalen ble avlyst fordi ingen var hjemme.
+   */
+  appointmentDetailsCancellationReasonAway: string;
+  /**
+   * Avtalen ble avlyst av innbygger.
+   */
+  appointmentDetailsCancellationReasonInhabitant: string;
+  /**
+   * Avtalen ble avlyst av person med fullmakt for innbygger.
+   */
+  appointmentDetailsCancellationReasonProxy: string;
 };
 
 export type HNMinHelseDialog = {
@@ -10607,6 +10611,22 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Navn
    */
   gammelt_navn: string;
+  /**
+   * Skjemaet er fullført og lagret i Dokumenter
+   */
+  lightbox_til_deling_title: string;
+  /**
+   * Om du vil at fastlegen skal kunne se skjemaet når du har legetime, kan du dele det med han eller henne.
+   */
+  lightbox_til_deling_description: string;
+  /**
+   * Gå til Deling
+   */
+  lightbox_til_deling_deleknapp: string;
+  /**
+   * Lukk
+   */
+  lightbox_til_deling_lukkknapp: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
@@ -12503,6 +12523,10 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
    */
   hjelpekontekst_sykdomogkritiskinfo: string;
   /**
+   * Logg over bruk
+   */
+  page_logg_tableCaption: string;
+  /**
    * Tabell som viser sykdomshistorikk
    */
   page_SykdomOgKritiskInfo_Table_Caption: string;
@@ -12510,10 +12534,6 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
    * Tabell som viser besøkshistorikk
    */
   page_Besokshistorikk_Table_Caption: string;
-  /**
-   * Logg over bruk
-   */
-  page_logg_tableCaption: string;
 };
 
 export type HNMinHelseKJStrings = {
@@ -18195,6 +18215,18 @@ export type HNMinHelsePasientjournal = {
    * Lovisenberg Diakonale Sykehus AS
    */
   xDS_LokasjonFeil_LDS: string;
+  /**
+   * Her kommer oversatt tekst for: Clinical care provision to an individual subject of care
+   */
+  tilgangsloggBakgrunnForInnsynClinicalCare: string;
+  /**
+   * Her kommer oversatt tekst for: Health service management and quality assurance
+   */
+  tilgangsloggBakgrunnForInnsynHealthService: string;
+  /**
+   * Her kommer oversatt tekst for: Emergency care provision to an individual subject of care
+   */
+  tilgangsloggBakgrunnForInnsynEmergencyCare: string;
 };
 
 export type HNMinHelsePasientreiserJS = {
@@ -24864,10 +24896,6 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = {
   /**
-   * Innsyn i Smittestopp
-   */
-  page_HendelsesLogg_38: string;
-  /**
    * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
    */
   hjelpekontekst_profilLogg: string;
@@ -24875,6 +24903,10 @@ export type HNMinHelsePersonvernStrings = {
    * Prøvesvar
    */
   page_HendelsesLogg_39: string;
+  /**
+   * Innsyn i Smittestopp
+   */
+  page_HendelsesLogg_38: string;
   /**
    * Helsenorge
    */
@@ -26816,11 +26848,9 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
    * Bruker født
    */
   shared_Text_UserBorn: string;
-  /** 
-  * <p>Her kan du gi andre fullmakt til å bruke tjenester på helsenorge.no på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p>
-<p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p>
-<p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
-  */
+  /**
+   * <p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
+   */
   page_Fullmakt_Description: string;
   /**
    * DD.MM.YYYY
