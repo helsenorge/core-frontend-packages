@@ -3182,10 +3182,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_PrivacySettings_Title: string;
   /** 
-  * Fullmakter
-  */
-  page_Fullmakter_Title: string;
-  /** 
   * Forside
   */
   page_Start_Title: string;
