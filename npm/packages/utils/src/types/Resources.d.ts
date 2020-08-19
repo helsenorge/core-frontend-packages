@@ -10622,7 +10622,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
   /** 
   * Gå til Deling
   */
-  lightbox_til_deling_deleknap: string;
+  lightbox_til_deling_deleknapp: string;
   /** 
   * Lukk
   */
