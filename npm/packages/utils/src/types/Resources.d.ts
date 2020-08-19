@@ -10615,6 +10615,18 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Skjemaet er fullført og lagret i Dokumenter
   */
   lightbox_til_deling_title: string;
+  /** 
+  * Om du vil at fastlegen skal kunne se skjemaet når du har legetime, kan du dele det med han eller henne.
+  */
+  lightbox_til_deling_description: string;
+  /** 
+  * Gå til Deling
+  */
+  lightbox_til_deling_deleknap: string;
+  /** 
+  * Lukk
+  */
+  lightbox_til_deling_lukkknapp: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
