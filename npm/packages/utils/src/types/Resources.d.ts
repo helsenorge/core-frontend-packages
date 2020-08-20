@@ -16700,7 +16700,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelsePrimarhelsetjenesteVideoTime_TextMessage_Body_Self: string;
   /** 
-  * Husk at ${FirstName} har en timeavtale hos ${ActorName} ${DateTime}. ${Lokasjon}Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * Husk at ${FirstName} har en timeavtale hos ${ActorName} ${DateTime}. ${Lokasjon}
   */
   paminnelsePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
