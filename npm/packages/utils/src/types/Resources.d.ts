@@ -28430,6 +28430,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Du må fylle ut dette feltet
   */
   formRequiredErrorMessage: string;
+  /** 
+  * Slett
+  */
+  deleteAttachmentText: string;
 };
 
 export type HNMinHelseSysvak = { 
