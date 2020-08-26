@@ -2547,7 +2547,7 @@ export type HNMinHelseCommonJS = {
   */
   askForMoreServicesPasientjournal: string;
   /** 
-  * Legemidler og vaksiner
+  * Legemidler, vaksiner og prøvesvar
   */
   askForMoreServicesLegemidler: string;
   /** 
