@@ -18231,6 +18231,18 @@ export type HNMinHelsePasientjournal = {
   * For mange dokumenter
   */
   warning_DocumentList_OverTerskelverdi_Title: string;
+  /** 
+  * Du har flere dokumenter enn vi kan vise samtidig. Velg datoer eller dokumenttyper for å begrense utvalget.
+  */
+  warning_DocumentList_OverTerskelverdi_Body: string;
+  /** 
+  * Viser siste {0} dokumenter
+  */
+  warning_DocumentList_OverTerskelverdi_Init_Title: string;
+  /** 
+  * Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg datoer eller dokumenttyper for å se andre dokumenter.
+  */
+  warning_DocumentList_OverTerskelverdi_Init_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
