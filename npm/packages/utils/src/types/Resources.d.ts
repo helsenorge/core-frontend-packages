@@ -18227,6 +18227,10 @@ export type HNMinHelsePasientjournal = {
   * Her kommer oversatt tekst for: Emergency care provision to an individual subject of care
   */
   tilgangsloggBakgrunnForInnsynEmergencyCare: string;
+  /** 
+  * For mange dokumenter
+  */
+  warning_DocumentList_OverTerskelverdi_Title: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 

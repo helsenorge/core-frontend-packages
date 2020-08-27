@@ -4558,7 +4558,8 @@
     "xDS_LokasjonFeil_LDS": "Lovisenberg Diakonale Sykehus AS",
     "tilgangsloggBakgrunnForInnsynClinicalCare": "Her kommer oversatt tekst for: Clinical care provision to an individual subject of care",
     "tilgangsloggBakgrunnForInnsynHealthService": "Her kommer oversatt tekst for: Health service management and quality assurance",
-    "tilgangsloggBakgrunnForInnsynEmergencyCare": "Her kommer oversatt tekst for: Emergency care provision to an individual subject of care"
+    "tilgangsloggBakgrunnForInnsynEmergencyCare": "Her kommer oversatt tekst for: Emergency care provision to an individual subject of care",
+    "warning_DocumentList_OverTerskelverdi_Title": "For mange dokumenter"
   },
   "HNMinHelsePasientreiserJS": { 
     "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?",
