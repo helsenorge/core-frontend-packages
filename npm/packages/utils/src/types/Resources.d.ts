@@ -384,7 +384,7 @@ export type HNCoreFrontendWebForside = {
    */
   savnerDuTjenesterPasientjournal: string;
   /**
-   * Legemidler og vaksiner
+   * Legemidler, vaksiner og prøvesvar
    */
   savnerDuTjenesterLegemidler: string;
   /**
@@ -2547,7 +2547,7 @@ export type HNMinHelseCommonJS = {
    */
   askForMoreServicesPasientjournal: string;
   /**
-   * Legemidler og vaksiner
+   * Legemidler, vaksiner og prøvesvar
    */
   askForMoreServicesLegemidler: string;
   /**
@@ -18227,6 +18227,22 @@ export type HNMinHelsePasientjournal = {
    * Her kommer oversatt tekst for: Emergency care provision to an individual subject of care
    */
   tilgangsloggBakgrunnForInnsynEmergencyCare: string;
+  /**
+   * For mange dokumenter
+   */
+  warning_DocumentList_OverTerskelverdi_Title: string;
+  /**
+   * Du har flere dokumenter enn vi kan vise samtidig. Velg datoer eller dokumenttyper for å begrense utvalget.
+   */
+  warning_DocumentList_OverTerskelverdi_Body: string;
+  /**
+   * Viser siste {0} dokumenter
+   */
+  warning_DocumentList_OverTerskelverdi_Init_Title: string;
+  /**
+   * Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg datoer eller dokumenttyper for å se andre dokumenter.
+   */
+  warning_DocumentList_OverTerskelverdi_Init_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = {
@@ -28430,6 +28446,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    * Du må fylle ut dette feltet
    */
   formRequiredErrorMessage: string;
+  /**
+   * Slett
+   */
+  deleteAttachmentText: string;
 };
 
 export type HNMinHelseSysvak = {
