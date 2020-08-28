@@ -890,7 +890,7 @@
     "page_HendelsesLogg_Title": "Logg over bruk",
     "page_NotAccessToService_Link_Text": "Dersom du ønsker, kan du <a class=\"Page_NotAccessToService_Link_Text\" href=\"/personverninnstillinger/samtykker/velg\">forandre på samtykket ditt.</a>",
     "page_feilmelding_title": "Noe gikk dessverre galt",
-    "page_feilmelding_description": "Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.",
+    "page_feilmelding_description": "Hvis du prøver å logge inn kan du gjøre et nytt forsøk senere.",
     "page_Provesvar_NavigateBackLinkURL": "/provesvar",
     "page_Provesvar_NavigateBackLinkTitle": "Tilbake til Prøvesvar",
     "page_Provesvar_Title": "Prøvesvar",

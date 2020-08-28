@@ -3530,7 +3530,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_feilmelding_title: string;
   /** 
-  * Hvis du prøver å logge inn venligst forsøk igjen ved å gå til Min helse.
+  * Hvis du prøver å logge inn kan du gjøre et nytt forsøk senere.
   */
   page_feilmelding_description: string;
   /** 
