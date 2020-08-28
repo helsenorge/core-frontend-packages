@@ -886,7 +886,7 @@
     "page_Verktoy_Desc": "Verktøy kan være et nettkurs, app eller video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang til å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.",
     "page_Verktoy_Title": "Verktøy",
     "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"fullmakt\">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>",
-    "page_feilmelding_link_text": "Gå til min helse",
+    "page_feilmelding_link_text": "Gå til forsiden",
     "page_HendelsesLogg_Title": "Logg over bruk",
     "page_NotAccessToService_Link_Text": "Dersom du ønsker, kan du <a class=\"Page_NotAccessToService_Link_Text\" href=\"/personverninnstillinger/samtykker/velg\">forandre på samtykket ditt.</a>",
     "page_feilmelding_title": "Noe gikk dessverre galt",
