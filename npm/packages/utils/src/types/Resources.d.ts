@@ -3514,7 +3514,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_AskForAccessToService_Link_Text: string;
   /** 
-  * Gå til min helse
+  * Gå til forsiden
   */
   page_feilmelding_link_text: string;
   /** 
