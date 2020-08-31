@@ -1,17 +1,7 @@
-/*  This file has been converted to TypeScript
- When making changes to this file please make them
- in the file with a .ts or .tsx extension located in
- the Common/src/toolkit folder structure
- Then run the command "npm run build-toolkit" to generate the jsx file
- Please check both files into TFS */
-
 import * as React from 'react';
 import LayoutUtils from '../layout';
 
-export interface LayoutState {
-  oneToTwoColumn?: boolean;
-  twoToThreeColumn?: boolean;
-  threeTwoFourColumn?: boolean;
+export interface State {
   nullToXs?: boolean;
   xsToSm?: boolean;
   smToMd?: boolean;
@@ -20,9 +10,6 @@ export interface LayoutState {
 }
 
 export interface Props {
-  oneToTwoColumn?: boolean;
-  twoToThreeColumn?: boolean;
-  threeTwoFourColumn?: boolean;
   nullToXs?: boolean;
   xsToSm?: boolean;
   smToMd?: boolean;
@@ -31,13 +18,10 @@ export interface Props {
 }
 
 export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Props> | React.FC<T & Props>): React.ComponentClass<T> {
-  class LayoutChangeComponent extends React.Component<T, LayoutState> {
+  class LayoutChangeComponent extends React.Component<T, State> {
     constructor(props: T) {
       super(props);
       this.state = {
-        oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
-        twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
-        threeTwoFourColumn: LayoutUtils.isThreeTwoFourColumn(),
         nullToXs: LayoutUtils.isNullToXs(),
         xsToSm: LayoutUtils.isXsToSm(),
         smToMd: LayoutUtils.isSmToMd(),
@@ -75,9 +59,6 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
 
     updateState(): void {
       this.setState({
-        oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
-        twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
-        threeTwoFourColumn: LayoutUtils.isThreeTwoFourColumn(),
         nullToXs: LayoutUtils.isNullToXs(),
         xsToSm: LayoutUtils.isXsToSm(),
         smToMd: LayoutUtils.isSmToMd(),
@@ -86,14 +67,10 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
       });
     }
 
-    /* eslint-disable @typescript-eslint/no-explicit-any */
     render(): JSX.Element {
       return (
         <COMPONENT
-          {...(this.props as any)}
-          oneToTwoColumn={this.state.oneToTwoColumn}
-          twoToThreeColumn={this.state.twoToThreeColumn}
-          threeTwoFourColumn={this.state.threeTwoFourColumn}
+          {...this.props}
           nullToXs={this.state.nullToXs}
           xsToSm={this.state.xsToSm}
           smToMd={this.state.smToMd}
@@ -102,7 +79,6 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         />
       );
     }
-    /* eslint-enable @typescript-eslint/no-explicit-any */
   }
   return LayoutChangeComponent;
 }
