@@ -3570,6 +3570,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_Kontaktinformasjon_Description: string;
   /**
+   * Samtykkeoppgave
+   */
+  page_Samtykkeoppgave_Title: string;
+  /**
    * Fullmakter
    */
   page_Fullmakt_Title: string;
