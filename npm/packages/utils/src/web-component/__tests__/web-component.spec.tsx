@@ -15,27 +15,6 @@ interface Action {
   type: string;
 }
 
-/*
-
-const unmockedFetch = global.fetch;
-
-
-beforeAll(() => {
-  global.fetch = () => {
-    console.log('>>>>>>>>>>>>FEEEETCH GLOBAL');
-    Promise.resolve({ status: 200, json: () => [] });
-  };
-  window.fetch = () => {
-    console.log('>>>>>>>>>>>>FEEEETCH WINDOW ');
-    Promise.resolve({ status: 200, json: () => [] });
-  };
-});
-
-afterAll(() => {
-  global.fetch = unmockedFetch;
-});
-*/
-
 describe('Gitt at web component skal instansieres', () => {
   describe('Når withstore brukes', () => {
     it('Så skal elementer som er inni kunne bruke context', () => {
