@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import retargetEvents from 'react-shadow-dom-retarget-events';
 import { styleInjector, RegisterWebCompSetup } from './helpers';
+import { err } from './../logger';
 
 /** Registrerer/oppretter ny web-komponent.
  *
@@ -62,14 +63,14 @@ export default function registerWebComp(
       this.mountPoint = document.createElement('div');
 
       if (!templateName) {
-        console.error('finner ikke template name');
+        err('Registrering av webcomp feiler: finner ikke template name');
         return null;
       }
       // TEMPLATE
       // Her settes id til templatet
       const tmpl: HTMLTemplateElement = document.getElementById(templateName) as HTMLTemplateElement;
       if (!tmpl) {
-        console.error(`Kunne ikke finne html <template> med id: ${templateName} sjekk i index-html at <template> er oppgitt med riktig id`);
+        err(`Kunne ikke finne html <template> med id: ${templateName} sjekk i index-html at <template> er oppgitt med riktig id`);
         return null;
       }
       // SHADOW-DOM
