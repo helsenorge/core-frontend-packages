@@ -52,7 +52,6 @@ const WebCompConsumer: React.FC<Props> = (props: Props) => {
           if (tmpl) tmpl.innerHTML += resetcssInlineCss.outerHTML;
         }
 
-        console.log('assets', assets);
         // gets scripts and css from entrypoint
         assets.entrypoints[entryName].map((asset: string) => {
           if (!asset.includes('.map')) {
