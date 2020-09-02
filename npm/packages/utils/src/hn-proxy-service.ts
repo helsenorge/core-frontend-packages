@@ -1,5 +1,5 @@
 import { trackError } from './adobe-analytics';
-import { parseParams, addParams, OperationResponse } from './hn-service';
+import { parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
 import * as DateUtils from './date-utils';
 declare const HN: {
   Rest: {
@@ -50,6 +50,7 @@ export function getErrorFromHTML(html: string) {
   }
   return JSON.parse(everything);
 }
+
 const createQueryString = (params: RequestParamType): string => {
   return (
     '?' +
@@ -135,7 +136,7 @@ export const link = (url: string, proxyName: string, params?: RequestParamType):
   return getProxyEnvironmentPath(proxyName) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
 };
 
-export function download(cmd: string, proxyName: string, params?: any): Promise<OperationResponse> {
+export function download(cmd: string, proxyName: string, params?: ParamsObj): Promise<OperationResponse> {
   let url = getProxyEnvironmentPath(proxyName) + cmd + parseParams(addParams(params), true);
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
@@ -176,7 +177,7 @@ export function download(cmd: string, proxyName: string, params?: any): Promise<
           }
         });
       })
-      .catch(function(responseHtml) {
+      .catch(function(responseHtml: string) {
         if (responseHtml === '401') {
           document.location.reload(true);
         } else {

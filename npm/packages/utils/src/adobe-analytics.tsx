@@ -1,7 +1,8 @@
-/* Utility for tracking using Adobe Analytics.
- *
+import { isEmpty } from './string-utils';
+
+/*
  * Examples:
- * trackSelfService('start', 'Søknad', 'Velg rolle', 1, { pasientreiserApplication: 'Utvidet søknad', pasientreiserOnBehalfOf: 'self'});
+
  * trackSelfServiceIntent('Page title');
  * trackFilters('Filter name', 'usage');
  * trackPagePartner('Helse Nord RHF');
@@ -17,7 +18,7 @@
  * setValueForSelectedUser();
  * trackProsesshjelp('Prosesshjelp' , 'Hjelp' , 'Om Timeavtaler', 'Open' );
  */
-//used 50
+
 interface DigitalData {
   selfService?: SelfService | ConsentSelfService;
   filters?: Filters;
@@ -142,8 +143,15 @@ export type SelfServiceTrackType = 'start' | 'funnel' | 'complete' | 'cancel' | 
 export type ConsentTrackType = 'info' | 'funnel' | 'complete';
 export type FiltersTrackType = 'usage' | 'expand' | 'search' | 'groupExpand';
 
-// For tracking start, funnel and complete.
-export function trackSelfService(trackType: SelfServiceTrackType, name: string, step: string, stepNumber: number, custom?: {}) {
+/**
+ * Spore at bruker har startet, avbrutt, lagret eller fullført en prosess med flere steg.
+ * @param trackType type som styrer selfService
+ * @param name definerer selfServiceName
+ * @param step definerer selfServiceFunnelStep
+ * @param stepNumber definerer selfServiceFunnelStepNumber
+ * @param custom prop object som merges videre på selfService
+ */
+export const trackSelfService = (trackType: SelfServiceTrackType, name: string, step: string, stepNumber: number, custom?: {}): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -174,10 +182,81 @@ export function trackSelfService(trackType: SelfServiceTrackType, name: string, 
 
     _satellite.track(`self service ${trackType}`);
   }
-}
+};
 
-// For tracking intent.
-export function trackSelfServiceIntent(engagementName: string, custom?: {}) {
+/**
+ * Fjerner diverse navn og id fra paths
+ * @param s url som skal renses
+ */
+export const removeNamesAndOtherIds = (s: string): string => {
+  const koordinatorPattern = new RegExp('koordinator/(.+)$');
+  const helsefagligPattern = new RegExp('helsefagligkontakt/(.+)$');
+  const kommunePattern = new RegExp('kommune/(.+)$');
+  const avtalePattern = new RegExp('avtale/((.+)(/)|(.+)$)');
+
+  return s
+    .replace(koordinatorPattern, 'koordinator')
+    .replace(helsefagligPattern, 'helsefagligkontakt')
+    .replace(kommunePattern, 'kommune')
+    .replace(avtalePattern, 'avtale/{id}/');
+};
+
+/**
+ * For tracking registerName on diffrent Helseregistre pages
+ * @param path array of strenger som skal registreres
+ */
+export const getRegisterName = (path: string[]): string => {
+  switch (path.length > 0) {
+    case path[0] === 'helseregistre':
+    case path[0] === 'mfr':
+    case path[0] === 'sysvak':
+    case path[0] === 'visregisterinnsyn':
+    case path[0] === 'reseptformidleren':
+      try {
+        if (document.title.substr(0, 8) === 'Innsyn i') {
+          return document.title.substr(8, document.title.length);
+        } else {
+          return document.title.split('-')[0].trimRight();
+        }
+      } catch (e) {
+        return document.title;
+      }
+  }
+
+  return '';
+};
+
+/**
+ * For tracking contentGrouping
+ * @param digitalData digitalData med informasjon om Page
+ * @param path array of strenger som skal registreres
+ */
+export const getContentGrouping = (digitalData: DigitalData | undefined, path: string[]): string => {
+  let group = digitalData && digitalData.page && digitalData.page.category ? digitalData.page.category.contentGrouping : '';
+
+  if (path.length > 0) {
+    switch (true) {
+      case path.length > 1 && path[1] === 'avtale':
+        group = 'timeavtaler';
+        return group;
+      case path[0] === 'bestill-time':
+      case path[0] === 'e-konsultasjon':
+      case path[0] === 'forny-resept':
+      case path[0] === 'kontakt-legekontoret':
+        group = 'Fastlegen';
+        return group;
+
+      default:
+        group = path[0] ? path[0] : '';
+        return group;
+    }
+  } else {
+    return '';
+  }
+};
+
+// For tracking intent. - muligens deprecated
+export const trackSelfServiceIntent = (engagementName: string, custom?: {}): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -190,9 +269,14 @@ export function trackSelfServiceIntent(engagementName: string, custom?: {}) {
 
     _satellite.track(`self service intent`);
   }
-}
+};
 
-export function trackUrlChange(url: string, pathName: string) {
+/**
+ * Spor at URL har endret seg (unødvendig om man bruker Router.)
+ * @param url Utgangspunkt som brukes for å definere pageURL
+ * @param pathName Utgangspunkt som brukes for å definere pageName
+ */
+export const trackUrlChange = (url: string, pathName: string): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -227,53 +311,7 @@ export function trackUrlChange(url: string, pathName: string) {
   if (_satellite && _satellite.track) {
     _satellite.track('lightbox');
   }
-}
-
-// For tracking contentGrouping
-function getContentGrouping(digitalData: DigitalData | undefined, path: string[]): string {
-  let group = digitalData && digitalData.page && digitalData.page.category ? digitalData.page.category.contentGrouping : '';
-
-  if (path.length > 0) {
-    switch (true) {
-      case path.length > 1 && path[1] === 'avtale':
-        group = 'timeavtaler';
-        return group;
-      case path[0] === 'bestill-time':
-      case path[0] === 'e-konsultasjon':
-      case path[0] === 'forny-resept':
-      case path[0] === 'kontakt-legekontoret':
-        group = 'Fastlegen';
-        return group;
-
-      default:
-        group = path[0] ? path[0] : '';
-        return group;
-    }
-  } else {
-    return '';
-  }
-}
-
-// For tracking registerName on diffrent Helseregistre pages
-function getRegisterName(path: string[]): string {
-  switch (path.length > 0) {
-    case path[0] === 'helseregistre':
-    case path[0] === 'mfr':
-    case path[0] === 'sysvak':
-    case path[0] === 'visregisterinnsyn':
-    case path[0] === 'reseptformidleren':
-      try {
-        if (document.title.substr(0, 8) === 'Innsyn i') {
-          return document.title.substr(8, document.title.length);
-        } else {
-          return document.title.split('-')[0].trimRight();
-        }
-      } catch (e) {
-        return document.title;
-      }
-  }
-  return '';
-}
+};
 
 export function trackConsent(
   consentTrackType: ConsentTrackType,
@@ -313,23 +351,6 @@ export function trackConsent(
       _satellite.track(trackText);
     }
   }
-}
-
-function isEmpty(s: string) {
-  return s === '' || s === null || s === undefined;
-}
-
-export function removeNamesAndOtherIds(s: string) {
-  const koordinatorPattern = new RegExp('koordinator/(.+)$');
-  const helsefagligPattern = new RegExp('helsefagligkontakt/(.+)$');
-  const kommunePattern = new RegExp('kommune/(.+)$');
-  const avtalePattern = new RegExp('avtale/((.+)(/)|(.+)$)');
-
-  return s
-    .replace(koordinatorPattern, 'koordinator')
-    .replace(helsefagligPattern, 'helsefagligkontakt')
-    .replace(kommunePattern, 'kommune')
-    .replace(avtalePattern, 'avtale/{id}/');
 }
 
 // For tracking filters

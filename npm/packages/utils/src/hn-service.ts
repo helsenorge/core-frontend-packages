@@ -256,7 +256,15 @@ export function parseParams(params: any, withQuery?: boolean): string {
   return '';
 }
 
-export function addParams(params: any) {
+export interface ParamsObj {
+  HNAnonymousHash?: string;
+  HNAuthenticatedHash?: string;
+  HNTjeneste?: string;
+  HNTimeStamp?: string;
+  'X-hn-hendelselogg'?: string;
+}
+export function addParams(incomingParams: ParamsObj | undefined): ParamsObj {
+  const params = incomingParams ? incomingParams : {};
   params['HNAnonymousHash'] = HN.Rest.__AnonymousHash__;
   params['HNAuthenticatedHash'] = HN.Rest.__AuthenticatedHash__;
   params['HNTjeneste'] = HN.Rest.__TjenesteType__;
