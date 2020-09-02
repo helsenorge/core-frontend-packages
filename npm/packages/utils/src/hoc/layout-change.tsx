@@ -28,9 +28,6 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         mdToLg: LayoutUtils.isMdToLg(),
         lgToXl: LayoutUtils.isLgToXl(),
       };
-      this.processResizeEvent = this.processResizeEvent.bind(this);
-      this.processLayoutChangeEvent = this.processLayoutChangeEvent.bind(this);
-      this.processOrientationEvent = this.processOrientationEvent.bind(this);
     }
 
     componentDidMount(): void {
@@ -45,17 +42,17 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
       window.removeEventListener('orientationchange', this.processOrientationEvent);
     }
 
-    processResizeEvent(): void {
+    processResizeEvent = (): void => {
       this.updateState();
-    }
+    };
 
-    processLayoutChangeEvent(): void {
+    processLayoutChangeEvent = (): void => {
       this.updateState();
-    }
+    };
 
-    processOrientationEvent(): void {
+    processOrientationEvent = (): void => {
       this.updateState();
-    }
+    };
 
     updateState(): void {
       this.setState({
