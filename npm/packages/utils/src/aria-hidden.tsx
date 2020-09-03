@@ -21,7 +21,6 @@
  * until it reaches the body element.
  *
  */
-//used 2 times
 
 export interface Siblings {
   allSiblings: Array<Element>;
@@ -44,7 +43,7 @@ export default {
     // Return siblings so aria-hiddens can be restored later
     return siblings;
   },
-  resetAriaHidden(siblings: Siblings): void {
+  resetAriaHidden(siblings: Siblings): Siblings | void {
     if (siblings) {
       siblings.allSiblings.forEach(sibling => {
         sibling.removeAttribute('aria-hidden');
@@ -52,6 +51,8 @@ export default {
       siblings.ariaHiddens.forEach(sibling => {
         siblings.allSiblings[sibling.elIndex].setAttribute('aria-hidden', sibling.val);
       });
+
+      return siblings;
     }
   },
   _getSiblings(domEl: Element | null): Siblings {
