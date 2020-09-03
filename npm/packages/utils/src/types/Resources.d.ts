@@ -18232,7 +18232,7 @@ export type HNMinHelsePasientjournal = {
   */
   tilgangsloggBakgrunnForInnsynEmergencyCare: string;
   /** 
-  * For mange dokumenter
+  * Dine filtervalg returnerer for mange dokumenter
   */
   warning_DocumentList_OverTerskelverdi_Title: string;
   /** 
