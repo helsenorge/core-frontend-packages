@@ -19,6 +19,17 @@ Object.defineProperty(window, 'matchMedia', {
   })),
 });
 
+Object.defineProperty(window, 'getComputedStyle', {
+  writable: true,
+  value: jest.fn().mockImplementation(() => ({
+    matches: true,
+    getPropertyValue: jest.fn(),
+    removeEventListener: jest.fn(),
+  })),
+});
+
+// Not implemented: window.computedStyle(elt, pseudoElt)
+
 describe('HOC utils', () => {
   describe('Gitt at en komponent wrappes i mount HOC', () => {
     describe('Når den instansieres', () => {

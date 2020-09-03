@@ -16,6 +16,6 @@
     "outDir": "./lib",
     "typeRoots": ["node_modules/@types", "src/types"]
   },
-  "exclude": ["**/__tests__/**", "**/__devonly/**"],
+  "exclude": ["**/__devonly__/**"],
   "include": ["src/**/*.ts", "src/**/*.tsx", "development/index.tsx"]
 }
