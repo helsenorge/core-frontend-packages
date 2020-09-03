@@ -1,8 +1,6 @@
-/// <reference path="../node_modules/@types/node/module.d.ts" />
-
 import { createStore, applyMiddleware, Store, Reducer, Middleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import { crashReporter, debouncer } from './middleware';
+import { crashReporter, debouncer } from './store-middleware';
 import { Window, NodeModule } from './types/dev';
 
 export function configureStoreWithMiddleware(rootReducer: Reducer<{}>, middleware: Middleware[] = []): Store<{}> {
