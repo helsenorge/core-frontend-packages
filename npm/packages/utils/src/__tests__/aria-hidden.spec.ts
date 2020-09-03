@@ -1,5 +1,4 @@
-//import React from 'react';
-import aria, { Siblings } from '../aria-hidden';
+import aria from '../aria-hidden';
 
 describe('Aria-hidden', () => {
   describe('Gitt at to HTMLelements er paa samme nivå på document objektet', () => {
