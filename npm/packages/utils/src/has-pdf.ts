@@ -1,5 +1,3 @@
-import { isMobileUA } from './is-mobile-ua';
-import { isTabletUA } from './is-tablet-ua';
 import { getAssets } from './page';
 import { loadScriptES6 } from './loadscript-utils';
 
@@ -10,15 +8,15 @@ interface PluginDetectInterface {
 declare let PluginDetect: PluginDetectInterface;
 
 export function hasPdf(): boolean {
-  function hasAcrobatInstalled(): ActiveXObject {
-    function getActiveXObject(name: string) {
+  function hasAcrobatInstalled(): ActiveXObject | null {
+    function getActiveXObject(name: string): ActiveXObject | void {
       try {
         return new ActiveXObject(name);
       } catch (e) {
         // Do nothing
       }
     }
-    return getActiveXObject('AcroPDF.PDF') || getActiveXObject('PDF.PdfCtrl');
+    return getActiveXObject('AcroPDF.PDF') || getActiveXObject('PDF.PdfCtrl') || null;
   }
 
   if (navigator.mimeTypes['application/pdf'] || hasAcrobatInstalled()) {
@@ -34,32 +32,6 @@ function isFirefox(): boolean {
 
 function isAndroid(): boolean {
   return navigator.userAgent.toLowerCase().indexOf('android') > -1;
-}
-
-export function handlePdfOpening(pdfUrl: string): Promise<boolean> {
-  const pdfCompatibility: Promise<boolean> = new Promise(function(resolve, reject) {
-    let pdfIncompatible = false;
-    if (isAndroid()) {
-      pdfIncompatible = true;
-    } else if (isMobileUA() || isTabletUA()) {
-      window.open(pdfUrl);
-    } else if (isFirefox()) {
-      isPdfIncompatibleFF(resolve, pdfUrl);
-      return pdfCompatibility;
-    } else if (!hasPdf()) {
-      pdfIncompatible = true;
-    } else {
-      window.open(pdfUrl);
-    }
-    // resolve
-    resolve(pdfIncompatible);
-
-    // reject
-    const err = new Error('Error during handlePdfOpening');
-    reject(err);
-  });
-
-  return pdfCompatibility;
 }
 
 function isPdfIncompatibleFF(resolve: (value?: boolean) => void, pdfUrl: string): void {
@@ -98,4 +70,28 @@ function isPdfIncompatibleFF(resolve: (value?: boolean) => void, pdfUrl: string)
       console.log('fail to load script: ', scriptUrl);
     }
   );
+}
+
+export function handlePdfOpening(pdfUrl: string): Promise<boolean> {
+  const pdfCompatibility: Promise<boolean> = new Promise(function(resolve, reject) {
+    let pdfIncompatible = false;
+    if (isAndroid()) {
+      pdfIncompatible = true;
+    } else if (isFirefox()) {
+      isPdfIncompatibleFF(resolve, pdfUrl);
+      return pdfCompatibility;
+    } else if (!hasPdf()) {
+      pdfIncompatible = true;
+    } else {
+      window.open(pdfUrl);
+    }
+    // resolve
+    resolve(pdfIncompatible);
+
+    // reject
+    const err = new Error('Error during handlePdfOpening');
+    reject(err);
+  });
+
+  return pdfCompatibility;
 }
