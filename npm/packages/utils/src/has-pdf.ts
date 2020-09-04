@@ -1,4 +1,4 @@
-import { getAssets } from './page';
+import { getAssets } from './hn-page';
 import { loadScriptES6 } from './loadscript-utils';
 
 interface PluginDetectInterface {

@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment, { Moment } from 'moment';
 import StringHelper from './string-utils';
 
 export function initialize(): void {
@@ -142,6 +142,69 @@ export function longTimeRange(startInput: moment.MomentInput, endInput?: moment.
 
   return StringHelper.capitalize(range);
 }
+
+/************************************************************/
+/*********************** MOMENT UTILS ***********************/
+/************************************************************/
+/**
+ * Returnerer true hvis datoene er på samme dag
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isSameDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  // Compare least significant, most likely to change units first
+  // Moment's isSame clones moment inputs and is a tad slow
+  return a.date() === b.date() && a.month() === b.month() && a.year() === b.year();
+};
+
+/**
+ * Returnerer true hvis dato a er før dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isBeforeDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  const aYear = a.year();
+  const aMonth = a.month();
+  const bYear = b.year();
+  const bMonth = b.month();
+  const isSameYear = aYear === bYear;
+  const isSameMonth = aMonth === bMonth;
+  if (isSameYear && isSameMonth) return a.date() < b.date();
+  if (isSameYear) return aMonth < bMonth;
+  return aYear < bYear;
+};
+
+/**
+ * Returnerer true hvis dato a er etter dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isAfterDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isBeforeDay(a, b) && !isSameDay(a, b);
+};
+
+/**
+ * Returnerer true hvis dato a er på samme dag eller før dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isInclusivelyBeforeDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isAfterDay(a, b);
+};
+
+/**
+ * Returnerer true hvis dato a er på samme dag eller etter dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isInclusivelyAfterDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isBeforeDay(a, b);
+};
 
 export function isAfterToday(time: moment.MomentInput): boolean {
   const now: moment.Moment = moment();

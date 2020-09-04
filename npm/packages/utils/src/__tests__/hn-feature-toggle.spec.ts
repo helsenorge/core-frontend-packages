@@ -1,4 +1,4 @@
-import getFeatureToggle from '../feature-toggle';
+import getFeatureToggle from '../hn-feature-toggle';
 
 function setupFeature(enabled: boolean, authorized: boolean, featureName?: string): void {
   window.HN = {};
