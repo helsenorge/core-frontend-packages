@@ -1,4 +1,4 @@
-import { isDebug } from '../debug';
+import { isDebug } from '../hn-debug';
 
 describe('Debug', () => {
   describe('Gitt at isDebug kalles', () => {

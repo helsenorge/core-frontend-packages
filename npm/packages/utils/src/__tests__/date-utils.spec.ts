@@ -193,51 +193,5 @@ describe('Date-utils', () => {
         expect(dateAlike).toBeTruthy;
       });
     });
-
-    describe('Når isSameDay blir kalt', () => {
-      it('Så returnerer den true hvis datoene er på samme dag og false hvis ikke', () => {
-        const a = moment('22.05.2020', 'DD.MM.YYYY');
-        const b = moment('22.05.2020', 'DD.MM.YYYY');
-        const c = moment('23.05.2020', 'DD.MM.YYYY');
-
-        expect(dateUtilsFunctions.isSameDay(a, b)).toBeTruthy();
-        expect(dateUtilsFunctions.isSameDay(a, c)).toBeFalsy();
-      });
-    });
-
-    describe('Når isBeforeDay blir kalt', () => {
-      it('Så returnerer den true hvis den ene datoen er før den andre og false hvis ikke', () => {
-        const a = moment('22.05.2020', 'DD.MM.YYYY');
-        const b = moment('22.05.2020', 'DD.MM.YYYY');
-        const c = moment('23.05.2020', 'DD.MM.YYYY');
-
-        expect(dateUtilsFunctions.isBeforeDay(a, b)).toBeFalsy();
-        expect(dateUtilsFunctions.isBeforeDay(a, c)).toBeTruthy();
-      });
-    });
-
-    describe('Når isInclusivelyBeforeDay blir kalt', () => {
-      it('Så returnerer den true hvis den ene datoen er på samme dag eller før den andre og false hvis ikke', () => {
-        const a = moment('22.05.2020', 'DD.MM.YYYY');
-        const b = moment('22.05.2020', 'DD.MM.YYYY');
-        const c = moment('23.05.2020', 'DD.MM.YYYY');
-
-        expect(dateUtilsFunctions.isInclusivelyBeforeDay(a, b)).toBeTruthy();
-        expect(dateUtilsFunctions.isInclusivelyBeforeDay(a, c)).toBeTruthy();
-        expect(dateUtilsFunctions.isInclusivelyBeforeDay(c, a)).toBeFalsy();
-      });
-    });
-
-    describe('Når isInclusivelyAfterDay blir kalt', () => {
-      it('Så returnerer den true hvis den ene datoen er på samme dag eller etter den andre og false hvis ikke', () => {
-        const a = moment('22.05.2020', 'DD.MM.YYYY');
-        const b = moment('22.05.2020', 'DD.MM.YYYY');
-        const c = moment('23.05.2020', 'DD.MM.YYYY');
-
-        expect(dateUtilsFunctions.isInclusivelyAfterDay(a, b)).toBeTruthy();
-        expect(dateUtilsFunctions.isInclusivelyAfterDay(a, c)).toBeFalsy();
-        expect(dateUtilsFunctions.isInclusivelyAfterDay(c, a)).toBeTruthy();
-      });
-    });
   });
 });
