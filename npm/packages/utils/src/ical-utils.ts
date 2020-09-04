@@ -1,8 +1,7 @@
-/* eslint-disable  @typescript-eslint/no-var-requires */
+/* eslint-disable-next-line  @typescript-eslint/no-var-requires */
 const ICAL = require('ical.js');
-/* eslint-enable  @typescript-eslint/no-var-requires */
 
-interface Duration {
+export interface Duration {
   weeks: 0;
   days: number;
   hours: number;
@@ -18,17 +17,31 @@ export interface Resources {
   dateHours: string;
 }
 
-export function formatDuration(hours: number, minutes: number) {
+/**
+ * Returnerer en ICAL duration string basert på antall timer og minutter
+ * @param hours antall timer
+ * @param hours antall minuter
+ */
+export const formatDuration = (hours: number, minutes: number): string => {
   return `P${hours > 0 ? `${hours}H` : '0'}${minutes > 0 ? `${minutes}M` : '0M'}`;
-}
+};
 
-export function toDuration(hrs: number, min: number) {
+/**
+ * Returnerer en ICAL duration string basert på antall timer og  minutter - med rundet timer og minutter
+ * @param hours antall timer
+ * @param hours antall minuter
+ */
+export const toDuration = (hrs: number, min: number): string => {
   const hours = hrs + Math.floor(min / 60);
   const minutes = min % 60;
   return formatDuration(hours, minutes);
-}
+};
 
-export function arrangeDuration(duration: Duration): Duration {
+/**
+ * Returnerer en ICAL duration object med rundet timer og minutter
+ * @param duration ICAL duration object { weeks: 0; days: number; hours: number; minutes: number; seconds: number; isNegative: boolean;}
+ */
+export const arrangeDuration = (duration: Duration): Duration => {
   return {
     weeks: duration.weeks,
     days: duration.days,
@@ -37,9 +50,14 @@ export function arrangeDuration(duration: Duration): Duration {
     seconds: duration.seconds,
     isNegative: duration.isNegative,
   };
-}
+};
 
-export function duration(aStr: string, resources: Resources) {
+/**
+ * Returnerer en konkatenert string basert på en ICAL duration string og tekster
+ * @param aStr ICAL duration string
+ * @param resources tekster { dateHrs: string; dateMin: string; dateHour: string; dateHours: string; }
+ */
+export const duration = (aStr: string, resources: Resources): string | void => {
   if (aStr && resources) {
     const duration: Duration = arrangeDuration(ICAL.Duration.fromString(aStr));
     if (duration.hours && duration.minutes) {
@@ -53,12 +71,17 @@ export function duration(aStr: string, resources: Resources) {
       return `${duration.minutes} ${resources.dateMin}`;
     }
   }
-}
+};
 
-export function combineDurations(dur1: string, dur2: string) {
+/**
+ * Returnerer summen at to ICAL duration strings
+ * @param dur1 ICAL duration string
+ * @param dur2 ICAL duration string
+ */
+export const combineDurations = (dur1: string, dur2: string): string => {
   const duration1: Duration = ICAL.Duration.fromString(dur1);
   const duration2: Duration = ICAL.Duration.fromString(dur2);
   const combinedHours = duration1.hours + duration2.hours;
   const combinedMinutes = duration1.minutes + duration2.minutes;
   return toDuration(combinedHours, combinedMinutes);
-}
+};
