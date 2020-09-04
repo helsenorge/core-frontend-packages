@@ -1,13 +1,5 @@
 import moment, { Moment } from 'moment';
 
-/*
- * Get formatted date string
- * 1: date string
- * 2: resources containing month names
- */
-
-type ISO8601 = string;
-
 export interface ResourcesWithMonthNames {
   monthNameApril: string;
   monthNameAugust: string;
@@ -22,6 +14,8 @@ export interface ResourcesWithMonthNames {
   monthNameOctober: string;
   monthNameSeptember: string;
 }
+
+type ISO8601 = string;
 
 /**
  * Returnerer dagens dato i yyyy--mm-dd format (minus 1 for month (array format))
@@ -83,7 +77,7 @@ export const serverTimezoneOffset = (date = new Date()): number => {
 };
 
 /**
- * Returnerer tidsonenavhengig av offset til UTC
+ * Returnerer tidsonen avhengig av offset til UTC
  * @param local dagens dato i ISO8601 format
  */
 export const addServerTimezone = (local: ISO8601): string => {
@@ -107,25 +101,44 @@ export const toServerDate = (date: Date | ISO8601): Date => {
   return dateObject;
 };
 
+/**
+ * Returnerer dato til ISO format
+ * @param date i Javascript Date format
+ */
 export const toLocalISOString = (date: Date): string => {
   const adjusted = new Date(date).getTime() - serverTimezoneOffset();
   const isoDate = new Date(adjusted).toISOString();
   return isoDate.substring(0, isoDate.lastIndexOf('.'));
 };
 
-export function addDifference(target: ISO8601, originalStart: ISO8601, originalStop: ISO8601): ISO8601 {
+/**
+ * Returnerer dato i ISO format med riktig tillegg
+ * @param target i ISO format
+ * @param originalStart i ISO format
+ * @param originalStop i ISO format
+ */
+export const addDifference = (target: ISO8601, originalStart: ISO8601, originalStop: ISO8601): ISO8601 => {
   const diff = new Date(originalStop).getTime() - new Date(originalStart).getTime();
   const end = new Date(addServerTimezone(target)).getTime() + diff;
   const theEnd = new Date(end);
   return toLocalISOString(theEnd);
-}
+};
 
+/**
+ * Returnerer dato i ISO format med Timezone offset
+ * @param date i Javascript Date format
+ */
 export const toLocalISOStringUsingDateTimezoneOffset = (date: Date): string => {
   const adjusted = new Date(date).getTime() - serverTimezoneOffset(date);
   const isoDate = new Date(adjusted).toISOString();
   return isoDate.substring(0, isoDate.lastIndexOf('.'));
 };
 
+/**
+ * Returnerer måned i en string
+ * @param monthNumber tall til ønsket måned (array start med 0)
+ * @param resources objeckt med strenger { monthNameJanuary: '', monthNameFebruary: '', ...}
+ */
 export const getMonthNameFromMonthNumber = (monthNumber: number, resources: ResourcesWithMonthNames): string => {
   let monthName: string | undefined;
   switch (monthNumber) {
@@ -171,11 +184,21 @@ export const getMonthNameFromMonthNumber = (monthNumber: number, resources: Reso
   return monthName ? monthName.toLowerCase() : '';
 };
 
+/**
+ * Returnerer måned i en string
+ * @param date dato i Javascript Date format
+ * @param resources objeckt med strenger { monthNameJanuary: '', monthNameFebruary: '', ...}
+ */
 export const getMonthName = (date: Date, resources: ResourcesWithMonthNames): string => {
   const month: number = date.getMonth();
   return getMonthNameFromMonthNumber(month, resources);
 };
 
+/**
+ * Returnerer dato med måned i en string (eks.: 13. april 2020)
+ * @param dateString dato i string format
+ * @param resources objeckt med strenger { monthNameJanuary: '', monthNameFebruary: '', ...}
+ */
 export const getFormattedDateString = (dateString: string, resources: ResourcesWithMonthNames): string | null => {
   if (dateString === null || dateString === undefined || dateString === '') {
     return null;
@@ -186,10 +209,15 @@ export const getFormattedDateString = (dateString: string, resources: ResourcesW
   return date.getDate() + '. ' + monthName + ' ' + date.getFullYear();
 };
 
-export const padStr = (index: number): string => {
+const padStr = (index: number): string => {
   return index < 10 ? `0${index}` : `${index}`;
 };
 
+/**
+ * Returnerer full dato string (eks.: 13. april 2020)
+ * @param dateString dato i Javascript Dato format, string eller ISO
+ * @param resources objeckt med strenger { monthNameJanuary: '', monthNameFebruary: '', ...}
+ */
 export const dateToString = (date: Date | string | ISO8601, resources: ResourcesWithMonthNames): string => {
   const dateObject = toDate(date);
   const month: number = dateObject.getMonth();
@@ -197,10 +225,25 @@ export const dateToString = (date: Date | string | ISO8601, resources: Resources
   return `${padStr(dateObject.getDate())}. ${monthName} ${dateObject.getFullYear()}`;
 };
 
+/**
+ * Returnerer full time string (00:00)
+ * @param date dato i Javascript Dato format
+ */
 export const timeToString = (date: Date): string => {
   return `${padStr(date.getHours())}:${padStr(date.getMinutes())}`;
 };
 
+/**
+ * Returnerer true hvis datoen er lik .Net Date.MinDate constant
+ * @param date dato i Javascript Dato format eller ISO
+ */
+export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
+  const minDate = toDate('0001-01-01T00:00:00');
+  const input = toDate(date);
+  return minDate.getTime() === input.getTime();
+};
+
+/* deprecated */
 export const beforeToday = (time: ISO8601 | Date): boolean => {
   const input = toDate(time);
   const today = new Date();
@@ -208,12 +251,14 @@ export const beforeToday = (time: ISO8601 | Date): boolean => {
   return input.getTime() < today.getTime();
 };
 
+/* deprecated */
 export const beforeNow = (time: ISO8601 | Date): boolean => {
   const input = toServerDate(time);
   const today = new Date();
   return input.getTime() < today.getTime();
 };
 
+/* deprecated */
 export const afterToday = (time: ISO8601 | Date): boolean => {
   const input = toDate(time);
   const today = new Date();
@@ -222,6 +267,7 @@ export const afterToday = (time: ISO8601 | Date): boolean => {
   return input.getTime() > tomorrow.getTime();
 };
 
+/* deprecated */
 export const isToday = (time: ISO8601 | Date): boolean => {
   const input = toDate(time);
   const today = new Date();
@@ -231,26 +277,26 @@ export const isToday = (time: ISO8601 | Date): boolean => {
   return compare.getTime() === today.getTime();
 };
 
+/* deprecated */
 export const earlierToday = (time: ISO8601 | Date): boolean => {
   return isToday(time) && beforeNow(time);
 };
 
+/* deprecated */
 export const isBefore = (a: ISO8601 | Date, b: ISO8601 | Date): boolean => {
   const earlier = toDate(a);
   const later = toDate(b);
   return earlier.getTime() < later.getTime();
 };
 
-export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
-  // Setup a minDate to mimic .Net Date.MinDate constant.
-  const minDate = toDate('0001-01-01T00:00:00');
-  const input = toDate(date);
-  return minDate.getTime() === input.getTime();
-};
-
 /************************************************************/
 /*********************** MOMENT UTILS ***********************/
 /************************************************************/
+/**
+ * Returnerer true hvis datoene er på samme dag
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
 export const isSameDay = (a: Moment, b: Moment): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   // Compare least significant, most likely to change units first
@@ -258,6 +304,11 @@ export const isSameDay = (a: Moment, b: Moment): boolean => {
   return a.date() === b.date() && a.month() === b.month() && a.year() === b.year();
 };
 
+/**
+ * Returnerer true hvis dato a er før dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
 export const isBeforeDay = (a: Moment, b: Moment): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   const aYear = a.year();
@@ -271,16 +322,32 @@ export const isBeforeDay = (a: Moment, b: Moment): boolean => {
   return aYear < bYear;
 };
 
+/**
+ * Returnerer true hvis dato a er etter dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
 export const isAfterDay = (a: Moment, b: Moment): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   return !isBeforeDay(a, b) && !isSameDay(a, b);
 };
 
-export const isInclusivelyAfterDay = (a: Moment, b: Moment): boolean => {
-  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
-  return !isBeforeDay(a, b);
-};
+/**
+ * Returnerer true hvis dato a er på samme dag eller før dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
 export const isInclusivelyBeforeDay = (a: Moment, b: Moment): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   return !isAfterDay(a, b);
+};
+
+/**
+ * Returnerer true hvis dato a er på samme dag eller etter dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isInclusivelyAfterDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isBeforeDay(a, b);
 };

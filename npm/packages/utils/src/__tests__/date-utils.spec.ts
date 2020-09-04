@@ -1,5 +1,6 @@
 import moment, { Moment } from 'moment';
 import * as dateUtilsFunctions from '../date-utils';
+import { abort } from '../../../framework/src/pending-changes/pending-changes-state';
 /*
 interface ResourcesWithMonthNames {
   monthNameApril: string;
@@ -94,11 +95,165 @@ describe('Date-utils', () => {
       });
     });
 
+    describe('Når toLocalISOString blir kalt', () => {
+      it('Så returnerer den dato i ISO format', () => {
+        const date = dateUtilsFunctions.toLocalISOString(new Date('04.20.2020'));
+        expect(date).toEqual('2020-04-20T00:00:00');
+      });
+    });
+
+    describe('Når addDifference blir kalt', () => {
+      it('Så returnerer den dato med forskjellstillegg i ISO format', () => {
+        const a = new Date('2020-04-13T00:00:00.000');
+        const b = new Date('2020-04-13T04:00:00.000');
+        const c = new Date('2020-04-13T05:00:00.000');
+
+        const date = dateUtilsFunctions.addDifference(
+          dateUtilsFunctions.toLocalISOString(a),
+          dateUtilsFunctions.toLocalISOString(b),
+          dateUtilsFunctions.toLocalISOString(c)
+        );
+        expect(date).toEqual('2020-04-13T01:00:00');
+      });
+    });
+
+    describe('Når toLocalISOStringUsingDateTimezoneOffset blir kalt', () => {
+      it('Så returnerer den riktig dato', () => {
+        const date = dateUtilsFunctions.toLocalISOStringUsingDateTimezoneOffset(new Date('2020-04-13T12:42:00.000'));
+        expect(date).toEqual('2020-04-13T12:42:00');
+      });
+    });
+
+    describe('Når getMonthNameFromMonthNumber blir kalt', () => {
+      it('Så returnerer den riktig month', () => {
+        const resourcesMock: dateUtilsFunctions.ResourcesWithMonthNames = {
+          monthNameApril: 'apr',
+          monthNameAugust: 'aug',
+          monthNameDecember: 'dec',
+          monthNameFebruary: 'feb',
+          monthNameJanuary: 'jan',
+          monthNameJuly: 'jul',
+          monthNameJune: 'jun',
+          monthNameMarch: 'mar',
+          monthNameMay: 'mai',
+          monthNameNovember: 'nov',
+          monthNameOctober: 'okt',
+          monthNameSeptember: 'sep',
+        };
+        const month0 = dateUtilsFunctions.getMonthNameFromMonthNumber(0, resourcesMock);
+        expect(month0).toEqual(resourcesMock.monthNameJanuary);
+        const month1 = dateUtilsFunctions.getMonthNameFromMonthNumber(1, resourcesMock);
+        expect(month1).toEqual(resourcesMock.monthNameFebruary);
+        const month2 = dateUtilsFunctions.getMonthNameFromMonthNumber(2, resourcesMock);
+        expect(month2).toEqual(resourcesMock.monthNameMarch);
+        const month3 = dateUtilsFunctions.getMonthNameFromMonthNumber(3, resourcesMock);
+        expect(month3).toEqual(resourcesMock.monthNameApril);
+        const month4 = dateUtilsFunctions.getMonthNameFromMonthNumber(4, resourcesMock);
+        expect(month4).toEqual(resourcesMock.monthNameMay);
+        const month5 = dateUtilsFunctions.getMonthNameFromMonthNumber(5, resourcesMock);
+        expect(month5).toEqual(resourcesMock.monthNameJune);
+        const month6 = dateUtilsFunctions.getMonthNameFromMonthNumber(6, resourcesMock);
+        expect(month6).toEqual(resourcesMock.monthNameJuly);
+        const month7 = dateUtilsFunctions.getMonthNameFromMonthNumber(7, resourcesMock);
+        expect(month7).toEqual(resourcesMock.monthNameAugust);
+        const month8 = dateUtilsFunctions.getMonthNameFromMonthNumber(8, resourcesMock);
+        expect(month8).toEqual(resourcesMock.monthNameSeptember);
+        const month9 = dateUtilsFunctions.getMonthNameFromMonthNumber(9, resourcesMock);
+        expect(month9).toEqual(resourcesMock.monthNameOctober);
+        const month10 = dateUtilsFunctions.getMonthNameFromMonthNumber(10, resourcesMock);
+        expect(month10).toEqual(resourcesMock.monthNameNovember);
+        const month11 = dateUtilsFunctions.getMonthNameFromMonthNumber(11, resourcesMock);
+        expect(month11).toEqual(resourcesMock.monthNameDecember);
+        const month12 = dateUtilsFunctions.getMonthNameFromMonthNumber(12, resourcesMock);
+        expect(month12).toEqual('');
+      });
+    });
+
     describe('Når getMonthName blir kalt', () => {
-      it('Så returneres måneden', () => {
+      it('Så returner den riktig måned string', () => {
         expect(
           dateUtilsFunctions.getMonthName(new Date('04-20-2020'), { monthNameApril: 'april' } as dateUtilsFunctions.ResourcesWithMonthNames)
         ).toBe('april');
+      });
+    });
+
+    describe('Når getFormattedDateString blir kalt', () => {
+      it('Så returnerer den riktig dato med riktig måned', () => {
+        const month = dateUtilsFunctions.getFormattedDateString('2020-04-13', {
+          monthNameApril: 'april',
+        } as dateUtilsFunctions.ResourcesWithMonthNames);
+        expect(month).toEqual('13. april 2020');
+      });
+    });
+
+    describe('Når dateToString blir kalt', () => {
+      it('Så returnerer den riktig dato med riktig måned', () => {
+        const month = dateUtilsFunctions.dateToString('2020-04-13', {
+          monthNameApril: 'april',
+        } as dateUtilsFunctions.ResourcesWithMonthNames);
+        expect(month).toEqual('13. april 2020');
+      });
+    });
+
+    describe('Når timeToString blir kalt', () => {
+      it('Så returnerer den riktig time string', () => {
+        const date = dateUtilsFunctions.timeToString(new Date('2020-04-13T12:42:00.000'));
+        expect(date).toEqual('12:42');
+      });
+    });
+
+    describe('Når isDotNetMinDate blir kalt', () => {
+      it('Så returnerer den true eller false hvis de er like / ulike .Net minDate', () => {
+        const date = dateUtilsFunctions.isDotNetMinDate(new Date('2020-04-13T12:42:00.000'));
+        expect(date).toBeFalsy;
+        const dateAlike = dateUtilsFunctions.isDotNetMinDate(new Date('0001-01-01T00:00:00'));
+        expect(dateAlike).toBeTruthy;
+      });
+    });
+
+    describe('Når isSameDay blir kalt', () => {
+      it('Så returnerer den true hvis datoene er på samme dag og false hvis ikke', () => {
+        const a = moment('22.05.2020', 'DD.MM.YYYY');
+        const b = moment('22.05.2020', 'DD.MM.YYYY');
+        const c = moment('23.05.2020', 'DD.MM.YYYY');
+
+        expect(dateUtilsFunctions.isSameDay(a, b)).toBeTruthy();
+        expect(dateUtilsFunctions.isSameDay(a, c)).toBeFalsy();
+      });
+    });
+
+    describe('Når isBeforeDay blir kalt', () => {
+      it('Så returnerer den true hvis den ene datoen er før den andre og false hvis ikke', () => {
+        const a = moment('22.05.2020', 'DD.MM.YYYY');
+        const b = moment('22.05.2020', 'DD.MM.YYYY');
+        const c = moment('23.05.2020', 'DD.MM.YYYY');
+
+        expect(dateUtilsFunctions.isBeforeDay(a, b)).toBeFalsy();
+        expect(dateUtilsFunctions.isBeforeDay(a, c)).toBeTruthy();
+      });
+    });
+
+    describe('Når isInclusivelyBeforeDay blir kalt', () => {
+      it('Så returnerer den true hvis den ene datoen er på samme dag eller før den andre og false hvis ikke', () => {
+        const a = moment('22.05.2020', 'DD.MM.YYYY');
+        const b = moment('22.05.2020', 'DD.MM.YYYY');
+        const c = moment('23.05.2020', 'DD.MM.YYYY');
+
+        expect(dateUtilsFunctions.isInclusivelyBeforeDay(a, b)).toBeTruthy();
+        expect(dateUtilsFunctions.isInclusivelyBeforeDay(a, c)).toBeTruthy();
+        expect(dateUtilsFunctions.isInclusivelyBeforeDay(c, a)).toBeFalsy();
+      });
+    });
+
+    describe('Når isInclusivelyAfterDay blir kalt', () => {
+      it('Så returnerer den true hvis den ene datoen er på samme dag eller etter den andre og false hvis ikke', () => {
+        const a = moment('22.05.2020', 'DD.MM.YYYY');
+        const b = moment('22.05.2020', 'DD.MM.YYYY');
+        const c = moment('23.05.2020', 'DD.MM.YYYY');
+
+        expect(dateUtilsFunctions.isInclusivelyAfterDay(a, b)).toBeTruthy();
+        expect(dateUtilsFunctions.isInclusivelyAfterDay(a, c)).toBeFalsy();
+        expect(dateUtilsFunctions.isInclusivelyAfterDay(c, a)).toBeTruthy();
       });
     });
   });
