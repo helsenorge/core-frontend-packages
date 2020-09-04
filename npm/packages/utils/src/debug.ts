@@ -1,13 +1,11 @@
 /**
- * Sjekker om man en cookie har en value
- * @param cookieName navn på cookie
- * @param onClickOutside value
+ * Returnerer Debug verdien på window.HN objekt, eller false
  */
 
 declare const HN: { Debug?: boolean };
 
 window.HN = window.HN || {};
 
-export function isDebug() {
+export const isDebug = (): boolean => {
   return !!HN.Debug;
-}
+};
