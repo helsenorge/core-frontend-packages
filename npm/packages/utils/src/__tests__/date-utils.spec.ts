@@ -1,29 +1,12 @@
-import moment, { Moment } from 'moment';
+import moment from 'moment';
 import * as dateUtilsFunctions from '../date-utils';
-import { abort } from '../../../framework/src/pending-changes/pending-changes-state';
-/*
-interface ResourcesWithMonthNames {
-  monthNameApril: string;
-  monthNameAugust: string;
-  monthNameDecember: string;
-  monthNameFebruary: string;
-  monthNameJanuary: string;
-  monthNameJuly: string;
-  monthNameJune: string;
-  monthNameMarch: string;
-  monthNameMay: string;
-  monthNameNovember: string;
-  monthNameOctober: string;
-  monthNameSeptember: string;
-}
-*/
+
 const originalDate = global['Date'];
 
 beforeEach(() => {
   const DATE_TO_USE = new Date('2021-06-13T04:41:20');
   const _Date = Date;
   const mockDate = jest.fn(() => DATE_TO_USE);
-  //global.Date = jest.fn(() => DATE_TO_USE);
   mockDate.UTC = _Date.UTC;
   mockDate.parse = _Date.parse;
   mockDate.now = _Date.now;
