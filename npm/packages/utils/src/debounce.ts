@@ -4,10 +4,11 @@
  * @param wait wait for x time
  * @param immediate run now
  */
+/* eslint-disable @typescript-eslint/no-this-alias, prefer-rest-params */
 
 export function debounce(func: Function, wait: number, immediate?: boolean): () => void {
   let timeout: ReturnType<typeof setTimeout> | null;
-  /* eslint-disable @typescript-eslint/no-this-alias, prefer-rest-params*/
+
   return function(): void {
     const context: Function = this,
       args: IArguments = arguments,
@@ -25,5 +26,6 @@ export function debounce(func: Function, wait: number, immediate?: boolean): () 
       func.apply(context, args);
     }
   };
-  /* eslint-enable @typescript-eslint/no-this-alias */
 }
+
+/* eslint-enable @typescript-eslint/no-this-alias, prefer-rest-params */
