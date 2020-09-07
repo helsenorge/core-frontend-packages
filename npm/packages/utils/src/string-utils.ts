@@ -4,6 +4,7 @@ export function isEmpty(string: string | undefined | null): boolean {
   return string === '' || string === null || string === undefined;
 }
 
+// Checks if a string has invalid characters
 export function hasInvalidCharacters(string: string): boolean {
   return /[""!#¤%=?`´^¨~*:;£${[\]}|§€><\|]/.test(string);
 }
