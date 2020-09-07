@@ -2915,9 +2915,17 @@ export type HNMinHelseCommonJS = {
   */
   askForMoreServicesButtonTextOnlyLook: string;
   /** 
-  * Se etter en skrivefeil i URL-adressen, eller gå til forsiden.
+  * Denne siden er visst ikke helt frisk
   */
   pageNotFoundHeader: string;
+  /** 
+  * Se etter en skrivefeil i URL-adressen, eller gå til forsiden.
+  */
+  pageNotFoundDescription: string;
+  /** 
+  * Gå til forside
+  */
+  pageNotFoundToStart: string;
 };
 
 export type HNMinHelseCommon = { 
