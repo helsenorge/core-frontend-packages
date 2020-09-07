@@ -734,7 +734,8 @@
     "innsynstjenesterTitle": "Innhold i ulike helseregistre",
     "breadCrumb_Forsiden": "Forside",
     "askForMoreServicesButtonTextSecondary": "Se samtykke",
-    "askForMoreServicesButtonTextOnlyLook": "Se samtykke"
+    "askForMoreServicesButtonTextOnlyLook": "Se samtykke",
+    "pageNotFoundHeader": "Se etter en skrivefeil i URL-adressen, eller gå til forsiden."
   },
   "HNMinHelseCommon": { 
     "bruksvilkarPopup_ErrorDescription": "Du kan prøve igjen senere.",
@@ -885,6 +886,8 @@
     "page_Resepter_Service_Name": "Reseptoversikt",
     "page_Verktoy_Desc": "Verktøy kan være et nettkurs, app eller video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang til å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.",
     "page_Verktoy_Title": "Verktøy",
+    "page_Fullmakt_Title": "Fullmakter",
+    "page_Fullmakt_Description": "<p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>",
     "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"fullmakt\">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>",
     "page_feilmelding_link_text": "Gå til forsiden",
     "page_HendelsesLogg_Title": "Logg over bruk",
@@ -900,9 +903,7 @@
     "page_Samvalg_NavigateBackLinkURL": "{HelsenorgeUrl}/samvalg",
     "page_Kontaktinformasjon_Title": "Kontaktinformasjon",
     "page_Kontaktinformasjon_Description": "Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.",
-    "page_Samtykkeoppgave_Title": "Samtykkeoppgave",
-    "page_Fullmakt_Title": "Fullmakter",
-    "page_Fullmakt_Description": "<p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>"
+    "page_Samtykkeoppgave_Title": "Samtykkeoppgave"
   },
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
