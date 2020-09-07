@@ -735,7 +735,9 @@
     "breadCrumb_Forsiden": "Forside",
     "askForMoreServicesButtonTextSecondary": "Se samtykke",
     "askForMoreServicesButtonTextOnlyLook": "Se samtykke",
-    "pageNotFoundHeader": "Se etter en skrivefeil i URL-adressen, eller gå til forsiden."
+    "pageNotFoundHeader": "Denne siden er visst ikke helt frisk",
+    "pageNotFoundDescription": "Se etter en skrivefeil i URL-adressen, eller gå til forsiden.",
+    "pageNotFoundToStart": "Gå til forside"
   },
   "HNMinHelseCommon": {
     "bruksvilkarPopup_ErrorDescription": "Du kan prøve igjen senere.",
