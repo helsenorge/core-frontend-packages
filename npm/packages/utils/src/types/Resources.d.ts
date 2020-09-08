@@ -10628,7 +10628,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   gammelt_navn: string;
   /** 
-  * Skjemaet er fullført og lagret i Dokumenter
+  * Lagret
   */
   lightbox_til_deling_title: string;
   /** 
@@ -10643,6 +10643,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Lukk
   */
   lightbox_til_deling_lukkknapp: string;
+  /** 
+  * Skjemaet er fullført og lagret i Dokumenter
+  */
+  lightbox_ikke_til_deling_description: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 

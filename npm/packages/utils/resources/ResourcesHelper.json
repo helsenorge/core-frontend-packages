@@ -2666,10 +2666,11 @@
     "arkivert_med_stor_a": "Arkivert",
     "hjelpetrigger_dokumentVisningsnavn": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"Dersom du vil gi dokumentet et annet visningsnavn kan du gjøre det her. Opprinnelig filnavn endres ikke.\",\"seksjonstekst_overskrift\":\"\",\"seksjonstekst_brodtekst\":\"\"}",
     "gammelt_navn": "Navn",
-    "lightbox_til_deling_title": "Skjemaet er fullført og lagret i Dokumenter",
+    "lightbox_til_deling_title": "Lagret",
     "lightbox_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter. Noen fastleger kan få tilgang til skjemaet dersom du velger å dele det. Hvis du vil at fastlegen skal se skjemaet når du har legetime, kan du forsøke å dele det med han eller henne.",
     "lightbox_til_deling_deleknapp": "Gå til Deling",
-    "lightbox_til_deling_lukkknapp": "Lukk"
+    "lightbox_til_deling_lukkknapp": "Lukk",
+    "lightbox_ikke_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter"
   },
   "HNMinHelseHealthArchiveStrings": { 
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
