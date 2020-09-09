@@ -7,9 +7,43 @@ import {
   ikkeSamtykketTilHelsenorge,
   harSamtykket,
 } from '../samtykke-util';
-import { Samtykke, SamtykkeLevel } from '../types/entities';
+import { Samtykke, SamtykkeLevel, StatusKodeType, PersonverninnstillingKategori } from '../types/entities';
 import { PersonvernInnstillingDefinisjonGuids } from '../constants/personvernInnstillingDefinisjonIds';
-import { setCurrentSamtykkeLevel } from '../samtykke-util-test-util';
+
+const setSamtykkeTestUtil = (definisionGuid: string, statusKode: StatusKodeType): void => {
+  const aktiv: boolean = statusKode === StatusKodeType.Samtykket;
+  const statusType = aktiv ? 0 : 1;
+
+  window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker.push({
+    Type: PersonverninnstillingKategori.Samtykke,
+    PersonvernInnstillingDefinisjonGuid: definisionGuid,
+    Opprettet: '2017-08-09T14:53:35',
+    StatusType: statusType,
+    SamtykketAvFornavn: 'Maryan Abdirahman Coldevin',
+    SamtykketAvEtternavn: 'Carper-Rask Olsen Pettersen',
+    RepresentasjonforholdType: 0,
+    StatusKodeType: statusKode,
+    ErAktiv: aktiv,
+  });
+};
+
+const setCurrentSamtykkeLevelTestUtil = (level: SamtykkeLevel): void => {
+  window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker = [];
+  switch (level) {
+    case SamtykkeLevel.Helsetjeneste:
+      setSamtykkeTestUtil(PersonvernInnstillingDefinisjonGuids.InnsynIOpplysningerRegistrertOmMeg, StatusKodeType.Samtykket);
+      setSamtykkeTestUtil(PersonvernInnstillingDefinisjonGuids.InnsynIPasientjournal, StatusKodeType.Samtykket);
+      setSamtykkeTestUtil(PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste, StatusKodeType.Samtykket);
+      break;
+    case SamtykkeLevel.Journalinnsyn:
+      setSamtykkeTestUtil(PersonvernInnstillingDefinisjonGuids.InnsynIOpplysningerRegistrertOmMeg, StatusKodeType.Samtykket);
+      setSamtykkeTestUtil(PersonvernInnstillingDefinisjonGuids.InnsynIPasientjournal, StatusKodeType.Samtykket);
+      break;
+    case SamtykkeLevel.Registerinnsyn:
+      setSamtykkeTestUtil(PersonvernInnstillingDefinisjonGuids.InnsynIOpplysningerRegistrertOmMeg, StatusKodeType.Samtykket);
+      break;
+  }
+};
 
 declare global {
   interface Window {
@@ -178,19 +212,19 @@ describe('SamtykkeUtil', () => {
   });
   describe('Når innbygger har samtykket fullt til helsenorge', () => {
     it('Så forteller hjelpefunksjonen at innbygger har samtykket', () => {
-      setCurrentSamtykkeLevel(SamtykkeLevel.Helsetjeneste);
+      setCurrentSamtykkeLevelTestUtil(SamtykkeLevel.Helsetjeneste);
       expect(ikkeSamtykketTilHelsenorge()).toBe(false);
     });
   });
   describe('Når innbygger har samtykket med kun Journalinnsyn til helsenorge', () => {
     it('Så forteller hjelpefunksjonen at innbygger har samtykket', () => {
-      setCurrentSamtykkeLevel(SamtykkeLevel.Journalinnsyn);
+      setCurrentSamtykkeLevelTestUtil(SamtykkeLevel.Journalinnsyn);
       expect(ikkeSamtykketTilHelsenorge()).toBe(false);
     });
   });
   describe('Når innbygger har samtykket kun til registerinnsyn til helsenorge', () => {
     it('Så forteller hjelpefunksjonen at innbygger har samtykket', () => {
-      setCurrentSamtykkeLevel(SamtykkeLevel.Registerinnsyn);
+      setCurrentSamtykkeLevelTestUtil(SamtykkeLevel.Registerinnsyn);
       expect(ikkeSamtykketTilHelsenorge()).toBe(false);
     });
   });

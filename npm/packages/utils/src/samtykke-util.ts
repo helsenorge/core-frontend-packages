@@ -1,5 +1,5 @@
 import { PersonvernInnstillingDefinisjonGuids } from './constants/personvernInnstillingDefinisjonIds';
-import { Samtykke, SamtykkeLevel } from './types/entities';
+import { Samtykke, SamtykkeLevel, TjenesteTilgang } from './types/entities';
 import {
   getSamtykkekonverteringInformert,
   getRequiredSamtykkeLevel,
@@ -20,29 +20,46 @@ export enum SamtykkeStatus {
   ErMellom12Og16 = 5,
 }
 
-export function hasDigitaleHelsetjenesteSamtykke(samtykker: Samtykke[]) {
+/**
+ * Sjekker ...
+ * @param samtykker ...
+ */
+export const hasDigitaleHelsetjenesteSamtykke = (samtykker: Samtykke[]): boolean | undefined => {
   if (samtykker) {
     return samtykker.some(
       s => s.PersonvernInnstillingDefinisjonGuid.toUpperCase() === PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste && s.ErAktiv
     );
   }
-}
-export function hasPasientreiserSamtykke(samtykker: Samtykke[]) {
+};
+
+/**
+ * Sjekker ...
+ * @param samtykker ...
+ */
+export const hasPasientreiserSamtykke = (samtykker: Samtykke[]): boolean | undefined => {
   if (samtykker) {
     return samtykker.some(
       s => s.PersonvernInnstillingDefinisjonGuid.toUpperCase() === PersonvernInnstillingDefinisjonGuids.Pasientreiser && s.ErAktiv
     );
   }
-}
+};
 
-export function getSamtykker(): Array<Samtykke> {
+/**
+ * Sjekker ...
+ */
+export const getSamtykker = (): Array<Samtykke> => {
   if (window.HN.Commands.__GetTjenesterMedTilgang__ !== undefined && window.HN.Commands.__GetTjenesterMedTilgang__ !== null) {
     return window.HN.Commands.__GetTjenesterMedTilgang__.Samtykker;
   }
   return [];
-}
+};
 
-export function harSamtykket(guid: PersonvernInnstillingDefinisjonGuids, samtykker: Array<Samtykke> | undefined = undefined): boolean {
+/**
+ * Sjekker ...
+ * @param guid ...
+ * @param samtykker ...
+ */
+export const harSamtykket = (guid: PersonvernInnstillingDefinisjonGuids, samtykker: Array<Samtykke> | undefined = undefined): boolean => {
   samtykker = samtykker || getSamtykker();
   if (samtykker.length === 0) {
     return false;
@@ -52,9 +69,12 @@ export function harSamtykket(guid: PersonvernInnstillingDefinisjonGuids, samtykk
       return samtykke.PersonvernInnstillingDefinisjonGuid.toUpperCase() === guid.toUpperCase() && samtykke.ErAktiv;
     }) > -1
   );
-}
+};
 
-export function getSamtykkeStatus(): SamtykkeStatus {
+/**
+ * Sjekker ...
+ */
+export const getSamtykkeStatus = (): SamtykkeStatus => {
   const erRepresentasjon = getErRepresentasjon();
 
   if (erRepresentasjon && getErOrdinaerAnalogFullmakt) {
@@ -89,8 +109,11 @@ export function getSamtykkeStatus(): SamtykkeStatus {
     return erRepresentasjon ? SamtykkeStatus.ReprNyBruker : SamtykkeStatus.NyBruker;
   }
   return SamtykkeStatus.Default;
-}
+};
 
+/**
+ * Sjekker ...
+ */
 export const getSamtykkeLevel = (): SamtykkeLevel => {
   if (harSamtykket(PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste)) {
     return SamtykkeLevel.Helsetjeneste;
@@ -104,7 +127,24 @@ export const getSamtykkeLevel = (): SamtykkeLevel => {
   return SamtykkeLevel.None;
 };
 
+/**
+ * Sjekker ...
+ */
 export const ikkeSamtykketTilHelsenorge = (): boolean => {
   const samtykkeLevel = getSamtykkeLevel();
   return samtykkeLevel === null || samtykkeLevel === SamtykkeLevel.None;
+};
+
+/**
+ * Sjekker om brukeren har fullmakt
+ * @param tjenesteTilgang id til tjenesten
+ */
+export const harFullmaktTilSamtykke = (tjenesteTilgang: Array<TjenesteTilgang>): boolean => {
+  const fullmaktSamtykke = tjenesteTilgang.find((t: TjenesteTilgang) => {
+    return t.Tjeneste === 13;
+  });
+  if (fullmaktSamtykke?.Status === 2) {
+    return false;
+  }
+  return true;
 };
