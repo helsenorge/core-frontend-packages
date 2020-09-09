@@ -10647,6 +10647,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Skjemaet er fullført og lagret i Dokumenter
   */
   lightbox_ikke_til_deling_description: string;
+  /** 
+  * Du er i ferd med å slette skjemaet i utkast fra Helsenorge. Det vil ikke være mulig å angre slettingen og du vil måtte starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet dette skjemaet. Er du helt sikker på at du vil slette?
+  */
+  lightbox_slette_skjema_description: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
