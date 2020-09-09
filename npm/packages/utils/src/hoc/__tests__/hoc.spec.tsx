@@ -77,13 +77,15 @@ describe('HOC utils', () => {
       it('Så instansierer den LayoutChangeComponent fra layout-change function og får default state', () => {
         const wrapper = mount(<MyComp />);
         expect(wrapper.find(Testlayouthoc)).toBeTruthy();
-        expect(wrapper.name()).toEqual('LayoutChangeComponent');
 
-        expect(wrapper.instance().state['nullToXs']).toBeTruthy();
-        expect(wrapper.instance().state['xsToSm']).toBeTruthy();
-        expect(wrapper.instance().state['smToMd']).toBeTruthy();
-        expect(wrapper.instance().state['mdToLg']).toBeTruthy();
-        expect(wrapper.instance().state['lgToXl']).toBeTruthy();
+        const LayoutChangeComponentInstance = wrapper.children().first();
+        expect(LayoutChangeComponentInstance.name()).toEqual('LayoutChangeComponent');
+
+        expect(LayoutChangeComponentInstance.instance().state['nullToXs']).toBeTruthy();
+        expect(LayoutChangeComponentInstance.instance().state['xsToSm']).toBeTruthy();
+        expect(LayoutChangeComponentInstance.instance().state['smToMd']).toBeTruthy();
+        expect(LayoutChangeComponentInstance.instance().state['mdToLg']).toBeTruthy();
+        expect(LayoutChangeComponentInstance.instance().state['lgToXl']).toBeTruthy();
       });
     });
   });
