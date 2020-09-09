@@ -6,7 +6,7 @@ import {
   SamtykkeStatus,
   ikkeSamtykketTilHelsenorge,
   harSamtykket,
-} from '../samtykke-util';
+} from '../samtykke-utils';
 import { Samtykke, SamtykkeLevel, StatusKodeType, PersonverninnstillingKategori } from '../types/entities';
 import { PersonvernInnstillingDefinisjonGuids } from '../constants/personvernInnstillingDefinisjonIds';
 
