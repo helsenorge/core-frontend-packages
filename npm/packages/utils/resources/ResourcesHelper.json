@@ -2019,7 +2019,8 @@
     "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger."
   },
   "HNMinHelseDialog": { 
-    "getReferral_WarningHelseSorOstSourceSystem": "For øyeblikket kan det hende at ikke alle henvisningene hos Helse Nord vises.",
+    "getReferral_WarningHelseSorOst": "For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.",
+    "getReferral_WarningHelseSorOstSourceSystem": "For øyeblikket kan det hende at ikke alle henvisningene hos Helse Sør-Øst vises.",
     "journalAccess_EmneSporsmal": "Kopi av pasientjournal",
     "journalAccess_Sporsmal": "Jeg ønsker en digital kopi av min pasientjournal",
     "journalAccess_RequestGranted": "Vedlagt finner du en digital kopi av din pasientjournal.",
