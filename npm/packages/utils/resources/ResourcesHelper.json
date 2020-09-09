@@ -2671,7 +2671,8 @@
     "lightbox_til_deling_deleknapp": "Gå til Deling",
     "lightbox_til_deling_lukkknapp": "Lukk",
     "lightbox_ikke_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter",
-    "lightbox_slette_skjema_description": "Du er i ferd med å slette skjemaet i utkast fra Helsenorge. Det vil ikke være mulig å angre slettingen og du vil måtte starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet dette skjemaet. Er du helt sikker på at du vil slette?"
+    "lightbox_slette_skjema_description": "Du er i ferd med å slette skjemaet i utkast fra Helsenorge. Det vil ikke være mulig å angre slettingen og du vil måtte starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet dette skjemaet. Er du helt sikker på at du vil slette?",
+    "lightbox_slette_skjema_title": "Slett skjema i utkast"
   },
   "HNMinHelseHealthArchiveStrings": { 
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
