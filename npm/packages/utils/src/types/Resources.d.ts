@@ -8051,6 +8051,10 @@ behandlingsstedet ved eventuelle spørsmål.
 
 export type HNMinHelseDialog = { 
   /** 
+  * For øyeblikket kan det hende at ikke alle henvisningene hos Helse Nord vises.
+  */
+  getReferral_WarningHelseSorOstSourceSystem: string;
+  /** 
   * Kopi av pasientjournal
   */
   journalAccess_EmneSporsmal: string;
