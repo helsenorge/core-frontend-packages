@@ -31,8 +31,6 @@ export const setTabIndex = (element: HTMLElement): TabbableContentWithTabIndexes
  * @param tabbableElements: The array of tabbable Elements to reset
  * @param previousTabIndexes: The previous tabindex values to set back
  */
-
-//
 export const resetTabIndex = (
   tabbableElements: Array<TabbableElement>,
   previousTabIndexes: Array<number | null>
