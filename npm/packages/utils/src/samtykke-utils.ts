@@ -45,7 +45,7 @@ export const hasPasientreiserSamtykke = (samtykker: Samtykke[]): boolean | undef
 };
 
 /**
- * Sjekker ...
+ * Sjekker hvilke samtykker innbygger har gitt til bruk av helsenorge
  */
 export const getSamtykker = (): Array<Samtykke> => {
   if (window.HN.Commands.__GetTjenesterMedTilgang__ !== undefined && window.HN.Commands.__GetTjenesterMedTilgang__ !== null) {
@@ -55,9 +55,9 @@ export const getSamtykker = (): Array<Samtykke> => {
 };
 
 /**
- * Sjekker ...
- * @param guid ...
- * @param samtykker ...
+ * Sjekker om innbygger har samtykket til bruk av et gitt område. Ved å sammenligne (guids) og samtykker
+ * @param guid et gitt område av helsenorge
+ * @param samtykker samtykker til bruk av helsenorge
  */
 export const harSamtykket = (guid: PersonvernInnstillingDefinisjonGuids, samtykker: Array<Samtykke> | undefined = undefined): boolean => {
   samtykker = samtykker || getSamtykker();
@@ -72,7 +72,7 @@ export const harSamtykket = (guid: PersonvernInnstillingDefinisjonGuids, samtykk
 };
 
 /**
- * Sjekker ...
+ * Sjekker status på samtykke for bruk av helsenorge
  */
 export const getSamtykkeStatus = (): SamtykkeStatus => {
   const erRepresentasjon = getErRepresentasjon();
@@ -112,7 +112,7 @@ export const getSamtykkeStatus = (): SamtykkeStatus => {
 };
 
 /**
- * Sjekker ...
+ * Sjekker hvilket nivå av bruk av helsenorge, innbygger har samtykker til.
  */
 export const getSamtykkeLevel = (): SamtykkeLevel => {
   if (harSamtykket(PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste)) {
@@ -128,7 +128,7 @@ export const getSamtykkeLevel = (): SamtykkeLevel => {
 };
 
 /**
- * Sjekker ...
+ * Sjekker om innbygger ikke har gitt minimimsamtykke til bruk av helsenorge
  */
 export const ikkeSamtykketTilHelsenorge = (): boolean => {
   const samtykkeLevel = getSamtykkeLevel();
