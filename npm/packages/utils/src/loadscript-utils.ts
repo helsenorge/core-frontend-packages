@@ -1,6 +1,10 @@
 /* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-inferrable-types */
-//ubrukt
-export const loadScriptES6 = (source: string, beforeEl?: HTMLScriptElement, async: boolean = true, defer: boolean = true) => {
+export const loadScriptES6 = (
+  source: string,
+  beforeEl?: HTMLScriptElement,
+  async: boolean = true,
+  defer: boolean = true
+): Promise<void> => {
   return new Promise((resolve, reject) => {
     let script: any = document.createElement('script');
 
@@ -9,7 +13,7 @@ export const loadScriptES6 = (source: string, beforeEl?: HTMLScriptElement, asyn
     script.async = async;
     script.defer = defer;
 
-    function onloadHander(_: any, isAbort: any) {
+    function onloadHander(_: any, isAbort: any): void {
       if (isAbort || !script.readyState || /loaded|complete/.test(script.readyState)) {
         script.onload = null;
         script.onreadystatechange = null;
