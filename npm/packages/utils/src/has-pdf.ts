@@ -7,34 +7,15 @@ interface PluginDetectInterface {
 }
 declare let PluginDetect: PluginDetectInterface;
 
-export function hasPdf(): boolean {
-  function hasAcrobatInstalled(): ActiveXObject | null {
-    function getActiveXObject(name: string): ActiveXObject | void {
-      try {
-        return new ActiveXObject(name);
-      } catch (e) {
-        // Do nothing
-      }
-    }
-    return getActiveXObject('AcroPDF.PDF') || getActiveXObject('PDF.PdfCtrl') || null;
-  }
-
-  if (navigator.mimeTypes['application/pdf'] || hasAcrobatInstalled()) {
-    return true;
-  } else {
-    return false;
-  }
-}
-
-function isFirefox(): boolean {
+export const isFirefox = (): boolean => {
   return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-}
+};
 
-function isAndroid(): boolean {
+export const isAndroid = (): boolean => {
   return navigator.userAgent.toLowerCase().indexOf('android') > -1;
-}
+};
 
-function isPdfIncompatibleFF(resolve: (value?: boolean) => void, pdfUrl: string): void {
+const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string): void => {
   // For å omgå popup-blokkering må vi åpne nytt vindu før async-kall.
   const newWindow: Window | null = window.open();
   const scriptUrl = `${getAssets()}/hn.portal/js/plugindetectpdfjs.js`;
@@ -70,9 +51,28 @@ function isPdfIncompatibleFF(resolve: (value?: boolean) => void, pdfUrl: string)
       console.log('fail to load script: ', scriptUrl);
     }
   );
-}
+};
 
-export function handlePdfOpening(pdfUrl: string): Promise<boolean> {
+export const hasPdf = (): boolean => {
+  function hasAcrobatInstalled(): ActiveXObject | null {
+    function getActiveXObject(name: string): ActiveXObject | void {
+      try {
+        return new ActiveXObject(name);
+      } catch (e) {
+        // Do nothing
+      }
+    }
+    return getActiveXObject('AcroPDF.PDF') || getActiveXObject('PDF.PdfCtrl') || null;
+  }
+
+  if (navigator.mimeTypes['application/pdf'] || hasAcrobatInstalled()) {
+    return true;
+  } else {
+    return false;
+  }
+};
+
+export const handlePdfOpening = (pdfUrl: string): Promise<boolean> => {
   const pdfCompatibility: Promise<boolean> = new Promise(function(resolve, reject) {
     let pdfIncompatible = false;
     if (isAndroid()) {
@@ -94,4 +94,4 @@ export function handlePdfOpening(pdfUrl: string): Promise<boolean> {
   });
 
   return pdfCompatibility;
-}
+};
