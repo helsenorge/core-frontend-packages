@@ -37,7 +37,7 @@ export const parseParams = (params?: object): string => {
 };
 
 /**
- * Returnerer responsen avhengig av status i en Response
+ * Sjekker status på en Response og returnerer en Promise avhengig av status
  * @param response Response objektet fra HTTP request
  */
 export const checkStatus = (response: Response): Promise<{}> | undefined => {

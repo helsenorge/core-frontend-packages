@@ -7,11 +7,11 @@ interface PluginDetectInterface {
 }
 declare let PluginDetect: PluginDetectInterface;
 
-export const isFirefox = (): boolean => {
+const isFirefox = (): boolean => {
   return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 };
 
-export const isAndroid = (): boolean => {
+const isAndroid = (): boolean => {
   return navigator.userAgent.toLowerCase().indexOf('android') > -1;
 };
 
@@ -53,6 +53,9 @@ const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string)
   );
 };
 
+/**
+ * Returnerer en boolean som sier om nettleseren støtter eller ikke pdf
+ */
 export const hasPdf = (): boolean => {
   function hasAcrobatInstalled(): ActiveXObject | null {
     function getActiveXObject(name: string): ActiveXObject | void {
@@ -72,6 +75,10 @@ export const hasPdf = (): boolean => {
   }
 };
 
+/**
+ * Returnerer en Promise med incompatible (boolean) som param til resolve
+ * @param pdfUrl url til pdf filen
+ */
 export const handlePdfOpening = (pdfUrl: string): Promise<boolean> => {
   const pdfCompatibility: Promise<boolean> = new Promise(function(resolve, reject) {
     let pdfIncompatible = false;

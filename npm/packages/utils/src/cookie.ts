@@ -1,9 +1,9 @@
 /**
- * Check if cookie exist, and also if it has value
+ * Sjekker om cookie finnes og om den har verdi
  * @param cookieName navn på cookie
- * @param onClickOutside value
+ * @param value cookie verdi
  */
-export function hasCookie(cookieName: string, value?: string | boolean): boolean {
+export const hasCookie = (cookieName: string, value?: string | boolean): boolean => {
   const cookie: string = document.cookie;
   if (cookie === undefined) {
     return false;
@@ -21,33 +21,57 @@ export function hasCookie(cookieName: string, value?: string | boolean): boolean
     return lastPart ? lastPart.split(';').shift() === value.toString() : false;
   }
   return false;
-}
+};
 
-export function getSuffix(cookieName: string): string {
+/**
+ * Sjekker...
+ * @param cookieName navn på cookie
+ */
+export const getSuffix = (cookieName: string): string => {
   let suffix = '';
   if (window.HN.Rest.__Environment__) {
     suffix = '_' + window.HN.Rest.__Environment__;
   }
   return cookieName + suffix;
-}
+};
 
-export function getCookieSuffix(): boolean {
-  return getCustomCookieWithSuffix('MH_LoggedIn') || getCustomCookieWithSuffix('MH_SessionId');
-}
-
-export function getCustomCookieWithSuffix(cookieName: string): boolean {
+/**
+ * Sjekker...
+ * @param cookieName navn på cookie
+ */
+export const getCustomCookieWithSuffix = (cookieName: string): boolean => {
   return hasCookie(getSuffix(cookieName));
-}
+};
 
-export function setCookie(name: string, value: string | boolean = ''): void {
+/**
+ * Sjekker...
+ */
+export const getCookieSuffix = (): boolean => {
+  return getCustomCookieWithSuffix('MH_LoggedIn') || getCustomCookieWithSuffix('MH_SessionId');
+};
+
+/**
+ * Setter en cookie med van + verdi
+ * @param cookieName navn på cookie
+ * @param value cookie verdi
+ */
+export const setCookie = (name: string, value: string | boolean = ''): void => {
   document.cookie = `${name}=${value};path=/;`;
-}
+};
 
-export function deleteCookie(name: string): void {
+/**
+ * Sletter en cookie basert på navnet
+ * @param cookieName navn på cookie
+ */
+export const deleteCookie = (name: string): void => {
   document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:01 GMT;`;
-}
+};
 
-export function getCookieValue(name: string): string | number | boolean | undefined {
+/**
+ * Henter verdien til en cookie basert på navnet
+ * @param cookieName navn på cookie
+ */
+export const getCookieValue = (name: string): string | number | boolean | undefined => {
   const cookie = hasCookie(name);
   const cookieWithSuffix = getCustomCookieWithSuffix(name);
 
@@ -60,4 +84,4 @@ export function getCookieValue(name: string): string | number | boolean | undefi
     .split('; ')
     .find(e => e.split('=')[0] === cookieName)
     ?.split('=')[1];
-}
+};
