@@ -2,6 +2,7 @@ import React, { createContext, useContext } from 'react';
 import { mount } from 'enzyme';
 
 import * as HNFunctions from '../../hn-service';
+import * as HNPageFunctions from '../../hn-page';
 
 import WithStore from '../with-store';
 import registerWebComp from '../register';
@@ -71,7 +72,7 @@ describe('Gitt at web component skal registreres', () => {
 describe('Gitt at web component skal consumeres', () => {
   describe('Når den fetcher assets-manifest', () => {
     it('Så fetcher den ressurser fra riktig url og instansierer komponent', async () => {
-      jest.spyOn(HNFunctions, 'getAssetsUrl').mockImplementation(() => 'assetsUrl');
+      jest.spyOn(HNPageFunctions, 'getAssetsUrl').mockImplementation(() => 'assetsUrl');
 
       const mockSuccessResponse = {
         assets: {

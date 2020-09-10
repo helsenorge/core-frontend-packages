@@ -1,5 +1,7 @@
 import { trackError } from './adobe-analytics';
 import * as DateUtils from './date-utils';
+import { isAuthorized, hashIsAuthorized } from './hn-authorize';
+import { getAssetsUrl } from './hn-page';
 import { getCookieValue } from './cookie';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
@@ -130,6 +132,13 @@ window.HN.Rest = window.HN.Rest || {};
 window.HN.Commands = window.HN.Commands || {};
 window.HN.PortalCommands = window.HN.PortalCommands || {};
 
+/**
+ * Returnerer baseUrl til MinHelse basert på HN Rest objektet
+ */
+export const getMinHelseUrl = () => {
+  return HN.Rest.__MinHelseUrl__ !== undefined && HN.Rest.__MinHelseUrl__ !== null ? HN.Rest.__MinHelseUrl__ : '';
+};
+
 export function usePasientensLegemiddelliste() {
   return HN.Rest.__PasientensLegemiddelliste__ !== undefined && HN.Rest.__PasientensLegemiddelliste__ !== null
     ? HN.Rest.__PasientensLegemiddelliste__
@@ -140,30 +149,10 @@ export function useVerticalUrl() {
   return HN.Rest.__VerticalUrl__ !== undefined && HN.Rest.__VerticalUrl__ !== null ? HN.Rest.__VerticalUrl__ : false;
 }
 
-export function isAuthorized() {
-  return HN.Rest.__Authorized__ !== undefined && HN.Rest.__Authorized__ !== null ? HN.Rest.__Authorized__ : false;
-}
-
-export function hashIsAuthorized() {
-  return HN.Rest.__HashIsAuthorized__ !== undefined && HN.Rest.__HashIsAuthorized__ !== null ? HN.Rest.__HashIsAuthorized__ : false;
-}
-
 export function useBetaTjeneste() {
   return HN.Rest.__ApiHelseNorgeDisabled__ !== undefined && HN.Rest.__ApiHelseNorgeDisabled__ !== null
     ? !HN.Rest.__ApiHelseNorgeDisabled__
     : false;
-}
-
-export function getTjenesteUrl() {
-  return getMinHelseUrl(); // TODO: Skal på sikt benytte __TjenesterUrl__ når skrivefeil (Tjenster uten e) er rettet opp i backend
-}
-
-export function getMinHelseUrl() {
-  return HN.Rest.__MinHelseUrl__ !== undefined && HN.Rest.__MinHelseUrl__ !== null ? HN.Rest.__MinHelseUrl__ : '';
-}
-
-export function getAssetsUrl() {
-  return HN.Page.__Assets__ !== undefined && HN.Page.__Assets__ !== null ? HN.Page.__Assets__ : '';
 }
 
 export function getPasientreiserUrl() {
@@ -178,14 +167,15 @@ export function isSkjemautfyller() {
   return HN.Page.__Path__ !== undefined && HN.Page.__Path__ !== null && HN.Page.__Path__ === 'skjemautfyller';
 }
 
-export function isMHLoggedIn() {
-  return getCookie('MH_LoggedIn') !== null ? true : false;
-}
-
+// TO-DO kan denne fases ut og istedet brukes getCookieValue fra cookie.ts?
 function getCookie(name: string) {
   const re = new RegExp(name + '=([^;]+)');
   const value = re.exec(document.cookie);
   return value !== null ? unescape(value[1]) : null;
+}
+// TO-DO kan denne ersatttes med noe eksisterende fra cookie.ts ?
+export function isMHLoggedIn(): boolean {
+  return getCookie('MH_LoggedIn') !== null ? true : false;
 }
 
 export function getAutoCommand(): string {
@@ -197,7 +187,7 @@ function getMinHelseEnvironmentPath(): string {
 }
 
 function getPortalEnvironmentPath(): string {
-  return getTjenesteUrl() + portalPath;
+  return getMinHelseUrl() + portalPath;
 }
 
 export function getMinHelseOpenEnvironmentPath() {
@@ -225,7 +215,6 @@ function createHeaders(type = 'application/json'): Headers {
   } else if (getCookieValue('HN_CSRF_Token')) {
     headers.append('X-HN-CSRF-Token', getCookieValue('HN_CSRF_Token') as string);
   }
-
   return headers;
 }
 
