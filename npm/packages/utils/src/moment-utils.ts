@@ -195,7 +195,7 @@ export const isToday = (time: ISO8601 | Date): boolean => {
 };
 
 export const isBeforeToday = (time: ISO8601 | Date): boolean => {
-  return moment().diff(moment(time), 'days') > 0;
+  return moment(time).diff(new Date(), 'days') < 0;
 };
 
 export const isEarlierToday = (time: ISO8601 | Date): boolean => {
