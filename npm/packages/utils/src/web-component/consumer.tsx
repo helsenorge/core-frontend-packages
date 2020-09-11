@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { getAssetsUrl } from '../hn-service';
+import { getAssetsUrl } from '../hn-page';
 import { error } from '../logger';
 
 /** Denne kan brukes for å konsumere en web component som finnes.

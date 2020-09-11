@@ -1,5 +1,5 @@
 /**
- * Get tjenester from window
+ * Returnerer true hvis tjenesten har TjenesteTilgangStatus Ja (1)
  * @param tjenesteId id of tjeneste
  */
 
