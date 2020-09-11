@@ -50,16 +50,16 @@ export function getSamtykkekonverteringInformert(): boolean {
   return HN.User.__SamtykkekonverteringInformert__;
 }
 
+export function setTempSamtykkekonverteringInformert(value: boolean): void {
+  HN.User.__SamtykkekonverteringInformert__ = value;
+}
+
 export function getErMellom12Og16(): boolean {
   return HN.User.__ErMellom12Og16__;
 }
 
 export function erForeldrerepresentasjon12Pluss(): boolean {
   return HN.User.__ErMellom12Og16__ && HN.User.__FullmaktEgenskaper__ === null && HN.User.__HasRepresentation__ === true;
-}
-
-export function setTempSamtykkekonverteringInformert(value: boolean): void {
-  HN.User.__SamtykkekonverteringInformert__ = value;
 }
 
 export function getRequiredSamtykkeLevel(): SamtykkeLevel {
