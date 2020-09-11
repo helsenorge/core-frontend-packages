@@ -1,4 +1,4 @@
-import keyCode from './key-code';
+import keyCode from './constants/key-code';
 import tabbable from 'tabbable';
 
 import { getDocumentActiveElement } from './focus-utils';
