@@ -1,7 +1,17 @@
+/*  This file has been converted to TypeScript
+ When making changes to this file please make them
+ in the file with a .ts or .tsx extension located in
+ the Common/src/toolkit folder structure
+ Then run the command "npm run build-toolkit" to generate the jsx file
+ Please check both files into TFS */
+
 import * as React from 'react';
 import LayoutUtils from '../layout';
 
 export interface LayoutState {
+  oneToTwoColumn?: boolean;
+  twoToThreeColumn?: boolean;
+  threeTwoFourColumn?: boolean;
   nullToXs?: boolean;
   xsToSm?: boolean;
   smToMd?: boolean;
@@ -29,6 +39,9 @@ export default function layoutChange<T extends React.Component, OriginalProps>(
     constructor(props: Props) {
       super(props);
       this.state = {
+        oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
+        twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
+        threeTwoFourColumn: LayoutUtils.isThreeTwoFourColumn(),
         nullToXs: LayoutUtils.isNullToXs(),
         xsToSm: LayoutUtils.isXsToSm(),
         smToMd: LayoutUtils.isSmToMd(),
@@ -63,6 +76,9 @@ export default function layoutChange<T extends React.Component, OriginalProps>(
 
     updateState = (): void => {
       this.setState({
+        oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
+        twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
+        threeTwoFourColumn: LayoutUtils.isThreeTwoFourColumn(),
         nullToXs: LayoutUtils.isNullToXs(),
         xsToSm: LayoutUtils.isXsToSm(),
         smToMd: LayoutUtils.isSmToMd(),
@@ -78,6 +94,9 @@ export default function layoutChange<T extends React.Component, OriginalProps>(
         <COMPONENT
           ref={forwardedRef}
           {...(originalProps as OriginalProps)}
+          oneToTwoColumn={this.state.oneToTwoColumn}
+          twoToThreeColumn={this.state.twoToThreeColumn}
+          threeTwoFourColumn={this.state.threeTwoFourColumn}
           nullToXs={this.state.nullToXs}
           xsToSm={this.state.xsToSm}
           smToMd={this.state.smToMd}
