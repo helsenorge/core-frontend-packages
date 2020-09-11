@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "1.7.0",
+  "version": "1.6.28",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,6 @@
     "publish:beta": "cd lib && npm publish --tag=beta",
     "precommit-script": "pretty-quick --staged",
     "test": "helsenorge-scripts test",
-    "test:update": "helsenorge-scripts test --u",
     "test:watch": "helsenorge-scripts test --watch",
     "helsenorge-notify": "helsenorge-scripts notify"
   },
@@ -20,15 +19,12 @@
   ],
   "license": "ISC",
   "devDependencies": {
-    "@helsenorge/core-build": "^14.0.0-rc02",
-    "@helsenorge/designsystem-react": "1.0.0-beta.21",
+    "@helsenorge/core-build": "13.0.0",
     "@types/react-router-dom": "^5.1.3",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
-    "@types/styled-components": "5.1.0",
-    "ical.js": "^1.4.0",
-    "styled-components": "^5.1.0"
+    "@types/styled-components": "5.1.0"
   },
   "dependencies": {
     "react-shadow-dom-retarget-events": "^1.0.11"
