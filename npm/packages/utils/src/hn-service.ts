@@ -1,9 +1,12 @@
 import { trackError } from './adobe-analytics';
 import * as DateUtils from './date-utils';
 import { isAuthorized, hashIsAuthorized } from './hn-authorize';
-import { getAssetsUrl } from './hn-page';
 import { getCookieValue } from './cookie';
 
+/****************************************************************/
+/**************** DENNE FILEN ER DEPRECATED *********************/
+/********** NYE FUNKSJONER SKAL INN HN-PROXY-SERVICE ************/
+/****************************************************************/
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 enum RepresentasjonforholdType {
