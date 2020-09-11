@@ -1,7 +1,6 @@
 import React, { createContext, useContext } from 'react';
 import { mount } from 'enzyme';
 
-import * as HNFunctions from '../../hn-service';
 import * as HNPageFunctions from '../../hn-page';
 
 import WithStore from '../with-store';
@@ -57,14 +56,14 @@ describe('Gitt at web component skal instansieres', () => {
 
 describe('Gitt at web component skal registreres', () => {
   describe('Når det defineres et navn og en komponent på window objektet', () => {
-    it('Så er komponenten registrert på det navnet', () => {
+    it('Så er komponenten registrert på det navnet', async () => {
       const Testwebcomp: React.FC = () => {
         return <div id="testdiv">{'test'}</div>;
       };
       registerWebComp(Testwebcomp, 'hn-webcomp-test', { events: true, styledComponents: true }, 'hn-webcomp-test-template');
 
       const webCompName = window.customElements.get('hn-webcomp-test');
-      expect(webCompName).toBeTruthy();
+      await expect(webCompName).toBeTruthy();
     });
   });
 });
@@ -92,6 +91,7 @@ describe('Gitt at web component skal consumeres', () => {
         response: {},
         json: () => mockJsonPromise,
       });
+
       jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
 
       const webCompFromMicroFrontend = await mount(
@@ -103,9 +103,9 @@ describe('Gitt at web component skal consumeres', () => {
           includeResetCss
         />
       );
-      expect(global.fetch).toHaveBeenCalledTimes(1);
-      expect(global.fetch).toHaveBeenCalledWith('mydomain/assets.json');
-      expect(webCompFromMicroFrontend.render()).toMatchSnapshot();
+      await expect(global.fetch).toHaveBeenCalledTimes(1);
+      await expect(global.fetch).toHaveBeenCalledWith('mydomain/assets.json');
+      await expect(webCompFromMicroFrontend.render()).toMatchSnapshot();
     });
   });
 });
