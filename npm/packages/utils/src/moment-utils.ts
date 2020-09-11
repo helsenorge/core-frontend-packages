@@ -1,6 +1,8 @@
 import moment from 'moment';
 import StringHelper from './string-utils';
 
+type ISO8601 = string;
+
 export function initialize(): void {
   moment.locale('nb');
   const language: moment.LocaleSpecification = {
@@ -143,9 +145,19 @@ export function longTimeRange(startInput: moment.MomentInput, endInput?: moment.
   return StringHelper.capitalize(range);
 }
 
+/* bugfix: sjekket ikke om param time var en dag eldre enn nåtid */
 export function isAfterToday(time: moment.MomentInput): boolean {
+  return moment(time).diff(new Date(), 'days') > 0;
+}
+
+export function isAfter(time: moment.MomentInput): boolean {
   const now: moment.Moment = moment();
   return moment(time).isAfter(now);
+}
+
+export function isBefore(time: moment.MomentInput): boolean {
+  const now: moment.Moment = moment();
+  return moment(time).isBefore(now);
 }
 
 export function numberOfWeeksInMonth(first: moment.Moment, last: moment.Moment): number {
@@ -164,6 +176,32 @@ export function toDateTime(dateTime: moment.Moment, format: string) {
   return dt;
 }
 
+export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
+  const input = moment(date);
+  // Setup a minDate to mimic .Net Date.MinDate constant.
+  const minDate = moment('0001-01-01T00:00:00');
+  return input.isSame(minDate);
+};
+
+export const toLocalISOStringUsingDateTimezoneOffset = (date: Date): string => {
+  const isoDate = moment(date)
+    .add('minutes', moment(date).utcOffset())
+    .toISOString();
+  return isoDate.substring(0, isoDate.lastIndexOf('.'));
+};
+
+export const isToday = (time: ISO8601 | Date): boolean => {
+  return moment(time).isSame(new Date(), 'day');
+};
+
+export const isBeforeToday = (time: ISO8601 | Date): boolean => {
+  return moment().diff(moment(time), 'days') > 0;
+};
+
+export const isEarlierToday = (time: ISO8601 | Date): boolean => {
+  return isToday(time) && isBefore(time);
+};
+
 export default {
   initialize,
   longDate,
@@ -179,6 +217,13 @@ export default {
   monthRange,
   timeRange,
   longTimeRange,
+  isToday,
+  isBeforeToday,
+  isEarlierToday,
   isAfterToday,
+  isAfter,
+  isBefore,
   numberOfWeeksInMonth,
+  isDotNetMinDate,
+  toLocalISOStringUsingDateTimezoneOffset,
 };
