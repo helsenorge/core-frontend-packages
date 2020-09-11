@@ -2914,6 +2914,18 @@ export type HNMinHelseCommonJS = {
   * Se samtykke
   */
   askForMoreServicesButtonTextOnlyLook: string;
+  /** 
+  * Denne siden er visst ikke helt frisk
+  */
+  pageNotFoundHeader: string;
+  /** 
+  * Se etter en skrivefeil i URL-adressen, eller gå til forsiden.
+  */
+  pageNotFoundDescription: string;
+  /** 
+  * Gå til forside
+  */
+  pageNotFoundToStart: string;
 };
 
 export type HNMinHelseCommon = { 
@@ -3510,6 +3522,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Verktoy_Title: string;
   /** 
+  * Fullmakter
+  */
+  page_Fullmakt_Title: string;
+  /** 
+  * <p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
+  */
+  page_Fullmakt_Description: string;
+  /** 
   * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt">Gå til Helsenorge for å se hvilke tjenester du har tilgang til.</a>
   */
   page_AskForAccessToService_Link_Text: string;
@@ -3573,14 +3593,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Samtykkeoppgave
   */
   page_Samtykkeoppgave_Title: string;
-  /** 
-  * Fullmakter
-  */
-  page_Fullmakt_Title: string;
-  /** 
-  * <p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
-  */
-  page_Fullmakt_Description: string;
 };
 
 export type HNMinHelseDialogGPStrings = { 
@@ -8039,6 +8051,14 @@ behandlingsstedet ved eventuelle spørsmål.
 
 export type HNMinHelseDialog = { 
   /** 
+  * For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.
+  */
+  getReferral_WarningHelseSorOst: string;
+  /** 
+  * For øyeblikket kan det hende at ikke alle henvisningene hos Helse Sør-Øst vises.
+  */
+  getReferral_WarningHelseSorOstSourceSystem: string;
+  /** 
   * Kopi av pasientjournal
   */
   journalAccess_EmneSporsmal: string;
@@ -10616,11 +10636,11 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   gammelt_navn: string;
   /** 
-  * Skjemaet er fullført og lagret i Dokumenter
+  * Lagret
   */
   lightbox_til_deling_title: string;
   /** 
-  * Om du vil at fastlegen skal kunne se skjemaet når du har legetime, kan du dele det med han eller henne.
+  * Skjemaet er fullført og lagret i Dokumenter. Noen fastleger kan få tilgang til skjemaet dersom du velger å dele det. Hvis du vil at fastlegen skal se skjemaet når du har legetime, kan du forsøke å dele det med han eller henne.
   */
   lightbox_til_deling_description: string;
   /** 
@@ -10631,6 +10651,18 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Lukk
   */
   lightbox_til_deling_lukkknapp: string;
+  /** 
+  * Skjemaet er fullført og lagret i Dokumenter
+  */
+  lightbox_ikke_til_deling_description: string;
+  /** 
+  * Du er i ferd med å slette skjemaet i utkast fra Helsenorge. Det vil ikke være mulig å angre slettingen og du vil måtte starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet dette skjemaet. Er du helt sikker på at du vil slette?
+  */
+  lightbox_slette_skjema_description: string;
+  /** 
+  * Slett skjema i utkast
+  */
+  lightbox_slette_skjema_title: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 

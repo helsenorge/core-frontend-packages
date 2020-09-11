@@ -19,7 +19,7 @@ export interface LayoutState {
   lgToXl?: boolean;
 }
 
-export interface Props {
+export interface OriginalProps {
   oneToTwoColumn?: boolean;
   twoToThreeColumn?: boolean;
   threeTwoFourColumn?: boolean;
@@ -30,9 +30,13 @@ export interface Props {
   lgToXl?: boolean;
 }
 
-export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Props> | React.FC<T & Props>): React.ComponentClass<T> {
-  class LayoutChangeComponent extends React.Component<T, LayoutState> {
-    constructor(props: T) {
+export default function layoutChange<T extends React.Component, OriginalProps>(
+  COMPONENT: React.ComponentClass<OriginalProps & { ref?: React.RefObject<T> }> | React.FC<OriginalProps & { ref?: React.RefObject<T> }>
+): React.ForwardRefExoticComponent<React.PropsWithoutRef<OriginalProps> & React.RefAttributes<T>> {
+  type PrivateProps = { forwardedRef: React.RefObject<T> };
+  type Props = OriginalProps & PrivateProps;
+  class LayoutChangeComponent extends React.Component<Props, LayoutState> {
+    constructor(props: Props) {
       super(props);
       this.state = {
         oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
@@ -44,9 +48,6 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         mdToLg: LayoutUtils.isMdToLg(),
         lgToXl: LayoutUtils.isLgToXl(),
       };
-      this.processResizeEvent = this.processResizeEvent.bind(this);
-      this.processLayoutChangeEvent = this.processLayoutChangeEvent.bind(this);
-      this.processOrientationEvent = this.processOrientationEvent.bind(this);
     }
 
     componentDidMount(): void {
@@ -61,19 +62,19 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
       window.removeEventListener('orientationchange', this.processOrientationEvent);
     }
 
-    processResizeEvent(): void {
+    processResizeEvent = (): void => {
       this.updateState();
-    }
+    };
 
-    processLayoutChangeEvent(): void {
+    processLayoutChangeEvent = (): void => {
       this.updateState();
-    }
+    };
 
-    processOrientationEvent(): void {
+    processOrientationEvent = (): void => {
       this.updateState();
-    }
+    };
 
-    updateState(): void {
+    updateState = (): void => {
       this.setState({
         oneToTwoColumn: LayoutUtils.isOneToTwoColumn(),
         twoToThreeColumn: LayoutUtils.isTwoToThreeColumn(),
@@ -84,13 +85,15 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         mdToLg: LayoutUtils.isMdToLg(),
         lgToXl: LayoutUtils.isLgToXl(),
       });
-    }
+    };
 
-    /* eslint-disable @typescript-eslint/no-explicit-any */
     render(): JSX.Element {
+      const { forwardedRef, ...originalProps } = this.props;
+
       return (
         <COMPONENT
-          {...(this.props as any)}
+          ref={forwardedRef}
+          {...(originalProps as OriginalProps)}
           oneToTwoColumn={this.state.oneToTwoColumn}
           twoToThreeColumn={this.state.twoToThreeColumn}
           threeTwoFourColumn={this.state.threeTwoFourColumn}
@@ -102,7 +105,9 @@ export default function layoutChange<T>(COMPONENT: React.ComponentClass<T & Prop
         />
       );
     }
-    /* eslint-enable @typescript-eslint/no-explicit-any */
   }
-  return LayoutChangeComponent;
+
+  const RefForwardingFactory = (props: OriginalProps, ref: React.RefObject<T>) => <LayoutChangeComponent {...props} forwardedRef={ref} />;
+
+  return React.forwardRef(RefForwardingFactory);
 }
