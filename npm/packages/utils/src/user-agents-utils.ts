@@ -1,18 +1,18 @@
 interface WindowWithOpera extends Window {
-    opera: string;
-  }
-  export const isMobileUA = (): boolean => {
-    let check = false;
-    (function(a: string): void {
-      const regexString =
-        '(android|bbd+|meego).+mobile|avantgo|bada/|blackberry\
+  opera: string;
+}
+export const isMobileUA = (): boolean => {
+  let check = false;
+  (function(a: string): void {
+    const regexString =
+      '(android|bbd+|meego).+mobile|avantgo|bada/|blackberry\
         |blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|\
         midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)/|plucker|\
         pocket|psp|series(4|6)0|symbian|treo|up.(browser|link)|vodafone|wap|windows ce|xda|\
         xiino';
-  
-      const regexString2 =
-        '1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s-)|\
+
+    const regexString2 =
+      '1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s-)|\
         ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|-m|r |s )|\
         avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw-(n|u)|c55/|capi|ccwa|cdm-|cell|\
         chtm|cldc|cmd-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc-s|devi|dica|dmob|do(c|p)o|ds(12|-d)|\
@@ -32,27 +32,26 @@ interface WindowWithOpera extends Window {
             m-|m3|m5)|tx-9|up(.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|-v)|\
         vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(-| )|webc|\
         whit|wi(g |nc|nw)|wmlb|wonu|x700|yas-|your|zeto|zte-';
-  
-      const regex = new RegExp(regexString, 'i');
-      const regex2 = new RegExp(regexString2, 'i');
-  
-      if (regex.test(a) || regex2.test(a.substr(0, 4))) {
-        check = true;
-      }
-    })(navigator.userAgent || navigator.vendor || (window as WindowWithOpera).opera);
-  
-    return check;
-  }
 
-  export  const handleIOSSafariUA = (): void => {
-    if (!document.body.classList.contains('ios-safari')) {
-      const ua = window.navigator.userAgent;
-      const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
-      const webkit = !!ua.match(/WebKit/i);
-      const iOSSafari = iOS && webkit && !ua.match(/CriOS/i) && !ua.match(/OPiOS/i);
-      if (iOSSafari) {
-        document.body.classList.add('ios-safari');
-      }
+    const regex = new RegExp(regexString, 'i');
+    const regex2 = new RegExp(regexString2, 'i');
+
+    if (regex.test(a) || regex2.test(a.substr(0, 4))) {
+      check = true;
+    }
+  })(navigator.userAgent || navigator.vendor || (window as WindowWithOpera).opera);
+
+  return check;
+};
+
+export const handleIOSSafariUA = (): void => {
+  if (!document.body.classList.contains('ios-safari')) {
+    const ua = window.navigator.userAgent;
+    const iOS = !!ua.match(/iPad/i) || !!ua.match(/iPhone/i);
+    const webkit = !!ua.match(/WebKit/i);
+    const iOSSafari = iOS && webkit && !ua.match(/CriOS/i) && !ua.match(/OPiOS/i);
+    if (iOSSafari) {
+      document.body.classList.add('ios-safari');
     }
   }
-  
+};

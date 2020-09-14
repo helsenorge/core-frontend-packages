@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment, { Moment } from 'moment';
 import StringHelper from './string-utils';
 
 type ISO8601 = string;
@@ -145,16 +145,90 @@ export function longTimeRange(startInput: moment.MomentInput, endInput?: moment.
   return StringHelper.capitalize(range);
 }
 
-/* bugfix: sjekket ikke om param time var en dag eldre enn nåtid */
+/************************************************************/
+/*********************** MOMENT UTILS ***********************/
+/************************************************************/
+/**
+ * Returnerer true hvis datoene er på samme dag
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isSameDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  // Compare least significant, most likely to change units first
+  // Moment's isSame clones moment inputs and is a tad slow
+  return a.date() === b.date() && a.month() === b.month() && a.year() === b.year();
+};
+
+/**
+ * Returnerer true hvis dato a er før dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isBeforeDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  const aYear = a.year();
+  const aMonth = a.month();
+  const bYear = b.year();
+  const bMonth = b.month();
+  const isSameYear = aYear === bYear;
+  const isSameMonth = aMonth === bMonth;
+  if (isSameYear && isSameMonth) return a.date() < b.date();
+  if (isSameYear) return aMonth < bMonth;
+  return aYear < bYear;
+};
+
+/**
+ * Returnerer true hvis dato a er etter dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isAfterDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isBeforeDay(a, b) && !isSameDay(a, b);
+};
+
+/**
+ * Returnerer true hvis dato a er på samme dag eller før dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isInclusivelyBeforeDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isAfterDay(a, b);
+};
+
+/**
+ * Returnerer true hvis dato a er på samme dag eller etter dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
+ */
+export const isInclusivelyAfterDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isBeforeDay(a, b);
+};
+
+/**
+ * Returnerer true hvis input er etter dagens dato
+ * @param time MomentInput som skal sammenlignes
+ */
 export function isAfterToday(time: moment.MomentInput): boolean {
   return moment(time).diff(new Date(), 'days') > 0;
 }
 
+/**
+ * Returnerer true hvis input er etter nåtid
+ * @param time MomentInput som skal sammenlignes
+ */
 export function isAfter(time: moment.MomentInput): boolean {
   const now: moment.Moment = moment();
   return moment(time).isAfter(now);
 }
 
+/**
+ * Returnerer true hvis input er før nåtid
+ * @param time MomentInput som skal sammenlignes
+ */
 export function isBefore(time: moment.MomentInput): boolean {
   const now: moment.Moment = moment();
   return moment(time).isBefore(now);
@@ -176,6 +250,10 @@ export function toDateTime(dateTime: moment.Moment, format: string) {
   return dt;
 }
 
+/**
+ * Returnerer true hvis input er lik 0001-01-01T00:00:00
+ * @param dato eller ISO-string som skal sammenlignes
+ */
 export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
   const input = moment(date);
   // Setup a minDate to mimic .Net Date.MinDate constant.
