@@ -1,10 +1,12 @@
 import moment, { Moment } from 'moment';
 import StringHelper from './string-utils';
-import { abort } from '../../framework/src/pending-changes/pending-changes-state';
 
-type ISO8601 = string;
+// type ISO8601 = string;
 
-export function initialize(): void {
+/**
+ * Initialiserer Moment med norsk locale og riktig LongDate formats
+ */
+export const initialize = (): void => {
   moment.locale('nb');
   const language: moment.LocaleSpecification = {
     monthsShort: 'jan._feb._mars_april_mai_juni_juli_aug._sep._okt._nov._des.'.split('_'),
@@ -18,7 +20,7 @@ export function initialize(): void {
     },
   };
   moment.updateLocale('nb', language);
-}
+};
 
 /**
  * Returnerer JS Dato basert på en Moment date
@@ -125,20 +127,33 @@ export const timeOfDay = (a: moment.MomentInput, prefix = ''): string => {
   return value;
 };
 
+/**
+ * Returnerer full måned med år (Måned YYYY)
+ * @param a - Moment date som skal konverteres
+ */
 export const monthYear = (a: moment.MomentInput): string => {
   const start: moment.Moment = moment(a);
   return StringHelper.capitalize(start.format('MMMM YYYY'));
 };
 
-export function shortMonthYear(time: moment.MomentInput): string {
-  const start: moment.Moment = moment(time);
+/**
+ * Returnerer kort måned med år (Mån YYYY)
+ * @param a - Moment date som skal konverteres
+ */
+export const shortMonthYear = (a: moment.MomentInput): string => {
+  const start: moment.Moment = moment(a);
   return StringHelper.capitalize(start.format('MMM YYYY').replace('.', ''));
-}
+};
 
-export function monthRange(first: moment.MomentInput, last: moment.MomentInput): string {
+/**
+ * Returnerer range med full måned og år (Måned YYYY – Måned YYYY)
+ * @param a - startdato i Moment format
+ * @param b - sluttdato i Moment format
+ */
+export const monthRange = (a: moment.MomentInput, b: moment.MomentInput): string => {
   let range: string;
-  const start: moment.Moment = moment(first);
-  const end: moment.Moment = moment(last);
+  const start: moment.Moment = moment(a);
+  const end: moment.Moment = moment(b);
 
   if (start.isSame(end, 'month')) {
     range = StringHelper.capitalize(start.format('MMMM YYYY'));
@@ -151,12 +166,18 @@ export function monthRange(first: moment.MomentInput, last: moment.MomentInput):
       StringHelper.capitalize(end.format('MMMM YYYY'));
   }
   return range;
-}
+};
 
-export function timeRangeBetween(first: moment.MomentInput, last: moment.MomentInput): string {
+/**
+ * Returnerer range mellom 2 klokkeslett (Måned DD, YYYY, mellom kl. H:mm AM og HH:mm PM)
+ * Forutsetter at begge tidspunktene er på samme dag
+ * @param a - startdato i Moment format
+ * @param b - sluttdato i Moment format
+ */
+export const timeRangeBetween = (a: moment.MomentInput, b: moment.MomentInput): string => {
   let range: string;
-  const start: moment.Moment = moment(first);
-  const end: moment.Moment = moment(last);
+  const start: moment.Moment = moment(a);
+  const end: moment.Moment = moment(b);
 
   if (start.isSame(end)) {
     range = start.format('lll');
@@ -164,9 +185,15 @@ export function timeRangeBetween(first: moment.MomentInput, last: moment.MomentI
     range = start.format('ll') + ', mellom kl. ' + start.format('LT') + ' og ' + end.format('LT');
   }
   return range;
-}
+};
 
-export function timeRange(first: moment.MomentInput, last: moment.MomentInput): string {
+/**
+ * Returnerer range mellom 2 klokkeslett med bindestrekk (Måned DD, YYYY, H:mm AM - HH:mm PM)
+ * Forutsetter at begge tidspunktene er på samme dag
+ * @param a - startdato i Moment format
+ * @param b - sluttdato i Moment format
+ */
+export const timeRange = (first: moment.MomentInput, last: moment.MomentInput): string => {
   let range: string;
   const start: moment.Moment = moment(first);
   const end: moment.Moment = moment(last);
@@ -177,9 +204,15 @@ export function timeRange(first: moment.MomentInput, last: moment.MomentInput): 
     range = start.format('lll') + ' - ' + end.format('LT');
   }
   return range;
-}
+};
 
-export function longTimeRange(startInput: moment.MomentInput, endInput?: moment.MomentInput): string {
+/**
+ * Returnerer range mellom 2 klokkeslett med full dag måned og år (Day DD. Måned YYYY, kl. HH:mm AM - HH:mm PM)
+ * Forutsetter at begge tidspunktene er på samme dag
+ * @param a - startdato i Moment format
+ * @param b - sluttdato i Moment format
+ */
+export const longTimeRange = (startInput: moment.MomentInput, endInput?: moment.MomentInput): string => {
   const start: moment.Moment = moment(startInput);
   const end: moment.Moment = moment(endInput);
   let range = start.format('dddd D. MMMM YYYY, [kl.] HH:mm');
@@ -189,11 +222,8 @@ export function longTimeRange(startInput: moment.MomentInput, endInput?: moment.
   }
 
   return StringHelper.capitalize(range);
-}
+};
 
-/************************************************************/
-/*********************** MOMENT UTILS ***********************/
-/************************************************************/
 /**
  * Returnerer true hvis datoene er på samme dag
  * @param a Moment date som skal sammenlignes
@@ -235,16 +265,6 @@ export const isAfterDay = (a: Moment, b: Moment): boolean => {
 };
 
 /**
- * Returnerer true hvis dato a er på samme dag eller før dato b
- * @param a Moment date som skal sammenlignes
- * @param b Moment date som skal sammenlignes
- */
-export const isInclusivelyBeforeDay = (a: Moment, b: Moment): boolean => {
-  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
-  return !isAfterDay(a, b);
-};
-
-/**
  * Returnerer true hvis dato a er på samme dag eller etter dato b
  * @param a Moment date som skal sammenlignes
  * @param b Moment date som skal sammenlignes
@@ -255,51 +275,81 @@ export const isInclusivelyAfterDay = (a: Moment, b: Moment): boolean => {
 };
 
 /**
+ * Returnerer true hvis input (inkludert minutter) er etter nåtid
+ * @param a MomentInput som skal sammenlignes
+ */
+export const isAfter = (a: moment.MomentInput): boolean => {
+  const now: moment.Moment = moment();
+  return moment(a).isAfter(now);
+};
+
+/**
  * Returnerer true hvis input er etter dagens dato
- * @param time MomentInput som skal sammenlignes
+ * Forskjell med 'isAfter' er at denne tar utgangspunkt i dager
+ * @param a MomentInput som skal sammenlignes
  */
-export function isAfterToday(time: moment.MomentInput): boolean {
-  return moment(time).diff(new Date(), 'days') > 0;
-}
+export const isAfterToday = (a: moment.MomentInput): boolean => {
+  return moment(a).diff(new Date(), 'days') > 0;
+};
 
 /**
- * Returnerer true hvis input er etter nåtid
- * @param time MomentInput som skal sammenlignes
+ * Returnerer true hvis dato a er på samme dag eller før dato b
+ * @param a Moment date som skal sammenlignes
+ * @param b Moment date som skal sammenlignes
  */
-export function isAfter(time: moment.MomentInput): boolean {
-  const now: moment.Moment = moment();
-  return moment(time).isAfter(now);
-}
+export const isInclusivelyBeforeDay = (a: Moment, b: Moment): boolean => {
+  if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
+  return !isAfterDay(a, b);
+};
 
 /**
- * Returnerer true hvis input er før nåtid
- * @param time MomentInput som skal sammenlignes
+ * Returnerer true hvis input  (inkludert minutter) er før nåtid
+ * @param a MomentInput som skal sammenlignes
  */
-export function isBefore(time: moment.MomentInput): boolean {
+export const isBefore = (a: moment.MomentInput): boolean => {
   const now: moment.Moment = moment();
-  return moment(time).isBefore(now);
-}
+  return moment(a).isBefore(now);
+};
 
-export function numberOfWeeksInMonth(first: moment.Moment, last: moment.Moment): number {
-  const firstWeek = first.week();
-  const lastWeek = last.week();
+/**
+ * Returnerer true hvis input er før dagens dato
+ * Forskjell med 'isBefore' er at denne tar utgangspunkt i dager
+ * @param a MomentInput som skal sammenlignes
+ */
+/*
+export const isBeforeToday = (a: ISO8601 | Date): boolean => {
+  return moment(a).diff(new Date(), 'days') < 0;
+};
+
+export const isToday = (time: ISO8601 | Date): boolean => {
+  return moment(time).isSame(new Date(), 'day');
+};
+
+export const isEarlierToday = (time: ISO8601 | Date): boolean => {
+  return isToday(time) && isBefore(time);
+};*/
+
+/**
+ * Returnerer antall uker som finnes i en måned
+ * @param a - Moment startdato (first week)
+ * @param b - Moment sluttdato (last week)
+ */
+export const numberOfWeeksInMonth = (a: moment.Moment, b: moment.Moment): number => {
+  const firstWeek = a.week();
+  const lastWeek = b.week();
   if (firstWeek >= 52) {
     return lastWeek;
   } else if (lastWeek < firstWeek) {
     return 53 - firstWeek;
   }
   return lastWeek - firstWeek;
-}
-
-export function toDateTime(dateTime: moment.Moment, format: string) {
-  const dt: moment.Moment = moment(dateTime, format);
-  return dt;
-}
+};
 
 /**
  * Returnerer true hvis input er lik 0001-01-01T00:00:00
  * @param dato eller ISO-string som skal sammenlignes
  */
+/*
 export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
   const input = moment(date);
   // Setup a minDate to mimic .Net Date.MinDate constant.
@@ -313,18 +363,7 @@ export const toLocalISOStringUsingDateTimezoneOffset = (date: Date): string => {
     .toISOString();
   return isoDate.substring(0, isoDate.lastIndexOf('.'));
 };
-
-export const isToday = (time: ISO8601 | Date): boolean => {
-  return moment(time).isSame(new Date(), 'day');
-};
-
-export const isBeforeToday = (time: ISO8601 | Date): boolean => {
-  return moment(time).diff(new Date(), 'days') < 0;
-};
-
-export const isEarlierToday = (time: ISO8601 | Date): boolean => {
-  return isToday(time) && isBefore(time);
-};
+*/
 
 export default {
   initialize,
@@ -341,13 +380,13 @@ export default {
   monthRange,
   timeRange,
   longTimeRange,
-  isToday,
-  isBeforeToday,
-  isEarlierToday,
+  //isToday,
+  //isBeforeToday,
+  //isEarlierToday,
   isAfterToday,
   isAfter,
   isBefore,
   numberOfWeeksInMonth,
-  isDotNetMinDate,
-  toLocalISOStringUsingDateTimezoneOffset,
+  //isDotNetMinDate,
+  //toLocalISOStringUsingDateTimezoneOffset,
 };
