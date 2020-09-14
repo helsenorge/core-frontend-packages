@@ -1,0 +1,21 @@
+{
+  "extends": "../node_modules/@helsenorge/core-build/config/tsconfig.global.json",
+  "compilerOptions": {
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "target": "es5",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "baseUrl": "../src",
+    "jsx": "react",
+    "rootDir": "../src",
+    "noEmit": false,
+    "sourceMap": false,
+    "declaration": true,
+    "outDir": "../lib",
+    "typeRoots": ["../node_modules/@types", "../src/types"]
+  },
+  "exclude": ["../**/__tests__/**", "../**/__devonly__/**"],
+  "include": ["../src/**/*.ts", "../src/**/*.tsx"]
+}

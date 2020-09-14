@@ -2,7 +2,7 @@
 import { Dispatch, Action } from 'redux';
 import { get } from './hn-proxy-service';
 
-import { getVersion } from './page';
+import { getVersion } from './hn-page';
 import { EmptyAction } from './reducer';
 
 import { OperationResponse, TextMessage } from './types/entities';

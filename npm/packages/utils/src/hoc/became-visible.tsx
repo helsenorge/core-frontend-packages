@@ -35,9 +35,6 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
       this.state = {
         visible: false,
       };
-      this.checkComponentVisibility = this.checkComponentVisibility.bind(this);
-      this.enableVisbilityHandling = this.enableVisbilityHandling.bind(this);
-      this.disableVisbilityHandling = this.disableVisbilityHandling.bind(this);
     }
 
     componentDidMount(): void {
@@ -52,7 +49,7 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
       RATE_LIMIT = milliseconds;
     }
 
-    checkComponentVisibility(): void {
+    checkComponentVisibility = (): void => {
       const domnode: Element = this.domNode;
       const gcs: CSSStyleDeclaration = window.getComputedStyle(domnode, 'false');
       const dims: ClientRect = domnode.getBoundingClientRect();
@@ -78,9 +75,9 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
         this.setState({ visible: true });
         this.disableVisbilityHandling();
       }
-    }
+    };
 
-    enableVisbilityHandling(checkNow: boolean) {
+    enableVisbilityHandling = (checkNow: boolean) => {
       const info = console;
       if (typeof window === 'undefined') {
         return info.error("This environment lacks 'window' support.");
@@ -126,9 +123,9 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
         this.rcvFn();
       }
       return null;
-    }
+    };
 
-    disableVisbilityHandling(): void {
+    disableVisbilityHandling = (): void => {
       clearTimeout(this.rcvTimeout);
       if (this.rcvFn) {
         let domnode: Element = this.domNode;
@@ -143,7 +140,7 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
         window.removeEventListener('resize', this.rcvFn);
         this.rcvFn = undefined;
       }
-    }
+    };
 
     public render() {
       return <WrappedComponent {...(this.props as T)} visible={this.state.visible} />;

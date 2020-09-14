@@ -1,5 +1,5 @@
 import * as React from 'react';
-//used 14
+
 /**
  * Custom hook for klikk eller fokus utenfor et gitt element
  * @param ref Sjekker om det klikkes utenfor dette elementet
@@ -11,11 +11,11 @@ export default function clickOutside(
   disabled?: boolean,
   addFocusListener?: boolean
 ): void {
-  function handleClickOrFocusOutside(event: MouseEvent): void {
+  const handleClickOrFocusOutside = (event: MouseEvent): void => {
     if (ref.current && !ref.current.contains(event.target as Node)) {
       onClickOutside();
     }
-  }
+  };
 
   React.useEffect(() => {
     if (!disabled) {

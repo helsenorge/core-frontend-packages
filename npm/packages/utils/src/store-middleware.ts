@@ -1,26 +1,6 @@
-import { Store, Action, Dispatch, AnyAction, Middleware } from 'redux';
+import { AnyAction, Middleware } from 'redux';
 import { error } from './logger';
 import { debounce } from './debounce';
-
-//ubrukt
-interface Console {
-  group: (type: string) => void;
-  info: (type: string, action: Action) => void;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  log: (type: string, state: Record<string, any>) => void;
-  groupEnd: (type: string) => void;
-}
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const logger = (store: Store<{}>) => (next: (action: Action) => Dispatch<Action>) => (action: any) => {
-  const info: Console = console;
-  info.group(action.type);
-  info.info('dispatching', action);
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const result: Record<string, any> = next(action);
-  info.log('next state', store.getState());
-  info.groupEnd(action.type);
-  return result;
-};
 
 export const crashReporter: Middleware = () => next => (action: AnyAction) => {
   try {
