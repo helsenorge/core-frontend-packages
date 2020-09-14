@@ -1,6 +1,22 @@
-export default { getQueryStrings };
+const queryStringToPairList = (queryString: string): Array<{ key: string; value: string }> => {
+  console.log('queryStringToPairList', queryString);
+  const pairList = new Array<{ key: string; value: string }>();
+  queryString.split('&').forEach(e => {
+    if (e === undefined || e === null || e.length < 1) {
+      return;
+    }
 
-export function getQueryStrings() {
+    const pair = e.split('=');
+    pairList.push({ key: pair[0], value: pair[1] });
+  });
+  return pairList;
+};
+
+const pairListToQueryString = (pairList: Array<{ key: string; value: string }>): string => {
+  return pairList.map(e => [e.key, e.value].join('=')).join('&');
+};
+
+export const getQueryStrings = (): {} => {
   let match: RegExpExecArray | null;
   const pl = /\+/g; // Regex for replacing addition symbol with a space
   const search = /([^&=]+)=?([^&]*)/g;
@@ -15,10 +31,12 @@ export function getQueryStrings() {
     match = search.exec(query);
   }
   return urlParams;
-}
+};
 
-export function insertParam(key: string, value: string) {
+export const insertParam = (key: string, value: string): void => {
+  console.log('>>>>> insertParam', document.location.search);
   if (!document.location) {
+    console.log('RETURN');
     return;
   }
 
@@ -33,34 +51,16 @@ export function insertParam(key: string, value: string) {
     pairList.push({ key, value });
   }
   document.location.search = pairListToQueryString(pairList);
-}
+};
 
-export function removeParam(key: string) {
+export const removeParam = (key: string): void => {
   if (!document.location) {
     return;
   }
-
   key = encodeURI(key);
   const pairList = queryStringToPairList(document.location.search.substr(1));
   const newPairList = pairList.filter(pair => pair.key !== key);
 
   const x = pairListToQueryString(newPairList);
   document.location.search = x;
-}
-
-function pairListToQueryString(pairList: Array<{ key: string; value: string }>): string {
-  return pairList.map(e => [e.key, e.value].join('=')).join('&');
-}
-
-function queryStringToPairList(queryString: string): Array<{ key: string; value: string }> {
-  const pairList = new Array<{ key: string; value: string }>();
-  queryString.split('&').forEach(e => {
-    if (e === undefined || e === null || e.length < 1) {
-      return;
-    }
-
-    const pair = e.split('=');
-    pairList.push({ key: pair[0], value: pair[1] });
-  });
-  return pairList;
-}
+};
