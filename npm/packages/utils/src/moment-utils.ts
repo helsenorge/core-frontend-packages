@@ -1,5 +1,6 @@
 import moment, { Moment } from 'moment';
 import StringHelper from './string-utils';
+import { abort } from '../../framework/src/pending-changes/pending-changes-state';
 
 export function initialize(): void {
   moment.locale('nb');
@@ -17,70 +18,115 @@ export function initialize(): void {
   moment.updateLocale('nb', language);
 }
 
-export function toDate(time: moment.MomentInput): Date {
-  const start: moment.Moment = moment(time);
+/**
+ * Returnerer JS Dato basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const toDate = (a: moment.MomentInput): Date => {
+  const start: moment.Moment = moment(a);
   return start.toDate();
-}
+};
 
-export function longDate(time: moment.MomentInput): string {
-  const start: moment.Moment = moment(time);
-  const startOfDay: moment.Moment = moment(time).startOf('day');
+/**
+ * Returnerer en lang dato format (Måned DD, YYYY) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const longDate = (a: moment.MomentInput): string => {
+  const start: moment.Moment = moment(a);
+  const startOfDay: moment.Moment = moment(a).startOf('day');
   return start.isSame(startOfDay) ? start.format('ll') : start.format('lll');
-}
+};
 
-export function mediumDate(time: moment.MomentInput): string {
-  const start: moment.Moment = moment(time);
-  return start.format('DD. MMM YYYY HH:mm');
-}
-
-export function mediumDateNumbersClock(time: moment.MomentInput, separator = ' '): string {
-  const start: moment.Moment = moment(time);
-  return start.format(`DD.MM.YYYY${separator}[kl.] HH:mm`);
-}
-export function longDateNumbersClock(time: moment.MomentInput, separator = ' '): string {
+/**
+ * Returnerer en long dato format med klokken (Day DD. Måned YYYY klokken HH:mm) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const longDateNumbersClock = (time: moment.MomentInput, separator = ' '): string => {
   const start: moment.Moment = moment(time);
   return start.format(`dddd DD. MMMM YYYY${separator}[klokken] HH:mm`);
-}
+};
 
-export function mediumDateNumbers(time: moment.MomentInput): string {
-  const start: moment.Moment = moment(time);
+/**
+ * Returnerer en medium dato format (DD. Mån YYYY HH:mm) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const mediumDate = (a: moment.MomentInput): string => {
+  const start: moment.Moment = moment(a);
+  return start.format('DD. MMM YYYY HH:mm');
+};
+
+/**
+ * Returnerer en medium dato format kun med tall (DD.MM.YYYY HH:mm)) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const mediumDateNumbers = (a: moment.MomentInput): string => {
+  const start: moment.Moment = moment(a);
   return start.format('DD.MM.YYYY HH:mm');
-}
+};
 
-export function shortDate(time: moment.MomentInput): string {
+/**
+ * Returnerer en medium dato format med kl. (DD.MM.YYYY kl. HH:mm) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const mediumDateNumbersClock = (a: moment.MomentInput, separator = ' '): string => {
+  const start: moment.Moment = moment(a);
+  return start.format(`DD.MM.YYYY${separator}[kl.] HH:mm`);
+};
+
+/**
+ * Returnerer en short dato format (DD. Mån YYYY) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const shortDate = (time: moment.MomentInput): string => {
   const start: moment.Moment = moment(time);
   return start.format('DD. MMM YYYY');
-}
+};
 
-export function shortDateFullMonth(time: moment.MomentInput): string {
-  const start: moment.Moment = moment(time);
+/**
+ * Returnerer en short dato format med full måned (D. Måned YYYY) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const shortDateFullMonth = (a: moment.MomentInput): string => {
+  const start: moment.Moment = moment(a);
   return start.format('D. MMMM YYYY');
-}
+};
 
-export function shortDateNb(time: moment.MomentInput): string {
-  const start: moment.Moment = moment(time);
+/**
+ * Returnerer en short dato format (D. Mån YYYY) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export const shortDateNb = (a: moment.MomentInput): string => {
+  const start: moment.Moment = moment(a);
   return start.format('D. MMM YYYY');
-}
+};
 
-export function shortDateNumbers(time: moment.MomentInput): string {
-  const start: moment.Moment = moment(time);
+/**
+ * Returnerer en short dato format (DD.MM.YYYY) basert på en Moment date
+ * @param a - Moment date som skal konverteres
+ */
+export function shortDateNumbers(a: moment.MomentInput): string {
+  const start: moment.Moment = moment(a);
   return start.format('DD.MM.YYYY');
 }
 
-export function timeOfDay(time: moment.MomentInput, prefix = ''): string {
+/**
+ * Returnerer dato med riktig AM/PM og prefix
+ * @param a - Moment date som skal sjekkes
+ */
+export const timeOfDay = (a: moment.MomentInput, prefix = ''): string => {
   let value = '';
-  const start: moment.Moment = moment(time);
-  const startOfDay: moment.Moment = moment(time).startOf('day');
+  const start: moment.Moment = moment(a);
+  const startOfDay: moment.Moment = moment(a).startOf('day');
   if (!start.isSame(startOfDay)) {
     value = prefix + start.format('LT');
   }
   return value;
-}
+};
 
-export function monthYear(time: moment.MomentInput): string {
-  const start: moment.Moment = moment(time);
+export const monthYear = (a: moment.MomentInput): string => {
+  const start: moment.Moment = moment(a);
   return StringHelper.capitalize(start.format('MMMM YYYY'));
-}
+};
 
 export function shortMonthYear(time: moment.MomentInput): string {
   const start: moment.Moment = moment(time);
