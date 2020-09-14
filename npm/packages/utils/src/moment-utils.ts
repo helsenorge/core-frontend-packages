@@ -2,6 +2,8 @@ import moment, { Moment } from 'moment';
 import StringHelper from './string-utils';
 import { abort } from '../../framework/src/pending-changes/pending-changes-state';
 
+type ISO8601 = string;
+
 export function initialize(): void {
   moment.locale('nb');
   const language: moment.LocaleSpecification = {
@@ -252,9 +254,30 @@ export const isInclusivelyAfterDay = (a: Moment, b: Moment): boolean => {
   return !isBeforeDay(a, b);
 };
 
+/**
+ * Returnerer true hvis input er etter dagens dato
+ * @param time MomentInput som skal sammenlignes
+ */
 export function isAfterToday(time: moment.MomentInput): boolean {
+  return moment(time).diff(new Date(), 'days') > 0;
+}
+
+/**
+ * Returnerer true hvis input er etter nåtid
+ * @param time MomentInput som skal sammenlignes
+ */
+export function isAfter(time: moment.MomentInput): boolean {
   const now: moment.Moment = moment();
   return moment(time).isAfter(now);
+}
+
+/**
+ * Returnerer true hvis input er før nåtid
+ * @param time MomentInput som skal sammenlignes
+ */
+export function isBefore(time: moment.MomentInput): boolean {
+  const now: moment.Moment = moment();
+  return moment(time).isBefore(now);
 }
 
 export function numberOfWeeksInMonth(first: moment.Moment, last: moment.Moment): number {
@@ -273,6 +296,36 @@ export function toDateTime(dateTime: moment.Moment, format: string) {
   return dt;
 }
 
+/**
+ * Returnerer true hvis input er lik 0001-01-01T00:00:00
+ * @param dato eller ISO-string som skal sammenlignes
+ */
+export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
+  const input = moment(date);
+  // Setup a minDate to mimic .Net Date.MinDate constant.
+  const minDate = moment('0001-01-01T00:00:00');
+  return input.isSame(minDate);
+};
+
+export const toLocalISOStringUsingDateTimezoneOffset = (date: Date): string => {
+  const isoDate = moment(date)
+    .add('minutes', moment(date).utcOffset())
+    .toISOString();
+  return isoDate.substring(0, isoDate.lastIndexOf('.'));
+};
+
+export const isToday = (time: ISO8601 | Date): boolean => {
+  return moment(time).isSame(new Date(), 'day');
+};
+
+export const isBeforeToday = (time: ISO8601 | Date): boolean => {
+  return moment(time).diff(new Date(), 'days') < 0;
+};
+
+export const isEarlierToday = (time: ISO8601 | Date): boolean => {
+  return isToday(time) && isBefore(time);
+};
+
 export default {
   initialize,
   longDate,
@@ -288,6 +341,13 @@ export default {
   monthRange,
   timeRange,
   longTimeRange,
+  isToday,
+  isBeforeToday,
+  isEarlierToday,
   isAfterToday,
+  isAfter,
+  isBefore,
   numberOfWeeksInMonth,
+  isDotNetMinDate,
+  toLocalISOStringUsingDateTimezoneOffset,
 };
