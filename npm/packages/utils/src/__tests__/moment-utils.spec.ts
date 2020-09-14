@@ -81,10 +81,59 @@ describe('Moment-utils', () => {
     });
   });
 
-  describe('Når timeOfDay blir kalt med et tidspunkt midt på dagen', () => {
-    it('Så returnerer den dato med riktig am/PM og prefix', () => {
-      const a = moment('05.11.2020 12:45', 'DD.MM.YYYY HH:mm');
-      expect(momentUtilsFunctions.timeOfDay(a, 'myprefix > ')).toEqual('myprefix > 12:45 PM');
+  describe('Når monthYear blir kalt', () => {
+    it('Så returnerer den full måned med år', () => {
+      const a = moment('05.11.2020', 'DD.MM.YYYY');
+      expect(momentUtilsFunctions.monthYear(a)).toEqual('November 2020');
+    });
+  });
+
+  describe('Når shortMonthYear blir kalt', () => {
+    it('Så returnerer den kort måned med år', () => {
+      const a = moment('05.11.2020', 'DD.MM.YYYY');
+      expect(momentUtilsFunctions.shortMonthYear(a)).toEqual('Nov 2020');
+    });
+  });
+
+  describe('Når monthRange blir kalt med 2 forskjellige måneder', () => {
+    it('Så returnerer den range med full måned og år', () => {
+      const a = moment('22.05.2020', 'DD.MM.YYYY');
+      const b = moment('23.08.2020', 'DD.MM.YYYY');
+      expect(momentUtilsFunctions.monthRange(a, b)).toEqual(
+        `May 2020${String.fromCharCode(160) + String.fromCharCode(8211) + String.fromCharCode(160)}August 2020`
+      );
+    });
+  });
+
+  describe('Når monthRange blir kalt med samme måned', () => {
+    it('Så returnerer den samme måned med full måned og år', () => {
+      const a = moment('22.05.2020', 'DD.MM.YYYY');
+      const b = moment('23.05.2020', 'DD.MM.YYYY');
+      expect(momentUtilsFunctions.monthRange(a, b)).toEqual('May 2020');
+    });
+  });
+
+  describe('Når timeRangeBetween blir kalt med 2 forskjellige tidspunkter', () => {
+    it('Så returnerer den range med full dag og range', () => {
+      const a = moment('22.05.2020 08:32', 'DD.MM.YYYY HH.mm');
+      const b = moment('22.05.2020 12:54', 'DD.MM.YYYY HH:mm');
+      expect(momentUtilsFunctions.timeRangeBetween(a, b)).toEqual(`May 22, 2020, mellom kl. 8:32 AM og 12:54 PM`);
+    });
+  });
+
+  describe('Når timeRange blir kalt med 2 forskjellige tidspunkter', () => {
+    it('Så returnerer den range med full måned og år', () => {
+      const a = moment('22.05.2020 08:32', 'DD.MM.YYYY HH.mm');
+      const b = moment('22.05.2020 12:54', 'DD.MM.YYYY HH:mm');
+      expect(momentUtilsFunctions.timeRange(a, b)).toEqual(`May 22, 2020 8:32 AM - 12:54 PM`);
+    });
+  });
+
+  describe('Når longTimeRange blir kalt med 2 forskjellige tidspunkter', () => {
+    it('Så returnerer den range med full måned og år', () => {
+      const a = moment('22.05.2020 08:32', 'DD.MM.YYYY HH.mm');
+      const b = moment('22.05.2020 12:54', 'DD.MM.YYYY HH:mm');
+      expect(momentUtilsFunctions.longTimeRange(a, b)).toEqual(`Friday 22. May 2020, kl. 08:32 - 12:54 PM`);
     });
   });
 
@@ -110,6 +159,34 @@ describe('Moment-utils', () => {
     });
   });
 
+  describe('Når isAfter blir kalt med en dato før i dag', () => {
+    it('Så returnerer den false', () => {
+      const a = moment('23.05.2010', 'DD.MM.YYYY');
+      expect(momentUtilsFunctions.isAfter(a)).toBeFalsy();
+    });
+  });
+
+  describe('Når isAfter blir kalt med en dato etter i dag', () => {
+    it('Så returnerer den false', () => {
+      const a = moment('23.05.2100', 'DD.MM.YYYY');
+      expect(momentUtilsFunctions.isAfter(a)).toBeTruthy();
+    });
+  });
+
+  describe('Når isAfterToday blir kalt med en dato før i dag', () => {
+    it('Så returnerer den false', () => {
+      const a = moment('23.05.2010', 'DD.MM.YYYY');
+      expect(momentUtilsFunctions.isAfterToday(a)).toBeFalsy();
+    });
+  });
+
+  describe('Når isAfterToday blir kalt med en dato etter i dag', () => {
+    it('Så returnerer den false', () => {
+      const a = moment('23.05.2100', 'DD.MM.YYYY');
+      expect(momentUtilsFunctions.isAfterToday(a)).toBeTruthy();
+    });
+  });
+
   describe('Når isInclusivelyBeforeDay blir kalt', () => {
     it('Så returnerer den true hvis den ene datoen er på samme dag eller før den andre og false hvis ikke', () => {
       const a = moment('22.05.2020', 'DD.MM.YYYY');
@@ -131,6 +208,15 @@ describe('Moment-utils', () => {
       expect(momentUtilsFunctions.isInclusivelyAfterDay(a, b)).toBeTruthy();
       expect(momentUtilsFunctions.isInclusivelyAfterDay(a, c)).toBeFalsy();
       expect(momentUtilsFunctions.isInclusivelyAfterDay(c, a)).toBeTruthy();
+    });
+  });
+
+  describe('Når numberOfWeeksInMonth blir kalt', () => {
+    it('Så returnerer den riktig antall uker', () => {
+      const a = moment('01.05.2020', 'DD.MM.YYYY');
+      const b = moment('29.05.2020', 'DD.MM.YYYY');
+
+      expect(momentUtilsFunctions.numberOfWeeksInMonth(a, b)).toEqual(4);
     });
   });
 });
