@@ -5,6 +5,10 @@ interface RenderToBodyProps {
   printable?: boolean;
 }
 
+/**
+ * hoc-wrapper for å rendre direkte på dokument nivå
+ * @prop printable for å rendre til body (istedenfor vanlig overlay div)
+ */
 class RenderToBody extends React.PureComponent<RenderToBodyProps, {}> {
   private overlayTarget: HTMLElement;
 
@@ -13,19 +17,19 @@ class RenderToBody extends React.PureComponent<RenderToBodyProps, {}> {
     this.overlayTarget = document.createElement('div');
   }
 
-  componentDidMount() {
+  componentDidMount(): void {
     if (this.overlayTarget && !this.props.printable) {
       document.body.appendChild(this.overlayTarget);
     }
   }
 
-  componentWillUnmount() {
+  componentWillUnmount(): void {
     if (this.overlayTarget && !this.props.printable) {
       document.body.removeChild(this.overlayTarget);
     }
   }
 
-  render() {
+  render(): JSX.Element {
     return ReactDOM.createPortal(this.props.children, this.props.printable ? document.body : this.overlayTarget);
   }
 }

@@ -1,5 +1,4 @@
 const queryStringToPairList = (queryString: string): Array<{ key: string; value: string }> => {
-  console.log('queryStringToPairList', queryString);
   const pairList = new Array<{ key: string; value: string }>();
   queryString.split('&').forEach(e => {
     if (e === undefined || e === null || e.length < 1) {
@@ -16,6 +15,9 @@ const pairListToQueryString = (pairList: Array<{ key: string; value: string }>):
   return pairList.map(e => [e.key, e.value].join('=')).join('&');
 };
 
+/**
+ * Returnerer en objekt med alle URL params basert på window.location.search
+ */
 export const getQueryStrings = (): {} => {
   let match: RegExpExecArray | null;
   const pl = /\+/g; // Regex for replacing addition symbol with a space
@@ -33,10 +35,13 @@ export const getQueryStrings = (): {} => {
   return urlParams;
 };
 
+/**
+ * Legger til parameter i document.location.search
+ * @param key - key til parametren
+ * @param value - value til parametren
+ */
 export const insertParam = (key: string, value: string): void => {
-  console.log('>>>>> insertParam', document.location.search);
   if (!document.location) {
-    console.log('RETURN');
     return;
   }
 
@@ -53,6 +58,10 @@ export const insertParam = (key: string, value: string): void => {
   document.location.search = pairListToQueryString(pairList);
 };
 
+/**
+ * Fjerner parameter i document.location.search
+ * @param key - key til parametren
+ */
 export const removeParam = (key: string): void => {
   if (!document.location) {
     return;

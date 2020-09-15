@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render-to-body Gitt at RenderToBody wrapper en vanlig Element Når printable er false Så renderes det en portal 1`] = `
+<RenderToBody>
+  <Portal
+    containerInfo={
+      <div>
+        <section>
+          My first section rendered to document
+        </section>
+      </div>
+    }
+  >
+    <section>
+      My first section rendered to document
+    </section>
+  </Portal>
+</RenderToBody>
+`;
+
+exports[`render-to-body Gitt at RenderToBody wrapper en vanlig Element Når printable er true Så renderes det en portal med body tag 1`] = `
+<RenderToBody
+  printable={true}
+>
+  <Portal
+    containerInfo={
+      <body>
+        <div>
+          <section>
+            My first section rendered to document
+          </section>
+        </div>
+        <section>
+          My second section rendered to body (printable)
+        </section>
+      </body>
+    }
+  >
+    <section>
+      My second section rendered to body (printable)
+    </section>
+  </Portal>
+</RenderToBody>
+`;
