@@ -316,18 +316,25 @@ export const isBefore = (a: moment.MomentInput): boolean => {
  * Forskjell med 'isBefore' er at denne tar utgangspunkt i dager
  * @param a MomentInput som skal sammenlignes
  */
-/*
-export const isBeforeToday = (a: ISO8601 | Date): boolean => {
-  return moment(a).diff(new Date(), 'days') < 0;
+export const isBeforeToday = (a: moment.MomentInput): boolean => {
+  return moment(a).diff(moment(), 'days') < 0;
 };
 
-export const isToday = (time: ISO8601 | Date): boolean => {
-  return moment(time).isSame(new Date(), 'day');
+/**
+ * Returnerer true hvis input er dagens dato
+ * @param a MomentInput som skal sammenlignes
+ */
+export const isToday = (a: moment.MomentInput): boolean => {
+  return moment(a).isSame(moment(), 'day');
 };
 
-export const isEarlierToday = (time: ISO8601 | Date): boolean => {
-  return isToday(time) && isBefore(time);
-};*/
+/**
+ * Returnerer true hvis input er dagens dato og tid er tidligere enn nåtid
+ * @param a MomentInput som skal sammenlignes
+ */
+export const isEarlierToday = (a: moment.MomentInput): boolean => {
+  return isToday(a) && isBefore(a);
+};
 
 /**
  * Returnerer antall uker som finnes i en måned
@@ -347,23 +354,25 @@ export const numberOfWeeksInMonth = (a: moment.Moment, b: moment.Moment): number
 
 /**
  * Returnerer true hvis input er lik 0001-01-01T00:00:00
- * @param dato eller ISO-string som skal sammenlignes
+ * @param a MomentInput som skal sammenlignes
  */
-/*
-export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
-  const input = moment(date);
+export const isDotNetMinDate = (a: moment.MomentInput): boolean => {
+  const input = moment(a);
   // Setup a minDate to mimic .Net Date.MinDate constant.
   const minDate = moment('0001-01-01T00:00:00');
   return input.isSame(minDate);
 };
 
-export const toLocalISOStringUsingDateTimezoneOffset = (date: Date): string => {
-  const isoDate = moment(date)
-    .add('minutes', moment(date).utcOffset())
+/**
+ * Returnerer dato i ISO format med Timezone offset
+ * @param a MomentInput som skal sammenlignes
+ */
+export const toLocalISOStringUsingDateTimezoneOffset = (a: moment.MomentInput): string => {
+  const isoDate = moment(a)
+    .add('minutes', moment(a).utcOffset())
     .toISOString();
   return isoDate.substring(0, isoDate.lastIndexOf('.'));
 };
-*/
 
 export default {
   initialize,
@@ -380,13 +389,13 @@ export default {
   monthRange,
   timeRange,
   longTimeRange,
-  //isToday,
-  //isBeforeToday,
-  //isEarlierToday,
+  isToday,
+  isBeforeToday,
+  isEarlierToday,
   isAfterToday,
   isAfter,
   isBefore,
   numberOfWeeksInMonth,
-  //isDotNetMinDate,
-  //toLocalISOStringUsingDateTimezoneOffset,
+  isDotNetMinDate,
+  toLocalISOStringUsingDateTimezoneOffset,
 };
