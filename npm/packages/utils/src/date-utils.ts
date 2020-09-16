@@ -122,7 +122,10 @@ export const addDifference = (target: ISO8601, originalStart: ISO8601, originalS
   return toLocalISOString(theEnd);
 };
 
-/* deprecated */
+/**
+ * Returnerer dato i ISO format med Timezone offset
+ * @param date i Javascript Date format
+ */
 export const toLocalISOStringUsingDateTimezoneOffset = (date: Date): string => {
   const adjusted = new Date(date).getTime() - serverTimezoneOffset(date);
   const isoDate = new Date(adjusted).toISOString();
@@ -228,7 +231,10 @@ export const timeToString = (date: Date): string => {
   return `${padStr(date.getHours())}:${padStr(date.getMinutes())}`;
 };
 
-/* deprecated */
+/**
+ * Returnerer true hvis datoen er lik .Net Date.MinDate constant
+ * @param date dato i Javascript Dato format eller ISO
+ */
 export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
   const minDate = toDate('0001-01-01T00:00:00');
   const input = toDate(date);
