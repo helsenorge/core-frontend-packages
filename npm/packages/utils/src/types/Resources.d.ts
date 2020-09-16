@@ -10648,7 +10648,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   lightbox_slette_skjema_description: string;
   /** 
-  * Slett skjema i utkast
+  * Slett skjemautkast
   */
   lightbox_slette_skjema_title: string;
   /** 
