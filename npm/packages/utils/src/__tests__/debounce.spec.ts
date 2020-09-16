@@ -10,6 +10,9 @@ describe('Debounce', () => {
     func = jest.fn();
     debouncedFunc = debounce(func, 1000);
   });
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
 
   describe('Gitt at debounce function brukes', () => {
     describe('Når en function brukes mange ganger i en loop', () => {

@@ -1,6 +1,10 @@
 import * as contentAPIService from '../cms-content-api-service';
 
 describe('CMS content API service', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at getContentApiUrl kalles', () => {
     describe('Når __CmsContentApiUrl__ er definert i HN objektet', () => {
       it('Så returnerer den riktig url', () => {

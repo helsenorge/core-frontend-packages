@@ -2,6 +2,9 @@ import { AnyAction } from 'redux';
 import { configureStoreWithMiddleware } from '../store';
 
 describe('Store', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
   describe('Gitt at Redux er tatt i bruk', () => {
     describe('Når configureStoreWithMiddleware kalles', () => {
       it('Så lager den en fullverdig store', () => {

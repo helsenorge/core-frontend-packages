@@ -1,6 +1,10 @@
 import { harTilgangTilTjeneste } from '../hn-tjenester-med-tilgang';
 
 describe('hn-tjenester-med-tilgang', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at harTilgangTilTjeneste kalles', () => {
     describe('Når TjenesteTilgang er ikke definert i HN Commands objektet', () => {
       it('Så returnerer den false', () => {

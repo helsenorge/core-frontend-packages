@@ -21,6 +21,10 @@ function setupFeature(enabled: boolean, authorized: boolean, featureName?: strin
 }
 
 describe('FeatureToggle', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at bruker er pålogget', () => {
     describe('Når Feature1 er undefined', () => {
       it('Så gis false', () => {

@@ -1,6 +1,10 @@
 import { isDebug } from '../hn-debug';
 
 describe('Debug', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at isDebug kalles', () => {
     describe('Når __Debug__ er definert i HN objektet', () => {
       it('Så returnerer den verdien som er satt der', () => {

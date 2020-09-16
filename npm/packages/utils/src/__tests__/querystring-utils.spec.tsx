@@ -24,6 +24,7 @@ describe('Querystrings-utils', () => {
 
   afterAll(() => {
     global.window.location = oldWindowLocation;
+    jest.clearAllMocks();
   });
 
   describe('Gitt at window-location-search har url params', () => {

@@ -12,6 +12,10 @@ window.HN.Rest.__HendelseLoggType__ = 'logg';
 //TO-DO mangler test for download method
 
 describe('Gitt at det har skjedd en Error i en av de hn-proxy-service methodene', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Når getErrorFromHTML kalles', () => {
     it('Så parses den riktig fra JSON til ErrorMessage', () => {
       const dummyHtml = '{ "Code":"EHAPI-100000", "Message":"Teknisk feil", "ErrorCategory": 0}';
