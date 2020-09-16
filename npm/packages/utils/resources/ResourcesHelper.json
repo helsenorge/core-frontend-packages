@@ -2017,7 +2017,7 @@
     "appointmentDetailsCancellationReasonAway": "Avtalen ble avlyst fordi ingen var hjemme.",
     "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
     "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger.",
-    "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen"
+    "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen."
   },
   "HNMinHelseDialog": { 
     "getReferral_WarningHelseSorOst": "For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.",
