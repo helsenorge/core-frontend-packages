@@ -1,7 +1,5 @@
 import moment, { Moment } from 'moment';
-import StringHelper from './string-utils';
-
-// type ISO8601 = string;
+import { capitalize } from './string-utils';
 
 /**
  * Initialiserer Moment med norsk locale og riktig LongDate formats
@@ -133,7 +131,7 @@ export const timeOfDay = (a: moment.MomentInput, prefix = ''): string => {
  */
 export const monthYear = (a: moment.MomentInput): string => {
   const start: moment.Moment = moment(a);
-  return StringHelper.capitalize(start.format('MMMM YYYY'));
+  return capitalize(start.format('MMMM YYYY'));
 };
 
 /**
@@ -142,7 +140,7 @@ export const monthYear = (a: moment.MomentInput): string => {
  */
 export const shortMonthYear = (a: moment.MomentInput): string => {
   const start: moment.Moment = moment(a);
-  return StringHelper.capitalize(start.format('MMM YYYY').replace('.', ''));
+  return capitalize(start.format('MMM YYYY').replace('.', ''));
 };
 
 /**
@@ -156,14 +154,14 @@ export const monthRange = (a: moment.MomentInput, b: moment.MomentInput): string
   const end: moment.Moment = moment(b);
 
   if (start.isSame(end, 'month')) {
-    range = StringHelper.capitalize(start.format('MMMM YYYY'));
+    range = capitalize(start.format('MMMM YYYY'));
   } else {
     range =
-      StringHelper.capitalize(start.format('MMMM YYYY')) +
+      capitalize(start.format('MMMM YYYY')) +
       String.fromCharCode(160) +
       String.fromCharCode(8211) +
       String.fromCharCode(160) +
-      StringHelper.capitalize(end.format('MMMM YYYY'));
+      capitalize(end.format('MMMM YYYY'));
   }
   return range;
 };
@@ -221,7 +219,7 @@ export const longTimeRange = (startInput: moment.MomentInput, endInput?: moment.
     range = range + ' - ' + end.format('LT');
   }
 
-  return StringHelper.capitalize(range);
+  return capitalize(range);
 };
 
 /**

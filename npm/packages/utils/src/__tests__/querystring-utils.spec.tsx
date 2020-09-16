@@ -20,13 +20,10 @@ describe('Querystrings-utils', () => {
         },
       }
     );
-
-    console.log('beforeAll window.location.search', global.window.location.search);
   });
 
   afterAll(() => {
     global.window.location = oldWindowLocation;
-    //global.document.location = oldDocumentLocation;
   });
 
   describe('Gitt at window-location-search har url params', () => {
