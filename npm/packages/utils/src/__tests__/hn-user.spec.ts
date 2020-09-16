@@ -1,6 +1,10 @@
 import * as HNuserFunctions from '../hn-user';
 
 describe('hn-user', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at User er definert i HN objektet', () => {
     const HN = {
       User: {

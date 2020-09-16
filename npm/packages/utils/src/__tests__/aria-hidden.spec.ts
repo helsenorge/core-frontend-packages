@@ -1,6 +1,10 @@
 import aria from '../aria-hidden';
 
 describe('Aria-hidden', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at to HTMLelements er paa samme nivå på document objektet', () => {
     describe('Når det kalles aria function på den ene', () => {
       it('Så får den andre (sibling) aria-hidden attribute', () => {

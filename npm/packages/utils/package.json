@@ -28,6 +28,7 @@
     "@types/redux-thunk": "^2.1.0",
     "@types/styled-components": "5.1.0",
     "ical.js": "^1.4.0",
+    "react-router-dom": "^5.2.0",
     "styled-components": "^5.1.0"
   },
   "dependencies": {

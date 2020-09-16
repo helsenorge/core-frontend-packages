@@ -17,6 +17,9 @@ beforeEach(() => {
 afterEach(() => {
   global['Date'] = originalDate;
 });
+afterAll(() => {
+  jest.clearAllMocks();
+});
 
 describe('Date-utils', () => {
   describe('Gitt at dagens dato er satt til 2021-06-13T04:41:20', () => {

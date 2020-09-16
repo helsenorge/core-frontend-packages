@@ -1,6 +1,10 @@
 import * as adobeFunctions from '../adobe-analytics';
 
 describe('Adobe-analytics', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   const s = {
     track: (v: string) => {},
   };

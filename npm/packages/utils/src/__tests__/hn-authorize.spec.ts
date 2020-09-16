@@ -1,6 +1,10 @@
 import { isAuthorized, hashIsAuthorized } from '../hn-authorize';
 
 describe('hn-authorize', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at isAuthorized kalles', () => {
     describe('Når __Authorized__ er definert i HN Rest objektet', () => {
       it('Så returnerer den verdien som er satt der', () => {

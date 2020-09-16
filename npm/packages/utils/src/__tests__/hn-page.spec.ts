@@ -1,6 +1,10 @@
 import * as HNpageFunctions from '../hn-page';
 
 describe('hn-page', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at getPath kalles', () => {
     describe('Når __Path__ er definert i HN Page objektet', () => {
       it('Så returnerer den verdien som er satt der', () => {

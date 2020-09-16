@@ -8,6 +8,9 @@ describe('Focus-utils', () => {
     writable: true,
     value: {},
   });
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
 
   describe('Gitt at getDocumentActiveElement kalles', () => {
     const wrapperContent = (

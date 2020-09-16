@@ -7,6 +7,10 @@ describe('Navigation-utils', () => {
   mockHistory.go = jest.fn();
   mockHistory.replace = jest.fn();
 
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at navigationTrail har noe location lagret', () => {
     describe('Når goBackOrUp kalles for den aller første gang', () => {
       it('Så navigerer den tilbake til path /', () => {

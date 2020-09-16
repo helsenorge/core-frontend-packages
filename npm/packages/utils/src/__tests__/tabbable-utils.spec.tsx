@@ -27,6 +27,9 @@ interface TabbableElement extends HTMLInputElement {
 }
 
 describe('Tabbable-utils', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
   describe('Gitt at det finnes en container med flere knapper', () => {
     const wrapper = mount(<TabbableTestHelper />, { attachTo: document.body });
     const node = wrapper.getDOMNode();

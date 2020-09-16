@@ -2,6 +2,10 @@ import moment from 'moment';
 import * as momentUtilsFunctions from '../moment-utils';
 
 describe('Moment-utils', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Når toDate blir kalt', () => {
     it('Så returnerer den tilsvarende JS dato ', () => {
       const a = moment('22.05.2020', 'DD.MM.YYYY');

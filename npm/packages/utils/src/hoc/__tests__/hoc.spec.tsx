@@ -1,12 +1,15 @@
 import React from 'react';
-
+import { BrowserRouter as Router } from 'react-router-dom';
+import * as adobeUtils from '../../adobe-analytics';
 import { mount } from 'enzyme';
 import mountHOC from '../mount';
 import becameVisible from '../became-visible';
 import layoutChange from '../layout-change';
+import RenderToBody from '../render-to-body';
+import TrackRouteChange from '../track-route-change';
 
 /*
-Disse testene er ikke fullverdige fordi de tester ikke logikken inne i class komponenter som instansieres i HOC.
+Noen av disse testene er ikke fullverdige fordi de tester ikke logikken inne i class komponenter som instansieres i HOC.
 Det testes bare at de mountes og at default state er riktig
 */
 
@@ -31,6 +34,10 @@ Object.defineProperty(window, 'getComputedStyle', {
 // Not implemented: window.computedStyle(elt, pseudoElt)
 
 describe('HOC utils', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at en komponent wrappes i mount HOC', () => {
     describe('Når den instansieres', () => {
       const Testmounthoc: React.FC = () => {
@@ -86,6 +93,51 @@ describe('HOC utils', () => {
         expect(LayoutChangeComponentInstance.instance().state['smToMd']).toBeTruthy();
         expect(LayoutChangeComponentInstance.instance().state['mdToLg']).toBeTruthy();
         expect(LayoutChangeComponentInstance.instance().state['lgToXl']).toBeTruthy();
+      });
+    });
+  });
+
+  describe('Gitt at en komponent wrappes i render-to-body HOC', () => {
+    describe('Når printable er false', () => {
+      it('Så renderes det en portal', () => {
+        const wrapper = mount(
+          <RenderToBody>
+            <section>{'My first section rendered to document'}</section>
+          </RenderToBody>
+        );
+
+        expect(wrapper).toMatchSnapshot();
+      });
+    });
+
+    describe('Når printable er true', () => {
+      it('Så renderes det en portal med body tag', () => {
+        const wrapper = mount(
+          <RenderToBody printable>
+            <section>{'My second section rendered to body (printable)'}</section>
+          </RenderToBody>
+        );
+
+        expect(wrapper).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('Gitt at en komponent wrappes i track-route-change HOC', () => {
+    describe('Når den instansieres', () => {
+      it('Så kaller den adobe-analytics og rendres riktig', () => {
+        const adobeMock = jest.spyOn(adobeUtils, 'trackUrlChange');
+
+        const wrapper = mount(
+          <Router>
+            <TrackRouteChange>
+              <section>{'Track routing section'}</section>
+            </TrackRouteChange>
+          </Router>
+        );
+
+        expect(wrapper).toMatchSnapshot();
+        expect(adobeMock).toHaveBeenCalled();
       });
     });
   });

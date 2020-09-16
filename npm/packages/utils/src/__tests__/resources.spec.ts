@@ -2,6 +2,9 @@ import * as resourcesFunctions from '../resources';
 import * as HNProxyServiceFunctions from '../hn-proxy-service';
 
 describe('Resources', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
   const fakeResourcesState: resourcesFunctions.ResourcesState = {};
 
   describe('Gitt at ResourcesState er tom', () => {
@@ -147,9 +150,9 @@ describe('Resources', () => {
     });
   });
 
-  describe('Gitt at ...', () => {
+  describe('Gitt at Redux store er på plass', () => {
     describe('Når fetchResources kalles', () => {
-      it('Så ...', () => {
+      it('Så disptacher den riktig action', () => {
         const fakeResourcesStateWithItems: resourcesFunctions.ResourcesState = {};
         const fakeGlobalState: resourcesFunctions.GlobalStateWithResources = {
           resources: fakeResourcesStateWithItems,

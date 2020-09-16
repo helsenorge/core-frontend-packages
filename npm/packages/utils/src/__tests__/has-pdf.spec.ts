@@ -14,6 +14,10 @@ describe('Has-pdf', () => {
     value: {},
   });
 
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at det kalles hasPdf', () => {
     describe('Når nettleseren ikke støtter PDF', () => {
       it('Så sjekkes den navigator mimetype og PDF ActiveXObject og returnerer false', () => {

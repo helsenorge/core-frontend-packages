@@ -31,6 +31,10 @@ const BasicClickOutsideComponent: React.FunctionComponent<{}> = () => {
 };
 
 describe('Click-outside', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at det finnes en wrapper med en click counter', () => {
     describe('Når det klikkes utenfor wrapperen', () => {
       it('Så kalles det clickOutside og counter øker', () => {

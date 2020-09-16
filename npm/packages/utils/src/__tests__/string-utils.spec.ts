@@ -1,6 +1,9 @@
 import * as stringFunctions from '../string-utils';
 
 describe('String-utils', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
   describe('Gitt at isEmpty skal sjekkes', () => {
     describe('Når det sendes en tom string', () => {
       it('Så returnerer den true', () => {

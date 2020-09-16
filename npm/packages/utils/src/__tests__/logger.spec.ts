@@ -1,6 +1,10 @@
 import loggerUtils from '../logger';
 
 describe('Logger', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   const originalEnv = process.env['NODE_ENV'];
   process.env['NODE_ENV'] = 'dev';
   const originalConsole = global.console;

@@ -1,6 +1,10 @@
 import * as icalUtils from '../ical-utils';
 
-describe('Debug', () => {
+describe('Ical-utils', () => {
+  afterAll(() => {
+    jest.clearAllMocks();
+  });
+
   describe('Gitt at formatDuration kalles', () => {
     describe('Når timer og minutter er sendt', () => {
       it('Så returneres det en ical duration', () => {
