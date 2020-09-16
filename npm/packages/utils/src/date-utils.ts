@@ -122,13 +122,6 @@ export const addDifference = (target: ISO8601, originalStart: ISO8601, originalS
   return toLocalISOString(theEnd);
 };
 
-/* deprecated */
-export const toLocalISOStringUsingDateTimezoneOffset = (date: Date): string => {
-  const adjusted = new Date(date).getTime() - serverTimezoneOffset(date);
-  const isoDate = new Date(adjusted).toISOString();
-  return isoDate.substring(0, isoDate.lastIndexOf('.'));
-};
-
 /**
  * Returnerer måned i en string
  * @param monthNumber tall til ønsket måned (array start med 0)
@@ -226,13 +219,6 @@ export const dateToString = (date: Date | string | ISO8601, resources: Resources
  */
 export const timeToString = (date: Date): string => {
   return `${padStr(date.getHours())}:${padStr(date.getMinutes())}`;
-};
-
-/* deprecated */
-export const isDotNetMinDate = (date: ISO8601 | Date): boolean => {
-  const minDate = toDate('0001-01-01T00:00:00');
-  const input = toDate(date);
-  return minDate.getTime() === input.getTime();
 };
 
 /* deprecated */
