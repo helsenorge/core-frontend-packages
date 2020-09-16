@@ -266,7 +266,7 @@ export const download = (cmd: string, proxyName: string, params?: ParamsObj): Pr
           console.error('responseHtml', responseHtml);
           const errorResponse = getErrorFromHTML(responseHtml);
           let response;
-          if (errorResponse && errorResponse.ErrorMessage) {
+          if (errorResponse && ((errorResponse as unknown) as OperationResponse).ErrorMessage) {
             response = errorResponse;
           } else {
             response = {

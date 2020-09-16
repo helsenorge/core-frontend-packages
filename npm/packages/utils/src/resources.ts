@@ -1,40 +1,90 @@
-///<reference path="./types/dev.d.ts"/>
 import { Dispatch, Action } from 'redux';
+
+import { OperationResponse, TextMessage, EmptyAction } from './types/entities';
 import { get } from './hn-proxy-service';
-
 import { getVersion } from './hn-page';
-import { EmptyAction } from './reducer';
-
-import { OperationResponse, TextMessage } from './types/entities';
 
 interface SotProxyOperationResponse {
   resources: string;
 }
 
-type REQUEST = 'resources/REQUEST';
-const REQUEST: REQUEST = 'resources/REQUEST';
-type RECEIVE = 'resources/RECEIVE';
-export const RECEIVE: RECEIVE = 'resources/RECEIVE';
-type FAILURE = 'resources/FAILURE';
-const FAILURE: FAILURE = 'resources/FAILURE';
-
+type ResourceItem = { [key: string]: string } | {};
 export interface Resource {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  items: any;
+  items: ResourceItem | null;
   loading: boolean;
   loaded: boolean;
   error: boolean;
 }
 
-type ResourcesState = { [key: string]: Resource };
+/* Resource State where a key is a stringified projectName with language:
+f.ex '{"project":"projectname","language":"language"}' */
+export type ResourcesState = { [key: string]: Resource };
 
 export interface GlobalStateWithResources {
   resources: ResourcesState;
 }
+/**************** ACTIONS TYPES *****************/
+type REQUEST = 'resources/REQUEST';
+export const REQUEST: REQUEST = 'resources/REQUEST';
+type RECEIVE = 'resources/RECEIVE';
+export const RECEIVE: RECEIVE = 'resources/RECEIVE';
+type FAILURE = 'resources/FAILURE';
+export const FAILURE: FAILURE = 'resources/FAILURE';
+
+/******************* ACTIONS *******************/
+export type RequestResourcesAction = {
+  type: REQUEST;
+  project: string;
+  language: string;
+};
+
+export type ReceiveResourcesAction = {
+  type: RECEIVE;
+  data: ResourceItem;
+  project: string;
+  language: string;
+};
+
+export type ReceiveResourcesFailedAction = {
+  type: FAILURE;
+  project: string;
+  language: string;
+};
 
 export type ResourcesAction = RequestResourcesAction | ReceiveResourcesAction | ReceiveResourcesFailedAction | EmptyAction;
 
-export function resources(resourcesState: ResourcesState = {}, action: ResourcesAction): ResourcesState {
+/******************* REDUCERS *******************/
+function requestResources(project: string, language: string): RequestResourcesAction {
+  return {
+    type: REQUEST,
+    project,
+    language,
+  };
+}
+
+function receiveResources(data: ResourceItem, project: string, language: string): ReceiveResourcesAction {
+  return {
+    type: RECEIVE,
+    data,
+    project,
+    language,
+  };
+}
+
+function receiveResourcesFailed(project: string, language: string): ReceiveResourcesFailedAction {
+  return {
+    type: FAILURE,
+    project,
+    language,
+  };
+}
+
+/**
+ * Returnerer ResourcesState med oppdatert status avhengig av Action
+ * @param resourcesState - incoming ResourcesState
+ * @param action - ønsket ResourcesAction (Request, Receive, Failure, Empty)
+ */
+export const resources = (resourcesState: ResourcesState = {}, action: ResourcesAction): ResourcesState => {
   const project: string | undefined = 'project' in action ? action.project : undefined;
   const language: string | undefined = 'language' in action ? action.language : undefined;
   const key = { project: project, language: language };
@@ -73,100 +123,73 @@ export function resources(resourcesState: ResourcesState = {}, action: Resources
     default:
       return resourcesState;
   }
-}
-
-function requestResources(project: string, language: string): RequestResourcesAction {
-  return {
-    type: REQUEST,
-    project,
-    language,
-  };
-}
-
-export type RequestResourcesAction = {
-  type: REQUEST;
-  project: string;
-  language: string;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function receiveResources(data: Record<string, any>, project: string, language: string): ReceiveResourcesAction {
-  return {
-    type: RECEIVE,
-    data,
-    project,
-    language,
-  };
-}
-export type ReceiveResourcesAction = {
-  type: RECEIVE;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  data: Record<string, any>;
-  project: string;
-  language: string;
-};
-
-function receiveResourcesFailed(project: string, language: string): ReceiveResourcesFailedAction {
-  return {
-    type: FAILURE,
-    project,
-    language,
-  };
-}
-export type ReceiveResourcesFailedAction = {
-  type: FAILURE;
-  project: string;
-  language: string;
-};
-
-export function shouldFetchResources(state: GlobalStateWithResources, project: string, language: string): boolean {
+/**
+ * Returnerer ResourceItem fra resourcesState basert på project og language
+ * @param resourcesState - incoming ResourcesState
+ * @param project - project string
+ * @param language - language string
+ */
+export const getResources = (resourcesState: ResourcesState, project: string, language: string): ResourceItem | null => {
   const key: string = JSON.stringify({ project: project, language: language });
-  return !(key in state.resources);
-}
+  return key in resourcesState ? resourcesState[key].items : {};
+};
 
-export function fetchResources(
-  project: string,
-  language: string
-): (dispatch: Dispatch<Action>, getState: () => GlobalStateWithResources) => null {
-  return (dispatch: Dispatch<Action>, getState: () => GlobalStateWithResources) => {
-    if (!language) {
-      language = 'nb-NO';
-    }
-    if (shouldFetchResources(getState(), project, language)) {
-      dispatch(requestResources(project, language));
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const success = (data: Record<string, any>) => dispatch(receiveResources(data, project, language));
-      const failure = () => dispatch(receiveResourcesFailed(project, language));
-      getProxyResx(project, language, success, failure);
-    }
-    return null;
-  };
-}
-
-export function getResources(resources: ResourcesState, project: string, language: string): {} {
-  const key: string = JSON.stringify({ project: project, language: language });
-  return key in resources ? resources[key].items : {};
-}
-
-export function getResourcesFromState(state: GlobalStateWithResources, project: string, language: string): {} {
+/**
+ * Returnerer ResourceItem fra global Staten basert på project og language
+ * @param state - incoming GlobalStateWithResources
+ * @param project - project string
+ * @param language - language string
+ */
+export const getResourcesFromState = (state: GlobalStateWithResources, project: string, language: string): ResourceItem | null => {
   const key: string = JSON.stringify({ project: project, language: language });
   const value = state.resources[key];
   return value && value.loaded ? value.items : null;
-}
+};
 
-export function getResourcesObjectFromState(state: GlobalStateWithResources, project: string, language: string): Resource {
+/**
+ * Returnerer Resource fra global Staten basert på project og language
+ * Returnerer ny Resource med default status hvis den ikke finnes
+ * @param state - incoming GlobalStateWithResources
+ * @param project - project string
+ * @param language - language string
+ */
+export const getResourcesObjectFromState = (state: GlobalStateWithResources, project: string, language: string): Resource => {
   const key: string = JSON.stringify({ project: project, language: language });
   return key in state.resources ? state.resources[key] : { error: false, loading: false, items: {}, loaded: false };
+};
+
+function getResourceWithId(json: ResourceItem): ResourceItem {
+  return Object.keys(json).reduce((previous, current: string) => {
+    previous[current] = json[current] + ' [' + current + ']';
+    return previous;
+  }, {});
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export function getProxyResx(
+function parseResult(resources: string, success: (data: ResourceItem) => void): void {
+  if (resources) {
+    let json: ResourceItem = JSON.parse(resources);
+    if (window.HN.Debug && window.document.URL.includes('hjelpetekst=true')) {
+      json = getResourceWithId(json);
+    }
+    success(json);
+  }
+}
+
+/**
+ * Kaller get gjennom hn-proxy-service
+ * @param name - Filename param som sendes til SOT UIResource
+ * @param culture - Culture param som sendes til SOT UIResource
+ * @param success - methode som kalles ved success. Tar imot ResourceItem som param
+ * @param failure - methode som kalles ved failure. Tar imot TextMessage som param
+ */
+export const getProxyResx = (
   name: string,
   culture: string,
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  success: (data: Record<string, any>) => void,
+  success: (data: ResourceItem) => void,
   failure?: (error?: TextMessage) => void
-) {
+): void => {
   get('UIResource', 'sot', {
     Culture: culture,
     Filename: name,
@@ -180,24 +203,38 @@ export function getProxyResx(
         failure(error.ErrorMessage);
       }
     });
-}
+};
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function parseResult(resources: string, success: (data: Record<string, any>) => void) {
-  if (resources) {
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let json: Record<string, any> = JSON.parse(resources);
-    if (window.HN.Debug && window.document.URL.includes('hjelpetekst=true')) {
-      json = getResourceWithId(json);
+/**
+ * Returnerer false om resources allerede ligger i staten
+ * @param state - incoming GlobalStateWithResources
+ * @param project - project string
+ * @param language - language string
+ */
+export const shouldFetchResources = (state: GlobalStateWithResources, project: string, language: string): boolean => {
+  const key: string = JSON.stringify({ project: project, language: language });
+  return !(key in state.resources);
+};
+
+/**
+ * Returnerer en dispatch av requestResources basert på project name og language
+ * @param project - project string
+ * @param language - language string
+ */
+export const fetchResources = (
+  project: string,
+  language: string
+): ((dispatch: Dispatch<Action>, getState: () => GlobalStateWithResources) => null) => {
+  return (dispatch: Dispatch<Action>, getState: () => GlobalStateWithResources): null => {
+    if (!language) {
+      language = 'nb-NO';
     }
-    success(json);
-  }
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function getResourceWithId(json: Record<string, any>) {
-  return Object.keys(json).reduce((previous, current) => {
-    previous[current] = json[current] + ' [' + current + ']';
-    return previous;
-  }, {});
-}
+    if (shouldFetchResources(getState(), project, language)) {
+      dispatch(requestResources(project, language));
+      const success = (data: ResourceItem) => dispatch(receiveResources(data, project, language));
+      const failure = () => dispatch(receiveResourcesFailed(project, language));
+      getProxyResx(project, language, success, failure);
+    }
+    return null;
+  };
+};
