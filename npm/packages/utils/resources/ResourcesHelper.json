@@ -2016,7 +2016,8 @@
     "appointmentDetailsCancellationReasonService": "Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.",
     "appointmentDetailsCancellationReasonAway": "Avtalen ble avlyst fordi ingen var hjemme.",
     "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
-    "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger."
+    "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger.",
+    "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen"
   },
   "HNMinHelseDialog": { 
     "getReferral_WarningHelseSorOst": "For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.",
@@ -2668,13 +2669,13 @@
     "arkivert_med_stor_a": "Arkivert",
     "hjelpetrigger_dokumentVisningsnavn": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"Dersom du vil gi dokumentet et annet visningsnavn kan du gjøre det her. Opprinnelig filnavn endres ikke.\",\"seksjonstekst_overskrift\":\"\",\"seksjonstekst_brodtekst\":\"\"}",
     "gammelt_navn": "Navn",
+    "lightbox_ikke_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter",
+    "lightbox_slette_skjema_description": "Du er i ferd med å slette skjemaet i utkast fra Helsenorge. Det vil ikke være mulig å angre slettingen og du vil måtte starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet dette skjemaet. Er du helt sikker på at du vil slette?",
+    "lightbox_slette_skjema_title": "Slett skjema i utkast",
     "lightbox_til_deling_title": "Lagret",
     "lightbox_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter. Noen fastleger kan få tilgang til skjemaet dersom du velger å dele det. Hvis du vil at fastlegen skal se skjemaet når du har legetime, kan du forsøke å dele det med han eller henne.",
     "lightbox_til_deling_deleknapp": "Gå til Deling",
-    "lightbox_til_deling_lukkknapp": "Lukk",
-    "lightbox_ikke_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter",
-    "lightbox_slette_skjema_description": "Du er i ferd med å slette skjemaet i utkast fra Helsenorge. Det vil ikke være mulig å angre slettingen og du vil måtte starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet dette skjemaet. Er du helt sikker på at du vil slette?",
-    "lightbox_slette_skjema_title": "Slett skjema i utkast"
+    "lightbox_til_deling_lukkknapp": "Lukk"
   },
   "HNMinHelseHealthArchiveStrings": { 
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
