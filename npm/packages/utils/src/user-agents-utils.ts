@@ -1,6 +1,9 @@
 interface WindowWithOpera extends Window {
   opera: string;
 }
+/**
+ * Returns true når brukeren er på mobil (native check on user agent)
+ */
 export const isMobileUA = (): boolean => {
   let check = false;
   (function(a: string): void {
@@ -44,6 +47,9 @@ export const isMobileUA = (): boolean => {
   return check;
 };
 
+/**
+ * Legger til 'ios-safari' className på body når nettleseren er safari (native check on user agent)
+ */
 export const handleIOSSafariUA = (): void => {
   if (!document.body.classList.contains('ios-safari')) {
     const ua = window.navigator.userAgent;

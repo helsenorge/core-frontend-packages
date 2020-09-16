@@ -116,4 +116,38 @@ describe('String-utils', () => {
       });
     });
   });
+
+  describe('Gitt at invalidNodes skal sjekkes', () => {
+    describe('Når det sendes en streng med html tags', () => {
+      it('Så returnerer den alle tagsene', () => {
+        const s = stringFunctions.invalidNodes('This is a <strong>test</strong> with html <span>tags</span>');
+        expect(s.length).toEqual(4);
+        expect(s[0]).toEqual('<strong>');
+        expect(s[1]).toEqual('</strong>');
+        expect(s[2]).toEqual('<span>');
+        expect(s[3]).toEqual('</span>');
+      });
+    });
+  });
+
+  describe('Gitt at isValid skal sjekkes', () => {
+    describe('Når det sendes en streng med html tags', () => {
+      it('Så returnerer den false', () => {
+        const s = stringFunctions.isValid('This is a <strong>test</strong> with html <span>tags</span>');
+        expect(s).toBeFalsy();
+      });
+    });
+    describe('Når det sendes en streng med emoticons', () => {
+      it('Så returnerer den false', () => {
+        const s = stringFunctions.isValid('This is a smiley \u2700');
+        expect(s).toBeFalsy();
+      });
+    });
+    describe('Når det sendes en vanlig streng', () => {
+      it('Så returnerer den true', () => {
+        const s = stringFunctions.isValid('This is a normal string');
+        expect(s).toBeTruthy();
+      });
+    });
+  });
 });
