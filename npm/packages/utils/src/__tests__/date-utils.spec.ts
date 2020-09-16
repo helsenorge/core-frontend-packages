@@ -100,13 +100,6 @@ describe('Date-utils', () => {
       });
     });
 
-    describe('Når toLocalISOStringUsingDateTimezoneOffset blir kalt', () => {
-      it('Så returnerer den riktig dato', () => {
-        const date = dateUtilsFunctions.toLocalISOStringUsingDateTimezoneOffset(new Date('2020-04-13T12:42:00.000'));
-        expect(date).toEqual('2020-04-13T12:42:00');
-      });
-    });
-
     describe('Når getMonthNameFromMonthNumber blir kalt', () => {
       it('Så returnerer den riktig month', () => {
         const resourcesMock: dateUtilsFunctions.ResourcesWithMonthNames = {
@@ -182,15 +175,6 @@ describe('Date-utils', () => {
       it('Så returnerer den riktig time string', () => {
         const date = dateUtilsFunctions.timeToString(new Date('2020-04-13T12:42:00.000'));
         expect(date).toEqual('12:42');
-      });
-    });
-
-    describe('Når isDotNetMinDate blir kalt', () => {
-      it('Så returnerer den true eller false hvis de er like / ulike .Net minDate', () => {
-        const date = dateUtilsFunctions.isDotNetMinDate(new Date('2020-04-13T12:42:00.000'));
-        expect(date).toBeFalsy;
-        const dateAlike = dateUtilsFunctions.isDotNetMinDate(new Date('0001-01-01T00:00:00'));
-        expect(dateAlike).toBeTruthy;
       });
     });
   });
