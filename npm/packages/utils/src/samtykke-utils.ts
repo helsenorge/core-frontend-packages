@@ -21,31 +21,7 @@ export enum SamtykkeStatus {
 }
 
 /**
- * Sjekker ...
- * @param samtykker ...
- */
-export const hasDigitaleHelsetjenesteSamtykke = (samtykker: Samtykke[]): boolean | undefined => {
-  if (samtykker) {
-    return samtykker.some(
-      s => s.PersonvernInnstillingDefinisjonGuid.toUpperCase() === PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste && s.ErAktiv
-    );
-  }
-};
-
-/**
- * Sjekker ...
- * @param samtykker ...
- */
-export const hasPasientreiserSamtykke = (samtykker: Samtykke[]): boolean | undefined => {
-  if (samtykker) {
-    return samtykker.some(
-      s => s.PersonvernInnstillingDefinisjonGuid.toUpperCase() === PersonvernInnstillingDefinisjonGuids.Pasientreiser && s.ErAktiv
-    );
-  }
-};
-
-/**
- * Sjekker hvilke samtykker innbygger har gitt til bruk av helsenorge
+ * Returnerer samtykker en innbygger har gitt til bruk av helsenorge
  */
 export const getSamtykker = (): Array<Samtykke> => {
   if (window.HN.Commands.__GetTjenesterMedTilgang__ !== undefined && window.HN.Commands.__GetTjenesterMedTilgang__ !== null) {
@@ -65,14 +41,38 @@ export const harSamtykket = (guid: PersonvernInnstillingDefinisjonGuids, samtykk
     return false;
   }
   return (
-    samtykker.findIndex(samtykke => {
-      return samtykke.PersonvernInnstillingDefinisjonGuid.toUpperCase() === guid.toUpperCase() && samtykke.ErAktiv;
+    samtykker.findIndex(s => {
+      return s.PersonvernInnstillingDefinisjonGuid.toUpperCase() === guid.toUpperCase() && s.ErAktiv;
     }) > -1
   );
 };
 
 /**
- * Sjekker status på samtykke for bruk av helsenorge
+ * Sjekker at brukeren har samtykket til DigitalHelsetjenester → Bør være deprecated. Bruk harSamtykket()
+ * @param samtykker - samtykker til bruk av helsenorge
+ */
+export const hasDigitaleHelsetjenesteSamtykke = (samtykker: Samtykke[]): boolean | undefined => {
+  if (samtykker) {
+    return samtykker.some(
+      s => s.PersonvernInnstillingDefinisjonGuid.toUpperCase() === PersonvernInnstillingDefinisjonGuids.DigitalHelsetjeneste && s.ErAktiv
+    );
+  }
+};
+
+/**
+ * Sjekker at brukeren har samtykket til Pasientreiser → Bør være deprecated. Bruk harSamtykket()
+ * @param samtykker - samtykker til bruk av helsenorge
+ */
+export const hasPasientreiserSamtykke = (samtykker: Samtykke[]): boolean | undefined => {
+  if (samtykker) {
+    return samtykker.some(
+      s => s.PersonvernInnstillingDefinisjonGuid.toUpperCase() === PersonvernInnstillingDefinisjonGuids.Pasientreiser && s.ErAktiv
+    );
+  }
+};
+
+/**
+ * Returnerer status på samtykke for bruk av helsenorge
  */
 export const getSamtykkeStatus = (): SamtykkeStatus => {
   const erRepresentasjon = getErRepresentasjon();
