@@ -1,4 +1,4 @@
-import moment, { Moment } from 'moment';
+import moment, { Moment, MomentInput } from 'moment';
 import { capitalize } from './string-utils';
 
 /**
@@ -21,101 +21,101 @@ export const initialize = (): void => {
 };
 
 /**
- * Returnerer JS Dato basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer JS Dato basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const toDate = (a: moment.MomentInput): Date => {
+export const toDate = (a: MomentInput): Date => {
   const start: moment.Moment = moment(a);
   return start.toDate();
 };
 
 /**
- * Returnerer en lang dato format (Måned DD, YYYY) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en lang dato format (Måned DD, YYYY) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const longDate = (a: moment.MomentInput): string => {
+export const longDate = (a: MomentInput): string => {
   const start: moment.Moment = moment(a);
   const startOfDay: moment.Moment = moment(a).startOf('day');
   return start.isSame(startOfDay) ? start.format('ll') : start.format('lll');
 };
 
 /**
- * Returnerer en long dato format med klokken (Day DD. Måned YYYY klokken HH:mm) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en long dato format med klokken (Day DD. Måned YYYY klokken HH:mm) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const longDateNumbersClock = (time: moment.MomentInput, separator = ' '): string => {
+export const longDateNumbersClock = (time: MomentInput, separator = ' '): string => {
   const start: moment.Moment = moment(time);
   return start.format(`dddd DD. MMMM YYYY${separator}[klokken] HH:mm`);
 };
 
 /**
- * Returnerer en medium dato format (DD. Mån YYYY HH:mm) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en medium dato format (DD. Mån YYYY HH:mm) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const mediumDate = (a: moment.MomentInput): string => {
+export const mediumDate = (a: MomentInput): string => {
   const start: moment.Moment = moment(a);
   return start.format('DD. MMM YYYY HH:mm');
 };
 
 /**
- * Returnerer en medium dato format kun med tall (DD.MM.YYYY HH:mm)) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en medium dato format kun med tall (DD.MM.YYYY HH:mm)) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const mediumDateNumbers = (a: moment.MomentInput): string => {
+export const mediumDateNumbers = (a: MomentInput): string => {
   const start: moment.Moment = moment(a);
   return start.format('DD.MM.YYYY HH:mm');
 };
 
 /**
- * Returnerer en medium dato format med kl. (DD.MM.YYYY kl. HH:mm) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en medium dato format med kl. (DD.MM.YYYY kl. HH:mm) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const mediumDateNumbersClock = (a: moment.MomentInput, separator = ' '): string => {
+export const mediumDateNumbersClock = (a: MomentInput, separator = ' '): string => {
   const start: moment.Moment = moment(a);
   return start.format(`DD.MM.YYYY${separator}[kl.] HH:mm`);
 };
 
 /**
- * Returnerer en short dato format (DD. Mån YYYY) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en short dato format (DD. Mån YYYY) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const shortDate = (time: moment.MomentInput): string => {
+export const shortDate = (time: MomentInput): string => {
   const start: moment.Moment = moment(time);
   return start.format('DD. MMM YYYY');
 };
 
 /**
- * Returnerer en short dato format med full måned (D. Måned YYYY) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en short dato format med full måned (D. Måned YYYY) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const shortDateFullMonth = (a: moment.MomentInput): string => {
+export const shortDateFullMonth = (a: MomentInput): string => {
   const start: moment.Moment = moment(a);
   return start.format('D. MMMM YYYY');
 };
 
 /**
- * Returnerer en short dato format (D. Mån YYYY) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en short dato format (D. Mån YYYY) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export const shortDateNb = (a: moment.MomentInput): string => {
+export const shortDateNb = (a: MomentInput): string => {
   const start: moment.Moment = moment(a);
   return start.format('D. MMM YYYY');
 };
 
 /**
- * Returnerer en short dato format (DD.MM.YYYY) basert på en Moment date
- * @param a - Moment date som skal konverteres
+ * Returnerer en short dato format (DD.MM.YYYY) basert på en MomentInput
+ * @param a - MomentInput som skal konverteres
  */
-export function shortDateNumbers(a: moment.MomentInput): string {
+export const shortDateNumbers = (a: MomentInput): string => {
   const start: moment.Moment = moment(a);
   return start.format('DD.MM.YYYY');
-}
+};
 
 /**
  * Returnerer dato med riktig AM/PM og prefix
- * @param a - Moment date som skal sjekkes
+ * @param a - MomentInput som skal sjekkes
  */
-export const timeOfDay = (a: moment.MomentInput, prefix = ''): string => {
+export const timeOfDay = (a: MomentInput, prefix = ''): string => {
   let value = '';
   const start: moment.Moment = moment(a);
   const startOfDay: moment.Moment = moment(a).startOf('day');
@@ -127,18 +127,18 @@ export const timeOfDay = (a: moment.MomentInput, prefix = ''): string => {
 
 /**
  * Returnerer full måned med år (Måned YYYY)
- * @param a - Moment date som skal konverteres
+ * @param a - MomentInput som skal konverteres
  */
-export const monthYear = (a: moment.MomentInput): string => {
+export const monthYear = (a: MomentInput): string => {
   const start: moment.Moment = moment(a);
   return capitalize(start.format('MMMM YYYY'));
 };
 
 /**
  * Returnerer kort måned med år (Mån YYYY)
- * @param a - Moment date som skal konverteres
+ * @param a - MomentInput som skal konverteres
  */
-export const shortMonthYear = (a: moment.MomentInput): string => {
+export const shortMonthYear = (a: MomentInput): string => {
   const start: moment.Moment = moment(a);
   return capitalize(start.format('MMM YYYY').replace('.', ''));
 };
@@ -148,7 +148,7 @@ export const shortMonthYear = (a: moment.MomentInput): string => {
  * @param a - startdato i Moment format
  * @param b - sluttdato i Moment format
  */
-export const monthRange = (a: moment.MomentInput, b: moment.MomentInput): string => {
+export const monthRange = (a: MomentInput, b: MomentInput): string => {
   let range: string;
   const start: moment.Moment = moment(a);
   const end: moment.Moment = moment(b);
@@ -172,7 +172,7 @@ export const monthRange = (a: moment.MomentInput, b: moment.MomentInput): string
  * @param a - startdato i Moment format
  * @param b - sluttdato i Moment format
  */
-export const timeRangeBetween = (a: moment.MomentInput, b: moment.MomentInput): string => {
+export const timeRangeBetween = (a: MomentInput, b: MomentInput): string => {
   let range: string;
   const start: moment.Moment = moment(a);
   const end: moment.Moment = moment(b);
@@ -191,7 +191,7 @@ export const timeRangeBetween = (a: moment.MomentInput, b: moment.MomentInput): 
  * @param a - startdato i Moment format
  * @param b - sluttdato i Moment format
  */
-export const timeRange = (first: moment.MomentInput, last: moment.MomentInput): string => {
+export const timeRange = (first: MomentInput, last: MomentInput): string => {
   let range: string;
   const start: moment.Moment = moment(first);
   const end: moment.Moment = moment(last);
@@ -210,7 +210,7 @@ export const timeRange = (first: moment.MomentInput, last: moment.MomentInput): 
  * @param a - startdato i Moment format
  * @param b - sluttdato i Moment format
  */
-export const longTimeRange = (startInput: moment.MomentInput, endInput?: moment.MomentInput): string => {
+export const longTimeRange = (startInput: MomentInput, endInput?: MomentInput): string => {
   const start: moment.Moment = moment(startInput);
   const end: moment.Moment = moment(endInput);
   let range = start.format('dddd D. MMMM YYYY, [kl.] HH:mm');
@@ -224,10 +224,10 @@ export const longTimeRange = (startInput: moment.MomentInput, endInput?: moment.
 
 /**
  * Returnerer true hvis datoene er på samme dag
- * @param a Moment date som skal sammenlignes
- * @param b Moment date som skal sammenlignes
+ * @param a MomentInput som skal sammenlignes
+ * @param b MomentInput som skal sammenlignes
  */
-export const isSameDay = (a: Moment, b: Moment): boolean => {
+export const isSameDay = (a: MomentInput, b: MomentInput): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   // Compare least significant, most likely to change units first
   // Moment's isSame clones moment inputs and is a tad slow
@@ -236,10 +236,10 @@ export const isSameDay = (a: Moment, b: Moment): boolean => {
 
 /**
  * Returnerer true hvis dato a er før dato b
- * @param a Moment date som skal sammenlignes
- * @param b Moment date som skal sammenlignes
+ * @param a MomentInput som skal sammenlignes
+ * @param b MomentInput som skal sammenlignes
  */
-export const isBeforeDay = (a: Moment, b: Moment): boolean => {
+export const isBeforeDay = (a: MomentInput, b: MomentInput): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   const aYear = a.year();
   const aMonth = a.month();
@@ -254,20 +254,20 @@ export const isBeforeDay = (a: Moment, b: Moment): boolean => {
 
 /**
  * Returnerer true hvis dato a er etter dato b
- * @param a Moment date som skal sammenlignes
- * @param b Moment date som skal sammenlignes
+ * @param a MomentInput som skal sammenlignes
+ * @param b MomentInput som skal sammenlignes
  */
-export const isAfterDay = (a: Moment, b: Moment): boolean => {
+export const isAfterDay = (a: MomentInput, b: MomentInput): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   return !isBeforeDay(a, b) && !isSameDay(a, b);
 };
 
 /**
  * Returnerer true hvis dato a er på samme dag eller etter dato b
- * @param a Moment date som skal sammenlignes
- * @param b Moment date som skal sammenlignes
+ * @param a MomentInput som skal sammenlignes
+ * @param b MomentInput som skal sammenlignes
  */
-export const isInclusivelyAfterDay = (a: Moment, b: Moment): boolean => {
+export const isInclusivelyAfterDay = (a: MomentInput, b: MomentInput): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   return !isBeforeDay(a, b);
 };
@@ -276,7 +276,7 @@ export const isInclusivelyAfterDay = (a: Moment, b: Moment): boolean => {
  * Returnerer true hvis input (inkludert minutter) er etter nåtid
  * @param a MomentInput som skal sammenlignes
  */
-export const isAfter = (a: moment.MomentInput): boolean => {
+export const isAfter = (a: MomentInput): boolean => {
   const now: moment.Moment = moment();
   return moment(a).isAfter(now);
 };
@@ -286,16 +286,16 @@ export const isAfter = (a: moment.MomentInput): boolean => {
  * Forskjell med 'isAfter' er at denne tar utgangspunkt i dager
  * @param a MomentInput som skal sammenlignes
  */
-export const isAfterToday = (a: moment.MomentInput): boolean => {
+export const isAfterToday = (a: MomentInput): boolean => {
   return moment(a).diff(new Date(), 'days') > 0;
 };
 
 /**
  * Returnerer true hvis dato a er på samme dag eller før dato b
- * @param a Moment date som skal sammenlignes
- * @param b Moment date som skal sammenlignes
+ * @param a MomentInput som skal sammenlignes
+ * @param b MomentInput som skal sammenlignes
  */
-export const isInclusivelyBeforeDay = (a: Moment, b: Moment): boolean => {
+export const isInclusivelyBeforeDay = (a: MomentInput, b: MomentInput): boolean => {
   if (!moment.isMoment(a) || !moment.isMoment(b)) return false;
   return !isAfterDay(a, b);
 };
@@ -304,7 +304,7 @@ export const isInclusivelyBeforeDay = (a: Moment, b: Moment): boolean => {
  * Returnerer true hvis input  (inkludert minutter) er før nåtid
  * @param a MomentInput som skal sammenlignes
  */
-export const isBefore = (a: moment.MomentInput): boolean => {
+export const isBefore = (a: MomentInput): boolean => {
   const now: moment.Moment = moment();
   return moment(a).isBefore(now);
 };
@@ -314,7 +314,7 @@ export const isBefore = (a: moment.MomentInput): boolean => {
  * Forskjell med 'isBefore' er at denne tar utgangspunkt i dager
  * @param a MomentInput som skal sammenlignes
  */
-export const isBeforeToday = (a: moment.MomentInput): boolean => {
+export const isBeforeToday = (a: MomentInput): boolean => {
   return moment(a).diff(moment(), 'days') < 0;
 };
 
@@ -322,7 +322,7 @@ export const isBeforeToday = (a: moment.MomentInput): boolean => {
  * Returnerer true hvis input er dagens dato
  * @param a MomentInput som skal sammenlignes
  */
-export const isToday = (a: moment.MomentInput): boolean => {
+export const isToday = (a: MomentInput): boolean => {
   return moment(a).isSame(moment(), 'day');
 };
 
@@ -330,16 +330,16 @@ export const isToday = (a: moment.MomentInput): boolean => {
  * Returnerer true hvis input er dagens dato og tid er tidligere enn nåtid
  * @param a MomentInput som skal sammenlignes
  */
-export const isEarlierToday = (a: moment.MomentInput): boolean => {
+export const isEarlierToday = (a: MomentInput): boolean => {
   return isToday(a) && isBefore(a);
 };
 
 /**
  * Returnerer antall uker som finnes i en måned
- * @param a - Moment startdato (first week)
- * @param b - Moment sluttdato (last week)
+ * @param a - Moment obj startdato (first week)
+ * @param b - Moment obj sluttdato (last week)
  */
-export const numberOfWeeksInMonth = (a: moment.Moment, b: moment.Moment): number => {
+export const numberOfWeeksInMonth = (a: Moment, b: Moment): number => {
   const firstWeek = a.week();
   const lastWeek = b.week();
   if (firstWeek >= 52) {
@@ -354,7 +354,7 @@ export const numberOfWeeksInMonth = (a: moment.Moment, b: moment.Moment): number
  * Returnerer true hvis input er lik 0001-01-01T00:00:00
  * @param a MomentInput som skal sammenlignes
  */
-export const isDotNetMinDate = (a: moment.MomentInput): boolean => {
+export const isDotNetMinDate = (a: MomentInput): boolean => {
   const input = moment(a);
   // Setup a minDate to mimic .Net Date.MinDate constant.
   const minDate = moment('0001-01-01T00:00:00');
@@ -365,35 +365,9 @@ export const isDotNetMinDate = (a: moment.MomentInput): boolean => {
  * Returnerer dato i ISO format med Timezone offset
  * @param a MomentInput som skal sammenlignes
  */
-export const toLocalISOStringUsingDateTimezoneOffset = (a: moment.MomentInput): string => {
+export const toLocalISOStringUsingDateTimezoneOffset = (a: MomentInput): string => {
   const isoDate = moment(a)
     .add('minutes', moment(a).utcOffset())
     .toISOString();
   return isoDate.substring(0, isoDate.lastIndexOf('.'));
-};
-
-export default {
-  initialize,
-  longDate,
-  mediumDate,
-  shortDateNumbers,
-  mediumDateNumbersClock,
-  mediumDateNumbers,
-  shortDate,
-  shortDateNb,
-  timeOfDay,
-  monthYear,
-  shortMonthYear,
-  monthRange,
-  timeRange,
-  longTimeRange,
-  isToday,
-  isBeforeToday,
-  isEarlierToday,
-  isAfterToday,
-  isAfter,
-  isBefore,
-  numberOfWeeksInMonth,
-  isDotNetMinDate,
-  toLocalISOStringUsingDateTimezoneOffset,
 };
