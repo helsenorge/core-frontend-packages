@@ -4,10 +4,12 @@ import tabbable from 'tabbable';
 import { getDocumentActiveElement } from './focus-utils';
 import { getEventTarget } from './web-component/events';
 
+/* Class som ved init låser fokuset inne i én DOMElement. Bruksområder er f.eks Modalvinduer.
+Tar imot en DomNode (HTMLElement eller string) som fokuset skal låses i. */
 export class TrapFocus {
-  private domNode: TabbableElement | null;
-  private previouslyFocusedItem: TabbableElement | null;
-  private focusableItems: Array<TabbableElement>;
+  domNode: TabbableElement | null;
+  previouslyFocusedItem: TabbableElement | null;
+  focusableItems: Array<TabbableElement>;
 
   constructor(domNode: HTMLElement | string, isTriggerWithinTrappedArea: boolean = false) {
     this.domNode = typeof domNode === 'string' ? (document.querySelector(domNode) as TabbableElement) : (domNode as TabbableElement);
@@ -65,19 +67,6 @@ export class TrapFocus {
     }
   }
 
-  previousFocusableItem(itemWithFocus: TabbableElement): TabbableElement {
-    const currentFocusIndex: number = this.getItemIndex(itemWithFocus);
-    if (!this.isRadioButton(itemWithFocus)) {
-      let previousFocusIndex: number = currentFocusIndex - 1;
-      // Wrap around
-      if (previousFocusIndex < 0) {
-        previousFocusIndex = this.focusableItems.length - 1;
-      }
-      return this.getSelectedRadioInGroup(this.focusableItems[previousFocusIndex]);
-    }
-    return this.previousFocusableRadioButton(itemWithFocus);
-  }
-
   previousFocusableRadioButton(itemWithFocus: TabbableElement): TabbableElement {
     const currentFocusIndex: number = this.getItemIndex(itemWithFocus);
     // Previous focusable item should not be a radio button in same group
@@ -106,17 +95,17 @@ export class TrapFocus {
     return this.getSelectedRadioInGroup(itemWithFocus);
   }
 
-  nextFocusableItem(itemWithFocus: TabbableElement): TabbableElement {
+  previousFocusableItem(itemWithFocus: TabbableElement): TabbableElement {
     const currentFocusIndex: number = this.getItemIndex(itemWithFocus);
     if (!this.isRadioButton(itemWithFocus)) {
-      let nextFocusIndex: number = currentFocusIndex + 1;
+      let previousFocusIndex: number = currentFocusIndex - 1;
       // Wrap around
-      if (nextFocusIndex > this.focusableItems.length - 1) {
-        nextFocusIndex = 0;
+      if (previousFocusIndex < 0) {
+        previousFocusIndex = this.focusableItems.length - 1;
       }
-      return this.getSelectedRadioInGroup(this.focusableItems[nextFocusIndex]);
+      return this.getSelectedRadioInGroup(this.focusableItems[previousFocusIndex]);
     }
-    return this.nextFocusableRadioButton(itemWithFocus);
+    return this.previousFocusableRadioButton(itemWithFocus);
   }
 
   nextFocusableRadioButton(itemWithFocus: TabbableElement): TabbableElement {
@@ -145,6 +134,19 @@ export class TrapFocus {
     }
     // Still no element found: we have only radio buttons in the same group
     return this.getSelectedRadioInGroup(itemWithFocus);
+  }
+
+  nextFocusableItem(itemWithFocus: TabbableElement): TabbableElement {
+    const currentFocusIndex: number = this.getItemIndex(itemWithFocus);
+    if (!this.isRadioButton(itemWithFocus)) {
+      let nextFocusIndex: number = currentFocusIndex + 1;
+      // Wrap around
+      if (nextFocusIndex > this.focusableItems.length - 1) {
+        nextFocusIndex = 0;
+      }
+      return this.getSelectedRadioInGroup(this.focusableItems[nextFocusIndex]);
+    }
+    return this.nextFocusableRadioButton(itemWithFocus);
   }
 
   // If user tabbed into a radio group, we need to focus the selected radio button in the group
