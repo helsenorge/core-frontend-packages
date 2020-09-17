@@ -145,7 +145,7 @@ describe('Resources', () => {
           () => {},
           () => {}
         );
-        expect(getMock).toHaveBeenCalledWith('UIResource', 'sot', { Culture: 'culture', Filename: 'name', Rev: 16 });
+        expect(getMock).toHaveBeenCalledWith('UIResource', 'sot', { Culture: 'culture', Filename: 'name', Rev: 17 });
       });
     });
   });

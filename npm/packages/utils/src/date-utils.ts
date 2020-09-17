@@ -221,7 +221,12 @@ export const timeToString = (date: Date): string => {
   return `${padStr(date.getHours())}:${padStr(date.getMinutes())}`;
 };
 
-/* deprecated */
+//////////////// To-DO: MANGLENEDE TESTER ETTER DET PUNKTET
+
+/**
+ * Returnerer true hvis datoen er før i dag
+ * @param time ISO eller JS date
+ */
 export const beforeToday = (time: ISO8601 | Date): boolean => {
   const input = toDate(time);
   const today = new Date();
@@ -229,14 +234,20 @@ export const beforeToday = (time: ISO8601 | Date): boolean => {
   return input.getTime() < today.getTime();
 };
 
-/* deprecated */
+/**
+ * Returnerer true hvis datoen er før nå
+ * @param time ISO eller JS date
+ */
 export const beforeNow = (time: ISO8601 | Date): boolean => {
   const input = toServerDate(time);
   const today = new Date();
   return input.getTime() < today.getTime();
 };
 
-/* deprecated */
+/**
+ * Returnerer true hvis datoen er etter i dag
+ * @param time ISO eller JS date
+ */
 export const afterToday = (time: ISO8601 | Date): boolean => {
   const input = toDate(time);
   const today = new Date();
@@ -245,7 +256,10 @@ export const afterToday = (time: ISO8601 | Date): boolean => {
   return input.getTime() > tomorrow.getTime();
 };
 
-/* deprecated */
+/**
+ * Returnerer true hvis datoen er i dag
+ * @param time ISO eller JS date
+ */
 export const isToday = (time: ISO8601 | Date): boolean => {
   const input = toDate(time);
   const today = new Date();
@@ -255,12 +269,19 @@ export const isToday = (time: ISO8601 | Date): boolean => {
   return compare.getTime() === today.getTime();
 };
 
-/* deprecated */
+/**
+ * Returnerer true hvis datoen er tidligere i dag
+ * @param time ISO eller JS date
+ */
 export const earlierToday = (time: ISO8601 | Date): boolean => {
   return isToday(time) && beforeNow(time);
 };
 
-/* deprecated */
+/**
+ * Returnerer true hvis dato a er før dato b
+ * @param a ISO eller JS date date som skal sammenlignes
+ * @param b ISO eller JS date date som skal sammenlignes
+ */
 export const isBefore = (a: ISO8601 | Date, b: ISO8601 | Date): boolean => {
   const earlier = toDate(a);
   const later = toDate(b);
