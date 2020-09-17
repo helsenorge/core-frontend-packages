@@ -8047,6 +8047,10 @@ behandlingsstedet ved eventuelle spørsmål.
    * Avtalen ble avlyst av person med fullmakt for innbygger.
    */
   appointmentDetailsCancellationReasonProxy: string;
+  /**
+   * Innbygger møtte ikke til timen.
+   */
+  appointmentDetailsCancellationReasonDidNotMeet: string;
 };
 
 export type HNMinHelseDialog = {
@@ -10636,6 +10640,18 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   gammelt_navn: string;
   /**
+   * Skjemaet er fullført og lagret i Dokumenter
+   */
+  lightbox_ikke_til_deling_description: string;
+  /**
+   * Du er i ferd med å slette skjemautkastet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Hvis du sletter og deretter angrer på det, må du starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet skjemaet. Er du helt sikker på at du vil slette?
+   */
+  lightbox_slette_skjema_description: string;
+  /**
+   * Slett skjemautkast
+   */
+  lightbox_slette_skjema_title: string;
+  /**
    * Lagret
    */
   lightbox_til_deling_title: string;
@@ -10651,18 +10667,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Lukk
    */
   lightbox_til_deling_lukkknapp: string;
-  /**
-   * Skjemaet er fullført og lagret i Dokumenter
-   */
-  lightbox_ikke_til_deling_description: string;
-  /**
-   * Du er i ferd med å slette skjemaet i utkast fra Helsenorge. Det vil ikke være mulig å angre slettingen og du vil måtte starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet dette skjemaet. Er du helt sikker på at du vil slette?
-   */
-  lightbox_slette_skjema_description: string;
-  /**
-   * Slett skjema i utkast
-   */
-  lightbox_slette_skjema_title: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
