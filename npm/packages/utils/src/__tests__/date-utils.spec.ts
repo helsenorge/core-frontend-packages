@@ -180,5 +180,83 @@ describe('Date-utils', () => {
         expect(date).toEqual('12:42');
       });
     });
+
+    describe('Når beforeToday blir kalt med en gammel dato', () => {
+      it('Så returnerer den true', () => {
+        const date = dateUtilsFunctions.beforeToday(new Date('2010-04-13T12:42:00.000'));
+        expect(date).toBeTruthy();
+      });
+    });
+
+    describe('Når beforeToday blir kalt med en dato langt frem', () => {
+      it('Så returnerer den false', () => {
+        const date = dateUtilsFunctions.beforeToday(new Date('2080-04-13T12:42:00.000'));
+        expect(date).toBeFalsy();
+      });
+    });
+
+    describe('Når beforeNow blir kalt med en gammel dato', () => {
+      it('Så returnerer den true', () => {
+        const date = dateUtilsFunctions.beforeNow(new Date('2010-04-13T12:42:00.000'));
+        expect(date).toBeTruthy();
+      });
+    });
+
+    describe('Når beforeNow blir kalt med dagens dato et par timer tilbake i tid', () => {
+      it('Så returnerer den true', () => {
+        const d = new Date();
+        d.setHours(d.getHours() - 2);
+        const date = dateUtilsFunctions.beforeNow(new Date(d));
+        expect(date).toBeTruthy();
+      });
+    });
+
+    describe('Når beforeNow blir kalt med en dato langt frem', () => {
+      it('Så returnerer den false', () => {
+        const date = dateUtilsFunctions.beforeNow(new Date('2080-04-13T12:42:00.000'));
+        expect(date).toBeFalsy();
+      });
+    });
+
+    describe('Når afterToday blir kalt med en gammel dato', () => {
+      it('Så returnerer den false', () => {
+        const date = dateUtilsFunctions.afterToday(new Date('2010-04-13T12:42:00.000'));
+        expect(date).toBeFalsy();
+      });
+    });
+
+    describe('Når afterToday blir kalt med en dato langt frem', () => {
+      it('Så returnerer den true', () => {
+        const date = dateUtilsFunctions.afterToday(new Date('2080-04-13T12:42:00.000'));
+        expect(date).toBeTruthy();
+      });
+    });
+
+    describe('Når isToday blir kalt med en dato langt frem', () => {
+      it('Så returnerer den true', () => {
+        const date = dateUtilsFunctions.isToday(new Date());
+        expect(date).toBeTruthy();
+      });
+    });
+
+    describe('Når earlierToday blir kalt med dagens dato et par timer tilbake i tid', () => {
+      it('Så returnerer den true', () => {
+        const d = new Date();
+        d.setHours(d.getHours() - 2);
+        const date = dateUtilsFunctions.earlierToday(d);
+        expect(date).toBeTruthy();
+      });
+    });
+
+    describe('Når isBefore blir kalt med 2 forksjelloige datoer', () => {
+      it('Så returnerer den eriktig verdi', () => {
+        const a = new Date('2080-04-13T12:42:00.000');
+        const b = new Date('2080-04-16T12:42:00.000');
+        const before = dateUtilsFunctions.isBefore(a, b);
+        const after = dateUtilsFunctions.isBefore(b, a);
+        expect(before).toBeTruthy();
+        expect(after).toBeFalsy();
+      });
+    });
   });
 });
