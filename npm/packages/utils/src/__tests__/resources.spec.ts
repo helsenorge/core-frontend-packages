@@ -145,7 +145,10 @@ describe('Resources', () => {
           () => {},
           () => {}
         );
-        expect(getMock).toHaveBeenCalledWith('UIResource', 'sot', { Culture: 'culture', Filename: 'name', Rev: 17 });
+        expect(getMock.mock.calls[0][0]).toEqual('UIResource');
+        expect(getMock.mock.calls[0][1]).toEqual('sot');
+        expect(getMock.mock.calls[0][2].Culture).toEqual('culture');
+        expect(getMock.mock.calls[0][2].Filename).toEqual('name');
       });
     });
   });
