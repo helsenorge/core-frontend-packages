@@ -28120,7 +28120,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   helsenorge: string;
   /** 
-  * For hjelp og brukerstøtte, ring <a href='tel:123123123'>telefonnr</a> (åpnintstider)
+  * For hjelp og brukerstøtte, ring <a href='tel:123123123'>telefonnr</a> (åpningstider)
   */
   phonelink: string;
   /** 
