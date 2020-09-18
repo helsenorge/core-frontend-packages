@@ -7004,7 +7004,7 @@
   },
   "HNMinHelseSkjemautfyller": { 
     "helsenorge": "helsenorge.no",
-    "phonelink": "For hjelp og brukerstøtte, ring <a href='tel:123123123'>telefonnr</a> (åpnintstider)",
+    "phonelink": "For hjelp og brukerstøtte, ring <a href='tel:123123123'>telefonnr</a> (åpningstider)",
     "formCancel": "Avbryt",
     "formSend": "Send inn",
     "formError": "Sjekk at alt er riktig utfylt.",
