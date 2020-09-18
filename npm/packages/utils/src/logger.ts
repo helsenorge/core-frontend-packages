@@ -56,10 +56,9 @@ const unwrapError = (potentialError: Error | Array<Error | string> | string): st
   }
 };
 
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-const generateEntry = (level: LogLevel, message?: string, ...optionalParams: Array<any>): LogEntry => {
+const generateEntry = (level: LogLevel, message?: string, ...optionalParams: Array<unknown>): LogEntry => {
   let fullMessage = message;
-  fullMessage = optionalParams.reduce((previous: string, current: Error | Array<Error | string> | string) => {
+  fullMessage = (optionalParams as Array<string>).reduce((previous: string, current: Error | Array<Error | string> | string) => {
     return previous + ' ' + unwrapError(current);
   }, fullMessage);
   return {
@@ -69,8 +68,10 @@ const generateEntry = (level: LogLevel, message?: string, ...optionalParams: Arr
   };
 };
 
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-export const logToServer = (level: LogLevel, message?: string, ...optionalParams: any[]): void => {
+/**
+ * Logger error til serveren
+ */
+export const logToServer = (level: LogLevel, message?: string, ...optionalParams: Array<unknown>): void => {
   if (ServerLogLevel === undefined) {
     SetupLogLevel();
     logQueue.push(generateEntry(level, message, optionalParams));
@@ -80,7 +81,7 @@ export const logToServer = (level: LogLevel, message?: string, ...optionalParams
 };
 
 /**
- * Logger error til serveren
+ * Lager en event listener på errors og logger error til serveren
  */
 export const captureErrors = (): void => {
   window.addEventListener('error', function(e: ErrorEvent) {
@@ -108,7 +109,7 @@ export const captureErrors = (): void => {
  * @param message - message som sendes til console assert
  * @param optionalParams params som sendes til console assert
  */
-export const assert = (test?: boolean, message?: string, ...optionalParams: string[]): void => {
+export const assert = (test?: boolean, message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.assert(test, message, optionalParams);
   }
@@ -138,7 +139,7 @@ export const count = (countTitle?: string): void => {
  * @param message - string som sendes i console.debug og logges til serveren
  * @param optionalParams params som sendes til console.debug og logges til serveren
  */
-export const debug = (message?: string, ...optionalParams: string[]): void => {
+export const debug = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.debug(message, optionalParams);
   }
@@ -150,7 +151,7 @@ export const debug = (message?: string, ...optionalParams: string[]): void => {
  * @param value - string som sendes i console.dir og logges til serveren
  * @param optionalParams params som sendes til console.dir og logges til serveren
  */
-export const dir = (value?: unknown, ...optionalParams: string[]): void => {
+export const dir = (value?: unknown, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.dir(value, optionalParams);
   }
@@ -171,7 +172,7 @@ export const dirxml = (value: unknown): void => {
  * @param message - string som sendes i console.error og logges til serveren
  * @param optionalParams params som sendes til console.error og logges til serveren
  */
-export const error = (message?: string, ...optionalParams: string[]): void => {
+export const error = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.error(message, optionalParams);
   }
@@ -183,7 +184,7 @@ export const error = (message?: string, ...optionalParams: string[]): void => {
  * @param message - string som sendes i console.exception og logges til serveren
  * @param optionalParams params som sendes til console.exception og logges til serveren
  */
-export const exception = (message?: string, ...optionalParams: string[]): void => {
+export const exception = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.exception(message, optionalParams);
   }
@@ -224,7 +225,7 @@ export const groupEnd = (): void => {
  * @param message - string som sendes i console.info og logges til serveren
  * @param optionalParams params som sendes til console.info og logges til serveren
  */
-export const info = (message?: string, ...optionalParams: string[]): void => {
+export const info = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.info(message, optionalParams);
   }
@@ -236,7 +237,7 @@ export const info = (message?: string, ...optionalParams: string[]): void => {
  * @param message - string som sendes i console.log
  * @param optionalParams params som sendes til console.log
  */
-export const log = (message?: string, ...optionalParams: string[]): void => {
+export const log = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     if (optionalParams && optionalParams.length > 0) {
       console.log(message, optionalParams);
@@ -300,7 +301,7 @@ export const timeEnd = (timerName?: string): void => {
  * @param message - string som sendes i console.trace og til serveren
  * @param optionalParams params som sendes til console.trace og til serveren
  */
-export const trace = (message?: string, ...optionalParams: string[]): void => {
+export const trace = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.trace(message, optionalParams);
   }
@@ -312,7 +313,7 @@ export const trace = (message?: string, ...optionalParams: string[]): void => {
  * @param message - string som sendes i console.warn og til serveren
  * @param optionalParams params som sendes til console.warn og til serveren
  */
-export const warn = (message?: string, ...optionalParams: string[]): void => {
+export const warn = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.warn(message, optionalParams);
   }

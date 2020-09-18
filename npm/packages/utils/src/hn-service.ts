@@ -115,16 +115,22 @@ const openCmd = 'HelseNorge/';
 const uploadCmd = 'Upload/';
 
 // A hack for the Redux DevTools Chrome extension.
+
 declare global {
   interface Window {
     HN?: any;
   }
 }
 
+export interface CommandsType {
+  __GetFeatureToggles__?: { FeatureToggles?: {} };
+  __GetTjenesterMedTilgang__?: { Reservasjoner?: Array<Reservasjon> };
+}
+
 declare const HN: {
   Rest: any;
-  Commands: any;
-  PortalCommands: any;
+  Commands: CommandsType;
+  PortalCommands: CommandsType;
   Page: any;
 };
 
@@ -181,7 +187,7 @@ export function isMHLoggedIn(): boolean {
   return getCookie('MH_LoggedIn') !== null ? true : false;
 }
 
-export function getAutoCommand(): string {
+export function getAutoCommand(): CommandsType {
   return isAuthorized() === true ? HN.Commands : HN.PortalCommands;
 }
 
