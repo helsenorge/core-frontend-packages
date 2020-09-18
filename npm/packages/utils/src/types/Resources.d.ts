@@ -28490,6 +28490,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Slett
   */
   deleteAttachmentText: string;
+  /** 
+  * Last opp fil
+  */
+  uploadFileText: string;
 };
 
 export type HNMinHelseSysvak = { 
