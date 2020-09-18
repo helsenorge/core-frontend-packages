@@ -22,7 +22,7 @@ export type HNCommon = {
    */
   webPart_PagePromotion_SelectPage_Text: string;
   /**
-   * test ikke i bruk enda altså
+   * test ikke i bruk enda altså.
    */
   iKKE_BRUK_KUN_FOR_TEST: string;
 };
@@ -28120,7 +28120,7 @@ export type HNMinHelseSkjemautfyller = {
    */
   helsenorge: string;
   /**
-   * For hjelp og brukerstøtte, ring <a href='tel:123123123'>telefonnr</a> (åpnintstider)
+   * For hjelp og brukerstøtte, ring <a href='tel:123123123'>telefonnr</a> (åpningstider)
    */
   phonelink: string;
   /**
@@ -28490,6 +28490,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    * Slett
    */
   deleteAttachmentText: string;
+  /**
+   * Last opp fil
+   */
+  uploadFileText: string;
 };
 
 export type HNMinHelseSysvak = {
