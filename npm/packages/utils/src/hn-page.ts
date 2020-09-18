@@ -1,5 +1,10 @@
-/* eslint-disable-next-line @typescript-eslint/no-explicit-any */
-declare const HN: any;
+declare const HN: {
+  Page: {
+    __Path__: string;
+    __Version__: string;
+    __Assets__: string;
+  };
+};
 
 window.HN = window.HN || {};
 window.HN.MinHelse = window.HN.MinHelse || {};
