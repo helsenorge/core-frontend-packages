@@ -1,3 +1,12 @@
+/* REDUX ACTIONS */
+export type EmptyAction = {
+  type: '';
+};
+
+export const EmptyAction: EmptyAction = {
+  type: '',
+};
+
 /* REQUESTS */
 export enum HttpStatusCode {
   Continue = 100,

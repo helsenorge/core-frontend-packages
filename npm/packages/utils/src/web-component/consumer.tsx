@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { getAssetsUrl } from '../hn-service';
+import { getAssetsUrl } from '../hn-page';
 import { error } from '../logger';
 
 /** Denne kan brukes for å konsumere en web component som finnes.
@@ -40,7 +40,7 @@ const WebCompConsumer: React.FC<Props> = (props: Props) => {
           const resp = response.json();
           return resp;
         }
-        return Promise.reject(Error('Error while fetching asset-manifest.json'));
+        return Promise.reject(Error(`Error while fetching asset-manifest.json from ${domain}/assets.json`));
       })
       .then(assets => {
         const tmpl: HTMLTemplateElement = document.getElementById(`${componentName}-template`) as HTMLTemplateElement;
@@ -49,7 +49,7 @@ const WebCompConsumer: React.FC<Props> = (props: Props) => {
           const resetcssInlineCss = document.createElement('link');
           resetcssInlineCss.setAttribute('href', `${getAssetsUrl()}/forside/static/css/resetcss/resetcss.css`);
           resetcssInlineCss.rel = 'stylesheet';
-          tmpl.innerHTML += resetcssInlineCss.outerHTML;
+          if (tmpl) tmpl.innerHTML += resetcssInlineCss.outerHTML;
         }
 
         // gets scripts and css from entrypoint
@@ -60,7 +60,7 @@ const WebCompConsumer: React.FC<Props> = (props: Props) => {
               const inlineCss = document.createElement('link');
               inlineCss.setAttribute('href', `${domain}/${asset}`);
               inlineCss.rel = 'stylesheet';
-              tmpl.innerHTML += inlineCss.outerHTML;
+              if (tmpl) tmpl.innerHTML += inlineCss.outerHTML;
             } else {
               // js
               const inlineJs = document.createElement('script');
