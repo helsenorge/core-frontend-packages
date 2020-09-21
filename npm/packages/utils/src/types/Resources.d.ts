@@ -10668,7 +10668,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   lightbox_til_deling_lukkknapp: string;
   /** 
-  * Du må ha samtykkenivå "Full" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href=\"/personverninnstillinger/samtykker/velg\"> forander samtykket ditt.</a>
+  * Du må ha samtykkenivå "Full" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href="/personverninnstillinger/samtykker/velg"> forander samtykket ditt.</a>
   */
   deling_ikke_samtykke: string;
   /** 
