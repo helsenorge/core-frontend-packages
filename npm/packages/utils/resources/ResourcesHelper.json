@@ -4259,7 +4259,7 @@
     "feilregistreringTime_TextMessage_Body_Representation": "${FirstName} sin timeavtale hos ${ActorName} ${DateTime} var registrert ved en feil. Logg inn på Helsenorge og gå til Timeavtaler for å se mer.",
     "feilregistreringTime_TextMessage_Body_Self": "${FirstName}, din timeavtale hos ${ActorName} ${DateTime} var registrert ved en feil. Logg inn på Helsenorge og gå til Timeavtaler for å se mer.",
     "varselMeny_PrimarhelsetjenesteTimeavtale_Feilregistrert_Emne": "Din timeavtale hos {0} {1} var registrert ved en feil.",
-    "tjenesteOversikt_EmailMessage_Body_Representation": "${FirstName} har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no for å se mer.",
+    "tjenesteOversikt_EmailMessage_Body_Representation": "${FirstName} har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no og gå til Helsekontakter for å se mer.",
     "tjenesteOversikt_EmailMessage_Body_Self": "${FirstName}, du har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no for å se mer.",
     "tjenesteOversikt_EmailMessage_Subject_Representation": "Varsel om ny helsekontakt på helsenorge.no",
     "tjenesteOversikt_EmailMessage_Subject_Self": "Varsel om ny helsekontakt på helsenorge.no",
