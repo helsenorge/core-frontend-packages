@@ -17040,7 +17040,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   tjenesteOversikt_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no og gå til Helsekontakter for å se mer.
   */
   tjenesteOversikt_EmailMessage_Body_Self: string;
   /** 
@@ -17052,11 +17052,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   tjenesteOversikt_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no og gå til Helsekontakter for å se mer.
   */
   tjenesteOversikt_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no og gå til Helsekontakter for å se mer.
   */
   tjenesteOversikt_TextMessage_Body_Self: string;
   /** 
