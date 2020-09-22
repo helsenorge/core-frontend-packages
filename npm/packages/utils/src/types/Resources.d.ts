@@ -11347,6 +11347,10 @@ export type HNMinHelseHFTStringsJS = {
   */
   egenandeler_nav_info: string;
   /** 
+  * Frikort for helsetjenester
+  */
+  egenandeler_frikort_for_helsetjenester: string;
+  /** 
   * Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte
   */
   endre_adresse_lenke_v3_1: string;
