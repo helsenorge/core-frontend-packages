@@ -8051,6 +8051,10 @@ behandlingsstedet ved eventuelle spørsmål.
   * Innbygger møtte ikke til timen.
   */
   appointmentDetailsCancellationReasonDidNotMeet: string;
+  /** 
+  * Henvist til:
+  */
+  referrallistelementHenvistTil: string;
 };
 
 export type HNMinHelseDialog = { 
