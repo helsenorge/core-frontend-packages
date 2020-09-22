@@ -5,7 +5,7 @@ declare let HN: {
     __LastLogOn__: string;
     __Name__: string;
     __RepresentedUser__: string;
-    __AvatarColor__: string;
+    __AvatarColor__: number;
     __HasRepresentation__: boolean;
     __ShowWelcome__: boolean;
     __NewSocialSecurityNumber__: string;
@@ -47,7 +47,7 @@ export const getRepresentedUser = (): string => {
 /**
  * Returnerer verdien satt på HN User __AvatarColor__
  */
-export const getAvatarColor = (): string => {
+export const getAvatarColor = (): number => {
   return HN.User.__AvatarColor__;
 };
 
