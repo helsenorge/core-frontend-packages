@@ -11,7 +11,7 @@ describe('hn-user', () => {
         __LastLogOn__: 'dd.mm.yyyy',
         __Name__: 'userName',
         __RepresentedUser__: 'representedUser',
-        __AvatarColor__: 'green',
+        __AvatarColor__: 3,
         __HasRepresentation__: true,
         __ShowWelcome__: true,
         __NewSocialSecurityNumber__: '000',
@@ -63,7 +63,7 @@ describe('hn-user', () => {
         const originalWindowHN = global.window['HN'];
         global.window['HN'] = HN;
         const user = HNuserFunctions.getAvatarColor();
-        expect(user).toEqual('green');
+        expect(user).toEqual(3);
         global.window['HN'] = originalWindowHN;
       });
     });
