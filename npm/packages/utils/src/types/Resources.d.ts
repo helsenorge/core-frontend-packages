@@ -8051,6 +8051,10 @@ behandlingsstedet ved eventuelle spørsmål.
    * Innbygger møtte ikke til timen.
    */
   appointmentDetailsCancellationReasonDidNotMeet: string;
+  /**
+   * Henvist til:
+   */
+  referrallistelementHenvistTil: string;
 };
 
 export type HNMinHelseDialog = {
@@ -11342,6 +11346,10 @@ export type HNMinHelseHFTStringsJS = {
    * Vi bruker disse opplysningene for å sende deg frikort og utbetale beløp du har til gode.
    */
   egenandeler_nav_info: string;
+  /**
+   * Frikort for helsetjenester
+   */
+  egenandeler_frikort_for_helsetjenester: string;
   /**
    * Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte
    */
@@ -28501,7 +28509,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   /**
    * Last opp fil
    */
-  uploadFileText: string;
+  uploadButtonText: string;
 };
 
 export type HNMinHelseSysvak = {

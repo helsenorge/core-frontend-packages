@@ -2017,7 +2017,8 @@
     "appointmentDetailsCancellationReasonAway": "Avtalen ble avlyst fordi ingen var hjemme.",
     "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
     "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger.",
-    "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen."
+    "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen.",
+    "referrallistelementHenvistTil": "Henvist til:"
   },
   "HNMinHelseDialog": {
     "getReferral_WarningHelseSorOst": "For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.",
@@ -2848,6 +2849,7 @@
     "egenandeler_minste_pensjon_title": "Fritak for egenandel",
     "egenandeler_navn": "Navn:",
     "egenandeler_nav_info": "Vi bruker disse opplysningene for å sende deg frikort og utbetale beløp du har til gode.",
+    "egenandeler_frikort_for_helsetjenester": "Frikort for helsetjenester",
     "endre_adresse_lenke_v3_1": "Frikort sendes til din folkeregistrert adresse. Dersom adressen ikke stemmer må du kontakte",
     "endre_adresse_lenke_v3_2": "Folkeregistret"
   },
@@ -7098,7 +7100,7 @@
     "formFinish": "Fullfør",
     "formRequiredErrorMessage": "Du må fylle ut dette feltet",
     "deleteAttachmentText": "Slett",
-    "uploadFileText": "Last opp fil"
+    "uploadButtonText": "Last opp fil"
   },
   "HNMinHelseSysvak": {
     "innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
