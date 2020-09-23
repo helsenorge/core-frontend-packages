@@ -10679,6 +10679,14 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Noen av dine fastleger tas ikke i bruk førerrett applikasjon. Da du kan ikke dele dokument med dem.
   */
   deling_fastleger_ikke_forerrett: string;
+  /** 
+  * Ukjent handling
+  */
+  deling_logg_ukjent_bruktype: string;
+  /** 
+  * Ukjent rolle
+  */
+  deling_logg_ukjent_rolle: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
