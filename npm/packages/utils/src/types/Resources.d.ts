@@ -10687,6 +10687,22 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Ukjent rolle
   */
   deling_logg_ukjent_rolle: string;
+  /** 
+  * Når
+  */
+  deling_logg_table_col_title_naar: string;
+  /** 
+  * Hvem
+  */
+  deling_logg_table_col_title_hvem: string;
+  /** 
+  * Hva
+  */
+  deling_logg_table_col_title_hva: string;
+  /** 
+  * Fastlege
+  */
+  deling_logg_rolle_fastlege: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
