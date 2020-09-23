@@ -2680,7 +2680,11 @@
     "deling_ikke_samtykke": "Du må ha samtykkenivå \"Full\" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href=\"/personverninnstillinger/samtykker/velg\"> forander samtykket ditt.</a>",
     "deling_fastleger_ikke_forerrett": "Noen av dine fastleger tas ikke i bruk førerrett applikasjon. Da du kan ikke dele dokument med dem.",
     "deling_logg_ukjent_bruktype": "Ukjent handling",
-    "deling_logg_ukjent_rolle": "Ukjent rolle"
+    "deling_logg_ukjent_rolle": "Ukjent rolle",
+    "deling_logg_table_col_title_naar": "Når",
+    "deling_logg_table_col_title_hvem": "Hvem",
+    "deling_logg_table_col_title_hva": "Hva",
+    "deling_logg_rolle_fastlege": "Fastlege"
   },
   "HNMinHelseHealthArchiveStrings": { 
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
