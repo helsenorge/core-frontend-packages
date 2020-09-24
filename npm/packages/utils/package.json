@@ -1,5 +1,6 @@
 {
   "name": "@helsenorge/core-utils",
+  "sideEffects": false,
   "version": "3.0.0-esm01",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
