@@ -12355,7 +12355,7 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   hjelpekontekst_kjernejournal_root: string;
   /** 
-  * <p>Du kan registrere helseopplysninger som du ønsker helsepersonell skal kjenne til på siden <a href="/sykdom-og-kritisk-info">Sykdom og kritisk informasjon</a>. Viktige kontaktpersoner kan registreres under <a href="/kontaktinformasjon">Kontaktinformasjon</a> og <a href="/helsekontakter">Helsekontakter</a>.</p>
+  * Du kan registrere helseopplysninger som du ønsker helsepersonell skal kjenne til på siden <a href="/sykdom-og-kritisk-info">Sykdom og kritisk informasjon</a>. Viktige kontaktpersoner kan registreres under <a href="/kontaktinformasjon">Kontaktinformasjon</a> og <a href="/helsekontakter">Helsekontakter</a>.
   */
   page_KJ_RegInfo: string;
   /** 
