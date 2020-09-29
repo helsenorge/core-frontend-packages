@@ -27640,7 +27640,7 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_HendelsesLogg_18: string;
   /** 
-  * Meldinger
+  * Innboks
   */
   page_HendelsesLogg_19: string;
   /** 
