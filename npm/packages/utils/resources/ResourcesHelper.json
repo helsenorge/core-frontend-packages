@@ -2679,7 +2679,7 @@
     "lightbox_til_deling_deleknapp": "Gå til Deling",
     "lightbox_til_deling_lukkknapp": "Lukk",
     "deling_ikke_samtykke": "Du må ha samtykkenivå \"Full\" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href=\"/personverninnstillinger/samtykker/velg\"> forandre samtykket ditt.</a>",
-    "deling_fastleger_ikke_forerrett": "Noen av dine fastleger tas ikke i bruk førerrett applikasjon. Da du kan ikke dele dokument med dem.",
+    "deling_fastleger_ikke_forerrett": "Noen av dine fastleger tar ikke i bruk førerrett applikasjon. Da kan du ikke dele dokument med dem.",
     "deling_logg_ukjent_bruktype": "Ukjent handling",
     "deling_logg_ukjent_rolle": "Ukjent rolle",
     "deling_logg_table_col_title_naar": "Når",
