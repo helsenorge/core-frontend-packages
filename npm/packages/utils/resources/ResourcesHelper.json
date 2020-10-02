@@ -7107,7 +7107,8 @@
     "formFinish": "Fullfør",
     "formRequiredErrorMessage": "Du må fylle ut dette feltet",
     "deleteAttachmentText": "Slett",
-    "uploadButtonText": "Last opp fil"
+    "uploadButtonText": "Last opp fil",
+    "autoSuggestLoadError": "Teknisk feil"
   },
   "HNMinHelseSysvak": { 
     "innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
