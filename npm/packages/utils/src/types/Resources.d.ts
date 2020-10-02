@@ -28538,6 +28538,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Last opp fil
   */
   uploadButtonText: string;
+  /** 
+  * Teknisk feil
+  */
+  autoSuggestLoadError: string;
 };
 
 export type HNMinHelseSysvak = { 
