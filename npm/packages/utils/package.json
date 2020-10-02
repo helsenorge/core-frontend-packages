@@ -3,7 +3,6 @@
   "sideEffects": false,
   "version": "3.0.0-esm01",
   "description": "samling av verktøy for hele helsenorge",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "build": "node scripts/build.js",
@@ -21,6 +20,7 @@
     "ROX"
   ],
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
     "@helsenorge/core-build": "15.0.0-esm01",
     "@helsenorge/designsystem-react": "1.0.0-beta.22",
