@@ -2671,13 +2671,6 @@
     "arkivert_med_stor_a": "Arkivert",
     "hjelpetrigger_dokumentVisningsnavn": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"Dersom du vil gi dokumentet et annet visningsnavn kan du gjøre det her. Opprinnelig filnavn endres ikke.\",\"seksjonstekst_overskrift\":\"\",\"seksjonstekst_brodtekst\":\"\"}",
     "gammelt_navn": "Navn",
-    "lightbox_ikke_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter",
-    "lightbox_slette_skjema_description": "Du er i ferd med å slette skjemautkastet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Hvis du sletter og deretter angrer på det, må du starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet skjemaet. Er du helt sikker på at du vil slette?",
-    "lightbox_slette_skjema_title": "Slett skjemautkast",
-    "lightbox_til_deling_title": "Lagret",
-    "lightbox_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter. Noen fastleger kan få tilgang til skjemaet dersom du velger å dele det. Hvis du vil at fastlegen skal se skjemaet når du har legetime, kan du forsøke å dele det med han eller henne.",
-    "lightbox_til_deling_deleknapp": "Gå til Deling",
-    "lightbox_til_deling_lukkknapp": "Lukk",
     "deling_ikke_samtykke": "Du må ha samtykkenivå \"Full\" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href=\"/personverninnstillinger/samtykker/velg\"> forandre samtykket ditt.</a>",
     "deling_fastleger_ikke_forerrett": "Noen av dine fastleger tar ikke i bruk førerrett applikasjon. Da kan du ikke dele dokument med dem.",
     "deling_logg_ukjent_bruktype": "Ukjent handling",
@@ -2685,7 +2678,14 @@
     "deling_logg_table_col_title_naar": "Når",
     "deling_logg_table_col_title_hvem": "Hvem",
     "deling_logg_table_col_title_hva": "Hva",
-    "deling_logg_rolle_fastlege": "Fastlege"
+    "deling_logg_rolle_fastlege": "Fastlege",
+    "lightbox_ikke_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter",
+    "lightbox_slette_skjema_description": "Du er i ferd med å slette skjemautkastet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Hvis du sletter og deretter angrer på det, må du starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet skjemaet. Er du helt sikker på at du vil slette?",
+    "lightbox_slette_skjema_title": "Slett skjemautkast",
+    "lightbox_til_deling_title": "Lagret",
+    "lightbox_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter. Noen fastleger kan få tilgang til skjemaet dersom du velger å dele det. Hvis du vil at fastlegen skal se skjemaet når du har legetime, kan du forsøke å dele det med han eller henne.",
+    "lightbox_til_deling_deleknapp": "Gå til Deling",
+    "lightbox_til_deling_lukkknapp": "Lukk"
   },
   "HNMinHelseHealthArchiveStrings": { 
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
@@ -6256,6 +6256,8 @@
     "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "page_HendelsesLogg_39": "Prøvesvar",
     "page_HendelsesLogg_38": "Innsyn i Smittestopp",
+    "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
+    "samtykkeDefinisjonAccessDeniedTitle": "Dette samtykket er ikke tilgjengelig",
     "organisasjonsnavn_fullmakt": "Helsenorge",
     "page_foreldresamtykke_consentStatusText": "Samtykke gitt av {0} {1}.",
     "hjelpetrigger_foreldresamtykke": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Foreldreinitiert tilgang\",\"seksjonstekst_brodtekst\":\"<p>Du som forelder med foreldreansvar og daglig omsorg for et barn mellom 12 og 16 år har mulighet til å gi barnet ditt tilgang til selv å logge inn på helsenorge.no. For å gjøre det må du samtykke til dette på denne siden.  Tjenester som blir tilgjengelig for barnet er henvisninger, timeavtaler, helsekontakter og resepter. Det vil også være mulig å sende og motta meldinger. Det vil ikke være mulig for barnet å avbestille eller endre time, og heller ikke fornye resept. Når det blir tilgjengelig ytterligere tjenester for barn mellom 12-16 år, vil du bli varslet om dette.</p><p>Forelderen som har samtykket til å gi barnet egen tilgang, kan når som helst trekke dette samtykke tilbake. Dette innebærer at barnet ikke lenger kan logge inn og benytte tjenester på helsenorge.no.</p><p>Ungdom som har fylt 16 kan logge inn i helsenorge.no uten et slikt samtykke fra en forelder.</p>\"}",
