@@ -1387,7 +1387,7 @@ export type HNMinHelseByttFastlegeJS = {
   */
   bfl_ErrorMessage_Title: string;
   /** 
-  * Byttet gjelder fra førstkommende månedsskifte. Frem til det er du er registrert hos din nåværende fastlege.
+  * Byttet gjelder fra førstkommende månedsskifte. Frem til det er du registrert hos din nåværende fastlege.
   */
   bfl_ResultPage_Byttedialog_BekreftInfo_Old: string;
   /** 
