@@ -25012,10 +25012,6 @@ export type HNMinHelsePersonvernStrings = {
   */
   samtykkeDefinisjonAccessDeniedBody: string;
   /** 
-  * Dette samtykket er ikke tilgjengelig
-  */
-  samtykkeDefinisjonAccessDeniedTitle: string;
-  /** 
   * Helsenorge
   */
   organisasjonsnavn_fullmakt: string;
