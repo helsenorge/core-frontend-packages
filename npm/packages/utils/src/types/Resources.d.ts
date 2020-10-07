@@ -31904,7 +31904,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   samvalg_Pdf: string;
   /** 
-  * Logg inn på Min helse
+  * Logg inn
   */
   samvalg_Login: string;
   /** 
