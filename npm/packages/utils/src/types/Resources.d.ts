@@ -1387,7 +1387,7 @@ export type HNMinHelseByttFastlegeJS = {
    */
   bfl_ErrorMessage_Title: string;
   /**
-   * Byttet gjelder fra førstkommende månedsskifte. Frem til det er du er registrert hos din nåværende fastlege.
+   * Byttet gjelder fra førstkommende månedsskifte. Frem til det er du registrert hos din nåværende fastlege.
    */
   bfl_ResultPage_Byttedialog_BekreftInfo_Old: string;
   /**
@@ -10648,34 +10648,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   gammelt_navn: string;
   /**
-   * Skjemaet er fullført og lagret i Dokumenter
-   */
-  lightbox_ikke_til_deling_description: string;
-  /**
-   * Du er i ferd med å slette skjemautkastet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Hvis du sletter og deretter angrer på det, må du starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet skjemaet. Er du helt sikker på at du vil slette?
-   */
-  lightbox_slette_skjema_description: string;
-  /**
-   * Slett skjemautkast
-   */
-  lightbox_slette_skjema_title: string;
-  /**
-   * Lagret
-   */
-  lightbox_til_deling_title: string;
-  /**
-   * Skjemaet er fullført og lagret i Dokumenter. Noen fastleger kan få tilgang til skjemaet dersom du velger å dele det. Hvis du vil at fastlegen skal se skjemaet når du har legetime, kan du forsøke å dele det med han eller henne.
-   */
-  lightbox_til_deling_description: string;
-  /**
-   * Gå til Deling
-   */
-  lightbox_til_deling_deleknapp: string;
-  /**
-   * Lukk
-   */
-  lightbox_til_deling_lukkknapp: string;
-  /**
    * Du må ha samtykkenivå "Full" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href="/personverninnstillinger/samtykker/velg"> forandre samtykket ditt.</a>
    */
   deling_ikke_samtykke: string;
@@ -10707,6 +10679,34 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Fastlege
    */
   deling_logg_rolle_fastlege: string;
+  /**
+   * Skjemaet er fullført og lagret i Dokumenter
+   */
+  lightbox_ikke_til_deling_description: string;
+  /**
+   * Du er i ferd med å slette skjemautkastet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Hvis du sletter og deretter angrer på det, må du starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet skjemaet. Er du helt sikker på at du vil slette?
+   */
+  lightbox_slette_skjema_description: string;
+  /**
+   * Slett skjemautkast
+   */
+  lightbox_slette_skjema_title: string;
+  /**
+   * Lagret
+   */
+  lightbox_til_deling_title: string;
+  /**
+   * Skjemaet er fullført og lagret i Dokumenter. Noen fastleger kan få tilgang til skjemaet dersom du velger å dele det. Hvis du vil at fastlegen skal se skjemaet når du har legetime, kan du forsøke å dele det med han eller henne.
+   */
+  lightbox_til_deling_description: string;
+  /**
+   * Gå til Deling
+   */
+  lightbox_til_deling_deleknapp: string;
+  /**
+   * Lukk
+   */
+  lightbox_til_deling_lukkknapp: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
@@ -25008,6 +25008,10 @@ export type HNMinHelsePersonvernStrings = {
    */
   page_HendelsesLogg_38: string;
   /**
+   * Du har ikke tilgang til samtykkedefinisjonen.
+   */
+  samtykkeDefinisjonAccessDeniedBody: string;
+  /**
    * Helsenorge
    */
   organisasjonsnavn_fullmakt: string;
@@ -28538,6 +28542,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    * Last opp fil
    */
   uploadButtonText: string;
+  /**
+   * Teknisk feil
+   */
+  autoSuggestLoadError: string;
 };
 
 export type HNMinHelseSysvak = {
@@ -31896,7 +31904,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
    */
   samvalg_Pdf: string;
   /**
-   * Logg inn på Min helse
+   * Logg inn
    */
   samvalg_Login: string;
   /**
