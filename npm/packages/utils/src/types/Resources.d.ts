@@ -10652,7 +10652,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   deling_ikke_samtykke: string;
   /** 
-  * Noen av dine fastleger tar ikke i bruk førerrett applikasjon. Da kan du ikke dele dokument med dem.
+  * Din fastlege har ikke mulighet til å se delte dokumenter. Derfor kan du ikke dele dokumentet.
   */
   deling_fastleger_ikke_forerrett: string;
   /** 
