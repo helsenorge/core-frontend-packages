@@ -1387,7 +1387,7 @@ export type HNMinHelseByttFastlegeJS = {
    */
   bfl_ErrorMessage_Title: string;
   /**
-   * Byttet gjelder fra førstkommende månedsskifte. Frem til det er du er registrert hos din nåværende fastlege.
+   * Byttet gjelder fra førstkommende månedsskifte. Frem til det er du registrert hos din nåværende fastlege.
    */
   bfl_ResultPage_Byttedialog_BekreftInfo_Old: string;
   /**
@@ -10648,6 +10648,38 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   gammelt_navn: string;
   /**
+   * Du må ha samtykkenivå "Full" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href="/personverninnstillinger/samtykker/velg"> forandre samtykket ditt.</a>
+   */
+  deling_ikke_samtykke: string;
+  /**
+   * Din fastlege har ikke mulighet til å se delte dokumenter. Derfor kan du ikke dele dokumentet.
+   */
+  deling_fastleger_ikke_forerrett: string;
+  /**
+   * Ukjent handling
+   */
+  deling_logg_ukjent_bruktype: string;
+  /**
+   * Ukjent rolle
+   */
+  deling_logg_ukjent_rolle: string;
+  /**
+   * Når
+   */
+  deling_logg_table_col_title_naar: string;
+  /**
+   * Hvem
+   */
+  deling_logg_table_col_title_hvem: string;
+  /**
+   * Hva
+   */
+  deling_logg_table_col_title_hva: string;
+  /**
+   * Fastlege
+   */
+  deling_logg_rolle_fastlege: string;
+  /**
    * Skjemaet er fullført og lagret i Dokumenter
    */
   lightbox_ikke_til_deling_description: string;
@@ -10675,38 +10707,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Lukk
    */
   lightbox_til_deling_lukkknapp: string;
-  /**
-   * Du må ha samtykkenivå "Full" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href="/personverninnstillinger/samtykker/velg"> forandre samtykket ditt.</a>
-   */
-  deling_ikke_samtykke: string;
-  /**
-   * Noen av dine fastleger tar ikke i bruk førerrett applikasjon. Da kan du ikke dele dokument med dem.
-   */
-  deling_fastleger_ikke_forerrett: string;
-  /**
-   * Ukjent handling
-   */
-  deling_logg_ukjent_bruktype: string;
-  /**
-   * Ukjent rolle
-   */
-  deling_logg_ukjent_rolle: string;
-  /**
-   * Når
-   */
-  deling_logg_table_col_title_naar: string;
-  /**
-   * Hvem
-   */
-  deling_logg_table_col_title_hvem: string;
-  /**
-   * Hva
-   */
-  deling_logg_table_col_title_hva: string;
-  /**
-   * Fastlege
-   */
-  deling_logg_rolle_fastlege: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
@@ -25008,6 +25008,10 @@ export type HNMinHelsePersonvernStrings = {
    */
   page_HendelsesLogg_38: string;
   /**
+   * Du har ikke tilgang til samtykkedefinisjonen.
+   */
+  samtykkeDefinisjonAccessDeniedBody: string;
+  /**
    * Helsenorge
    */
   organisasjonsnavn_fullmakt: string;
@@ -26913,7 +26917,7 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
    */
   hjelpetrigger_kontaktPersonopplysninger: string;
   /**
-   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Varseloppsett","seksjonstekst_brodtekst":"<p>\nI varseloppsettet kan du bestemme om du ønsker SMS- eller e-postvarsel når du mottar informasjon på helsenorge.no, og hvilke varsler du får. Dersom du ikke har valgt noe annet, blir varsel sendt på SMS. Varsel sendes til e-post og mobilnummer registrert hos Digitalt kontaktregister. Varsler kan også sendes til utenlandske mobiltelefonnumre. Varsler gjelder bare tjenester på helsenorge.no.\n</p>\n\n<p>\nDersom du har foreldreansvar for barn, vil du få samme type varsler for dem som du får for deg selv.\n</p>\n\n<h3>\nBare viktige varsler\n</h3>\n\n<p>\nDisse varslene vil du få uansett hvilket alternativ du velger:\n</p>\n\n<ul>\n<li>Varsler om nye, endrede eller avlyste timeavtaler som vises på Helsenorge. Sykehus i Helse Vest og Helse Nord vil selv varsle om timer.</li>\n<li>Påminnelser om timeavtaler hos fastlegen</li>\n<li>Meldinger fra helsepersonell</li>\n<li>Innkallingsbrev og andre viktige brev</li>\n<li>Vedtak og brev fra Pasientreiser</li>\n<li>Varsel om ny melding angående opprettelse, endring eller sletting av en fullmakt, eller påminnelse om noe av dette</li>\n<li>Varsel om at et digitalt verktøy er tilgjengelig</li>\n</ul>\n\n<h3>\nFlere varsler\n</h3>\n\n<p>\nHvis du ønsker det kan du i tillegg få andre varsler, som for eksempel:\n</p>\n\n<ul>\n<li>Varsel om ny melding angående innsyn eller feil i besøkshistorikk</li>\n<li>Varsel om mottak av rapporter fra helseregistre</li>\n<li>Varsel om at du har fått melding på Helsenorge fra en helseundersøkelse eller klinisk studie du deltar i</li>\n<li>Varsel om fornyelse av resept</li>\n</ul>\n\n<h3>\nAlle varsler\n</h3>\n\n<p>\nØnsker du å motta alle varsler som finnes, vil du i tillegg få varsel om:\n</p>\n\n<ul>\n<li>At hjemmebesøk i kommunehelsetjenesten er utført</li>\n</ul>"}
+   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Varseloppsett","seksjonstekst_brodtekst":"<p>\nI varseloppsettet kan du bestemme om du ønsker SMS- eller e-postvarsel når du mottar informasjon på helsenorge.no, og hvilke varsler du får.\n</p>\n\n<p>\nHvis du ikke har valgt noe annet, blir varsel sendt på SMS. Varsel sendes til e-post og mobilnummer som er registrert hos <a href=\"https://www.norge.no/nb/oppdater-kontaktinformasjon\">kontakt- og reservasjonsregisteret (ID-porten)</a>. Varsler kan sendes til både norske og utenlandske mobiltelefonnumre, og gjelder bare tjenester på helsenorge.no.\n</p>\n\n<p>\nHvis du har foreldreansvar for barn, vil du få samme type varsler for dem som du får for deg selv.\n</p>\n\n<h3>\nObligatoriske varsler\n</h3>\n\n<p>\nDisse varslene vil du få uansett hvilket alternativ du velger:\n</p>\n\n<ul>\n<li>Varsler om nye, endrede eller avlyste timeavtaler som vises på Helsenorge. Sykehus i Helse Vest og Helse Nord vil selv varsle om timer.</li>\n<li>Påminnelser om timeavtaler hos fastlegen</li>\n<li>Meldinger fra helsepersonell</li>\n<li>Innkallingsbrev og andre viktige brev</li>\n<li>Vedtak og brev fra Pasientreiser</li>\n<li>Varsel om ny melding angående opprettelse, endring eller sletting av en fullmakt, eller påminnelse om noe av dette</li>\n<li>Varsel om at et digitalt verktøy er tilgjengelig</li>\n<li>Varsel om at du har et nytt skjema å fylle ut, eller påminnelse om at fristen snart går ut på et skjema</li>\n</ul>\n\n<h3>\nViktige varsler\n</h3>\n\n<p>\nHvis du ønsker det kan du få andre viktige varsler, i tillegg til de obligatoriske, det vil si:\n</p>\n\n<ul>\n<li>Varsel om ny melding angående innsyn eller feil i besøkshistorikk</li>\n<li>Varsel om mottak av rapporter fra helseregistre</li>\n<li>Varsel om at du har fått melding på Helsenorge fra en helseundersøkelse eller klinisk studie du deltar i</li>\n<li>Varsel om fornyelse av resept</li>\n</ul>\n\n<h3>\nAlle varsler\n</h3>\n\n<p>\nØnsker du å motta alle varsler som finnes, vil du i tillegg få varsel om:\n</p>\n\n<ul>\n<li>At hjemmebesøk i kommunehelsetjenesten er utført</li>\n</ul>"}
    */
   hjelpetrigger_kontaktVarseloppsett: string;
   /**
@@ -31900,7 +31904,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
    */
   samvalg_Pdf: string;
   /**
-   * Logg inn på Min helse
+   * Logg inn
    */
   samvalg_Login: string;
   /**
