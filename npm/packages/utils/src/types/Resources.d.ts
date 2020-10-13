@@ -32464,7 +32464,7 @@ export type HNVidereformidling = {
   */
   videreformidling_Epost_Varsel: string;
   /** 
-  * 
+  * v/Foresatte
   */
   videreformidling_Post_Ved_Foresatte: string;
 };
