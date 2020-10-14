@@ -431,6 +431,10 @@ export type HNCoreFrontendWebForside = {
    * Du var stille en stund og har blitt logget ut
    */
   inactivity_SignedOut_Title: string;
+  /** 
+  * /auth/signin
+  */
+  inactivity_LoginUrl: string;
 };
 
 export type HNMinHelseByttFastlegeJS = {

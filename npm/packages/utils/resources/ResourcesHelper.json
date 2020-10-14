@@ -110,7 +110,8 @@
     "varslingspanelTitleDescription": "Du bruker nå Helsenorge på vegne av",
     "inactivity_SignedOut_Button_GoToRoot": "Gå til forsiden",
     "inactivity_SignedOut_Button_SignInAgain": "Logg inn på nytt",
-    "inactivity_SignedOut_Title": "Du var stille en stund og har blitt logget ut"
+    "inactivity_SignedOut_Title": "Du var stille en stund og har blitt logget ut",
+    "inactivity_LoginUrl": "/auth/signin"
   },
   "HNMinHelseByttFastlegeJS": {
     "hjelpetrigger_bflUtekontor": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Utekontor\",\"seksjonstekst_brodtekst\":\"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>\"}",
