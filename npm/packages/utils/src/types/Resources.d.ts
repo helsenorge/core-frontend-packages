@@ -427,6 +427,10 @@ export type HNCoreFrontendWebForside = {
   * Logg inn på nytt
   */
   inactivity_SignedOut_Button_SignInAgain: string;
+  /** 
+  * Du var stille en stund og har blitt logget ut
+  */
+  inactivity_SignedOut_Title: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
