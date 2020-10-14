@@ -1,23 +1,5 @@
-/* Utility for tracking using Adobe Analytics.
- *
- * Examples:
- * trackSelfService('start', 'Søknad', 'Velg rolle', 1, { pasientreiserApplication: 'Utvidet søknad', pasientreiserOnBehalfOf: 'self'});
- * trackSelfServiceIntent('Page title');
- * trackFilters('Filter name', 'usage');
- * trackPagePartner('Helse Nord RHF');
- * trackServiceAlert(true);
- * trackArticleTab('Legemidler');
- * trackUrlChange(window.location.href, window.location.pathname)
- * trackSearch('søkeord', 'Bytt fastlege søk', 10);
- * trackSearchThrough(1);
- * trackDonorCard(true);
- * trackError('level1' or 'level2');
- * trackProfileInteraction('Registrer fullmakt')
- * trackConsent('complete', 'Kvittering', 4, 'Nytt samtykke');
- * setValueForSelectedUser();
- * trackProsesshjelp('Prosesshjelp' , 'Hjelp' , 'Om Timeavtaler', 'Open' );
- */
-//used 50
+import { isEmpty } from './string-utils';
+
 interface DigitalData {
   selfService?: SelfService | ConsentSelfService;
   filters?: Filters;
@@ -141,9 +123,18 @@ declare global {
 export type SelfServiceTrackType = 'start' | 'funnel' | 'complete' | 'cancel' | 'continue later';
 export type ConsentTrackType = 'info' | 'funnel' | 'complete';
 export type FiltersTrackType = 'usage' | 'expand' | 'search' | 'groupExpand';
+export type ErrorType = 'level1' | 'level2' | 'level3' | 'level4';
+export type ProsesshjelpActionType = 'Open' | 'Close';
 
-// For tracking start, funnel and complete.
-export function trackSelfService(trackType: SelfServiceTrackType, name: string, step: string, stepNumber: number, custom?: {}) {
+/**
+ * Spore at bruker har startet, avbrutt, lagret eller fullført en prosess med flere steg.
+ * @param trackType type som styrer selfService
+ * @param name definerer selfServiceName
+ * @param step definerer selfServiceFunnelStep
+ * @param stepNumber definerer selfServiceFunnelStepNumber
+ * @param custom prop object som merges videre på selfService
+ */
+export const trackSelfService = (trackType: SelfServiceTrackType, name: string, step: string, stepNumber: number, custom?: {}): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -174,25 +165,85 @@ export function trackSelfService(trackType: SelfServiceTrackType, name: string, 
 
     _satellite.track(`self service ${trackType}`);
   }
-}
+};
 
-// For tracking intent.
-export function trackSelfServiceIntent(engagementName: string, custom?: {}) {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
+/**
+ * Fjerner diverse navn og id fra paths
+ * @param s url som skal renses
+ */
+export const removeNamesAndOtherIds = (s: string): string => {
+  const koordinatorPattern = new RegExp('koordinator/(.+)$');
+  const helsefagligPattern = new RegExp('helsefagligkontakt/(.+)$');
+  const kommunePattern = new RegExp('kommune/(.+)$');
+  const avtalePattern = new RegExp('avtale/((.+)(/)|(.+)$)');
 
-  if (digitalData && _satellite) {
-    digitalData.selfService = {
-      selfServiceEngagement: 'true',
-      selfServiceEngagementName: engagementName,
-      ...custom,
-    };
+  return s
+    .replace(koordinatorPattern, 'koordinator')
+    .replace(helsefagligPattern, 'helsefagligkontakt')
+    .replace(kommunePattern, 'kommune')
+    .replace(avtalePattern, 'avtale/{id}/');
+};
 
-    _satellite.track(`self service intent`);
+/**
+ * For tracking registerName on diffrent Helseregistre pages
+ * @param path array of strenger som skal registreres
+ */
+export const getRegisterName = (path: string[]): string => {
+  switch (path.length > 0) {
+    case path[0] === 'helseregistre':
+    case path[0] === 'mfr':
+    case path[0] === 'sysvak':
+    case path[0] === 'visregisterinnsyn':
+    case path[0] === 'reseptformidleren':
+      try {
+        if (document.title.substr(0, 8) === 'Innsyn i') {
+          return document.title.substr(8, document.title.length);
+        } else {
+          return document.title.split('-')[0].trimRight();
+        }
+      } catch (e) {
+        return document.title;
+      }
   }
-}
 
-export function trackUrlChange(url: string, pathName: string) {
+  return '';
+};
+
+/**
+ * For tracking contentGrouping
+ * @param digitalData digitalData med informasjon om Page
+ * @param path array of strenger som skal registreres
+ */
+export const getContentGrouping = (digitalData: DigitalData | undefined, path: string[]): string => {
+  let group = digitalData && digitalData.page && digitalData.page.category ? digitalData.page.category.contentGrouping : '';
+
+  if (path.length > 0) {
+    switch (true) {
+      case path.length > 1 && path[1] === 'avtale':
+        group = 'timeavtaler';
+        return group;
+      case path[0] === 'bestill-time':
+      case path[0] === 'e-konsultasjon':
+      case path[0] === 'forny-resept':
+      case path[0] === 'kontakt-legekontoret':
+        group = 'Fastlegen';
+        return group;
+
+      default:
+        group = path[0] ? path[0] : '';
+        return group;
+    }
+  } else {
+    return '';
+  }
+};
+
+/**
+ * Spor at URL har endret seg (unødvendig om man bruker Router.)
+ * @param url Utgangspunkt som brukes for å definere pageURL (window.location.href)
+ * @param pathName Utgangspunkt som brukes for å definere pageName (window.location.pathname)
+ */
+export const trackUrlChange = (url: string, pathName: string): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -205,6 +256,7 @@ export function trackUrlChange(url: string, pathName: string) {
 
   if (digitalData && digitalData.page && digitalData.page.pageInfo) {
     const urlSplit = removeNamesAndOtherIds(url).split('://');
+
     if (urlSplit.length > 1) {
       digitalData.page.pageInfo.pageURL = urlSplit[1].replace(guidPattern, '{guid}').replace(intPattern, '{id}');
     }
@@ -227,60 +279,21 @@ export function trackUrlChange(url: string, pathName: string) {
   if (_satellite && _satellite.track) {
     _satellite.track('lightbox');
   }
-}
+};
 
-// For tracking contentGrouping
-function getContentGrouping(digitalData: DigitalData | undefined, path: string[]): string {
-  let group = digitalData && digitalData.page && digitalData.page.category ? digitalData.page.category.contentGrouping : '';
-
-  if (path.length > 0) {
-    switch (true) {
-      case path.length > 1 && path[1] === 'avtale':
-        group = 'timeavtaler';
-        return group;
-      case path[0] === 'bestill-time':
-      case path[0] === 'e-konsultasjon':
-      case path[0] === 'forny-resept':
-      case path[0] === 'kontakt-legekontoret':
-        group = 'Fastlegen';
-        return group;
-
-      default:
-        group = path[0] ? path[0] : '';
-        return group;
-    }
-  } else {
-    return '';
-  }
-}
-
-// For tracking registerName on diffrent Helseregistre pages
-function getRegisterName(path: string[]): string {
-  switch (path.length > 0) {
-    case path[0] === 'helseregistre':
-    case path[0] === 'mfr':
-    case path[0] === 'sysvak':
-    case path[0] === 'visregisterinnsyn':
-    case path[0] === 'reseptformidleren':
-      try {
-        if (document.title.substr(0, 8) === 'Innsyn i') {
-          return document.title.substr(8, document.title.length);
-        } else {
-          return document.title.split('-')[0].trimRight();
-        }
-      } catch (e) {
-        return document.title;
-      }
-  }
-  return '';
-}
-
-export function trackConsent(
+/**
+ * Spor bruk av samtykkeflyt
+ * @param consentTrackType definerer consentStart, consentFunnel eller consentComplete videre
+ * @param stepName definerer consentFunnelStep på ConsentSelfService
+ * @param stepNumber definerer selfServiceFunnelStepNumber på ConsentSelfService
+ * @param consentType definerer consentType på ConsentSelfService
+ */
+export const trackConsent = (
   consentTrackType: ConsentTrackType,
   stepName: string,
   stepNumber: number,
   consentType: 'Nytt samtykke' | 'Endre samtykke'
-) {
+): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -313,27 +326,14 @@ export function trackConsent(
       _satellite.track(trackText);
     }
   }
-}
+};
 
-function isEmpty(s: string) {
-  return s === '' || s === null || s === undefined;
-}
-
-export function removeNamesAndOtherIds(s: string) {
-  const koordinatorPattern = new RegExp('koordinator/(.+)$');
-  const helsefagligPattern = new RegExp('helsefagligkontakt/(.+)$');
-  const kommunePattern = new RegExp('kommune/(.+)$');
-  const avtalePattern = new RegExp('avtale/((.+)(/)|(.+)$)');
-
-  return s
-    .replace(koordinatorPattern, 'koordinator')
-    .replace(helsefagligPattern, 'helsefagligkontakt')
-    .replace(kommunePattern, 'kommune')
-    .replace(avtalePattern, 'avtale/{id}/');
-}
-
-// For tracking filters
-export function trackFilters(name: string, trackType: FiltersTrackType) {
+/**
+ * Spor bruk av filterkomponent
+ * @param name definerer navnet fil Filter
+ * @param trackType definerer type tracking: 'usage' | 'expand' | 'search' | 'groupExpand'
+ */
+export const trackFilters = (name: string, trackType: FiltersTrackType): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -361,32 +361,25 @@ export function trackFilters(name: string, trackType: FiltersTrackType) {
       _satellite.track('filter search');
     }
   }
-}
+};
 
-// For tracking pageInfo partner
-export function trackPagePartner(partner: string) {
+/**
+ * Spor pageInfo partner - setter informasjon om tjenesteeier o.l. i window.digitalData
+ * @param partner definerer partner som settes i pageInfo
+ */
+export const trackPagePartner = (partner: string): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
 
   if (digitalData && digitalData.page && digitalData.page.pageInfo) {
     digitalData.page.pageInfo.partner = partner;
   }
-}
+};
 
-// For tracking pageInfo partner
-export function trackServiceAlert(hasContent: boolean) {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.user = {
-      serviceAlert: hasContent ? 'Har innhold' : 'Har ikke innhold',
-    };
-    _satellite.track('service alert');
-  }
-}
-
-// For tracking unread alerts and unread messagses
-export function trackUnreadAlert(hasUnReadAlerts: boolean) {
+/**
+ * Spor uleste varslinger
+ * @param hasUnReadAlerts true/false
+ */
+export const trackUnreadAlert = (hasUnReadAlerts: boolean): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -396,10 +389,13 @@ export function trackUnreadAlert(hasUnReadAlerts: boolean) {
     };
     _satellite.track('first logged in page');
   }
-}
+};
 
-// For tracking unread alerts and unread messagses
-export function trackUnreadMessage(hasUnReadMessages: boolean) {
+/**
+ * Spor uleste meldinger
+ * @param hasUnReadMessages true/false
+ */
+export const trackUnreadMessage = (hasUnReadMessages: boolean): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -409,10 +405,13 @@ export function trackUnreadMessage(hasUnReadMessages: boolean) {
     };
     _satellite.track('first logged in page');
   }
-}
+};
 
-// For tracking content-types on read messages
-export function trackReadMessageType(contentType: string) {
+/**
+ * Spor content-types på meldinger
+ * @param contentType type som settes på page category
+ */
+export const trackReadMessageType = (contentType: string): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
 
   if (digitalData && digitalData.page && digitalData.page.category) {
@@ -423,24 +422,15 @@ export function trackReadMessageType(contentType: string) {
   if (_satellite) {
     _satellite.track('message content type');
   }
-}
+};
 
-// For tracking article tab name
-export function trackArticleTab(tabName: string) {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.articletab = {
-      tabName: tabName,
-      tabClick: 'true',
-    };
-    _satellite.track('tab click');
-  }
-}
-
-// For tracking search
-export function trackSearch(term: string, name: string, resultsCount: number) {
+/**
+ * Spor internsøk
+ * @param term nøkkelord som settes på search searchTerm
+ * @param name type som settes på search searchType
+ * @param resultsCount antall søkeresultater som settes på search resultsCount
+ */
+export const trackSearch = (term: string, name: string, resultsCount: number): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -459,10 +449,13 @@ export function trackSearch(term: string, name: string, resultsCount: number) {
       _satellite.track('internal search');
     }
   }
-}
+};
 
-// For tracking search click through
-export function trackSearchThrough(searchposition: number) {
+/**
+ * Spor klikk på internsøkeresultater
+ * @param searchposition position til søkeresultatet som lagres på search searchposition
+ */
+export const trackSearchThrough = (searchposition: number): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -474,10 +467,13 @@ export function trackSearchThrough(searchposition: number) {
 
     _satellite.track('search click through');
   }
-}
+};
 
-// For tracking donor card
-export function trackDonorCard(smsAlert: boolean) {
+/**
+ * Spor registrering av donorkort
+ * @param smsAlert om det ble sendt smsAlert
+ */
+export const trackDonorCard = (smsAlert: boolean): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -488,10 +484,13 @@ export function trackDonorCard(smsAlert: boolean) {
     };
     _satellite.track('donor card NextOfKin');
   }
-}
+};
 
-// For tracking profile interaction
-export function trackProfileInteraction(name: string) {
+/**
+ * Spor endring av profilinnstillinger
+ * @param name navn som lagres på user profileInteractionName
+ */
+export const trackProfileInteraction = (name: string): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -502,19 +501,26 @@ export function trackProfileInteraction(name: string) {
     };
     _satellite.track('profile interaction');
   }
-}
+};
 
-// Sets value for "user", for use after selecting main user in people picker (personvelger)
-export function setValueForSelectedUser() {
+/**
+ * Spor verdien for 'user' representasjon etter at den ble valgt i  personvelger
+ */
+export const setValueForSelectedUser = (): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
-
   if (digitalData && digitalData.page) {
     digitalData.page.user = { onBehalfOf: 'Eget bruk', role: 'Eget bruk' };
   }
-}
+};
 
-export type ProsesshjelpActionType = 'Open' | 'Close';
-export function trackProsesshjelp(name: string, toolType: string, label: string, actionType: ProsesshjelpActionType) {
+/**
+ * Spor åpning/lukking av hjelpeskuff
+ * @param name navn som lagres på tool toolName
+ * @param toolType type som lagres på tool toolType
+ * @param label label som lagres på tool toolLabels
+ * @param actionType action-type som lagres på toolAction og som definerer label (Close or Open)
+ */
+export const trackProsesshjelp = (name: string, toolType: string, label: string, actionType: ProsesshjelpActionType): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -527,9 +533,55 @@ export function trackProsesshjelp(name: string, toolType: string, label: string,
     };
     _satellite.track(actionType + ' context help');
   }
+};
+
+/* ********************************************** */
+/* *************** DEPRECATED ******************* */
+/* ********************************************** */
+
+// For tracking intent. - muligens deprecated
+export const trackSelfServiceIntent = (engagementName: string, custom?: {}): void => {
+  const digitalData: DigitalData = window.digitalData || undefined;
+  const _satellite: Satellite = window._satellite || undefined;
+
+  if (digitalData && _satellite) {
+    digitalData.selfService = {
+      selfServiceEngagement: 'true',
+      selfServiceEngagementName: engagementName,
+      ...custom,
+    };
+
+    _satellite.track(`self service intent`);
+  }
+};
+
+// For tracking pageInfo partner - muligens deprecated
+export function trackServiceAlert(hasContent: boolean) {
+  const digitalData: DigitalData = window.digitalData || undefined;
+  const _satellite: Satellite = window._satellite || undefined;
+
+  if (digitalData && _satellite) {
+    digitalData.user = {
+      serviceAlert: hasContent ? 'Har innhold' : 'Har ikke innhold',
+    };
+    _satellite.track('service alert');
+  }
 }
 
-export type ErrorType = 'level1' | 'level2' | 'level3' | 'level4';
+// For tracking article tab name
+export function trackArticleTab(tabName: string) {
+  const digitalData: DigitalData = window.digitalData || undefined;
+  const _satellite: Satellite = window._satellite || undefined;
+
+  if (digitalData && _satellite) {
+    digitalData.articletab = {
+      tabName: tabName,
+      tabClick: 'true',
+    };
+    _satellite.track('tab click');
+  }
+}
+
 // For tracking error
 export function trackError(level: ErrorType, details?: string): void {
   const digitalData: DigitalData = window.digitalData || undefined;

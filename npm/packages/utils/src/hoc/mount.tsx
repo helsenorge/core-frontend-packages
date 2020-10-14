@@ -17,9 +17,7 @@ export default function mount<T>(WrappedComponent: ComponentClass<T & Props> | R
     }
 
     render(): JSX.Element {
-      /* eslint-disable @typescript-eslint/no-explicit-any */
-      return <WrappedComponent {...(this.props as any)} />;
-      /* eslint-enable @typescript-eslint/no-explicit-any */
+      return <WrappedComponent {...this.props} />;
     }
   }
 

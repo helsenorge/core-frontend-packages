@@ -6,7 +6,7 @@ const cmd = promisify(exec);
 
 rimraf('./lib', async () => {
   try {
-    await cmd('tsc');
+    await cmd('tsc --build scripts/tsconfig.build.json');
     await fs.copy('src/types/dev.d.ts', './lib/dev.d.ts');
     await fs.copy('./package.json', './lib/package.json');
     await fs.copy('./.npmrc', './lib/.npmrc');
