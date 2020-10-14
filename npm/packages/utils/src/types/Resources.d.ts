@@ -419,6 +419,22 @@ export type HNCoreFrontendWebForside = {
   * Du bruker nå Helsenorge på vegne av
   */
   varslingspanelTitleDescription: string;
+  /** 
+  * Gå til forsiden
+  */
+  inactivity_SignedOut_Button_GoToRoot: string;
+  /** 
+  * Logg inn på nytt
+  */
+  inactivity_SignedOut_Button_SignInAgain: string;
+  /** 
+  * Du var stille en stund og har blitt logget ut
+  */
+  inactivity_SignedOut_Title: string;
+  /** 
+  * /auth/signin
+  */
+  inactivity_LoginUrl: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
