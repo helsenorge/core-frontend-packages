@@ -3546,7 +3546,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Fullmakt_Description: string;
   /** 
-  * <a class="Page_AskForAccessToService_Link_Text" href="om-min-helse/slik-representerer-du-andre-paa-helsenorge-no">Mer informasjon om hvordan representere andre på Helsenorge</a>
+  * <a class="Page_AskForAccessToService_Link_Text" href="fullmakt/om-min-helse/slik-representerer-du-andre-paa-helsenorge-no">Mer informasjon om hvordan representere andre på Helsenorge</a>
   */
   page_AskForAccessToService_Link_Text: string;
   /** 
