@@ -1,10 +1,11 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "2.0.3",
+  "sideEffects": false,
+  "version": "3.0.0-beta01",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "scripts": {
-    "build": "node scripts/build.js",
+    "build": "node scripts/build.cjs",
     "postbuild": "rimraf lib/_devonly",
     "change-versions": "node scripts/change-versions.js",
     "publish:beta": "cd lib && npm publish --tag=beta",
@@ -19,9 +20,10 @@
     "ROX"
   ],
   "license": "ISC",
+  "type": "module",
   "devDependencies": {
-    "@helsenorge/core-build": "14.0.0",
-    "@helsenorge/designsystem-react": "1.0.0-beta.22",
+    "@helsenorge/core-build": "15.0.0-beta01",
+    "@helsenorge/designsystem-react": "1.0.0-beta.28",
     "@types/react-router-dom": "^5.1.3",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/redux": "^3.6.0",
