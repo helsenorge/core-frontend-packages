@@ -721,7 +721,6 @@
     "innbyggermenySistInnlogget": "Sist innlogget:",
     "paminnelse": "Påminnelse",
     "forfalt": "Forfalt for",
-    "personvelgerIngress": "Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.",
     "prosessHjelpError": "Beklager, det har oppstått en feil.",
     "prosessHjelpErrorDescription": "Kunne ikke hente hjelpeinfo. Prøv igjen senere, eller kontakt Veiledning helsenorge.no på telefon 23 32 70 00.",
     "regionPopup_Heading": "Velg helseregion",
