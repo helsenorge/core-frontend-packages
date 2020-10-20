@@ -18339,6 +18339,18 @@ export type HNMinHelsePasientjournal = {
   * Dersom du har dokumenter hos noen av disse stedene vil de ikke vises i listen
   */
   xDS_LokasjonFeil_Bunntekst: string;
+  /** 
+  * Listen er muligens ikke komplett
+  */
+  xDS_LokasjonFeil_Varsel_Title: string;
+  /** 
+  * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått eller at du har angitt for stor tidsintervall. Du kan forsøke med et mindre tidsintervall.
+  */
+  xDS_LokasjonFeil_Varsel_Body: string;
+  /** 
+  * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelige
+  */
+  xDS_LokasjonFeil_Tillegg_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
