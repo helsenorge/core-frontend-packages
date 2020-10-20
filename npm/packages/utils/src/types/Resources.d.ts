@@ -18351,6 +18351,14 @@ export type HNMinHelsePasientjournal = {
   * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelige
   */
   xDS_LokasjonFeil_Tillegg_Body: string;
+  /** 
+  * For mange dokumenter
+  */
+  xDS_Varsel_OverTerskel_Init_Title: string;
+  /** 
+  * Du har flere dokumenter siste {0} mnd enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer og/eller dokumenttyper for å se andre dokumenter.
+  */
+  xDS_Varsel_OverTerskel_Init_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 

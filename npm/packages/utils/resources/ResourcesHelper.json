@@ -4589,7 +4589,9 @@
     "xDS_LokasjonFeil_Bunntekst": "Dersom du har dokumenter hos noen av disse stedene vil de ikke vises i listen",
     "xDS_LokasjonFeil_Varsel_Title": "Listen er muligens ikke komplett",
     "xDS_LokasjonFeil_Varsel_Body": "Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått eller at du har angitt for stor tidsintervall. Du kan forsøke med et mindre tidsintervall.",
-    "xDS_LokasjonFeil_Tillegg_Body": "Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelige"
+    "xDS_LokasjonFeil_Tillegg_Body": "Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelige",
+    "xDS_Varsel_OverTerskel_Init_Title": "For mange dokumenter",
+    "xDS_Varsel_OverTerskel_Init_Body": "Du har flere dokumenter siste {0} mnd enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer og/eller dokumenttyper for å se andre dokumenter."
   },
   "HNMinHelsePasientreiserJS": { 
     "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?",
