@@ -18244,11 +18244,11 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_OUSHF: string;
   /** 
-  * Helse Sør-Øst
+  * Sykehus i Helse Sør-Øst
   */
   xDS_LokasjonFeil_HSO: string;
   /** 
-  * Uidentifiserbar lokasjon
+  * Uidentifisert helseregion eller sykehus
   */
   xDS_LokasjonFeil_Uidentifisert: string;
   /** 
@@ -18296,7 +18296,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_LDS: string;
   /** 
-  * Helse Nord
+  * Sykehus i Helse Nord
   */
   xDS_LokasjonFeil_HN: string;
   /** 
@@ -18330,7 +18330,15 @@ export type HNMinHelsePasientjournal = {
   /** 
   * {0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.
   */
-  xDS_VarselListe_LokasjonOpptatt: string;
+  xDS_LokasjonFeil_LokasjonOpptatt: string;
+  /** 
+  * {0} har ikke tilgjengeliggjort dokumentinnsyn på vegne av barn.
+  */
+  xDS_LokasjonFeil_Representasjon: string;
+  /** 
+  * Dersom du har dokumenter hos noen av disse stedene vil de ikke vises i listen
+  */
+  xDS_LokasjonFeil_Bunntekst: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
