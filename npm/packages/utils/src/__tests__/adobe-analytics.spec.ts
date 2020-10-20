@@ -519,4 +519,22 @@ describe('Adobe-analytics', () => {
       });
     });
   });
+
+  describe('Gitt at trackTool kalles', () => {
+    it('Så settes den riktig data i tool track data', () => {
+      const digitalData = {
+        tool: { toolName: undefined, toolType: undefined, toolLabels: undefined, toolAction: undefined },
+      };
+      const original = global.window['digitalData'];
+      global.window['digitalData'] = digitalData;
+      adobeFunctions.trackTool('name', 'tooltype', 'label', 'Close');
+
+      expect(digitalData.tool.toolName).toEqual('name');
+      expect(digitalData.tool.toolType).toEqual('tooltype');
+      expect(digitalData.tool.toolLabels).toEqual('label');
+      expect(digitalData.tool.toolAction).toEqual('Close');
+
+      global.window['digitalData'] = original;
+    });
+  });
 });
