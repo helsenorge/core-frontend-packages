@@ -18359,6 +18359,14 @@ export type HNMinHelsePasientjournal = {
   * Du har flere dokumenter siste {0} mnd enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer og/eller dokumenttyper for å se andre dokumenter.
   */
   xDS_Varsel_OverTerskel_Init_Body: string;
+  /** 
+  * Dine filtervalg returnerer for mange dokumenter
+  */
+  xDS_Varsel_OverTerskel_Manuell_Title: string;
+  /** 
+  * Du har gjort filtervalg som returnerer for mange dokumenter til at vi kan vise de samtidig. Velg andre datoer og/eller dokumenttyper for å begrense utvalget ytterligere.
+  */
+  xDS_Varsel_OverTerskel_Manuell_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
