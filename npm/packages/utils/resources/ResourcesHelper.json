@@ -4583,7 +4583,8 @@
     "warning_DocumentList_OverTerskelverdi_Title": "Dine filtervalg returnerer for mange dokumenter",
     "warning_DocumentList_OverTerskelverdi_Body": "Du har gjort filtervalg som returnerer flere dokumenter enn vi kan vise samtidig. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.",
     "warning_DocumentList_OverTerskelverdi_Init_Title": "Viser siste {0} dokumenter",
-    "warning_DocumentList_OverTerskelverdi_Init_Body": "Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter."
+    "warning_DocumentList_OverTerskelverdi_Init_Body": "Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter.",
+    "xDS_VarselListe_LokasjonOpptatt": "{0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt."
   },
   "HNMinHelsePasientreiserJS": { 
     "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?",
@@ -6253,8 +6254,8 @@
     "error_FeatureNotSupported_Title": "Funksjon ikke støttet"
   },
   "HNMinHelsePersonvernStrings": { 
-    "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
+    "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "page_HendelsesLogg_38": "Innsyn i Smittestopp",
     "page_HendelsesLogg_39": "Prøvesvar",
     "organisasjonsnavn_fullmakt": "Helsenorge",
