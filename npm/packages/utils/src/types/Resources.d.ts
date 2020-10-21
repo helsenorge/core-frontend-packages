@@ -173,11 +173,11 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    */
   lightbox_Inactivity_Button_Yes: string;
   /**
-   * Du blir snart logget ut av Min helse fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
+   * Du blir snart logget ut av Helsenorge fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
    */
   lightbox_Inactivity_Description: string;
   /**
-   * Vil du fortsatt være innlogget på Min helse?
+   * Vil du fortsatt være innlogget på Helsenorge?
    */
   lightbox_Inactivity_DoYouWantToStay: string;
   /**
