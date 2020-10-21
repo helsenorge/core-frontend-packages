@@ -396,7 +396,12 @@ describe('Adobe-analytics', () => {
     describe('Når den sender søkeord type og antall treff', () => {
       it('Så settes den riktig data i search track data', () => {
         const digitalData = {
-          search: { searchTerm: undefined, searchType: undefined, resultsCount: undefined, searchCount: undefined },
+          search: {
+            searchTerm: undefined,
+            searchType: undefined,
+            resultsCount: undefined,
+            searchCount: undefined,
+          },
         };
         const original = global.window['digitalData'];
         global.window['digitalData'] = digitalData;
@@ -452,7 +457,10 @@ describe('Adobe-analytics', () => {
     describe('Når name sendes', () => {
       it('Så settes den riktig data i user track data', () => {
         const digitalData = {
-          user: { profileInteraction: undefined, profileInteractionName: undefined },
+          user: {
+            profileInteraction: undefined,
+            profileInteractionName: undefined,
+          },
         };
         const original = global.window['digitalData'];
         global.window['digitalData'] = digitalData;
@@ -486,7 +494,12 @@ describe('Adobe-analytics', () => {
     describe('Når toolAction er Open', () => {
       it('Så settes den riktig data i tool track data', () => {
         const digitalData = {
-          tool: { toolName: undefined, toolType: undefined, toolLabels: undefined, toolAction: undefined },
+          tool: {
+            toolName: undefined,
+            toolType: undefined,
+            toolLabels: undefined,
+            toolAction: undefined,
+          },
         };
         const original = global.window['digitalData'];
         global.window['digitalData'] = digitalData;
@@ -504,7 +517,12 @@ describe('Adobe-analytics', () => {
     describe('Når toolAction er Close', () => {
       it('Så settes den riktig data i tool track data', () => {
         const digitalData = {
-          tool: { toolName: undefined, toolType: undefined, toolLabels: 'some more toolLabels', toolAction: undefined },
+          tool: {
+            toolName: undefined,
+            toolType: undefined,
+            toolLabels: 'some more toolLabels',
+            toolAction: undefined,
+          },
         };
         const original = global.window['digitalData'];
         global.window['digitalData'] = digitalData;
@@ -523,7 +541,12 @@ describe('Adobe-analytics', () => {
   describe('Gitt at trackTool kalles', () => {
     it('Så settes den riktig data i tool track data', () => {
       const digitalData = {
-        tool: { toolName: undefined, toolType: undefined, toolLabels: undefined, toolAction: undefined },
+        tool: {
+          toolName: undefined,
+          toolType: undefined,
+          toolLabels: undefined,
+          toolAction: undefined,
+        },
       };
       const original = global.window['digitalData'];
       global.window['digitalData'] = digitalData;
