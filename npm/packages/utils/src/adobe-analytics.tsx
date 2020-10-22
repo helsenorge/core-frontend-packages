@@ -1,4 +1,4 @@
-import { isEmpty } from './string-utils';
+import { isEmpty } from "./string-utils";
 
 interface DigitalData {
   selfService?: SelfService | ConsentSelfService;
@@ -120,11 +120,16 @@ declare global {
   }
 }
 
-export type SelfServiceTrackType = 'start' | 'funnel' | 'complete' | 'cancel' | 'continue later';
-export type ConsentTrackType = 'info' | 'funnel' | 'complete';
-export type FiltersTrackType = 'usage' | 'expand' | 'search' | 'groupExpand';
-export type ErrorType = 'level1' | 'level2' | 'level3' | 'level4';
-export type ProsesshjelpActionType = 'Open' | 'Close';
+export type SelfServiceTrackType =
+  | "start"
+  | "funnel"
+  | "complete"
+  | "cancel"
+  | "continue later";
+export type ConsentTrackType = "info" | "funnel" | "complete";
+export type FiltersTrackType = "usage" | "expand" | "search" | "groupExpand";
+export type ErrorType = "level1" | "level2" | "level3" | "level4";
+export type ProsesshjelpActionType = "Open" | "Close";
 
 /**
  * Spore at bruker har startet, avbrutt, lagret eller fullført en prosess med flere steg.
@@ -134,7 +139,13 @@ export type ProsesshjelpActionType = 'Open' | 'Close';
  * @param stepNumber definerer selfServiceFunnelStepNumber
  * @param custom prop object som merges videre på selfService
  */
-export const trackSelfService = (trackType: SelfServiceTrackType, name: string, step: string, stepNumber: number, custom?: {}): void => {
+export const trackSelfService = (
+  trackType: SelfServiceTrackType,
+  name: string,
+  step: string,
+  stepNumber: number,
+  custom?: {}
+): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -142,23 +153,23 @@ export const trackSelfService = (trackType: SelfServiceTrackType, name: string, 
     const selfService: SelfService = {
       selfServiceName: name,
       selfServiceFunnelStep: step,
-      selfServiceFunnelStepNumber: stepNumber,
+      selfServiceFunnelStepNumber: stepNumber
     };
 
-    if (trackType === 'start') {
-      selfService.selfServiceStart = 'true';
+    if (trackType === "start") {
+      selfService.selfServiceStart = "true";
     }
-    if (trackType === 'funnel') {
-      selfService.selfServiceFunnel = 'true';
+    if (trackType === "funnel") {
+      selfService.selfServiceFunnel = "true";
     }
-    if (trackType === 'complete') {
-      selfService.selfServiceComplete = 'true';
+    if (trackType === "complete") {
+      selfService.selfServiceComplete = "true";
     }
-    if (trackType === 'cancel') {
-      selfService.selfServiceCancel = 'true';
+    if (trackType === "cancel") {
+      selfService.selfServiceCancel = "true";
     }
-    if (trackType === 'continue later') {
-      selfService.selfServiceContinueLater = 'true';
+    if (trackType === "continue later") {
+      selfService.selfServiceContinueLater = "true";
     }
 
     digitalData.selfService = { ...selfService, ...custom };
@@ -172,16 +183,16 @@ export const trackSelfService = (trackType: SelfServiceTrackType, name: string, 
  * @param s url som skal renses
  */
 export const removeNamesAndOtherIds = (s: string): string => {
-  const koordinatorPattern = new RegExp('koordinator/(.+)$');
-  const helsefagligPattern = new RegExp('helsefagligkontakt/(.+)$');
-  const kommunePattern = new RegExp('kommune/(.+)$');
-  const avtalePattern = new RegExp('avtale/((.+)(/)|(.+)$)');
+  const koordinatorPattern = new RegExp("koordinator/(.+)$");
+  const helsefagligPattern = new RegExp("helsefagligkontakt/(.+)$");
+  const kommunePattern = new RegExp("kommune/(.+)$");
+  const avtalePattern = new RegExp("avtale/((.+)(/)|(.+)$)");
 
   return s
-    .replace(koordinatorPattern, 'koordinator')
-    .replace(helsefagligPattern, 'helsefagligkontakt')
-    .replace(kommunePattern, 'kommune')
-    .replace(avtalePattern, 'avtale/{id}/');
+    .replace(koordinatorPattern, "koordinator")
+    .replace(helsefagligPattern, "helsefagligkontakt")
+    .replace(kommunePattern, "kommune")
+    .replace(avtalePattern, "avtale/{id}/");
 };
 
 /**
@@ -190,23 +201,23 @@ export const removeNamesAndOtherIds = (s: string): string => {
  */
 export const getRegisterName = (path: string[]): string => {
   switch (path.length > 0) {
-    case path[0] === 'helseregistre':
-    case path[0] === 'mfr':
-    case path[0] === 'sysvak':
-    case path[0] === 'visregisterinnsyn':
-    case path[0] === 'reseptformidleren':
+    case path[0] === "helseregistre":
+    case path[0] === "mfr":
+    case path[0] === "sysvak":
+    case path[0] === "visregisterinnsyn":
+    case path[0] === "reseptformidleren":
       try {
-        if (document.title.substr(0, 8) === 'Innsyn i') {
+        if (document.title.substr(0, 8) === "Innsyn i") {
           return document.title.substr(8, document.title.length);
         } else {
-          return document.title.split('-')[0].trimRight();
+          return document.title.split("-")[0].trimRight();
         }
       } catch (e) {
         return document.title;
       }
   }
 
-  return '';
+  return "";
 };
 
 /**
@@ -214,27 +225,33 @@ export const getRegisterName = (path: string[]): string => {
  * @param digitalData digitalData med informasjon om Page
  * @param path array of strenger som skal registreres
  */
-export const getContentGrouping = (digitalData: DigitalData | undefined, path: string[]): string => {
-  let group = digitalData && digitalData.page && digitalData.page.category ? digitalData.page.category.contentGrouping : '';
+export const getContentGrouping = (
+  digitalData: DigitalData | undefined,
+  path: string[]
+): string => {
+  let group =
+    digitalData && digitalData.page && digitalData.page.category
+      ? digitalData.page.category.contentGrouping
+      : "";
 
   if (path.length > 0) {
     switch (true) {
-      case path.length > 1 && path[1] === 'avtale':
-        group = 'timeavtaler';
+      case path.length > 1 && path[1] === "avtale":
+        group = "timeavtaler";
         return group;
-      case path[0] === 'bestill-time':
-      case path[0] === 'e-konsultasjon':
-      case path[0] === 'forny-resept':
-      case path[0] === 'kontakt-legekontoret':
-        group = 'Fastlegen';
+      case path[0] === "bestill-time":
+      case path[0] === "e-konsultasjon":
+      case path[0] === "forny-resept":
+      case path[0] === "kontakt-legekontoret":
+        group = "Fastlegen";
         return group;
 
       default:
-        group = path[0] ? path[0] : '';
+        group = path[0] ? path[0] : "";
         return group;
     }
   } else {
-    return '';
+    return "";
   }
 };
 
@@ -247,28 +264,42 @@ export const trackUrlChange = (url: string, pathName: string): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
-  const guidPattern = new RegExp('[a-zA-Z0-9]{8}[-]?([a-zA-Z0-9]{4}[-]?){3}[a-zA-Z0-9]{12}');
+  const guidPattern = new RegExp(
+    "[a-zA-Z0-9]{8}[-]?([a-zA-Z0-9]{4}[-]?){3}[a-zA-Z0-9]{12}"
+  );
   const intPattern = /\d+/gm;
 
   const path = removeNamesAndOtherIds(pathName)
-    .split('/')
-    .filter(o => !isEmpty(o) && !guidPattern.test(o) && !intPattern.test(o) && o !== '{id}');
+    .split("/")
+    .filter(
+      o =>
+        !isEmpty(o) &&
+        !guidPattern.test(o) &&
+        !intPattern.test(o) &&
+        o !== "{id}"
+    );
 
   if (digitalData && digitalData.page && digitalData.page.pageInfo) {
-    const urlSplit = removeNamesAndOtherIds(url).split('://');
+    const urlSplit = removeNamesAndOtherIds(url).split("://");
 
     if (urlSplit.length > 1) {
-      digitalData.page.pageInfo.pageURL = urlSplit[1].replace(guidPattern, '{guid}').replace(intPattern, '{id}');
+      digitalData.page.pageInfo.pageURL = urlSplit[1]
+        .replace(guidPattern, "{guid}")
+        .replace(intPattern, "{id}");
     }
 
-    digitalData.page.pageInfo.pageName = 'Tjenester:' + path.join(':');
+    digitalData.page.pageInfo.pageName = "Tjenester:" + path.join(":");
   }
 
   if (digitalData && digitalData.page && digitalData.page.category) {
-    digitalData.page.category.siteSectionLevel2 = path.length > 1 ? path[1] : '';
-    digitalData.page.category.contentType = '';
+    digitalData.page.category.siteSectionLevel2 =
+      path.length > 1 ? path[1] : "";
+    digitalData.page.category.contentType = "";
     digitalData.page.category.registerName = getRegisterName(path);
-    digitalData.page.category.contentGrouping = getContentGrouping(digitalData, path);
+    digitalData.page.category.contentGrouping = getContentGrouping(
+      digitalData,
+      path
+    );
   }
 
   // Forhindre at login trackes 2 ganger når man kommer fra idporten
@@ -277,7 +308,7 @@ export const trackUrlChange = (url: string, pathName: string): void => {
   }
 
   if (_satellite && _satellite.track) {
-    _satellite.track('lightbox');
+    _satellite.track("lightbox");
   }
 };
 
@@ -292,33 +323,33 @@ export const trackConsent = (
   consentTrackType: ConsentTrackType,
   stepName: string,
   stepNumber: number,
-  consentType: 'Nytt samtykke' | 'Endre samtykke'
+  consentType: "Nytt samtykke" | "Endre samtykke"
 ): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
   if (digitalData && _satellite) {
     const selfService: ConsentSelfService = {
-      consentFunnelName: 'Samtykkeflyt',
+      consentFunnelName: "Samtykkeflyt",
       consentType: consentType,
       consentFunnelStep: stepName,
-      consentFunnelStepNumber: stepNumber,
+      consentFunnelStepNumber: stepNumber
     };
 
     let trackText: string | undefined = undefined;
 
-    if (consentTrackType === 'info') {
-      selfService.consentStart = 'true';
-      trackText = 'consent start';
+    if (consentTrackType === "info") {
+      selfService.consentStart = "true";
+      trackText = "consent start";
     }
-    if (consentTrackType === 'funnel') {
-      selfService.consentFunnel = 'true';
-      trackText = 'consent funnel';
+    if (consentTrackType === "funnel") {
+      selfService.consentFunnel = "true";
+      trackText = "consent funnel";
     }
 
-    if (consentTrackType === 'complete') {
-      selfService.consentComplete = 'true';
-      trackText = 'consent complete';
+    if (consentTrackType === "complete") {
+      selfService.consentComplete = "true";
+      trackText = "consent complete";
     }
 
     digitalData.selfService = selfService;
@@ -333,32 +364,35 @@ export const trackConsent = (
  * @param name definerer navnet fil Filter
  * @param trackType definerer type tracking: 'usage' | 'expand' | 'search' | 'groupExpand'
  */
-export const trackFilters = (name: string, trackType: FiltersTrackType): void => {
+export const trackFilters = (
+  name: string,
+  trackType: FiltersTrackType
+): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
   if (digitalData && _satellite) {
     digitalData.filters = {
-      filterName: name,
+      filterName: name
     };
 
-    if (trackType === 'usage') {
-      digitalData.filters.filterUsage = 'true';
-      _satellite.track('filter use');
+    if (trackType === "usage") {
+      digitalData.filters.filterUsage = "true";
+      _satellite.track("filter use");
     }
-    if (trackType === 'expand') {
-      digitalData.filters.filterExpand = 'true';
-      _satellite.track('filter expand');
-    }
-
-    if (trackType === 'groupExpand') {
-      digitalData.filters.filterGroupExpand = 'true';
-      _satellite.track('filter group expand');
+    if (trackType === "expand") {
+      digitalData.filters.filterExpand = "true";
+      _satellite.track("filter expand");
     }
 
-    if (trackType === 'search') {
-      digitalData.filters.filterSearch = 'true';
-      _satellite.track('filter search');
+    if (trackType === "groupExpand") {
+      digitalData.filters.filterGroupExpand = "true";
+      _satellite.track("filter group expand");
+    }
+
+    if (trackType === "search") {
+      digitalData.filters.filterSearch = "true";
+      _satellite.track("filter search");
     }
   }
 };
@@ -385,9 +419,9 @@ export const trackUnreadAlert = (hasUnReadAlerts: boolean): void => {
 
   if (digitalData && _satellite) {
     digitalData.user = {
-      unReadAlerts: hasUnReadAlerts ? true : false,
+      unReadAlerts: hasUnReadAlerts ? true : false
     };
-    _satellite.track('first logged in page');
+    _satellite.track("first logged in page");
   }
 };
 
@@ -401,9 +435,9 @@ export const trackUnreadMessage = (hasUnReadMessages: boolean): void => {
 
   if (digitalData && _satellite) {
     digitalData.user = {
-      unReadMessages: hasUnReadMessages ? true : false,
+      unReadMessages: hasUnReadMessages ? true : false
     };
-    _satellite.track('first logged in page');
+    _satellite.track("first logged in page");
   }
 };
 
@@ -420,7 +454,7 @@ export const trackReadMessageType = (contentType: string): void => {
 
   const _satellite: Satellite = window._satellite || undefined;
   if (_satellite) {
-    _satellite.track('message content type');
+    _satellite.track("message content type");
   }
 };
 
@@ -430,7 +464,11 @@ export const trackReadMessageType = (contentType: string): void => {
  * @param name type som settes på search searchType
  * @param resultsCount antall søkeresultater som settes på search resultsCount
  */
-export const trackSearch = (term: string, name: string, resultsCount: number): void => {
+export const trackSearch = (
+  term: string,
+  name: string,
+  resultsCount: number
+): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
@@ -439,14 +477,14 @@ export const trackSearch = (term: string, name: string, resultsCount: number): v
       searchTerm: term,
       searchType: name,
       resultsCount: resultsCount,
-      searchCount: 'true',
+      searchCount: "true"
     };
 
     if (resultsCount === 0) {
-      digitalData.search.nullResult = 'true';
-      _satellite.track('search null results');
+      digitalData.search.nullResult = "true";
+      _satellite.track("search null results");
     } else {
-      _satellite.track('internal search');
+      _satellite.track("internal search");
     }
   }
 };
@@ -461,11 +499,11 @@ export const trackSearchThrough = (searchposition: number): void => {
 
   if (digitalData && _satellite) {
     digitalData.search = {
-      clickThrough: 'true',
-      searchposition: searchposition,
+      clickThrough: "true",
+      searchposition: searchposition
     };
 
-    _satellite.track('search click through');
+    _satellite.track("search click through");
   }
 };
 
@@ -479,10 +517,10 @@ export const trackDonorCard = (smsAlert: boolean): void => {
 
   if (digitalData && _satellite) {
     digitalData.donorCard = {
-      NextOfKin: 'true',
-      smsAlert: smsAlert ? 'true' : 'false',
+      NextOfKin: "true",
+      smsAlert: smsAlert ? "true" : "false"
     };
-    _satellite.track('donor card NextOfKin');
+    _satellite.track("donor card NextOfKin");
   }
 };
 
@@ -496,10 +534,10 @@ export const trackProfileInteraction = (name: string): void => {
 
   if (digitalData && _satellite) {
     digitalData.user = {
-      profileInteraction: 'true',
-      profileInteractionName: name,
+      profileInteraction: "true",
+      profileInteractionName: name
     };
-    _satellite.track('profile interaction');
+    _satellite.track("profile interaction");
   }
 };
 
@@ -509,7 +547,7 @@ export const trackProfileInteraction = (name: string): void => {
 export const setValueForSelectedUser = (): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   if (digitalData && digitalData.page) {
-    digitalData.page.user = { onBehalfOf: 'Eget bruk', role: 'Eget bruk' };
+    digitalData.page.user = { onBehalfOf: "Eget bruk", role: "Eget bruk" };
   }
 };
 
@@ -520,10 +558,18 @@ export const setValueForSelectedUser = (): void => {
  * @param label label som lagres på tool toolLabels
  * @param actionType action-type som lagres på toolAction og som definerer label (Close or Open)
  */
-export const trackProsesshjelp = (name: string, toolType: string, label: string, actionType: ProsesshjelpActionType): void => {
+export const trackProsesshjelp = (
+  name: string,
+  toolType: string,
+  label: string,
+  actionType: ProsesshjelpActionType
+): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
-  const toolLabels = actionType === 'Close' && digitalData.tool ? digitalData.tool.toolLabels : label;
-  const satelliteTrackContent = actionType + ' context help';
+  const toolLabels =
+    actionType === "Close" && digitalData.tool
+      ? digitalData.tool.toolLabels
+      : label;
+  const satelliteTrackContent = actionType + " context help";
   trackTool(name, toolType, toolLabels, actionType, satelliteTrackContent);
 };
 
@@ -544,14 +590,14 @@ export const trackTool = (
 ): void => {
   const digitalData = window.digitalData || undefined;
   const _satellite = window._satellite || undefined;
-  satelliteTrackContent = satelliteTrackContent || 'use tool';
+  satelliteTrackContent = satelliteTrackContent || "use tool";
 
   if (digitalData && _satellite) {
     digitalData.tool = {
       toolName,
       toolType,
       toolLabels,
-      toolAction,
+      toolAction
     };
     _satellite.track(satelliteTrackContent);
   }
@@ -562,15 +608,18 @@ export const trackTool = (
 /* ********************************************** */
 
 // For tracking intent. - muligens deprecated
-export const trackSelfServiceIntent = (engagementName: string, custom?: {}): void => {
+export const trackSelfServiceIntent = (
+  engagementName: string,
+  custom?: {}
+): void => {
   const digitalData: DigitalData = window.digitalData || undefined;
   const _satellite: Satellite = window._satellite || undefined;
 
   if (digitalData && _satellite) {
     digitalData.selfService = {
-      selfServiceEngagement: 'true',
+      selfServiceEngagement: "true",
       selfServiceEngagementName: engagementName,
-      ...custom,
+      ...custom
     };
 
     _satellite.track(`self service intent`);
@@ -584,9 +633,9 @@ export function trackServiceAlert(hasContent: boolean) {
 
   if (digitalData && _satellite) {
     digitalData.user = {
-      serviceAlert: hasContent ? 'Har innhold' : 'Har ikke innhold',
+      serviceAlert: hasContent ? "Har innhold" : "Har ikke innhold"
     };
-    _satellite.track('service alert');
+    _satellite.track("service alert");
   }
 }
 
@@ -598,9 +647,9 @@ export function trackArticleTab(tabName: string) {
   if (digitalData && _satellite) {
     digitalData.articletab = {
       tabName: tabName,
-      tabClick: 'true',
+      tabClick: "true"
     };
-    _satellite.track('tab click');
+    _satellite.track("tab click");
   }
 }
 
@@ -611,20 +660,20 @@ export function trackError(level: ErrorType, details?: string): void {
 
   if (digitalData && _satellite) {
     let errorType;
-    if (level === 'level1') {
-      errorType = 'Nivå 1: Teknisk feil';
-    } else if (level === 'level2') {
-      errorType = 'Nivå 2: Driftsmelding';
-    } else if (level === 'level3') {
-      errorType = 'Nivå 3: JavaScript feil';
-    } else if (level === 'level4') {
-      errorType = 'Nivå 4: Interaksjonsfeil';
+    if (level === "level1") {
+      errorType = "Nivå 1: Teknisk feil";
+    } else if (level === "level2") {
+      errorType = "Nivå 2: Driftsmelding";
+    } else if (level === "level3") {
+      errorType = "Nivå 3: JavaScript feil";
+    } else if (level === "level4") {
+      errorType = "Nivå 4: Interaksjonsfeil";
     } else {
       return;
     }
     digitalData.error = {
-      siteError: !details ? errorType : `${errorType} – ${details}`,
+      siteError: !details ? errorType : `${errorType} – ${details}`
     };
-    _satellite.track('site error');
+    _satellite.track("site error");
   }
 }
