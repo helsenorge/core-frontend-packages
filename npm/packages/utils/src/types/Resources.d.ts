@@ -748,6 +748,82 @@ export type HNDialogCommonJS = {
   * Apotektekniker
   */
   commonHealthcareProfessionalApotektekniker: string;
+  /** 
+  * Audiograf
+  */
+  commonHealthcareProfessionalAudiograf: string;
+  /** 
+  * Bioingenior
+  */
+  commonHealthcareProfessionalBioingenior: string;
+  /** 
+  * Ergoterapeut
+  */
+  commonHealthcareProfessionalErgoterapeut: string;
+  /** 
+  * Fiskehelsebiolog
+  */
+  commonHealthcareProfessionalFiskehelsebiolog: string;
+  /** 
+  * Fotterapeut
+  */
+  commonHealthcareProfessionalFotterapeut: string;
+  /** 
+  * Fysioterapeut
+  */
+  commonHealthcareProfessionalFysioterapeut: string;
+  /** 
+  * Helsefagarbeider
+  */
+  commonHealthcareProfessionalHelsefagarbeider: string;
+  /** 
+  * Helsesekretær
+  */
+  commonHealthcareProfessionalHelsesekretaer: string;
+  /** 
+  * Helsesykepleier
+  */
+  commonHealthcareProfessionalHelsesykepleier: string;
+  /** 
+  * Kiropraktor
+  */
+  commonHealthcareProfessionalKiropraktor: string;
+  /** 
+  * Klinisk ernæringsfysiolog
+  */
+  commonHealthcareProfessionalKliniskErnaeringsfysiolog: string;
+  /** 
+  * Lege
+  */
+  commonHealthcareProfessionalLege: string;
+  /** 
+  * Omsorgsarbeider
+  */
+  commonHealthcareProfessionalOmsorgsarbeider: string;
+  /** 
+  * Optiker
+  */
+  commonHealthcareProfessionalOptiker: string;
+  /** 
+  * Ortopediingeniør
+  */
+  commonHealthcareProfessionalOrtopediingenior: string;
+  /** 
+  * Ortoptist
+  */
+  commonHealthcareProfessionalOrtoptist: string;
+  /** 
+  * Perfusjonist
+  */
+  commonHealthcareProfessionalPerfusjonist: string;
+  /** 
+  * Jordmor
+  */
+  commonHealthcareProfessionalJordmor: string;
+  /** 
+  * Hjelpepleier
+  */
+  commonHealthcareProfessionalHjelpepleier: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
@@ -28875,6 +28951,18 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Teknisk feil
   */
   autoSuggestLoadError: string;
+  /** 
+  * Du har skrevet for mange tegn. Gjør teksten kortere.
+  */
+  stringOverMaxLengthError: string;
+  /** 
+  * Maksimum {0} tegn
+  */
+  maxLengthText: string;
+  /** 
+  * Velg filer
+  */
+  chooseFilesText: string;
   /** 
   * Slett
   */
