@@ -113,6 +113,9 @@
     "inactivity_SignedOut_Title": "Du var stille en stund og har blitt logget ut",
     "inactivity_LoginUrl": "/auth/signin"
   },
+  "HNDialogCommonJS": { 
+    "afterDeadlineBubbleText": "Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv."
+  },
   "HNMinHelseByttFastlegeJS": { 
     "hjelpetrigger_bflUtekontor": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Utekontor\",\"seksjonstekst_brodtekst\":\"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>\"}",
     "bfl_ResultPage_Byttedialog_Print_Info": "Denne kvitteringen er også tilgjengelig i innboksen.",

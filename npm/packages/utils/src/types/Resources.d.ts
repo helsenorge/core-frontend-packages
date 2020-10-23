@@ -437,6 +437,13 @@ export type HNCoreFrontendWebForside = {
   inactivity_LoginUrl: string;
 };
 
+export type HNDialogCommonJS = { 
+  /** 
+  * Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.
+  */
+  afterDeadlineBubbleText: string;
+};
+
 export type HNMinHelseByttFastlegeJS = { 
   /** 
   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Utekontor","seksjonstekst_brodtekst":"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>"}
