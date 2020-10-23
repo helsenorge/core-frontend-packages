@@ -618,6 +618,136 @@ export type HNDialogCommonJS = {
   * Beskrivelse
   */
   commonBestillTimeBeskrivelse: string;
+  /** 
+  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
+  */
+  commonBestillTimeHelsetilbudIngenBehandlereInfo: string;
+  /** 
+  * Gå direkte til timebestilling
+  */
+  commonBestillTimeVelgerAnnet: string;
+  /** 
+  * Gå direkte til vaksinasjonsbestilling
+  */
+  commonBestillVaksinasjonVelgerAnnet: string;
+  /** 
+  * Svar
+  */
+  commonConversationSubmitReply: string;
+  /** 
+  * Endre
+  */
+  commonDraftEdit: string;
+  /** 
+  * Send
+  */
+  commonDraftSend: string;
+  /** 
+  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
+<p>Henvendelsen vil bli journalført.</p>
+  */
+  commonEkonsultasjonBottomInfo: string;
+  /** 
+  * Still et medisinsk spørsmål til fastlegen din. Du betaler samme egenandel som ved vanlig legetime. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkonsultasjonFastlegeBeskrivelse: string;
+  /** 
+  * Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkonsultasjonFastlegeSvarBeskrivelse: string;
+  /** 
+  * E-konsultasjon
+  */
+  commonEkonsultasjonHeader: string;
+  /** 
+  * Still et helserelatert spørsmål til din helseperson. Ved fravær kan meldingen bli lest og besvart av annen helseperson enn din faste helseperson. Du vil bli kontaktet senest innen 3 arbeidsdager.
+  */
+  commonEkonsultasjonHelsestasjonBeskrivelse: string;
+  /** 
+  * Ved fravær kan meldingen bli lest og besvart av annen helseperson enn din faste helseperson. Du vil bli kontaktet senest innen 3 arbeidsdager.
+  */
+  commonEkonsultasjonHelsestasjonSvarBeskrivelse: string;
+  /** 
+  * Still et medisinsk spørsmål til behandleren din. Du betaler samme egenandel som ved vanlig time. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkonsultasjonHelsetilbudBeskrivelse: string;
+  /** 
+  * Ved fravær kan meldingen bli lest og besvart av annet helsepersonell enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkonsultasjonHelsetilbudSvarBeskrivelse: string;
+  /** 
+  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
+<p>Henvendelsen vil bli journalført.</p>
+  */
+  commonEkontaktBottomInfo: string;
+  /** 
+  * Still et praktisk spørsmål til resepsjonen ved fastlegekontoret. Du vil bli kontaktet innen fem arbeidsdager.
+  */
+  commonEkontaktFastlegeBeskrivelse: string;
+  /** 
+  * Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkontaktFastlegeSvarBeskrivelse: string;
+  /** 
+  * Kontakt
+  */
+  commonEkontaktHeader: string;
+  /** 
+  * Skriv melding til
+  */
+  commonEkontaktHeaderSkrivMelding: string;
+  /** 
+  * Still et praktisk spørsmål til de som sitter i resepsjonen. Du vil bli kontakt senest innen 3 arbeidsdager.
+  */
+  commonEkontaktHelsestasjonBeskrivelse: string;
+  /** 
+  * Du vil bli kontakt senest innen 3 arbeidsdager.
+  */
+  commonEkontaktHelsestasjonSvarBeskrivelse: string;
+  /** 
+  * Still et praktisk spørsmål til resepsjonen. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkontaktHelsetilbudBeskrivelse: string;
+  /** 
+  * Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkontaktHelsetilbudSvarBeskrivelse: string;
+  /** 
+  * Du må fylle ut emne
+  */
+  commonEmneError: string;
+  /** 
+  * Emne
+  */
+  commonEmneLabel: string;
+  /** 
+  * Avbryt
+  */
+  commonFormAvbryt: string;
+  /** 
+  * Sjekk at alt er riktig utfylt
+  */
+  commonFormError: string;
+  /** 
+  * Fortsett senere
+  */
+  commonFormFortsett: string;
+  /** 
+  * Send
+  */
+  commonFormSend: string;
+  /** 
+  * Tilbake
+  */
+  commonFormTilbake: string;
+  /** 
+  * Ambulansearbeider
+  */
+  commonHealthcareProfessionalAmbulansearbeider: string;
+  /** 
+  * Apotektekniker
+  */
+  commonHealthcareProfessionalApotektekniker: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
@@ -9008,9 +9138,9 @@ export type HNMinHelseDialogVPJS = {
   * Helseforetak
   */
   tilgangsloggKolonneHelseforetak: string;
-  /**
-   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Om tilgangsloggen","seksjonstekst_brodtekst":"<p>\nTilgangsloggen viser en liste over alt helsepersonell som har arbeidet eller slått opp i pasientjournalen din. Alle som arbeider eller slår opp i en pasientjournal må ha et legitimt behov for det.\n</p>\n\n<p>\nHelsepersonell med mange ulike funksjoner og arbeidsoppgaver kan ha et legitimt behov for å arbeide eller slå opp i en pasientjournal, for eksempel med å registrere opplysninger, kvalitetssikre registrert aktivitet, gjøre etterarbeid og annet administrativt vedlikehold av journalen. Slike oppslag blir også loggført, og du kan derfor se mange oppslag i tilgangsloggen din.\n</p>\n\n<h3>\nHva viser tabellen?\n</h3>\n\n<p>\nHver rad viser ett eller flere innsyn gjort av en ansatt da du var til behandling på en avdeling hvor han eller hun jobber. Klikk i første kolonne for å se flere detaljer.\n</p>\n\n<p>\nEn rad kan i tillegg vise innsyn gjort av annet helsepersonell som har bedt om tilgang av en spesiell grunn, for eksempel på grunn av en akuttsituasjon. Helsepersonell kan også slå opp i din pasientjournal via kjernejournal.\n</p>\n\n<p>\nI «bakgrunn for innsyn» kan du se hvorfor vedkommende har slått opp eller arbeidet i din pasientjournal eller helseopplysninger. Det kan for eksempel være arbeid i forbindelse med:\n</p>\n\n<ul>\n<li>behandling på sykehus</li>\n<li>planlegging, kvalitetssikring og logistikk</li>\n<li>det elektroniske pasientjournalsystemet, som for eksempel brukerstøtte til helsepersonell eller retting av feil</li>\n</ul>\n\n<p>\nSelv om noen har arbeidet eller slått opp i journalen din, er det ikke sikkert vedkommende har åpnet noen av dokumentene i den.\n</p>\n\n<p>\nHvis noen har åpnet journaldokumenter, finner du en liste med disse dokumentene under «Handlinger».\n</p>\n\n<h3>\nRette feil eller melde om urettmessig innsyn\n</h3>\n\n<p>\nHvis du ønsker å få rettet noe du mener er feil eller melde om innsyn du mener kan være gjort på feil grunnlag, ta kontakt med sykehuset det gjelder. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Sykehus i Helse Sør-Øst</a></li>\n</ul>"}
-   */
+  /** 
+  * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Om tilgangsloggen","seksjonstekst_brodtekst":"<p>\nTilgangsloggen viser en liste over alt helsepersonell som har arbeidet eller slått opp i pasientjournalen din. Alle som arbeider eller slår opp i en pasientjournal må ha et legitimt behov for det.\n</p>\n\n<p>\nHelsepersonell med mange ulike funksjoner og arbeidsoppgaver kan ha et legitimt behov for å arbeide eller slå opp i en pasientjournal, for eksempel med å registrere opplysninger, kvalitetssikre registrert aktivitet, gjøre etterarbeid og annet administrativt vedlikehold av journalen. Slike oppslag blir også loggført, og du kan derfor se mange oppslag i tilgangsloggen din.\n</p>\n\n<h3>\nHva viser tabellen?\n</h3>\n\n<p>\nHver rad viser ett eller flere innsyn gjort av en ansatt da du var til behandling på en avdeling hvor han eller hun jobber. Klikk i første kolonne for å se flere detaljer.\n</p>\n\n<p>\nEn rad kan i tillegg vise innsyn gjort av annet helsepersonell som har bedt om tilgang av en spesiell grunn, for eksempel på grunn av en akuttsituasjon. Helsepersonell kan også slå opp i din pasientjournal via kjernejournal.\n</p>\n\n<p>\nI «bakgrunn for innsyn» kan du se hvorfor vedkommende har slått opp eller arbeidet i din pasientjournal eller helseopplysninger. Det kan for eksempel være arbeid i forbindelse med:\n</p>\n\n<ul>\n<li>behandling på sykehus</li>\n<li>planlegging, kvalitetssikring og logistikk</li>\n<li>det elektroniske pasientjournalsystemet, som for eksempel brukerstøtte til helsepersonell eller retting av feil</li>\n</ul>\n\n<p>\nSelv om noen har arbeidet eller slått opp i journalen din, er det ikke sikkert vedkommende har åpnet noen av dokumentene i den.\n</p>\n\n<p>\nHvis noen har åpnet journaldokumenter, finner du en liste med disse dokumentene under «Handlinger».\n</p>\n\n<h3>\nRette feil eller melde om urettmessig innsyn\n</h3>\n\n<p>\nHvis du ønsker å få rettet noe du mener er feil eller melde om innsyn du mener kan være gjort på feil grunnlag, ta kontakt med sykehuset det gjelder. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Sykehus i Helse Sør-Øst</a></li>\n</ul>"}
+  */
   tilgangsloggTabell: string;
   /** 
   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Hva viser listen over dokumenter?","seksjonstekst_brodtekst":"<p>Hver rad viser et dokument som har blitt åpnet av den ansatte. Det vil være kun én rad per dokument, selv om den ansatte har åpnet dokumentet flere ganger.</p>\n\n<p>Det er siste tidspunkt for åpning som står oppført i tabellen.</p>\n\n<p>\nDatoen som vises under dokumentnavnet viser når journaldokumentet ble opprettet - ikke nødvendigvis når det sist ble endret.\n</p>\n\n<p>\nDu kan åpne det aktuelle dokumentet ved å klikke på dokumentnavnet. Når du åpner et dokument vil du alltid se den nyeste versjonen av det.\n</p>\n\n<p>Hvis ansatte har åpnet dokumenter som ikke vises i dokumentoversikten, vil det ikke vises her at de har vært åpnet.</p>\n\n<p><a href=\"{HelsenorgeUrl}/pasientjournal/om\" target=\"_blank\">I denne artikkelen finner du mer informasjon om hvilke dokumenter som vises eller ikke vises</a>.</p>\n\n<p>Dokumenter som er unntatt fra visning på nett vises ikke.</p>"}
@@ -18483,34 +18613,6 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_HN: string;
   /** 
-  * Clinical care provision to an individual subject of care
-  */
-  tilgangsloggBakgrunnForInnsynClinicalCare: string;
-  /** 
-  * Health service management and quality assurance
-  */
-  tilgangsloggBakgrunnForInnsynHealthService: string;
-  /** 
-  * Emergency care provision to an individual subject of care
-  */
-  tilgangsloggBakgrunnForInnsynEmergencyCare: string;
-  /** 
-  * Dine filtervalg returnerer for mange dokumenter
-  */
-  warning_DocumentList_OverTerskelverdi_Title: string;
-  /** 
-  * Du har gjort filtervalg som returnerer flere dokumenter enn vi kan vise samtidig. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.
-  */
-  warning_DocumentList_OverTerskelverdi_Body: string;
-  /** 
-  * Viser siste {0} dokumenter
-  */
-  warning_DocumentList_OverTerskelverdi_Init_Title: string;
-  /** 
-  * Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter.
-  */
-  warning_DocumentList_OverTerskelverdi_Init_Body: string;
-  /** 
   * {0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.
   */
   xDS_LokasjonFeil_LokasjonOpptatt: string;
@@ -18550,6 +18652,34 @@ export type HNMinHelsePasientjournal = {
   * Du har gjort filtervalg som returnerer for mange dokumenter til at vi kan vise de samtidig. Velg andre datoer og/eller dokumenttyper for å begrense utvalget ytterligere.
   */
   xDS_Varsel_OverTerskel_Manuell_Body: string;
+  /** 
+  * Clinical care provision to an individual subject of care
+  */
+  tilgangsloggBakgrunnForInnsynClinicalCare: string;
+  /** 
+  * Health service management and quality assurance
+  */
+  tilgangsloggBakgrunnForInnsynHealthService: string;
+  /** 
+  * Emergency care provision to an individual subject of care
+  */
+  tilgangsloggBakgrunnForInnsynEmergencyCare: string;
+  /** 
+  * Dine filtervalg returnerer for mange dokumenter
+  */
+  warning_DocumentList_OverTerskelverdi_Title: string;
+  /** 
+  * Du har gjort filtervalg som returnerer flere dokumenter enn vi kan vise samtidig. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.
+  */
+  warning_DocumentList_OverTerskelverdi_Body: string;
+  /** 
+  * Viser siste {0} dokumenter
+  */
+  warning_DocumentList_OverTerskelverdi_Init_Title: string;
+  /** 
+  * Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter.
+  */
+  warning_DocumentList_OverTerskelverdi_Init_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
@@ -28746,6 +28876,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   autoSuggestLoadError: string;
   /** 
+  * Slett
+  */
+  deleteAttachmentText: string;
+  /** 
+  * Last opp fil
+  */
+  uploadButtonText: string;
+  /** 
   * Du må fylle ut dette feltet
   */
   formRequiredErrorMessage: string;
@@ -28761,14 +28899,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Fullfør
   */
   formFinish: string;
-  /** 
-  * Slett
-  */
-  deleteAttachmentText: string;
-  /** 
-  * Last opp fil
-  */
-  uploadButtonText: string;
 };
 
 export type HNMinHelseSysvak = { 
