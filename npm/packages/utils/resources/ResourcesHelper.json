@@ -114,7 +114,18 @@
     "inactivity_LoginUrl": "/auth/signin"
   },
   "HNDialogCommonJS": { 
-    "afterDeadlineBubbleText": "Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv."
+    "afterDeadlineBubbleText": "Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.",
+    "afterDeadlineLegendText": "Dato kan ikke velges",
+    "afterDeadlineMoreHelpText": "Les mer om behandlingsfrister",
+    "appointmentCancelDescription": "Dersom behandlingsstedet trenger mer informasjon eller fraråder avslutning av videre oppfølging, vil du bli kontaktet.",
+    "appointmentCancelHeading": "Be om å få avsluttet behandlingsløp ved",
+    "appointmentCancelHelsestasjonDescription": "Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.",
+    "appointmentRequestInfoDescription": "Du vil få svar innen to arbeidsdager.",
+    "appointmentRequestInfoHeadingLong": "Skriv melding angående timeavtale",
+    "appointmentRescheduleDescription": "Du kan foreslå tidspunkter selv slik at vi kan prøve å finne en time som passer. Vær likevel oppmerksom på at endring av timen kan medføre lengre ventetid. Du vil bli kontaktet innen to arbeidsdager.",
+    "appointmentRescheduleHeading": "Endre tidspunkt for timeavtale",
+    "appointmentlistelementMeetup": "Oppmøtested:",
+    "attachmentUploadButtonText": "Last opp fil"
   },
   "HNMinHelseByttFastlegeJS": { 
     "hjelpetrigger_bflUtekontor": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Utekontor\",\"seksjonstekst_brodtekst\":\"<p>Utekontor benyttes av de som har lang reisevei til sitt vanlige fastlegekontor. Dersom utekontoret ikke har åpent alle dager må du henvende deg til fastlegens vanlige kontor de andre dagene.</p>\"}",

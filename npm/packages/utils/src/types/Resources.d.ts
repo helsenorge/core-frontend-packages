@@ -442,6 +442,50 @@ export type HNDialogCommonJS = {
   * Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.
   */
   afterDeadlineBubbleText: string;
+  /** 
+  * Dato kan ikke velges
+  */
+  afterDeadlineLegendText: string;
+  /** 
+  * Les mer om behandlingsfrister
+  */
+  afterDeadlineMoreHelpText: string;
+  /** 
+  * Dersom behandlingsstedet trenger mer informasjon eller fraråder avslutning av videre oppfølging, vil du bli kontaktet.
+  */
+  appointmentCancelDescription: string;
+  /** 
+  * Be om å få avsluttet behandlingsløp ved
+  */
+  appointmentCancelHeading: string;
+  /** 
+  * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
+  */
+  appointmentCancelHelsestasjonDescription: string;
+  /** 
+  * Du vil få svar innen to arbeidsdager.
+  */
+  appointmentRequestInfoDescription: string;
+  /** 
+  * Skriv melding angående timeavtale
+  */
+  appointmentRequestInfoHeadingLong: string;
+  /** 
+  * Du kan foreslå tidspunkter selv slik at vi kan prøve å finne en time som passer. Vær likevel oppmerksom på at endring av timen kan medføre lengre ventetid. Du vil bli kontaktet innen to arbeidsdager.
+  */
+  appointmentRescheduleDescription: string;
+  /** 
+  * Endre tidspunkt for timeavtale
+  */
+  appointmentRescheduleHeading: string;
+  /** 
+  * Oppmøtested:
+  */
+  appointmentlistelementMeetup: string;
+  /** 
+  * Last opp fil
+  */
+  attachmentUploadButtonText: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
