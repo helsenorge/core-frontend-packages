@@ -1418,6 +1418,42 @@ export type HNDialogCommonJS = {
   */
   videoDialogCancelButton: string;
   /** 
+  * Fastlegen din tilbyr videokonsultasjoner. Det kan være en fast åpningstid eller etter avtale.
+  */
+  videoDialogInfoMessage: string;
+  /** 
+  * Gå til venterom
+  */
+  videoDialogSubmitButton: string;
+  /** 
+  * Videokonsultasjon
+  */
+  videoDialogTitle: string;
+  /** 
+  * Se brukerveiledning
+  */
+  videoDialogUserManualLinkText: string;
+  /** 
+  * Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved legekontoret. Du betaler samme egenandel som ved vanlig legetime.
+  */
+  videoEventAlertDescription: string;
+  /** 
+  * Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved behandlerkontoret. Du betaler samme egenandel som ved vanlig legetime.
+  */
+  videoEventAlertHelsetilbudDescription: string;
+  /** 
+  * Du har valgt en videotime
+  */
+  videoEventAlertTitle: string;
+  /** 
+  * Videotime
+  */
+  videoEventLocation: string;
+  /** 
+  * Timer på video
+  */
+  videoEventsHeading: string;
+  /** 
   * Jordmor
   */
   commonHealthcareProfessionalJordmor: string;
