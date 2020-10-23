@@ -1089,6 +1089,203 @@ export type HNDialogCommonJS = {
   */
   commonReseptfornyelseResepterSlett: string;
   /** 
+  * Ansvarlig jordmor
+  */
+  commonRoleToPatientAnsvarligJordmor: string;
+  /** 
+  * Behandlingsansvarlig lege
+  */
+  commonRoleToPatientBehandlingsansvarligLege: string;
+  /** 
+  * Faglig ansvarlig for vedtak i psykisk helsevern
+  */
+  commonRoleToPatientFagligAnsvarligPsykiskHelsevern: string;
+  /** 
+  * Fastlege
+  */
+  commonRoleToPatientFastlege: string;
+  /** 
+  * Forløpskoordinator kreft
+  */
+  commonRoleToPatientForlopskoordinatorKreft: string;
+  /** 
+  * Helsefaglig kontakt
+  */
+  commonRoleToPatientHelsefagligKontakt: string;
+  /** 
+  * Informasjonsansvarlig
+  */
+  commonRoleToPatientInformasjonsansvarlig: string;
+  /** 
+  * Innleggende lege
+  */
+  commonRoleToPatientInnleggendeLege: string;
+  /** 
+  * Instituerende lege
+  */
+  commonRoleToPatientInstituerendeLege: string;
+  /** 
+  * Journalansvarlig
+  */
+  commonRoleToPatientJournalansvarlig: string;
+  /** 
+  * Kontakt i primærhelseteam
+  */
+  commonRoleToPatientKontaktIPrimarhelseteam: string;
+  /** 
+  * Kontaktlege
+  */
+  commonRoleToPatientKontaktlege: string;
+  /** 
+  * Kontaktpsykolog
+  */
+  commonRoleToPatientKontaktpsykolog: string;
+  /** 
+  * Koordinator Individuell plan
+  */
+  commonRoleToPatientKoordinatorIndividuellPlan: string;
+  /** 
+  * Koordinator (spesialisthelsetjenesteloven) Spesialisthelsetjenesteloven § 2-5a
+  */
+  commonRoleToPatientKoordinatorSpesialisthelsetjenesteLoven: string;
+  /** 
+  * Primærkontakt
+  */
+  commonRoleToPatientPrimarkontakt: string;
+  /** 
+  * Turnuslege
+  */
+  commonRoleToPatientTurnuslege: string;
+  /** 
+  * Ukjent
+  */
+  commonRoleToPatientUkjent: string;
+  /** 
+  * Utskrivende lege
+  */
+  commonRoleToPatientUtskrivendeLege: string;
+  /** 
+  * Utskrivende sykepleier
+  */
+  commonRoleToPatientUtskrivendeSykepleier: string;
+  /** 
+  * Vikar for fastlege
+  */
+  commonRoleToPatientVikarForFastlege: string;
+  /** 
+  * Valgt kalendertime
+  */
+  commonSelectedEventIconLabel: string;
+  /** 
+  * Tjenesten er gratis. Meldingen kan leses av helsepersonell ved {0}. Du vil bli kontaktet innen fem arbeidsdager.
+  */
+  commonSpesialistMeldingBeskrivelse: string;
+  /** 
+  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
+<p>Henvendelsen vil bli journalført.</p>
+  */
+  commonSpesialistMeldingBottomInfo: string;
+  /** 
+  * Henvendelse til
+  */
+  commonSpesialistMeldingHeader: string;
+  /** 
+  * OK
+  */
+  commonSubmitConfirmationButtonText: string;
+  /** 
+  * Takk for din henvendelse.
+  */
+  commonSubmitConfirmationDescription: string;
+  /** 
+  * Du finner sendte og mottatte meldinger i innboksen.
+  */
+  commonSubmitConfirmationDescription2: string;
+  /** 
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+  */
+  commonSubmitConfirmationDraftDescription: string;
+  /** 
+  * Melding lagret som utkast
+  */
+  commonSubmitConfirmationDraftHeader: string;
+  /** 
+  * Meldingen er sendt
+  */
+  commonSubmitConfirmationHeader: string;
+  /** 
+  * Informasjon fra fastlegekontoret
+  */
+  commonThirdPartyMessageFastlegeHeader: string;
+  /** 
+  * Les mer...
+  */
+  commonThirdPartyMessageReadMore: string;
+  /** 
+  * Kontakt fastlegekontoret hvis du har noen spørsmål.
+  */
+  commonUnavailableFastlegeDescription: string;
+  /** 
+  * Tjenesten er ikke tilgjengelig
+  */
+  commonUnavailableFastlegeHeader: string;
+  /** 
+  * Kontakt tjenesten hvis du har noen spørsmål.
+  */
+  commonUnavailableHelsetilbudDescription: string;
+  /** 
+  * er ikke tillatt
+  */
+  commonValidationNotAllowed: string;
+  /** 
+  * Velg behandler
+  */
+  commonVelgBehandlerHeader: string;
+  /** 
+  * Til {0}
+  */
+  commonVelgBehandlerTilHeader: string;
+  /** 
+  * Avbryt
+  */
+  commonVelgBehandlingsstedAvbryt: string;
+  /** 
+  * Hvem vil du sende melding til?
+  */
+  commonVelgBehandlingsstedHeader: string;
+  /** 
+  * Fortsett senere
+  */
+  conversationSubmitDraftButtonText: string;
+  /** 
+  * Sjekk at alt er riktig utfylt
+  */
+  conversationSubmitErrorMessage: string;
+  /** 
+  * Velg dato
+  */
+  dateFieldLabel: string;
+  /** 
+  * Du må velge en dato
+  */
+  dateFieldRequired: string;
+  /** 
+  * Konsultasjonen gjelder andre spørsmål
+  */
+  ekonsultasjonVelgerAnnet: string;
+  /** 
+  * 
+  */
+  ekonsultasjonVelgerAnnetBeskrivelse: string;
+  /** 
+  * Hva gjelder det?
+  */
+  ekonsultasjonVelgerTittel: string;
+  /** 
+  * Har du symptomer som kan skyldes koronavirus?
+  */
+  ekonsultasjonVelgerVeiviser: string;
+  /** 
   * Jordmor
   */
   commonHealthcareProfessionalJordmor: string;
