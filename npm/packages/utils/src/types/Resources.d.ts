@@ -618,6 +618,136 @@ export type HNDialogCommonJS = {
   * Beskrivelse
   */
   commonBestillTimeBeskrivelse: string;
+  /** 
+  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
+  */
+  commonBestillTimeHelsetilbudIngenBehandlereInfo: string;
+  /** 
+  * Gå direkte til timebestilling
+  */
+  commonBestillTimeVelgerAnnet: string;
+  /** 
+  * Gå direkte til vaksinasjonsbestilling
+  */
+  commonBestillVaksinasjonVelgerAnnet: string;
+  /** 
+  * Svar
+  */
+  commonConversationSubmitReply: string;
+  /** 
+  * Endre
+  */
+  commonDraftEdit: string;
+  /** 
+  * Send
+  */
+  commonDraftSend: string;
+  /** 
+  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
+<p>Henvendelsen vil bli journalført.</p>
+  */
+  commonEkonsultasjonBottomInfo: string;
+  /** 
+  * Still et medisinsk spørsmål til fastlegen din. Du betaler samme egenandel som ved vanlig legetime. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkonsultasjonFastlegeBeskrivelse: string;
+  /** 
+  * Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkonsultasjonFastlegeSvarBeskrivelse: string;
+  /** 
+  * E-konsultasjon
+  */
+  commonEkonsultasjonHeader: string;
+  /** 
+  * Still et helserelatert spørsmål til din helseperson. Ved fravær kan meldingen bli lest og besvart av annen helseperson enn din faste helseperson. Du vil bli kontaktet senest innen 3 arbeidsdager.
+  */
+  commonEkonsultasjonHelsestasjonBeskrivelse: string;
+  /** 
+  * Ved fravær kan meldingen bli lest og besvart av annen helseperson enn din faste helseperson. Du vil bli kontaktet senest innen 3 arbeidsdager.
+  */
+  commonEkonsultasjonHelsestasjonSvarBeskrivelse: string;
+  /** 
+  * Still et medisinsk spørsmål til behandleren din. Du betaler samme egenandel som ved vanlig time. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkonsultasjonHelsetilbudBeskrivelse: string;
+  /** 
+  * Ved fravær kan meldingen bli lest og besvart av annet helsepersonell enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkonsultasjonHelsetilbudSvarBeskrivelse: string;
+  /** 
+  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
+<p>Henvendelsen vil bli journalført.</p>
+  */
+  commonEkontaktBottomInfo: string;
+  /** 
+  * Still et praktisk spørsmål til resepsjonen ved fastlegekontoret. Du vil bli kontaktet innen fem arbeidsdager.
+  */
+  commonEkontaktFastlegeBeskrivelse: string;
+  /** 
+  * Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkontaktFastlegeSvarBeskrivelse: string;
+  /** 
+  * Kontakt
+  */
+  commonEkontaktHeader: string;
+  /** 
+  * Skriv melding til
+  */
+  commonEkontaktHeaderSkrivMelding: string;
+  /** 
+  * Still et praktisk spørsmål til de som sitter i resepsjonen. Du vil bli kontakt senest innen 3 arbeidsdager.
+  */
+  commonEkontaktHelsestasjonBeskrivelse: string;
+  /** 
+  * Du vil bli kontakt senest innen 3 arbeidsdager.
+  */
+  commonEkontaktHelsestasjonSvarBeskrivelse: string;
+  /** 
+  * Still et praktisk spørsmål til resepsjonen. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkontaktHelsetilbudBeskrivelse: string;
+  /** 
+  * Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonEkontaktHelsetilbudSvarBeskrivelse: string;
+  /** 
+  * Du må fylle ut emne
+  */
+  commonEmneError: string;
+  /** 
+  * Emne
+  */
+  commonEmneLabel: string;
+  /** 
+  * Avbryt
+  */
+  commonFormAvbryt: string;
+  /** 
+  * Sjekk at alt er riktig utfylt
+  */
+  commonFormError: string;
+  /** 
+  * Fortsett senere
+  */
+  commonFormFortsett: string;
+  /** 
+  * Send
+  */
+  commonFormSend: string;
+  /** 
+  * Tilbake
+  */
+  commonFormTilbake: string;
+  /** 
+  * Ambulansearbeider
+  */
+  commonHealthcareProfessionalAmbulansearbeider: string;
+  /** 
+  * Apotektekniker
+  */
+  commonHealthcareProfessionalApotektekniker: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
@@ -18483,34 +18613,6 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_HN: string;
   /** 
-  * Clinical care provision to an individual subject of care
-  */
-  tilgangsloggBakgrunnForInnsynClinicalCare: string;
-  /** 
-  * Health service management and quality assurance
-  */
-  tilgangsloggBakgrunnForInnsynHealthService: string;
-  /** 
-  * Emergency care provision to an individual subject of care
-  */
-  tilgangsloggBakgrunnForInnsynEmergencyCare: string;
-  /** 
-  * Dine filtervalg returnerer for mange dokumenter
-  */
-  warning_DocumentList_OverTerskelverdi_Title: string;
-  /** 
-  * Du har gjort filtervalg som returnerer flere dokumenter enn vi kan vise samtidig. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.
-  */
-  warning_DocumentList_OverTerskelverdi_Body: string;
-  /** 
-  * Viser siste {0} dokumenter
-  */
-  warning_DocumentList_OverTerskelverdi_Init_Title: string;
-  /** 
-  * Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter.
-  */
-  warning_DocumentList_OverTerskelverdi_Init_Body: string;
-  /** 
   * {0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.
   */
   xDS_LokasjonFeil_LokasjonOpptatt: string;
@@ -18550,6 +18652,34 @@ export type HNMinHelsePasientjournal = {
   * Du har gjort filtervalg som returnerer for mange dokumenter til at vi kan vise de samtidig. Velg andre datoer og/eller dokumenttyper for å begrense utvalget ytterligere.
   */
   xDS_Varsel_OverTerskel_Manuell_Body: string;
+  /** 
+  * Clinical care provision to an individual subject of care
+  */
+  tilgangsloggBakgrunnForInnsynClinicalCare: string;
+  /** 
+  * Health service management and quality assurance
+  */
+  tilgangsloggBakgrunnForInnsynHealthService: string;
+  /** 
+  * Emergency care provision to an individual subject of care
+  */
+  tilgangsloggBakgrunnForInnsynEmergencyCare: string;
+  /** 
+  * Dine filtervalg returnerer for mange dokumenter
+  */
+  warning_DocumentList_OverTerskelverdi_Title: string;
+  /** 
+  * Du har gjort filtervalg som returnerer flere dokumenter enn vi kan vise samtidig. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.
+  */
+  warning_DocumentList_OverTerskelverdi_Body: string;
+  /** 
+  * Viser siste {0} dokumenter
+  */
+  warning_DocumentList_OverTerskelverdi_Init_Title: string;
+  /** 
+  * Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter.
+  */
+  warning_DocumentList_OverTerskelverdi_Init_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
@@ -28746,6 +28876,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   autoSuggestLoadError: string;
   /** 
+  * Slett
+  */
+  deleteAttachmentText: string;
+  /** 
+  * Last opp fil
+  */
+  uploadButtonText: string;
+  /** 
   * Du må fylle ut dette feltet
   */
   formRequiredErrorMessage: string;
@@ -28761,14 +28899,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Fullfør
   */
   formFinish: string;
-  /** 
-  * Slett
-  */
-  deleteAttachmentText: string;
-  /** 
-  * Last opp fil
-  */
-  uploadButtonText: string;
 };
 
 export type HNMinHelseSysvak = { 
