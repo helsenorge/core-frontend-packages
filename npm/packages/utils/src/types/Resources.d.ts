@@ -1286,6 +1286,138 @@ export type HNDialogCommonJS = {
   */
   ekonsultasjonVelgerVeiviser: string;
   /** 
+  * Hoste, feber, sår hals, hodepine, tett eller rennende nese, muskelsmerter, tungpust, magesmerter/kvalme/diaré, redusert smaks- eller luktesans.
+  */
+  ekonsultasjonVelgerVeiviserBeskrivelse: string;
+  /** 
+  * /veileder?Query=Questionnaire%2F304
+  */
+  ekonsultasjonVelgerVeiviserUrl: string;
+  /** 
+  * Du må velge en dag som har ledige timer
+  */
+  emptyHourFieldRequired: string;
+  /** 
+  * Timer på legekontoret, om ønskelig på video/telefon
+  */
+  fastlegeOrdinaryEventsHeading: string;
+  /** 
+  * Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor.
+  */
+  fastlegeVideoEventsEmptyText: string;
+  /** 
+  * Denne timen er forbeholdt hastesaker. Hvis du kan vente, velg heller et annet tidspunkt.
+  */
+  hastetimeEventAlertDescription: string;
+  /** 
+  * Du har valgt en hastetime
+  */
+  hastetimeEventAlertTitle: string;
+  /** 
+  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Behandlingsfrister","seksjonstekst_brodtekst":"<p>Når henvisningen din vurderes settes det en frist for når behandlingen senest må starte. Du kan ikke selv velge en time etter denne fristen, men du kan kontakte behandlingsstedet og be om en senere time i samråd med dem.</p>\n<p>Dersom du trenger mer informasjon om hva en endring av timen vil si for deg, bør du kontakte behandlingsstedet.</p>"}
+  */
+  hjelpetrigger_behandlingsfrister: string;
+  /** 
+  * Velg time
+  */
+  hourFieldLabel: string;
+  /** 
+  * Du må velge en time
+  */
+  hourFieldRequired: string;
+  /** 
+  * Kontakt legekontoret
+  */
+  servicepanelContactGeneralPractitioner: string;
+  /** 
+  * Se informasjon om fastlegen din
+  */
+  servicepanelFastlegeInfoLink: string;
+  /** 
+  * Se alle helsekontaktene dine
+  */
+  servicepanelHelsekontakterLink: string;
+  /** 
+  * Du er registrert som bosatt i utlandet og har for tiden ikke fastlege i Norge.
+  */
+  servicepanelInfoAbroad: string;
+  /** 
+  * Informasjon fra legekontoret
+  */
+  servicepanelInfoHeading: string;
+  /** 
+  * Ingen fastlege registrert.
+  */
+  servicepanelInfoNoAssigned: string;
+  /** 
+  * Du tilhører ${business} som er bemannet av vikar inntil fastlege blir ansatt.
+  */
+  servicepanelInfoVacantList: string;
+  /** 
+  * Bestill time
+  */
+  servicepanelMakeAnAppointment: string;
+  /** 
+  * Bestill influensavaksine
+  */
+  servicepanelMakeVaccinationAppointment: string;
+  /** 
+  * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge, men kan ha andre digitale kontaktmuligheter på sin hjemmeside.
+  */
+  servicepanelNoServiceDescription: string;
+  /** 
+  * Fastlegen din er ${name} ved ${business}
+  */
+  servicepanelPractitionerHeader: string;
+  /** 
+  * Forny resept
+  */
+  servicepanelRenewPrescription: string;
+  /** 
+  * Start e-konsultasjon
+  */
+  servicepanelStartEconsultation: string;
+  /** 
+  * Videokonsultasjon
+  */
+  servicepanelVideoConsultation: string;
+  /** 
+  * Mer om din fastlege
+  */
+  shortcutContactMoreInfo: string;
+  /** 
+  * Den vil være tilgjengelig for bestilling på nett {0}.
+  */
+  unavailableEventAvailableAtDescription: string;
+  /** 
+  * Denne timen er reservert for hastesaker og kan derfor ikke bestilles på nett. Bestill time på annen måte.
+  */
+  unavailableEventHasterDescription: string;
+  /** 
+  * Timen kan ikke bestilles på nett
+  */
+  unavailableEventLightboxHeading: string;
+  /** 
+  * Denne timen kan ikke bestilles på nett. Bestill time på annen måte.
+  */
+  unavailableEventMustCallDescription: string;
+  /** 
+  * Denne videotimen kan ikke bestilles på nett. Bestill time på annen måte.
+  */
+  unavailableEventVideoDescription: string;
+  /** 
+  * Timer som ikke kan bestilles på nett foreløpig
+  */
+  unavailableEventsHeading: string;
+  /** 
+  * Timer på legekontoret
+  */
+  vaksineEventsHeading: string;
+  /** 
+  * Avbryt
+  */
+  videoDialogCancelButton: string;
+  /** 
   * Jordmor
   */
   commonHealthcareProfessionalJordmor: string;
@@ -4400,6 +4532,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Fullmakt_Description: string;
   /** 
+  * Samtykkeoppgave
+  */
+  page_Samtykkeoppgave_Title: string;
+  /** 
   * Prøvesvar
   */
   page_Provesvar_Title: string;
@@ -4447,10 +4583,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
   */
   page_NotAccessToService_Link_Text: string;
-  /** 
-  * Samtykkeoppgave
-  */
-  page_Samtykkeoppgave_Title: string;
 };
 
 export type HNMinHelseDialogGPStrings = { 
@@ -29417,6 +29549,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   hourPlaceholder: string;
   /** 
+  * Slett
+  */
+  deleteAttachmentText: string;
+  /** 
+  * Last opp fil
+  */
+  uploadButtonText: string;
+  /** 
   * Teknisk feil
   */
   autoSuggestLoadError: string;
@@ -29444,14 +29584,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Fullfør
   */
   formFinish: string;
-  /** 
-  * Slett
-  */
-  deleteAttachmentText: string;
-  /** 
-  * Last opp fil
-  */
-  uploadButtonText: string;
   /** 
   * Velg filer
   */
