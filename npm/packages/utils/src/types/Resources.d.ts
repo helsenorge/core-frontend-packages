@@ -993,6 +993,102 @@ export type HNDialogCommonJS = {
   */
   commonMeldingsvelgerTil: string;
   /** 
+  * Du må skrive inn hva det gjelder
+  */
+  commonMessageError: string;
+  /** 
+  * Din melding
+  */
+  commonMessageLabel: string;
+  /** 
+  * Forkast endringer
+  */
+  commonPendingChangesDiscardCancel: string;
+  /** 
+  * Fortsett redigering
+  */
+  commonPendingChangesDiscardProceed: string;
+  /** 
+  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
+  */
+  commonPendingChangesSubmitDiscardDescription: string;
+  /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  commonPendingChangesSubmitDiscardHeading: string;
+  /** 
+  * Det er ikke lenger mulig å sende melding.
+  */
+  commonReplyMessageUnavailableBody: string;
+  /** 
+  * Denne mottakeren er ikke lenger tilgjengelig
+  */
+  commonReplyMessageUnavailableTitle: string;
+  /** 
+  * F. eks. forny allergimedisin
+  */
+  commonReseptfornyelseEmnePlaceholder: string;
+  /** 
+  * Be om å få fornyet en eller flere resepter. Merk at meldingen kan bli lest av andre ved legekontoret enn fastlegen. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonReseptfornyelseFastlegeBeskrivelse: string;
+  /** 
+  * Merk at meldingen kan bli lest av andre ved legekontoret enn fastlegen. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonReseptfornyelseFastlegeSvarBeskrivelse: string;
+  /** 
+  * Reseptfornyelse
+  */
+  commonReseptfornyelseHeader: string;
+  /** 
+  * Be om å få fornyet en eller flere resepter. Merk at meldingen kan bli lest av andre ved behandlerkontoret enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonReseptfornyelseHelsetilbudBeskrivelse: string;
+  /** 
+  * Merk at meldingen kan bli lest av andre ved behandlerkontoret enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonReseptfornyelseHelsetilbudSvarBeskrivelse: string;
+  /** 
+  * <p>Henvendelsen vil bli journalført.</p>
+  */
+  commonReseptfornyelseJournal: string;
+  /** 
+  * Eventuelle kommentarer
+  */
+  commonReseptfornyelseKommentarer: string;
+  /** 
+  * Legg til flere resepter
+  */
+  commonReseptfornyelseLeggTil: string;
+  /** 
+  * Resepter du ønsker å fornye
+  */
+  commonReseptfornyelseResepter: string;
+  /** 
+  * Du må skrive inn hvilken resept du ønsker å fornye
+  */
+  commonReseptfornyelseResepterError: string;
+  /** 
+  * Resepter du ønsker å fornye
+  */
+  commonReseptfornyelseResepterHeader: string;
+  /** 
+  * Navn på legemiddel, form(tablett, flytende), mengde
+  */
+  commonReseptfornyelseResepterLabel: string;
+  /** 
+  * Legg til flere resepter
+  */
+  commonReseptfornyelseResepterLeggTil: string;
+  /** 
+  * F. eks. Panodil, tabletter, 50 mg
+  */
+  commonReseptfornyelseResepterPlaceholder: string;
+  /** 
+  * Slett
+  */
+  commonReseptfornyelseResepterSlett: string;
+  /** 
   * Jordmor
   */
   commonHealthcareProfessionalJordmor: string;
@@ -29136,18 +29232,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   maxLengthText: string;
   /** 
-  * Slett
-  */
-  deleteAttachmentText: string;
-  /** 
-  * Last opp fil
-  */
-  uploadButtonText: string;
-  /** 
-  * Velg filer
-  */
-  chooseFilesText: string;
-  /** 
   * Du må fylle ut dette feltet
   */
   formRequiredErrorMessage: string;
@@ -29163,6 +29247,18 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Fullfør
   */
   formFinish: string;
+  /** 
+  * Slett
+  */
+  deleteAttachmentText: string;
+  /** 
+  * Last opp fil
+  */
+  uploadButtonText: string;
+  /** 
+  * Velg filer
+  */
+  chooseFilesText: string;
 };
 
 export type HNMinHelseSysvak = { 
