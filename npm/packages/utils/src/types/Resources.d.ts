@@ -817,6 +817,182 @@ export type HNDialogCommonJS = {
   */
   commonHealthcareProfessionalPerfusjonist: string;
   /** 
+  * Provisorfarmasøyt
+  */
+  commonHealthcareProfessionalProvisorfarmasoyt: string;
+  /** 
+  * Psykolog
+  */
+  commonHealthcareProfessionalPsykolog: string;
+  /** 
+  * Radiograf
+  */
+  commonHealthcareProfessionalRadiograf: string;
+  /** 
+  * Reseptarfarmasøyt
+  */
+  commonHealthcareProfessionalReseptarfarmasoyt: string;
+  /** 
+  * Sykepleier
+  */
+  commonHealthcareProfessionalSykepleier: string;
+  /** 
+  * Tannhelsesekretær
+  */
+  commonHealthcareProfessionalTannhelsesekretaer: string;
+  /** 
+  * Tannlege
+  */
+  commonHealthcareProfessionalTannlege: string;
+  /** 
+  * Tannpleier
+  */
+  commonHealthcareProfessionalTannpleier: string;
+  /** 
+  * Tanntekniker
+  */
+  commonHealthcareProfessionalTanntekniker: string;
+  /** 
+  * Vernepleier
+  */
+  commonHealthcareProfessionalVernepleier: string;
+  /** 
+  * Veterinær
+  */
+  commonHealthcareProfessionalVeterinaer: string;
+  /** 
+  * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
+  */
+  commonHelsefagligKontaktBeskrivelse: string;
+  /** 
+  * <p>Henvendelsen vil bli journalført.</p>
+  */
+  commonHelsefagligKontaktBottomInfo: string;
+  /** 
+  * Skriv melding til
+  */
+  commonHelsefagligKontaktHeader: string;
+  /** 
+  * Beskrivelse
+  */
+  commonInnsynPasientjournalBeskrivelse: string;
+  /** 
+  * Jeg ønsker en digital kopi av min pasientjournal
+  */
+  commonInnsynPasientjournalBeskrivelseBody: string;
+  /** 
+  * Emne
+  */
+  commonInnsynPasientjournalEmne: string;
+  /** 
+  * Kopi av pasientjournal
+  */
+  commonInnsynPasientjournalEmneBody: string;
+  /** 
+  * Kopi av pasientjournal
+  */
+  commonInnsynPasientjournalHeader: string;
+  /** 
+  * Teknisk feil hos mottaker. Kontakt mottaker på annen måte.
+  */
+  commonInvalidCertificateMessage: string;
+  /** 
+  * Forventet svartid på meldinger er første virkedag. Akutte henvendelser skal ikke sendes via melding.
+  */
+  commonKommuneMeldingBeskrivelse: string;
+  /** 
+  * <p>Henvendelsen vil bli journalført.</p>
+  */
+  commonKommuneMeldingBottomInfo: string;
+  /** 
+  * Skriv melding til
+  */
+  commonKommuneMeldingHeader: string;
+  /** 
+  * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
+  */
+  commonKoordinatorMeldingBeskrivelse: string;
+  /** 
+  * <p>Henvendelsen vil bli journalført.</p>
+  */
+  commonKoordinatorMeldingBottomInfo: string;
+  /** 
+  * Skriv melding til
+  */
+  commonKoordinatorMeldingHeader: string;
+  /** 
+  * E-konsultasjon
+  */
+  commonMeldingsvelgerEkonsultasjon: string;
+  /** 
+  * Still et helserelatert spørsmål til din helseperson.
+  */
+  commonMeldingsvelgerEkonsultasjonHelsestasjonBeskrivelse: string;
+  /** 
+  * Still et praktisk spørsmål til de som sitter i resepsjonen.
+  */
+  commonMeldingsvelgerEkontaktHelsestasjonBeskrivelse: string;
+  /** 
+  * Fastlege
+  */
+  commonMeldingsvelgerFastlege: string;
+  /** 
+  * Still et medisinsk spørsmål til fastlegen din. Du betaler vanlig egenandel.
+  */
+  commonMeldingsvelgerFastlegeEkonsultasjonBeskrivelse: string;
+  /** 
+  * Be om å få fornyet en eller flere resepter.
+  */
+  commonMeldingsvelgerFastlegeFornyReseptBeskrivelse: string;
+  /** 
+  * Informasjon fra fastlegekontoret
+  */
+  commonMeldingsvelgerFastlegeInfoHeader: string;
+  /** 
+  * Still et praktisk spørsmål til de som sitter i resepsjonen ved fastlegekontoret ditt.
+  */
+  commonMeldingsvelgerFastlegeKontaktBeskrivelse: string;
+  /** 
+  * legekontoret
+  */
+  commonMeldingsvelgerFastlegeKontaktLegekontoret: string;
+  /** 
+  * Forny resept
+  */
+  commonMeldingsvelgerFornyResept: string;
+  /** 
+  * Velg type melding
+  */
+  commonMeldingsvelgerHeader: string;
+  /** 
+  * Still et medisinsk spørsmål til behandleren din. Du betaler vanlig egenandel.
+  */
+  commonMeldingsvelgerHelsetilbudEkonsultasjonBeskrivelse: string;
+  /** 
+  * Be om å få fornyet en eller flere resepter.
+  */
+  commonMeldingsvelgerHelsetilbudFornyReseptBeskrivelse: string;
+  /** 
+  * Still et praktisk spørsmål til de som sitter i resepsjonen.
+  */
+  commonMeldingsvelgerHelsetilbudKontaktBeskrivelse: string;
+  /** 
+  * Kopi av pasientjournal
+  */
+  commonMeldingsvelgerInnsynPasientjournal: string;
+  /** 
+  * Be om en digital kopi av pasientjournalen hvor dine konsultasjoner er dokumentert.
+  */
+  commonMeldingsvelgerInnsynPasientjournalBeskrivelse: string;
+  /** 
+  * Kontakt {0}
+  */
+  commonMeldingsvelgerKontakt: string;
+  /** 
+  * Til
+  */
+  commonMeldingsvelgerTil: string;
+  /** 
   * Jordmor
   */
   commonHealthcareProfessionalJordmor: string;
@@ -28960,10 +29136,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   maxLengthText: string;
   /** 
-  * Velg filer
-  */
-  chooseFilesText: string;
-  /** 
   * Slett
   */
   deleteAttachmentText: string;
@@ -28971,6 +29143,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Last opp fil
   */
   uploadButtonText: string;
+  /** 
+  * Velg filer
+  */
+  chooseFilesText: string;
   /** 
   * Du må fylle ut dette feltet
   */
