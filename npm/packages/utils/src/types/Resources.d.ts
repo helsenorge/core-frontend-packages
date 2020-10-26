@@ -617,69 +617,69 @@ export type HNDialogCommonJS = {
   /** 
   * Beskrivelse
   */
-  commonBestillTimeBeskrivelse: string;
+  bestillTimeBeskrivelse: string;
   /** 
   * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
   */
-  commonBestillTimeHelsetilbudIngenBehandlereInfo: string;
+  bestillTimeHelsetilbudIngenBehandlereInfo: string;
   /** 
   * Gå direkte til timebestilling
   */
-  commonBestillTimeVelgerAnnet: string;
+  bestillTimeVelgerAnnet: string;
   /** 
   * Gå direkte til vaksinasjonsbestilling
   */
-  commonBestillVaksinasjonVelgerAnnet: string;
+  bestillVaksinasjonVelgerAnnet: string;
   /** 
   * Svar
   */
-  commonConversationSubmitReply: string;
+  conversationSubmitReply: string;
   /** 
   * Endre
   */
-  commonDraftEdit: string;
+  draftEdit: string;
   /** 
   * Send
   */
-  commonDraftSend: string;
+  draftSend: string;
   /** 
   * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
 <p>Henvendelsen vil bli journalført.</p>
   */
-  commonEkonsultasjonBottomInfo: string;
+  ekonsultasjonBottomInfo: string;
   /** 
   * Still et medisinsk spørsmål til fastlegen din. Du betaler samme egenandel som ved vanlig legetime. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonEkonsultasjonFastlegeBeskrivelse: string;
+  ekonsultasjonFastlegeBeskrivelse: string;
   /** 
   * Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonEkonsultasjonFastlegeSvarBeskrivelse: string;
+  ekonsultasjonFastlegeSvarBeskrivelse: string;
   /** 
   * E-konsultasjon
   */
-  commonEkonsultasjonHeader: string;
+  ekonsultasjonHeader: string;
   /** 
   * Still et helserelatert spørsmål til din helseperson. Ved fravær kan meldingen bli lest og besvart av annen helseperson enn din faste helseperson. Du vil bli kontaktet senest innen 3 arbeidsdager.
   */
-  commonEkonsultasjonHelsestasjonBeskrivelse: string;
+  ekonsultasjonHelsestasjonBeskrivelse: string;
   /** 
   * Ved fravær kan meldingen bli lest og besvart av annen helseperson enn din faste helseperson. Du vil bli kontaktet senest innen 3 arbeidsdager.
   */
-  commonEkonsultasjonHelsestasjonSvarBeskrivelse: string;
+  ekonsultasjonHelsestasjonSvarBeskrivelse: string;
   /** 
   * Still et medisinsk spørsmål til behandleren din. Du betaler samme egenandel som ved vanlig time. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonEkonsultasjonHelsetilbudBeskrivelse: string;
+  ekonsultasjonHelsetilbudBeskrivelse: string;
   /** 
   * Ved fravær kan meldingen bli lest og besvart av annet helsepersonell enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonEkonsultasjonHelsetilbudSvarBeskrivelse: string;
+  ekonsultasjonHelsetilbudSvarBeskrivelse: string;
   /** 
   * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
 <p>Henvendelsen vil bli journalført.</p>
   */
-  commonEkontaktBottomInfo: string;
+  ekontaktBottomInfo: string;
   /** 
   * Still et praktisk spørsmål til resepsjonen ved fastlegekontoret. Du vil bli kontaktet innen fem arbeidsdager.
   */
@@ -1056,10 +1056,6 @@ export type HNDialogCommonJS = {
   * Eventuelle kommentarer
   */
   commonReseptfornyelseKommentarer: string;
-  /** 
-  * Resepter du ønsker å fornye
-  */
-  commonReseptfornyelseResepter: string;
   /** 
   * Du må skrive inn hvilken resept du ønsker å fornye
   */
@@ -29588,6 +29584,26 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Last opp fil
   */
   uploadButtonText: string;
+  /** 
+  * Du må {0} for å kunne sende skjema. Alternativt kan du fylle ut {1}.
+  */
+  skjemaLoginMessageAuthenticationRequirementRequiredPrint: string;
+  /** 
+  * logge inn
+  */
+  loggeInnLinkText: string;
+  /** 
+  * på papir
+  */
+  paPapirText: string;
+  /** 
+  * Du bør {0} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
+  */
+  skjemaLoginMessageAuthenticationRequirementOptionalPrint: string;
+  /** 
+  * Du må {0} for å fylle ut og sende dette skjemaet.
+  */
+  skjemaLoginMessageAuthenticationRequirementRequiredNoPrint: string;
   /** 
   * Teknisk feil
   */
