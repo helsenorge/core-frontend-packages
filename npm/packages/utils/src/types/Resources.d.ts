@@ -1057,10 +1057,6 @@ export type HNDialogCommonJS = {
   */
   commonReseptfornyelseKommentarer: string;
   /** 
-  * Legg til flere resepter
-  */
-  commonReseptfornyelseLeggTil: string;
-  /** 
   * Resepter du ønsker å fornye
   */
   commonReseptfornyelseResepter: string;
