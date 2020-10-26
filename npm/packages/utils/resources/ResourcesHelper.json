@@ -1394,7 +1394,7 @@
     "appointmentlistelementDuration": "Antatt varighet",
     "sourceSystemErrorDescription": "Prøv igjen senere, sjekk eventuelt innkallingsbrev eller ta kontakt.",
     "referrallistelementAppointments": "Timeavtaler knyttet til henvisningen",
-    "referrallistelementAppointmentsEmpty": "Ingen fremtidige timeavtaler er registrert.",
+    "referrallistelementAppointmentsEmpty": "Du har ingen timeavtaler som kan vises.",
     "referrallistelementInfo": "Informasjon om henvisningen",
     "referrallistelementPhone": "Telefon:",
     "referrallistelementReceived": "Mottatt:",

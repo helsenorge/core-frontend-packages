@@ -5537,7 +5537,7 @@ export type HNMinHelseDialogJS = {
   */
   referrallistelementAppointments: string;
   /** 
-  * Ingen fremtidige timeavtaler er registrert.
+  * Du har ingen timeavtaler som kan vises.
   */
   referrallistelementAppointmentsEmpty: string;
   /** 
