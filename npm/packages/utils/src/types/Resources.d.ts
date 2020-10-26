@@ -11398,7 +11398,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   deling_startet_warning: string;
   /** 
-  * {"defaulttekst_overskrift":"Om dokumenter","defaulttekst_brodtekst":"<p>Det kan finnes mer oppdaterte versjoner av dokumentene andre steder, for eksempel hos din behandler.</p>\n<p>Tidligere ble også vedlegg utvekslet i meldinger til og fra helsetjenesten vist her. Disse vises nå kun som vedlegg i selve meldingen.</p>\n<h3>Tilgang</h3>\n<p>Det er bare du som har tilgang til dokumenter som er lagret på Helsenorge. Du må også være logget inn for å kunne hente dem frem og se dem.</p>\n<h3>Sletting</h3>\n<p>Du kan slette dokumenter fra denne tjenesten men da slettes kun versjonen som ligger på Helsenorge. Din behandler kan fremdeles ha lagret en versjon av dokumentet hos seg.</p>"}
+  * {"defaulttekst_overskrift":"Om dokumenter","defaulttekst_brodtekst":"<p>Det kan finnes mer oppdaterte versjoner av dokumentene andre steder, for eksempel hos din behandler.</p>\n<p>Tidligere ble også vedlegg utvekslet i meldinger til og fra helsetjenesten vist her. Disse vises nå kun som vedlegg i selve meldingen.</p>\n<h3>Tilgang</h3>\n<p>Det er bare du som har tilgang til dokumenter som er lagret på Helsenorge. Du må også være logget inn for å kunne hente dem frem og se dem.</p>\n<h3>Sletting</h3>\n<p>Du kan slette dokumenter fra denne tjenesten men da slettes kun versjonen som ligger på Helsenorge. Din behandler kan fremdeles ha lagret en versjon av dokumentet hos seg.</p>\n<h3>Deling</h3>\n<p>Du kan dele noen utvalgte skjema med din fastlege, hvis fastlegen har tatt i bruk de nødvendige IT-systemene.</p>"}
   */
   hjelpekontekst_dokumentarkiv: string;
   /** 
