@@ -1163,88 +1163,88 @@ export type HNDialogCommonJS = {
   /** 
   * Vikar for fastlege
   */
-  commonRoleToPatientVikarForFastlege: string;
+  roleToPatientVikarForFastlege: string;
   /** 
   * Valgt kalendertime
   */
-  commonSelectedEventIconLabel: string;
+  selectedEventIconLabel: string;
   /** 
   * Tjenesten er gratis. Meldingen kan leses av helsepersonell ved {0}. Du vil bli kontaktet innen fem arbeidsdager.
   */
-  commonSpesialistMeldingBeskrivelse: string;
+  spesialistMeldingBeskrivelse: string;
   /** 
   * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
 <p>Henvendelsen vil bli journalført.</p>
   */
-  commonSpesialistMeldingBottomInfo: string;
+  spesialistMeldingBottomInfo: string;
   /** 
   * Henvendelse til
   */
-  commonSpesialistMeldingHeader: string;
+  spesialistMeldingHeader: string;
   /** 
   * OK
   */
-  commonSubmitConfirmationButtonText: string;
+  submitConfirmationButtonText: string;
   /** 
   * Takk for din henvendelse.
   */
-  commonSubmitConfirmationDescription: string;
+  submitConfirmationDescription: string;
   /** 
   * Du finner sendte og mottatte meldinger i innboksen.
   */
-  commonSubmitConfirmationDescription2: string;
+  submitConfirmationDescription2: string;
   /** 
   * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
   */
-  commonSubmitConfirmationDraftDescription: string;
+  submitConfirmationDraftDescription: string;
   /** 
   * Melding lagret som utkast
   */
-  commonSubmitConfirmationDraftHeader: string;
+  submitConfirmationDraftHeader: string;
   /** 
   * Meldingen er sendt
   */
-  commonSubmitConfirmationHeader: string;
+  submitConfirmationHeader: string;
   /** 
   * Informasjon fra fastlegekontoret
   */
-  commonThirdPartyMessageFastlegeHeader: string;
+  thirdPartyMessageFastlegeHeader: string;
   /** 
   * Les mer...
   */
-  commonThirdPartyMessageReadMore: string;
+  thirdPartyMessageReadMore: string;
   /** 
   * Kontakt fastlegekontoret hvis du har noen spørsmål.
   */
-  commonUnavailableFastlegeDescription: string;
+  unavailableFastlegeDescription: string;
   /** 
   * Tjenesten er ikke tilgjengelig
   */
-  commonUnavailableFastlegeHeader: string;
+  unavailableFastlegeHeader: string;
   /** 
   * Kontakt tjenesten hvis du har noen spørsmål.
   */
-  commonUnavailableHelsetilbudDescription: string;
+  unavailableHelsetilbudDescription: string;
   /** 
   * er ikke tillatt
   */
-  commonValidationNotAllowed: string;
+  validationNotAllowed: string;
   /** 
   * Velg behandler
   */
-  commonVelgBehandlerHeader: string;
+  velgBehandlerHeader: string;
   /** 
   * Til {0}
   */
-  commonVelgBehandlerTilHeader: string;
+  velgBehandlerTilHeader: string;
   /** 
   * Avbryt
   */
-  commonVelgBehandlingsstedAvbryt: string;
+  velgBehandlingsstedAvbryt: string;
   /** 
   * Hvem vil du sende melding til?
   */
-  commonVelgBehandlingsstedHeader: string;
+  velgBehandlingsstedHeader: string;
   /** 
   * Fortsett senere
   */
