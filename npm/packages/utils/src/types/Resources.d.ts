@@ -683,339 +683,339 @@ export type HNDialogCommonJS = {
   /** 
   * Still et praktisk spørsmål til resepsjonen ved fastlegekontoret. Du vil bli kontaktet innen fem arbeidsdager.
   */
-  commonEkontaktFastlegeBeskrivelse: string;
+  ekontaktFastlegeBeskrivelse: string;
   /** 
   * Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonEkontaktFastlegeSvarBeskrivelse: string;
+  ekontaktFastlegeSvarBeskrivelse: string;
   /** 
   * Kontakt
   */
-  commonEkontaktHeader: string;
+  ekontaktHeader: string;
   /** 
   * Skriv melding til
   */
-  commonEkontaktHeaderSkrivMelding: string;
+  ekontaktHeaderSkrivMelding: string;
   /** 
   * Still et praktisk spørsmål til de som sitter i resepsjonen. Du vil bli kontakt senest innen 3 arbeidsdager.
   */
-  commonEkontaktHelsestasjonBeskrivelse: string;
+  ekontaktHelsestasjonBeskrivelse: string;
   /** 
   * Du vil bli kontakt senest innen 3 arbeidsdager.
   */
-  commonEkontaktHelsestasjonSvarBeskrivelse: string;
+  ekontaktHelsestasjonSvarBeskrivelse: string;
   /** 
   * Still et praktisk spørsmål til resepsjonen. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonEkontaktHelsetilbudBeskrivelse: string;
+  ekontaktHelsetilbudBeskrivelse: string;
   /** 
   * Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonEkontaktHelsetilbudSvarBeskrivelse: string;
+  ekontaktHelsetilbudSvarBeskrivelse: string;
   /** 
   * Du må fylle ut emne
   */
-  commonEmneError: string;
+  emneError: string;
   /** 
   * Emne
   */
-  commonEmneLabel: string;
+  emneLabel: string;
   /** 
   * Avbryt
   */
-  commonFormAvbryt: string;
+  formAvbryt: string;
   /** 
   * Sjekk at alt er riktig utfylt
   */
-  commonFormError: string;
+  formError: string;
   /** 
   * Fortsett senere
   */
-  commonFormFortsett: string;
+  formFortsett: string;
   /** 
   * Send
   */
-  commonFormSend: string;
+  formSend: string;
   /** 
   * Tilbake
   */
-  commonFormTilbake: string;
+  formTilbake: string;
   /** 
   * Ambulansearbeider
   */
-  commonHealthcareProfessionalAmbulansearbeider: string;
+  healthcareProfessionalAmbulansearbeider: string;
   /** 
   * Apotektekniker
   */
-  commonHealthcareProfessionalApotektekniker: string;
+  healthcareProfessionalApotektekniker: string;
   /** 
   * Audiograf
   */
-  commonHealthcareProfessionalAudiograf: string;
+  healthcareProfessionalAudiograf: string;
   /** 
   * Bioingenior
   */
-  commonHealthcareProfessionalBioingenior: string;
+  healthcareProfessionalBioingenior: string;
   /** 
   * Ergoterapeut
   */
-  commonHealthcareProfessionalErgoterapeut: string;
+  healthcareProfessionalErgoterapeut: string;
   /** 
   * Fiskehelsebiolog
   */
-  commonHealthcareProfessionalFiskehelsebiolog: string;
+  healthcareProfessionalFiskehelsebiolog: string;
   /** 
   * Fotterapeut
   */
-  commonHealthcareProfessionalFotterapeut: string;
+  healthcareProfessionalFotterapeut: string;
   /** 
   * Fysioterapeut
   */
-  commonHealthcareProfessionalFysioterapeut: string;
+  healthcareProfessionalFysioterapeut: string;
   /** 
   * Helsefagarbeider
   */
-  commonHealthcareProfessionalHelsefagarbeider: string;
+  healthcareProfessionalHelsefagarbeider: string;
   /** 
   * Helsesekretær
   */
-  commonHealthcareProfessionalHelsesekretaer: string;
+  healthcareProfessionalHelsesekretaer: string;
   /** 
   * Helsesykepleier
   */
-  commonHealthcareProfessionalHelsesykepleier: string;
+  healthcareProfessionalHelsesykepleier: string;
   /** 
   * Kiropraktor
   */
-  commonHealthcareProfessionalKiropraktor: string;
+  healthcareProfessionalKiropraktor: string;
   /** 
   * Klinisk ernæringsfysiolog
   */
-  commonHealthcareProfessionalKliniskErnaeringsfysiolog: string;
+  healthcareProfessionalKliniskErnaeringsfysiolog: string;
   /** 
   * Lege
   */
-  commonHealthcareProfessionalLege: string;
+  healthcareProfessionalLege: string;
   /** 
   * Omsorgsarbeider
   */
-  commonHealthcareProfessionalOmsorgsarbeider: string;
+  healthcareProfessionalOmsorgsarbeider: string;
   /** 
   * Optiker
   */
-  commonHealthcareProfessionalOptiker: string;
+  healthcareProfessionalOptiker: string;
   /** 
   * Ortopediingeniør
   */
-  commonHealthcareProfessionalOrtopediingenior: string;
+  healthcareProfessionalOrtopediingenior: string;
   /** 
   * Ortoptist
   */
-  commonHealthcareProfessionalOrtoptist: string;
+  healthcareProfessionalOrtoptist: string;
   /** 
   * Perfusjonist
   */
-  commonHealthcareProfessionalPerfusjonist: string;
+  healthcareProfessionalPerfusjonist: string;
   /** 
   * Provisorfarmasøyt
   */
-  commonHealthcareProfessionalProvisorfarmasoyt: string;
+  healthcareProfessionalProvisorfarmasoyt: string;
   /** 
   * Psykolog
   */
-  commonHealthcareProfessionalPsykolog: string;
+  healthcareProfessionalPsykolog: string;
   /** 
   * Radiograf
   */
-  commonHealthcareProfessionalRadiograf: string;
+  healthcareProfessionalRadiograf: string;
   /** 
   * Reseptarfarmasøyt
   */
-  commonHealthcareProfessionalReseptarfarmasoyt: string;
+  healthcareProfessionalReseptarfarmasoyt: string;
   /** 
   * Sykepleier
   */
-  commonHealthcareProfessionalSykepleier: string;
+  healthcareProfessionalSykepleier: string;
   /** 
   * Tannhelsesekretær
   */
-  commonHealthcareProfessionalTannhelsesekretaer: string;
+  healthcareProfessionalTannhelsesekretaer: string;
   /** 
   * Tannlege
   */
-  commonHealthcareProfessionalTannlege: string;
+  healthcareProfessionalTannlege: string;
   /** 
   * Tannpleier
   */
-  commonHealthcareProfessionalTannpleier: string;
+  healthcareProfessionalTannpleier: string;
   /** 
   * Tanntekniker
   */
-  commonHealthcareProfessionalTanntekniker: string;
+  healthcareProfessionalTanntekniker: string;
   /** 
   * Vernepleier
   */
-  commonHealthcareProfessionalVernepleier: string;
+  healthcareProfessionalVernepleier: string;
   /** 
   * Veterinær
   */
-  commonHealthcareProfessionalVeterinaer: string;
+  healthcareProfessionalVeterinaer: string;
   /** 
   * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
   */
-  commonHelsefagligKontaktBeskrivelse: string;
+  helsefagligKontaktBeskrivelse: string;
   /** 
   * <p>Henvendelsen vil bli journalført.</p>
   */
-  commonHelsefagligKontaktBottomInfo: string;
+  helsefagligKontaktBottomInfo: string;
   /** 
   * Skriv melding til
   */
-  commonHelsefagligKontaktHeader: string;
+  helsefagligKontaktHeader: string;
   /** 
   * Beskrivelse
   */
-  commonInnsynPasientjournalBeskrivelse: string;
+  innsynPasientjournalBeskrivelse: string;
   /** 
   * Jeg ønsker en digital kopi av min pasientjournal
   */
-  commonInnsynPasientjournalBeskrivelseBody: string;
+  innsynPasientjournalBeskrivelseBody: string;
   /** 
   * Emne
   */
-  commonInnsynPasientjournalEmne: string;
+  innsynPasientjournalEmne: string;
   /** 
   * Kopi av pasientjournal
   */
-  commonInnsynPasientjournalEmneBody: string;
+  innsynPasientjournalEmneBody: string;
   /** 
   * Kopi av pasientjournal
   */
-  commonInnsynPasientjournalHeader: string;
+  innsynPasientjournalHeader: string;
   /** 
   * Teknisk feil hos mottaker. Kontakt mottaker på annen måte.
   */
-  commonInvalidCertificateMessage: string;
+  invalidCertificateMessage: string;
   /** 
   * Forventet svartid på meldinger er første virkedag. Akutte henvendelser skal ikke sendes via melding.
   */
-  commonKommuneMeldingBeskrivelse: string;
+  kommuneMeldingBeskrivelse: string;
   /** 
   * <p>Henvendelsen vil bli journalført.</p>
   */
-  commonKommuneMeldingBottomInfo: string;
+  kommuneMeldingBottomInfo: string;
   /** 
   * Skriv melding til
   */
-  commonKommuneMeldingHeader: string;
+  kommuneMeldingHeader: string;
   /** 
   * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
   */
-  commonKoordinatorMeldingBeskrivelse: string;
+  koordinatorMeldingBeskrivelse: string;
   /** 
   * <p>Henvendelsen vil bli journalført.</p>
   */
-  commonKoordinatorMeldingBottomInfo: string;
+  koordinatorMeldingBottomInfo: string;
   /** 
   * Skriv melding til
   */
-  commonKoordinatorMeldingHeader: string;
+  koordinatorMeldingHeader: string;
   /** 
   * E-konsultasjon
   */
-  commonMeldingsvelgerEkonsultasjon: string;
+  meldingsvelgerEkonsultasjon: string;
   /** 
   * Still et helserelatert spørsmål til din helseperson.
   */
-  commonMeldingsvelgerEkonsultasjonHelsestasjonBeskrivelse: string;
+  meldingsvelgerEkonsultasjonHelsestasjonBeskrivelse: string;
   /** 
   * Still et praktisk spørsmål til de som sitter i resepsjonen.
   */
-  commonMeldingsvelgerEkontaktHelsestasjonBeskrivelse: string;
+  meldingsvelgerEkontaktHelsestasjonBeskrivelse: string;
   /** 
   * Fastlege
   */
-  commonMeldingsvelgerFastlege: string;
+  meldingsvelgerFastlege: string;
   /** 
   * Still et medisinsk spørsmål til fastlegen din. Du betaler vanlig egenandel.
   */
-  commonMeldingsvelgerFastlegeEkonsultasjonBeskrivelse: string;
+  meldingsvelgerFastlegeEkonsultasjonBeskrivelse: string;
   /** 
   * Be om å få fornyet en eller flere resepter.
   */
-  commonMeldingsvelgerFastlegeFornyReseptBeskrivelse: string;
+  meldingsvelgerFastlegeFornyReseptBeskrivelse: string;
   /** 
   * Informasjon fra fastlegekontoret
   */
-  commonMeldingsvelgerFastlegeInfoHeader: string;
+  meldingsvelgerFastlegeInfoHeader: string;
   /** 
   * Still et praktisk spørsmål til de som sitter i resepsjonen ved fastlegekontoret ditt.
   */
-  commonMeldingsvelgerFastlegeKontaktBeskrivelse: string;
+  meldingsvelgerFastlegeKontaktBeskrivelse: string;
   /** 
   * legekontoret
   */
-  commonMeldingsvelgerFastlegeKontaktLegekontoret: string;
+  meldingsvelgerFastlegeKontaktLegekontoret: string;
   /** 
   * Forny resept
   */
-  commonMeldingsvelgerFornyResept: string;
+  meldingsvelgerFornyResept: string;
   /** 
   * Velg type melding
   */
-  commonMeldingsvelgerHeader: string;
+  meldingsvelgerHeader: string;
   /** 
   * Still et medisinsk spørsmål til behandleren din. Du betaler vanlig egenandel.
   */
-  commonMeldingsvelgerHelsetilbudEkonsultasjonBeskrivelse: string;
+  meldingsvelgerHelsetilbudEkonsultasjonBeskrivelse: string;
   /** 
   * Be om å få fornyet en eller flere resepter.
   */
-  commonMeldingsvelgerHelsetilbudFornyReseptBeskrivelse: string;
+  meldingsvelgerHelsetilbudFornyReseptBeskrivelse: string;
   /** 
   * Still et praktisk spørsmål til de som sitter i resepsjonen.
   */
-  commonMeldingsvelgerHelsetilbudKontaktBeskrivelse: string;
+  meldingsvelgerHelsetilbudKontaktBeskrivelse: string;
   /** 
   * Kopi av pasientjournal
   */
-  commonMeldingsvelgerInnsynPasientjournal: string;
+  meldingsvelgerInnsynPasientjournal: string;
   /** 
   * Be om en digital kopi av pasientjournalen hvor dine konsultasjoner er dokumentert.
   */
-  commonMeldingsvelgerInnsynPasientjournalBeskrivelse: string;
+  meldingsvelgerInnsynPasientjournalBeskrivelse: string;
   /** 
   * Kontakt {0}
   */
-  commonMeldingsvelgerKontakt: string;
+  meldingsvelgerKontakt: string;
   /** 
   * Til
   */
-  commonMeldingsvelgerTil: string;
+  meldingsvelgerTil: string;
   /** 
   * Du må skrive inn hva det gjelder
   */
-  commonMessageError: string;
+  messageError: string;
   /** 
   * Din melding
   */
-  commonMessageLabel: string;
+  messageLabel: string;
   /** 
   * Forkast endringer
   */
-  commonPendingChangesDiscardCancel: string;
+  pendingChangesDiscardCancel: string;
   /** 
   * Fortsett redigering
   */
-  commonPendingChangesDiscardProceed: string;
+  pendingChangesDiscardProceed: string;
   /** 
   * Hvis du forlater siden, vil du miste alle endringer du har gjort.
   */
-  commonPendingChangesSubmitDiscardDescription: string;
+  pendingChangesSubmitDiscardDescription: string;
   /** 
   * Det finnes endringer som ikke er lagret
   */
-  commonPendingChangesSubmitDiscardHeading: string;
+  pendingChangesSubmitDiscardHeading: string;
   /** 
   * Det er ikke lenger mulig å sende melding.
   */
@@ -1448,11 +1448,11 @@ export type HNDialogCommonJS = {
   /** 
   * Jordmor
   */
-  commonHealthcareProfessionalJordmor: string;
+  healthcareProfessionalJordmor: string;
   /** 
   * Hjelpepleier
   */
-  commonHealthcareProfessionalHjelpepleier: string;
+  healthcareProfessionalHjelpepleier: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
