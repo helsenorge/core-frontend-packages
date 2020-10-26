@@ -1019,147 +1019,147 @@ export type HNDialogCommonJS = {
   /** 
   * Det er ikke lenger mulig å sende melding.
   */
-  commonReplyMessageUnavailableBody: string;
+  replyMessageUnavailableBody: string;
   /** 
   * Denne mottakeren er ikke lenger tilgjengelig
   */
-  commonReplyMessageUnavailableTitle: string;
+  replyMessageUnavailableTitle: string;
   /** 
   * F. eks. forny allergimedisin
   */
-  commonReseptfornyelseEmnePlaceholder: string;
+  reseptfornyelseEmnePlaceholder: string;
   /** 
   * Be om å få fornyet en eller flere resepter. Merk at meldingen kan bli lest av andre ved legekontoret enn fastlegen. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonReseptfornyelseFastlegeBeskrivelse: string;
+  reseptfornyelseFastlegeBeskrivelse: string;
   /** 
   * Merk at meldingen kan bli lest av andre ved legekontoret enn fastlegen. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonReseptfornyelseFastlegeSvarBeskrivelse: string;
+  reseptfornyelseFastlegeSvarBeskrivelse: string;
   /** 
   * Reseptfornyelse
   */
-  commonReseptfornyelseHeader: string;
+  reseptfornyelseHeader: string;
   /** 
   * Be om å få fornyet en eller flere resepter. Merk at meldingen kan bli lest av andre ved behandlerkontoret enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonReseptfornyelseHelsetilbudBeskrivelse: string;
+  reseptfornyelseHelsetilbudBeskrivelse: string;
   /** 
   * Merk at meldingen kan bli lest av andre ved behandlerkontoret enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
   */
-  commonReseptfornyelseHelsetilbudSvarBeskrivelse: string;
+  reseptfornyelseHelsetilbudSvarBeskrivelse: string;
   /** 
   * <p>Henvendelsen vil bli journalført.</p>
   */
-  commonReseptfornyelseJournal: string;
+  reseptfornyelseJournal: string;
   /** 
   * Eventuelle kommentarer
   */
-  commonReseptfornyelseKommentarer: string;
+  reseptfornyelseKommentarer: string;
   /** 
   * Du må skrive inn hvilken resept du ønsker å fornye
   */
-  commonReseptfornyelseResepterError: string;
+  reseptfornyelseResepterError: string;
   /** 
   * Resepter du ønsker å fornye
   */
-  commonReseptfornyelseResepterHeader: string;
+  reseptfornyelseResepterHeader: string;
   /** 
   * Navn på legemiddel, form(tablett, flytende), mengde
   */
-  commonReseptfornyelseResepterLabel: string;
+  reseptfornyelseResepterLabel: string;
   /** 
   * Legg til flere resepter
   */
-  commonReseptfornyelseResepterLeggTil: string;
+  reseptfornyelseResepterLeggTil: string;
   /** 
   * F. eks. Panodil, tabletter, 50 mg
   */
-  commonReseptfornyelseResepterPlaceholder: string;
+  reseptfornyelseResepterPlaceholder: string;
   /** 
   * Slett
   */
-  commonReseptfornyelseResepterSlett: string;
+  reseptfornyelseResepterSlett: string;
   /** 
   * Ansvarlig jordmor
   */
-  commonRoleToPatientAnsvarligJordmor: string;
+  roleToPatientAnsvarligJordmor: string;
   /** 
   * Behandlingsansvarlig lege
   */
-  commonRoleToPatientBehandlingsansvarligLege: string;
+  roleToPatientBehandlingsansvarligLege: string;
   /** 
   * Faglig ansvarlig for vedtak i psykisk helsevern
   */
-  commonRoleToPatientFagligAnsvarligPsykiskHelsevern: string;
+  roleToPatientFagligAnsvarligPsykiskHelsevern: string;
   /** 
   * Fastlege
   */
-  commonRoleToPatientFastlege: string;
+  roleToPatientFastlege: string;
   /** 
   * Forløpskoordinator kreft
   */
-  commonRoleToPatientForlopskoordinatorKreft: string;
+  roleToPatientForlopskoordinatorKreft: string;
   /** 
   * Helsefaglig kontakt
   */
-  commonRoleToPatientHelsefagligKontakt: string;
+  roleToPatientHelsefagligKontakt: string;
   /** 
   * Informasjonsansvarlig
   */
-  commonRoleToPatientInformasjonsansvarlig: string;
+  roleToPatientInformasjonsansvarlig: string;
   /** 
   * Innleggende lege
   */
-  commonRoleToPatientInnleggendeLege: string;
+  roleToPatientInnleggendeLege: string;
   /** 
   * Instituerende lege
   */
-  commonRoleToPatientInstituerendeLege: string;
+  roleToPatientInstituerendeLege: string;
   /** 
   * Journalansvarlig
   */
-  commonRoleToPatientJournalansvarlig: string;
+  roleToPatientJournalansvarlig: string;
   /** 
   * Kontakt i primærhelseteam
   */
-  commonRoleToPatientKontaktIPrimarhelseteam: string;
+  roleToPatientKontaktIPrimarhelseteam: string;
   /** 
   * Kontaktlege
   */
-  commonRoleToPatientKontaktlege: string;
+  roleToPatientKontaktlege: string;
   /** 
   * Kontaktpsykolog
   */
-  commonRoleToPatientKontaktpsykolog: string;
+  roleToPatientKontaktpsykolog: string;
   /** 
   * Koordinator Individuell plan
   */
-  commonRoleToPatientKoordinatorIndividuellPlan: string;
+  roleToPatientKoordinatorIndividuellPlan: string;
   /** 
   * Koordinator (spesialisthelsetjenesteloven) Spesialisthelsetjenesteloven § 2-5a
   */
-  commonRoleToPatientKoordinatorSpesialisthelsetjenesteLoven: string;
+  roleToPatientKoordinatorSpesialisthelsetjenesteLoven: string;
   /** 
   * Primærkontakt
   */
-  commonRoleToPatientPrimarkontakt: string;
+  roleToPatientPrimarkontakt: string;
   /** 
   * Turnuslege
   */
-  commonRoleToPatientTurnuslege: string;
+  roleToPatientTurnuslege: string;
   /** 
   * Ukjent
   */
-  commonRoleToPatientUkjent: string;
+  roleToPatientUkjent: string;
   /** 
   * Utskrivende lege
   */
-  commonRoleToPatientUtskrivendeLege: string;
+  roleToPatientUtskrivendeLege: string;
   /** 
   * Utskrivende sykepleier
   */
-  commonRoleToPatientUtskrivendeSykepleier: string;
+  roleToPatientUtskrivendeSykepleier: string;
   /** 
   * Vikar for fastlege
   */
