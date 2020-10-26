@@ -631,18 +631,6 @@ export type HNDialogCommonJS = {
   */
   bestillVaksinasjonVelgerAnnet: string;
   /** 
-  * Svar
-  */
-  conversationSubmitReply: string;
-  /** 
-  * Endre
-  */
-  draftEdit: string;
-  /** 
-  * Send
-  */
-  draftSend: string;
-  /** 
   * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
 <p>Henvendelsen vil bli journalført.</p>
   */
