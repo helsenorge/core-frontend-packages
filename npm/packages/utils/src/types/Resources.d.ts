@@ -29593,6 +29593,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   skjemaLoginMessageAuthenticationRequirementRequiredNoPrint: string;
   /** 
+  * <p>Utskriftsversjon av skjemaet er tilgjengelig på følgende språk:</p> {0}
+  */
+  skjemaAccessDeniedPrintVersionAvailable: string;
+  /** 
   * Teknisk feil
   */
   autoSuggestLoadError: string;
