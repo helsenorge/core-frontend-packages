@@ -7366,6 +7366,7 @@
     "skjemaLoginMessageAuthenticationRequirementRequiredNoPrint": "Du må {0} for å fylle ut og sende dette skjemaet.",
     "skjemaAccessDeniedPrintVersionAvailable": "<p>Utskriftsversjon av skjemaet er tilgjengelig på følgende språk:</p> {0}",
     "skjemaAccessDeniedPrintVersionUnknownLanguage": "Ukjent",
+    "autosuggestNoSuggestions": "Ingen treff på \"{0}\". Prøv med et annet ord eller sjekk for skrivefeil.",
     "deleteAttachmentText": "Slett",
     "formRequiredErrorMessage": "Du må fylle ut dette feltet",
     "lagreSkjemaDokumenterBody": "Skjemaet er lagret i Dokumenter.",
