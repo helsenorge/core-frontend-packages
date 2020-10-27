@@ -7372,6 +7372,7 @@
     "paPapirText": "på papir",
     "skjemaLoginMessageAuthenticationRequirementOptionalPrint": "Du bør {0} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.",
     "skjemaLoginMessageAuthenticationRequirementRequiredNoPrint": "Du må {0} for å fylle ut og sende dette skjemaet.",
+    "skjemaAccessDeniedPrintVersionAvailable": "<p>Utskriftsversjon av skjemaet er tilgjengelig på følgende språk:</p> {0}",
     "autoSuggestLoadError": "Teknisk feil",
     "stringOverMaxLengthError": "Du har skrevet for mange tegn. Gjør teksten kortere.",
     "maxLengthText": "Maksimum {0} tegn",
