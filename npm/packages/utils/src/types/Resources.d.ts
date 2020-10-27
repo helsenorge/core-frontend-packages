@@ -29597,6 +29597,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   skjemaAccessDeniedPrintVersionAvailable: string;
   /** 
+  * Ukjent
+  */
+  skjemaAccessDeniedPrintVersionUnknownLanguage: string;
+  /** 
   * Teknisk feil
   */
   autoSuggestLoadError: string;
