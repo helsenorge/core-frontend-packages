@@ -53,9 +53,9 @@ describe('Date-utils', () => {
     });
 
     describe('Når serverOffsetFromUTC blir kalt', () => {
-      it('Så returnerer den +02:00', () => {
+      it('Så returnerer den +01:00', () => {
         const date = dateUtilsFunctions.serverOffsetFromUTC();
-        expect(date).toEqual('+02:00');
+        expect(date).toEqual('+01:00');
       });
     });
 
@@ -69,7 +69,7 @@ describe('Date-utils', () => {
     describe('Når addServerTimezone blir kalt', () => {
       it('Så returnerer den full dato med offset fra UTC', () => {
         const date = dateUtilsFunctions.addServerTimezone(new Date('04.20.2020').toISOString());
-        expect(date).toEqual('2020-04-19T22:00:00.000Z+02:00');
+        expect(date).toEqual('2020-04-19T22:00:00.000Z+01:00');
       });
     });
 
@@ -84,7 +84,7 @@ describe('Date-utils', () => {
     describe('Når toLocalISOString blir kalt', () => {
       it('Så returnerer den dato i ISO format', () => {
         const date = dateUtilsFunctions.toLocalISOString(new Date('04.20.2020'));
-        expect(date).toEqual('2020-04-20T00:00:00');
+        expect(date).toEqual('2020-04-19T23:00:00');
       });
     });
 
@@ -99,7 +99,7 @@ describe('Date-utils', () => {
           dateUtilsFunctions.toLocalISOString(b),
           dateUtilsFunctions.toLocalISOString(c)
         );
-        expect(date).toEqual('2020-04-13T01:00:00');
+        expect(date).toEqual('2020-04-13T00:00:00');
       });
     });
 
