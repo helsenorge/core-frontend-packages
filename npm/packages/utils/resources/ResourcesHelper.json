@@ -116,6 +116,7 @@
   "HNDialogCommonJS": { 
     "healthcareProfessionalJordmor": "Jordmor",
     "healthcareProfessionalHjelpepleier": "Hjelpepleier",
+    "videoDialogDropinInfoMessage": "Fastlegen din tilbyr videokonsultasjon, både etter avtale og drop-in.",
     "afterDeadlineBubbleText": "Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.",
     "afterDeadlineLegendText": "Dato kan ikke velges",
     "afterDeadlineMoreHelpText": "Les mer om behandlingsfrister",
@@ -2269,8 +2270,8 @@
     "appointmentDetailsCancellationReasonAway": "Avtalen ble avlyst fordi ingen var hjemme.",
     "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
     "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger.",
-    "referrallistelementHenvistTil": "Viderehenvist:",
-    "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen."
+    "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen.",
+    "referrallistelementHenvistTil": "Viderehenvist:"
   },
   "HNMinHelseDialog": { 
     "getReferral_WarningHelseSorOst": "For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.",
@@ -7355,10 +7356,8 @@
     "varselmeny_Skjemaoppgave_Paaminnelse_Tekst": "Frist for utfylling",
     "minutePlaceholder": "mm",
     "hourPlaceholder": "tt",
-    "stringOverMaxLengthError": "Du har skrevet for mange tegn. Gjør teksten kortere.",
-    "maxLengthText": "Maksimum {0} tegn",
-    "autoSuggestLoadError": "Teknisk feil",
     "uploadButtonText": "Last opp fil",
+    "autoSuggestLoadError": "Teknisk feil",
     "skjemaLoginMessageAuthenticationRequirementRequiredPrint": "Du må {0} for å kunne sende skjema. Alternativt kan du fylle ut {1}.",
     "loggeInnLinkText": "logge inn",
     "paPapirText": "på papir",
@@ -7367,6 +7366,8 @@
     "skjemaAccessDeniedPrintVersionAvailable": "<p>Utskriftsversjon av skjemaet er tilgjengelig på følgende språk:</p> {0}",
     "skjemaAccessDeniedPrintVersionUnknownLanguage": "Ukjent",
     "autosuggestNoSuggestions": "Ingen treff på \"{0}\". Prøv med et annet ord eller sjekk for skrivefeil.",
+    "stringOverMaxLengthError": "Du har skrevet for mange tegn. Gjør teksten kortere.",
+    "maxLengthText": "Maksimum {0} tegn",
     "deleteAttachmentText": "Slett",
     "formRequiredErrorMessage": "Du må fylle ut dette feltet",
     "lagreSkjemaDokumenterBody": "Skjemaet er lagret i Dokumenter.",
