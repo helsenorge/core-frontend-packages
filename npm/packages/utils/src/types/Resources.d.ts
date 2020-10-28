@@ -31419,7 +31419,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   group_Samvalg_Visitors_Title: string;
   /** 
-  * Tjenestene på helsenorge.no er ikke tilgjengelige
+  * Du har ikke tilgang til de innloggede tjenestene på Helsenorge
   */
   userControl_Start_ReservationMessage: string;
   /** 
