@@ -7829,7 +7829,7 @@
     "group_Samvalg_Owners_Title": "Samvalg-eiere",
     "group_Samvalg_Visitors_Description": "",
     "group_Samvalg_Visitors_Title": "Samvalg-besøkende",
-    "userControl_Start_ReservationMessage": "Tjenestene på helsenorge.no er ikke tilgjengelige",
+    "userControl_Start_ReservationMessage": "Du har ikke tilgang til de innloggede tjenestene på Helsenorge",
     "field_BsvRefleksjonerPrioriteringsliste_Desc": "Utsagnlisten som skal vises på mine refleksjoner",
     "field_BsvRefleksjonerPrioriteringsliste_Title": "Utsagnliste",
     "field_BsvRefleksjonerSeksjon1_Title": "Hva er viktigst for meg?",
