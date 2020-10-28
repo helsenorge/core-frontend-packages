@@ -447,6 +447,10 @@ export type HNDialogCommonJS = {
   */
   healthcareProfessionalHjelpepleier: string;
   /** 
+  * Fastlegen din tilbyr videokonsultasjon, både etter avtale og drop-in.
+  */
+  videoDialogDropinInfoMessage: string;
+  /** 
   * Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.
   */
   afterDeadlineBubbleText: string;
@@ -9054,13 +9058,13 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsCancellationReasonProxy: string;
   /** 
-  * Viderehenvist:
-  */
-  referrallistelementHenvistTil: string;
-  /** 
   * Innbygger møtte ikke til timen.
   */
   appointmentDetailsCancellationReasonDidNotMeet: string;
+  /** 
+  * Viderehenvist:
+  */
+  referrallistelementHenvistTil: string;
 };
 
 export type HNMinHelseDialog = { 
@@ -29530,21 +29534,13 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   hourPlaceholder: string;
   /** 
-  * Du har skrevet for mange tegn. Gjør teksten kortere.
+  * Last opp fil
   */
-  stringOverMaxLengthError: string;
-  /** 
-  * Maksimum {0} tegn
-  */
-  maxLengthText: string;
+  uploadButtonText: string;
   /** 
   * Teknisk feil
   */
   autoSuggestLoadError: string;
-  /** 
-  * Last opp fil
-  */
-  uploadButtonText: string;
   /** 
   * Du må {0} for å kunne sende skjema. Alternativt kan du fylle ut {1}.
   */
@@ -29577,6 +29573,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Ingen treff på "{0}". Prøv med et annet ord eller sjekk for skrivefeil.
   */
   autosuggestNoSuggestions: string;
+  /** 
+  * Du har skrevet for mange tegn. Gjør teksten kortere.
+  */
+  stringOverMaxLengthError: string;
+  /** 
+  * Maksimum {0} tegn
+  */
+  maxLengthText: string;
   /** 
   * Slett
   */
