@@ -697,11 +697,11 @@ export type HNDialogCommonJS = {
   */
   ekontaktHeaderSkrivMelding: string;
   /** 
-  * Still et praktisk spørsmål til de som sitter i resepsjonen. Du vil bli kontakt senest innen 3 arbeidsdager.
+  * Still et praktisk spørsmål til de som sitter i resepsjonen. Du vil bli kontaktet senest innen 3 arbeidsdager.
   */
   ekontaktHelsestasjonBeskrivelse: string;
   /** 
-  * Du vil bli kontakt senest innen 3 arbeidsdager.
+  * Du vil bli kontaktet senest innen 3 arbeidsdager.
   */
   ekontaktHelsestasjonSvarBeskrivelse: string;
   /** 
