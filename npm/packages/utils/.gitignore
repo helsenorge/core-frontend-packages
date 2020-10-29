@@ -5,3 +5,4 @@ dist_dev/
 node_modules
 test-report.xml
 lib
+lib_OLD
