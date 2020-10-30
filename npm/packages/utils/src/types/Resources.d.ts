@@ -29578,6 +29578,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   autosuggestNoSuggestions: string;
   /** 
+  * Hopp til navigator
+  */
+  skipLinkText: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
