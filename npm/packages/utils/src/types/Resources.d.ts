@@ -9065,6 +9065,10 @@ behandlingsstedet ved eventuelle spørsmål.
   * Viderehenvist:
   */
   referrallistelementHenvistTil: string;
+  /** 
+  * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
+  */
+  appointmentCancelHelsestasjonSubHeader: string;
 };
 
 export type HNMinHelseDialog = { 
