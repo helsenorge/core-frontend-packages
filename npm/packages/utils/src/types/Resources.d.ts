@@ -8974,7 +8974,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentCancelHelsestasjonDescription: string;
   /** 
-  * Årsak til avbestilling
+  * Hvorfor ønsker du å avbestille timen?
   */
   appointmentCancelHelsestasjonTimeMessageLabel: string;
   /** 

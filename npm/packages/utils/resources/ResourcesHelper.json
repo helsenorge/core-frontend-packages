@@ -2249,7 +2249,7 @@
     "commonMeldingsvelgerFastlegeKontaktLegekontoret": "legekontoret",
     "appointmentVideoTitle": "Videotime",
     "appointmentCancelHelsestasjonDescription": "Er du sikker på at du vil avbestille?",
-    "appointmentCancelHelsestasjonTimeMessageLabel": "Årsak til avbestilling",
+    "appointmentCancelHelsestasjonTimeMessageLabel": "Hvorfor ønsker du å avbestille timen?",
     "appointmentCancelHelsestasjonHeader": "Avbestill time",
     "appointmentCancelHelsestasjonConfirmButtonText": "Bekreft avbestilling",
     "appointmentCancelHelsestasjonCancelButtonText": "Avbryt",
