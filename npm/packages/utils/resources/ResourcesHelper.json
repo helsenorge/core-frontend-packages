@@ -2271,7 +2271,8 @@
     "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
     "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger.",
     "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen.",
-    "referrallistelementHenvistTil": "Viderehenvist:"
+    "referrallistelementHenvistTil": "Viderehenvist:",
+    "appointmentCancelHelsestasjonSubHeader": "Hvis du avbestiller timen, kan det ta tid før du får en ny time."
   },
   "HNMinHelseDialog": { 
     "getReferral_WarningHelseSorOst": "For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.",
