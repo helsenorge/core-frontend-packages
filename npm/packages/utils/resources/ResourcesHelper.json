@@ -993,6 +993,7 @@
     "pageNotFoundToStart": "Gå til forside"
   },
   "HNMinHelseCommon": { 
+    "page_Forside_Title": "Helsenorge – din helse på nett - helsenorge.no",
     "bruksvilkarPopup_ErrorDescription": "Du kan prøve igjen senere.",
     "bruksvilkarPopup_ErrorMessage": "Det gikk ikke å lagre samtykket ditt.",
     "bruksvilkarPopup_Header": "Bruksvilkår for Min helse",
@@ -2270,9 +2271,9 @@
     "appointmentDetailsCancellationReasonAway": "Avtalen ble avlyst fordi ingen var hjemme.",
     "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
     "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger.",
+    "appointmentCancelHelsestasjonSubHeader": "Hvis du avbestiller timen, kan det ta tid før du får en ny time.",
     "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen.",
-    "referrallistelementHenvistTil": "Viderehenvist:",
-    "appointmentCancelHelsestasjonSubHeader": "Hvis du avbestiller timen, kan det ta tid før du får en ny time."
+    "referrallistelementHenvistTil": "Viderehenvist:"
   },
   "HNMinHelseDialog": { 
     "getReferral_WarningHelseSorOst": "For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.",
@@ -7367,8 +7368,8 @@
     "skjemaAccessDeniedPrintVersionAvailable": "<p>En utskriftsversjon av skjemaet er tilgjengelig på disse språkene {0}</p>",
     "skjemaAccessDeniedPrintVersionUnknownLanguage": "Ukjent",
     "autosuggestNoSuggestions": "Ingen treff på \"{0}\". Prøv med et annet ord eller sjekk for skrivefeil.",
-    "skipLinkText": "Hopp til navigator",
     "stringOverMaxLengthError": "Du har skrevet for mange tegn. Gjør teksten kortere.",
+    "skipLinkText": "Hopp til navigator",
     "maxLengthText": "Maksimum {0} tegn",
     "deleteAttachmentText": "Slett",
     "formRequiredErrorMessage": "Du må fylle ut dette feltet",
