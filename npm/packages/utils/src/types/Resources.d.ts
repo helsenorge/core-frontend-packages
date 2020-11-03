@@ -3581,6 +3581,10 @@ export type HNMinHelseCommonJS = {
    */
   askForMoreServicesButtonText: string;
   /**
+   * Innboks
+   */
+  backbar_meldinger: string;
+  /**
    * Se alle tjenester
    */
   seAlleTjenester: string;
@@ -8472,6 +8476,18 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   conversationItemSubjectChangeConfirmed: string;
   /**
+   * Valgt kalendertime
+   */
+  commonSelectedEventIconLabel: string;
+  /**
+   * er ikke tillatt
+   */
+  commonValidationNotAllowed: string;
+  /**
+   * Timeendring bekreftet
+   */
+  conversationItemSubjectChangeConfirmed: string;
+  /**
    * Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved behandlerkontoret. Du betaler samme egenandel som ved vanlig legetime.
    */
   videoEventAlertHelsetilbudDescription: string;
@@ -8536,45 +8552,45 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentDetailsVideoUserManualLinkText: string;
   /**
-   * Informasjon fra legekontoret
+   * Du har ikke tilgang til tjenesten.
    */
-  servicepanelInfoHeading: string;
+  conversationItemFastlegeAccessDeniedHeader: string;
   /**
-   * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
+   * Kontakt fastlegekontoret ved eventuelle spørsmål.
    */
-  servicepanelNoServiceDescription: string;
+  conversationItemFastlegeAccessDeniedBody: string;
   /**
    * Få veiledning før timebestilling
    */
-  commonBestillTimeVelgerVeiviser: string;
+  conversationItemFastlegeServiceNotSupportedHeader: string;
   /**
-   * Se hvordan du kan hjelpe deg selv og andre å unngå smitte.
+   * Ved spørsmål, kontakt ditt legekontor.
    */
-  commonBestillTimeVelgerVeiviserBeskrivelse: string;
+  conversationItemFastlegeServiceNotSupportedBody: string;
   /**
-   * Gå direkte til timebestilling
+   * Skriv melding til
    */
-  commonBestillTimeVelgerAnnet: string;
+  commonEkontaktHeaderSkrivMelding: string;
   /**
-   *
+   * Skriv melding til
    */
-  commonBestillTimeVelgerAnnetBeskrivelse: string;
+  commonKommuneMeldingHeader: string;
   /**
-   * Hva slags time trenger du?
+   * Forventet svartid på meldinger er første virkedag. Akutte henvendelser skal ikke sendes via melding.
    */
-  commonBestillTimeVelgerTittel: string;
+  commonKommuneMeldingBeskrivelse: string;
   /**
-   * /veileder?Query=Questionnaire%2F303
+   * <p>Henvendelsen vil bli journalført.</p>
    */
-  commonBestillTimeVelgerVeiviserUrl: string;
+  commonKommuneMeldingBottomInfo: string;
   /**
-   * Timer på legekontoret, om ønskelig på video/telefon
+   * Skriv melding til
    */
-  commonFastlegeOrdinaryEventsHeading: string;
+  commonKoordinatorMeldingHeader: string;
   /**
-   * Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor.
+   * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
    */
-  commonFastlegeVideoEventsEmptyText: string;
+  commonKoordinatorMeldingBeskrivelse: string;
   /**
    * Sendt melding er ikke bekreftet mottatt
    */
@@ -8586,31 +8602,31 @@ behandlingsstedet ved eventuelle spørsmål.
   /**
    * Du har ikke tilgang til tjenesten.
    */
-  conversationItemFastlegeAccessDeniedHeader: string;
-  /**
-   * Kontakt fastlegekontoret ved eventuelle spørsmål.
-   */
-  conversationItemFastlegeAccessDeniedBody: string;
-  /**
-   * Det har skjedd en teknisk feil.
-   */
-  conversationItemFastlegeGeneralErrorHeader: string;
-  /**
-   * Prøv igjen senere, eller kontakt ditt legekontor.
-   */
-  conversationItemFastlegeGeneralErrorBody: string;
-  /**
-   * Legen/legekontoret kan for tiden ikke svare på meldinger.
-   */
-  conversationItemFastlegeServiceNotSupportedHeader: string;
-  /**
-   * Ved spørsmål, kontakt ditt legekontor.
-   */
-  conversationItemFastlegeServiceNotSupportedBody: string;
+  commonKoordinatorMeldingBottomInfo: string;
   /**
    * Skriv melding til
    */
-  commonEkontaktHeaderSkrivMelding: string;
+  commonHelsefagligKontaktHeader: string;
+  /**
+   * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
+   */
+  commonHelsefagligKontaktBeskrivelse: string;
+  /**
+   * <p>Henvendelsen vil bli journalført.</p>
+   */
+  commonHelsefagligKontaktBottomInfo: string;
+  /**
+   * Still et praktisk spørsmål til resepsjonen. Du vil bli kontaktet senest innen fem arbeidsdager.
+   */
+  commonEkontaktHelsetilbudBeskrivelse: string;
+  /**
+   * Du vil bli kontaktet senest innen fem arbeidsdager.
+   */
+  commonEkontaktHelsetilbudSvarBeskrivelse: string;
+  /**
+   * For øyeblikket er det ikke mulig å avbestille time her
+   */
+  appointmentCancelTimeadministrasjonStotteWarningTitle: string;
   /**
    * Skriv melding til
    */
@@ -8970,9 +8986,9 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentVideoTitle: string;
   /**
-   * Er du sikker på at du vil avbestille?
+   * Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor.
    */
-  appointmentCancelHelsestasjonDescription: string;
+  commonFastlegeVideoEventsEmptyText: string;
   /**
    * Hvorfor ønsker du å avbestille timen?
    */
@@ -11050,6 +11066,14 @@ export type HNMinHelseDonorkort = {
    */
   donorkort_print_info_3: string;
   /**
+   * Registrering av pårørende feilet
+   */
+  donorkort_addparorende_error: string;
+  /**
+   * Ok
+   */
+  donorkort_addparorende_error_confirm: string;
+  /**
    * Pårørende er registrert, men SMS ble ikke sendt
    */
   donorkort_nummer_validering_feil_tittel: string;
@@ -11067,14 +11091,6 @@ Det er uansett viktig at du diskuterer dine ønsker om organdonasjon med dine n�
    * Bekreft nummeret
    */
   donorkort_nummer_validering_tittel: string;
-  /**
-   * Registrering av pårørende feilet
-   */
-  donorkort_addparorende_error: string;
-  /**
-   * Ok
-   */
-  donorkort_addparorende_error_confirm: string;
   /**
    * Tabell over kontaktpersoner
    */
@@ -11614,6 +11630,14 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   default_ErrorMessage_Title: string;
   /**
+   * Prøv igjen senere.
+   */
+  default_ErrorMessage_Body: string;
+  /**
+   * Det har skjedd en teknisk feil
+   */
+  default_ErrorMessage_Title: string;
+  /**
    * Notat
    */
   dokument_filter_innholdTypeValue_1: string;
@@ -11648,11 +11672,15 @@ export type HNMinHelseHealthArchiveStringsJS = {
   /**
    * {"synlig":"True","sporsmalstekst":"","bobletekst":"Dersom du vil gi dokumentet et annet visningsnavn kan du gjøre det her. Opprinnelig filnavn endres ikke.","seksjonstekst_overskrift":"","seksjonstekst_brodtekst":""}
    */
-  hjelpetrigger_dokumentVisningsnavn: string;
+  lightbox_ikke_til_deling_description: string;
   /**
-   * Navn
+   * Du er i ferd med å slette skjemautkastet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Hvis du sletter og deretter angrer på det, må du starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet skjemaet. Er du helt sikker på at du vil slette?
    */
-  gammelt_navn: string;
+  lightbox_slette_skjema_description: string;
+  /**
+   * Slett skjemautkast
+   */
+  lightbox_slette_skjema_title: string;
   /**
    * arkivert
    */
@@ -19331,21 +19359,21 @@ export type HNMinHelsePasientjournal = {
    */
   xDS_Varsel_OverTerskel_Manuell_Body: string;
   /**
+   * For mange dokumenter
+   */
+  xDS_Varsel_OverTerskel_Init_Title: string;
+  /**
+   * Du har flere dokumenter siste {0} mnd enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer og/eller dokumenttyper for å se andre dokumenter.
+   */
+  xDS_Varsel_OverTerskel_Init_Body: string;
+  /**
    * Dine filtervalg returnerer for mange dokumenter
    */
-  warning_DocumentList_OverTerskelverdi_Title: string;
+  xDS_Varsel_OverTerskel_Manuell_Title: string;
   /**
-   * Du har gjort filtervalg som returnerer flere dokumenter enn vi kan vise samtidig. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.
+   * Du har gjort filtervalg som returnerer for mange dokumenter til at vi kan vise de samtidig. Velg andre datoer og/eller dokumenttyper for å begrense utvalget ytterligere.
    */
-  warning_DocumentList_OverTerskelverdi_Body: string;
-  /**
-   * Viser siste {0} dokumenter
-   */
-  warning_DocumentList_OverTerskelverdi_Init_Title: string;
-  /**
-   * Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter.
-   */
-  warning_DocumentList_OverTerskelverdi_Init_Body: string;
+  xDS_Varsel_OverTerskel_Manuell_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = {
@@ -19361,6 +19389,31 @@ export type HNMinHelsePasientreiserJS = {
    * https://response.questback.com/pasientreiserhf/rur2020
    */
   kvittering_undersokelseLenke: string;
+  /**
+   * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.
+   */
+  reiseoversikt_refusjonsdetaljer_FORESATT_minstetakstsone: string;
+  /**
+   * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter.
+   */
+  reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone: string;
+  /**
+   * Vedtaket er revidert
+   */
+  overview_statuser_statusTypeRekvisjon_soknad_VEDTAK_OMGJORT: string;
+  /** 
+  * <ul>
+<li>henter inn opplysninger fra Databasen for Kontroll og Utbetaling av Helserefusjon (KUHR) og Norsk Pasientregister (NPR).</li>
+<li>kan innhente opplysninger og dokumentasjon som er nødvendige for å behandle søknaden min.</li>
+<li>lagrer opplysninger som kan brukes dersom det er utbetalt feil beløp og du må betale tilbake det du har fått for mye.</li>
+<li>kan behandle søknaden min automatisk.</li>
+</ul>
+  */
+  samtykke_pasientreiser_paragraph: string;
+  /**
+   * kan behandle søknaden min automatisk.
+   */
+  samtykke_pasientreiser_avsnitt4: string;
   /**
    * Adresse kan ha opp til 150 tegn.
    */
