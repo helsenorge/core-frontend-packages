@@ -3940,6 +3940,10 @@ export type HNMinHelseCommonJS = {
 
 export type HNMinHelseCommon = { 
   /** 
+  * Helsenorge – din helse på nett - helsenorge.no
+  */
+  page_Forside_Title: string;
+  /** 
   * Du kan prøve igjen senere.
   */
   bruksvilkarPopup_ErrorDescription: string;
@@ -9058,6 +9062,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsCancellationReasonProxy: string;
   /** 
+  * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
+  */
+  appointmentCancelHelsestasjonSubHeader: string;
+  /** 
   * Innbygger møtte ikke til timen.
   */
   appointmentDetailsCancellationReasonDidNotMeet: string;
@@ -9065,10 +9073,6 @@ behandlingsstedet ved eventuelle spørsmål.
   * Viderehenvist:
   */
   referrallistelementHenvistTil: string;
-  /** 
-  * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
-  */
-  appointmentCancelHelsestasjonSubHeader: string;
 };
 
 export type HNMinHelseDialog = { 
@@ -29578,13 +29582,13 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   autosuggestNoSuggestions: string;
   /** 
-  * Hopp til navigator
-  */
-  skipLinkText: string;
-  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
+  /** 
+  * Hopp til navigator
+  */
+  skipLinkText: string;
   /** 
   * Maksimum {0} tegn
   */
