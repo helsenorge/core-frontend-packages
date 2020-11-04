@@ -3940,10 +3940,6 @@ export type HNMinHelseCommonJS = {
 
 export type HNMinHelseCommon = { 
   /** 
-  * Helsenorge – din helse på nett - helsenorge.no
-  */
-  page_Forside_Title: string;
-  /** 
   * Du kan prøve igjen senere.
   */
   bruksvilkarPopup_ErrorDescription: string;
@@ -4539,6 +4535,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Logg over bruk
   */
   page_HendelsesLogg_Title: string;
+  /** 
+  * Helsenorge – din helse på nett - helsenorge.no
+  */
+  page_Forside_Title: string;
   /** 
   * Samtykkeoppgave
   */
