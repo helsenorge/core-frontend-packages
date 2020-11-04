@@ -4832,7 +4832,7 @@
     "xDS_LokasjonFeil_Varsel_Body": "Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått eller at du har angitt for stort tidsintervall. Du kan forsøke med et mindre tidsintervall.",
     "xDS_LokasjonFeil_Tillegg_Body": "Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelige",
     "xDS_Varsel_OverTerskel_Init_Title": "For mange dokumenter",
-    "xDS_Varsel_OverTerskel_Init_Body": "Du har flere dokumenter siste {0} mnd enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer eller dokumenttyper for å se andre dokumenter.",
+    "xDS_Varsel_OverTerskel_Init_Body": "Du har flere dokumenter siste {0} måneder enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer eller dokumenttyper for å se andre dokumenter.",
     "xDS_Varsel_OverTerskel_Manuell_Title": "Dine filtervalg returnerer for mange dokumenter",
     "xDS_Varsel_OverTerskel_Manuell_Body": "Du har gjort filtervalg som returnerer for mange dokumenter. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.",
     "warning_DocumentList_OverTerskelverdi_Title": "Dine filtervalg returnerer for mange dokumenter",
