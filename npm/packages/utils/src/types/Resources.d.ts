@@ -19311,7 +19311,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_Varsel_Title: string;
   /** 
-  * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått eller at du har angitt for stor tidsintervall. Du kan forsøke med et mindre tidsintervall.
+  * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått eller at du har angitt for stort tidsintervall. Du kan forsøke med et mindre tidsintervall.
   */
   xDS_LokasjonFeil_Varsel_Body: string;
   /** 
@@ -19331,7 +19331,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_Varsel_OverTerskel_Manuell_Title: string;
   /** 
-  * Du har gjort filtervalg som returnerer for mange dokumenter til at vi kan vise de samtidig. Velg andre datoer og/eller dokumenttyper for å begrense utvalget ytterligere.
+  * Du har gjort filtervalg som returnerer for mange dokumenter. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.
   */
   xDS_Varsel_OverTerskel_Manuell_Body: string;
   /** 
