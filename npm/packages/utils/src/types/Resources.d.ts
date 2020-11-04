@@ -4536,7 +4536,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_HendelsesLogg_Title: string;
   /** 
-  * Helsenorge – din helse på nett - helsenorge.no
+  * Helsenorge – din helse på nett
   */
   page_Forside_Title: string;
   /** 
