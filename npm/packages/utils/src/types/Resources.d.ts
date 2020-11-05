@@ -29606,6 +29606,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   autosuggestNoSuggestions: string;
   /** 
+  * Om skjema
+  */
+  sidebar_title: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;

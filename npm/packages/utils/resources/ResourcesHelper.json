@@ -7374,6 +7374,7 @@
     "skjemaAccessDeniedPrintVersionAvailable": "<p>En utskriftsversjon av skjemaet er tilgjengelig på disse språkene {0}</p>",
     "skjemaAccessDeniedPrintVersionUnknownLanguage": "Ukjent",
     "autosuggestNoSuggestions": "Ingen treff på \"{0}\". Prøv med et annet ord eller sjekk for skrivefeil.",
+    "sidebar_title": "Om skjema",
     "stringOverMaxLengthError": "Du har skrevet for mange tegn. Gjør teksten kortere.",
     "skipLinkText": "Hopp til navigator",
     "maxLengthText": "Maksimum {0} tegn",
