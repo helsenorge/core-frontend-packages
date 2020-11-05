@@ -4536,6 +4536,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_HendelsesLogg_Title: string;
   /** 
+  * Helsenorge – din helse på nett
+  */
+  page_Forside_Title: string;
+  /** 
   * Samtykkeoppgave
   */
   page_Samtykkeoppgave_Title: string;
@@ -9058,6 +9062,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsCancellationReasonProxy: string;
   /** 
+  * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
+  */
+  appointmentCancelHelsestasjonSubHeader: string;
+  /** 
   * Innbygger møtte ikke til timen.
   */
   appointmentDetailsCancellationReasonDidNotMeet: string;
@@ -9065,10 +9073,6 @@ behandlingsstedet ved eventuelle spørsmål.
   * Viderehenvist:
   */
   referrallistelementHenvistTil: string;
-  /** 
-  * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
-  */
-  appointmentCancelHelsestasjonSubHeader: string;
 };
 
 export type HNMinHelseDialog = { 
@@ -19307,7 +19311,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_Varsel_Title: string;
   /** 
-  * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått eller at du har angitt for stor tidsintervall. Du kan forsøke med et mindre tidsintervall.
+  * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått eller at du har angitt for stort tidsintervall. Du kan forsøke med et mindre tidsintervall.
   */
   xDS_LokasjonFeil_Varsel_Body: string;
   /** 
@@ -19319,7 +19323,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_Varsel_OverTerskel_Init_Title: string;
   /** 
-  * Du har flere dokumenter siste {0} mnd enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer og/eller dokumenttyper for å se andre dokumenter.
+  * Du har flere dokumenter siste {0} måneder enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer eller dokumenttyper for å se andre dokumenter.
   */
   xDS_Varsel_OverTerskel_Init_Body: string;
   /** 
@@ -19327,7 +19331,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_Varsel_OverTerskel_Manuell_Title: string;
   /** 
-  * Du har gjort filtervalg som returnerer for mange dokumenter til at vi kan vise de samtidig. Velg andre datoer og/eller dokumenttyper for å begrense utvalget ytterligere.
+  * Du har gjort filtervalg som returnerer for mange dokumenter. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.
   */
   xDS_Varsel_OverTerskel_Manuell_Body: string;
   /** 
@@ -29578,13 +29582,13 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   autosuggestNoSuggestions: string;
   /** 
-  * Hopp til navigator
-  */
-  skipLinkText: string;
-  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
+  /** 
+  * Hopp til navigator
+  */
+  skipLinkText: string;
   /** 
   * Maksimum {0} tegn
   */
