@@ -29610,6 +29610,18 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebar_title: string;
   /** 
+  * Vis informasjon om skjema
+  */
+  sidebar_openlabel: string;
+  /** 
+  * Lukk informasjon om skjema
+  */
+  sidebar_closelabel: string;
+  /** 
+  * Hjelp om
+  */
+  sidebar_titlearia: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
