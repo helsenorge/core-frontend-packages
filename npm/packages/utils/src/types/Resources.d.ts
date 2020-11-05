@@ -18511,6 +18511,10 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_TextMessage_Body_Self_FunksjonellMotpart: string;
   /** 
+  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  */
+  videreformidling_EmailMessage_Body_Representation_FunksjonellMotpart: string;
+  /** 
   * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
   */
   videreformidling_TextMessage_Body_Self: string;
