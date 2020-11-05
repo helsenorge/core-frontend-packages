@@ -1410,7 +1410,7 @@ export type HNDialogCommonJS = {
   */
   videoDialogCancelButton: string;
   /** 
-  * Fastlegen din tilbyr videokonsultasjon. Hvis du har en timeavtale, kan du gå til venterom.
+  * Fastlegen din tilbyr videokonsultasjon. Hvis du har en timeavtale på video nå, kan du gå til venterom.
   */
   videoDialogInfoMessage: string;
   /** 
