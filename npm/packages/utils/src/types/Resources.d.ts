@@ -19323,7 +19323,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_Varsel_OverTerskel_Init_Title: string;
   /** 
-  * Du har flere dokumenter siste {0} måneder enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer eller dokumenttyper for å se andre dokumenter.
+  * Du har for mange dokumenter fra de siste {0} månedene til at de kan vises samtidig. Derfor vises dokumenter fra en kortere periode. Velg andre datoer eller begrens type dokumenter for å se andre dokumenter.
   */
   xDS_Varsel_OverTerskel_Init_Body: string;
   /** 
