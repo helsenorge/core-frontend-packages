@@ -7270,7 +7270,7 @@
     "inactivity_SignedOut_Title": "Du var stille en stund og har blitt logget ut",
     "lightbox_Inactivity_Button_SignOut": "Logg ut",
     "lightbox_Inactivity_Button_Yes": "Ja",
-    "lightbox_Inactivity_Description": "Du blir snart logget ut av Min helse fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.",
+    "lightbox_Inactivity_Description": "Du blir snart logget ut av Helsenorge fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.",
     "lightbox_Inactivity_DoYouWantToStay": "Vil du fortsatt være innlogget på Min helse?",
     "lightbox_Inactivity_Timer": "Du blir automatisk logget ut om {min}:{sec} minutter.",
     "lightbox_Inactivity_Title": "Er du der fortsatt?"
