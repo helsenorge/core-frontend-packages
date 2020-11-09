@@ -7381,7 +7381,7 @@
     "message_printVersionAvailable": "Alternativt kan du fylle ut på papir, se Om skjema",
     "message_canRepresentOthers": "Velg Om skjema hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv.\n Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.",
     "message_canNotRepresentOthers": "Velg Om skjema hvis du har spørsmål.\n Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.",
-    "message_noAccessToTjeneste": "Du må utvide Helsenorge-samtykket ditt for å fylle ut dette skjemaet.\n Gå til <a href=\"https://tjenester.helsenorge.no/personverninnstillinger\">Personverninnstillinger</a> for å gjøre dette.",
+    "message_noAccessToTjeneste": "Du må utvide Helsenorge-samtykket ditt for å fylle ut dette skjemaet. Gå til {personverninnstillingerLink} for å gjøre dette.",
     "message_noAccessToTjenesteRepresentasjon": "Fullmakten din omfatter ikke utfylling av dette skjemaet…",
     "message_subjectOnly": "Dette skjemaet kan ikke fylles ut på vegne av andre…",
     "infoGeneralAndCanRepresentOthers": "Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.",
