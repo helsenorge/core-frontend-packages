@@ -29574,7 +29574,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   autoSuggestLoadError: string;
   /** 
-  * Du må {0} for å kunne sende skjema. Alternativt kan du fylle ut {1}.
+  * Du må {loginLink} for å kunne sende skjema. Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
   */
   skjemaLoginMessageAuthenticationRequirementRequiredPrint: string;
   /** 
@@ -29586,11 +29586,11 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   paPapirText: string;
   /** 
-  * Du bør {0} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
+  * Du bør {loginLink} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
   */
   skjemaLoginMessageAuthenticationRequirementOptionalPrint: string;
   /** 
-  * Du må {0} for å fylle ut og sende dette skjemaet.
+  * Du må {loginLink} for å fylle ut og sende dette skjemaet.
   */
   skjemaLoginMessageAuthenticationRequirementRequiredNoPrint: string;
   /** 
@@ -29625,6 +29625,37 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Alternativt kan du fylle ut på papir, se Om skjema
   */
   message_printVersionAvailable: string;
+  /** 
+  * Velg Om skjema hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv.
+ Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
+  */
+  message_canRepresentOthers: string;
+  /** 
+  * Velg Om skjema hvis du har spørsmål.
+ Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
+  */
+  message_canNotRepresentOthers: string;
+  /** 
+  * Du må utvide Helsenorge-samtykket ditt for å fylle ut dette skjemaet.
+ Gå til <a href="https://tjenester.helsenorge.no/personverninnstillinger">Personverninnstillinger</a> for å gjøre dette.
+  */
+  message_noAccessToTjeneste: string;
+  /** 
+  * Fullmakten din omfatter ikke utfylling av dette skjemaet…
+  */
+  message_noAccessToTjenesteRepresentasjon: string;
+  /** 
+  * Dette skjemaet kan ikke fylles ut på vegne av andre…
+  */
+  message_subjectOnly: string;
+  /** 
+  * Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
+  */
+  infoGeneralAndCanRepresentOthers: string;
+  /** 
+  * Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
+  */
+  infoGeneral: string;
   /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
