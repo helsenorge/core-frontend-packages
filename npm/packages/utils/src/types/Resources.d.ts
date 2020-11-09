@@ -29636,8 +29636,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   message_canNotRepresentOthers: string;
   /** 
-  * Du må utvide Helsenorge-samtykket ditt for å fylle ut dette skjemaet.
- Gå til <a href="https://tjenester.helsenorge.no/personverninnstillinger">Personverninnstillinger</a> for å gjøre dette.
+  * Du må utvide Helsenorge-samtykket ditt for å fylle ut dette skjemaet. Gå til {personverninnstillingerLink} for å gjøre dette.
   */
   message_noAccessToTjeneste: string;
   /** 
