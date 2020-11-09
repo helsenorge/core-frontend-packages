@@ -29657,6 +29657,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   infoGeneral: string;
   /** 
+  * Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
+  */
+  infoPapiralternativ: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
