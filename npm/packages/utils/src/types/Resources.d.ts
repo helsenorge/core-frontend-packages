@@ -29661,6 +29661,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   infoPapiralternativ: string;
   /** 
+  * Om skjema
+  */
+  omSkjemaLink: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
