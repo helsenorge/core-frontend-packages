@@ -29622,6 +29622,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebar_titlearia: string;
   /** 
+  * Alternativt kan du fylle ut på papir, se Om skjema
+  */
+  message_printVersionAvailable: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
