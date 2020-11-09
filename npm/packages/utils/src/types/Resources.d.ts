@@ -29622,17 +29622,15 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebar_titlearia: string;
   /** 
-  * Alternativt kan du fylle ut på papir, se Om skjema
+  * Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
   */
   message_printVersionAvailable: string;
   /** 
-  * Velg Om skjema hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv.
- Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
+  * Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
   */
   message_canRepresentOthers: string;
   /** 
-  * Velg Om skjema hvis du har spørsmål.
- Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
+  * Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
   */
   message_canNotRepresentOthers: string;
   /** 
@@ -29647,18 +29645,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Dette skjemaet kan ikke fylles ut på vegne av andre…
   */
   message_subjectOnly: string;
-  /** 
-  * Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
-  */
-  infoGeneralAndCanRepresentOthers: string;
-  /** 
-  * Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
-  */
-  infoGeneral: string;
-  /** 
-  * Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
-  */
-  infoPapiralternativ: string;
   /** 
   * Om skjema
   */
