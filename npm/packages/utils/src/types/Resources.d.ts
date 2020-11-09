@@ -29650,6 +29650,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   omSkjemaLink: string;
   /** 
+  * Personverninnstillinger
+  */
+  personverninnstillingerLink: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;

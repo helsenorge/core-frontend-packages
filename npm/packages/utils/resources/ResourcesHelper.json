@@ -7385,6 +7385,7 @@
     "message_noAccessToTjenesteRepresentasjon": "Fullmakten din omfatter ikke utfylling av dette skjemaet…",
     "message_subjectOnly": "Dette skjemaet kan ikke fylles ut på vegne av andre…",
     "omSkjemaLink": "Om skjema",
+    "personverninnstillingerLink": "Personverninnstillinger",
     "stringOverMaxLengthError": "Du har skrevet for mange tegn. Gjør teksten kortere.",
     "skipLinkText": "Hopp til navigator",
     "maxLengthText": "Maksimum {0} tegn",
