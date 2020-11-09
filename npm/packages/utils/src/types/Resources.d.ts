@@ -29196,7 +29196,7 @@ export type HNMinHelseSecurityFramework = {
   */
   lightbox_Inactivity_Description: string;
   /** 
-  * Vil du fortsatt være innlogget på Min helse?
+  * Vil du fortsatt være innlogget på Helsenorge?
   */
   lightbox_Inactivity_DoYouWantToStay: string;
   /** 
