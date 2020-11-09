@@ -7386,6 +7386,7 @@
     "message_subjectOnly": "Dette skjemaet kan ikke fylles ut på vegne av andre…",
     "infoGeneralAndCanRepresentOthers": "Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.",
     "infoGeneral": "Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.",
+    "infoPapiralternativ": "Alternativt kan du fylle ut på papir, se {omSkjemaLink}.",
     "stringOverMaxLengthError": "Du har skrevet for mange tegn. Gjør teksten kortere.",
     "skipLinkText": "Hopp til navigator",
     "maxLengthText": "Maksimum {0} tegn",
