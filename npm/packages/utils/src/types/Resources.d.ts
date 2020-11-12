@@ -29435,11 +29435,11 @@ export type HNMinHelseSkjemautfyller = {
   */
   sendtConfirmationDiscretion: string;
   /** 
-  * Opplasting av vedlegg feila
+  * Opplasting av vedlegg feilet
   */
   anonymousUploadTitle: string;
   /** 
-  * Du må logge inn for å laste opp vedlegg.
+  * Du må logge inn for å kunne laste opp vedlegg.
   */
   anonymousUploadDescription: string;
   /** 
