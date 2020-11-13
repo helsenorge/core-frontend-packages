@@ -9,12 +9,12 @@ import { isCustomElementRegistered } from './register';
  * https://confluence.helsedirektoratet.no/display/HR2/@helsenorge+Microfrontend
  *
  * Eksempel:
- * Lag template én gang, i html'en eller på root. Fetch nødvendige assets med fetchWebComp
- * <template id="hn-webcomp-cms-block-promopanel-template"></template>
- * fetchWebComp({domain={`${getAssetsUrl()}/cms-blocks`} entryName="cms-blocks" componentName="hn-webcomp-cms-block-promopanel" includeResetCss});
- *
- * Lag flere instans av følgende i din react kode:
- * <hn-webcomp-cms-block-promopanel></hn-webcomp-cms-block-promopanel>
+ * // Lag template én gang, i html'en eller på root. Fetch nødvendige assets med fetchWebComp
+ * <template id="hn-webcomp-oppgave-template"></template>
+ * // fetch assets, vanligvis i en UseEffect
+ * fetchWebComp({domain={`${getAssetsUrl()}/oppgave`} entryName="webcomp-oppgave" componentName="hn-webcomp-oppgave" includeResetCss});
+ * // Lag flere instans av følgende i din react kode:
+ * <hn-webcomp-oppgave></hn-webcomp-oppgave>
  */
 
 interface ComponentProps {
