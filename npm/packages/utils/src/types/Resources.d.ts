@@ -29662,6 +29662,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionHeader_2: string;
   /** 
+  * Om skjema: Behandling hos mottaker
+  */
+  sidebarSectionHeader_3: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
