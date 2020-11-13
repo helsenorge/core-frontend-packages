@@ -10,7 +10,6 @@ describe('hn-user', () => {
       User: {
         __LastLogOn__: 'dd.mm.yyyy',
         __Name__: 'userName',
-        __FirstName__: 'firstName',
         __RepresentedUser__: 'representedUser',
         __AvatarColor__: 3,
         __HasRepresentation__: true,
@@ -45,16 +44,6 @@ describe('hn-user', () => {
         global.window['HN'] = HN;
         const user = HNuserFunctions.getName();
         expect(user).toEqual('userName');
-        global.window['HN'] = originalWindowHN;
-      });
-    });
-
-    describe('Når getFirstName kalles', () => {
-      it('Så returnerer den verdien som er satt på __FirstName__', () => {
-        const originalWindowHN = global.window['HN'];
-        global.window['HN'] = HN;
-        const user = HNuserFunctions.getFirstName();
-        expect(user).toEqual('firstName');
         global.window['HN'] = originalWindowHN;
       });
     });

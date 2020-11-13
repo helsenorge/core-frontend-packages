@@ -4,7 +4,6 @@ declare let HN: {
   User: {
     __LastLogOn__: string;
     __Name__: string;
-    __FirstName__: string;
     __RepresentedUser__: string;
     __AvatarColor__: number;
     __HasRepresentation__: boolean;
@@ -36,13 +35,6 @@ export const getLastLogOn = (): string => {
  */
 export const getName = (): string => {
   return HN.User.__Name__;
-};
-
-/**
- * Returnerer verdien satt på HN User __FirstName__
- */
-export const getFirstName = (): string => {
-  return HN.User.__FirstName__;
 };
 
 /**

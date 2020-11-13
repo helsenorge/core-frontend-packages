@@ -447,7 +447,7 @@ export type HNDialogCommonJS = {
    */
   healthcareProfessionalHjelpepleier: string;
   /**
-   * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
+   * Fastlegen din tilbyr videokonsultasjon, både etter avtale og drop-in.
    */
   videoDialogDropinInfoMessage: string;
   /**
@@ -1410,7 +1410,7 @@ export type HNDialogCommonJS = {
    */
   videoDialogCancelButton: string;
   /**
-   * Fastlegen din tilbyr videokonsultasjon. Hvis du har en timeavtale på video nå, kan du gå til venterom.
+   * Fastlegen din tilbyr videokonsultasjon. Hvis du har en timeavtale, kan du gå til venterom.
    */
   videoDialogInfoMessage: string;
   /**
@@ -4535,10 +4535,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    * Logg over bruk
    */
   page_HendelsesLogg_Title: string;
-  /**
-   * Helsenorge – din helse på nett
-   */
-  page_Forside_Title: string;
   /**
    * Samtykkeoppgave
    */
@@ -9062,10 +9058,6 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentDetailsCancellationReasonProxy: string;
   /**
-   * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
-   */
-  appointmentCancelHelsestasjonSubHeader: string;
-  /**
    * Innbygger møtte ikke til timen.
    */
   appointmentDetailsCancellationReasonDidNotMeet: string;
@@ -9073,6 +9065,10 @@ behandlingsstedet ved eventuelle spørsmål.
    * Viderehenvist:
    */
   referrallistelementHenvistTil: string;
+  /**
+   * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
+   */
+  appointmentCancelHelsestasjonSubHeader: string;
 };
 
 export type HNMinHelseDialog = {
@@ -11115,7 +11111,7 @@ export type HNMinHelseForskningJS = {
    */
   expandButtonText: string;
   /**
-   * {"defaulttekst_overskrift":"Om Forskning","defaulttekst_brodtekst":"<p>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden. </p>\n<p>For øyeblikket er det kun Helseundersøkelsen i Nord-Trøndelag (HUNT) som er med i denne tjenesten på helsenorge.no. Flere helseundersøkelser vil bli lagt til etter hvert. Er du ikke med i noen av helseundersøkelsene som er omfattet av tjenesten, vil siden vises uten innhold. </p>\n\n<p>Du har rett til innsyn i opplysningene som er lagret om deg. Under hver oppføring finner du informasjon om hvor du kan henvende deg for å få slikt innsyn. </p>\n<p>De som behandler opplysningene har taushetsplikt, og opplysninger som kan kobles til identifiserbare personer er strengt regulert. </p>\n\n<p><a href=\"https://www.helsenorge.no/forskning/om/\">Her kan du lese mer om Forskning og helseundersøkelser</a>.</p>"}
+   * {"defaulttekst_overskrift":"Om Forskning","defaulttekst_brodtekst":"<p>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden. </p>\n<p>For øyeblikket er det kun Helseundersøkelsen i Nord-Trøndelag (HUNT) som er med i denne tjenesten på helsenorge.no. Flere helseundersøkelser vil bli lagt til etter hvert. Er du ikke med i noen av helseundersøkelsene som er omfattet av tjenesten, vil siden vises uten innhold. </p>\n\n<p>Du har rett til innsyn i opplysningene som er lagret om deg. Under hver oppføring finner du informasjon om hvor du kan henvende deg for å få slikt innsyn. </p>\n<p>De som behandler opplysningene har taushetsplikt, og opplysninger som kan kobles til identifiserbare personer er strengt regulert. </p>\n\n<p><a href=\"https://helsenorge.no/om-min-helse/forskning\">Her kan du lese mer om Forskning og helseundersøkelser</a>.</p>"}
    */
   hjelpekontekst_forskning: string;
 };
@@ -12061,7 +12057,7 @@ export type HNMinHelseHFTStringsJS = {
    */
   egenandeler_skriv_ut: string;
   /**
-   * {"defaulttekst_overskrift":"Om frikortordningene","defaulttekst_brodtekst":"<p>Frikortene for egenandelstak 1 og 2 gjelder for ulike helsetjenester. Har du fått frikort i den ene ordningen, kan du ikke bruke frikortet i den andre ordningen. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.​</p>\n\n<p><a href=\"https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
+   * {"defaulttekst_overskrift":"Om frikortordningene","defaulttekst_brodtekst":"<p>Frikortene for egenandelstak 1 og 2 gjelder for ulike helsetjenester. Har du fått frikort i den ene ordningen, kan du ikke bruke frikortet i den andre ordningen. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.​</p>\n\n<p><a href=\"https://helsenorge.no/frikort-og-egenandeler\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
    */
   egenandeler_skuff_default: string;
   /**
@@ -18511,30 +18507,6 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   default_TextMessage_Body_Self_FunksjonellMotpart: string;
   /**
-   * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
-   */
-  videreformidling_EmailMessage_Body_Representation_FunksjonellMotpart: string;
-  /**
-   * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.
-   */
-  videreformidling_EmailMessage_Body_Self_FunksjonellMotpart: string;
-  /**
-   * Varsel om ny melding på helsenorge.no
-   */
-  videreformidling_EmailMessage_Subject_Representation_FunksjonellMotpart: string;
-  /**
-   * Varsel om ny melding på helsenorge.no
-   */
-  videreformidling_EmailMessage_Subject_Self_FunksjonellMotpart: string;
-  /**
-   * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
-   */
-  videreformidling_TextMessage_Body_Representation_FunksjonellMotpart: string;
-  /**
-   * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.
-   */
-  videreformidling_TextMessage_Body_Self_FunksjonellMotpart: string;
-  /**
    * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
    */
   videreformidling_TextMessage_Body_Self: string;
@@ -19167,7 +19139,7 @@ export type HNMinHelsePasientjournal = {
    */
   filterDateTo: string;
   /**
-   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Finn dokument","seksjonstekst_brodtekst":"<p>\nDet finnes mange forskjellige typer journaldokument. Har du mange dokumenter i oversikten din kan det være vanskelig å finne akkurat det dokumentet du leter etter. Ved hjelp av filtre kan du sortere ut dokumenter som er av en annen type eller fra en annen dato enn det dokumentet du leter etter.\n</p>\n\n<h3> \nDu kan filtrere på dato\n</h3>\n\n<p>\nHvis du vet omtrent når et dokument ble opprettet, kan du endre periode.\n </p>\n\n<h3>\nDu kan filtrere på dokumenttype\n</h3>\n\n<p>\nDokumentene er delt inn i ni grupper etter type. Du kan velge å vise en eller flere av disse gruppene.\n </p>\n\n<ul>\n<li><strong>Epikriser og sammenfatninger</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Individuell plan</li>\n<li>Epikrise</li>\n<li>Sykepleiesammenfatning</li>\n</ul></li>\n<li><strong>Kontinuerlig/løpende journal</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Tverrfaglig behandlingsplan</li>\n<li>Journalnotat</li>\n<li>Poliklinisk notat</li>\n</ul></li>\n<li><strong>Prøvesvar, vev og væsker</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Medisinsk biokjemi</li>\n<li>Blodbank og immunologi</li>\n<li>Mikrobiologi, virologi og serologi</li>\n</ul></li>\n<li><strong>Organfunksjon</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Hjerte og kretsløp</li>\n<li>Lunge</li>\n<li>Fordøyelse</li>\n</ul></li>\n<li><strong>Bildediagnostikk og andre medisinske bilder</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Diagnostiske bilder</li>\n</ul></li>\n<li><strong>Kurve, observasjon og behandling</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Kurve</li>\n<li>Anestesi- og opr. Rapporter</li>\n<li>Intensiv/postoperativ observasjon</li>\n</ul></li>\n<li><strong>Korrespondanse</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Henvisninger</li>\n<li>Brev</li>\n</ul></li>\n<li><strong>Attester, melding og erklæringer</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Sykemeldinger og trygdesaker</li>\n<li>Legeerklæring om dødsfall</li>\n</ul></li>\n<li><strong>Test og scoring</strong><br>\nDokumenttyper kan være:\n<ul>\n<li>Tester</li>\n<li>Systematiserte diagnostiske intervju</li>\n</ul></li>\n</ul>\n \n<p>\nHvilke dokumenter som er tilgjengelig for deg er avhengig av hvilken behandling du har fått, og hvilke dokumenter sykehusene gjør tilgjengelig på Helsenorge. Det er ikke sikkert du har dokumenter i alle gruppene.\n</p>\n\n<h3> \nFinn ord i listen\n</h3>\n\n<p>\nDu kan også søke etter ord som finnes i listen over dokumenter. Det er ikke mulig å søke etter ord som bare finnes i selve dokumentene - kun ord som vises i tabellen.\n</p>"}
+   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Finn dokument","seksjonstekst_brodtekst":"<p>\nDet finnes mange forskjellige typer journaldokument. Har du mange slike i oversikten din kan det være vanskelig å finne akkurat det dokumentet du leter etter. Ved hjelp av filtre kan du sortere ut dokumenter som er av en annen type eller fra en annen dato enn det dokumentet du leter etter.\n</p>\n\n<h3>\nDu kan filtrere på dato\n</h3>\n\n<p>\nHvis du vet omtrent når et dokument ble opprettet, kan du velge å kun se dokumentene fra en periode du oppgir.\n</p>\n\n<h3>\nDu kan filtrere på dokumenttype\n</h3>\n\n<p>\nDokumentene er delt inn i tre grupper etter type. Du kan velge å vise en eller flere av disse gruppene.\n</p>\n\n<ul>\n<li><strong>Epikriser og sammenfatninger</strong><br>Dette kan være dokumenter som for eksempel rapporter til henvisende lege etter et sykehusopphold, undersøkelse ved en poliklinikk, eller hos en privatpraktiserende legespesialist.</li>\n<li><strong>Korrespondanse</strong><br>Dette er dokumenter som for eksempel henvisninger, attester og erklæringer.</li>\n<li><strong>Notater</strong><br>Dette kan være dokumenter som for eksempel løpende journal, medisinske bilder, prøvesvar og testresultater.</li>\n</ul>\n\n<p>\nHvilke dokumenter som er tilgjengelig for deg er avhengig av hvilken behandling du har fått, og hvilke dokumenter sykehusene gjør tilgjengelig på helsenorge.no. Det er ikke sikkert du har dokumenter i alle de tre gruppene.\n</p>\n\n<h3>\nFinn ord i listen\n</h3>\n\n<p>\nDu kan også søke etter ord som finnes i listen over dokumenter. Det er ikke mulig å søke etter ord som bare finnes i selve dokumentene - kun ord som vises i tabellen.\n</p>"}
    */
   hjelpetriggerXdsFilter: string;
   /**
@@ -19327,7 +19299,7 @@ export type HNMinHelsePasientjournal = {
    */
   xDS_LokasjonFeil_Representasjon: string;
   /**
-   * Hvis du har dokumenter fra disse stedene, vil de ikke vises i listen.
+   * Dersom du har dokumenter hos noen av disse stedene vil de ikke vises i listen
    */
   xDS_LokasjonFeil_Bunntekst: string;
   /**
@@ -19335,11 +19307,11 @@ export type HNMinHelsePasientjournal = {
    */
   xDS_LokasjonFeil_Varsel_Title: string;
   /**
-   * Dokumenter fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått, eller at perioden du har angitt er for lang. Forsøk på nytt med en kortere periode.
+   * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått eller at du har angitt for stor tidsintervall. Du kan forsøke med et mindre tidsintervall.
    */
   xDS_LokasjonFeil_Varsel_Body: string;
   /**
-   * Dokumenter fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelige
+   * Dokumenter fra noen behandlingssteder er for øyeblikket ikke tilgjengelige
    */
   xDS_LokasjonFeil_Tillegg_Body: string;
   /**
@@ -19347,15 +19319,15 @@ export type HNMinHelsePasientjournal = {
    */
   xDS_Varsel_OverTerskel_Init_Title: string;
   /**
-   * Du har for mange dokumenter fra de siste {0} månedene til at de kan vises samtidig. Derfor vises dokumenter fra en kortere periode. Velg andre datoer eller begrens type dokumenter for å se andre dokumenter.
+   * Du har flere dokumenter siste {0} mnd enn vi kan vise samtidig, derfor vises dokumenter fra et kortere tidsintervall. Velg andre datoer og/eller dokumenttyper for å se andre dokumenter.
    */
   xDS_Varsel_OverTerskel_Init_Body: string;
   /**
-   * Filtreringen du har valgt omfatter for mange dokumenter
+   * Dine filtervalg returnerer for mange dokumenter
    */
   xDS_Varsel_OverTerskel_Manuell_Title: string;
   /**
-   * For mange dokumenter omfattes av filtreringen du har valgt. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.
+   * Du har gjort filtervalg som returnerer for mange dokumenter til at vi kan vise de samtidig. Velg andre datoer og/eller dokumenttyper for å begrense utvalget ytterligere.
    */
   xDS_Varsel_OverTerskel_Manuell_Body: string;
   /**
@@ -29192,11 +29164,11 @@ export type HNMinHelseSecurityFramework = {
    */
   lightbox_Inactivity_Button_Yes: string;
   /**
-   * Du blir snart logget ut av Helsenorge fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
+   * Du blir snart logget ut av Min helse fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
    */
   lightbox_Inactivity_Description: string;
   /**
-   * Vil du fortsatt være innlogget på Helsenorge?
+   * Vil du fortsatt være innlogget på Min helse?
    */
   lightbox_Inactivity_DoYouWantToStay: string;
   /**
@@ -29574,7 +29546,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   autoSuggestLoadError: string;
   /**
-   * Du må {loginLink} for å kunne sende skjema. Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
+   * Du må {0} for å kunne sende skjema. Alternativt kan du fylle ut {1}.
    */
   skjemaLoginMessageAuthenticationRequirementRequiredPrint: string;
   /**
@@ -29586,11 +29558,11 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   paPapirText: string;
   /**
-   * Du bør {loginLink} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
+   * Du bør {0} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
    */
   skjemaLoginMessageAuthenticationRequirementOptionalPrint: string;
   /**
-   * Du må {loginLink} for å fylle ut og sende dette skjemaet.
+   * Du må {0} for å fylle ut og sende dette skjemaet.
    */
   skjemaLoginMessageAuthenticationRequirementRequiredNoPrint: string;
   /**
@@ -29606,61 +29578,13 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   autosuggestNoSuggestions: string;
   /**
-   * Om skjema
+   * Hopp til navigator
    */
-  sidebar_title: string;
-  /**
-   * Vis informasjon om skjema
-   */
-  sidebar_openlabel: string;
-  /**
-   * Lukk informasjon om skjema
-   */
-  sidebar_closelabel: string;
-  /**
-   * Hjelp om
-   */
-  sidebar_titlearia: string;
-  /**
-   * Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
-   */
-  message_printVersionAvailable: string;
-  /**
-   * Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
-   */
-  message_canRepresentOthers: string;
-  /**
-   * Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
-   */
-  message_canNotRepresentOthers: string;
-  /**
-   * Du må utvide Helsenorge-samtykket ditt for å fylle ut dette skjemaet. Gå til {personverninnstillingerLink} for å gjøre dette.
-   */
-  message_noAccessToTjeneste: string;
-  /**
-   * Fullmakten din omfatter ikke utfylling av dette skjemaet…
-   */
-  message_noAccessToTjenesteRepresentasjon: string;
-  /**
-   * Dette skjemaet kan ikke fylles ut på vegne av andre…
-   */
-  message_subjectOnly: string;
-  /**
-   * Om skjema
-   */
-  omSkjemaLink: string;
-  /**
-   * Personverninnstillinger
-   */
-  personverninnstillingerLink: string;
+  skipLinkText: string;
   /**
    * Du har skrevet for mange tegn. Gjør teksten kortere.
    */
   stringOverMaxLengthError: string;
-  /**
-   * Hopp til navigator
-   */
-  skipLinkText: string;
   /**
    * Maksimum {0} tegn
    */
