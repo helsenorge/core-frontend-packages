@@ -29654,6 +29654,18 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   personverninnstillingerLink: string;
   /**
+   * Om skjema: Alternativer for utfylling
+   */
+  sidebarSectionHeader_1: string;
+  /**
+   * Om skjema: Veiledning og ansvarlig
+   */
+  sidebarSectionHeader_2: string;
+  /**
+   * Om skjema: Behandling hos mottaker
+   */
+  sidebarSectionHeader_3: string;
+  /**
    * Du har skrevet for mange tegn. Gjør teksten kortere.
    */
   stringOverMaxLengthError: string;
