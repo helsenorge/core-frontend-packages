@@ -29666,6 +29666,18 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   sidebarSectionHeader_3: string;
   /**
+   * Hvis du ikke vil logge inn på Helsenorge, kan du skrive ut denne versjonen i stedet: {0}.
+   */
+  sidebarSectionText_1_1: string;
+  /**
+   * Hvis du vil fylle ut skjemaet på vegne av andre, må du først <a href="https://tjenester.helsenorge.no/">velge hvem du vil representere</a>.
+   */
+  sidebarSectionText_1_2: string;
+  /**
+   * For spørsmål om skjemautfylling og Helsenorge generelt, ta  kontakt med veiledning Helsenorge på telefon 23 32 70 00.
+   */
+  sidebarSectionText_2_1: string;
+  /**
    * Du har skrevet for mange tegn. Gjør teksten kortere.
    */
   stringOverMaxLengthError: string;
