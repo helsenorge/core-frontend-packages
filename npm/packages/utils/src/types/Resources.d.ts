@@ -29682,6 +29682,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_2_2a_Innboks: string;
   /** 
+  * Når du fullfører skjemautyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen eller andre, og du kan skrive det ut eller slette det.
+  */
+  sidebarSectionText_2_2b_Dokument: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
