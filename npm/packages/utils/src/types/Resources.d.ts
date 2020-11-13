@@ -29678,6 +29678,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_2_1: string;
   /** 
+  * Når du sender inn skjemaet, lagres en kopi av den sendte meldingen i din Innboks. Du finner også en kopi av skjemaet i Dokumenter. Du kan slette disse, men ikke det innsendte skjemaet.
+  */
+  sidebarSectionText_2_2a_Innboks: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
