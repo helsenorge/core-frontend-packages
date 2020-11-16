@@ -2,11 +2,10 @@ import React, { createContext, useContext } from 'react';
 import { mount } from 'enzyme';
 
 import * as HNPageFunctions from '../../hn-page';
-
-import WithStore from '../with-store';
-import registerWebComp from '../register';
-import WebCompConsumer from '../consumer';
+import * as registerWebCompFunctions from '../register';
 import * as webcompEvents from '../events';
+import WithStore from '../with-store';
+import WebCompConsumer from '../consumer';
 
 interface State {
   tester: string;
@@ -60,7 +59,12 @@ describe('Gitt at web component skal registreres', () => {
       const Testwebcomp: React.FC = () => {
         return <div id="testdiv">{'test'}</div>;
       };
-      registerWebComp(Testwebcomp, 'hn-webcomp-test', { events: true, styledComponents: true }, 'hn-webcomp-test-template');
+      registerWebCompFunctions.registerWebComp(
+        Testwebcomp,
+        'hn-webcomp-test',
+        { events: true, styledComponents: true },
+        'hn-webcomp-test-template'
+      );
 
       const webCompName = window.customElements.get('hn-webcomp-test');
       await expect(webCompName).toBeTruthy();
@@ -69,7 +73,7 @@ describe('Gitt at web component skal registreres', () => {
 });
 
 describe('Gitt at web component skal consumeres', () => {
-  describe('Når den fetcher assets-manifest', () => {
+  describe('Når WebCompConsumer instansieres', () => {
     it('Så fetcher den ressurser fra riktig url og instansierer komponent', async () => {
       jest.spyOn(HNPageFunctions, 'getAssetsUrl').mockImplementation(() => 'assetsUrl');
 
@@ -93,18 +97,21 @@ describe('Gitt at web component skal consumeres', () => {
       });
 
       jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+      const isCustomElementRegisteredMock = jest.spyOn(registerWebCompFunctions, 'isCustomElementRegistered');
 
       const webCompFromMicroFrontend = await mount(
         <WebCompConsumer
           domain="mydomain"
           entryName="entryname"
-          componentName={'Component'}
+          componentName={'hn-component'}
           componentProps={{ id: 'testdiv' }}
           includeResetCss
         />
       );
+
       await expect(global.fetch).toHaveBeenCalledTimes(1);
       await expect(global.fetch).toHaveBeenCalledWith('mydomain/assets.json');
+      await expect(isCustomElementRegisteredMock).toHaveBeenCalledWith('hn-component');
       await expect(webCompFromMicroFrontend.render()).toMatchSnapshot();
     });
   });
