@@ -11710,6 +11710,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   lightbox_slette_skjema_title: string;
   /** 
+  * Skjult for fullmektig
+  */
+  skjult_for_fullmektig: string;
+  /** 
   * Lagret
   */
   lightbox_til_deling_title: string;
