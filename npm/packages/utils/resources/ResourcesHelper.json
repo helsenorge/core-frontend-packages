@@ -4183,7 +4183,8 @@
     "tile_SykdomOgKritiskInfo_Description": "Viktige opplysninger til helsepersonell.",
     "tile_Verktoy_Title": "Verktøy",
     "tile_Verktoy_Description": "Kurs og andre verktøy for læring og mestring.",
-    "group_Helsetjenester_Title": "Helsetjenester"
+    "group_Helsetjenester_Title": "Helsetjenester",
+    "group_EksterneTjenester_Title": "Eksterne tjenester"
   },
   "HNMinHelseNHNStrings": { 
     "page_Pasientjournal_Title": "Pasientjournal",

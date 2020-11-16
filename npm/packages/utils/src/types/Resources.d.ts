@@ -16738,6 +16738,10 @@ export type HNMinHelseNavigation = {
   * Helsetjenester
   */
   group_Helsetjenester_Title: string;
+  /** 
+  * Eksterne tjenester
+  */
+  group_EksterneTjenester_Title: string;
 };
 
 export type HNMinHelseNHNStrings = { 
