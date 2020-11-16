@@ -11714,6 +11714,14 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   skjult_for_fullmektig: string;
   /** 
+  * Vis for fullmektige
+  */
+  actionVisFullmektige: string;
+  /** 
+  * Skjul for fullmektige
+  */
+  actionSkjulFullmektige: string;
+  /** 
   * Lagret
   */
   lightbox_til_deling_title: string;
