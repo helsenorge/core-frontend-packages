@@ -11115,7 +11115,7 @@ export type HNMinHelseForskningJS = {
   */
   expandButtonText: string;
   /** 
-  * {"defaulttekst_overskrift":"Om Forskning","defaulttekst_brodtekst":"<p>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden. </p>\n<p>For øyeblikket er det kun Helseundersøkelsen i Nord-Trøndelag (HUNT) som er med i denne tjenesten på helsenorge.no. Flere helseundersøkelser vil bli lagt til etter hvert. Er du ikke med i noen av helseundersøkelsene som er omfattet av tjenesten, vil siden vises uten innhold. </p>\n\n<p>Du har rett til innsyn i opplysningene som er lagret om deg. Under hver oppføring finner du informasjon om hvor du kan henvende deg for å få slikt innsyn. </p>\n<p>De som behandler opplysningene har taushetsplikt, og opplysninger som kan kobles til identifiserbare personer er strengt regulert. </p>\n\n<p><a href=\"https://helsenorge.no/om-min-helse/forskning\">Her kan du lese mer om Forskning og helseundersøkelser</a>.</p>"}
+  * {"defaulttekst_overskrift":"Om Forskning","defaulttekst_brodtekst":"<p>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden. </p>\n<p>For øyeblikket er det kun Helseundersøkelsen i Nord-Trøndelag (HUNT) som er med i denne tjenesten på helsenorge.no. Flere helseundersøkelser vil bli lagt til etter hvert. Er du ikke med i noen av helseundersøkelsene som er omfattet av tjenesten, vil siden vises uten innhold. </p>\n\n<p>Du har rett til innsyn i opplysningene som er lagret om deg. Under hver oppføring finner du informasjon om hvor du kan henvende deg for å få slikt innsyn. </p>\n<p>De som behandler opplysningene har taushetsplikt, og opplysninger som kan kobles til identifiserbare personer er strengt regulert. </p>\n\n<p><a href=\"https://www.helsenorge.no/forskning/om/\">Her kan du lese mer om Forskning og helseundersøkelser</a>.</p>"}
   */
   hjelpekontekst_forskning: string;
 };
@@ -12061,7 +12061,7 @@ export type HNMinHelseHFTStringsJS = {
   */
   egenandeler_skriv_ut: string;
   /** 
-  * {"defaulttekst_overskrift":"Om frikortordningene","defaulttekst_brodtekst":"<p>Frikortene for egenandelstak 1 og 2 gjelder for ulike helsetjenester. Har du fått frikort i den ene ordningen, kan du ikke bruke frikortet i den andre ordningen. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.​</p>\n\n<p><a href=\"https://helsenorge.no/frikort-og-egenandeler\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
+  * {"defaulttekst_overskrift":"Om frikortordningene","defaulttekst_brodtekst":"<p>Frikortene for egenandelstak 1 og 2 gjelder for ulike helsetjenester. Har du fått frikort i den ene ordningen, kan du ikke bruke frikortet i den andre ordningen. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.​</p>\n\n<p><a href=\"https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
   */
   egenandeler_skuff_default: string;
   /** 
@@ -29192,11 +29192,11 @@ export type HNMinHelseSecurityFramework = {
   */
   lightbox_Inactivity_Button_Yes: string;
   /** 
-  * Du blir snart logget ut av Min helse fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
+  * Du blir snart logget ut av Helsenorge fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
   */
   lightbox_Inactivity_Description: string;
   /** 
-  * Vil du fortsatt være innlogget på Min helse?
+  * Vil du fortsatt være innlogget på Helsenorge?
   */
   lightbox_Inactivity_DoYouWantToStay: string;
   /** 
@@ -29622,17 +29622,15 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebar_titlearia: string;
   /** 
-  * Alternativt kan du fylle ut på papir, se Om skjema
+  * Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
   */
   message_printVersionAvailable: string;
   /** 
-  * Velg Om skjema hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv.
- Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
+  * Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
   */
   message_canRepresentOthers: string;
   /** 
-  * Velg Om skjema hvis du har spørsmål.
- Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
+  * Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
   */
   message_canNotRepresentOthers: string;
   /** 
@@ -29648,21 +29646,45 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   message_subjectOnly: string;
   /** 
-  * Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
-  */
-  infoGeneralAndCanRepresentOthers: string;
-  /** 
-  * Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
-  */
-  infoGeneral: string;
-  /** 
-  * Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
-  */
-  infoPapiralternativ: string;
-  /** 
   * Om skjema
   */
   omSkjemaLink: string;
+  /** 
+  * Personverninnstillinger
+  */
+  personverninnstillingerLink: string;
+  /** 
+  * Om skjema: Alternativer for utfylling
+  */
+  sidebarSectionHeader_1: string;
+  /** 
+  * Om skjema: Veiledning og ansvarlig
+  */
+  sidebarSectionHeader_2: string;
+  /** 
+  * Om skjema: Behandling hos mottaker
+  */
+  sidebarSectionHeader_3: string;
+  /** 
+  * Hvis du ikke vil logge inn på Helsenorge, kan du skrive ut denne versjonen i stedet: {0}.
+  */
+  sidebarSectionText_1_1: string;
+  /** 
+  * Hvis du vil fylle ut skjemaet på vegne av andre, må du først <a href="https://tjenester.helsenorge.no/">velge hvem du vil representere</a>.
+  */
+  sidebarSectionText_1_2: string;
+  /** 
+  * For spørsmål om skjemautfylling og Helsenorge generelt, ta  kontakt med veiledning Helsenorge på telefon 23 32 70 00.
+  */
+  sidebarSectionText_2_1: string;
+  /** 
+  * Når du sender inn skjemaet, lagres en kopi av den sendte meldingen i din Innboks. Du finner også en kopi av skjemaet i Dokumenter. Du kan slette disse, men ikke det innsendte skjemaet.
+  */
+  sidebarSectionText_2_2a_Innboks: string;
+  /** 
+  * Når du fullfører skjemautyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen eller andre, og du kan skrive det ut eller slette det.
+  */
+  sidebarSectionText_2_2b_Dokument: string;
   /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
