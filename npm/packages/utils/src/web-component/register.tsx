@@ -37,7 +37,10 @@ export function registerWebComp(
 
     constructor() {
       super();
-      this.mountReactApp();
+    }
+
+    connectedCallback(): void {
+      this.mountReactComponent();
     }
 
     disconnectedCallback(): void {
@@ -62,7 +65,7 @@ export function registerWebComp(
       });
     };
 
-    mountReactApp(): void | null {
+    mountReactComponent(): void | null {
       this.props = this.value;
       this.mountPoint = document.createElement('div');
 
