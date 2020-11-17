@@ -5133,7 +5133,7 @@ export type HNMinHelseDialogJS = {
    */
   hjelpetrigger_timeavtaleForberedelser: string;
   /**
-   * {"defaulttekst_overskrift":"Om henvisninger","defaulttekst_brodtekst":"<p>\nDet er to frister du som pasient må forholde deg til:\n</p>\n\n<h3>\nVurderingsfrist:\n</h3>\n\n<p>\nDet skal gå maksimum 10 virkedager fra en henvisning er mottatt i spesialisthelsetjenesten til den er vurdert.\n</p>\n\n<h3>\nFrist for helsehjelp:\n</h3>\n\n<p>\nVurderingen vil få ett av følgende utfall:\n</p>\n\n<ul>\n<li>Du får rett til nødvendig helsehjelp i spesialisthelsetjenesten, og du får en fristdato for når spesialisthelsetjenesten senest skal ha startet helsehjelpen, enten i form av behandling eller i form av utredning.</li>\n<li>Vurderingen konkluderer med at du ikke har behov for helsehjelp fra spesialisthelsetjenesten. Det innebærer at vi har vurdert dine behov for helsehjelp til å bli best ivaretatt av fastlegen eller andre deler av helsetjenesten.</li>\n</ul>\n\n<p>\nInformasjon om vurderingen, frister og rettigheter vil du motta per brev.\n</p>\n\n<p>\nFor henvisninger fra Helse Vest vil du kun se informasjon om henvisninger mottatt fra og med 01.01.2014. Helse Nord viser informasjon om henvisninger så langt tilbake som det er teknisk mulig. Det kan av tekniske årsaker være informasjon som ikke vises.\n</p>\n\n<p>\nStatus for en henvisning for barn i Helse Nord vil vises i Henvisninger, men det vil ta ti dager før henvisningsbrevet vises i Pasientjournal.\n</p>\n\n<p>\n<a href=\"https://helsenorge.no/om-min-helse/henvisninger\">Her kan du lese mer om Henvisninger</a>.\n</p>"}
+   * {"defaulttekst_overskrift":"Om henvisninger","defaulttekst_brodtekst":"<p>\nDet er to frister du som pasient må forholde deg til:\n</p>\n\n<h3>\nVurderingsfrist:\n</h3>\n\n<p>\nDet skal gå maksimum 10 virkedager fra en henvisning er mottatt i spesialisthelsetjenesten til den er vurdert.\n</p>\n\n<h3>\nFrist for helsehjelp:\n</h3>\n\n<p>\nVurderingen vil få ett av følgende utfall:\n</p>\n\n<ul>\n<li>Du får rett til nødvendig helsehjelp i spesialisthelsetjenesten, og du får en fristdato for når spesialisthelsetjenesten senest skal ha startet helsehjelpen, enten i form av behandling eller i form av utredning.</li>\n<li>Vurderingen konkluderer med at du ikke har behov for helsehjelp fra spesialisthelsetjenesten. Det innebærer at vi har vurdert dine behov for helsehjelp til å bli best ivaretatt av fastlegen eller andre deler av helsetjenesten.</li>\n</ul>\n\n<p>\nInformasjon om vurderingen, frister og rettigheter vil du motta per brev.\n</p>\n\n<p>\nFor henvisninger fra Helse Vest vil du kun se informasjon om henvisninger mottatt fra og med 01.01.2014. Helse Nord viser informasjon om henvisninger så langt tilbake som det er teknisk mulig. Det kan av tekniske årsaker være informasjon som ikke vises.\n</p>\n\n<p>\nStatus for en henvisning for barn i Helse Nord vil vises i Henvisninger, men det vil ta ti dager før henvisningsbrevet vises i Pasientjournal.\n</p>\n\n<p>\n<a href=\"https://www.helsenorge.no/henvisninger/om/\">Her kan du lese mer om Henvisninger</a>.\n</p>"}
    */
   hjelpekontekst_henvisningInfo: string;
   /**
@@ -11710,6 +11710,18 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   lightbox_slette_skjema_title: string;
   /**
+   * Skjult for fullmektig
+   */
+  skjult_for_fullmektig: string;
+  /**
+   * Vis for fullmektige
+   */
+  actionVisFullmektige: string;
+  /**
+   * Skjul for fullmektige
+   */
+  actionSkjulFullmektige: string;
+  /**
    * Lagret
    */
   lightbox_til_deling_title: string;
@@ -16734,6 +16746,14 @@ export type HNMinHelseNavigation = {
    * Kurs og andre verktøy for læring og mestring.
    */
   tile_Verktoy_Description: string;
+  /**
+   * Helsetjenester
+   */
+  group_Helsetjenester_Title: string;
+  /**
+   * Eksterne tjenester
+   */
+  group_EksterneTjenester_Title: string;
 };
 
 export type HNMinHelseNHNStrings = {
@@ -29606,6 +29626,18 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   autosuggestNoSuggestions: string;
   /**
+   * Du har skrevet for mange tegn. Gjør teksten kortere.
+   */
+  stringOverMaxLengthError: string;
+  /**
+   * Hopp til navigator
+   */
+  skipLinkText: string;
+  /**
+   * Maksimum {0} tegn
+   */
+  maxLengthText: string;
+  /**
    * Om skjema
    */
   sidebar_title: string;
@@ -29678,17 +29710,17 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   sidebarSectionText_2_1: string;
   /**
-   * Du har skrevet for mange tegn. Gjør teksten kortere.
+   * Når du sender inn skjemaet, lagres en kopi av den sendte meldingen i din Innboks. Du finner også en kopi av skjemaet i Dokumenter. Du kan slette disse, men ikke det innsendte skjemaet.
    */
-  stringOverMaxLengthError: string;
+  sidebarSectionText_2_2a_Innboks: string;
   /**
-   * Hopp til navigator
+   * Når du fullfører skjemautyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen eller andre, og du kan skrive det ut eller slette det.
    */
-  skipLinkText: string;
+  sidebarSectionText_2_2b_Dokument: string;
   /**
-   * Maksimum {0} tegn
+   * Om skjema: Behandling på Helsenorge
    */
-  maxLengthText: string;
+  sidebarSectionHeader_4: string;
   /**
    * Slett
    */
