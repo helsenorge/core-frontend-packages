@@ -29688,11 +29688,11 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   /** 
   * Om skjema: Alternativer for utfylling
   */
-  sidebarSectionHeader_1: string;
+  sidebarSectionHeader_Alternativer: string;
   /** 
   * Om skjema: Veiledning og ansvarlig
   */
-  sidebarSectionHeader_2: string;
+  sidebarSectionHeader_Veiledning: string;
   /** 
   * Om skjema: Behandling hos mottaker
   */
