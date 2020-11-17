@@ -29754,6 +29754,14 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   autosuggestNoSuggestions: string;
   /** 
+  * For spørsmål om veiledere og Helsenorge generelt, ta kontakt med veiledning Helsenorge på telefon 23 32 70 00.
+  */
+  sidebarSectionText_Veileder_Veiledning_KontaktHelsenorge: string;
+  /** 
+  * Opplysningene du fyller ut, lagres ikke.
+  */
+  sidebarSectionText_Veileder_Opplysninger_KontaktHelsenorge: string;
+  /** 
   * Slett
   */
   deleteAttachmentText: string;
