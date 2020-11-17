@@ -7413,6 +7413,7 @@
     "autosuggestNoSuggestions": "Ingen treff på \"{0}\". Prøv med et annet ord eller sjekk for skrivefeil.",
     "sidebarSectionText_Veileder_Veiledning_KontaktHelsenorge": "For spørsmål om veiledere og Helsenorge generelt, ta kontakt med veiledning Helsenorge på telefon 23 32 70 00.",
     "sidebarSectionText_Veileder_Opplysninger_KontaktHelsenorge": "Opplysningene du fyller ut, lagres ikke.",
+    "sidebar_printLink": "Utskriftsversjon",
     "deleteAttachmentText": "Slett",
     "formRequiredErrorMessage": "Du må fylle ut dette feltet",
     "lagreSkjemaDokumenterBody": "Skjemaet er lagret i Dokumenter.",

@@ -29762,6 +29762,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_Veileder_Opplysninger_KontaktHelsenorge: string;
   /** 
+  * Utskriftsversjon
+  */
+  sidebar_printLink: string;
+  /** 
   * Slett
   */
   deleteAttachmentText: string;
