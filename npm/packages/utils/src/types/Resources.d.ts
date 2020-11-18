@@ -29626,7 +29626,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebar_titleVeileder: string;
   /** 
-  * Om skjema: Les mer før du fyller ut
+  * Les mer før du fyller ut
   */
   sidebarSectionHeader_LesMer: string;
   /** 
@@ -29682,11 +29682,11 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionHeader_Alternativer: string;
   /** 
-  * Om skjema: Veiledning og ansvarlig
+  * Veiledning og ansvarlig
   */
   sidebarSectionHeader_Veiledning: string;
   /** 
-  * Om skjema: Behandling hos mottaker
+  * Behandling hos mottaker
   */
   sidebarSectionHeader_BehandlingMottaker: string;
   /** 
@@ -29710,7 +29710,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_Veiledning_LagringDokument: string;
   /** 
-  * Om skjema: Behandling på Helsenorge
+  * Behandling på Helsenorge
   */
   sidebarSectionHeader_BehandlingHelsenorge: string;
   /** 
