@@ -29622,7 +29622,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   maxLengthText: string;
   /** 
-  * Om veilederen
+  * Hjelp
   */
   sidebar_titleVeileder: string;
   /** 
@@ -29765,6 +29765,10 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   * Utskriftsversjon
   */
   sidebar_printLink: string;
+  /** 
+  * Om veilederen
+  */
+  sidebarSectionHeader_Veileder: string;
   /** 
   * Slett
   */
