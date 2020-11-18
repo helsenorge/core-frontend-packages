@@ -16623,14 +16623,6 @@ export type HNMinHelseNavigation = {
   */
   category_Helsetjenester_Title: string;
   /** 
-  * Her samles tjenester du kan benytte for å følge opp din helse. Flere er under utvikling. Noen tjenester er under utprøving i utvalgte områder, og enkelte tjenester kan du benytte på vegne av dine barn og de som har gitt deg fullmakt. Slik tilgang vil bli tilgjengelig for flere tjenester etter hvert.
-  */
-  tile_MinHelseForside_Description: string;
-  /** 
-  * Velkommen til Min helse
-  */
-  tile_MinHelseForside_Title: string;
-  /** 
   * Journaldokumenter fra sykehus.
   */
   tile_Pasientjournal_Description: string;
