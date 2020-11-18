@@ -7392,7 +7392,7 @@
     "message_subjectOnly": "Dette skjemaet kan ikke fylles ut på vegne av andre…",
     "omSkjemaLink": "Om skjema",
     "personverninnstillingerLink": "Personverninnstillinger",
-    "sidebarSectionHeader_Alternativer": "Om skjema: Alternativer for utfylling",
+    "sidebarSectionHeader_Alternativer": "Alternativer for utfylling",
     "sidebarSectionHeader_Veiledning": "Om skjema: Veiledning og ansvarlig",
     "sidebarSectionHeader_BehandlingMottaker": "Om skjema: Behandling hos mottaker",
     "sidebarSectionText_Alternativer_LoggInn": "Hvis du ikke vil logge inn på Helsenorge, kan du skrive ut denne versjonen i stedet: {0}.",

@@ -29678,7 +29678,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   personverninnstillingerLink: string;
   /** 
-  * Om skjema: Alternativer for utfylling
+  * Alternativer for utfylling
   */
   sidebarSectionHeader_Alternativer: string;
   /** 
