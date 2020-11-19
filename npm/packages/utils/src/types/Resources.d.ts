@@ -9995,7 +9995,7 @@ export type HNMinHelseDialogVP = {
   */
   userControl_Timeline_StatusInfo_ROA: string;
   /** 
-  * Henvisningen er videresendt til et behandlingssted som ligger utenfor Helse Vest. Henvisningen vil bli behandlet i tråd med fristen, men vil ikke vise i denne listen. Kontakt fastlege ellerhenviser dersom du har spørsmål.
+  * Henvisningen er videresendt til et behandlingssted som ligger utenfor Helse Vest. Henvisningen vil bli behandlet i tråd med fristen, men vil ikke vises i denne listen. Kontakt fastlege eller henviser dersom du har spørsmål.
   */
   userControl_Timeline_StatusInfo_ROD: string;
   /** 
