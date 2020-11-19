@@ -439,6 +439,10 @@ export type HNCoreFrontendWebForside = {
 
 export type HNDialogCommonJS = {
   /**
+   * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
+   */
+  videoDialogDropinInfoMessage: string;
+  /**
    * Jordmor
    */
   healthcareProfessionalJordmor: string;
@@ -446,10 +450,6 @@ export type HNDialogCommonJS = {
    * Hjelpepleier
    */
   healthcareProfessionalHjelpepleier: string;
-  /**
-   * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
-   */
-  videoDialogDropinInfoMessage: string;
   /**
    * Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.
    */
@@ -4543,6 +4543,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    * Samtykkeoppgave
    */
   page_Samtykkeoppgave_Title: string;
+  /**
+   * Bruk og tilganger
+   */
+  page_BrukOgTilganger_Title: string;
+  /**
+   * Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.
+   */
+  page_BrukOgTilganger_Desc: string;
   /**
    * Fullmakter
    */
@@ -9995,7 +10003,7 @@ export type HNMinHelseDialogVP = {
    */
   userControl_Timeline_StatusInfo_ROA: string;
   /**
-   * Henvisningen er videresendt til et behandlingssted som ligger utenfor Helse Vest. Henvisningen vil bli behandlet i tråd med fristen, men vil ikke vise i denne listen. Kontakt fastlege ellerhenviser dersom du har spørsmål.
+   * Henvisningen er videresendt til et behandlingssted som ligger utenfor Helse Vest. Henvisningen vil bli behandlet i tråd med fristen, men vil ikke vises i denne listen. Kontakt fastlege eller henviser dersom du har spørsmål.
    */
   userControl_Timeline_StatusInfo_ROD: string;
   /**
@@ -16622,14 +16630,6 @@ export type HNMinHelseNavigation = {
    * Helsetjenester
    */
   category_Helsetjenester_Title: string;
-  /**
-   * Her samles tjenester du kan benytte for å følge opp din helse. Flere er under utvikling. Noen tjenester er under utprøving i utvalgte områder, og enkelte tjenester kan du benytte på vegne av dine barn og de som har gitt deg fullmakt. Slik tilgang vil bli tilgjengelig for flere tjenester etter hvert.
-   */
-  tile_MinHelseForside_Description: string;
-  /**
-   * Velkommen til Min helse
-   */
-  tile_MinHelseForside_Title: string;
   /**
    * Journaldokumenter fra sykehus.
    */
@@ -26063,6 +26063,10 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = {
   /**
+   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
+   */
+  hjelpekontekst_profilBrukOgTilganger: string;
+  /**
    * Du har ikke tilgang til samtykkedefinisjonen.
    */
   samtykkeDefinisjonAccessDeniedBody: string;
@@ -29586,46 +29590,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   hourPlaceholder: string;
   /**
-   * Last opp fil
-   */
-  uploadButtonText: string;
-  /**
-   * Teknisk feil
-   */
-  autoSuggestLoadError: string;
-  /**
-   * Du må {loginLink} for å kunne sende skjema. Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
-   */
-  skjemaLoginMessageAuthenticationRequirementRequiredPrint: string;
-  /**
-   * logge inn
-   */
-  loggeInnLinkText: string;
-  /**
-   * på papir
-   */
-  paPapirText: string;
-  /**
-   * Du bør {loginLink} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
-   */
-  skjemaLoginMessageAuthenticationRequirementOptionalPrint: string;
-  /**
-   * Du må {loginLink} for å fylle ut og sende dette skjemaet.
-   */
-  skjemaLoginMessageAuthenticationRequirementRequiredNoPrint: string;
-  /**
-   * <p>En utskriftsversjon av skjemaet er tilgjengelig på disse språkene {0}</p>
-   */
-  skjemaAccessDeniedPrintVersionAvailable: string;
-  /**
-   * Ukjent
-   */
-  skjemaAccessDeniedPrintVersionUnknownLanguage: string;
-  /**
-   * Ingen treff på "{0}". Prøv med et annet ord eller sjekk for skrivefeil.
-   */
-  autosuggestNoSuggestions: string;
-  /**
    * Du har skrevet for mange tegn. Gjør teksten kortere.
    */
   stringOverMaxLengthError: string;
@@ -29638,9 +29602,33 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   maxLengthText: string;
   /**
+   * Les mer før du fyller ut
+   */
+  sidebarSectionHeader_LesMer: string;
+  /**
+   * Hjelp
+   */
+  sidebar_titleVeileder: string;
+  /**
+   * For spørsmål om veiledere og Helsenorge generelt, ta kontakt med veiledning Helsenorge på telefon 23 32 70 00.
+   */
+  sidebarSectionText_Veileder_Veiledning_KontaktHelsenorge: string;
+  /**
+   * Opplysningene du fyller ut, lagres ikke.
+   */
+  sidebarSectionText_Veileder_Opplysninger_KontaktHelsenorge: string;
+  /**
+   * Utskriftsversjon
+   */
+  sidebar_printLink: string;
+  /**
+   * Om veilederen
+   */
+  sidebarSectionHeader_Veileder: string;
+  /**
    * Om skjema
    */
-  sidebar_title: string;
+  sidebar_titleSkjema: string;
   /**
    * Vis informasjon om skjema
    */
@@ -29686,41 +29674,81 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   personverninnstillingerLink: string;
   /**
-   * Om skjema: Alternativer for utfylling
+   * Alternativer for utfylling
    */
-  sidebarSectionHeader_1: string;
+  sidebarSectionHeader_Alternativer: string;
   /**
-   * Om skjema: Veiledning og ansvarlig
+   * Veiledning og ansvarlig
    */
-  sidebarSectionHeader_2: string;
+  sidebarSectionHeader_Veiledning: string;
   /**
-   * Om skjema: Behandling hos mottaker
+   * Behandling hos mottaker
    */
-  sidebarSectionHeader_3: string;
+  sidebarSectionHeader_BehandlingMottaker: string;
   /**
    * Hvis du ikke vil logge inn på Helsenorge, kan du skrive ut denne versjonen i stedet: {0}.
    */
-  sidebarSectionText_1_1: string;
+  sidebarSectionText_Alternativer_LoggInn: string;
   /**
    * Hvis du vil fylle ut skjemaet på vegne av andre, må du først <a href="https://tjenester.helsenorge.no/">velge hvem du vil representere</a>.
    */
-  sidebarSectionText_1_2: string;
+  sidebarSectionText_Alternativer_Representasjon: string;
   /**
    * For spørsmål om skjemautfylling og Helsenorge generelt, ta  kontakt med veiledning Helsenorge på telefon 23 32 70 00.
    */
-  sidebarSectionText_2_1: string;
+  sidebarSectionText_Veiledning_KontaktHelsenorge: string;
   /**
    * Når du sender inn skjemaet, lagres en kopi av den sendte meldingen i din Innboks. Du finner også en kopi av skjemaet i Dokumenter. Du kan slette disse, men ikke det innsendte skjemaet.
    */
-  sidebarSectionText_2_2a_Innboks: string;
+  sidebarSectionText_Veiledning_LagringInnboks: string;
   /**
    * Når du fullfører skjemautyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen eller andre, og du kan skrive det ut eller slette det.
    */
-  sidebarSectionText_2_2b_Dokument: string;
+  sidebarSectionText_Veiledning_LagringDokument: string;
   /**
-   * Om skjema: Behandling på Helsenorge
+   * Behandling på Helsenorge
    */
-  sidebarSectionHeader_4: string;
+  sidebarSectionHeader_BehandlingHelsenorge: string;
+  /**
+   * Last opp fil
+   */
+  uploadButtonText: string;
+  /**
+   * Teknisk feil
+   */
+  autoSuggestLoadError: string;
+  /**
+   * Du må {loginLink} for å kunne sende skjema. Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
+   */
+  skjemaLoginMessageAuthenticationRequirementRequiredPrint: string;
+  /**
+   * logge inn
+   */
+  loggeInnLinkText: string;
+  /**
+   * på papir
+   */
+  paPapirText: string;
+  /**
+   * Du bør {loginLink} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
+   */
+  skjemaLoginMessageAuthenticationRequirementOptionalPrint: string;
+  /**
+   * Du må {loginLink} for å fylle ut og sende dette skjemaet.
+   */
+  skjemaLoginMessageAuthenticationRequirementRequiredNoPrint: string;
+  /**
+   * <p>En utskriftsversjon av skjemaet er tilgjengelig på disse språkene {0}</p>
+   */
+  skjemaAccessDeniedPrintVersionAvailable: string;
+  /**
+   * Ukjent
+   */
+  skjemaAccessDeniedPrintVersionUnknownLanguage: string;
+  /**
+   * Ingen treff på "{0}". Prøv med et annet ord eller sjekk for skrivefeil.
+   */
+  autosuggestNoSuggestions: string;
   /**
    * Slett
    */
