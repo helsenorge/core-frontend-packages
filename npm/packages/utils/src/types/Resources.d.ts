@@ -4548,6 +4548,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_BrukOgTilganger_Title: string;
   /** 
+  * Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.
+  */
+  page_BrukOgTilganger_Desc: string;
+  /** 
   * Fullmakter
   */
   page_Fullmakt_Title: string;
@@ -26058,6 +26062,10 @@ export type HNMinHelsePasientReiserStrings = {
 };
 
 export type HNMinHelsePersonvernStrings = { 
+  /** 
+  * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
+  */
+  hjelpekontekst_profilBrukOgTilganger: string;
   /** 
   * Du har ikke tilgang til samtykkedefinisjonen.
   */
