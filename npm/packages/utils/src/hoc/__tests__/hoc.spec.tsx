@@ -126,7 +126,7 @@ describe('HOC utils', () => {
   describe('Gitt at en komponent wrappes i track-route-change HOC', () => {
     describe('Når den instansieres', () => {
       it('Så kaller den adobe-analytics og rendres riktig', () => {
-        const adobeMock = jest.spyOn(adobeUtils, 'trackUrlChange');
+        const adobeMock = jest.spyOn(adobeUtils, 'trackPageview');
 
         const wrapper = mount(
           <Router>

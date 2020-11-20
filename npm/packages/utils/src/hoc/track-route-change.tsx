@@ -1,15 +1,15 @@
 import * as React from 'react';
 import { withRouter, RouteComponentProps } from 'react-router-dom';
-import { trackUrlChange } from '../adobe-analytics';
+import { trackPageview } from '../adobe-analytics';
 
 /**
- * hoc-wrapper for å tracke navigation med adobe-analytics - les mer på trackUrlChange method
+ * hoc-wrapper for å tracke navigation med adobe-analytics - les mer på trackPageview  method
  */
 class TrackRouteChange extends React.Component<RouteComponentProps<{}>, {}> {
   componentDidMount(): void {
-    trackUrlChange(window.location.href, window.location.pathname);
+    trackPageview();
     this.props.history.listen(() => {
-      trackUrlChange(window.location.href, window.location.pathname);
+      trackPageview();
     });
   }
   render() {
