@@ -29726,7 +29726,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   loggeInnLinkText: string;
   /** 
-  * på papir
+  * papirutgave av skjema
   */
   paPapirText: string;
   /** 
