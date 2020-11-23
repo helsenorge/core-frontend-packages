@@ -16571,7 +16571,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Egenandeler_Title: string;
   /** 
-  * Meld bivirkninger (altinn)
+  * Meld bivirkninger på legemidler og vaksiner
   */
   tile_EksterneTjenester_Bivirkninger_Title: string;
   /** 
