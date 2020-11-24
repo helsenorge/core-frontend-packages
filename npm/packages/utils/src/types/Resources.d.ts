@@ -6029,7 +6029,7 @@ Du kan prøve på nytt senere eller kontakte oss på telefon.
   */
   messageInlineHeader: string;
   /** 
-  * Denne meldingen kan ikke besvares
+  * Du kan ikke svare på denne meldingen
   */
   messageInlineNotAvailable: string;
   /** 

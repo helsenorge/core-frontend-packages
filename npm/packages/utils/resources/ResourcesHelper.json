@@ -1516,7 +1516,7 @@
     "changeBookingSubmitCalendarSuccessHeader": "Endring av tidspunkt for timeavtalen er registrert",
     "appointmentReferenceHeader": "Meldingen(e) er knyttet til en timeavtale",
     "messageInlineHeader": "Skriv melding",
-    "messageInlineNotAvailable": "Denne meldingen kan ikke besvares",
+    "messageInlineNotAvailable": "Du kan ikke svare på denne meldingen",
     "toggleOfReminder": "Påminnelse av",
     "toggleOnReminder": "Påminnelse på (sendes {0} dager før svarfrist)",
     "toggleReminderFeilHeader": "Det gikk ikke å endre påminnelse",
