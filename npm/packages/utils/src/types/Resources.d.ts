@@ -16571,7 +16571,7 @@ export type HNMinHelseNavigation = {
    */
   tile_Egenandeler_Title: string;
   /**
-   * Meld bivirkninger (altinn)
+   * Meld bivirkninger på legemidler og vaksiner
    */
   tile_EksterneTjenester_Bivirkninger_Title: string;
   /**
@@ -29726,7 +29726,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   loggeInnLinkText: string;
   /**
-   * på papir
+   * papirutgave av skjema
    */
   paPapirText: string;
   /**
