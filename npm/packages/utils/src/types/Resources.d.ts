@@ -31507,7 +31507,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   userControl_Start_SystemError: string;
   /** 
-  * På grunn av tekniske utfordringer på helsenorge.no er ikke alle tjenester tilgjengelige nå. Prøv igjen litt senere.
+  * På grunn av tekniske problemer på helsenorge.no er ikke alle tjenester tilgjengelige nå. Prøv igjen litt senere.
   */
   userControl_Start_SystemErrorDescription: string;
   /** 

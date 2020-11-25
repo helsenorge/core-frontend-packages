@@ -7851,7 +7851,7 @@
     "userControl_LogOnLink_CloseWindow": "lukk vinduet",
     "userControl_LogOnLink_LoggedOnInfo": "Du er innlogget på helsenorge.no",
     "userControl_Start_SystemError": "Systemfeil",
-    "userControl_Start_SystemErrorDescription": "På grunn av tekniske utfordringer på helsenorge.no er ikke alle tjenester tilgjengelige nå. Prøv igjen litt senere.",
+    "userControl_Start_SystemErrorDescription": "På grunn av tekniske problemer på helsenorge.no er ikke alle tjenester tilgjengelige nå. Prøv igjen litt senere.",
     "backbarHome": "Min helse",
     "userControl_Start_ConfirmButton": "Jeg forstår og vil gå videre",
     "userControl_StartInfoPanel_Title2": "Fastlege",
