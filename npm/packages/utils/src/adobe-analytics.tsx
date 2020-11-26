@@ -3,6 +3,7 @@ export enum AnalyticsId {
   Tab = 'tab',
   ExpandableSection = 'expandable-section',
   ExpandableBlock = 'expandable-block',
+  ExpandableTagSection = 'expandable-tag-section',
   BlockButton = 'block-button',
   DisplayButton = 'display-button',
   FunctionButton = 'function-button',
