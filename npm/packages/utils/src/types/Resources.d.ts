@@ -19397,7 +19397,11 @@ export type HNMinHelsePasientjournal = {
   /** 
   * Listen er muligens ikke komplett
   */
-  logg_LokasjonFeil_Varsel_Title: string;
+  tilgangslogg_LokasjonFeil_Varsel_Title: string;
+  /** 
+  * Logg fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelig.
+  */
+  tilgangslogg_LokasjonFeil_Varsel_Body: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
