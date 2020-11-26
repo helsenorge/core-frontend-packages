@@ -4850,7 +4850,8 @@
     "warning_DocumentList_OverTerskelverdi_Body": "Du har gjort filtervalg som returnerer flere dokumenter enn vi kan vise samtidig. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.",
     "warning_DocumentList_OverTerskelverdi_Init_Title": "Viser siste {0} dokumenter",
     "warning_DocumentList_OverTerskelverdi_Init_Body": "Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter.",
-    "logg_LokasjonFeil_Varsel_Title": "Listen er muligens ikke komplett"
+    "tilgangslogg_LokasjonFeil_Varsel_Title": "Listen er muligens ikke komplett",
+    "tilgangslogg_LokasjonFeil_Varsel_Body": "Logg fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelig."
   },
   "HNMinHelsePasientreiserJS": { 
     "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?",
