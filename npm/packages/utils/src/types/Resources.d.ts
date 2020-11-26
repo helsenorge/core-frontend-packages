@@ -3537,10 +3537,6 @@ export type HNMinHelseCommonJS = {
   */
   stringOverMaxLengthError: string;
   /** 
-  * {"synlig":"True","sporsmalstekst":"Fant du ikke det du lette etter?","bobletekst":"","seksjonstekst_overskrift":"Fant du ikke det du lette etter?","seksjonstekst_brodtekst":"<p>\nHvis du ikke finner alle tjenester du ønsker på Helsenorge kan det være ulike grunner til det. Dette er de vanligste: \n</p>\n\n<h3>\nSamtykke\n</h3>\n\n<p>\nFor å bruke tjenestene på Helsenorge må du samtykke til bruk av dine helseopplysninger. Sjekk under Profil og innstillinger at du har samtykket til de tjenestene du ønsker å se. <a href=\"{HelsenorgeUrl}/om-tjenestene/slik-brukes-tjenestene-paa-helsenorge\">Les mer om samtykke på helsenorge.no</a>.\n</p>\n\n<h3>\nForeldrerepresentasjon\n</h3>\n\n<p>\nForeldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href=\"{HelsenorgeUrl}/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no\">Les mer om foreldrerepresentasjon på helsenorge.no</a>.\n</p>\n\n<h3>\nFullmakt\n</h3>\n\n<p>\nDet er tre ulike tjenesteområder eller grupper av tjenester som det kan gis fullmakt til, og disse inneholder ulike tjenester. Det vil også være noen tjenester som ikke er tilgjengelig via fullmakt. <a href=\"{HelsenorgeUrl}/fullmakt/om\">Les mer om fullmakt på helsenorge.no</a>.\n</p>\n\n<h3>\nGeografisk tilhørighet\n</h3>\n\n<p>\nNoen tjenester er nye og under utvikling, noe som gjør at de prøves ut i et begrenset område før de gjøres tilgjengelig for alle. <a href=\"{HelsenorgeUrl}/om-tjenestene/tjenester\">Les mer om hvilke tjenester som er tilgjengelig på helsenorge.no</a>.\n</p>"}
-  */
-  askForMoreInfoMessageTriggerId: string;
-  /** 
   * Hjelp om
   */
   helpDrawerHelpIconLabel: string;
@@ -8167,90 +8163,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   changeBookingSubmitSuccessDraftHeader: string;
   /** 
-  * Be om å få fornyet en eller flere resepter.
-  */
-  commonMeldingsvelgerHelsetilbudFornyReseptBeskrivelse: string;
-  /** 
-  * Still et medisinsk spørsmål til behandleren din. Du betaler vanlig egenandel.
-  */
-  commonMeldingsvelgerHelsetilbudEkonsultasjonBeskrivelse: string;
-  /** 
-  * Still et praktisk spørsmål til de som sitter i resepsjonen.
-  */
-  commonMeldingsvelgerHelsetilbudKontaktBeskrivelse: string;
-  /** 
-  * Be om å få fornyet en eller flere resepter. Merk at meldingen kan bli lest av andre ved behandlerkontoret enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  commonReseptfornyelseHelsetilbudBeskrivelse: string;
-  /** 
-  * Send
-  */
-  commonDraftSend: string;
-  /** 
-  * Endre
-  */
-  commonDraftEdit: string;
-  /** 
-  * Du har ikke tilgang til tjenesten.
-  */
-  conversationItemPrimarhelsetjenesteAccessDeniedHeader: string;
-  /** 
-  * Kontakt mottaker ved eventuelle spørsmål.
-  */
-  conversationItemPrimarhelsetjenesteAccessDeniedBody: string;
-  /** 
-  * Det har skjedd en teknisk feil.
-  */
-  conversationItemPrimarhelsetjenesteGeneralErrorHeader: string;
-  /** 
-  * Prøv igjen senere, eller kontakt mottaker på annen måte.
-  */
-  conversationItemPrimarhelsetjenesteGeneralErrorBody: string;
-  /** 
-  * Behandler/behandlerkontoret kan for tiden ikke svare på meldinger.
-  */
-  conversationItemPrimarhelsetjenesteServiceNotSupportedHeader: string;
-  /** 
-  * Kontakt mottaker ved eventuelle spørsmål.
-  */
-  conversationItemPrimarhelsetjenesteServiceNotSupportedBody: string;
-  /** 
-  * Behandler kan ikke svare på meldingen din.
-  */
-  conversationItemPrimarhelsetjenesteRejectedHeader: string;
-  /** 
-  * Kontakt mottaker ved eventuelle spørsmål.
-  */
-  conversationItemPrimarhelsetjenesteRejectedBody: string;
-  /** 
-  * Svar
-  */
-  commonConversationSubmitReply: string;
-  /** 
-  * Denne mottakeren er ikke lenger tilgjengelig
-  */
-  commonReplyMessageUnavailableTitle: string;
-  /** 
-  * Det er ikke lenger mulig å sende melding.
-  */
-  commonReplyMessageUnavailableBody: string;
-  /** 
-  * Fortsett redigering
-  */
-  commonPendingChangesDiscardProceed: string;
-  /** 
-  * Forkast endringer
-  */
-  commonPendingChangesDiscardCancel: string;
-  /** 
-  * Det finnes endringer som ikke er lagret
-  */
-  commonPendingChangesSubmitDiscardHeading: string;
-  /** 
-  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
-  */
-  commonPendingChangesSubmitDiscardDescription: string;
-  /** 
   * OK
   */
   commonSubmitConfirmationButtonText: string;
@@ -8382,6 +8294,90 @@ behandlingsstedet ved eventuelle spørsmål.
   * Kontaktlege
   */
   commonRoleToPatientKontaktlege: string;
+  /** 
+  * Du har ikke tilgang til tjenesten.
+  */
+  conversationItemPrimarhelsetjenesteAccessDeniedHeader: string;
+  /** 
+  * Kontakt mottaker ved eventuelle spørsmål.
+  */
+  conversationItemPrimarhelsetjenesteAccessDeniedBody: string;
+  /** 
+  * Det har skjedd en teknisk feil.
+  */
+  conversationItemPrimarhelsetjenesteGeneralErrorHeader: string;
+  /** 
+  * Prøv igjen senere, eller kontakt mottaker på annen måte.
+  */
+  conversationItemPrimarhelsetjenesteGeneralErrorBody: string;
+  /** 
+  * Behandler/behandlerkontoret kan for tiden ikke svare på meldinger.
+  */
+  conversationItemPrimarhelsetjenesteServiceNotSupportedHeader: string;
+  /** 
+  * Kontakt mottaker ved eventuelle spørsmål.
+  */
+  conversationItemPrimarhelsetjenesteServiceNotSupportedBody: string;
+  /** 
+  * Behandler kan ikke svare på meldingen din.
+  */
+  conversationItemPrimarhelsetjenesteRejectedHeader: string;
+  /** 
+  * Kontakt mottaker ved eventuelle spørsmål.
+  */
+  conversationItemPrimarhelsetjenesteRejectedBody: string;
+  /** 
+  * Svar
+  */
+  commonConversationSubmitReply: string;
+  /** 
+  * Denne mottakeren er ikke lenger tilgjengelig
+  */
+  commonReplyMessageUnavailableTitle: string;
+  /** 
+  * Det er ikke lenger mulig å sende melding.
+  */
+  commonReplyMessageUnavailableBody: string;
+  /** 
+  * Fortsett redigering
+  */
+  commonPendingChangesDiscardProceed: string;
+  /** 
+  * Forkast endringer
+  */
+  commonPendingChangesDiscardCancel: string;
+  /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  commonPendingChangesSubmitDiscardHeading: string;
+  /** 
+  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
+  */
+  commonPendingChangesSubmitDiscardDescription: string;
+  /** 
+  * Be om å få fornyet en eller flere resepter.
+  */
+  commonMeldingsvelgerHelsetilbudFornyReseptBeskrivelse: string;
+  /** 
+  * Still et medisinsk spørsmål til behandleren din. Du betaler vanlig egenandel.
+  */
+  commonMeldingsvelgerHelsetilbudEkonsultasjonBeskrivelse: string;
+  /** 
+  * Still et praktisk spørsmål til de som sitter i resepsjonen.
+  */
+  commonMeldingsvelgerHelsetilbudKontaktBeskrivelse: string;
+  /** 
+  * Be om å få fornyet en eller flere resepter. Merk at meldingen kan bli lest av andre ved behandlerkontoret enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
+  */
+  commonReseptfornyelseHelsetilbudBeskrivelse: string;
+  /** 
+  * Send
+  */
+  commonDraftSend: string;
+  /** 
+  * Endre
+  */
+  commonDraftEdit: string;
   /** 
   * utsteder av skjema
   */
