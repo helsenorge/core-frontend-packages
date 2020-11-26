@@ -3553,10 +3553,6 @@ export type HNMinHelseCommonJS = {
   */
   askForMoreServicesTitle: string;
   /** 
-  * Du har ikke samtykket til følgende tjenester:
-  */
-  askForMoreServicesMessage: string;
-  /** 
   * Pasientjournal
   */
   askForMoreServicesPasientjournal: string;
