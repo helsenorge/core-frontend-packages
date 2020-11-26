@@ -19203,7 +19203,7 @@ export type HNMinHelsePasientjournal = {
   */
   tilgangslogg_GenrellFeil_Melding_Bunntekst: string;
   /** 
-  * Logg fra {0} er foreløpig ikke tilgjengelig på vegne av barn.
+  * {0} har ikke tilgjengeliggjort logg for dokumentinnsyn på vegne av barn.
   */
   tilgangslogg_RepresentasjonFeil_Body: string;
   /** 
