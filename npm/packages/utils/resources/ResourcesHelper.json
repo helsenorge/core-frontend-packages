@@ -2925,6 +2925,7 @@
     "deling_logg_rolle_fastlege": "Fastlege",
     "deling_ikke_samtykke": "Du må ha samtykkenivå \"Full\" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href=\"/personverninnstillinger/samtykker/velg\"> forandre samtykket ditt.</a>",
     "deling_fastleger_ikke_forerrett": "Din fastlege har ikke mulighet til å se delte dokumenter. Derfor kan du ikke dele dokumentet.",
+    "fullmektig_error_title": "Handlingen mislyktes. Prøv igjen senere.",
     "skjult_for_fullmektig": "Skjult for fullmektig",
     "actionVisFullmektige": "Vis for fullmektige",
     "actionSkjulFullmektige": "Skjul for fullmektige",
@@ -6510,8 +6511,8 @@
     "error_FeatureNotSupported_Title": "Funksjon ikke støttet"
   },
   "HNMinHelsePersonvernStrings": { 
-    "hjelpekontekst_profilBrukOgTilganger": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
+    "hjelpekontekst_profilBrukOgTilganger": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "page_HendelsesLogg_39": "Prøvesvar",
     "organisasjonsnavn_fullmakt": "Helsenorge",
