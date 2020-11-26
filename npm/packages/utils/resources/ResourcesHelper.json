@@ -4802,7 +4802,7 @@
     "records_save_PHA_main": "Du finner igjen dokumentet under <a href='/dokumenter'>Dokumenter</a>.",
     "tilgangslogg_GenerellFeil_Body": "Logg fra noen behandlingssteder er for øyeblikket ikke tilgjengelig",
     "tilgangslogg_GenrellFeil_Melding_Bunntekst": "Dersom du har logg hos noen av disse stedene vil de ikke vises i listen",
-    "tilgangslogg_RepresentasjonFeil_Body": "Logg fra {0} er foreløpig ikke tilgjengelig på vegne av barn.",
+    "tilgangslogg_RepresentasjonFeil_Body": "{0} har ikke tilgjengeliggjort logg for dokumentinnsyn på vegne av barn.",
     "tilgangslogg_RateLimitExceededFeil_Body": "{0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.",
     "xDS_BusyFeil_Body": "{0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.",
     "xDS_BusyFeil_Title": "Listen kan ikke vises",
