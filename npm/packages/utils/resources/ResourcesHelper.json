@@ -115,6 +115,7 @@
   },
   "HNDialogCommonJS": { 
     "utenBehandlerEventsHeading": "Timer på legekontoret",
+    "bookingSubHeaderVaccination": "Timebestillingen vil sendes til Vaksinasjon",
     "videoDialogDropinInfoMessage": "Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.",
     "healthcareProfessionalJordmor": "Jordmor",
     "healthcareProfessionalHjelpepleier": "Hjelpepleier",
