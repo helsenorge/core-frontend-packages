@@ -114,6 +114,7 @@
     "inactivity_LoginUrl": "/auth/signin"
   },
   "HNDialogCommonJS": { 
+    "utenBehandlerEventsHeading": "Timer på legekontoret",
     "videoDialogDropinInfoMessage": "Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.",
     "healthcareProfessionalJordmor": "Jordmor",
     "healthcareProfessionalHjelpepleier": "Hjelpepleier",
