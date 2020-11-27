@@ -159,7 +159,7 @@
     "bookingMessagePlaceholder": "F. eks. onsdag etter kl. 12",
     "bookingSelectedEventLabel": "Du har valgt denne timen:",
     "bookingSend": "Bestill",
-    "bookingSubHeaderVaccination": "Timebestillingen vil sendes til Vaksinasjon",
+    "bookingSubHeader": "Timebestillingen vil sendes til",
     "bookingSubmitSuccessBody": "Du finner informasjon om timebestillingen i innboksen.",
     "bookingSubmitSuccessHeader": "Timebestillingen er sendt",
     "bestillTimeBeskrivelse": "Beskrivelse",
