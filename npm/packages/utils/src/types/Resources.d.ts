@@ -619,9 +619,9 @@ export type HNDialogCommonJS = {
   */
   bookingSend: string;
   /** 
-  * Timebestillingen vil sendes til Vaksinasjon
+  * Timebestillingen vil sendes til
   */
-  bookingSubHeaderVaccination: string;
+  bookingSubHeader: string;
   /** 
   * Du finner informasjon om timebestillingen i innboksen.
   */
