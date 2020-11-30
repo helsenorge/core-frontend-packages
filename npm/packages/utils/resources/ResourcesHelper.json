@@ -7398,7 +7398,7 @@
     "maxLengthText": "Maksimum {0} tegn",
     "skjemaLoginMessageAuthenticationRequirementRequiredPrint": "Du må {loginLink} for å kunne sende skjema. Alternativt kan du fylle ut på papir, se {omSkjemaLink}.",
     "loggeInnLinkText": "logge inn",
-    "paPapirText": "papirutgave av skjema",
+    "paPapirText": "utskriftsversjon av skjema",
     "skjemaLoginMessageAuthenticationRequirementOptionalPrint": "Du bør {loginLink} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.",
     "skjemaLoginMessageAuthenticationRequirementRequiredNoPrint": "Du må {loginLink} for å fylle ut og sende dette skjemaet.",
     "skjemaAccessDeniedPrintVersionAvailable": "<p>En utskriftsversjon av skjemaet er tilgjengelig på disse språkene {0}</p>",

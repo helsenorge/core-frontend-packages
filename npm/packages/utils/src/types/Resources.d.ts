@@ -29702,7 +29702,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   loggeInnLinkText: string;
   /** 
-  * papirutgave av skjema
+  * utskriftsversjon av skjema
   */
   paPapirText: string;
   /** 
