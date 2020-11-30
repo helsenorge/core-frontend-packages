@@ -28200,7 +28200,7 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   hjelpetrigger_profilFullmaktItem: string;
   /** 
-  * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Velg person","seksjonstekst_brodtekst":"<p>Du må først angi hvem du ønsker å gi fullmakt til. Du kan enten velge et registrert familiemedlem, eller finne en annen person å gi fullmakt til. Både etternavn og fødselsnummer (11 siffer) må være riktig skrevet, så sjekk en ekstra gang før du trykker neste.</p><p>D-nummer kan legges inn dersom vedkommende ikke har norsk fødselsnummer. Personen du gir fullmakt til må være over 18 år.</p> "}
+  * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Velg person","seksjonstekst_brodtekst":"<p>Du må først angi hvem du ønsker å gi fullmakt til. Du kan finne en person å gi fullmakt til ved å søke på etternavn og fødselsnummer. Både etternavn og fødselsnummer (11 siffer) må være riktig skrevet, så sjekk en ekstra gang før du trykker neste.</p><p>D-nummer kan legges inn dersom vedkommende ikke har norsk fødselsnummer. Personen du gir fullmakt til må være over 18 år.</p>"}
   */
   hjelpetrigger_profilFullmaktLightboxVelg: string;
   /** 
