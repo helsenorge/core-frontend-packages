@@ -27428,7 +27428,7 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Opplysninger_Parorende_Title: string;
   /** 
-  * Her kan du oppgi dine pårørende og hvordan de kan kontaktes. Denne informasjon kan deles med helsepersonell via din <a href="/kjernejournal">kjernejournal</a>.
+  * Helsepersonell har tilgang til informasjon om deg og din familie fra folkeregisteret. Du kan se hvilken informasjon helsepersonell ser i din <a href="/kjernejournal">kjernejournal</a>. Her kan du registrere dine pårørende og hvordan de skal kontaktes. Denne informasjonen kan deles med helsepersonell via din kjernejournal.
   */
   page_Opplysninger_Parorende_Desc: string;
   /** 

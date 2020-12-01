@@ -6831,7 +6831,7 @@
     "page_Opplysninger_Kontakt_BtnAdd_Label": "Registrer pårørende i din kjernejournal",
     "page_Opplysninger_Kontakt_Form_BtnCancel": "Avbryt",
     "page_Opplysninger_Parorende_Title": "Pårørende",
-    "page_Opplysninger_Parorende_Desc": "Her kan du oppgi dine pårørende og hvordan de kan kontaktes. Denne informasjon kan deles med helsepersonell via din <a href=\"/kjernejournal\">kjernejournal</a>.",
+    "page_Opplysninger_Parorende_Desc": "Helsepersonell har tilgang til informasjon om deg og din familie fra folkeregisteret. Du kan se hvilken informasjon helsepersonell ser i din <a href=\"/kjernejournal\">kjernejournal</a>. Her kan du registrere dine pårørende og hvordan de skal kontaktes. Denne informasjonen kan deles med helsepersonell via din kjernejournal.",
     "page_Opplysninger_Parorende_Narmeste": "(nærmeste pårørende)",
     "page_Opplysninger_Navn": "Navn",
     "page_Opplysninger_Relasjon": "Relasjon",
