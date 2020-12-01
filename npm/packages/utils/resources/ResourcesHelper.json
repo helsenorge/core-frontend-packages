@@ -2927,6 +2927,7 @@
     "deling_logg_rolle_fastlege": "Fastlege",
     "deling_ikke_samtykke": "Du må ha samtykkenivå \"Full\" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href=\"/personverninnstillinger/samtykker/velg\"> forandre samtykket ditt.</a>",
     "deling_fastleger_ikke_forerrett": "Din fastlege har ikke mulighet til å se delte dokumenter. Derfor kan du ikke dele dokumentet.",
+    "skjult_for_fullmektige": "Skjult for fullmektige",
     "fullmektig_error_title": "Handlingen mislyktes. Prøv igjen senere.",
     "skjult_for_fullmektig": "Skjult for fullmektig",
     "actionVisFullmektige": "Vis for fullmektige",
