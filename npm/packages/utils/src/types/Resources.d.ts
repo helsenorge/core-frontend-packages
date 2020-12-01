@@ -11670,6 +11670,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   deling_fastleger_ikke_forerrett: string;
   /** 
+  * Skjult for fullmektige
+  */
+  skjult_for_fullmektige: string;
+  /** 
   * Handlingen mislyktes. Prøv igjen senere.
   */
   fullmektig_error_title: string;
