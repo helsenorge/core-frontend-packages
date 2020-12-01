@@ -26201,7 +26201,7 @@ av den forelderen som har gitt samtykke.
   */
   page_Opplysninger_Arbeidsgivere_Title: string;
   /** 
-  * Legg inn arbeidsgiver hvis du ønsker at helsepersonell skal ha denne kontaktinformasjonen. Dette kan for eksempel bli aktuelt hvis du trenger sykemelding. Denne informasjon kan deles med helsepersonell via din <a href="/kjernejournal">kjernejournal</a>.
+  * Legg inn arbeidsgiver hvis du ønsker at helsepersonell skal ha denne kontaktinformasjonen. Dette kan for eksempel bli aktuelt hvis du trenger sykemelding. Denne informasjonen kan deles med helsepersonell via din <a href="/kjernejournal">kjernejournal</a>.
   */
   page_Opplysninger_Arbeidsgivere_Desc: string;
   /** 

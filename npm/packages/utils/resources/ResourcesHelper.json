@@ -6553,7 +6553,7 @@
     "page_Opplysninger_Kontakt_Form_Max_Length_Error": "Maks lengde 36 tegn",
     "page_Opplysninger_Kontakt_Arbeidsgivere_Form_Name_Error": "Du må skrive arbeidsgiverens navn",
     "page_Opplysninger_Arbeidsgivere_Title": "Arbeidsgivere",
-    "page_Opplysninger_Arbeidsgivere_Desc": "Legg inn arbeidsgiver hvis du ønsker at helsepersonell skal ha denne kontaktinformasjonen. Dette kan for eksempel bli aktuelt hvis du trenger sykemelding. Denne informasjon kan deles med helsepersonell via din <a href=\"/kjernejournal\">kjernejournal</a>.",
+    "page_Opplysninger_Arbeidsgivere_Desc": "Legg inn arbeidsgiver hvis du ønsker at helsepersonell skal ha denne kontaktinformasjonen. Dette kan for eksempel bli aktuelt hvis du trenger sykemelding. Denne informasjonen kan deles med helsepersonell via din <a href=\"/kjernejournal\">kjernejournal</a>.",
     "page_helsekontakter_DropdownLabel": "Type helsekontakt",
     "page_helsekontakter_DropdownDefault": "Velg...",
     "page_helsekontakter_DropdownAlternativBehandler": "Alternative behandlere",
