@@ -29646,7 +29646,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_Alternativer_Representasjon: string;
   /** 
-  * For spørsmål om skjemautfylling og Helsenorge generelt, ta  kontakt med veiledning Helsenorge på telefon 23 32 70 00.
+  * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
   */
   sidebarSectionText_Veiledning_KontaktHelsenorge: string;
   /** 
@@ -29654,7 +29654,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_Veiledning_LagringInnboks: string;
   /** 
-  * Når du fullfører skjemautyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen eller andre, og du kan skrive det ut eller slette det.
+  * Når du fullfører skjemautfyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen, og du kan skrive det ut eller slette det.
   */
   sidebarSectionText_Veiledning_LagringDokument: string;
   /** 
