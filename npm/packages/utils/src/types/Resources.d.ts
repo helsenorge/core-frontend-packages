@@ -29670,7 +29670,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebar_titleVeileder: string;
   /** 
-  * For spørsmål om veiledere og Helsenorge generelt, ta kontakt med veiledning Helsenorge på telefon 23 32 70 00.
+  * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
   */
   sidebarSectionText_Veileder_Veiledning_KontaktHelsenorge: string;
   /** 
