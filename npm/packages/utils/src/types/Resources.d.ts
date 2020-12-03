@@ -11670,6 +11670,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   deling_fastleger_ikke_forerrett: string;
   /**
+   * Skjult for fullmektige
+   */
+  skjult_for_fullmektige: string;
+  /**
    * Handlingen mislyktes. Prøv igjen senere.
    */
   fullmektig_error_title: string;
@@ -17287,7 +17291,7 @@ export type HNMinHelseNotificationStrings = {
    */
   contact_EmailMessage_Body_Self: string;
   /**
-   * ${FirstName}, du har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+   * ${FirstName}, du har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   newAppointment_EmailMessage_Body_Self: string;
   /**
@@ -17483,7 +17487,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   footer_TextMessage: string;
   /**
-   * ${FirstName} har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+   * ${FirstName} har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   newAppointment_EmailMessage_Body_Representation: string;
   /**
@@ -26197,7 +26201,7 @@ av den forelderen som har gitt samtykke.
    */
   page_Opplysninger_Arbeidsgivere_Title: string;
   /**
-   * Legg inn arbeidsgiver hvis du ønsker at helsepersonell skal ha denne kontaktinformasjonen. Dette kan for eksempel bli aktuelt hvis du trenger sykemelding. Denne informasjon kan deles med helsepersonell via din <a href="/kjernejournal">kjernejournal</a>.
+   * Legg inn arbeidsgiver hvis du ønsker at helsepersonell skal ha denne kontaktinformasjonen. Dette kan for eksempel bli aktuelt hvis du trenger sykemelding. Denne informasjonen kan deles med helsepersonell via din <a href="/kjernejournal">kjernejournal</a>.
    */
   page_Opplysninger_Arbeidsgivere_Desc: string;
   /**
@@ -27424,7 +27428,7 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
    */
   page_Opplysninger_Parorende_Title: string;
   /**
-   * Her kan du oppgi dine pårørende og hvordan de kan kontaktes. Denne informasjon kan deles med helsepersonell via din <a href="/kjernejournal">kjernejournal</a>.
+   * Helsepersonell har tilgang til informasjon om deg og din familie fra folkeregisteret. Du kan se hvilken informasjon helsepersonell ser i din <a href="/kjernejournal">kjernejournal</a>. Her kan du registrere dine pårørende og hvordan de skal kontaktes. Denne informasjonen kan deles med helsepersonell via din kjernejournal.
    */
   page_Opplysninger_Parorende_Desc: string;
   /**
@@ -28200,7 +28204,7 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
    */
   hjelpetrigger_profilFullmaktItem: string;
   /**
-   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Velg person","seksjonstekst_brodtekst":"<p>Du må først angi hvem du ønsker å gi fullmakt til. Du kan enten velge et registrert familiemedlem, eller finne en annen person å gi fullmakt til. Både etternavn og fødselsnummer (11 siffer) må være riktig skrevet, så sjekk en ekstra gang før du trykker neste.</p><p>D-nummer kan legges inn dersom vedkommende ikke har norsk fødselsnummer. Personen du gir fullmakt til må være over 18 år.</p> "}
+   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Velg person","seksjonstekst_brodtekst":"<p>Du må først angi hvem du ønsker å gi fullmakt til. Du kan finne en person å gi fullmakt til ved å søke på etternavn og fødselsnummer. Både etternavn og fødselsnummer (11 siffer) må være riktig skrevet, så sjekk en ekstra gang før du trykker neste.</p><p>D-nummer kan legges inn dersom vedkommende ikke har norsk fødselsnummer. Personen du gir fullmakt til må være over 18 år.</p>"}
    */
   hjelpetrigger_profilFullmaktLightboxVelg: string;
   /**
@@ -29702,7 +29706,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   loggeInnLinkText: string;
   /**
-   * papirutgave av skjema
+   * utskriftsversjon av skjema
    */
   paPapirText: string;
   /**
