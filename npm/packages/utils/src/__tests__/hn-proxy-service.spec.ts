@@ -2,7 +2,7 @@ import { getErrorFromHTML, get, post, put, remove, link } from '../hn-proxy-serv
 
 window.HN = window.HN || {};
 window.HN.Rest = window.HN.Rest || {};
-window.HN.Rest.__MinHelseUrl__ = 'https://proxy.test.nhn.no';
+window.HN.Rest.__TjenesterApiUrl__ = 'https://proxy.test.nhn.no';
 window.HN.Rest.__AnonymousHash__ = 'hash1';
 window.HN.Rest.__AuthenticatedHash__ = 'hash2';
 window.HN.Rest.__TjenesteType__ = 'tjeneste';
