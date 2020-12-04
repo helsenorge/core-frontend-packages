@@ -21,7 +21,11 @@ export interface Config {
   styledComponents: boolean;
 }
 
-export default function registerWebComp(
+export const isCustomElementRegistered = (name: string): boolean => {
+  return !!window.customElements.get(name);
+};
+
+export function registerWebComp(
   ChildComponent: React.ComponentType<WebcompProps>,
   name: string,
   config: Config,
@@ -33,7 +37,10 @@ export default function registerWebComp(
 
     constructor() {
       super();
-      this.mountReactApp();
+    }
+
+    connectedCallback(): void {
+      this.mountReactComponent();
     }
 
     disconnectedCallback(): void {
@@ -58,7 +65,7 @@ export default function registerWebComp(
       });
     };
 
-    mountReactApp(): void | null {
+    mountReactComponent(): void | null {
       this.props = this.value;
       this.mountPoint = document.createElement('div');
 
@@ -98,7 +105,9 @@ export default function registerWebComp(
   }
 
   //her settes navnet til web component elementet
-  if (!window.customElements.get(name)) {
+  if (!isCustomElementRegistered(name)) {
     window.customElements.define(name, WebComponent);
   }
 }
+
+export default registerWebComp;
