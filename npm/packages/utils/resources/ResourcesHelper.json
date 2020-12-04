@@ -2247,6 +2247,7 @@
     "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen.",
     "referrallistelementHenvistTil": "Viderehenvist:",
     "timeavtaleInfoHeader": "Informasjon om timen",
+    "timeavtaleInfoError": "Klarte ikke å hente informasjon om timen",
     "appointmentCancelHelsestasjonTimeMessageLabel": "Hvorfor ønsker du å avbestille timen?",
     "appointmentCancelHelsestasjonHeader": "Avbestill time",
     "appointmentCancelHelsestasjonConfirmButtonText": "Bekreft avbestilling",

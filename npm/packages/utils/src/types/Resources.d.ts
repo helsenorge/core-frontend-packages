@@ -8966,6 +8966,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   timeavtaleInfoHeader: string;
   /** 
+  * Klarte ikke å hente informasjon om timen
+  */
+  timeavtaleInfoError: string;
+  /** 
   * Hvorfor ønsker du å avbestille timen?
   */
   appointmentCancelHelsestasjonTimeMessageLabel: string;
