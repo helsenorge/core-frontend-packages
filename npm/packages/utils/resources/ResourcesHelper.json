@@ -2246,6 +2246,7 @@
     "appointmentCancelHelsestasjonSubHeader": "Hvis du avbestiller timen, kan det ta tid før du får en ny time.",
     "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen.",
     "referrallistelementHenvistTil": "Viderehenvist:",
+    "timeavtaleInfoHeader": "Informasjon om timen",
     "appointmentCancelHelsestasjonTimeMessageLabel": "Hvorfor ønsker du å avbestille timen?",
     "appointmentCancelHelsestasjonHeader": "Avbestill time",
     "appointmentCancelHelsestasjonConfirmButtonText": "Bekreft avbestilling",
@@ -2927,7 +2928,6 @@
     "deling_logg_rolle_fastlege": "Fastlege",
     "deling_ikke_samtykke": "Du må ha samtykkenivå \"Full\" for å kunne dele dokumenter. Dersom du ønsker det kan du <a href=\"/personverninnstillinger/samtykker/velg\"> forandre samtykket ditt.</a>",
     "deling_fastleger_ikke_forerrett": "Din fastlege har ikke mulighet til å se delte dokumenter. Derfor kan du ikke dele dokumentet.",
-    "skjult_for_fullmektige": "Skjult for fullmektige",
     "fullmektig_error_title": "Handlingen mislyktes. Prøv igjen senere.",
     "skjult_for_fullmektig": "Skjult for fullmektig",
     "actionVisFullmektige": "Vis for fullmektige",
@@ -2938,7 +2938,8 @@
     "lightbox_til_deling_lukkknapp": "Lukk",
     "lightbox_ikke_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter",
     "lightbox_slette_skjema_description": "Du er i ferd med å slette skjemautkastet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Hvis du sletter og deretter angrer på det, må du starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet skjemaet. Er du helt sikker på at du vil slette?",
-    "lightbox_slette_skjema_title": "Slett skjemautkast"
+    "lightbox_slette_skjema_title": "Slett skjemautkast",
+    "skjult_for_fullmektige": "Skjult for fullmektige"
   },
   "HNMinHelseHealthArchiveStrings": { 
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"

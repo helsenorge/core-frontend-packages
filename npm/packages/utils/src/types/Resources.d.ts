@@ -8962,6 +8962,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   referrallistelementHenvistTil: string;
   /** 
+  * Informasjon om timen
+  */
+  timeavtaleInfoHeader: string;
+  /** 
   * Hvorfor ønsker du å avbestille timen?
   */
   appointmentCancelHelsestasjonTimeMessageLabel: string;
@@ -11670,10 +11674,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   deling_fastleger_ikke_forerrett: string;
   /** 
-  * Skjult for fullmektige
-  */
-  skjult_for_fullmektige: string;
-  /** 
   * Handlingen mislyktes. Prøv igjen senere.
   */
   fullmektig_error_title: string;
@@ -11717,6 +11717,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Slett skjemautkast
   */
   lightbox_slette_skjema_title: string;
+  /** 
+  * Skjult for fullmektige
+  */
+  skjult_for_fullmektige: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
