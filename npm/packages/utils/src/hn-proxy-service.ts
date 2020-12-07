@@ -4,7 +4,7 @@ import * as DateUtils from './date-utils';
 
 declare const HN: {
   Rest: {
-    __MinHelseUrl__: string;
+    __TjenesterApiUrl__: string;
     __AnonymousHash__: string;
     __AuthenticatedHash__: string;
     __TjenesteType__: string;
