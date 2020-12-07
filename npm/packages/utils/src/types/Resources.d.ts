@@ -8962,6 +8962,14 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   referrallistelementHenvistTil: string;
   /**
+   * Informasjon om timen
+   */
+  timeavtaleInfoHeader: string;
+  /**
+   * Klarte ikke å hente informasjon om timen
+   */
+  timeavtaleInfoError: string;
+  /**
    * Hvorfor ønsker du å avbestille timen?
    */
   appointmentCancelHelsestasjonTimeMessageLabel: string;
@@ -11670,10 +11678,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   deling_fastleger_ikke_forerrett: string;
   /**
-   * Skjult for fullmektige
-   */
-  skjult_for_fullmektige: string;
-  /**
    * Handlingen mislyktes. Prøv igjen senere.
    */
   fullmektig_error_title: string;
@@ -11717,6 +11721,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Slett skjemautkast
    */
   lightbox_slette_skjema_title: string;
+  /**
+   * Skjult for fullmektige
+   */
+  skjult_for_fullmektige: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
@@ -29646,7 +29654,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   sidebarSectionText_Alternativer_Representasjon: string;
   /**
-   * For spørsmål om skjemautfylling og Helsenorge generelt, ta  kontakt med veiledning Helsenorge på telefon 23 32 70 00.
+   * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
    */
   sidebarSectionText_Veiledning_KontaktHelsenorge: string;
   /**
@@ -29654,7 +29662,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   sidebarSectionText_Veiledning_LagringInnboks: string;
   /**
-   * Når du fullfører skjemautyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen eller andre, og du kan skrive det ut eller slette det.
+   * Når du fullfører skjemautfyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen, og du kan skrive det ut eller slette det.
    */
   sidebarSectionText_Veiledning_LagringDokument: string;
   /**
@@ -29670,7 +29678,7 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   sidebar_titleVeileder: string;
   /**
-   * For spørsmål om veiledere og Helsenorge generelt, ta kontakt med veiledning Helsenorge på telefon 23 32 70 00.
+   * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
    */
   sidebarSectionText_Veileder_Veiledning_KontaktHelsenorge: string;
   /**
