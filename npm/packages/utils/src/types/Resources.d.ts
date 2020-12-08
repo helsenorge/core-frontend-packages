@@ -342,12 +342,6 @@ export type HNCoreFrontendWebForside = {
   */
   nyttFnrDescription: string;
   /** 
-  * <p>Denne tjenesten gir deg innsyn i dokumenter som ligger lagret i pasientjournalene dine ved norske sykehus. Foreløpig dekker tjenesten kun sykehus i Helse Nord, Helse Vest og Helse Sør-Øst.</p>
-<p>Du vil kunne åpne, lese og lagre en kopi av journaldokumentene dine kun mens du er logget inn på helsenorge.no. Du får også oversikt over helsepersonell som har hatt tilgang til din journal.</p>
-<p>Dokumentene inneholder sensitive helseopplysninger. Tenk over dette hvis du bruker tjenesten på et offentlig sted eller sammen med andre.</p>
-  */
-  confirmationText: string;
-  /** 
   * Denne siden er visst ikke helt frisk
   */
   pageNotFoundHeader: string;
