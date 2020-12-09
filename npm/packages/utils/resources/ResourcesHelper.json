@@ -110,11 +110,12 @@
     "inactivity_LoginUrl": "/auth/signin"
   },
   "HNDialogCommonJS": { 
-    "utenBehandlerEventsHeading": "Timer på legekontoret",
-    "bookingSubHeaderVaccination": "Timebestillingen vil sendes til Vaksinasjon",
     "videoDialogDropinInfoMessage": "Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.",
     "healthcareProfessionalJordmor": "Jordmor",
     "healthcareProfessionalHjelpepleier": "Hjelpepleier",
+    "utenBehandlerEventsHeading": "Timer på legekontoret",
+    "bookingSubHeaderVaccination": "Timebestillingen vil sendes til Vaksinasjon",
+    "bookingEmptyTextHelsetilbudVirksomhet": "Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.",
     "afterDeadlineBubbleText": "Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.",
     "afterDeadlineLegendText": "Dato kan ikke velges",
     "afterDeadlineMoreHelpText": "Les mer om behandlingsfrister",
@@ -2239,11 +2240,11 @@
     "commonMeldingsvelgerFastlegeKontaktBeskrivelse": "Still et praktisk spørsmål til de som sitter i resepsjonen ved fastlegekontoret ditt.",
     "commonMeldingsvelgerKontakt": "Kontakt {0}",
     "commonMeldingsvelgerFastlegeKontaktLegekontoret": "legekontoret",
+    "timeavtaleInfoHeader": "Informasjon om timen",
+    "timeavtaleInfoError": "Klarte ikke å hente informasjon om timen",
     "appointmentCancelHelsestasjonSubHeader": "Hvis du avbestiller timen, kan det ta tid før du får en ny time.",
     "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen.",
     "referrallistelementHenvistTil": "Viderehenvist:",
-    "timeavtaleInfoHeader": "Informasjon om timen",
-    "timeavtaleInfoError": "Klarte ikke å hente informasjon om timen",
     "appointmentCancelHelsestasjonTimeMessageLabel": "Hvorfor ønsker du å avbestille timen?",
     "appointmentCancelHelsestasjonHeader": "Avbestill time",
     "appointmentCancelHelsestasjonConfirmButtonText": "Bekreft avbestilling",
@@ -6512,8 +6513,8 @@
     "error_FeatureNotSupported_Title": "Funksjon ikke støttet"
   },
   "HNMinHelsePersonvernStrings": { 
-    "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
     "hjelpekontekst_profilBrukOgTilganger": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
+    "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
     "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "page_HendelsesLogg_39": "Prøvesvar",
     "organisasjonsnavn_fullmakt": "Helsenorge",
