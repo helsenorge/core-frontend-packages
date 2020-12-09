@@ -13359,7 +13359,7 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_Opplysninger_Kommunikasjon_stum: string;
   /** 
-  * {"defaulttekst_overskrift":"Kjernejournal","defaulttekst_brodtekst":"<p>Kjernejournal er en elektronisk tjeneste som inneholder viktige opplysninger om helsen din.\nBlir du akutt syk, har helsepersonell rask og sikker tilgang til opplysningene i din kjernejournal.</p>\n\n<p>Du kan selv bidra til å gjøre kjernejournal bedre ved å registrere opplysninger i din kjernejournal. Det vil gi helsepersonell et mer utfyllende bilde av deg og din helse.</p>\n\n<p><a href=\"https://helsenorge.no/kjernejournal\">Her kan du lese mer om Kjernejournal</a>.</p>"}
+  * {"defaulttekst_overskrift":"Kjernejournal","defaulttekst_brodtekst":"<p>Kjernejournal er en elektronisk tjeneste som inneholder viktige opplysninger om helsen din.\nBlir du akutt syk, har helsepersonell rask og sikker tilgang til opplysningene i din kjernejournal.</p>\n\n<p>Du kan selv bidra til å gjøre kjernejournal bedre ved å registrere opplysninger i din kjernejournal. Det vil gi helsepersonell et mer utfyllende bilde av deg og din helse.</p>\n\n<p><a href=\"https://www.helsenorge.no/kjernejournal/om-kjernejournal/\">Her kan du lese mer om Kjernejournal</a>.</p>"}
   */
   hjelpekontekst_kjernejournal_root: string;
   /** 
