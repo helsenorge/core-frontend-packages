@@ -145,7 +145,7 @@ window.HN.PortalCommands = window.HN.PortalCommands || {};
  * Returnerer baseUrl til MinHelse basert på HN Rest objektet
  */
 export const getMinHelseUrl = () => {
-  return HN.Rest.__MinHelseUrl__ !== undefined && HN.Rest.__MinHelseUrl__ !== null ? HN.Rest.__MinHelseUrl__ : '';
+  return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? HN.Rest.__TjenesterApiUrl__ : '';
 };
 
 export function usePasientensLegemiddelliste() {
@@ -165,7 +165,9 @@ export function useBetaTjeneste() {
 }
 
 export function getPasientreiserUrl() {
-  return HN.Rest.__MinHelseUrl__ !== undefined && HN.Rest.__MinHelseUrl__ !== null ? `${HN.Rest.__MinHelseUrl__}/pasientreiser` : '';
+  return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null
+    ? `${HN.Rest.__TjenesterApiUrl__}/pasientreiser`
+    : '';
 }
 
 export function getHelsenorgeUrl() {

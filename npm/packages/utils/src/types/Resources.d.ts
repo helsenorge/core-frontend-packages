@@ -341,24 +341,6 @@ export type HNCoreFrontendWebForside = {
    * På grunn av overgang til nytt fødselsnummer, kan enkelte tjenester være utilgjengelige en periode.
    */
   nyttFnrDescription: string;
-  /** 
-  * <p>Denne tjenesten gir deg innsyn i dokumenter som ligger lagret i pasientjournalene dine ved norske sykehus. Foreløpig dekker tjenesten kun sykehus i Helse Nord, Helse Vest og Helse Sør-Øst.</p>
-<p>Du vil kunne åpne, lese og lagre en kopi av journaldokumentene dine kun mens du er logget inn på helsenorge.no. Du får også oversikt over helsepersonell som har hatt tilgang til din journal.</p>
-<p>Dokumentene inneholder sensitive helseopplysninger. Tenk over dette hvis du bruker tjenesten på et offentlig sted eller sammen med andre.</p>
-  */
-  confirmationText: string;
-  /**
-   * <p><strong>Du kan fjerne tilgang</strong> til digitalt innsyn i pasientjournal på helsenorge.no.  <a href="/personverninnstillinger/tilgang-til-helseopplysninger/pasientjournal" class="document" target="_blank">Les mer om dette ved å gå til Personverninnstillinger.</a></p>
-   */
-  confirmationReservation: string;
-  /**
-   * Jeg forstår og vil gå videre
-   */
-  confirmationButton: string;
-  /**
-   * Avbryt
-   */
-  confirmationCancel: string;
   /**
    * Denne siden er visst ikke helt frisk
    */
