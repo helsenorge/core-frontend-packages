@@ -29652,14 +29652,6 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_Veiledning_LagringDokument: string;
   /** 
-  * Behandling på Helsenorge
-  */
-  sidebarSectionHeader_BehandlingHelsenorge: string;
-  /** 
-  * Les mer før du fyller ut
-  */
-  sidebarSectionHeader_LesMer: string;
-  /** 
   * Hjelp
   */
   sidebar_titleVeileder: string;
