@@ -7384,7 +7384,7 @@
     "sidebarSectionText_Alternativer_LoggInn": "Hvis du ikke vil logge inn på Helsenorge, kan du skrive ut denne versjonen i stedet: {0}.",
     "sidebarSectionText_Alternativer_Representasjon": "Hvis du vil fylle ut skjemaet på vegne av andre, må du først <a href=\"https://tjenester.helsenorge.no/\">velge hvem du vil representere</a>.",
     "sidebarSectionText_Veiledning_KontaktHelsenorge": "Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.",
-    "sidebarSectionText_Veiledning_LagringInnboks": "Når du sender inn skjemaet, lagres en kopi av den sendte meldingen i din Innboks. Du finner også en kopi av skjemaet i Dokumenter. Du kan slette disse, men ikke det innsendte skjemaet.",
+    "sidebarSectionText_Veiledning_LagringInnboks": "Helsenorge lagrer normalt en kopi av dette skjemaet. Du kan selv slette denne kopien, men du kan ikke omgjøre slettingen. Hvis du sletter kopien, sletter du ikke samtidig mottakerens skjema.",
     "sidebarSectionText_Veiledning_LagringDokument": "Når du fullfører skjemautfyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen, og du kan skrive det ut eller slette det.",
     "sidebarSectionHeader_BehandlingHelsenorge": "Behandling på Helsenorge",
     "sidebarSectionHeader_LesMer": "Les mer før du fyller ut",
