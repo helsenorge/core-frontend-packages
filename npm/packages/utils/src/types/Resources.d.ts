@@ -421,14 +421,6 @@ export type HNCoreFrontendWebForside = {
 
 export type HNDialogCommonJS = {
   /**
-   * Timer på legekontoret
-   */
-  utenBehandlerEventsHeading: string;
-  /**
-   * Timebestillingen vil sendes til Vaksinasjon
-   */
-  bookingSubHeaderVaccination: string;
-  /**
    * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
    */
   videoDialogDropinInfoMessage: string;
@@ -440,6 +432,18 @@ export type HNDialogCommonJS = {
    * Hjelpepleier
    */
   healthcareProfessionalHjelpepleier: string;
+  /**
+   * Timer på legekontoret
+   */
+  utenBehandlerEventsHeading: string;
+  /**
+   * Timebestillingen vil sendes til Vaksinasjon
+   */
+  bookingSubHeaderVaccination: string;
+  /**
+   * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
+   */
+  bookingEmptyTextHelsetilbudVirksomhet: string;
   /**
    * Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.
    */
@@ -8932,6 +8936,14 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   commonMeldingsvelgerFastlegeKontaktLegekontoret: string;
   /**
+   * Informasjon om timen
+   */
+  timeavtaleInfoHeader: string;
+  /**
+   * Klarte ikke å hente informasjon om timen
+   */
+  timeavtaleInfoError: string;
+  /**
    * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
    */
   appointmentCancelHelsestasjonSubHeader: string;
@@ -8943,14 +8955,6 @@ behandlingsstedet ved eventuelle spørsmål.
    * Viderehenvist:
    */
   referrallistelementHenvistTil: string;
-  /**
-   * Informasjon om timen
-   */
-  timeavtaleInfoHeader: string;
-  /**
-   * Klarte ikke å hente informasjon om timen
-   */
-  timeavtaleInfoError: string;
   /**
    * Hvorfor ønsker du å avbestille timen?
    */
@@ -13355,7 +13359,7 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
    */
   page_Opplysninger_Kommunikasjon_stum: string;
   /**
-   * {"defaulttekst_overskrift":"Kjernejournal","defaulttekst_brodtekst":"<p>Kjernejournal er en elektronisk tjeneste som inneholder viktige opplysninger om helsen din.\nBlir du akutt syk, har helsepersonell rask og sikker tilgang til opplysningene i din kjernejournal.</p>\n\n<p>Du kan selv bidra til å gjøre kjernejournal bedre ved å registrere opplysninger i din kjernejournal. Det vil gi helsepersonell et mer utfyllende bilde av deg og din helse.</p>\n\n<p><a href=\"https://helsenorge.no/kjernejournal\">Her kan du lese mer om Kjernejournal</a>.</p>"}
+   * {"defaulttekst_overskrift":"Kjernejournal","defaulttekst_brodtekst":"<p>Kjernejournal er en elektronisk tjeneste som inneholder viktige opplysninger om helsen din.\nBlir du akutt syk, har helsepersonell rask og sikker tilgang til opplysningene i din kjernejournal.</p>\n\n<p>Du kan selv bidra til å gjøre kjernejournal bedre ved å registrere opplysninger i din kjernejournal. Det vil gi helsepersonell et mer utfyllende bilde av deg og din helse.</p>\n\n<p><a href=\"https://www.helsenorge.no/kjernejournal/om-kjernejournal/\">Her kan du lese mer om Kjernejournal</a>.</p>"}
    */
   hjelpekontekst_kjernejournal_root: string;
   /**
@@ -26033,13 +26037,13 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = {
   /**
-   * Du har ikke tilgang til samtykkedefinisjonen.
-   */
-  samtykkeDefinisjonAccessDeniedBody: string;
-  /**
    * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
    */
   hjelpekontekst_profilBrukOgTilganger: string;
+  /**
+   * Du har ikke tilgang til samtykkedefinisjonen.
+   */
+  samtykkeDefinisjonAccessDeniedBody: string;
   /**
    * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
    */
@@ -29640,21 +29644,13 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
    */
   sidebarSectionText_Veiledning_KontaktHelsenorge: string;
   /**
-   * Når du sender inn skjemaet, lagres en kopi av den sendte meldingen i din Innboks. Du finner også en kopi av skjemaet i Dokumenter. Du kan slette disse, men ikke det innsendte skjemaet.
+   * Helsenorge lagrer normalt en kopi av dette skjemaet. Du kan selv slette denne kopien, men du kan ikke omgjøre slettingen. Hvis du sletter kopien, sletter du ikke samtidig mottakerens skjema.
    */
   sidebarSectionText_Veiledning_LagringInnboks: string;
   /**
    * Når du fullfører skjemautfyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen, og du kan skrive det ut eller slette det.
    */
   sidebarSectionText_Veiledning_LagringDokument: string;
-  /**
-   * Behandling på Helsenorge
-   */
-  sidebarSectionHeader_BehandlingHelsenorge: string;
-  /**
-   * Les mer før du fyller ut
-   */
-  sidebarSectionHeader_LesMer: string;
   /**
    * Hjelp
    */
