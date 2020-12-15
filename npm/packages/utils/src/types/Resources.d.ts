@@ -11596,7 +11596,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   dokument_filter_innholdTypeValue_3: string;
   /** 
-  * Korrespondanse
+  * Brev og korrespondanse
   */
   dokument_filter_innholdTypeValue_4: string;
   /** 
