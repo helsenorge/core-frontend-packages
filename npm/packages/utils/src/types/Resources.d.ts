@@ -27954,7 +27954,7 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Kontakt_HentPaNytt: string;
   /** 
-  * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Egen kontaktinformasjon","seksjonstekst_brodtekst":"<p>Her ser du dine kontaktopplysninger som ligger i Kontakt- og reservasjonsregisteret (ID-porten).</p><p>Mange behandlere bruker fortsatt kontaktopplysninger de har lagret lokalt. Hvis du endrer dine kontaktopplysninger bør du også kontakte behandlere som du ønsker skal komme i kontakt med deg, som for eksempel sykehus og fastlegen din.</p>"}
+  * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Egen kontaktinformasjon","seksjonstekst_brodtekst":"<p>Her ser du dine kontaktopplysninger som ligger i Kontakt- og reservasjonsregisteret (ID-porten).</p><p>Mange behandlere bruker fortsatt kontaktopplysninger de har lagret lokalt. Hvis du endrer dine kontaktopplysninger bør du også kontakte behandlere som du ønsker skal komme i kontakt med deg, som for eksempel sykehus og fastlegen din.</p><p>Din adresse hentes fra folkeregisteret. Finner du feil i denne opplysningene er det viktig at du melder fra til folkeregisteret om dette.</p>"}
   */
   hjelpetrigger_kontaktEgenkontaktinformasjon: string;
   /** 
