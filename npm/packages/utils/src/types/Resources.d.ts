@@ -29644,21 +29644,13 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_Veiledning_KontaktHelsenorge: string;
   /** 
-  * Når du sender inn skjemaet, lagres en kopi av den sendte meldingen i din Innboks. Du finner også en kopi av skjemaet i Dokumenter. Du kan slette disse, men ikke det innsendte skjemaet.
+  * Helsenorge lagrer normalt en kopi av dette skjemaet. Du kan selv slette denne kopien, men du kan ikke omgjøre slettingen. Hvis du sletter kopien, sletter du ikke samtidig mottakerens skjema.
   */
   sidebarSectionText_Veiledning_LagringInnboks: string;
   /** 
   * Når du fullfører skjemautfyllingen, lagres det utfylte skjemaet i Dokumenter. Du kan velge å dele det med fastlegen, og du kan skrive det ut eller slette det.
   */
   sidebarSectionText_Veiledning_LagringDokument: string;
-  /** 
-  * Behandling på Helsenorge
-  */
-  sidebarSectionHeader_BehandlingHelsenorge: string;
-  /** 
-  * Les mer før du fyller ut
-  */
-  sidebarSectionHeader_LesMer: string;
   /** 
   * Hjelp
   */
