@@ -26327,10 +26327,6 @@ av den forelderen som har gitt samtykke.
   */
   page_Kontakt_NotificationProfile_Representasjon_Foreldre_NoPha_Information: string;
   /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Barn du ikke vil motta varsler for","seksjonstekst_brodtekst":"For å kunne motta varsler for barn, må man <a href=\"/personverninnstillinger/samtykker \">samtykke til bruk av Helsenorge</a> for barnet. Du kan gjøre det på vegne av barnet ved å gå inn på barnets profil."}
-  */
-  hjelpetrigger_barnDuIkkeMottaVarslerFor: string;
-  /** 
   * Bruk av Helsenorge
   */
   page_Helsetjenester_HelsenorgeBruk_Title: string;
