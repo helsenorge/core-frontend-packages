@@ -12047,7 +12047,7 @@ export type HNMinHelseHFTStringsJS = {
   */
   egenandeler_skriv_ut: string;
   /** 
-  * {"defaulttekst_overskrift":"Om frikortordningene","defaulttekst_brodtekst":"<p>Frikortene for egenandelstak 1 og 2 gjelder for ulike helsetjenester. Har du fått frikort i den ene ordningen, kan du ikke bruke frikortet i den andre ordningen. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.​</p>\n\n<p><a href=\"https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
+  * {"defaulttekst_overskrift":"Om frikortordninge","defaulttekst_brodtekst":"<p>\nFrikortet gjelder for ulike helsetjenester, blant annet legebehandling, fysioterapi og medisiner, næringsmidler og medisinsk forbruksmateriell på blå resept. 1. januar 2021 ble de to tidligere ordningene slått sammen til én. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.\n</p>\n\n<p><a href=\"https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
   */
   egenandeler_skuff_default: string;
   /** 
