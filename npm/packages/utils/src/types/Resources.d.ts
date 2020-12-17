@@ -27623,14 +27623,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Helseopplysninger_KPR_Description: string;
   /** 
-  * Denne fullmakten kan ikke endres
-  */
-  page_Fullmakt_Item_Deprecated_Title: string;
-  /** 
-  * Hvis du ønsker en endring må du slette denne fullmakten og opprette en ny.
-  */
-  page_Fullmakt_Item_Deprecated_Description: string;
-  /** 
   * ingen registrert
   */
   page_Kontakt_FamilyRelations_Personalia_Empty: string;
@@ -27651,10 +27643,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Helsetjenester_DigitaleHelsetjenester_Header: string;
   /** 
-  * Andre tjenester og ordninger
-  */
-  page_Helsetjenester_Ordninger_Header: string;
-  /** 
   * Behandling av søknader hos Pasientreiser
   */
   page_Helsetjenester_Pasientreiser_Tittel: string;
@@ -27666,18 +27654,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * Dialogtjenester og personlig helsearkiv
   */
   page_Helsetjenester_Pha_Title: string;
-  /** 
-  * Jeg samtykker
-  */
-  page_Helsetjenester_Concent_Button: string;
-  /** 
-  * Skjul
-  */
-  shared_Text_Hide: string;
-  /** 
-  * Lukk
-  */
-  shared_Text_Close: string;
   /** 
   * Du er reservert
   */
@@ -27986,46 +27962,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * <h3 tabindex=0>Nå har den du representerer fått et personlig helsearkiv</h3>
   */
   page_Helsetjenester_Pha_Congratulations_Representert: string;
-  /** 
-  * <p>Hvis du trekker samtykket, kan du ikke lenger bruke disse tjenestene. I tilfelle du skulle ombestemme deg, ligger informasjonen lagret i 30 dager. Etter dette slettes opplysningene for godt.</p><p>Alt innhold i ditt personlige helsearkiv vil bli slettet, også det du har lastet opp selv. Vil du beholde noe av dette, må du kopiere innholdet før du trekker samtykket. Informasjonen fra behandler vil fortsatt være lagret i deres systemer.</p>
-  */
-  page_Helsetjenester_Pha_Concent_Description: string;
-  /** 
-  * Du kan fjerne din tilgang ved å trekke tilbake ditt samtykke
-  */
-  page_Helsetjenester_WithdrawConcent_Title: string;
-  /** 
-  * For å få tilgang må du samtykke til å:
-  */
-  page_Helsetjenester_Pha_ConcentTitle: string;
-  /** 
-  * Kjernejournal
-  */
-  page_HendelsesLogg_11: string;
-  /** 
-  * av
-  */
-  shared_Step_Of: string;
-  /** 
-  * Ved endring vil denne fullmakten slettes, og en ny blir automatisk opprettet med endringene.
-  */
-  page_Fullmakt_Lightbox_Update_Info: string;
-  /** 
-  * Hvem har du fullmakt fra?
-  */
-  page_Fullmakt_MottattTitle: string;
-  /** 
-  * {date} samtykket du til at pasientreiser kan innhente nødvendige data for å behandle dine søknader om dekning av reiseutgifter.
-  */
-  page_Helsetjenester_Pasientreiser_ConcentConfirmationTitle: string;
-  /** 
-  * {date} fikk du fullmakt som gjelder disse tjenesteområdene:
-  */
-  page_Fullmakt_Item_ReceivedText: string;
-  /** 
-  * {date} ga du fullmakt som gjelder disse tjenesteområdene:
-  */
-  page_Fullmakt_Item_GivenText: string;
   /** 
   * Vennligst prøv igjen senere
   */
