@@ -26770,10 +26770,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   page_Kontakt_NotificationProfile_Representasjonsforhold_Foreldrerepresentasjon: string;
   /** 
-  * Ingen varsler
-  */
-  page_Kontakt_NotificationProfile_NoNotifications: string;
-  /** 
   * ingen registrert
   */
   page_Kontakt_NotificationProfile_NoneRegistered: string;
@@ -28078,10 +28074,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Kontakt_NotificationProfile_Mandatory: string;
   /** 
-  * Varsel når noe skjer
-  */
-  page_Kontakt_NotificationProfile_Immediate_Text: string;
-  /** 
   * Hvordan vil du varsles?
   */
   page_Kontakt_NotificationProfile_Select_Contact: string;
@@ -28206,25 +28198,9 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_HendelsesLogg_Column_Event: string;
   /** 
-  * Når
-  */
-  page_HendelsesLogg_Column_When: string;
-  /** 
-  * Hvem
-  */
-  page_HendelsesLogg_Column_Who: string;
-  /** 
-  * Finner ingen hendelser.
-  */
-  page_HendelsesLogg_Empty: string;
-  /** 
   * Logg over bruk
   */
   page_HendelsesLogg_Title: string;
-  /** 
-  * Jeg har forstått at jeg umiddelbart mister tilgang til tjenesten. Jeg har forstått at jeg må fylle ut og sende inn skjema for å gjenåpne tilgangen.
-  */
-  page_Helsetjenester_Reservation_Confirm: string;
   /** 
   * Du kan gjenåpne tilgangen ved å fylle ut og sende inn dette skjemaet: <a href="https://helsenorge.no/SiteCollectionDocuments/hn-skjema-gjenaapne-pasientjournal.pdf" target="_blank">Skjema for å gjenåpne tilgang til pasientjournal.</a>
   */
@@ -28327,10 +28303,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * Jeg samtykker til at Pasientreiser:
   */
   page_Helsetjenester_Pasientreiser_NoConcent_Title: string;
-  /** 
-  * Ukentlig oppsummering på e-post: 
-  */
-  page_Kontakt_NotificationProfile_Weekly_Email: string;
   /** 
   * Fullmakten gjaldt
   */
