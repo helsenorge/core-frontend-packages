@@ -6854,7 +6854,6 @@
     "page_Helseopplysninger_FLO_ContentNotReservertDateStatusText": "PLACEHOLDER: {date} opphevet {bruker} reservasjonen mot fastlegeordningen.",
     "page_Helseopplysninger_KPR_AndreFormal_ContentNotReservertDateStatusText": "{date} opphevet {bruker} reservasjonen mot utlevering av helseopplysninger fra KPR til bestemte formål.",
     "page_Helseopplysninger_KPR_AndreFormal_ConfirmReservasjonCheckBoxText": "Jeg har forstått at ved å reservere meg vil ikke helseopplysninger i KPR kunne utleveres til bruksområdene i formål 2.",
-    "page_Helseopplysninger_KPR_AndreFormal_ConfirmUndoReservasjonButtonText": "Jeg opphever reservasjonen",
     "page_Helseopplysninger_KPR_AndreFormal_ConfirmUndoReservasjonCheckBoxText": "Jeg har forstått at ved å oppheve reservasjonen vil helseopplysninger i KPR kunne utleveres til bruksområdene i formål 2.",
     "page_Helseopplysninger_KPR_Gamle_HeaderTitle": "Oppbevaring av opplysninger i Kommunalt pasient- og brukerregister (KPR)",
     "page_Helseopplysninger_KPR_Gamle_HeaderDescription": "Dersom du benytter helse- og omsorgstjenester i kommunen, som for eksempel fastlege og hjemmesykepleie, vil det finnes opplysninger om deg i KPR. Du kan kreve at gamle opplysninger om deg i registeret blir slettet.",
