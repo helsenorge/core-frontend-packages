@@ -6842,7 +6842,6 @@
     "tjenesteomrade_TimerOgForlop": "Timeavtaler og behandlere",
     "page_Helsetjenester_Pha_Title": "Dialogtjenester og personlig helsearkiv",
     "page_Helsetjenester_KJ_Reservation_Content_Description": "<p>Du kan selv bestemme hvordan din kjernejournal skal brukes og eventuelt begrense tilgangen. Les mer om <a href=\"https://helsenorge.no/kjernejournal/sikkerhet-og-personvern-i-kjernejournal\" target=\"_blank\">reservasjon og sperring av kjernejournal</a> før du eventuelt reserverer deg.<p>Din kjernejournal kan inneholde viktige opplysninger som bidrar til at du får riktig behandling i en kritisk situasjon. Å reservere seg innebærer at alle helseopplysninger om deg slettes fra kjernejournal, og at nye opplysninger ikke samles inn.</p><p>Har du reservert deg fra kjernejournal, kan du innen 30 dager ombestemme deg og be om å få gjenopprettet informasjonen i kjernejournalen din.</p>",
-    "page_Helsetjenester_KJ_Reservation_Confirm": "Jeg har lest og forstått hva reservasjon mot kjernejournal betyr for meg og min helse.",
     "page_Helseopplysninger_KJ_LagreButtonText": "Lagre",
     "page_Helseopplysninger_KJ_RadioBox_IngenBegrensninger": "Ingen spesielle begrensninger",
     "page_Helseopplysninger_KJ_RadioBox_SperreAlt": "Å sperre alt innhold i kjernejournalen min",

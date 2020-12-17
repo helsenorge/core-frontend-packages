@@ -27460,10 +27460,6 @@ til personen det gjelder.
   */
   page_Helsetjenester_KJ_Reservation_Content_Description: string;
   /** 
-  * Jeg har lest og forstått hva reservasjon mot kjernejournal betyr for meg og min helse.
-  */
-  page_Helsetjenester_KJ_Reservation_Confirm: string;
-  /** 
   * Lagre
   */
   page_Helseopplysninger_KJ_LagreButtonText: string;
