@@ -27420,17 +27420,9 @@ til personen det gjelder.
   */
   page_HendelsesLogg_Brukerstøtte: string;
   /** 
-  * {date} opprettet saksbehandler fullmakt som gjelder disse tjenesteområdene:
-  */
-  page_Fullmakt_Item_ViaAnalogKanal_GivenText: string;
-  /** 
   * Beskrivelse
   */
   page_HendelsesLogg_Column_Tjeneste: string;
-  /** 
-  * Historikk
-  */
-  page_Helsetjenester_Historikk_Button: string;
   /** 
   * Påminnelse om at fullmakt snart utløper
   */
@@ -27847,10 +27839,6 @@ til personen det gjelder.
   */
   page_Kontakt_NotificationProfile_Representasjonsforhold_Fullmakt: string;
   /** 
-  * Melding for slettet fullmakt
-  */
-  page_Fullmakt_Content_Deleted: string;
-  /** 
   * Fullmakt opprettet
   */
   page_Fullmakt_Create: string;
@@ -28178,10 +28166,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   page_Helsetjenester_Pasientreiser_Concent_Date: string;
   /** 
-  * Utsatt samtykke
-  */
-  page_Helsetjenester_Historikk_PhaDelayedConsent: string;
-  /** 
   * Trukket samtykke ferdig håndtert
   */
   page_Helsetjenester_Historikk_PhaNoConsent: string;
@@ -28201,30 +28185,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * Har du spørsmål angående denne fullmakten, ta kontakt med Veiledning for helsenorge.no på telefon 23 32 70 00.
   */
   page_Fullmakt_Item_External_InfoMessage: string;
-  /** 
-  * Ordning
-  */
-  page_HendelsesLogg_Column_Ordning: string;
-  /** 
-  * Ingen historiske ordninger
-  */
-  page_HendelsesLogg_Ingen_Ordninger: string;
-  /** 
-  * Ingen historiske tjenester
-  */
-  page_HendelsesLogg_Ingen_Tjeneste: string;
-  /** 
-  * saksbehandler
-  */
-  page_Helsetjenester_Brukerstotte: string;
-  /** 
-  * saksbehandler
-  */
-  page_Helsetjenester_BrukerstotteFullmakt: string;
-  /** 
-  * Melding for ny fullmakt
-  */
-  page_Fullmakt_Content_Created: string;
 };
 
 export type HNMinHelseResepterJS = { 
