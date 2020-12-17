@@ -11596,7 +11596,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   dokument_filter_innholdTypeValue_3: string;
   /**
-   * Korrespondanse
+   * Brev og korrespondanse
    */
   dokument_filter_innholdTypeValue_4: string;
   /**
@@ -12047,7 +12047,7 @@ export type HNMinHelseHFTStringsJS = {
    */
   egenandeler_skriv_ut: string;
   /**
-   * {"defaulttekst_overskrift":"Om frikortordningene","defaulttekst_brodtekst":"<p>Frikortene for egenandelstak 1 og 2 gjelder for ulike helsetjenester. Har du fått frikort i den ene ordningen, kan du ikke bruke frikortet i den andre ordningen. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.​</p>\n\n<p><a href=\"https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
+   * {"defaulttekst_overskrift":"Om frikortordninge","defaulttekst_brodtekst":"<p>\nFrikortet gjelder for ulike helsetjenester, blant annet legebehandling, fysioterapi og medisiner, næringsmidler og medisinsk forbruksmateriell på blå resept. 1. januar 2021 ble de to tidligere ordningene slått sammen til én. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.\n</p>\n\n<p><a href=\"https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
    */
   egenandeler_skuff_default: string;
   /**
@@ -26327,10 +26327,6 @@ av den forelderen som har gitt samtykke.
    */
   page_Kontakt_NotificationProfile_Representasjon_Foreldre_NoPha_Information: string;
   /**
-   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Barn du ikke vil motta varsler for","seksjonstekst_brodtekst":"For å kunne motta varsler for barn, må man <a href=\"/personverninnstillinger/samtykker \">samtykke til bruk av Helsenorge</a> for barnet. Du kan gjøre det på vegne av barnet ved å gå inn på barnets profil."}
-   */
-  hjelpetrigger_barnDuIkkeMottaVarslerFor: string;
-  /**
    * Bruk av Helsenorge
    */
   page_Helsetjenester_HelsenorgeBruk_Title: string;
@@ -27954,7 +27950,7 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
    */
   page_Kontakt_HentPaNytt: string;
   /**
-   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Egen kontaktinformasjon","seksjonstekst_brodtekst":"<p>Her ser du dine kontaktopplysninger som ligger i Kontakt- og reservasjonsregisteret (ID-porten).</p><p>Mange behandlere bruker fortsatt kontaktopplysninger de har lagret lokalt. Hvis du endrer dine kontaktopplysninger bør du også kontakte behandlere som du ønsker skal komme i kontakt med deg, som for eksempel sykehus og fastlegen din.</p>"}
+   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Egen kontaktinformasjon","seksjonstekst_brodtekst":"<p>Her ser du dine kontaktopplysninger som ligger i Kontakt- og reservasjonsregisteret (ID-porten).</p><p>Din adresse hentes fra folkeregisteret. Finner du feil i denne opplysningen er det viktig at du melder fra til folkeregisteret om dette.</p><p>Mange behandlere bruker fortsatt kontaktopplysninger de har lagret lokalt. Hvis du endrer dine kontaktopplysninger bør du også kontakte behandlere som du ønsker skal komme i kontakt med deg, som for eksempel sykehus og fastlegen din.</p>"}
    */
   hjelpetrigger_kontaktEgenkontaktinformasjon: string;
   /**
