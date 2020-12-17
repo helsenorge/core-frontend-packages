@@ -27411,105 +27411,13 @@ til personen det gjelder.
   */
   error_Teknisk: string;
   /** 
-  * Steg {0} av {1}
-  */
-  shared_Step_X_Of_Y_Accessibility: string;
-  /** 
-  * Ingen gjeldende fullmakter
-  */
-  page_Fullmakt_None: string;
-  /** 
-  * Les mer
-  */
-  shared_Read_More: string;
-  /** 
-  * DD. MMMM YYYY
-  */
-  shared_DateForm_FullMonth: string;
-  /** 
-  * Sist endret:
-  */
-  shared_Last_Changed: string;
-  /** 
-  * Logget inn
-  */
-  page_HendelsesLogg_1: string;
-  /** 
-  * Foreldreansvar
-  */
-  shared_Foreldrerepresentasjon: string;
-  /** 
-  * Ved fullmakt
-  */
-  shared_Fullmakt: string;
-  /** 
-  * Avtaleadministrasjon
-  */
-  page_HendelsesLogg_BrukAvTjenesteAvtaleAdm: string;
-  /** 
-  * Dialogadministrasjon
-  */
-  page_HendelsesLogg_BrukAvTjenesteDialogAdm: string;
-  /** 
-  * Frikort og egenandeler
-  */
-  page_HendelsesLogg_12: string;
-  /** 
-  * Fastlegetjenester
-  */
-  page_HendelsesLogg_6: string;
-  /** 
-  * Fastlegevisning
-  */
-  page_HendelsesLogg_9: string;
-  /** 
-  * Fullmakt
-  */
-  page_HendelsesLogg_14: string;
-  /** 
   * Dokumenter
   */
   page_HendelsesLogg_8: string;
   /** 
-  * Profil og innstillinger
-  */
-  page_HendelsesLogg_13: string;
-  /** 
-  * Resepter
-  */
-  page_HendelsesLogg_7: string;
-  /** 
-  * Vestlandspasienten
-  */
-  page_HendelsesLogg_5: string;
-  /** 
   * Avbryt
   */
   shared_Button_Abort: string;
-  /** 
-  * Lukk hjelpesenter
-  */
-  shared_Text_Help_Close: string;
-  /** 
-  * Steg
-  */
-  shared_Step: string;
-  /** 
-  * Bestem omfang
-  */
-  page_Fullmakt_Lightbox_Step2: string;
-  /** 
-  * Velg person
-  */
-  page_Fullmakt_Lightbox_Step1: string;
-  /** 
-  * Du har ikke tilgang
-  */
-  page_Helsetjenester_Pasientjournal_HaveReservation: string;
-  /** 
-  * {date} fjernet {bruker} din tilgang til digitalt innsyn i pasientjournal.
-  */
-  page_Helsetjenester_Pasientjournal_ReservationConfirmationTitle: string;
   /** 
   * Du kan fjerne din tilgang til pasientjournal på helsenorge.no
   */
@@ -27522,22 +27430,6 @@ til personen det gjelder.
   * fullmakt
   */
   shared_Text_Fullmakt: string;
-  /** 
-  * Innlogget bruker
-  */
-  shared_Text_InnloggetBruker: string;
-  /** 
-  * og
-  */
-  shared_Text_And: string;
-  /** 
-  * tilhørende
-  */
-  shared_Text_Associated: string;
-  /** 
-  * Tilbake til steg 1: Velg person
-  */
-  page_Fullmakt_Lightbox_Configure_Back: string;
   /** 
   * Gyldig til:
   */
