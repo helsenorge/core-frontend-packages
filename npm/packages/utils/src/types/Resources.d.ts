@@ -28206,10 +28206,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_HendelsesLogg_Column_Event: string;
   /** 
-  * Bakgrunn
-  */
-  page_HendelsesLogg_Column_How: string;
-  /** 
   * Når
   */
   page_HendelsesLogg_Column_When: string;

@@ -7025,7 +7025,6 @@
     "hjelpetrigger_profilFullmaktLightboxVelg": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Velg person\",\"seksjonstekst_brodtekst\":\"<p>Du må først angi hvem du ønsker å gi fullmakt til. Du kan finne en person å gi fullmakt til ved å søke på etternavn og fødselsnummer. Både etternavn og fødselsnummer (11 siffer) må være riktig skrevet, så sjekk en ekstra gang før du trykker neste.</p><p>D-nummer kan legges inn dersom vedkommende ikke har norsk fødselsnummer. Personen du gir fullmakt til må være over 18 år.</p>\"}",
     "hjelpetrigger_profilFullmaktDeprecated": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Tidligere fullmakter\",\"seksjonstekst_brodtekst\":\"<div>Tidligere fullmakter som gjelder enkelttjenester kan ikke endres. Disse må avsluttes og en ny fullmakt opprettes for det tjenesteområdet den gamle fullmakten falt inn under.</div>\"}",
     "page_HendelsesLogg_Column_Event": "Hva",
-    "page_HendelsesLogg_Column_How": "Bakgrunn",
     "page_HendelsesLogg_Column_When": "Når",
     "page_HendelsesLogg_Column_Who": "Hvem",
     "page_HendelsesLogg_Empty": "Finner ingen hendelser.",
