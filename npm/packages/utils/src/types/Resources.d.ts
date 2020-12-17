@@ -26126,30 +26126,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Helseopplysninger_KJ_blokkerBesoksHistDescription: string;
   /** 
-  * Lagre
-  */
-  page_Helseopplysninger_KJ_noReservationSaveText: string;
-  /** 
-  * Lagret
-  */
-  page_Helseopplysninger_KJ_noReservationSavedText: string;
-  /** 
-  * Ingen blokkering av besøkshistorikk
-  */
-  page_Helseopplysninger_KJ_radioboxIngenBegrensingBesokshistorikk: string;
-  /** 
-  * Å blokkere besøkshistorikk for alt helsepersonell
-  */
-  page_Helseopplysninger_KJ_radioboxBlokkerBesokshistorikk: string;
-  /** 
-  * Lagre
-  */
-  page_Helseopplysninger_KJ_besokshistSaveText: string;
-  /** 
-  * Lagret
-  */
-  page_Helseopplysninger_KJ_besokshistSavedText: string;
-  /** 
   * Med dette valget git du fullmakt til...
   */
   page_Fullmakt_Lightbox_Configure_Type2_Expandablesection_Header: string;
@@ -26573,42 +26549,14 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   */
   page_Helsetjenester_InnsynIOpplysningerRegistrertOmMeg_Tittel: string;
   /** 
-  * Samtykke gitt av {0} {1}.
-  */
-  page_foreldresamtykke_consentStatusText: string;
-  /** 
   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Foreldreinitiert tilgang","seksjonstekst_brodtekst":"<p>Du som forelder med foreldreansvar og daglig omsorg for et barn mellom 12 og 16 år har mulighet til å gi barnet ditt tilgang til selv å logge inn på helsenorge.no. For å gjøre det må du samtykke til dette på denne siden.  Tjenester som blir tilgjengelig for barnet er henvisninger, timeavtaler, helsekontakter og resepter. Det vil også være mulig å sende og motta meldinger. Det vil ikke være mulig for barnet å avbestille eller endre time, og heller ikke fornye resept. Når det blir tilgjengelig ytterligere tjenester for barn mellom 12-16 år, vil du bli varslet om dette.</p><p>Forelderen som har samtykket til å gi barnet egen tilgang, kan når som helst trekke dette samtykke tilbake. Dette innebærer at barnet ikke lenger kan logge inn og benytte tjenester på helsenorge.no.</p><p>Ungdom som har fylt 16 kan logge inn i helsenorge.no uten et slikt samtykke fra en forelder.</p>"}
   */
   hjelpetrigger_foreldresamtykke: string;
-  /** 
-  * Tilgang for {0}
-  */
-  page_foreldresamtykke_title: string;
   /** 
   * Foreldre med foreldreansvar og daglig omsorg kan samtykke til at barn mellom 12 og 16 år 
 får tilgang til utvalgte helsetjenester på helsenorge.no.
   */
   page_foreldresamtykke_description: string;
-  /** 
-  * {0} kan få tilgang til utvalgte helsetjenester på helsenorge.no
-  */
-  page_foreldresamtykke_concentTitle: string;
-  /** 
-  * Samtykke er gitt
-  */
-  page_foreldresamtykke_concentText: string;
-  /** 
-  * Samtykke er ikke gitt
-  */
-  page_foreldresamtykke_noConcentText: string;
-  /** 
-  * Samtykke gitt av {0} {1}
-  */
-  page_foreldresamtykke_ConcentDate: string;
-  /** 
-  * {0} trakk {1} tilbake foreldresamtykket.
-  */
-  page_foreldresamtykke_NoConcentDate: string;
   /** 
   * Hvis du forlater siden, vil du miste alle endringer du har gjort.
   */
@@ -26630,17 +26578,9 @@ får tilgang til utvalgte helsetjenester på helsenorge.no.
   */
   page_Helsetjenester_Foreldresamtykke_Subheader: string;
   /** 
-  * Jeg har forstått at {0} mister sin tilgang til utvalgte helsetjenester på helsenorge.no dersom jeg trekker samtykket.
-  */
-  page_foreldresamtykke_WithdrawConsent_Label: string;
-  /** 
   * Forkast endringer
   */
   discardCancelButtonText: string;
-  /** 
-  * Jeg samtykker til at {0} skal få tilgang til utvalgte helsetjenester på helsenorge.no.
-  */
-  page_foreldresamtykke_concentDescription: string;
   /** 
   * {0} sin tilgang til utvalgte helsetjenester på helsenorge.no kan trekkes tilbake 
 av den forelderen som har gitt samtykke.
@@ -27272,10 +27212,6 @@ til personen det gjelder.
   */
   page_Fullmakt_Description: string;
   /** 
-  * DD.MM.YYYY
-  */
-  shared_DateFormat: string;
-  /** 
   * Digitale helsetjenester på helsenorge.no
   */
   page_Helsetjenester_DigitaleHelsetjenester_Header: string;
@@ -27384,10 +27320,6 @@ til personen det gjelder.
   */
   shared_Text_You: string;
   /** 
-  * <a href="https://helsenorge.no/personvern/pasientreiser-samtykke" class="document" target="_blank">Les mer om hva ditt samtykke innebærer</a><p>Hvis du trekker samtykket, kan du ikke lenger sende inn søknad om dekning av reiseutgifter digitalt.</p><p>Du kan når som helst trekke ditt samtykke. Dette vil kun påvirke fremtidige søknader.</p>
-  */
-  page_Helsetjenester_Pasientreiser_WithdrawConcent_Description: string;
-  /** 
   * <ul>
 <li>henter inn opplysninger fra Databasen for Kontroll og Utbetaling av Helserefusjon (KUHR) og Norsk Pasientregister (NPR).</li>
 <li>kan innhente opplysninger og dokumentasjon som er nødvendige for å behandle søknaden min.</li>
@@ -27443,14 +27375,6 @@ til personen det gjelder.
   * Du må samtykke for at Pasientreiser skal kunne behandle digitale søknader om dekning av reiseutgifter. For å kunne bruke tjenesten må du ha samtykke til full digital helsetjeneste på Helsenorge.
   */
   page_Helsetjenester_Pasientreiser_Description: string;
-  /** 
-  * <ul>
-<li>Ta i bruk dialogtjenester</li> Da kan min behandler gi meg helsehjelp digitalt. Dette betyr at jeg kan sende og motta meldinger og informasjon relatert til min helse uten å møte helsepersonell personlig. For å gjøre dette vil tjenesten lagre fødselsnummer, tidspunkt for innlogging, og mine samtykker og innstillinger.
-<li>Lagre informasjon om helsen min i et personlig helsearkiv</li> Dette betyr at jeg vil få opprettet et personlig helsearkiv for lagring av kommunikasjon med helsetjenesten, som for eksempel timeavtaler, meldinger, prøvesvar og andre dokumenter. Jeg vil selv ha full råderett over innholdet i arkivet mitt, og jeg kan slette innhold jeg ikke lenger vil ha. Kun jeg og de jeg gir tillatelse til kan lese det som ligger der.
-</ul>
-<a href="https://helsenorge.no/bruksvilkar-dialogtjenester-og-personlig-helsearkiv?lesemodus=1" target="_blank" class="document">Les mer om tjenestene som tilbys og vilkårene for bruk</a>
-  */
-  page_Helsetjenester_Pha_NoConcent_Description: string;
   /** 
   * Vennligst prøv igjen senere
   */
@@ -27528,10 +27452,6 @@ til personen det gjelder.
   * <p>På helsenorge.no kan du se kjernejournalen din og legge inn informasjon. Her kan du velge å fjerne din egen digitale tilgang. Helsepersonell vil fortsatt ha tilgang til din kjernejournal via sitt journalsystem.</p><p>Hvis du senere ønsker tilgang til kjernejournal på helsenorge.no igjen, må du kontakte Veiledning helsenorge.no på telefon 23 32 70 00 for å få tilbake tilgangen.</p>
   */
   page_Helsetjenester_KJ_Visning_NoReservation_Description: string;
-  /** 
-  * <p>Det er strenge krav til helsepersonell for bruk av kjernejournalen din. Du kan i tillegg velge å begrense deres tilgang til utvalgte deler av informasjonen. Helsepersonell må da be om ditt samtykke for tilgang til den begrensede informasjonen. Hvis du er i en akuttsituasjon og trenger øyeblikkelig hjelp, kan helsepersonell likevel få tilgang til denne informasjonen.</p><p>I <a href="/kjernejournal-innsyn#loggoverbruk" target="_blank">Logg over bruk</a> kan du se hvem som har åpnet og eventuelt registrert opplysninger i kjernejournalen din.</p>
-  */
-  page_Helseopplysninger_KJ_ReservationContentDescription: string;
   /** 
   * Egen bruk
   */
@@ -27654,10 +27574,6 @@ til personen det gjelder.
   * {date} reserverte {bruker} deg mot utlevering av helseopplysninger fra KPR til bestemte formål.
   */
   page_Helseopplysninger_KPR_AndreFormal_ContentReservertDateStatusText: string;
-  /** 
-  * Beslutningstøtte
-  */
-  page_HendelsesLogg_22: string;
   /** 
   * pasientreiser
   */
