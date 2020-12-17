@@ -27524,10 +27524,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   page_Helseopplysninger_KPR_AndreFormal_ConfirmReservasjonCheckBoxText: string;
   /** 
-  * Jeg opphever reservasjonen
-  */
-  page_Helseopplysninger_KPR_AndreFormal_ConfirmUndoReservasjonButtonText: string;
-  /** 
   * Jeg har forstått at ved å oppheve reservasjonen vil helseopplysninger i KPR kunne utleveres til bruksområdene i formål 2.
   */
   page_Helseopplysninger_KPR_AndreFormal_ConfirmUndoReservasjonCheckBoxText: string;
