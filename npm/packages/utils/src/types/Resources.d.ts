@@ -28114,10 +28114,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Kontakt_NotificationProfile_Information: string;
   /** 
-  * E-post og mobilnummer fra Difi er ikke tilgjengelig!
-  */
-  page_Kontakt_NotificationProfile_Difi_Unavailable: string;
-  /** 
   * NB! Varsling er ikke mulig fordi denne personen ikke har samtykke til bruk av Helsenorge.
   */
   page_Kontakt_NotificationProfile_CheckboxDescription: string;

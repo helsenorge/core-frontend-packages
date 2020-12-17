@@ -7002,7 +7002,6 @@
     "shared_Text_Jeg_Onsker": "Jeg ønsker",
     "page_Kontakt_NotificationProfile_Title": "Varseloppsett",
     "page_Kontakt_NotificationProfile_Information": "Varsel sendes alltid til e-post/mobilnummer registrert i <a href=\"https://www.norge.no/nb/oppdater-kontaktinformasjon\" target=\"_blank\" class=\"external\">Kontakt- og reservasjonsregisteret (ID-porten)</a>",
-    "page_Kontakt_NotificationProfile_Difi_Unavailable": "E-post og mobilnummer fra Difi er ikke tilgjengelig!",
     "page_Kontakt_NotificationProfile_CheckboxDescription": "NB! Varsling er ikke mulig fordi denne personen ikke har samtykke til bruk av Helsenorge.",
     "page_Kontakt_NotificationProfile_Representasjon_Title": "Varseloppsett for personer du representerer",
     "page_Kontakt_NotificationProfile_Representasjon_Have": "du har",
