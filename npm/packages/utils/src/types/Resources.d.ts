@@ -26091,10 +26091,6 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_Helseopplysninger_PLL_TilgangsbegrensningDataFinnesHelsepersonell: string;
   /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Hva er HPR-nummer","seksjonstekst_brodtekst":"HPR-nummer er et numerisk felt mellom 7 og 9 tegn som identifiserer helsepersonell."}
-  */
-  page_Helseopplysninger_PLL_SelectedSectionTriggerId3: string;
-  /** 
   * Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon
   */
   page_Helseopplysninger_PLL_Selected_Log_ContentTilgangsbegrensningTitle: string;
@@ -26118,10 +26114,6 @@ export type HNMinHelsePersonvernStrings = {
   * Egen bruk
   */
   shared_InnbyggerSelv: string;
-  /** 
-  * Ved fullmakt
-  */
-  shared_Fullmektig: string;
   /** 
   * Ugyldig nummer. Sjekk at HPR-nummer er korrekt. Trenger du hjelp kan du ringe Veiledning helsenorge.no på telefon 23 32 70 00.
   */
@@ -26442,10 +26434,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * Avbryt
   */
   page_Opplysninger_Kontakt_Confirm_Delete_BtnCancel: string;
-  /** 
-  * Donorkort
-  */
-  page_HendelsesLogg_34: string;
   /** 
   * du eller din representant
   */
