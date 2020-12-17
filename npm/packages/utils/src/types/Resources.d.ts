@@ -26445,14 +26445,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   */
   page_Helsetjenester_HelsenorgeBruk_SamtykkeLevelHeading: string;
   /** 
-  * Tjenester knyttet til økonomiske rettigheter og oppgjør i helsevesenet. Rettigheter og vedtak vil også være en del av dette området.
-  */
-  tjenesteomrade_OkonomiOgRettigheter_Description: string;
-  /** 
-  * Jeg reserverer meg
-  */
-  page_Helseopplysninger_KPR_ReservationButtonText: string;
-  /** 
   * {date} opphevet {bruker} reservasjonen mot utlevering av helseopplysninger fra KPR med fødselsnummer.
   */
   page_Helseopplysninger_KPR_ReservationTrukketTitle: string;
@@ -26484,10 +26476,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   * Rolle
   */
   page_helsekontakter_KontaktRelasjon: string;
-  /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Arbeidsgivere","seksjonstekst_brodtekst":"<p>Det kan være nyttig for helsepersonell å vite hvem som er din arbeidsgiver, for eksempel dersom du trenger sykemelding. </p>"}
-  */
-  hjelpetrigger_opplysningerArbeidsgivere: string;
   /** 
   * Maks lengde 36 tegn
   */
@@ -27175,10 +27163,6 @@ til personen det gjelder.
   */
   page_Helsetjenester_ReservasjonAlt_NoReservationDescription: string;
   /** 
-  * Ja, fjern tilgangen min
-  */
-  page_Helsetjenester_ReservationAlt_ReservationButtonText: string;
-  /** 
   * {hprName} ( HPR: {hprNumber} )
   */
   page_Helseopplysninger_KJ_HelsepersonellText: string;
@@ -27228,14 +27212,6 @@ til personen det gjelder.
   */
   page_Kontakt_ContactInfo_Description: string;
   /** 
-  * Helse og behandling
-  */
-  tjenesteomrade_HelsehjelpOgHelseopplysninger: string;
-  /** 
-  * Innsyn i journal og registre
-  */
-  tjenesteomrade_InnsynJournalOgRegistre: string;
-  /** 
   * Brukerinnstillinger og personvern
   */
   tjenesteomrade_ProfilOgPersonvern: string;
@@ -27272,10 +27248,6 @@ til personen det gjelder.
   */
   hjelpetrigger_kontaktEgenkontaktinformasjon: string;
   /** 
-  * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Opplysninger i folkeregisteret","seksjonstekst_brodtekst":"<p>Her vises hvilke opplysninger som er registrert om deg i folkeregisteret, og du kan enkelt kontrollere om de er riktige.</p>\n\n<h3>Barn</h3>\n\n<p>Har du foreldreansvar for barn under 16 år, og dette er registrert i folkeregisteret, vil du se en merknad ved de aktuelle barna i listen. Finner du feil i listen, må du kontakte folkeregisteret.</p>"}
-  */
-  hjelpetrigger_kontaktPersonopplysninger: string;
-  /** 
   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Varseloppsett","seksjonstekst_brodtekst":"<p>\nI varseloppsettet kan du bestemme om du ønsker SMS- eller e-postvarsel når du mottar informasjon på helsenorge.no, og hvilke varsler du får.\n</p>\n\n<p>\nHvis du ikke har valgt noe annet, blir varsel sendt på SMS. Varsel sendes til e-post og mobilnummer som er registrert hos <a href=\"https://www.norge.no/nb/oppdater-kontaktinformasjon\">kontakt- og reservasjonsregisteret (ID-porten)</a>. Varsler kan sendes til både norske og utenlandske mobiltelefonnumre, og gjelder bare tjenester på helsenorge.no.\n</p>\n\n<p>\nHvis du har foreldreansvar for barn, vil du få samme type varsler for dem som du får for deg selv.\n</p>\n\n<h3>\nObligatoriske varsler\n</h3>\n\n<p>\nDisse varslene vil du få uansett hvilket alternativ du velger:\n</p>\n\n<ul>\n<li>Varsler om nye, endrede eller avlyste timeavtaler som vises på Helsenorge. Sykehus i Helse Vest og Helse Nord vil selv varsle om timer.</li>\n<li>Påminnelser om timeavtaler hos fastlegen</li>\n<li>Meldinger fra helsepersonell</li>\n<li>Innkallingsbrev og andre viktige brev</li>\n<li>Vedtak og brev fra Pasientreiser</li>\n<li>Varsel om ny melding angående opprettelse, endring eller sletting av en fullmakt, eller påminnelse om noe av dette</li>\n<li>Varsel om at et digitalt verktøy er tilgjengelig</li>\n<li>Varsel om at du har et nytt skjema å fylle ut, eller påminnelse om at fristen snart går ut på et skjema</li>\n</ul>\n\n<h3>\nViktige varsler\n</h3>\n\n<p>\nHvis du ønsker det kan du få andre viktige varsler, i tillegg til de obligatoriske, det vil si:\n</p>\n\n<ul>\n<li>Varsel om ny melding angående innsyn eller feil i besøkshistorikk</li>\n<li>Varsel om mottak av rapporter fra helseregistre</li>\n<li>Varsel om at du har fått melding på Helsenorge fra en helseundersøkelse eller klinisk studie du deltar i</li>\n<li>Varsel om fornyelse av resept</li>\n</ul>\n\n<h3>\nAlle varsler\n</h3>\n\n<p>\nØnsker du å motta alle varsler som finnes, vil du i tillegg få varsel om:\n</p>\n\n<ul>\n<li>At hjemmebesøk i kommunehelsetjenesten er utført</li>\n</ul>"}
   */
   hjelpetrigger_kontaktVarseloppsett: string;
@@ -27311,10 +27283,6 @@ til personen det gjelder.
   * Behandling av søknader hos Pasientreiser
   */
   page_Helsetjenester_Pasientreiser_Tittel: string;
-  /** 
-  * Timeavtaler og behandlere
-  */
-  tjenesteomrade_TimerOgForlop: string;
   /** 
   * Dialogtjenester og personlig helsearkiv
   */
@@ -27520,10 +27488,6 @@ til personen det gjelder.
   */
   page_Helseopplysninger_KPR_ReservationContentTitle: string;
   /** 
-  * Ja, fjern tilgangen min
-  */
-  page_Helsetjenester_Pasientjournal_ConfirmReservationButton: string;
-  /** 
   * Utlevering med fødselsnummer fra Kommunalt pasient- og brukerregister (KPR)
   */
   page_Helseopplysninger_KPR_Heading: string;
@@ -27540,14 +27504,6 @@ til personen det gjelder.
 </p><p>Ønsker du å opprette eller fjerne blokkeringer, ta kontakt med Veiledning helsenorge.no på telefon 23 32 70 00.</p>
   */
   page_Helseopplysninger_KJ_BlokkerHelsepersonell_Desc: string;
-  /** 
-  * Tjenester knyttet til styring av hvem som skal ha tilgang til dine helseopplysninger, hvordan du ønsker å motta beskjeder fra helsenorge.no og utlevering av helseopplysninger.
-  */
-  tjenesteomrade_ProfilOgPersonvern_Description: string;
-  /** 
-  * Tjenester knyttet til innsyn i din pasientjournal og hvem som har brukt den. I tillegg vil innsyn i helseregistre være en del av dette området.
-  */
-  tjenesteomrade_InnsynJournalOgRegistre_Description: string;
   /** 
   * fullmakt
   */
@@ -27573,17 +27529,9 @@ til personen det gjelder.
   */
   page_Helsetjenester_KJ_Visning_NoReservation_Description: string;
   /** 
-  * Jeg fjerner tilgangen min
-  */
-  page_Helsetjenester_KJ_Visning_ReservationButtonText: string;
-  /** 
   * <p>Det er strenge krav til helsepersonell for bruk av kjernejournalen din. Du kan i tillegg velge å begrense deres tilgang til utvalgte deler av informasjonen. Helsepersonell må da be om ditt samtykke for tilgang til den begrensede informasjonen. Hvis du er i en akuttsituasjon og trenger øyeblikkelig hjelp, kan helsepersonell likevel få tilgang til denne informasjonen.</p><p>I <a href="/kjernejournal-innsyn#loggoverbruk" target="_blank">Logg over bruk</a> kan du se hvem som har åpnet og eventuelt registrert opplysninger i kjernejournalen din.</p>
   */
   page_Helseopplysninger_KJ_ReservationContentDescription: string;
-  /** 
-  * Ja, fjern tilgangen min
-  */
-  page_Helsetjenester_KJ_Visning_Lightbox_ReserveButton: string;
   /** 
   * Egen bruk
   */
