@@ -12047,7 +12047,7 @@ export type HNMinHelseHFTStringsJS = {
    */
   egenandeler_skriv_ut: string;
   /**
-   * {"defaulttekst_overskrift":"Om frikortordningene","defaulttekst_brodtekst":"<p>Frikortene for egenandelstak 1 og 2 gjelder for ulike helsetjenester. Har du fått frikort i den ene ordningen, kan du ikke bruke frikortet i den andre ordningen. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.​</p>\n\n<p><a href=\"https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
+   * {"defaulttekst_overskrift":"Om frikortordninge","defaulttekst_brodtekst":"<p>\nFrikortet gjelder for ulike helsetjenester, blant annet legebehandling, fysioterapi og medisiner, næringsmidler og medisinsk forbruksmateriell på blå resept. 1. januar 2021 ble de to tidligere ordningene slått sammen til én. Barn under 16 år slipper å betale egenandeler og vises derfor ikke i oversikten.\n</p>\n\n<p><a href=\"https://www.helsenorge.no/betaling-for-helsetjenester/frikort-for-helsetjenester/\">Her kan du lese mer om Frikort og egenandeler</a>.</p>"}
    */
   egenandeler_skuff_default: string;
   /**
@@ -26326,10 +26326,6 @@ av den forelderen som har gitt samtykke.
    * For å motta varsler for disse barna må de minimum ha samtykke til Basis.
    */
   page_Kontakt_NotificationProfile_Representasjon_Foreldre_NoPha_Information: string;
-  /**
-   * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Barn du ikke vil motta varsler for","seksjonstekst_brodtekst":"For å kunne motta varsler for barn, må man <a href=\"/personverninnstillinger/samtykker \">samtykke til bruk av Helsenorge</a> for barnet. Du kan gjøre det på vegne av barnet ved å gå inn på barnets profil."}
-   */
-  hjelpetrigger_barnDuIkkeMottaVarslerFor: string;
   /**
    * Bruk av Helsenorge
    */
