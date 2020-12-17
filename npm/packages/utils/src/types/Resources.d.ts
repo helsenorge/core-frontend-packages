@@ -26189,14 +26189,6 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_Fullmakt_Lightbox_Update_Error_Edit: string;
   /** 
-  * Les mindre
-  */
-  shared_Read_Less: string;
-  /** 
-  * Vis
-  */
-  shared_Text_Show: string;
-  /** 
   * Du må velge en gyldig dato frem i tid, før 31.12.2099
   */
   page_Fullmakt_Lightbox_Configure_Error_DateBackInTime: string;
@@ -27323,14 +27315,6 @@ til personen det gjelder.
   */
   page_Helsetjenester_Reservasjon_Kjernejournal_Title: string;
   /** 
-  * Du kan fjerne din tilgang til alle tjenester på helsenorge.no
-  */
-  page_Helsetjenester_ReservasjonAlt_ReservationTitle: string;
-  /** 
-  * Tilgang til dine tjenester på helsenorge.no
-  */
-  page_Helsetjenester_ReservasjonAlt_Title: string;
-  /** 
   * Saksbehandling
   */
   shared_Saksbehandler: string;
@@ -27339,10 +27323,6 @@ til personen det gjelder.
   */
   shared_SaksbehandlerFullmakt: string;
   /** 
-  * Enkelte ønsker ikke å se sine helseopplysninger på nett, eller er bekymret for at andre kan misbruke deres BankID for innlogging. Her kan du sperre for din egen digitale tilgang til alle tjenestene på helsenorge.no.
-  */
-  page_Helsetjenester_ReservasjonAlt_Description: string;
-  /** 
   * Helsepersonell vil fortsatt ha tilgang til helseopplysningene dine i sine systemer. Du vil fortsatt ha tilgang til tjenester på andres vegne hvis du har foreldreansvar eller fullmakt til dette.<p>Hvis du senere ombestemmer deg, kan du be om å få opphevet sperren ved å fylle ut og sende inn dette skjemaet: <a href="https://helsenorge.no/SiteCollectionDocuments/hn-skjema-gjenaapne-helsenorge.pdf" target="_blank">Skjema for å gjenåpne tilgang til tjenester på helsenorge.no.</p>
   */
   page_Helsetjenester_ReservasjonAlt_NoReservationDescription: string;
@@ -27350,21 +27330,6 @@ til personen det gjelder.
   * {date} reserverte {bruker} deg mot digitalt innsyn i helsenorge.no.
   */
   page_Helsetjenester_ReservasjonAlt_ReservationConfirmationTitle: string;
-  /** 
-  * Jeg har forstått at jeg umiddelbart mister tilgang til alle mine tjenester på helsenorge.no. Jeg har forstått at jeg må fylle ut og sende inn skjema for å gjenopprette tilgangen.
-  */
-  page_Helsetjenester_ReservationAlt_Confirm: string;
-  /** 
-  * 
-<p>Du vil da umiddelbart miste tilgang til alle dine tjenester på helsenorge.no. Du kan gjenåpne tilgangen ved å fylle ut og sende inn skjema.</p>
-<p><b>Er du sikker på at du vil gjøre dette?</b></p>
-    
-  */
-  page_Helsetjenester_ReservationAlt_LightboxText: string;
-  /** 
-  * Du er i ferd med å fjerne din tilgang til tjenestene på helsenorge.no
-  */
-  page_Helsetjenester_ReservationAlt_LightboxTitle: string;
   /** 
   * Ja, fjern tilgangen min
   */
@@ -27439,22 +27404,6 @@ til personen det gjelder.
   */
   page_Kontakt_ContactInfo_Description: string;
   /** 
-  * Fullmakten er registrert
-  */
-  page_Fullmakt_Lightbox_Reciept_Title: string;
-  /** 
-  * Fødselsnr.
-  */
-  page_Fullmakt_Historikk_Column_DeviceFnr: string;
-  /** 
-  * Alle tjenester på helsenorge.no
-  */
-  tjenesteomrade_Alle: string;
-  /** 
-  * Profil og innstillinger, henvisninger, timeavtaler og meldinger
-  */
-  tjenesteomrade_Vestlandspasienten: string;
-  /** 
   * Helse og behandling
   */
   tjenesteomrade_HelsehjelpOgHelseopplysninger: string;
@@ -27463,37 +27412,9 @@ til personen det gjelder.
   */
   tjenesteomrade_InnsynJournalOgRegistre: string;
   /** 
-  * Økonomi og rettigheter
-  */
-  tjenesteomrade_OkonomiOgRettigheter: string;
-  /** 
   * Brukerinnstillinger og personvern
   */
   tjenesteomrade_ProfilOgPersonvern: string;
-  /** 
-  * Hjelp
-  */
-  shared_Text_Help: string;
-  /** 
-  * Åpne/Lukk hjelp for
-  */
-  shared_Text_Help_Item: string;
-  /** 
-  * Åpne/Lukk hjelpesenter
-  */
-  shared_Text_Help_Toggle: string;
-  /** 
-  * Du har tilgang
-  */
-  page_Helsetjenester_Pasientjournal_NoReservation: string;
-  /** 
-  * Bytte fastlege
-  */
-  page_HendelsesLogg_20: string;
-  /** 
-  * Timeavtaler
-  */
-  page_HendelsesLogg_2: string;
   /** 
   * Saksbehandler
   */
