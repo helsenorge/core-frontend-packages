@@ -27360,14 +27360,6 @@ til personen det gjelder.
   */
   page_Fullmakt_FullmaktYouHadDeleted: string;
   /** 
-  * Etter hvert som flere tjenester blir tilgjengelig via fullmakt vil de automatisk legges til denne fullmakten.
-  */
-  page_Fullmakt_Lightbox_Configure_TjenesteOmrade_All_Description: string;
-  /** 
-  * Fullmakten vil også gjelde nye tjenester som i fremtiden legges til de tjenesteområdene du velger.
-  */
-  page_Fullmakt_Lightbox_Configure_TjenesteOmrade_Selected_Description: string;
-  /** 
   * Tjenester knyttet til administrasjon av timeavtaler i helsevesenet, hvilke behandlere du har, og valg av behandler. Både tidligere og framtidige opplysninger vil vises.
   */
   tjenesteomrade_TimerOgForlop_Description: string;
@@ -27436,10 +27428,6 @@ til personen det gjelder.
   */
   page_Fullmakt_FullmaktYouGotExpires: string;
   /** 
-  * Administrering av fullmakter
-  */
-  page_HendelsesLogg_21: string;
-  /** 
   * Egne kontaktopplysninger
   */
   page_KontaktInformation_Title: string;
@@ -27463,10 +27451,6 @@ til personen det gjelder.
   * Det har skjedd en teknisk feil
   */
   error_UnavailablePersonalInformation: string;
-  /** 
-  * Jeg opphever reservasjonen
-  */
-  page_Helseopplysninger_KPR_OppheverButtonText: string;
   /** 
   * Dersom du benytter helse- og omsorgstjenester i kommunen, som for eksempel fastlege og hjemmesykepleie, vil det finnes opplysninger om deg i KPR. Du kan reservere deg mot at helseopplysningene dine utleveres sammen med ditt fødselsnummer.
   */
@@ -27620,10 +27604,6 @@ til personen det gjelder.
   */
   hjelpetrigger_profilFullmaktLightboxVelg: string;
   /** 
-  * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Tidligere fullmakter","seksjonstekst_brodtekst":"<div>Tidligere fullmakter som gjelder enkelttjenester kan ikke endres. Disse må avsluttes og en ny fullmakt opprettes for det tjenesteområdet den gamle fullmakten falt inn under.</div>"}
-  */
-  hjelpetrigger_profilFullmaktDeprecated: string;
-  /** 
   * Hva
   */
   page_HendelsesLogg_Column_Event: string;
@@ -27752,10 +27732,6 @@ til personen det gjelder.
   */
   page_Helseopplysninger_KPR_NoReservationContentTitle: string;
   /** 
-  * Du tillater utlevering
-  */
-  page_Helseopplysninger_KPR_NoReservationIkonTitle: string;
-  /** 
   * Jeg har forstått at ved å reservere meg vil ikke helseopplysninger i KPR kunne utleveres sammen med mitt fødselsnummer.
   */
   page_Helseopplysninger_KPR_ReservationConfirm: string;
@@ -27772,27 +27748,9 @@ til personen det gjelder.
   */
   page_Helseopplysninger_KPR_ReservationContentTitle: string;
   /** 
-  * Du tillater ikke utlevering
-  */
-  page_Helseopplysninger_KPR_ReservationIkonTitle: string;
-  /** 
-  * Endre innstillinger
-  */
-  shared_EndreInnstillinger: string;
-  /** 
   * Ja, fjern tilgangen min
   */
   page_Helsetjenester_Pasientjournal_ConfirmReservationButton: string;
-  /** 
-  * <p>Du vil da umiddelbart miste tilgang til din pasientjournal på helsenorge.no. Du kan gjenåpne tilgangen ved å fylle ut og sende inn skjema.</p>
-    <p><b>Er du sikker på at du vil gjøre dette?</b></p> 
-    
-  */
-  page_Helsetjenester_Pasientjournal_ConfirmReservationText: string;
-  /** 
-  * Du er i ferd med å fjerne din tilgang til pasientjournal på helsenorge.no
-  */
-  page_Helsetjenester_Pasientjournal_ConfirmReservationTitle: string;
   /** 
   * Utlevering med fødselsnummer fra Kommunalt pasient- og brukerregister (KPR)
   */
