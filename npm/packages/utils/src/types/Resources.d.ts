@@ -26655,18 +26655,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   */
   tjenesteOmrade_DigitalHelsetjeneste_Description: string;
   /** 
-  * Innsyn i opplysninger registrert om meg
-  */
-  tjenesteOmrade_InnsynIOpplysningerRegistrertOmMeg: string;
-  /** 
-  * Innsyn i opplysninger registrert om meg
-  */
-  tjenesteOmrade_InnsynIOpplysningerRegistrertOmMeg_Description: string;
-  /** 
-  * Innsyn i pasientjournal
-  */
-  tjenesteOmrade_InnsynIPasientjournal: string;
-  /** 
   * Innsyn i pasientjournal
   */
   tjenesteOmrade_InnsynIPasientjournal_Description: string;
