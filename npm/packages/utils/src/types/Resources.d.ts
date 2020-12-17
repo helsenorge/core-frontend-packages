@@ -26357,10 +26357,6 @@ Du vil også kunne velge å ta i bruk ulike tjenester eller verktøy som er rele
   */
   page_Helsetjenester_HelsenorgeBruk_SamtykkeLevelHeading: string;
   /** 
-  * {date} opphevet {bruker} reservasjonen mot utlevering av helseopplysninger fra KPR med fødselsnummer.
-  */
-  page_Helseopplysninger_KPR_ReservationTrukketTitle: string;
-  /** 
   * Slett arbeidsgiver?
   */
   page_Opplysninger_Arbeidsgiver_Confirm_Delete_Title: string;
@@ -27304,37 +27300,9 @@ til personen det gjelder.
   */
   page_Helsetjenester_Pasientjournal_Title: string;
   /** 
-  * <p>KPR skal gi sentrale og kommunale myndigheter grunnlag for planlegging, styring, finansiering og evaluering av kommunale helse- og omsorgstjenester (formål 1). Helseopplysninger som er samlet inn til disse formålene skal også brukes til kvalitetsforbedring, forebyggende arbeid, beredskap, analyser, forskning og Nasjonal kjernejournal (formål 2).</p><p>Du har rett til å reservere deg mot at helseopplysninger i KPR utleveres til bruksområdene i formål 1 og 2 sammen med ditt fødselsnummer. Opplysningene kan fremdeles bli delt, men uten fødselsnummer.</p><p>Du kan når som helst trekke tilbake reservasjonen.</p>
-  */
-  page_Helseopplysninger_KPR_NoReservationContentDescription: string;
-  /** 
-  * Du kan oppheve reservasjonen mot at helseopplysninger fra KPR utleveres sammen med ditt fødselsnummer
-  */
-  page_Helseopplysninger_KPR_NoReservationContentTitle: string;
-  /** 
-  * Jeg har forstått at ved å reservere meg vil ikke helseopplysninger i KPR kunne utleveres sammen med mitt fødselsnummer.
-  */
-  page_Helseopplysninger_KPR_ReservationConfirm: string;
-  /** 
-  * {date} reserverte {bruker} deg mot utlevering av helseopplysninger fra KPR med fødselsnummer.
-  */
-  page_Helseopplysninger_KPR_ReservationConfirmationTitle: string;
-  /** 
-  * <p>KPR skal gi sentrale og kommunale myndigheter grunnlag for planlegging, styring, finansiering og evaluering av kommunale helse- og omsorgstjenester (formål 1). Helseopplysninger som er samlet inn til disse formålene skal også brukes til kvalitetsforbedring, forebyggende arbeid, beredskap, analyser, forskning og Nasjonal kjernejournal (formål 2).</p><p>Du har rett til å reservere deg mot at helseopplysninger i KPR utleveres til bruksområdene i formål 1 og 2 sammen med ditt fødselsnummer. Opplysningene kan fremdeles bli delt, men uten fødselsnummer.</p><p>Du kan når som helst trekke tilbake reservasjonen.</p>
-  */
-  page_Helseopplysninger_KPR_ReservationContentDescription: string;
-  /** 
-  * Du kan reservere deg mot at helseopplysninger fra KPR utleveres sammen med ditt fødselsnummer
-  */
-  page_Helseopplysninger_KPR_ReservationContentTitle: string;
-  /** 
   * Utlevering med fødselsnummer fra Kommunalt pasient- og brukerregister (KPR)
   */
   page_Helseopplysninger_KPR_Heading: string;
-  /** 
-  * Jeg har forstått at ved å oppheve reservasjonen vil helseopplysninger i KPR kunne utleveres sammen med mitt fødselsnummer.
-  */
-  page_Helseopplysninger_KPR_NoReservationConfirm: string;
   /** 
   * <p>Du kan velge å blokkere hele kjernejournalen for navngitt helsepersonell. De vil da ikke ha mulighet til å åpne kjernejournalen din. En blokkering gjelder alltid, også i akuttsituasjoner.
 </p><p>Ønsker du å opprette eller fjerne blokkeringer, ta kontakt med Veiledning helsenorge.no på telefon 23 32 70 00.</p>
@@ -27413,40 +27381,6 @@ til personen det gjelder.
   */
   page_Fullmakt_Item_External_InfoMessage: string;
   /** 
-  * PLACEHOLDER: {date} reserverte {bruker} deg mot fastlegeordningen.
-  */
-  page_Helseopplysninger_FLO_ContentReservertDateStatusText: string;
-  /** 
-  * <p>PLACEHOLDER</p>
-<p>Du kan reservere deg mot fastlegeordningen og mister da din fastlege</p>
-  */
-  page_Helseopplysninger_FLO_ContentReservasjonDescription: string;
-  /** 
-  * PLACEHOLDER: Du kan reservere deg mot fastlegeordningen
-  */
-  page_Helseopplysninger_FLO_ContentReservasjonTitle: string;
-  /** 
-  * <p>PLACEHOLDER</p>
-<p>Du kan oppheve din reservasjon mot fastlegeordningen og kan dermed få en fastlege</p>
-  */
-  page_Helseopplysninger_FLO_ContentUndoReservasjonDescription: string;
-  /** 
-  * PLACEHOLDER: Du kan oppheve din reservasjon mot fastlegen
-  */
-  page_Helseopplysninger_FLO_ContentUndoReservasjonTitle: string;
-  /** 
-  * PLACEHOLDER: Du kan reservere deg mot fastlegeordningen
-  */
-  page_Helseopplysninger_FLO_HeaderDescription: string;
-  /** 
-  * Du er ikke reservert
-  */
-  page_Helseopplysninger_FLO_HeaderNotReservertStatusText: string;
-  /** 
-  * Du er reservert
-  */
-  page_Helseopplysninger_FLO_HeaderReservertStatusText: string;
-  /** 
   * Utlevering til bestemte formål fra Kommunalt pasient- og brukerregister (KPR)
   */
   page_Helseopplysninger_KPR_AndreFormal_HeaderTitle: string;
@@ -27495,26 +27429,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * PLACEHOLDER: Reservasjon mot fastlegeordningen
   */
   page_Helseopplysninger_FLO_HeaderTitle: string;
-  /** 
-  * Jeg reserverer meg
-  */
-  page_Helseopplysninger_FLO_ConfirmReservasjonButtonText: string;
-  /** 
-  * PLACEHOLDER: Jeg har forstått at ved å reservere meg mot Fastlegeordningen mister jeg min fastlege
-  */
-  page_Helseopplysninger_FLO_ConfirmReservasjonCheckBoxText: string;
-  /** 
-  * Jeg opphever min reservasjon
-  */
-  page_Helseopplysninger_FLO_ConfirmUndoReservasjonButtonText: string;
-  /** 
-  * PLACEHOLDER: Jeg har forstått at ved å oppheve min reservasjon mot fastlegeordningen kan jeg få en fastlege
-  */
-  page_Helseopplysninger_FLO_ConfirmUndoReservasjonCheckBoxText: string;
-  /** 
-  * PLACEHOLDER: {date} opphevet {bruker} reservasjonen mot fastlegeordningen.
-  */
-  page_Helseopplysninger_FLO_ContentNotReservertDateStatusText: string;
   /** 
   * {date} opphevet {bruker} reservasjonen mot utlevering av helseopplysninger fra KPR til bestemte formål.
   */
