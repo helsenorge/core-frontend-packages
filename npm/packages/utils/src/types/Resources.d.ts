@@ -26153,22 +26153,6 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_Helsetjenester_Historikk_PhaConsent: string;
   /** 
-  * Du kan reservere deg mot å ha en kjernejournal
-  */
-  page_Helsetjenester_KJ_Reservation_NoContent_Title: string;
-  /** 
-  * På helsenorge.no kan du se kjernejournalen din og legge inn informasjon. Du kan velge om din kjernejournal skal være tilgjengelig på helsenorge.no eller ikke.
-  */
-  page_Helsetjenester_KJ_Visning_Description: string;
-  /** 
-  * Tilgang til kjernejournal på helsenorge.no
-  */
-  page_Helsetjenester_KJ_Visning_Title: string;
-  /** 
-  * Du har kjernejournal
-  */
-  page_Helsetjenester_KJ_NoReservationText: string;
-  /** 
   * <div>Du har ikke registrert kontaktinformasjon i <a href="https://www.norge.no/nb/oppdater-kontaktinformasjon" target="_blank" class="external">Kontakt- og reservasjonsregisteret (ID-porten)</a>. Du vil ikke kunne motta varsler fra Helsenorge om hendelser som angår deg. Registrer e-post og mobilnummer der, dersom du ønsker å kunne motta varsler.<p>Det er kun mulig å registrere kontaktinformasjon for seg selv, ikke på vegne av barn eller andre. Foreldre kan få varsler for sine barn ved å velge dette i sitt eget varseloppsett, og tilsvarende for de som har fullmakt for andre.</p></div>
   */
   page_Kontakt_NotificationProfile_MissingContactInformation_Description: string;
@@ -27299,22 +27283,6 @@ til personen det gjelder.
   */
   page_HendelsesLogg_38: string;
   /** 
-  * Helseregistre
-  */
-  page_HendelsesLogg_23: string;
-  /** 
-  * I kjernejournalen samles viktig informasjon som bidrar til at du får riktig behandling i en kritisk situasjon. Dette skjer automatisk hvis du ikke aktivt reserverer deg.
-  */
-  page_Helsetjenester_Kjernejournal_Description: string;
-  /** 
-  * Du kan angre din reservasjon
-  */
-  page_Helsetjenester_KJ_Reservation_Content_Title: string;
-  /** 
-  * Kjernejournal
-  */
-  page_Helsetjenester_Reservasjon_Kjernejournal_Title: string;
-  /** 
   * Saksbehandling
   */
   shared_Saksbehandler: string;
@@ -27488,21 +27456,9 @@ til personen det gjelder.
   */
   page_Helsetjenester_Pha_Title: string;
   /** 
-  * Du er reservert
-  */
-  page_Helsetjenester_KJ_ReservationText: string;
-  /** 
-  * <p>Du er fremdeles innenfor angrefristen ({frist}) og kan fjerne din reservasjon mot kjernejournal slik at dine opplysninger ikke blir slettet.</p>
-  */
-  page_Helsetjenester_KJ_Reservation_NoContent_Description: string;
-  /** 
   * <p>Du kan selv bestemme hvordan din kjernejournal skal brukes og eventuelt begrense tilgangen. Les mer om <a href="https://helsenorge.no/kjernejournal/sikkerhet-og-personvern-i-kjernejournal" target="_blank">reservasjon og sperring av kjernejournal</a> før du eventuelt reserverer deg.<p>Din kjernejournal kan inneholde viktige opplysninger som bidrar til at du får riktig behandling i en kritisk situasjon. Å reservere seg innebærer at alle helseopplysninger om deg slettes fra kjernejournal, og at nye opplysninger ikke samles inn.</p><p>Har du reservert deg fra kjernejournal, kan du innen 30 dager ombestemme deg og be om å få gjenopprettet informasjonen i kjernejournalen din.</p>
   */
   page_Helsetjenester_KJ_Reservation_Content_Description: string;
-  /** 
-  * Jeg reserverer meg
-  */
-  page_Helsetjenester_KJ_ReservationButtonText: string;
   /** 
   * Jeg har lest og forstått hva reservasjon mot kjernejournal betyr for meg og min helse.
   */
