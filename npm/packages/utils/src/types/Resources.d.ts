@@ -1090,9 +1090,9 @@ export type HNDialogCommonJS = {
   */
   healthcareProfessionalJordmor: string;
   /** 
-  * Hjelpepleier
+  * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
   */
-  healthcareProfessionalHjelpepleier: string;
+  bookingEmptyTextHelsetilbudVirksomhet: string;
   /** 
   * Timer på legekontoret
   */
@@ -1102,9 +1102,9 @@ export type HNDialogCommonJS = {
   */
   bookingSubHeaderVaccination: string;
   /** 
-  * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
+  * Hjelpepleier
   */
-  bookingEmptyTextHelsetilbudVirksomhet: string;
+  healthcareProfessionalHjelpepleier: string;
   /** 
   * Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.
   */
@@ -4234,9 +4234,9 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Start_Title: string;
   /** 
-  * Logg over bruk
+  * Samtykkeoppgave
   */
-  page_HendelsesLogg_Title: string;
+  page_Samtykkeoppgave_Title: string;
   /** 
   * Fullmakter
   */
@@ -4258,9 +4258,9 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_feilmelding_link_text: string;
   /** 
-  * Samtykkeoppgave
+  * Logg over bruk
   */
-  page_Samtykkeoppgave_Title: string;
+  page_HendelsesLogg_Title: string;
   /** 
   * Helsenorge – din helse på nett
   */
@@ -8061,10 +8061,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationConfirmDeleteInnsendtSkjema: string;
   /** 
-  * utsteder av skjema
-  */
-  skjemautsteder: string;
-  /** 
   * OK
   */
   commonSubmitConfirmationButtonText: string;
@@ -8739,10 +8735,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationEnrichmentParagraph: string;
   /** 
-  * Du kan ikke lenger fylle ut og sende inn dette skjemaet.
-  */
-  oppgaveInvalid: string;
-  /** 
   * Du kan ha rett til å få dekket reiseutgifter til behandlinger som dekkes av det offentlige. Reisen må ikke være innenfor et minstetakstområde, og distansen en vei må være over 10 kilometer.
   */
   appointmentDetailsPasientReiserTekst: string;
@@ -8770,6 +8762,14 @@ behandlingsstedet ved eventuelle spørsmål.
   * Melding lagret som utkast
   */
   changeBookingSubmitSuccessDraftHeader: string;
+  /** 
+  * utsteder av skjema
+  */
+  skjemautsteder: string;
+  /** 
+  * Du kan ikke lenger fylle ut og sende inn dette skjemaet.
+  */
+  oppgaveInvalid: string;
   /** 
   * Tilbake
   */
@@ -8988,6 +8988,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   kommunalHelsetilbudKontaktmuligheterLabel: string;
   /** 
+  * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
+  */
+  appointmentCancelHelsestasjonSubHeader: string;
+  /** 
   * Informasjon om timen
   */
   timeavtaleInfoHeader: string;
@@ -8996,10 +9000,6 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   timeavtaleInfoError: string;
   /** 
-  * Hvis du avbestiller timen, kan det ta tid før du får en ny time.
-  */
-  appointmentCancelHelsestasjonSubHeader: string;
-  /** 
   * Innbygger møtte ikke til timen.
   */
   appointmentDetailsCancellationReasonDidNotMeet: string;
@@ -9007,22 +9007,6 @@ behandlingsstedet ved eventuelle spørsmål.
   * Viderehenvist:
   */
   referrallistelementHenvistTil: string;
-  /** 
-  * Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.
-  */
-  appointmentDetailsCancellationReasonService: string;
-  /** 
-  * Avtalen ble avlyst fordi ingen var hjemme.
-  */
-  appointmentDetailsCancellationReasonAway: string;
-  /** 
-  * Avtalen ble avlyst av innbygger.
-  */
-  appointmentDetailsCancellationReasonInhabitant: string;
-  /** 
-  * Avtalen ble avlyst av person med fullmakt for innbygger.
-  */
-  appointmentDetailsCancellationReasonProxy: string;
   /** 
   * Sykehuset vil gi deg informasjon om hvordan du starter videotimen. Gjør deg klar i god tid før videotimen starter, og sørg for at bilde og lyd fungerer. Plasser deg slik at du unngår bakgrunnsstøy og involvering av uvedkommende. Hvis dette er din første videotime, må du beregne litt ekstra tid. Ta kontakt med sykehuset ved feil.
   */
@@ -9039,6 +9023,22 @@ behandlingsstedet ved eventuelle spørsmål.
   * Bestill time
   */
   appointmentBestillTime: string;
+  /** 
+  * Avtalen ble avlyst av organisasjonen som skulle utføre avtalen.
+  */
+  appointmentDetailsCancellationReasonService: string;
+  /** 
+  * Avtalen ble avlyst fordi ingen var hjemme.
+  */
+  appointmentDetailsCancellationReasonAway: string;
+  /** 
+  * Avtalen ble avlyst av innbygger.
+  */
+  appointmentDetailsCancellationReasonInhabitant: string;
+  /** 
+  * Avtalen ble avlyst av person med fullmakt for innbygger.
+  */
+  appointmentDetailsCancellationReasonProxy: string;
 };
 
 export type HNMinHelseDialog = { 
@@ -10694,6 +10694,10 @@ export type HNMinHelseDinFastlegeJS = {
   */
   dfl_title: string;
   /** 
+  * E-konsultasjon med {0}
+  */
+  dfl_DigitaleTjenester_EKonsultasjon_long: string;
+  /** 
   * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
   */
   dfl_DigitaleTjenester_IngenTilgjengelige: string;
@@ -10737,10 +10741,6 @@ export type HNMinHelseDinFastlegeJS = {
   * Hvem vil du sende melding til?
   */
   dfl_DigitaleTjenester_Mottaker: string;
-  /** 
-  * E-konsultasjon med {0}
-  */
-  dfl_DigitaleTjenester_EKonsultasjon_long: string;
 };
 
 export type HNMinHelseDirekteinnsynJS = { 
@@ -11556,10 +11556,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   dokument_filter_innholdType_helseattest: string;
   /** 
-  * Du er i ferd med å slette dokumentet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Er du helt sikker på at du vil slette?
-  */
-  deleteDialogConfirmationMessage: string;
-  /** 
   * Sjekk at alt er riktig utfylt
   */
   egenskaper_validationError: string;
@@ -11567,6 +11563,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Du må skrive inn et navn
   */
   egenskaper_navnError: string;
+  /** 
+  * Du er i ferd med å slette dokumentet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Er du helt sikker på at du vil slette?
+  */
+  deleteDialogConfirmationMessage: string;
   /** 
   * {"synlig":"True","sporsmalstekst":"","bobletekst":"Dersom du vil gi dokumentet et annet visningsnavn kan du gjøre det her. Opprinnelig filnavn endres ikke.","seksjonstekst_overskrift":"","seksjonstekst_brodtekst":""}
   */
@@ -11660,6 +11660,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   lightbox_slette_skjema_title: string;
   /** 
+  * Skjult for fullmektige
+  */
+  skjult_for_fullmektige: string;
+  /** 
   * Handlingen mislyktes. Prøv igjen senere.
   */
   fullmektig_error_title: string;
@@ -11707,10 +11711,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Helseregistre
   */
   dokument_filter_kontekstTypeValue_2: string;
-  /** 
-  * Skjult for fullmektige
-  */
-  skjult_for_fullmektige: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
@@ -13551,6 +13551,10 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_KJ_kontaktinfo_Title: string;
   /** 
+  * Logg over bruk
+  */
+  page_logg_tableCaption: string;
+  /** 
   * Tabell som viser sykdomshistorikk
   */
   page_SykdomOgKritiskInfo_Table_Caption: string;
@@ -13558,10 +13562,6 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   * Tabell som viser besøkshistorikk
   */
   page_Besokshistorikk_Table_Caption: string;
-  /** 
-  * Logg over bruk
-  */
-  page_logg_tableCaption: string;
   /** 
   * Du kan maksimalt registrere 30 sykdommer. Du må slette noen før du kan registrere nye.
   */
@@ -13646,6 +13646,10 @@ export type HNMinHelseKJStrings = {
   */
   clientOperation_deleteKjKontaktperson_Error_Tekst: string;
   /** 
+  * Meldingen ble ikke sendt.
+  */
+  besokshistorikk_ReportError_Error_Title: string;
+  /** 
   * Prøv på nytt senere, eller bruk <a href="https://helsenorge.no/kjernejournal/skjemaer-for-endring-i-kjernejournal">papirskjema</a> på helsenorge.no for å melde om feil i besøkshistorikk.
   */
   besokshistorikk_ReportError_Error_Body: string;
@@ -13657,10 +13661,6 @@ export type HNMinHelseKJStrings = {
   * Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår.
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message: string;
-  /** 
-  * Meldingen ble ikke sendt.
-  */
-  besokshistorikk_ReportError_Error_Title: string;
   /** 
   * Under ekspedering
   */
@@ -16693,14 +16693,6 @@ export type HNMinHelseNavigation = {
   */
   tile_Verktoy_Description: string;
   /** 
-  * Helsetjenester
-  */
-  group_Helsetjenester_Title: string;
-  /** 
-  * Eksterne tjenester
-  */
-  group_EksterneTjenester_Title: string;
-  /** 
   * Prøvesvar
   */
   tile_Provesvar_Title: string;
@@ -16716,6 +16708,14 @@ export type HNMinHelseNavigation = {
   * Hjelp til å stoppe spredningen av viruset.
   */
   tile_Korona_Description: string;
+  /** 
+  * Helsetjenester
+  */
+  group_Helsetjenester_Title: string;
+  /** 
+  * Eksterne tjenester
+  */
+  group_EksterneTjenester_Title: string;
   /** 
   * Egne dokumenter lagret på Helsenorge.
   */
@@ -19301,6 +19301,10 @@ export type HNMinHelsePasientjournal = {
   */
   tilgangsloggBakgrunnForInnsynEmergencyCare: string;
   /** 
+  * Lovisenberg Diakonale Sykehus AS
+  */
+  xDS_LokasjonFeil_LDS: string;
+  /** 
   * Dine filtervalg returnerer for mange dokumenter
   */
   warning_DocumentList_OverTerskelverdi_Title: string;
@@ -19316,10 +19320,6 @@ export type HNMinHelsePasientjournal = {
   * Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun de siste {0} dokumentene. Velg andre datoer eller dokumenttyper for å se andre dokumenter.
   */
   warning_DocumentList_OverTerskelverdi_Init_Body: string;
-  /** 
-  * Lovisenberg Diakonale Sykehus AS
-  */
-  xDS_LokasjonFeil_LDS: string;
   /** 
   * {0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.
   */
@@ -19514,6 +19514,10 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_FORESATT_lokalMinstetakst_content: string;
   /** 
+  * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter.
+  */
+  reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone: string;
+  /** 
   * Vedtaket er revidert
   */
   overview_statuser_statusTypeRekvisjon_soknad_VEDTAK_OMGJORT: string;
@@ -19530,10 +19534,6 @@ export type HNMinHelsePasientreiserJS = {
   * kan behandle søknaden min automatisk.
   */
   samtykke_pasientreiser_avsnitt4: string;
-  /** 
-  * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter.
-  */
-  reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone: string;
   /** 
   * Vil du delta i en brukerundersøkelse om Pasientreiser?
   */
@@ -26041,6 +26041,10 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
+  * Du har ikke tilgang til samtykkedefinisjonen.
+  */
+  samtykkeDefinisjonAccessDeniedBody: string;
+  /** 
   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
   */
   hjelpekontekst_profilBrukOgTilganger: string;
@@ -26049,13 +26053,21 @@ export type HNMinHelsePersonvernStrings = {
   */
   hjelpekontekst_profilLogg: string;
   /** 
-  * Prøvesvar
+  * Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon
   */
-  page_HendelsesLogg_39: string;
+  page_Helseopplysninger_PLL_Selected_Log_ContentTilgangsbegrensningTitle: string;
   /** 
-  * Du har ikke tilgang til samtykkedefinisjonen.
+  * Blokker tilgang for alt helsepersonell (unntatt din fastlege) i din legemiddelinformasjon
   */
-  samtykkeDefinisjonAccessDeniedBody: string;
+  page_Helseopplysninger_PLL_Log_AllBlockTilgangsbegrensningTitle: string;
+  /** 
+  * Sperret
+  */
+  page_Helseopplysninger_PLL_Log_Blocked: string;
+  /** 
+  * Opphevet sperre
+  */
+  page_Helseopplysninger_PLL_Log_UnBlocked: string;
   /** 
   * Varsel om at fullmakter snart slettes
   */
@@ -26086,22 +26098,6 @@ export type HNMinHelsePersonvernStrings = {
   * Du har allerede lagt inn blokkering for angitt helsepersonell.
   */
   page_Helseopplysninger_PLL_TilgangsbegrensningDataFinnesHelsepersonell: string;
-  /** 
-  * Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon
-  */
-  page_Helseopplysninger_PLL_Selected_Log_ContentTilgangsbegrensningTitle: string;
-  /** 
-  * Blokker tilgang for alt helsepersonell (unntatt din fastlege) i din legemiddelinformasjon
-  */
-  page_Helseopplysninger_PLL_Log_AllBlockTilgangsbegrensningTitle: string;
-  /** 
-  * Sperret
-  */
-  page_Helseopplysninger_PLL_Log_Blocked: string;
-  /** 
-  * Opphevet sperre
-  */
-  page_Helseopplysninger_PLL_Log_UnBlocked: string;
   /** 
   * Registrering
   */
@@ -26254,10 +26250,6 @@ export type HNMinHelsePersonvernStrings = {
   * Samtykket
   */
   page_Helsetjenester_Historikk_PhaConsent: string;
-  /** 
-  * Enkelte valg er utilgjengelige fordi du selv ikke har gitt samtykke som tillater disse valgene. Du kan ikke gi en fullmakt til et område du selv ikke har samtykket til. Dersom du ønsker, kan du forandre på samtykkene dine på siden Profil og innstillinger, under Personverninnstillinger.
-  */
-  page_Fullmakt_Lightbox_Configure_Utilgjenglige_Valg_Warning: string;
   /** 
   * Ok
   */
@@ -27288,6 +27280,14 @@ export type HNMinHelseSkjemautfyller = {
   */
   varselmeny_Skjemaoppgave_Paaminnelse_Tekst: string;
   /** 
+  * Hopp til navigator
+  */
+  skipLinkText: string;
+  /** 
+  * Maksimum {0} tegn
+  */
+  maxLengthText: string;
+  /** 
   * Hjelp
   */
   sidebar_titleVeileder: string;
@@ -27307,18 +27307,6 @@ export type HNMinHelseSkjemautfyller = {
   * Om veilederen
   */
   sidebarSectionHeader_Veileder: string;
-  /** 
-  * Hopp til navigator
-  */
-  skipLinkText: string;
-  /** 
-  * Du har skrevet for mange tegn. Gjør teksten kortere.
-  */
-  stringOverMaxLengthError: string;
-  /** 
-  * Maksimum {0} tegn
-  */
-  maxLengthText: string;
   /** 
   * Du må {loginLink} for å kunne sende skjema. Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
   */
@@ -27352,13 +27340,13 @@ export type HNMinHelseSkjemautfyller = {
   */
   autosuggestNoSuggestions: string;
   /** 
-  * Teknisk feil
+  * Du må fylle ut dette feltet
   */
-  autoSuggestLoadError: string;
+  formRequiredErrorMessage: string;
   /** 
-  * Last opp fil
+  * Slett
   */
-  uploadButtonText: string;
+  deleteAttachmentText: string;
   /** 
   * Om skjema
   */
@@ -27440,13 +27428,17 @@ export type HNMinHelseSkjemautfyller = {
   */
   sidebarSectionText_Veiledning_LagringDokument: string;
   /** 
-  * Du må fylle ut dette feltet
+  * Last opp fil
   */
-  formRequiredErrorMessage: string;
+  uploadButtonText: string;
   /** 
-  * Slett
+  * Teknisk feil
   */
-  deleteAttachmentText: string;
+  autoSuggestLoadError: string;
+  /** 
+  * Du har skrevet for mange tegn. Gjør teksten kortere.
+  */
+  stringOverMaxLengthError: string;
   /** 
   * Skjemaet er lagret i Dokumenter.
   */
@@ -27463,54 +27455,6 @@ export type HNMinHelseSkjemautfyller = {
   * Velg filer
   */
   chooseFilesText: string;
-  /** 
-  * Det skjedde en feil under lagring av skjema.
-  */
-  lagreSkjemaErrorTitle: string;
-  /** 
-  * Prøv igjen senere.
-  */
-  lagreSkjemaErrorBody: string;
-  /** 
-  * Det har skjedd en teknisk feil
-  */
-  loadSkjemaErrorTitle: string;
-  /** 
-  * Prøv igjen senere.
-  */
-  loadSkjemaErrorBody: string;
-  /** 
-  * Slett
-  */
-  deleteButtonText: string;
-  /** 
-  * Sjekk at følgende er riktig utfylt:
-  */
-  validationSummaryHeader: string;
-  /** 
-  * Velg ett av alternativene.
-  */
-  selectDefaultPlaceholder: string;
-  /** 
-  * Nullstill tidspunkt
-  */
-  resetTime: string;
-  /** 
-  * Filstørrelsen må være mindre enn 25MB
-  */
-  validationFileMax: string;
-  /** 
-  * Filtypen må være jpeg, png, eller pdf
-  */
-  validationFileType: string;
-  /** 
-  * Gyldige filformater er jpeg, png og pdf
-  */
-  supportedFileFormats: string;
-  /** 
-  * Ikke besvart
-  */
-  ikkeBesvart: string;
   /** 
   * Ditt skjema mellomlagres i innboksen og du kan fortsette utfyllingen derfra senere.
   */
@@ -27615,6 +27559,54 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   berikingFailedOnRetrievalTitle: string;
   /** 
+  * Det skjedde en feil under lagring av skjema.
+  */
+  lagreSkjemaErrorTitle: string;
+  /** 
+  * Prøv igjen senere.
+  */
+  lagreSkjemaErrorBody: string;
+  /** 
+  * Det har skjedd en teknisk feil
+  */
+  loadSkjemaErrorTitle: string;
+  /** 
+  * Prøv igjen senere.
+  */
+  loadSkjemaErrorBody: string;
+  /** 
+  * Slett
+  */
+  deleteButtonText: string;
+  /** 
+  * Sjekk at følgende er riktig utfylt:
+  */
+  validationSummaryHeader: string;
+  /** 
+  * Velg ett av alternativene.
+  */
+  selectDefaultPlaceholder: string;
+  /** 
+  * Nullstill tidspunkt
+  */
+  resetTime: string;
+  /** 
+  * Filstørrelsen må være mindre enn 25MB
+  */
+  validationFileMax: string;
+  /** 
+  * Filtypen må være jpeg, png, eller pdf
+  */
+  validationFileType: string;
+  /** 
+  * Gyldige filformater er jpeg, png og pdf
+  */
+  supportedFileFormats: string;
+  /** 
+  * Ikke besvart
+  */
+  ikkeBesvart: string;
+  /** 
   * Skjemaet er lagret i innboksen
   */
   lagreSkjemaBody: string;
@@ -27692,46 +27684,6 @@ export type HNMinHelseVerktoy = {
   * Helseområde
   */
   verktoyFilterHelseomrade: string;
-  /** 
-  * Fjern fra mine verktøy
-  */
-  removeVerktoyButtonText: string;
-  /** 
-  * Er du sikker på at du vil fjerne {0}?
-  */
-  confirmFjernVerktoyHeader: string;
-  /** 
-  * Er du sikker på at du vil slette {0}?
-  */
-  confirmSlettVerktoyHeader: string;
-  /** 
-  * Verktøyet vil bli borte fra mine verktøy, men du kan legge det til på nytt når du vil.
-  */
-  confirmFjernVerktoyBody: string;
-  /** 
-  * Du er i ferd med å slette verktøyet. Dersom du ønsker å bruke verktøyet i fremtiden må du be behandleren din om å sende det til deg på nytt.
-  */
-  confirmSlettVerktoyBody: string;
-  /** 
-  * Les mindre om verktøyet
-  */
-  readLessButtonText: string;
-  /** 
-  * Logg inn for å se dine verktøy
-  */
-  loginButtonText: string;
-  /** 
-  * Vis kun verktøy som jeg kan åpne uten å logge inn
-  */
-  visKunVerktoySomKanApnesAnonymt: string;
-  /** 
-  * Du er i ferd med å slette verktøyet. Det vil bli borte fra mine verktøy og det vil ikke være mulig å legge det til på nytt.
-  */
-  confirmSlettUtgattVerktoyBody: string;
-  /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Dette verktøyet er ikke lenger tilgjengelig","seksjonstekst_brodtekst":"Verktøy som ikke lenger er tilgjengelig kan ikke åpnes selv om du har brukt dem tidligere. Verktøy kan trekkes tilbake fordi innholdet er utdatert eller fordi det kun er tilgjengelig i en begrenset periode."}
-  */
-  hjelpetrigger_verktoyIkkeTilgjengelig: string;
   /** 
   * Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.
   */
@@ -27872,6 +27824,46 @@ export type HNMinHelseVerktoy = {
   * Kartlegging
   */
   verktoyFormalKartlegging: string;
+  /** 
+  * Fjern fra mine verktøy
+  */
+  removeVerktoyButtonText: string;
+  /** 
+  * Er du sikker på at du vil fjerne {0}?
+  */
+  confirmFjernVerktoyHeader: string;
+  /** 
+  * Er du sikker på at du vil slette {0}?
+  */
+  confirmSlettVerktoyHeader: string;
+  /** 
+  * Verktøyet vil bli borte fra mine verktøy, men du kan legge det til på nytt når du vil.
+  */
+  confirmFjernVerktoyBody: string;
+  /** 
+  * Du er i ferd med å slette verktøyet. Dersom du ønsker å bruke verktøyet i fremtiden må du be behandleren din om å sende det til deg på nytt.
+  */
+  confirmSlettVerktoyBody: string;
+  /** 
+  * Les mindre om verktøyet
+  */
+  readLessButtonText: string;
+  /** 
+  * Logg inn for å se dine verktøy
+  */
+  loginButtonText: string;
+  /** 
+  * Vis kun verktøy som jeg kan åpne uten å logge inn
+  */
+  visKunVerktoySomKanApnesAnonymt: string;
+  /** 
+  * Du er i ferd med å slette verktøyet. Det vil bli borte fra mine verktøy og det vil ikke være mulig å legge det til på nytt.
+  */
+  confirmSlettUtgattVerktoyBody: string;
+  /** 
+  * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Dette verktøyet er ikke lenger tilgjengelig","seksjonstekst_brodtekst":"Verktøy som ikke lenger er tilgjengelig kan ikke åpnes selv om du har brukt dem tidligere. Verktøy kan trekkes tilbake fordi innholdet er utdatert eller fordi det kun er tilgjengelig i en begrenset periode."}
+  */
+  hjelpetrigger_verktoyIkkeTilgjengelig: string;
   /** 
   * Nytt digitalt verktøy fra
   */
@@ -30568,14 +30560,6 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   field_ImageCaption_Title: string;
   /** 
-  * Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?
-  */
-  pdfCompatibilityBodyPreview: string;
-  /** 
-  * Se forhåndsvisning
-  */
-  pdfCompatibilityPreview: string;
-  /** 
   * For å benytte denne siden når du er innlogget må du samtykke til digitale helsetjenester.
   */
   samvalg_HelsetjenesteText_TextString: string;
@@ -30591,6 +30575,14 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   * Digitale helsetjenester
   */
   samvalg_HelsetjenesteText_Header: string;
+  /** 
+  * Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?
+  */
+  pdfCompatibilityBodyPreview: string;
+  /** 
+  * Se forhåndsvisning
+  */
+  pdfCompatibilityPreview: string;
   /** 
   * Brødtekst - Mine muligheter
   */
