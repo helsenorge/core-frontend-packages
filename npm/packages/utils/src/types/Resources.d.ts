@@ -28130,49 +28130,9 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   */
   page_Kontakt_NotificationProfile_Difi_Mismatch: string;
   /** 
-  * Velg dato
-  */
-  page_Fullmakt_Lightbox_Configure_DatePickerButton: string;
-  /** 
-  * Velg familiemedlem
-  */
-  page_Fullmakt_Lightbox_SelectPerson_Family: string;
-  /** 
-  * Gyldig fra nå til og med:
-  */
-  page_Fullmakt_Lightbox_Configure_Duration: string;
-  /** 
-  * Henvisninger
-  */
-  page_HendelsesLogg_16: string;
-  /** 
-  * Ingen registrerte
-  */
-  page_Fullmakt_Lightbox_SelectPerson_Family_NoneRegistered: string;
-  /** 
-  * Pasientreiser
-  */
-  page_HendelsesLogg_17: string;
-  /** 
   * Kan ikke endre fullmakten fordi den ikke finnes eller ikke lenger er gyldig.
   */
   page_Fullmakt_Lightbox_Update_Error_EditNotExist: string;
-  /** 
-  * Vis flere
-  */
-  page_HendelsesLogg_LoadMore: string;
-  /** 
-  * Opprettet
-  */
-  page_Fullmakt_Historikk_Column_Created: string;
-  /** 
-  * Avsluttet
-  */
-  page_Fullmakt_Historikk_Column_Ended: string;
-  /** 
-  * Fødselsnummer
-  */
-  shared_Text_Fnr: string;
   /** 
   * {"defaulttekst_overskrift":"Fullmakter","defaulttekst_brodtekst":"<p>\nHer vises hvem du har gitt fullmakt til eller fått fullmakt fra, og hvor lenge fullmaktene er gyldige. Du vil også kunne finne fullmakter du ikke har gitt selv, som for eksempel etter en vurdering fra lege. Her kan du også endre eller avslutte fullmakter du har gitt, eller opprette en ny fullmakt.\n</p>\n\n<p>\nDu må være over 16 år for å kunne gi en fullmakt til å benytte tjenester på vegne av andre. Den som får fullmakten må være over 18 år.\n</p>\n\n<h3>Samtykke</h3>\n<p>\nFor at du skal kunne gi en fullmakt, må du samtykke til de tjenestene fullmakten skal gjelde. Den du gir fullmakt kan ikke samtykke på vegne av deg.\n</p>\n\n<h3>Begrensninger og endringer?</h3>\n<p>\nEn fullmakt kan være gyldig i en begrenset periode, eller på ubestemt tid. Fullmakter som fremdeles er gyldige kan endres. Når en fullmakt endres vil den slettes, og en ny blir da automatisk opprettet, med endringene. Slettede fullmakter og fullmakter som ikke lenger er gyldige vil automatisk flyttes over i historikken.\n</p>\n\n<p>\nDu kan velge hva fullmakten skal omfatte ved å velge ett eller flere av de tre tjenesteområdene. Fullmakten vil automatisk gjelde for nye tjenester innen de valgte områdene, når de blir tilgjengelige. Dersom det legges til tjenester som må anses som en vesentlig endring, kan det hende at du må bekrefte fullmakten på nytt.\n</p>\n\n<p>\n<a href=\"{HelsenorgeUrl}/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no\">Her kan du lese mer om å representere andre på Helsenorge</a>.\n</p>"}
   */
@@ -28299,22 +28259,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * Jeg samtykker til at Pasientreiser:
   */
   page_Helsetjenester_Pasientreiser_NoConcent_Title: string;
-  /** 
-  * Fullmakten gjaldt
-  */
-  page_Fullmakt_Historikk_Column_TjenesteOmrader: string;
-  /** 
-  * Historikk
-  */
-  page_Fullmakt_Historikk_Title: string;
-  /** 
-  * Endre fullmakt
-  */
-  page_Fullmakt_Lightbox_Update_Title: string;
-  /** 
-  * Du er i ferd med å endre fullmakt til:
-  */
-  page_Fullmakt_Lightbox_Update_Description: string;
   /** 
   * Du kan ikke gi fullmakt til representert bruker.
   */
@@ -28575,10 +28519,6 @@ Blokkeringen gjelder alltid – også i akuttsituasjoner. På helsenorge.no vil 
   * Du er i ferd med å fjerne din tilgang til pasientjournal på helsenorge.no
   */
   page_Helsetjenester_Pasientjournal_ConfirmReservationTitle: string;
-  /** 
-  * Navn
-  */
-  page_Fullmakt_Historikk_Column_Name: string;
   /** 
   * Utlevering med fødselsnummer fra Kommunalt pasient- og brukerregister (KPR)
   */
