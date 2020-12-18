@@ -26335,6 +26335,118 @@ export type HNMinHelsePersonvernStrings = {
   */
   shared_Foreldrerepresentasjon: string;
   /** 
+  * Egen bruk
+  */
+  shared_InnloggetBruker: string;
+  /** 
+  * Egen bruk
+  */
+  shared_InnloggetBrukerInnloggetBruker: string;
+  /** 
+  * Egen bruk
+  */
+  shared_InnbyggerSelv: string;
+  /** 
+  * Foreldreansvar
+  */
+  shared_Foreldreansvar: string;
+  /** 
+  * Foreldreansvar med daglig omsorg
+  */
+  shared_ForeldreansvarMedDagligOmsorg: string;
+  /** 
+  * Ved fullmakt
+  */
+  shared_Fullmektig: string;
+  /** 
+  * Saksbehandling
+  */
+  shared_AnalogKanal: string;
+  /** 
+  * Bakgrunn
+  */
+  page_HendelsesLogg_Column_How: string;
+  /** 
+  * Når
+  */
+  page_HendelsesLogg_Column_When: string;
+  /** 
+  * Hvem
+  */
+  page_HendelsesLogg_Column_Who: string;
+  /** 
+  * Finner ingen hendelser.
+  */
+  page_HendelsesLogg_Empty: string;
+  /** 
+  * Henvisninger
+  */
+  page_HendelsesLogg_16: string;
+  /** 
+  * Pasientreiser
+  */
+  page_HendelsesLogg_17: string;
+  /** 
+  * Vis flere
+  */
+  page_HendelsesLogg_LoadMore: string;
+  /** 
+  * Kjernejournal
+  */
+  page_HendelsesLogg_11: string;
+  /** 
+  * Min helse forside
+  */
+  page_HendelsesLogg_15: string;
+  /** 
+  * Pasientjournal
+  */
+  page_HendelsesLogg_10: string;
+  /** 
+  * Helsekontakter
+  */
+  page_HendelsesLogg_18: string;
+  /** 
+  * Logget inn
+  */
+  page_HendelsesLogg_1: string;
+  /** 
+  * Avtaleadministrasjon
+  */
+  page_HendelsesLogg_BrukAvTjenesteAvtaleAdm: string;
+  /** 
+  * Dialogadministrasjon
+  */
+  page_HendelsesLogg_BrukAvTjenesteDialogAdm: string;
+  /** 
+  * Frikort og egenandeler
+  */
+  page_HendelsesLogg_12: string;
+  /** 
+  * Fastlegetjenester
+  */
+  page_HendelsesLogg_6: string;
+  /** 
+  * Fastlegevisning
+  */
+  page_HendelsesLogg_9: string;
+  /** 
+  * Fullmakt
+  */
+  page_HendelsesLogg_14: string;
+  /** 
+  * Profil og innstillinger
+  */
+  page_HendelsesLogg_13: string;
+  /** 
+  * Resepter
+  */
+  page_HendelsesLogg_7: string;
+  /** 
+  * Vestlandspasienten
+  */
+  page_HendelsesLogg_5: string;
+  /** 
   * Du har ikke tilgang til samtykkedefinisjonen.
   */
   samtykkeDefinisjonAccessDeniedBody: string;
