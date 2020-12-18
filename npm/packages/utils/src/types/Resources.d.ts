@@ -26455,6 +26455,82 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_2: string;
   /** 
+  * Ordning
+  */
+  page_HendelsesLogg_Column_Ordning: string;
+  /** 
+  * Ingen historiske ordninger
+  */
+  page_HendelsesLogg_Ingen_Ordninger: string;
+  /** 
+  * Ingen historiske tjenester
+  */
+  page_HendelsesLogg_Ingen_Tjeneste: string;
+  /** 
+  * Administrering av fullmakter
+  */
+  page_HendelsesLogg_21: string;
+  /** 
+  * Helseregistre
+  */
+  page_HendelsesLogg_23: string;
+  /** 
+  * Forskning
+  */
+  page_HendelsesLogg_26: string;
+  /** 
+  * Bruk av resepter
+  */
+  page_HendelsesLogg_24: string;
+  /** 
+  * Sykdom og kritisk informasjon
+  */
+  page_HendelsesLogg_25: string;
+  /** 
+  * Hva
+  */
+  page_HendelsesLogg_Column_Event: string;
+  /** 
+  * Beslutningstøtte
+  */
+  page_HendelsesLogg_22: string;
+  /** 
+  * Legemidler
+  */
+  page_HendelsesLogg_30: string;
+  /** 
+  * Vaksiner
+  */
+  page_HendelsesLogg_29: string;
+  /** 
+  * Åpne kjernejournal
+  */
+  page_HendelsesLogg_33: string;
+  /** 
+  * Donorkort
+  */
+  page_HendelsesLogg_BrukAvDonorkort: string;
+  /** 
+  * Donorkort
+  */
+  page_HendelsesLogg_34: string;
+  /** 
+  * Dokumenter
+  */
+  page_HendelsesLogg_8: string;
+  /** 
+  * Beskrivelse
+  */
+  page_HendelsesLogg_Column_Tjeneste: string;
+  /** 
+  * Verktøy
+  */
+  page_HendelsesLogg_36: string;
+  /** 
+  * Skjemautfyller
+  */
+  page_HendelsesLogg_35: string;
+  /** 
   * Du har ikke tilgang til samtykkedefinisjonen.
   */
   samtykkeDefinisjonAccessDeniedBody: string;
