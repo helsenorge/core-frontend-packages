@@ -26447,6 +26447,14 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_5: string;
   /** 
+  * Bytte fastlege
+  */
+  page_HendelsesLogg_20: string;
+  /** 
+  * Timeavtaler
+  */
+  page_HendelsesLogg_2: string;
+  /** 
   * Du har ikke tilgang til samtykkedefinisjonen.
   */
   samtykkeDefinisjonAccessDeniedBody: string;
