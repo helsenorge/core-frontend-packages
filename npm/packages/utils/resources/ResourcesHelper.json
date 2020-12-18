@@ -6613,6 +6613,8 @@
     "page_HendelsesLogg_13": "Profil og innstillinger",
     "page_HendelsesLogg_7": "Resepter",
     "page_HendelsesLogg_5": "Vestlandspasienten",
+    "page_HendelsesLogg_20": "Bytte fastlege",
+    "page_HendelsesLogg_2": "Timeavtaler",
     "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
     "hjelpekontekst_profilBrukOgTilganger": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
