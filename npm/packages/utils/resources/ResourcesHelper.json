@@ -1,12 +1,12 @@
 {
-  "HNCommon": { 
+  "HNCommon": {
     "role_Designer_Title": "Utforme",
     "webPart_FlexibleText_BiggerEditor": "Større editor",
     "webPart_FlexibleText_ToolPartTitle": "Redigerbare tekster",
     "webPart_PagePromotion_SelectPage_Text": "Select Page",
     "iKKE_BRUK_KUN_FOR_TEST": "test ikke i bruk enda altså"
   },
-  "HNCoreFrontendMicrowebHeaderFooter": { 
+  "HNCoreFrontendMicrowebHeaderFooter": {
     "headerMenuProfileLinksFullmakterUrl": "/fullmakt",
     "headerMenuProfileLinksFullmakterTitle": "Fullmakter",
     "headerMenuProfileLinksLoggOverBrukTitle": "Logg over bruk",
@@ -61,12 +61,12 @@
     "personvelgerIngress": "Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.",
     "personvelgerHeader": "Hvem sine helseopplysninger vil du se?"
   },
-  "HNCoreFrontendNPMPackagesCMS": { 
+  "HNCoreFrontendNPMPackagesCMS": {
     "searchPlaceholder": "Søk",
     "searchSubmitLabel": "Søk",
     "searchErrorSuggestionFetch": "Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere."
   },
-  "HNCoreFrontendNPMPackagesFramework": { 
+  "HNCoreFrontendNPMPackagesFramework": {
     "pendingChangesConfirm": "Fortsett redigering",
     "pendingChangesClose": "Forkast endringer",
     "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
@@ -79,7 +79,7 @@
     "personvelgerIngress": "Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.",
     "personvelgerHeader": "Hvem sine helseopplysninger vil du se?"
   },
-  "HNCoreFrontendWebForside": { 
+  "HNCoreFrontendWebForside": {
     "searchContainerTitle": "Søk i kvalitetssikret helseinformasjon",
     "searchContainerPlaceholder": "Hva leter du etter?",
     "searchContainerAnchor": "Gå til Innhold A til Å",
@@ -980,7 +980,7 @@
     "pageNotFoundDescription": "Se etter en skrivefeil i URL-adressen, eller gå til forsiden.",
     "pageNotFoundToStart": "Gå til forside"
   },
-  "HNMinHelseCommon": { 
+  "HNMinHelseCommon": {
     "bruksvilkarPopup_ErrorDescription": "Du kan prøve igjen senere.",
     "bruksvilkarPopup_ErrorMessage": "Det gikk ikke å lagre samtykket ditt.",
     "bruksvilkarPopup_Header": "Bruksvilkår for Min helse",
@@ -992,7 +992,7 @@
     "regionPopup_Heading": "Velg helseregion",
     "regionPopup_Intro": "Du kan se pasientjournalen din i regionene Helse Nord og Helse Vest."
   },
-  "HNMinHelseContent": { 
+  "HNMinHelseContent": {
     "page_Pasientreisersoknad_Desc": "",
     "page_Pasientreisersoknad_Title": "Pasientreiser",
     "page_Pasientreiser_Desc": "",
@@ -1151,7 +1151,7 @@
     "page_Skjemautfyller_Title": "Skjemautfyller",
     "page_Skjemautfyller_Desc": "Skjemautfyller"
   },
-  "HNMinHelseDialogGPStrings": { 
+  "HNMinHelseDialogGPStrings": {
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
     "webPart_GPInfo_So_Consulting_Title": "Start e-konsultasjon",
     "so_RenewPrescription_MissingText_Error": "Vennligst fyll ut resept og merknad",
@@ -1259,7 +1259,7 @@
     "webPart_GPInfo_Title_ContactInfo": "Kontaktinformasjon",
     "webPart_GPInfo_Title_Coordinates": "GPS Koordinater: "
   },
-  "HNMinHelseDialogJS": { 
+  "HNMinHelseDialogJS": {
     "conversationSystemDialogueCancellationDeniedPostfix": "har <b> IKKE </b> blitt avlyst.",
     "conversationSystemDialogueCancellationDeniedPrefix": "Din timeavtale",
     "conversationSystemDialogueChangeConfirmedPostfix": "hos",
@@ -2267,7 +2267,7 @@
     "appointmentDetailsCancellationReasonInhabitant": "Avtalen ble avlyst av innbygger.",
     "appointmentDetailsCancellationReasonProxy": "Avtalen ble avlyst av person med fullmakt for innbygger."
   },
-  "HNMinHelseDialog": { 
+  "HNMinHelseDialog": {
     "getReferral_WarningHelseSorOst": "For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.",
     "getReferral_WarningHelseSorOstSourceSystem": "For øyeblikket kan det hende at ikke alle henvisningene hos Helse Sør-Øst vises.",
     "journalAccess_EmneSporsmal": "Kopi av pasientjournal",
@@ -2412,7 +2412,7 @@
     "clientOperation_CancelAppointment_SaveError_Body": "Prøv på nytt senere, eller kontakt behandlingsstedet.",
     "clientOperation_CancelAppointment_SaveError_Title": "Avbestilling av time ble ikke utført"
   },
-  "HNMinHelseDialogVPJS": { 
+  "HNMinHelseDialogVPJS": {
     "summaryInfix": " av ",
     "summaryPrefix": "Viser ",
     "tilgangsloggKolonneSisteInnsyn": "Siste innsyn",
@@ -2601,7 +2601,7 @@
     "webPart_DocumentDetails_Download": "Lagre",
     "webPart_DocumentDetails_Print": "Skriv ut"
   },
-  "HNMinHelseDinFastlegeJS": { 
+  "HNMinHelseDinFastlegeJS": {
     "dfl_DigitaleTjenester_BestillTime": "Bestill time",
     "dfl_DigitaleTjenester_BestillTime_TilbysIkkeText": "Fastlegen tilbyr ikke bestill time",
     "dfl_DigitaleTjenester_BestillTime_TilbysText": "Bestill time hos fastlegen din.",
@@ -2692,7 +2692,7 @@
     "dfl_DigitaleTjenester_IngenTilgjengelige": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.",
     "dfl_DinFastlegeBanner_Digitaletjenester": "Digitale tjenester på Helsenorge"
   },
-  "HNMinHelseDirekteinnsynJS": { 
+  "HNMinHelseDirekteinnsynJS": {
     "sysvak_innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
     "sysvak_innsyn_innhold_content": "Her ser du en oversikt over dine vaksinasjoner.",
     "sysvak_innsyn_loggoverbruk_content": "Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret.",
@@ -2771,7 +2771,7 @@
     "donorkort_addparorende_error": "Registrering av pårørende feilet",
     "donorkort_addparorende_error_confirm": "Ok"
   },
-  "HNMinHelseForskningJS": { 
+  "HNMinHelseForskningJS": {
     "kliniskeStudierLinkText": "Her kan du lese mer om",
     "kliniskeStudierLinkText2": "kliniske studier.",
     "emptyList": "Du er foreløpig ikke registrert som deltager i noen forskningsprosjekter som vises i tjenesten.",
@@ -2781,7 +2781,7 @@
     "expandButtonText": "Les mer",
     "hjelpekontekst_forskning": "{\"defaulttekst_overskrift\":\"Om Forskning\",\"defaulttekst_brodtekst\":\"<p>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden. </p>\\n<p>For øyeblikket er det kun Helseundersøkelsen i Nord-Trøndelag (HUNT) som er med i denne tjenesten på helsenorge.no. Flere helseundersøkelser vil bli lagt til etter hvert. Er du ikke med i noen av helseundersøkelsene som er omfattet av tjenesten, vil siden vises uten innhold. </p>\\n\\n<p>Du har rett til innsyn i opplysningene som er lagret om deg. Under hver oppføring finner du informasjon om hvor du kan henvende deg for å få slikt innsyn. </p>\\n<p>De som behandler opplysningene har taushetsplikt, og opplysninger som kan kobles til identifiserbare personer er strengt regulert. </p>\\n\\n<p><a href=\\\"https://www.helsenorge.no/forskning/om/\\\">Her kan du lese mer om Forskning og helseundersøkelser</a>.</p>\"}"
   },
-  "HNMinHelseHealthArchiveStringsJS": { 
+  "HNMinHelseHealthArchiveStringsJS": {
     "deleteDialogCancel": "Avbryt",
     "deleteDialogContinue": "Slett",
     "deleteDialogHeader": "Slett dokument",
@@ -2939,10 +2939,10 @@
     "lightbox_slette_skjema_description": "Du er i ferd med å slette skjemautkastet fra Helsenorge. Det vil ikke være mulig å angre slettingen. Hvis du sletter og deretter angrer på det, må du starte utfylling på nytt fra oppgaven eller skjemalenken du benyttet da du opprettet skjemaet. Er du helt sikker på at du vil slette?",
     "lightbox_slette_skjema_title": "Slett skjemautkast"
   },
-  "HNMinHelseHealthArchiveStrings": { 
+  "HNMinHelseHealthArchiveStrings": {
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
   },
-  "HNMinHelseHelseregistreJS": { 
+  "HNMinHelseHelseregistreJS": {
     "filterIngenRegistre": "Ingen registre",
     "registerSistOppdatert": "Sist oppdatert:",
     "filterDigitaltInnsyn": "Registre som tilbyr innsyn på helsenorge.no",
@@ -3112,7 +3112,7 @@
     "egenandeler_status_minste_belop_v2": "Minstebeløp for utbetaling er",
     "egenandeler_status_neste_dato_v2": "Utbetales fra Helfo"
   },
-  "HNMinHelseHFTStrings": { 
+  "HNMinHelseHFTStrings": {
     "webPart_MyDeductibles_ShowAddress": "Hent adresse/kontonummer",
     "webPart_MyDeductibles_TableSum": "Totalsum",
     "webPart_MyDeductibles_Text0": "Mine egenandeler i {0}",
@@ -3160,7 +3160,7 @@
     "webPart_MyDeductibles_ErrorNoResponse": "Det oppstod en feil ved henting av informasjon om dine egenandeler og frikort. Vennligst prøv igjen senere.",
     "webPart_MyDeductibles_Header_DeductiblesAfter": "Egenandeler registrert etter vedtak om frikort:"
   },
-  "HNMinHelseKJStringsJS": { 
+  "HNMinHelseKJStringsJS": {
     "page_KI_validFrom": "Gyldig fra:",
     "page_KI_validthrough": "Gyldig til:",
     "page_KI_verifiedmessage": "Ingen kjente opplysninger. Verifisert {0} av {1}, {2}.",
@@ -3419,7 +3419,7 @@
     "filter_digitaltInnsyn": "Digitalt Innsyn",
     "inputStringOverMaxLength": "Du har skrevet for mange tegn. Gjør teksten kortere."
   },
-  "HNMinHelseKJStrings": { 
+  "HNMinHelseKJStrings": {
     "besokshistorikk_ReportError_Error_Title": "Meldingen ble ikke sendt.",
     "clientOperation_getDonorKort_not_available": "Denne tjenesten er ikke tilgjengelig",
     "clientOperation_getDonorKort_KJ_blocked": "<p>Donorkort er ikke tilgjengelig. Kontakt Veiledning helsenorge.no på telefon 23 32 70 00 hvis du ønsker mer informasjon om dette.</p>",
@@ -3965,7 +3965,7 @@
     "mho_martialstatus_livingPartner": "Gjenlevende partner",
     "mho_martialstatus_married": "Gift"
   },
-  "HNMinHelseLegemidlerJS": { 
+  "HNMinHelseLegemidlerJS": {
     "hjelpetrigger_lib_hjelpeskuff": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Om legemiddellisten\",\"seksjonstekst_brodtekst\":\"<p> Her vises din legemiddelliste, samt dine resepter og informasjon om utleverte legemidler, næringsmidler og forbruksmateriell .<br>\\nLegemiddellisten gir deg og helsepersonell en oppdatert oversikt over hvilke legemidler du skal bruke. </p>\\n<p>I fanen «Legemiddelliste» vises din legemiddelliste, i tillegg til  aktive resepter og resepter med utleveringer de siste 12 månedene.  I fanen «Resepthistorikk» vises alle resepter  og utleveringer  tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller hos bandasjisten. Reseptene er merket med kilden.</p>\\n<p> På siden om <a href='/reseptformidleren'>reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href='/kjernejournal-innsyn'>kjernejournal</a>.</p>\\n<p><a href=\\\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\\\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>\"}",
     "mho_prescriptions_antall_utleveringer": "Antall utleveringer:",
     "mho_prescriptions_status_print": "Reseptstatus:",
@@ -4115,7 +4115,7 @@
     "kanselleringUtskriftTilPLO": "Utskrift til PLO",
     "utlevering": "Utlevering"
   },
-  "HNMinHelseMfr": { 
+  "HNMinHelseMfr": {
     "page_Title": "Medisinsk fødselsregister (MFR)",
     "page_Desc": "Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.",
     "innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
@@ -4125,7 +4125,7 @@
     "innsyn_tab_loggoverbruk": "Logg over bruk",
     "innsyn_not_available": "Denne tjenesten er ikke tilgjengelig"
   },
-  "HNMinHelseNavigation": { 
+  "HNMinHelseNavigation": {
     "tile_Resepter_Description": "Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk",
     "tile_Resepter_Title": "Resepter",
     "tile_Timeavtaler_Description": "Timer og avtaler med helsetjenesten.",
@@ -4181,7 +4181,7 @@
     "group_EksterneTjenester_Title": "Eksterne tjenester",
     "tile_DokumentArkiv_Description": "Egne dokumenter lagret på Helsenorge."
   },
-  "HNMinHelseNHNStrings": { 
+  "HNMinHelseNHNStrings": {
     "page_Pasientjournal_Title": "Pasientjournal",
     "error_HprPersonNotFound_Title": "Ugyldig nummer",
     "error_HprPersonNotFound_Body": "Ugyldig nummer. Sjekk at HPR-nummeret er korrekt. Trenger du hjelp kan du ringe Veiledning helsenorge.no på telefon 23 32 70 00.",
@@ -4280,7 +4280,7 @@
     "webPart_LoggedInUser_HeadlineText": "Innlogget som:",
     "webPart_LoggedInUser_Title": "Logget inn bruker"
   },
-  "HNMinHelseNotificationStrings": { 
+  "HNMinHelseNotificationStrings": {
     "pasientreiserVedtak_TextMessage_Body_Representation": "${FirstName} har mottatt et vedtak fra pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.",
     "pasientreiserVedtak_TextMessage_Body_Self": "${FirstName}, du har mottatt et vedtak fra Pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.",
     "prescription_EmailMessage_Body_Representation": "${FirstName} har fått en melding om resept fra ${ActorName}. Logg inn på helsenorge.no for å lese den. ",
@@ -6769,7 +6769,7 @@
     "kanselleringMultidose": "Multidose",
     "kanselleringMultidosepakking": "Multidosepakking"
   },
-  "HNMinHelseSecurityFramework": { 
+  "HNMinHelseSecurityFramework": {
     "inactivity_SignedOut_Button_GoToRoot": "Gå til forsiden",
     "inactivity_SignedOut_Button_SignInAgain": "Logg inn på nytt",
     "inactivity_SignedOut_Title": "Du var stille en stund og har blitt logget ut",
@@ -6914,7 +6914,7 @@
     "ugyldigInputISkjema": "Skjemaet inneholder ugyldige tegn eller verdier. Sjekk at alt er riktig utfylt før du sender inn skjemaet.",
     "validationNotAllowed": "er ikke tillatt"
   },
-  "HNMinHelseSysvak": { 
+  "HNMinHelseSysvak": {
     "innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
     "innsyn_innhold_content": "Her ser du en oversikt over dine vaksinasjoner.",
     "innsyn_tab_innhold": "Innhold",
@@ -7032,7 +7032,7 @@
     "learningResourceAlreadyPickedByUserMessage": "Placeholder tekst",
     "learningResourceAlreadyPickedByUserTitle": "Placeholder tittel"
   },
-  "HNPortal": { 
+  "HNPortal": {
     "userControl_StartInfoPanel_LoginButton_Text": "Logg inn",
     "userControl_StartInfoPanel_Title": "Min helse",
     "field_BsvRefleksjonerSeksjon2_Title": "Hvor langt har jeg kommet på veien mot å ta et valg?",
@@ -7777,7 +7777,7 @@
     "group_Kampanje_Owners_Description": "",
     "group_Kampanje_Owners_Title": "Kampanjer-eiere"
   },
-  "HNPortalStrings": { 
+  "HNPortalStrings": {
     "unsupported_Close": "Lukk",
     "unsupported_LinkText": "Les om godkjente OS/nettleserversjoner",
     "unsupported_Text": "Du har en nettleser som vi ikke støtter."
@@ -7896,7 +7896,7 @@
     "fylke_Rogaland": "Rogaland",
     "fylke_MoreOgRomsdal": "Møre og Romsdal"
   },
-  "HNVidereformidling": { 
+  "HNVidereformidling": {
     "videreformidling_Sms_Varsel": "Du har fått et brev fra {aktørnavn}",
     "videreformidling_Epost_Varsel": "Du har fått et brev fra {aktørnavn}",
     "videreformidling_Post_Ved_Foresatte": "v/Foresatte"
