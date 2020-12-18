@@ -26531,6 +26531,54 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_35: string;
   /** 
+  * Skjul egen bruk
+  */
+  page_HendelsesLogg_HideMyEvents: string;
+  /** 
+  * Innsyn i Smittestopp
+  */
+  page_HendelsesLogg_38: string;
+  /** 
+  * Prøvesvar
+  */
+  page_HendelsesLogg_39: string;
+  /** 
+  * Innboks
+  */
+  page_HendelsesLogg_19: string;
+  /** 
+  * Alle tjenester på helsenorge.no
+  */
+  tjenesteomrade_Alle: string;
+  /** 
+  * Profil og innstillinger, henvisninger, timeavtaler og meldinger
+  */
+  tjenesteomrade_Vestlandspasienten: string;
+  /** 
+  * Økonomi og rettigheter
+  */
+  tjenesteomrade_OkonomiOgRettigheter: string;
+  /** 
+  * Timeavtaler og behandlere
+  */
+  tjenesteomrade_TimerOgForlop: string;
+  /** 
+  * Tjenester knyttet til styring av hvem som skal ha tilgang til dine helseopplysninger, hvordan du ønsker å motta beskjeder fra helsenorge.no og utlevering av helseopplysninger.
+  */
+  tjenesteomrade_ProfilOgPersonvern_Description: string;
+  /** 
+  * Innsyn i journal og registre
+  */
+  tjenesteomrade_InnsynJournalOgRegistre: string;
+  /** 
+  * Tjenester knyttet til innsyn i din pasientjournal og hvem som har brukt den. I tillegg vil innsyn i helseregistre være en del av dette området.
+  */
+  tjenesteomrade_InnsynJournalOgRegistre_Description: string;
+  /** 
+  * Helse og behandling
+  */
+  tjenesteomrade_HelsehjelpOgHelseopplysninger: string;
+  /** 
   * Du har ikke tilgang til samtykkedefinisjonen.
   */
   samtykkeDefinisjonAccessDeniedBody: string;
