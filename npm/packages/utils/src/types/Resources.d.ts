@@ -26327,6 +26327,299 @@ export type HNMinHelsePersonvernStrings = {
    */
   page_Helsetjenester_Ordninger_Representant: string;
   /**
+   * Ved fullmakt
+   */
+  shared_Fullmakt: string;
+  /**
+   * Foreldreansvar
+   */
+  shared_Foreldrerepresentasjon: string;
+  /**
+   * Egen bruk
+   */
+  shared_InnloggetBruker: string;
+  /**
+   * Egen bruk
+   */
+  shared_InnloggetBrukerInnloggetBruker: string;
+  /**
+   * Egen bruk
+   */
+  shared_InnbyggerSelv: string;
+  /**
+   * Foreldreansvar
+   */
+  shared_Foreldreansvar: string;
+  /**
+   * Foreldreansvar med daglig omsorg
+   */
+  shared_ForeldreansvarMedDagligOmsorg: string;
+  /**
+   * Ved fullmakt
+   */
+  shared_Fullmektig: string;
+  /**
+   * Saksbehandling
+   */
+  shared_AnalogKanal: string;
+  /**
+   * Bakgrunn
+   */
+  page_HendelsesLogg_Column_How: string;
+  /**
+   * Når
+   */
+  page_HendelsesLogg_Column_When: string;
+  /**
+   * Hvem
+   */
+  page_HendelsesLogg_Column_Who: string;
+  /**
+   * Finner ingen hendelser.
+   */
+  page_HendelsesLogg_Empty: string;
+  /**
+   * Henvisninger
+   */
+  page_HendelsesLogg_16: string;
+  /**
+   * Pasientreiser
+   */
+  page_HendelsesLogg_17: string;
+  /**
+   * Vis flere
+   */
+  page_HendelsesLogg_LoadMore: string;
+  /**
+   * Kjernejournal
+   */
+  page_HendelsesLogg_11: string;
+  /**
+   * Min helse forside
+   */
+  page_HendelsesLogg_15: string;
+  /**
+   * Pasientjournal
+   */
+  page_HendelsesLogg_10: string;
+  /**
+   * Helsekontakter
+   */
+  page_HendelsesLogg_18: string;
+  /**
+   * Logget inn
+   */
+  page_HendelsesLogg_1: string;
+  /**
+   * Avtaleadministrasjon
+   */
+  page_HendelsesLogg_BrukAvTjenesteAvtaleAdm: string;
+  /**
+   * Dialogadministrasjon
+   */
+  page_HendelsesLogg_BrukAvTjenesteDialogAdm: string;
+  /**
+   * Frikort og egenandeler
+   */
+  page_HendelsesLogg_12: string;
+  /**
+   * Fastlegetjenester
+   */
+  page_HendelsesLogg_6: string;
+  /**
+   * Fastlegevisning
+   */
+  page_HendelsesLogg_9: string;
+  /**
+   * Fullmakt
+   */
+  page_HendelsesLogg_14: string;
+  /**
+   * Profil og innstillinger
+   */
+  page_HendelsesLogg_13: string;
+  /**
+   * Resepter
+   */
+  page_HendelsesLogg_7: string;
+  /**
+   * Vestlandspasienten
+   */
+  page_HendelsesLogg_5: string;
+  /**
+   * Bytte fastlege
+   */
+  page_HendelsesLogg_20: string;
+  /**
+   * Timeavtaler
+   */
+  page_HendelsesLogg_2: string;
+  /**
+   * Ordning
+   */
+  page_HendelsesLogg_Column_Ordning: string;
+  /**
+   * Ingen historiske ordninger
+   */
+  page_HendelsesLogg_Ingen_Ordninger: string;
+  /**
+   * Ingen historiske tjenester
+   */
+  page_HendelsesLogg_Ingen_Tjeneste: string;
+  /**
+   * Administrering av fullmakter
+   */
+  page_HendelsesLogg_21: string;
+  /**
+   * Helseregistre
+   */
+  page_HendelsesLogg_23: string;
+  /**
+   * Forskning
+   */
+  page_HendelsesLogg_26: string;
+  /**
+   * Bruk av resepter
+   */
+  page_HendelsesLogg_24: string;
+  /**
+   * Sykdom og kritisk informasjon
+   */
+  page_HendelsesLogg_25: string;
+  /**
+   * Hva
+   */
+  page_HendelsesLogg_Column_Event: string;
+  /**
+   * Beslutningstøtte
+   */
+  page_HendelsesLogg_22: string;
+  /**
+   * Legemidler
+   */
+  page_HendelsesLogg_30: string;
+  /**
+   * Vaksiner
+   */
+  page_HendelsesLogg_29: string;
+  /**
+   * Åpne kjernejournal
+   */
+  page_HendelsesLogg_33: string;
+  /**
+   * Donorkort
+   */
+  page_HendelsesLogg_BrukAvDonorkort: string;
+  /**
+   * Donorkort
+   */
+  page_HendelsesLogg_34: string;
+  /**
+   * Dokumenter
+   */
+  page_HendelsesLogg_8: string;
+  /**
+   * Beskrivelse
+   */
+  page_HendelsesLogg_Column_Tjeneste: string;
+  /**
+   * Verktøy
+   */
+  page_HendelsesLogg_36: string;
+  /**
+   * Skjemautfyller
+   */
+  page_HendelsesLogg_35: string;
+  /**
+   * Skjul egen bruk
+   */
+  page_HendelsesLogg_HideMyEvents: string;
+  /**
+   * Innsyn i Smittestopp
+   */
+  page_HendelsesLogg_38: string;
+  /**
+   * Prøvesvar
+   */
+  page_HendelsesLogg_39: string;
+  /**
+   * Innboks
+   */
+  page_HendelsesLogg_19: string;
+  /**
+   * Alle tjenester på helsenorge.no
+   */
+  tjenesteomrade_Alle: string;
+  /**
+   * Profil og innstillinger, henvisninger, timeavtaler og meldinger
+   */
+  tjenesteomrade_Vestlandspasienten: string;
+  /**
+   * Økonomi og rettigheter
+   */
+  tjenesteomrade_OkonomiOgRettigheter: string;
+  /**
+   * Timeavtaler og behandlere
+   */
+  tjenesteomrade_TimerOgForlop: string;
+  /**
+   * Tjenester knyttet til styring av hvem som skal ha tilgang til dine helseopplysninger, hvordan du ønsker å motta beskjeder fra helsenorge.no og utlevering av helseopplysninger.
+   */
+  tjenesteomrade_ProfilOgPersonvern_Description: string;
+  /**
+   * Innsyn i journal og registre
+   */
+  tjenesteomrade_InnsynJournalOgRegistre: string;
+  /**
+   * Tjenester knyttet til innsyn i din pasientjournal og hvem som har brukt den. I tillegg vil innsyn i helseregistre være en del av dette området.
+   */
+  tjenesteomrade_InnsynJournalOgRegistre_Description: string;
+  /**
+   * Helse og behandling
+   */
+  tjenesteomrade_HelsehjelpOgHelseopplysninger: string;
+  /**
+   * Tjenester knyttet til økonomiske rettigheter og oppgjør i helsevesenet. Rettigheter og vedtak vil også være en del av dette området.
+   */
+  tjenesteomrade_OkonomiOgRettigheter_Description: string;
+  /** 
+  * "Tjenester knyttet til din helsetilstand, legemidler du bruker og behandlingen du får i helsevesenet.
+Området vil i fremtiden også inkludere blant annet helseopplysninger, helseovervåkning og helse- eller sykdomsrelatert informasjon."
+  */
+  tjenesteomrade_HelsehjelpOgHelseopplysninger_Description: string;
+  /**
+   * Tjenester knyttet til administrasjon av timeavtaler i helsevesenet, hvilke behandlere du har, og valg av behandler. Både tidligere og framtidige opplysninger vil vises.
+   */
+  tjenesteomrade_TimerOgForlop_Description: string;
+  /**
+   * Innsyn i opplysninger registrert om meg
+   */
+  tjenesteOmrade_InnsynIOpplysningerRegistrertOmMeg: string;
+  /**
+   * Innsyn i opplysninger registrert om meg
+   */
+  tjenesteOmrade_InnsynIOpplysningerRegistrertOmMeg_Description: string;
+  /**
+   * Innsyn i pasientjournal
+   */
+  tjenesteOmrade_InnsynIPasientjournal: string;
+  /**
+   * Innsyn i pasientjournal
+   */
+  tjenesteOmrade_InnsynIPasientjournal_Description: string;
+  /**
+   * Digital helsetjeneste
+   */
+  tjenesteOmrade_DigitalHelsetjeneste: string;
+  /**
+   * Digital helsetjeneste
+   */
+  tjenesteOmrade_DigitalHelsetjeneste_Description: string;
+  /**
+   * Lukk
+   */
+  page_Opplysninger_Kontakt_Close: string;
+  /**
    * Du har ikke tilgang til samtykkedefinisjonen.
    */
   samtykkeDefinisjonAccessDeniedBody: string;
