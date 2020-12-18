@@ -26583,8 +26583,8 @@ export type HNMinHelsePersonvernStrings = {
   */
   tjenesteomrade_OkonomiOgRettigheter_Description: string;
   /** 
-  * "Tjenester knyttet til din helsetilstand, legemidler du bruker og behandlingen du får i helsevesenet.
-Området vil i fremtiden også inkludere blant annet helseopplysninger, helseovervåkning og helse- eller sykdomsrelatert informasjon."
+  * Tjenester knyttet til din helsetilstand, legemidler du bruker og behandlingen du får i helsevesenet.
+Området vil i fremtiden også inkludere blant annet helseopplysninger, helseovervåkning og helse- eller sykdomsrelatert informasjon.
   */
   tjenesteomrade_HelsehjelpOgHelseopplysninger_Description: string;
   /** 
