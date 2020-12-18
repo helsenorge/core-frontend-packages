@@ -26579,6 +26579,47 @@ export type HNMinHelsePersonvernStrings = {
   */
   tjenesteomrade_HelsehjelpOgHelseopplysninger: string;
   /** 
+  * Tjenester knyttet til økonomiske rettigheter og oppgjør i helsevesenet. Rettigheter og vedtak vil også være en del av dette området.
+  */
+  tjenesteomrade_OkonomiOgRettigheter_Description: string;
+  /** 
+  * "Tjenester knyttet til din helsetilstand, legemidler du bruker og behandlingen du får i helsevesenet.
+Området vil i fremtiden også inkludere blant annet helseopplysninger, helseovervåkning og helse- eller sykdomsrelatert informasjon."
+  */
+  tjenesteomrade_HelsehjelpOgHelseopplysninger_Description: string;
+  /** 
+  * Tjenester knyttet til administrasjon av timeavtaler i helsevesenet, hvilke behandlere du har, og valg av behandler. Både tidligere og framtidige opplysninger vil vises.
+  */
+  tjenesteomrade_TimerOgForlop_Description: string;
+  /** 
+  * Innsyn i opplysninger registrert om meg
+  */
+  tjenesteOmrade_InnsynIOpplysningerRegistrertOmMeg: string;
+  /** 
+  * Innsyn i opplysninger registrert om meg
+  */
+  tjenesteOmrade_InnsynIOpplysningerRegistrertOmMeg_Description: string;
+  /** 
+  * Innsyn i pasientjournal
+  */
+  tjenesteOmrade_InnsynIPasientjournal: string;
+  /** 
+  * Innsyn i pasientjournal
+  */
+  tjenesteOmrade_InnsynIPasientjournal_Description: string;
+  /** 
+  * Digital helsetjeneste
+  */
+  tjenesteOmrade_DigitalHelsetjeneste: string;
+  /** 
+  * Digital helsetjeneste
+  */
+  tjenesteOmrade_DigitalHelsetjeneste_Description: string;
+  /** 
+  * Lukk
+  */
+  page_Opplysninger_Kontakt_Close: string;
+  /** 
   * Du har ikke tilgang til samtykkedefinisjonen.
   */
   samtykkeDefinisjonAccessDeniedBody: string;
