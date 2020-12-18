@@ -366,7 +366,7 @@ export type HNCoreFrontendWebForside = {
   */
   savnerDuTjenesterPasientjournal: string;
   /** 
-  * Legemidler, vaksiner og prøvesvar
+  * Legemidler og vaksiner
   */
   savnerDuTjenesterLegemidler: string;
   /** 
