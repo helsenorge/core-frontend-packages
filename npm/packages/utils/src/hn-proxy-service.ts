@@ -44,6 +44,7 @@ const getDefaultRequestParams = (): Record<string, string> => {
 
 /**
  * TODO TING SOM KOMMER FRA HEADER-FOOTER services
+ * UNITTEST
  */
 export const erTjenester = () => {
   return window.location.origin === HN?.Rest?.__TjenesterApiUrl__;
