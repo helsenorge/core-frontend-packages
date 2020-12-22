@@ -1,5 +1,5 @@
 import { trackError } from './adobe-analytics';
-import { getMinHelseUrl, parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
+import { parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
 import * as DateUtils from './date-utils';
 
 declare const HN: {
@@ -26,7 +26,7 @@ export interface ProxyErrorResponse extends Response {
  * @param proxyName navn til proxy
  */
 const getProxyEnvironmentPath = (proxyName: string): string => {
-  return `${getMinHelseUrl()}/proxy/${proxyName}/api/v1/`;
+  return `${getTjenesterUrl()}/proxy/${proxyName}/api/v1/`;
 };
 
 /**
@@ -40,6 +40,12 @@ const getDefaultRequestParams = (): Record<string, string> => {
     HNTimeStamp: HN.Rest.__TimeStamp__,
     'X-hn-hendelselogg': HN.Rest.__HendelseLoggType__,
   };
+};
+/*
+ * Returnerer baseUrl til Tjenester basert på HN Rest objektet
+ */
+export const getTjenesterUrl = () => {
+  return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? HN.Rest.__TjenesterApiUrl__ : '';
 };
 
 /**
@@ -114,7 +120,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
         document.location.href.indexOf('autosignout=1') === -1
       ) {
         // redirect dersom token er utgått eller ugyldig
-        window.location.href = `${getMinHelseUrl()}/auth/autosignout`;
+        window.location.href = `${getTjenesterUrl()}/auth/autosignout`;
       }
       throw err;
     });

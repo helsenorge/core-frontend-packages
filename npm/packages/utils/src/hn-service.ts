@@ -142,6 +142,7 @@ window.HN.Commands = window.HN.Commands || {};
 window.HN.PortalCommands = window.HN.PortalCommands || {};
 
 /**
+ * DEPRECATED: Bruk getTjenesterUrl i hn-proxy-service
  * Returnerer baseUrl til MinHelse basert på HN Rest objektet
  */
 export const getMinHelseUrl = () => {
@@ -397,7 +398,7 @@ function crud<T extends OperationResponse>(method: string, cmd: string, data?: a
     body: JSON.stringify(data),
   })
     .then((response: Response) => checkStatus<T>(response))
-    .catch(err => {
+    .catch((err) => {
       trackError('level1');
       if (err == 'TypeError: Failed to fetch') {
         throw {
@@ -420,7 +421,7 @@ function crudAuto<T extends OperationResponse>(method: string, cmd: string, data
     body: JSON.stringify(data),
   })
     .then((response: Response) => checkStatus<T>(response))
-    .catch(err => {
+    .catch((err) => {
       trackError('level1');
       if (err == 'TypeError: Failed to fetch') {
         throw {
@@ -506,13 +507,13 @@ export function download(cmd: string, params?: any): Promise<OperationResponse> 
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
 
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     fetch(url, {
       method: 'get',
       credentials: 'include',
       headers,
     })
-      .then(function(res) {
+      .then(function (res) {
         const contentDisposition = res.headers.get('content-disposition');
         const match =
           contentDisposition && contentDisposition.match(/filename="(.+)"/) ? contentDisposition.match(/filename="(.+)"/) : false;
@@ -523,10 +524,10 @@ export function download(cmd: string, params?: any): Promise<OperationResponse> 
         const blobPromise = res.blob();
         return { blobPromise, fileName };
       })
-      .then(function(respObj) {
+      .then(function (respObj) {
         const fileName = respObj.fileName;
 
-        respObj.blobPromise.then(function(blob) {
+        respObj.blobPromise.then(function (blob) {
           if (window.navigator && window.navigator.msSaveOrOpenBlob) {
             window.navigator.msSaveOrOpenBlob(blob, fileName);
             resolve();
@@ -542,7 +543,7 @@ export function download(cmd: string, params?: any): Promise<OperationResponse> 
           }
         });
       })
-      .catch(function(responseHtml) {
+      .catch(function (responseHtml) {
         if (responseHtml === '401') {
           document.location.reload(true);
         } else {
