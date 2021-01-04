@@ -1441,6 +1441,13 @@ export type HNDialogCommonJS = {
   healthcareProfessionalHelsesykepleier: string;
 };
 
+export type HNGeneriskStatusJS = { 
+  /** 
+  * Personverninnstillinger
+  */
+  reservasjon_negative_funn: string;
+};
+
 export type HNMinHelseByttFastlegeJS = { 
   /** 
   * Kvittering

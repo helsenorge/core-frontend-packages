@@ -365,6 +365,9 @@
     "healthcareProfessionalHelsesekretaer": "Helsesekretær",
     "healthcareProfessionalHelsesykepleier": "Helsesykepleier"
   },
+  "HNGeneriskStatusJS": { 
+    "reservasjon_negative_funn": "Personverninnstillinger"
+  },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
     "bfl_ResultPage_VentelisteDialog_VelgPersoner": "Velg barn",
