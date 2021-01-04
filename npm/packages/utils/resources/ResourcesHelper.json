@@ -95,7 +95,7 @@
     "savnerDuTjenesterTitle": "Savner du noen tjenester?",
     "savnerDuTjenesterDescription": "Du har ikke samtykket til følgende tjenester:",
     "savnerDuTjenesterPasientjournal": "Pasientjournal",
-    "savnerDuTjenesterLegemidler": "Legemidler, vaksiner og prøvesvar",
+    "savnerDuTjenesterLegemidler": "Legemidler og vaksiner",
     "savnerDuTjenesterTimeavtaler": "Timeavtaler og henvisninger",
     "savnerDuTjenesterPasientreiser": "Pasientreiser",
     "savnerDuTjenesterDialog": "Dialog med helsekontakter",
@@ -109,7 +109,7 @@
     "inactivity_SignedOut_Title": "Du var stille en stund og har blitt logget ut",
     "inactivity_LoginUrl": "/auth/signin"
   },
-  "HNDialogCommonJS": { 
+  "HNDialogCommonJS": {
     "healthcareProfessionalKiropraktor": "Kiropraktor",
     "healthcareProfessionalKliniskErnaeringsfysiolog": "Klinisk ernæringsfysiolog",
     "healthcareProfessionalLege": "Lege",
@@ -365,7 +365,7 @@
     "healthcareProfessionalHelsesekretaer": "Helsesekretær",
     "healthcareProfessionalHelsesykepleier": "Helsesykepleier"
   },
-  "HNMinHelseByttFastlegeJS": { 
+  "HNMinHelseByttFastlegeJS": {
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
     "bfl_ResultPage_VentelisteDialog_VelgPersoner": "Velg barn",
     "bfl_ResultPage_VentelisteDialog_Vikar": "Vikar",
@@ -661,7 +661,7 @@
     "bfl_ResultPage_PartialErrorMessage_Body": "Informasjonen som vises kan derfor være ufullstendig. Prøv igjen senere.",
     "bfl_ResultPage_PartialErrorMessage_Title": "Det har skjedd en teknisk feil"
   },
-  "HNMinHelseByttFastlege": { 
+  "HNMinHelseByttFastlege": {
     "bFL_FloKode_Ukjent": "Ukjent årsak",
     "bFL_RestService_Fellesliste_Title": "Fellesliste kan ikke vises for øyeblikket",
     "bFL_RestService_Gruppepraksis_Title": "Gruppepraksis kan ikke vises for øyeblikket",
@@ -728,7 +728,7 @@
     "bFL_RestService_Innbygger_Resigned_Message": "Du har meldt deg ut av fastlegeordningen og kan ikke bytte fastlege på helsenorge.no. For å melde deg inn, slik at du kan få tildelt fastlege, må du kontakte brukerstøtte {0} ({1}).",
     "bFL_RestService_Innbygger_Resigned_Title": "Du kan ikke bytte fastlege"
   },
-  "HNMinHelseCommonJS": { 
+  "HNMinHelseCommonJS": {
     "samtykkeInfoPopupMellom12Og16Innhold": "For å kunne være innlogget på Helsenorge må først en av foreldrene dine samtykke til bruk av Helsenorge på dine vegne. Før de har samtykket kan du ikke være logget inn.",
     "samtykkeInfoPopupMellom12Og16Overskrift": "Samtykke til bruk av Helsenorge",
     "barnInfoMessage_popup_description": "<p>Foreldre har begrenset innsyn i barns opplysninger når barnet er mellom 12 og 16 år.</p>\n<p>Du kan lese mer om foreldrerepresentasjon i artikkelen \n<a href=\"https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no\">Slik representerer du andre på helsenorge.no</a></p>",
@@ -1288,7 +1288,7 @@
     "kommuneMessageHeading": "Skriv melding til",
     "kommuneMessageBottomInfo": "Henvendelsen vil bli journalført.",
     "kommuneMessageDescription": "Forventet svartid på meldinger er første virkedag. Akutte henvendelser skal ikke sendes via melding.",
-    "hjelpekontekst_timeavtale": "{\"defaulttekst_overskrift\":\"Om timeavtaler\",\"defaulttekst_brodtekst\":\"<p>\\nHer kan du se timeavtaler hos:\\n</p>\\n<ul>\\n<li>fastleger som tilbyr tjenester på Helsenorge: Både framtidige og tidligere timer</li>\\n<li>sykehus i Helse Vest: Bare framtidige timer. Du kan også sende meldinger.</li>\\n<li>sykehus i Helse Midt: Både framtidige og tidligere timer</li>\\n<li>enkelte avdelinger ved sykehus i Helse Nord: Noen avdelinger viser framtidige timer. Du kan også sende meldinger.</li>\\n<li>kommunale helse- og omsorgstjenester i enkelte kommuner og bydeler: Både framtidige og tidligere timer</li>\\n<li>enkelte andre aktører, for eksempel Studentsamskipnaden i Oslo: Både framtidige og tidligere timer</li>\\n</ul>\\n\\n<p>\\nHvis du har foreldreansvar for barn mellom 12 og 16 år vil du også se deres timeavtaler med fastlegen og kommunal helse- og omsorgstjeneste, men ikke timeavtaler fra spesialisthelsetjenesten.\\n</p>\\n\\n<p>\\nMerk at telefonkonsultasjoner fra Helse Vest ikke vil vises i Timeavtaler-tjenesten.\\n</p>\\n\\n<p><a href=\\\"https://helsenorge.no/om-min-helse/timeavtaler\\\">Her kan du lese mer om Timeavtaler</a>.</p>\"}",
+    "hjelpekontekst_timeavtale": "{\"defaulttekst_overskrift\":\"Om timeavtaler\",\"defaulttekst_brodtekst\":\"<p>\\nHer kan du se timeavtaler hos:\\n</p>\\n<ul>\\n<li>fastleger som tilbyr tjenester på Helsenorge: Både framtidige og tidligere timer</li>\\n<li>sykehus i Helse Vest: Bare framtidige timer. Du kan også sende meldinger.</li>\\n<li>sykehus i Helse Midt: Både framtidige og tidligere timer</li>\\n<li>enkelte avdelinger ved sykehus i Helse Nord: Noen avdelinger viser framtidige timer. Du kan også sende meldinger.</li>\\n<li>kommunale helse- og omsorgstjenester i enkelte kommuner og bydeler: Både framtidige og tidligere timer</li>\\n<li>enkelte andre aktører, for eksempel Studentsamskipnaden i Oslo: Både framtidige og tidligere timer</li>\\n</ul>\\n\\n<p>\\nHvis du har foreldreansvar for barn mellom 12 og 16 år vil du også se deres timeavtaler med fastlegen og kommunal helse- og omsorgstjeneste, men ikke timeavtaler fra spesialisthelsetjenesten.\\n</p>\\n\\n<p><a href=\\\"https://www.helsenorge.no/timeavtaler/om/\\\">Her kan du lese mer om Timeavtaler</a>.</p>\"}",
     "hjelpetrigger_timeavtaleForberedelser": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Forberedelser til timen\",\"seksjonstekst_brodtekst\":\"<p>Mer informasjon?</p><p>I innkallingsbrevet finner du mye nyttig informasjon. Får du ikke svar på det du lurer på, kan du sende en elektronisk melding direkte til avdelingen, eller ta kontakt per telefon.</p><p>Hvor lenge varer timen?</p><p>Noen ganger står det oppført hvor lenge timeavtalen din skal vare. Timen kan vare både kortere eller lenger enn det som står angitt, avhengig av om du må gjennomføre ekstra undersøkelser eller prøver.</p><p>Kan du ikke møte?</p><p>Dersom du ikke møter opp og ikke har varslet oss senest 24 timer på forhånd, må du betale gebyr. Dette gjelder selv om du har frikort eller av andre årsaker er fritatt for egenandel. Har du ikke anledning til å møte, må du ta kontakt snarest mulig, enten ved å sende en elektronisk melding, eller per telefon. Vær oppmerksom på at endring av timen kan medføre lengre ventetid.</p><em><p>Når alle møter, blir ventetida kortere.</p></em>\"}",
     "hjelpekontekst_henvisningInfo": "{\"defaulttekst_overskrift\":\"Om henvisninger\",\"defaulttekst_brodtekst\":\"<p>\\nDet er to frister du som pasient må forholde deg til:\\n</p>\\n\\n<h3>\\nVurderingsfrist:\\n</h3>\\n\\n<p>\\nDet skal gå maksimum 10 virkedager fra en henvisning er mottatt i spesialisthelsetjenesten til den er vurdert.\\n</p>\\n\\n<h3>\\nFrist for helsehjelp:\\n</h3>\\n\\n<p>\\nVurderingen vil få ett av følgende utfall:\\n</p>\\n\\n<ul>\\n<li>Du får rett til nødvendig helsehjelp i spesialisthelsetjenesten, og du får en fristdato for når spesialisthelsetjenesten senest skal ha startet helsehjelpen, enten i form av behandling eller i form av utredning.</li>\\n<li>Vurderingen konkluderer med at du ikke har behov for helsehjelp fra spesialisthelsetjenesten. Det innebærer at vi har vurdert dine behov for helsehjelp til å bli best ivaretatt av fastlegen eller andre deler av helsetjenesten.</li>\\n</ul>\\n\\n<p>\\nInformasjon om vurderingen, frister og rettigheter vil du motta per brev.\\n</p>\\n\\n<p>\\nFor henvisninger fra Helse Vest vil du kun se informasjon om henvisninger mottatt fra og med 01.01.2014. Helse Nord viser informasjon om henvisninger så langt tilbake som det er teknisk mulig. Det kan av tekniske årsaker være informasjon som ikke vises.\\n</p>\\n\\n<p>\\nStatus for en henvisning for barn i Helse Nord vil vises i Henvisninger, men det vil ta ti dager før henvisningsbrevet vises i Pasientjournal.\\n</p>\\n\\n<p>\\n<a href=\\\"https://www.helsenorge.no/henvisninger/om/\\\">Her kan du lese mer om Henvisninger</a>.\\n</p>\"}",
     "hjelpekontekst_meldingerTimeavtaler": "{\"defaulttekst_overskrift\":\"Om innboks\",\"defaulttekst_brodtekst\":\"<p>\\nHer vil du få oversikt over alle meldinger du har fått og sendt. Du kan også skrive melding til de av dine helsekontakter som tilbyr digital dialog. \\n</p>\\n\\n<p>\\nForeløpig kan du motta og sende meldinger knyttet til:\\n<ul>\\n<li>fastleger som tilbyr digitale tjenester</li>\\n<li>forløpskoordinator og ulike helsekontakter i Helse Vest</li>\\n<li>timer fra Helse Vest</li>\\n<li>helse- og omsorgstjenester i utvalgte kommuner</li>\\n<li>resultater fra helseundersøkelser eller prøveprosjekter du deltar i</li>\\n</ul>\\n</p>\\n\\n<p>\\nI tillegg kan du blant annet se kvitteringer for bytte av fastlege, meldinger om fullmakt eller få svar fra saksbehandler hvis du for eksempel har meldt feil i kjernejournal. \\n</p>\\n<h3>\\nMeldinger om timeavtaler\\n</h3>\\n\\n<p>\\nSkal du sende en melding angående en time i Helse Vest, må du gå til den timen i Timeavtaler.\\n</p>\"}",
@@ -2487,7 +2487,7 @@
     "tilgangsloggTabellSortLegend": "Sorter på",
     "tilgangsloggTabellSortShow": "Vis resultat"
   },
-  "HNMinHelseDialogVP": { 
+  "HNMinHelseDialogVP": {
     "userControl_Timeline_StatusValue_Viderehenvist": "Viderehenvist",
     "userControl_Audit_ShowDetails": "Vis detaljer",
     "userControl_Records_Colon": ": ",
@@ -2710,7 +2710,7 @@
     "mfr_Page_Desc": "Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.",
     "mfr_Page_Title": "Medisinsk fødselsregister (MFR)"
   },
-  "HNMinHelseDonorkort": { 
+  "HNMinHelseDonorkort": {
     "donorkort_kontaktpersoner_table_caption": "Tabell over kontaktpersoner",
     "donorkort_nummer_validering_feil_tittel": "Pårørende er registrert, men SMS ble ikke sendt",
     "donorkort_nummer_validering_feil_ingress": "Navnet på din pårørende er lagt til donorkortet, men nummeret du la inn ble ikke gjentatt riktig. \nSMS ble ikke sendt, fordi nummeret ikke ble bekreftet.<br/>\nDet er uansett viktig at du diskuterer dine ønsker om organdonasjon med dine nærmeste. Ta gjerne en prat med dem om det.",
@@ -3020,7 +3020,7 @@
     "filterRegistreUnit": "registre",
     "filterRegistreAv": "av"
   },
-  "HNMinHelseHFTStringsJS": { 
+  "HNMinHelseHFTStringsJS": {
     "egenandeler_mangler_kontonummer_title": "Vi mangler kontonummeret ditt",
     "egenandeler_minste_pensjon_content": "Du er fritatt for å betale egenandeler for medisiner/utstyr på blå resept, siden du har minste pensjonsnivå.",
     "egenandeler_minste_pensjon_title": "Fritak for egenandel",
@@ -4094,7 +4094,7 @@
     "legemidlerDefaultIngress": "Her finner du en samlet oversikt over dine resepter på legemidler og andre varer. Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og din <a href='/kjernejournal-innsyn'>kjernejournal</a>, hvor du også kan se logg over bruk.",
     "legemidler_default_hjelpeskuff": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Om legemidler\",\"seksjonstekst_brodtekst\":\"<p>Her vises dine resepter og informasjon om utleverte legemidler, næringsmidler og medisinsk forbruksmateriell. I <strong>Legemidler</strong>-fanen vises aktive resepter og resepter med utleveringer de siste 12 månedene. I <strong>Resepthistorikk</strong>-fanen vises alle resepter og utleveringer tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller bandasjisten. Reseptene er merket med kilden.</p>\\n\\n<p>På siden om <a href=\\\"/reseptformidleren\\\">reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href=\\\"/kjernejournal-innsyn\\\">kjernejournal</a>.</p>\\n<p><a href=\\\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\\\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>\"}"
   },
-  "HNMinHelseLegemidler": { 
+  "HNMinHelseLegemidler": {
     "lobTabellVisningSeperator": "ved",
     "apnetReseptliste": "Åpnet reseptliste",
     "ingenUtlevering": "Ingen utlevering",
@@ -4643,7 +4643,7 @@
     "varselmeny_Helsekontakt_Emne": "Ny helsekontakt",
     "varselmeny_Helsekontakt_Tekst": "Du har fått ny helsekontakt i {0}"
   },
-  "HNMinHelsePages": { 
+  "HNMinHelsePages": {
     "noInfoAvailable": "Ingen informasjon tilgjengelig",
     "hideFilter": "Skjul filter",
     "showFilter": "Vis filter",
@@ -4661,7 +4661,7 @@
     "welcomeTileDontShowAgain": "Ikke vis igjen",
     "welcomeTileReadMore": "Les mer..."
   },
-  "HNMinHelsePasientjournal": { 
+  "HNMinHelsePasientjournal": {
     "documentMessageButton": "OK",
     "documentMessageTitle": "Mange av dokumentene i pasientjournalen vises ikke riktig på mobiltelefon eller nettbrett.",
     "hjelpeKontekstDokumentoversikt": "{\"defaulttekst_overskrift\":\"Om pasientjournalen\",\"defaulttekst_brodtekst\":\"<p>\\nTjenesten gir deg kun lesetilgang – du kan ikke på egen hånd endre innholdet i pasientjournalen din.\\n</p>\\n\\n<p>\\nDatoen som vises ved dokumentnavnet viser når journaldokumentet ble opprettet - ikke nødvendigvis når det sist ble endret. Når du åpner et dokument vil du alltid se den nyeste versjonen av det.\\n</p>\\n\\n<h3>\\nIkke alle dokumenter kan vises digitalt\\n</h3>\\n\\n<p>Pasientjournalen din kan inneholde dokumenter som ikke kan vises digitalt. Disse kan være tilgjengelige på papir, eller ved å kontakte sykehuset.</p>\\n\\n<p>\\nHer finner du mer informasjon om hva hver helseregion kan tilby digitalt, og hvordan du går frem:\\n</p>\\n\\n<ul>\\n<li><a href=\\\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest\\\">Sykehus i Helse Vest</a></li>\\n<li><a href=\\\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord\\\">Sykehus i Helse Nord</a></li>\\n<li><a href=\\\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost\\\">Sykehus i Helse Sør-Øst</a></li>\\n</ul>\\n\\n<h3>\\nSlik kan du få papirkopier, melde om feil eller stille spørsmål\\n</h3>\\n\\n<p>Vil du ha mer informasjon enn den digitale tjenesten kan tilby, eller melde om feil, må du kontakte sykehuset.</p>\\n\\n<p>\\nFor sykehus i Helse Vest og de fleste sykehus i Helse Sør-Øst kan du bruke digitale skjema:\\n</p>\\n\\n<ul>\\n<li><a href=\\\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UJ-1\\\">Be om utskrift av pasientjournal</a></li>\\n<li><a href=\\\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UI-1\\\">Be om utskrift av tilgangslogg</a></li>\\n<li><a href=\\\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-ej-1\\\">Be om endring i pasientjournalen</a></li>\\n<li><a href=\\\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-SI-1\\\">Stille spørsmål om oppslag i pasientjournalen</a></li>\\n</ul>\\n\\n<p>\\nMerk at disse sykehusene i Helse Sør-Øst ikke tilbyr digitale skjema:\\n</p>\\n<ul>\\n<li>Betanien Hospital Skien</li>\\n<li>Diakonhjemmet sykehus</li>\\n<li>Lovisenberg diakonale sykehus</li>\\n<li>Revmatismesykehuset</li>\\n</ul>\\n<p>\\nDu kan i stedet kontakte sykehuset direkte. <a href=\\\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\\\">Kontaktinformasjon til ulike sykehus i Helse Sør-Øst finner du her</a>.\\n</p>\\n\\n<p>\\nHelse Nord tilbyr ikke digitale skjema, men du kan i stedet bruke <a href=\\\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#andre-mater-a-fa-innsyn-i-pasientjournalen-pa\\\">PDF-skjema for å få innsyn i pasientjournal og tilgangslogg fra Helse Nord</a>.\\n</p>\\n\\n<h3>\\nVed alvorlige feil i pasientjournalen\\n</h3>\\n\\n<p>\\nHvis du finner dokumenter som tilhører andre, må du straks ringe det aktuelle sykehuset. Kontaktinformasjon finner du her:\\n</p>\\n\\n<ul>\\n<li><a href=\\\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\\\">Kontaktinformasjon: Sykehus i Helse Vest</a></li>\\n<li><a href=\\\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\\\">Kontaktinformasjon: Sykehus i Helse Nord</a></li>\\n<li><a href=\\\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\\\">Kontaktinformasjon: Sykehus i Helse Sør-Øst</a></li>\\n</ul>\\n\\n<p>\\n<strong>Det er ikke nødvendig å ringe hvis du vil melde om andre feil. Bruk i stedet skjemaene nevnt ovenfor.</strong>\\n</p>\"}",
@@ -4846,7 +4846,7 @@
     "xDS_LokasjonFeil_SIHF": "Sykehuset Innlandet HF",
     "documentIsRestricted": "Unntatt fra visning på nett"
   },
-  "HNMinHelsePasientreiserJS": { 
+  "HNMinHelsePasientreiserJS": {
     "valideringsfeil_ADRESSE_GATE_MAX_TEGN": "Adresse kan ha opp til 150 tegn.",
     "reiselengder_unoyaktigDistanse": "Vi finner ikke nøyaktig plassering på adressen som er oppgitt og beregnet distanse kan derfor være feil. Du kan korrigere distansen.",
     "valideringsfeil_ADRESSE_GATE_UGYLDIG_TEGN": "Ugyldig adresse (kun norske og samiske tegn er tillatte).",
@@ -6429,7 +6429,7 @@
     "krav_ledsager_DROSJE_ikkeHarKrav": "For å få dekket utgifter til reise med drosje, må du huke av for rett begrunnelse i punktet \"Dekning av utgifter for reiseledsager\". Du kan ellers ha rett til å få dekket utgiftene med en standardsats.",
     "generisk_kilometer": "kilometer"
   },
-  "HNMinHelsePasientReiserStrings": { 
+  "HNMinHelsePasientReiserStrings": {
     "pr_skuff_default": "{\"defaulttekst_overskrift\":\"Pasientreiser\",\"defaulttekst_brodtekst\":\"<p>Hovedregelen er at du får dekket utgiftene med en reisegodtgjørelse (standardsats) per kilometer, uansett hvilket transportmiddel du har brukt. Hvis reisen er på over 300 kilometer én vei, kan du få dekket reiseutgifter tilsvarende kostnaden for billigste rutegående transportmiddel. </p>\\n\\n<p>I tillegg kan du ha rett på å få dekket nødvendige tilleggsutgifter som for eksempel parkering, bom, kost, overnatting og reiseledsager, hvis du har dokumentasjon på at dette var nødvendig for deg. </p>\\n\\n<p>For å få dekket reiseutgiftene, forutsettes det at avstanden til behandlingsstedet er over ti kilometer én vei, og at reisen koster mer enn lokal minstetakst med rutegående transport. Merk at du kan søke om å få dekket reiser under ti kilometer, eller reiser i områder der det er offentlig transporttilbud til minstetakst, hvis du har dokumentasjon på at du var nødt til å bruke bil eller drosje av helsemessige årsaker. </p>\\n\\n<p>Du kan begynne på en søknad, for å fortsette senere. Søknaden autolagres underveis.</p>\\n\\n<p><a href=\\\"https://helsenorge.no/rettigheter/pasientreiser\\\" target=\\\"_blank\\\">Les mer om pasientreiser.</a></p>\\n\\n<p>Hvis du trenger hjelp, kan du ringe Pasientreiser på telefon 915 05 515.</p>\"}",
     "hjelpetrigger_behandlingsStedHjelp": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"<p>Finn navn på behandlingssted ved å skrive inn minst tre bokstaver i feltet. Hvis du ikke finner rett avdeling, men en annen avdeling med samme gateadresse, kan du velge denne.</p>\",\"seksjonstekst_overskrift\":\"\",\"seksjonstekst_brodtekst\":\"\"}",
     "hjelpetrigger_Motkrav": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"<p>Hvis du skal søke om å få dekket tilleggsutgifter ved bruk av bil, må dokumentasjon lastes opp her.</p>\",\"seksjonstekst_overskrift\":\"\",\"seksjonstekst_brodtekst\":\"\"}",
@@ -6513,7 +6513,7 @@
     "error_FeatureNotSupported_Body": "Denne funksjonen er ikke støttet",
     "error_FeatureNotSupported_Title": "Funksjon ikke støttet"
   },
-  "HNMinHelsePersonvernStrings": { 
+  "HNMinHelsePersonvernStrings": {
     "organisasjonsnavn_fullmakt": "Helsenorge",
     "discardDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort.",
     "discardHeading": "Det finnes endringer som ikke er lagret",
@@ -6583,6 +6583,79 @@
     "page_Opplysninger_Kontakt_Confirm_Delete_Title": "Slett pårørende?",
     "page_Opplysninger_Kontakt_Confirm_Delete_BtnCancel": "Avbryt",
     "page_Helsetjenester_Ordninger_Representant": "du eller din representant",
+    "shared_Fullmakt": "Ved fullmakt",
+    "shared_Foreldrerepresentasjon": "Foreldreansvar",
+    "shared_InnloggetBruker": "Egen bruk",
+    "shared_InnloggetBrukerInnloggetBruker": "Egen bruk",
+    "shared_InnbyggerSelv": "Egen bruk",
+    "shared_Foreldreansvar": "Foreldreansvar",
+    "shared_ForeldreansvarMedDagligOmsorg": "Foreldreansvar med daglig omsorg",
+    "shared_Fullmektig": "Ved fullmakt",
+    "shared_AnalogKanal": "Saksbehandling",
+    "page_HendelsesLogg_Column_How": "Bakgrunn",
+    "page_HendelsesLogg_Column_When": "Når",
+    "page_HendelsesLogg_Column_Who": "Hvem",
+    "page_HendelsesLogg_Empty": "Finner ingen hendelser.",
+    "page_HendelsesLogg_16": "Henvisninger",
+    "page_HendelsesLogg_17": "Pasientreiser",
+    "page_HendelsesLogg_LoadMore": "Vis flere",
+    "page_HendelsesLogg_11": "Kjernejournal",
+    "page_HendelsesLogg_15": "Min helse forside",
+    "page_HendelsesLogg_10": "Pasientjournal",
+    "page_HendelsesLogg_18": "Helsekontakter",
+    "page_HendelsesLogg_1": "Logget inn",
+    "page_HendelsesLogg_BrukAvTjenesteAvtaleAdm": "Avtaleadministrasjon",
+    "page_HendelsesLogg_BrukAvTjenesteDialogAdm": "Dialogadministrasjon",
+    "page_HendelsesLogg_12": "Frikort og egenandeler",
+    "page_HendelsesLogg_6": "Fastlegetjenester",
+    "page_HendelsesLogg_9": "Fastlegevisning",
+    "page_HendelsesLogg_14": "Fullmakt",
+    "page_HendelsesLogg_13": "Profil og innstillinger",
+    "page_HendelsesLogg_7": "Resepter",
+    "page_HendelsesLogg_5": "Vestlandspasienten",
+    "page_HendelsesLogg_20": "Bytte fastlege",
+    "page_HendelsesLogg_2": "Timeavtaler",
+    "page_HendelsesLogg_Column_Ordning": "Ordning",
+    "page_HendelsesLogg_Ingen_Ordninger": "Ingen historiske ordninger",
+    "page_HendelsesLogg_Ingen_Tjeneste": "Ingen historiske tjenester",
+    "page_HendelsesLogg_21": "Administrering av fullmakter",
+    "page_HendelsesLogg_23": "Helseregistre",
+    "page_HendelsesLogg_26": "Forskning",
+    "page_HendelsesLogg_24": "Bruk av resepter",
+    "page_HendelsesLogg_25": "Sykdom og kritisk informasjon",
+    "page_HendelsesLogg_Column_Event": "Hva",
+    "page_HendelsesLogg_22": "Beslutningstøtte",
+    "page_HendelsesLogg_30": "Legemidler",
+    "page_HendelsesLogg_29": "Vaksiner",
+    "page_HendelsesLogg_33": "Åpne kjernejournal",
+    "page_HendelsesLogg_BrukAvDonorkort": "Donorkort",
+    "page_HendelsesLogg_34": "Donorkort",
+    "page_HendelsesLogg_8": "Dokumenter",
+    "page_HendelsesLogg_Column_Tjeneste": "Beskrivelse",
+    "page_HendelsesLogg_36": "Verktøy",
+    "page_HendelsesLogg_35": "Skjemautfyller",
+    "page_HendelsesLogg_HideMyEvents": "Skjul egen bruk",
+    "page_HendelsesLogg_38": "Innsyn i Smittestopp",
+    "page_HendelsesLogg_39": "Prøvesvar",
+    "page_HendelsesLogg_19": "Innboks",
+    "tjenesteomrade_Alle": "Alle tjenester på helsenorge.no",
+    "tjenesteomrade_Vestlandspasienten": "Profil og innstillinger, henvisninger, timeavtaler og meldinger",
+    "tjenesteomrade_OkonomiOgRettigheter": "Økonomi og rettigheter",
+    "tjenesteomrade_TimerOgForlop": "Timeavtaler og behandlere",
+    "tjenesteomrade_ProfilOgPersonvern_Description": "Tjenester knyttet til styring av hvem som skal ha tilgang til dine helseopplysninger, hvordan du ønsker å motta beskjeder fra helsenorge.no og utlevering av helseopplysninger.",
+    "tjenesteomrade_InnsynJournalOgRegistre": "Innsyn i journal og registre",
+    "tjenesteomrade_InnsynJournalOgRegistre_Description": "Tjenester knyttet til innsyn i din pasientjournal og hvem som har brukt den. I tillegg vil innsyn i helseregistre være en del av dette området.",
+    "tjenesteomrade_HelsehjelpOgHelseopplysninger": "Helse og behandling",
+    "tjenesteomrade_OkonomiOgRettigheter_Description": "Tjenester knyttet til økonomiske rettigheter og oppgjør i helsevesenet. Rettigheter og vedtak vil også være en del av dette området.",
+    "tjenesteomrade_HelsehjelpOgHelseopplysninger_Description": "Tjenester knyttet til din helsetilstand, legemidler du bruker og behandlingen du får i helsevesenet.\nOmrådet vil i fremtiden også inkludere blant annet helseopplysninger, helseovervåkning og helse- eller sykdomsrelatert informasjon.",
+    "tjenesteomrade_TimerOgForlop_Description": "Tjenester knyttet til administrasjon av timeavtaler i helsevesenet, hvilke behandlere du har, og valg av behandler. Både tidligere og framtidige opplysninger vil vises.",
+    "tjenesteOmrade_InnsynIOpplysningerRegistrertOmMeg": "Innsyn i opplysninger registrert om meg",
+    "tjenesteOmrade_InnsynIOpplysningerRegistrertOmMeg_Description": "Innsyn i opplysninger registrert om meg",
+    "tjenesteOmrade_InnsynIPasientjournal": "Innsyn i pasientjournal",
+    "tjenesteOmrade_InnsynIPasientjournal_Description": "Innsyn i pasientjournal",
+    "tjenesteOmrade_DigitalHelsetjeneste": "Digital helsetjeneste",
+    "tjenesteOmrade_DigitalHelsetjeneste_Description": "Digital helsetjeneste",
+    "page_Opplysninger_Kontakt_Close": "Lukk",
     "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
     "hjelpekontekst_profilBrukOgTilganger": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
@@ -6674,7 +6747,7 @@
     "page_Helsetjenester_Historikk_ReservationNoConsent": "Opphevet reservasjon",
     "shared_Text_Via": "via"
   },
-  "HNMinHelseResepterJS": { 
+  "HNMinHelseResepterJS": {
     "mho_prescription_period_legend": "Velg periode for resepter",
     "mho_prescriptions_date": "Dato",
     "mho_prescriptions_dispenser": "Apotek",
@@ -6748,7 +6821,7 @@
     "reseptinnsynErrorForbiddenBody": "<a href=\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\">Informasjon om hvordan du får innsyn i Logg over bruk når du representerer andre finner du her</a>.",
     "reseptinnsynErrorForbiddenTitle": "Logg over bruk fra reseptformidleren er ikke tilgjengelig når du representerer andre."
   },
-  "HNMinHelseResepter": { 
+  "HNMinHelseResepter": {
     "clientOperation_GetRFInnhold_EndpointError_Title": "For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig.",
     "clientOperation_GetRFInnhold_EndpointError_Body": "",
     "kanselleringReseptLastTilAnnetApotek": "Resept låst til annet apotek",
@@ -6780,7 +6853,7 @@
     "lightbox_Inactivity_Timer": "Du blir automatisk logget ut om {min}:{sec} minutter.",
     "lightbox_Inactivity_Title": "Er du der fortsatt?"
   },
-  "HNMinHelseSkjemautfyller": { 
+  "HNMinHelseSkjemautfyller": {
     "confirmDeleteButtonText": "Slett rad",
     "confirmDeleteCancelButtonText": "Avbryt",
     "confirmDeleteHeading": "Det finnes endringer som ikke er lagret",
@@ -6924,7 +6997,7 @@
     "page_Title": "Nasjonalt vaksinasjonsregister SYSVAK",
     "page_Desc": "Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus."
   },
-  "HNMinHelseVerktoy": { 
+  "HNMinHelseVerktoy": {
     "page_verktoy_ingress_innlogget": "Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.",
     "page_verktoy_ingress_apenside": "Verktøy kan være et nettkurs eller en video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.",
     "expandableSectionHeader": "Les mer om verktøyet",
@@ -7782,7 +7855,7 @@
     "unsupported_LinkText": "Les om godkjente OS/nettleserversjoner",
     "unsupported_Text": "Du har en nettleser som vi ikke støtter."
   },
-  "HNVelgBehandlingsstedJS": { 
+  "HNVelgBehandlingsstedJS": {
     "page_ventetiderforbehandling_filter_fylke_viken": "Viken",
     "page_ventetiderforbehandling_filter_fylke_innlandet": "Innlandet",
     "page_ventetiderforbehandling_filter_fylke_vestfoldogtelemark": "Vestfold og Telemark",
@@ -7867,7 +7940,7 @@
     "page_ventetiderforbehandling_tabell_empty_title": "Vi har ingen behandlingssteder som har registrerte ventetider med angitt filtrering",
     "page_ventetiderforbehandling_tabell_empty_description": "Prøv å endre filtervalg eller ring Veiledning helsenorge.no på telefon 23 32 70 00 og be om å få snakke med en pasientrådgiver for mer informasjon om behandlinger og ventetider."
   },
-  "HNVelgBehandlingssted": { 
+  "HNVelgBehandlingssted": {
     "field_Ventetider_MeldingForBehandling_Title": "Viktig!",
     "field_WaitingTimeNotCalculated_Title": "Ikke beregnet",
     "field_WaitingTimeNotOffered_Title": "Tilbys ikke",
