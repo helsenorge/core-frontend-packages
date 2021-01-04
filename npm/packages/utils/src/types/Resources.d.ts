@@ -366,7 +366,7 @@ export type HNCoreFrontendWebForside = {
   */
   savnerDuTjenesterPasientjournal: string;
   /** 
-  * Legemidler, vaksiner og prøvesvar
+  * Legemidler og vaksiner
   */
   savnerDuTjenesterLegemidler: string;
   /** 
@@ -5111,7 +5111,7 @@ export type HNMinHelseDialogJS = {
   */
   kommuneMessageDescription: string;
   /** 
-  * {"defaulttekst_overskrift":"Om timeavtaler","defaulttekst_brodtekst":"<p>\nHer kan du se timeavtaler hos:\n</p>\n<ul>\n<li>fastleger som tilbyr tjenester på Helsenorge: Både framtidige og tidligere timer</li>\n<li>sykehus i Helse Vest: Bare framtidige timer. Du kan også sende meldinger.</li>\n<li>sykehus i Helse Midt: Både framtidige og tidligere timer</li>\n<li>enkelte avdelinger ved sykehus i Helse Nord: Noen avdelinger viser framtidige timer. Du kan også sende meldinger.</li>\n<li>kommunale helse- og omsorgstjenester i enkelte kommuner og bydeler: Både framtidige og tidligere timer</li>\n<li>enkelte andre aktører, for eksempel Studentsamskipnaden i Oslo: Både framtidige og tidligere timer</li>\n</ul>\n\n<p>\nHvis du har foreldreansvar for barn mellom 12 og 16 år vil du også se deres timeavtaler med fastlegen og kommunal helse- og omsorgstjeneste, men ikke timeavtaler fra spesialisthelsetjenesten.\n</p>\n\n<p>\nMerk at telefonkonsultasjoner fra Helse Vest ikke vil vises i Timeavtaler-tjenesten.\n</p>\n\n<p><a href=\"https://helsenorge.no/om-min-helse/timeavtaler\">Her kan du lese mer om Timeavtaler</a>.</p>"}
+  * {"defaulttekst_overskrift":"Om timeavtaler","defaulttekst_brodtekst":"<p>\nHer kan du se timeavtaler hos:\n</p>\n<ul>\n<li>fastleger som tilbyr tjenester på Helsenorge: Både framtidige og tidligere timer</li>\n<li>sykehus i Helse Vest: Bare framtidige timer. Du kan også sende meldinger.</li>\n<li>sykehus i Helse Midt: Både framtidige og tidligere timer</li>\n<li>enkelte avdelinger ved sykehus i Helse Nord: Noen avdelinger viser framtidige timer. Du kan også sende meldinger.</li>\n<li>kommunale helse- og omsorgstjenester i enkelte kommuner og bydeler: Både framtidige og tidligere timer</li>\n<li>enkelte andre aktører, for eksempel Studentsamskipnaden i Oslo: Både framtidige og tidligere timer</li>\n</ul>\n\n<p>\nHvis du har foreldreansvar for barn mellom 12 og 16 år vil du også se deres timeavtaler med fastlegen og kommunal helse- og omsorgstjeneste, men ikke timeavtaler fra spesialisthelsetjenesten.\n</p>\n\n<p><a href=\"https://www.helsenorge.no/timeavtaler/om/\">Her kan du lese mer om Timeavtaler</a>.</p>"}
   */
   hjelpekontekst_timeavtale: string;
   /** 
