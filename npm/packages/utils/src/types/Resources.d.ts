@@ -1441,6 +1441,21 @@ export type HNDialogCommonJS = {
   healthcareProfessionalHelsesykepleier: string;
 };
 
+export type HNGeneriskStatusJS = {
+  /**
+   * Personverninnstillinger
+   */
+  reservasjon_negative_funn: string;
+  /**
+   * Det har skjedd en teknisk feil. Prøv igjen senere.
+   */
+  response_error_description: string;
+  /**
+   * Teknisk feil
+   */
+  response_error_title: string;
+};
+
 export type HNMinHelseByttFastlegeJS = {
   /**
    * Kvittering
