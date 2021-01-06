@@ -32,10 +32,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles get', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      get('proxyName', 'v1/lorem/ipsum', { testParam: 3 });
+      get('tokenserviceinternal', 'v1/ActiveTokens', { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(1);
 
-      expect(fetchMock.mock.calls[0][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/v1/lorem/ipsum?testParam=3');
+      expect(fetchMock.mock.calls[0][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/v1/ActiveTokens?testParam=3');
       expect(fetchMock.mock.calls[0][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[0][1].headers).toEqual({
         _headers: {
@@ -54,10 +54,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles post', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      post('proxyName', 'api/v1/lorem/ipsum', { data: 'mydata' }, { testParam: 3 });
+      post('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(2);
 
-      expect(fetchMock.mock.calls[1][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
+      expect(fetchMock.mock.calls[1][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
       expect(fetchMock.mock.calls[1][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[1][1].headers).toEqual({
         _headers: {
@@ -76,10 +76,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles put', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      put('proxyName', 'api/v1/lorem/ipsum', { data: 'mydata' }, { testParam: 3 });
+      put('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(3);
 
-      expect(fetchMock.mock.calls[2][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
+      expect(fetchMock.mock.calls[2][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
       expect(fetchMock.mock.calls[2][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[2][1].headers).toEqual({
         _headers: {
@@ -98,10 +98,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles remove', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      remove('proxyName', 'api/v1/lorem/ipsum', { data: 'mydata' }, { testParam: 3 });
+      remove('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(4);
 
-      expect(fetchMock.mock.calls[3][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
+      expect(fetchMock.mock.calls[3][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
       expect(fetchMock.mock.calls[3][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[3][1].headers).toEqual({
         _headers: {
