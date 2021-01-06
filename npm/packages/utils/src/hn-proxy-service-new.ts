@@ -22,12 +22,11 @@ export interface ProxyErrorResponse extends Response {
 }
 
 /**
- * Returnerer proxy url med MinHelse baseUrl, proxynavnet og evt endpoint
- * @param proxyName navn til proxy
- * @param endPoint navn til endepunkt. Eks api/v2
+ * Returnerer proxy url med MinHelse baseUrl og proxynavnet
+ * @param proxyPath navn til proxy + endpoint. Eks: tokenserviceinternal eller tokenserviceinternal/api/v1
  */
-const getProxyEnvironmentPath = (proxyName: string, endpoint?: string): string => {
-  return `${getMinHelseUrl()}/proxy/${proxyName}/${endpoint ? endpoint + '/' : ''}`;
+const getProxyEnvironmentPath = (proxyPath: string): string => {
+  return `${getMinHelseUrl()}/proxy/${proxyPath}/`;
 };
 
 /**
@@ -119,21 +118,13 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
  * baseCrud som brukes for å fetche
  * @param method
  * @param url
- * @param proxyName
- * @param endpoint
+ * @param proxyPath
  * @param params
  * @param data
  */
-const baseCrud = <T, R>(
-  method: string,
-  url: string,
-  proxyName: string,
-  endpoint?: string,
-  params?: RequestParamType,
-  data?: R
-): Promise<T | null> => {
+const baseCrud = <T, R>(method: string, url: string, proxyPath: string, params?: RequestParamType, data?: R): Promise<T | null> => {
   const queryString = params && Object.keys(params).length > 0 ? createQueryString(params) : '';
-  const baseUrl = getProxyEnvironmentPath(proxyName, endpoint);
+  const baseUrl = getProxyEnvironmentPath(proxyPath);
   const requestBody = data ? { body: JSON.stringify(data) } : {};
   return fetch(baseUrl + url + queryString, {
     ...requestBody,
@@ -158,94 +149,77 @@ const baseCrud = <T, R>(
  * get method - bruker baseCrud under the hood
  * @param method
  * @param url
- * @param proxyName
- * @param endpoint
+ * @param proxyPath
  * @param params
  */
-export const get = <T extends Response | {}>(
-  url: string,
-  proxyName: string,
-  endpoint?: string,
-  params?: RequestParamType
-): Promise<T | null> => {
-  return baseCrud<T, {}>('get', url, proxyName, endpoint, params);
+export const get = <T extends Response | {}>(url: string, proxyPath: string, params?: RequestParamType): Promise<T | null> => {
+  return baseCrud<T, {}>('get', url, proxyPath, params);
 };
 
 /**
  * post method - bruker baseCrud under the hood
  * @param method
  * @param url
- * @param proxyName
- * @param endpoint
+ * @param proxyPath
  * @param params
  * @param data
  */
 export const post = <T extends Response | {}, R>(
   url: string,
-  proxyName: string,
-  endpoint?: string,
+  proxyPath: string,
   data?: R,
   params?: RequestParamType
 ): Promise<T | null> => {
-  return baseCrud<T, R>('post', url, proxyName, endpoint, params, data);
+  return baseCrud<T, R>('post', url, proxyPath, params, data);
 };
 
 /**
  * put method - bruker baseCrud under the hood
  * @param method
  * @param url
- * @param proxyName
- * @param endpoint
+ * @param proxyPath
  * @param params
  * @param data
  */
-export const put = <T extends Response | {}, R>(
-  url: string,
-  proxyName: string,
-  endpoint?: string,
-  data?: R,
-  params?: RequestParamType
-): Promise<T | null> => {
-  return baseCrud<T, R>('put', url, proxyName, endpoint, params, data);
+export const put = <T extends Response | {}, R>(url: string, proxyPath: string, data?: R, params?: RequestParamType): Promise<T | null> => {
+  return baseCrud<T, R>('put', url, proxyPath, params, data);
 };
 
 /**
  * remove method - bruker baseCrud under the hood
  * @param method
  * @param url
- * @param proxyName
- * @param endpoint
+ * @param proxyPath
  * @param params
  * @param data
  */
 export const remove = <T extends Response | {}, R>(
   url: string,
-  proxyName: string,
-  endpoint?: string,
+  proxyPath: string,
   data?: R,
   params?: RequestParamType
 ): Promise<T | null> => {
-  return baseCrud<T, R>('delete', url, proxyName, endpoint, params, data);
+  return baseCrud<T, R>('delete', url, proxyPath, params, data);
 };
 
 /**
  * Konkatenerer url-lenke basert på environment, proxy, url, request params og custom params
  * @param url
- * @param proxyName
+ * @param proxyPath
  * @param params
  */
-export const link = (url: string, proxyName: string, params?: RequestParamType): string => {
-  return getProxyEnvironmentPath(proxyName) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
+export const link = (url: string, proxyPath: string, params?: RequestParamType): string => {
+  return getProxyEnvironmentPath(proxyPath) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
 };
 
 /**
  * Fetch for nedlasting av filer
  * @param cmd
- * @param proxyName
+ * @param proxyPath
  * @param params
  */
-export const download = (cmd: string, proxyName: string, params?: ParamsObj): Promise<OperationResponse | void> => {
-  let url = getProxyEnvironmentPath(proxyName) + cmd + parseParams(addParams(params), true);
+export const download = (cmd: string, proxyPath: string, params?: ParamsObj): Promise<OperationResponse | void> => {
+  let url = getProxyEnvironmentPath(proxyPath) + cmd + parseParams(addParams(params), true);
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
 
