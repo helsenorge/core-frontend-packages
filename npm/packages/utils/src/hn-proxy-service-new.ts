@@ -147,7 +147,7 @@ const baseCrud = <T, R>(method: string, proxyName: string, endpoint: string, par
 };
 
 /**
- * get method - bruker baseCrud under the hood
+ * get method
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  * @param params parametere som sendes med som query string
@@ -157,7 +157,7 @@ export const get = <T extends Response | {}>(proxyName: string, endpoint: string
 };
 
 /**
- * post method - bruker baseCrud under the hood
+ * post method
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  * @param params parametere som sendes med som query string
@@ -173,7 +173,7 @@ export const post = <T extends Response | {}, R>(
 };
 
 /**
- * put method - bruker baseCrud under the hood
+ * put method
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  * @param params parametere som sendes med som query string
@@ -189,7 +189,7 @@ export const put = <T extends Response | {}, R>(
 };
 
 /**
- * remove method - bruker baseCrud under the hood
+ * remove method
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  * @param params parametere som sendes med som query string
@@ -216,13 +216,12 @@ export const link = (proxyName: string, endpoint: string, params?: RequestParamT
 
 /**
  * Fetch for nedlasting av filer
- * @param cmd
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  * @param params parametere som sendes med som query string
  */
-export const download = (cmd: string, proxyName: string, endpoint: string, params?: ParamsObj): Promise<OperationResponse | void> => {
-  let url = getProxyEnvironmentPath(proxyName, endpoint) + cmd + parseParams(addParams(params), true);
+export const download = (proxyName: string, endpoint: string, params?: ParamsObj): Promise<OperationResponse | void> => {
+  let url = getProxyEnvironmentPath(proxyName, endpoint) + parseParams(addParams(params), true);
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
 
