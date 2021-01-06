@@ -23,11 +23,11 @@ export interface ProxyErrorResponse extends Response {
 
 /**
  * Returnerer proxy url med MinHelse baseUrl og proxynavnet
- * @param proxyName navn til proxy. Eks tokenserviceinternal
- * @param endpoint path på api-et. Eks: api/v1
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  */
 const getProxyEnvironmentPath = (proxyName: string, endpoint: string): string => {
-  return `${getMinHelseUrl()}/proxy/${proxyName}/${endpoint}/`;
+  return `${getMinHelseUrl()}/proxy/${proxyName}/${endpoint}`;
 };
 
 /**
@@ -70,7 +70,7 @@ export const getErrorFromHTML = (html: string): JSON | null => {
 
 /**
  * Returnerer full query string basert på parametrene sendt som argument '?param1=value&param2=value'
- * @param params opjekt med parametrene
+ * @param params parametere som sendes med som query string
  */
 const createQueryString = (params: RequestParamType): string => {
   return (
@@ -118,24 +118,16 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
 /**
  * baseCrud som brukes for å fetche
  * @param method
- * @param url
- * @param proxyName navn til proxy. Eks tokenserviceinternal
- * @param endpoint path på api-et. Eks: api/v1
- * @param params
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
+ * @param params parametere som sendes med som query string
  * @param data
  */
-const baseCrud = <T, R>(
-  method: string,
-  url: string,
-  proxyName: string,
-  endpoint: string,
-  params?: RequestParamType,
-  data?: R
-): Promise<T | null> => {
+const baseCrud = <T, R>(method: string, proxyName: string, endpoint: string, params?: RequestParamType, data?: R): Promise<T | null> => {
   const queryString = params && Object.keys(params).length > 0 ? createQueryString(params) : '';
   const baseUrl = getProxyEnvironmentPath(proxyName, endpoint);
   const requestBody = data ? { body: JSON.stringify(data) } : {};
-  return fetch(baseUrl + url + queryString, {
+  return fetch(baseUrl + queryString, {
     ...requestBody,
     method,
     credentials: 'include',
@@ -156,95 +148,78 @@ const baseCrud = <T, R>(
 
 /**
  * get method - bruker baseCrud under the hood
- * @param method
- * @param url
- * @param proxyName navn til proxy. Eks tokenserviceinternal
- * @param endpoint path på api-et. Eks: api/v1
- * @param params
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
+ * @param params parametere som sendes med som query string
  */
-export const get = <T extends Response | {}>(
-  url: string,
-  proxyName: string,
-  endpoint: string,
-  params?: RequestParamType
-): Promise<T | null> => {
-  return baseCrud<T, {}>('get', url, proxyName, endpoint, params);
+export const get = <T extends Response | {}>(proxyName: string, endpoint: string, params?: RequestParamType): Promise<T | null> => {
+  return baseCrud<T, {}>('get', proxyName, endpoint, params);
 };
 
 /**
  * post method - bruker baseCrud under the hood
- * @param method
- * @param url
- * @param proxyName navn til proxy. Eks tokenserviceinternal
- * @param endpoint path på api-et. Eks: api/v1
- * @param params
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
+ * @param params parametere som sendes med som query string
  * @param data
  */
 export const post = <T extends Response | {}, R>(
-  url: string,
   proxyName: string,
   endpoint: string,
   data?: R,
   params?: RequestParamType
 ): Promise<T | null> => {
-  return baseCrud<T, R>('post', url, proxyName, endpoint, params, data);
+  return baseCrud<T, R>('post', proxyName, endpoint, params, data);
 };
 
 /**
  * put method - bruker baseCrud under the hood
- * @param method
- * @param url
- * @param proxyName navn til proxy. Eks tokenserviceinternal
- * @param endpoint path på api-et. Eks: api/v1
- * @param params
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
+ * @param params parametere som sendes med som query string
  * @param data
  */
 export const put = <T extends Response | {}, R>(
-  url: string,
   proxyName: string,
   endpoint: string,
   data?: R,
   params?: RequestParamType
 ): Promise<T | null> => {
-  return baseCrud<T, R>('put', url, proxyName, endpoint, params, data);
+  return baseCrud<T, R>('put', proxyName, endpoint, params, data);
 };
 
 /**
  * remove method - bruker baseCrud under the hood
- * @param method
- * @param url
- * @param proxyName navn til proxy. Eks tokenserviceinternal
- * @param endpoint path på api-et. Eks: api/v1
- * @param params
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
+ * @param params parametere som sendes med som query string
  * @param data
  */
 export const remove = <T extends Response | {}, R>(
-  url: string,
   proxyName: string,
   endpoint: string,
   data?: R,
   params?: RequestParamType
 ): Promise<T | null> => {
-  return baseCrud<T, R>('delete', url, proxyName, endpoint, params, data);
+  return baseCrud<T, R>('delete', proxyName, endpoint, params, data);
 };
 
 /**
  * Konkatenerer url-lenke basert på environment, proxy, url, request params og custom params
- * @param url
- * @param proxyName navn til proxy. Eks tokenserviceinternal
- * @param endpoint path på api-et. Eks: api/v1
- * @param params
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
+ * @param params parametere som sendes med som query string
  */
-export const link = (url: string, proxyName: string, endpoint: string, params?: RequestParamType): string => {
-  return getProxyEnvironmentPath(proxyName, endpoint) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
+export const link = (proxyName: string, endpoint: string, params?: RequestParamType): string => {
+  return getProxyEnvironmentPath(proxyName, endpoint) + createQueryString({ ...getDefaultRequestParams(), ...params });
 };
 
 /**
  * Fetch for nedlasting av filer
  * @param cmd
- * @param proxyName navn til proxy. Eks tokenserviceinternal
- * @param endpoint path på api-et. Eks: api/v1
- * @param params
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
+ * @param params parametere som sendes med som query string
  */
 export const download = (cmd: string, proxyName: string, endpoint: string, params?: ParamsObj): Promise<OperationResponse | void> => {
   let url = getProxyEnvironmentPath(proxyName, endpoint) + cmd + parseParams(addParams(params), true);
