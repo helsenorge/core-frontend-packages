@@ -32,10 +32,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles get', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      get('lorem/ipsum', 'proxyName', { testParam: 3 });
+      get('lorem/ipsum', 'proxyName', 'v1', { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(1);
 
-      expect(fetchMock.mock.calls[0][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/lorem/ipsum?testParam=3');
+      expect(fetchMock.mock.calls[0][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/v1/lorem/ipsum?testParam=3');
       expect(fetchMock.mock.calls[0][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[0][1].headers).toEqual({
         _headers: {
@@ -54,7 +54,7 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles post', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      post('lorem/ipsum', 'proxyName/api/v1', { data: 'mydata' }, { testParam: 3 });
+      post('lorem/ipsum', 'proxyName', 'api/v1', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(2);
 
       expect(fetchMock.mock.calls[1][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
@@ -76,10 +76,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles put', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      put('lorem/ipsum', 'proxyName', { data: 'mydata' }, { testParam: 3 });
+      put('lorem/ipsum', 'proxyName', 'api/v1', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(3);
 
-      expect(fetchMock.mock.calls[2][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/lorem/ipsum?testParam=3');
+      expect(fetchMock.mock.calls[2][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
       expect(fetchMock.mock.calls[2][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[2][1].headers).toEqual({
         _headers: {
@@ -98,10 +98,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles remove', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      remove('lorem/ipsum', 'proxyName', { data: 'mydata' }, { testParam: 3 });
+      remove('lorem/ipsum', 'proxyName', 'api/v1', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(4);
 
-      expect(fetchMock.mock.calls[3][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/lorem/ipsum?testParam=3');
+      expect(fetchMock.mock.calls[3][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
       expect(fetchMock.mock.calls[3][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[3][1].headers).toEqual({
         _headers: {
@@ -122,9 +122,9 @@ describe('Gitt at baseCrud er definert', () => {
 describe('Gitt at en proxy link skal genereres', () => {
   describe('Når link ikke har noen ekstra request parameter', () => {
     it('Så skal link med headers som parameter returneres', () => {
-      const fullUrl = link('MinHelse/testtest', 'testProxyTest');
+      const fullUrl = link('MinHelse/testtest', 'testProxyTest', 'api/v1');
       expect(fullUrl).toBe(
-        'https://proxy.test.nhn.no/proxy/testProxyTest/MinHelse/testtest?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg'
+        'https://proxy.test.nhn.no/proxy/testProxyTest/api/v1/MinHelse/testtest?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg'
       );
     });
   });
@@ -134,9 +134,9 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         Sok: 'fastlege',
       };
-      const fullUrl = link('url', 'p', params);
+      const fullUrl = link('url', 'p', 'api/v1', params);
       expect(fullUrl).toBe(
-        'https://proxy.test.nhn.no/proxy/p/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Sok=fastlege'
+        'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Sok=fastlege'
       );
     });
   });
@@ -146,9 +146,9 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         maxCount: 3,
       };
-      const fullUrl = link('url', 'p', params);
+      const fullUrl = link('url', 'p', 'api/v1', params);
       expect(fullUrl).toBe(
-        'https://proxy.test.nhn.no/proxy/p/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&maxCount=3'
+        'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&maxCount=3'
       );
     });
   });
@@ -158,9 +158,9 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         VisLegerUtenVenteliste: true,
       };
-      const fullUrl = link('url', 'p', params);
+      const fullUrl = link('url', 'p', 'api/v1', params);
       expect(fullUrl).toBe(
-        'https://proxy.test.nhn.no/proxy/p/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&VisLegerUtenVenteliste=true'
+        'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&VisLegerUtenVenteliste=true'
       );
     });
   });
@@ -170,9 +170,9 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         Filtere: [1, 2, 4],
       };
-      const fullUrl = link('url', 'p', params);
+      const fullUrl = link('url', 'p', 'api/v1', params);
       expect(fullUrl).toBe(
-        'https://proxy.test.nhn.no/proxy/p/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Filtere=1&Filtere=2&Filtere=4'
+        'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Filtere=1&Filtere=2&Filtere=4'
       );
     });
   });
@@ -182,9 +182,9 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         Filtere: ['a', 'b', 'c'],
       };
-      const fullUrl = link('url', 'p', params);
+      const fullUrl = link('url', 'p', 'api/v1', params);
       expect(fullUrl).toBe(
-        'https://proxy.test.nhn.no/proxy/p/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Filtere=a&Filtere=b&Filtere=c'
+        'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Filtere=a&Filtere=b&Filtere=c'
       );
     });
   });
