@@ -6740,7 +6740,7 @@
     "page_Helseopplysninger_FLO_HeaderTitle": "PLACEHOLDER: Reservasjon mot fastlegeordningen",
     "page_Helseopplysninger_KPR_Gamle_HeaderTitle": "Oppbevaring av opplysninger i Kommunalt pasient- og brukerregister (KPR)",
     "page_Kontakt_NotificationProfile_MissingContactInformation_Description": "<div>Du har ikke registrert kontaktinformasjon i <a href=\"https://www.norge.no/nb/oppdater-kontaktinformasjon\" target=\"_blank\" class=\"external\">Kontakt- og reservasjonsregisteret (ID-porten)</a>. Du vil ikke kunne motta varsler fra Helsenorge om hendelser som angår deg. Registrer e-post og mobilnummer der, dersom du ønsker å kunne motta varsler.<p>Det er kun mulig å registrere kontaktinformasjon for seg selv, ikke på vegne av barn eller andre. Foreldre kan få varsler for sine barn ved å velge dette i sitt eget varseloppsett, og tilsvarende for de som har fullmakt for andre.</p></div>",
-    "page_Kontakt_NotificationProfile_Description": "Her velger du hvordan du vil varsles når du mottar meldinger på helsenorge.no. Varsler sendes mellom 07:00 og 23:00.",
+    "page_Kontakt_NotificationProfile_Description": "Her velger du hvordan du vil varsles når du mottar meldinger på helsenorge.no. Du vil bare få varsler knyttet til de tjenestene du har tilgang til. Varsler sendes mellom 07:00 og 23:00.",
     "page_Kontakt_NotificationProfile_NoPha": "Du har ikke samtykket til Personlig helsearkiv",
     "page_Kontakt_NotificationProfile_Select_Notification": "Hvilke typer varsel vil du ha?",
     "page_Fullmakt_Lightbox_Update_Error_Edit": "Vi kunne ikke fullføre endringen av fullmakten. Prøv igjen senere.",

@@ -26952,7 +26952,7 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   page_Kontakt_NotificationProfile_MissingContactInformation_Description: string;
   /** 
-  * Her velger du hvordan du vil varsles når du mottar meldinger på helsenorge.no. Varsler sendes mellom 07:00 og 23:00.
+  * Her velger du hvordan du vil varsles når du mottar meldinger på helsenorge.no. Du vil bare få varsler knyttet til de tjenestene du har tilgang til. Varsler sendes mellom 07:00 og 23:00.
   */
   page_Kontakt_NotificationProfile_Description: string;
   /** 
