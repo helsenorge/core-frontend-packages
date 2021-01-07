@@ -16,12 +16,12 @@ export interface ResourcesWithMonthNames {
 type ISO8601 = string;
 
 /**
- * Returnerer dagens dato i yyyy--mm-dd format (minus 1 for month (array format))
+ * Returnerer dagens dato i yyyy--mm-dd format
  */
 export const todaysDate = (): string => {
   const today = new Date();
   const dd = String(today.getDate());
-  const mm = String(today.getMonth());
+  const mm = String(today.getMonth() + 1);
   const yyyy = today.getFullYear();
   return yyyy + '-' + mm + '-' + dd;
 };
