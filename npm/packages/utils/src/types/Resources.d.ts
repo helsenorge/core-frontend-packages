@@ -19391,6 +19391,10 @@ export type HNMinHelsePasientjournal = {
   * Oslo universitetssykehus HF (U1)
   */
   xDS_LokasjonFeil_OUSHF_U1: string;
+  /** 
+  * Oslo universitetssykehus HF (PP)
+  */
+  xDS_LokasjonFeil_OUSHF_PP: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
