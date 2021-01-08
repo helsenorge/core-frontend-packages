@@ -19387,6 +19387,10 @@ export type HNMinHelsePasientjournal = {
   * Unntatt fra visning på nett
   */
   documentIsRestricted: string;
+  /** 
+  * Oslo universitetssykehus HF (U1)
+  */
+  xDS_LokasjonFeil_OUSHF_U1: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 

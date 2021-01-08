@@ -4849,7 +4849,8 @@
     "pdfCompatibilityBodyPreview": "Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?",
     "pdfCompatibilityPreview": "Se forhåndsvisning",
     "xDS_LokasjonFeil_SIHF": "Sykehuset Innlandet HF",
-    "documentIsRestricted": "Unntatt fra visning på nett"
+    "documentIsRestricted": "Unntatt fra visning på nett",
+    "xDS_LokasjonFeil_OUSHF_U1": "Oslo universitetssykehus HF (U1)"
   },
   "HNMinHelsePasientreiserJS": { 
     "valideringsfeil_ADRESSE_GATE_MAX_TEGN": "Adresse kan ha opp til 150 tegn.",
