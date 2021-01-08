@@ -4850,7 +4850,8 @@
     "pdfCompatibilityPreview": "Se forhåndsvisning",
     "xDS_LokasjonFeil_SIHF": "Sykehuset Innlandet HF",
     "documentIsRestricted": "Unntatt fra visning på nett",
-    "xDS_LokasjonFeil_OUSHF_U1": "Oslo universitetssykehus HF (U1)"
+    "xDS_LokasjonFeil_OUSHF_U1": "Oslo universitetssykehus HF (U1)",
+    "xDS_LokasjonFeil_OUSHF_PP": "Oslo universitetssykehus HF (PP)"
   },
   "HNMinHelsePasientreiserJS": { 
     "valideringsfeil_ADRESSE_GATE_MAX_TEGN": "Adresse kan ha opp til 150 tegn.",
