@@ -2,6 +2,7 @@ import { trackError } from './adobe-analytics';
 import * as DateUtils from './date-utils';
 import { isAuthorized, hashIsAuthorized } from './hn-authorize';
 import { getCookieValue } from './cookie';
+import { getTjenesterUrl } from './hn-proxy-service';
 
 /****************************************************************/
 /**************** DENNE FILEN ER DEPRECATED *********************/
@@ -111,6 +112,7 @@ export interface OperationResponse extends Response {
 
 const minHelsePath = '/api/v1/MinHelse/';
 const portalPath = '/api/v1/Portal/';
+const crossDomainPath = '/api/v1/CrossDomain/';
 const openCmd = 'HelseNorge/';
 const uploadCmd = 'Upload/';
 
@@ -146,7 +148,7 @@ window.HN.PortalCommands = window.HN.PortalCommands || {};
  * Returnerer baseUrl til MinHelse basert på HN Rest objektet
  */
 export const getMinHelseUrl = () => {
-  return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? HN.Rest.__TjenesterApiUrl__ : '';
+  return getTjenesterUrl();
 };
 
 export function usePasientensLegemiddelliste() {
@@ -195,15 +197,15 @@ export function getAutoCommand(): CommandsType {
 }
 
 function getMinHelseEnvironmentPath(): string {
-  return getMinHelseUrl() + minHelsePath;
+  return getTjenesterUrl() + minHelsePath;
 }
 
 function getPortalEnvironmentPath(): string {
-  return getMinHelseUrl() + portalPath;
+  return getTjenesterUrl() + portalPath;
 }
 
 export function getMinHelseOpenEnvironmentPath() {
-  return getMinHelseUrl() + minHelsePath + openCmd;
+  return getTjenesterUrl() + minHelsePath + openCmd;
 }
 
 function getAutoPath(): string {
@@ -316,6 +318,15 @@ export function get<T extends OperationResponse>(cmd: string, params?: any): Pro
   }).then(checkStatus);
 }
 
+export function getCrossDomain<T extends Response | {}>(command: string, params?: any): Promise<T> {
+  const headers = createHeaders();
+  return fetch(getTjenesterUrl() + crossDomainPath + command + parseParams(params, true), {
+    method: 'get',
+    credentials: 'include',
+    headers,
+  }).then(checkStatus);
+}
+
 export function getPortal<T extends OperationResponse>(cmd: string, params?: any): Promise<T> {
   if (!params) {
     const cmdKey = '__' + cmd + '__';
@@ -325,16 +336,6 @@ export function getPortal<T extends OperationResponse>(cmd: string, params?: any
   }
   const headers = createPortalHeaders();
   return fetch(getPortalEnvironmentPath() + cmd + parseParams(params, true), {
-    method: 'get',
-    credentials: 'include',
-    headers,
-  }).then(checkStatus);
-}
-
-export function getVBS<T>(cmd: string, params?: any): Promise<T> {
-  const headers = createHeaders();
-  const vbsRestUrl = `${window.location.origin}/_vti_bin/VBS/vbsrest.svc/`;
-  return fetch(vbsRestUrl + cmd + parseParams(params, true), {
     method: 'get',
     credentials: 'include',
     headers,
@@ -398,7 +399,7 @@ function crud<T extends OperationResponse>(method: string, cmd: string, data?: a
     body: JSON.stringify(data),
   })
     .then((response: Response) => checkStatus<T>(response))
-    .catch((err) => {
+    .catch(err => {
       trackError('level1');
       if (err == 'TypeError: Failed to fetch') {
         throw {
@@ -421,7 +422,7 @@ function crudAuto<T extends OperationResponse>(method: string, cmd: string, data
     body: JSON.stringify(data),
   })
     .then((response: Response) => checkStatus<T>(response))
-    .catch((err) => {
+    .catch(err => {
       trackError('level1');
       if (err == 'TypeError: Failed to fetch') {
         throw {
@@ -507,13 +508,13 @@ export function download(cmd: string, params?: any): Promise<OperationResponse> 
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
 
-  return new Promise(function (resolve, reject) {
+  return new Promise(function(resolve, reject) {
     fetch(url, {
       method: 'get',
       credentials: 'include',
       headers,
     })
-      .then(function (res) {
+      .then(function(res) {
         const contentDisposition = res.headers.get('content-disposition');
         const match =
           contentDisposition && contentDisposition.match(/filename="(.+)"/) ? contentDisposition.match(/filename="(.+)"/) : false;
@@ -524,10 +525,10 @@ export function download(cmd: string, params?: any): Promise<OperationResponse> 
         const blobPromise = res.blob();
         return { blobPromise, fileName };
       })
-      .then(function (respObj) {
+      .then(function(respObj) {
         const fileName = respObj.fileName;
 
-        respObj.blobPromise.then(function (blob) {
+        respObj.blobPromise.then(function(blob) {
           if (window.navigator && window.navigator.msSaveOrOpenBlob) {
             window.navigator.msSaveOrOpenBlob(blob, fileName);
             resolve();
@@ -543,7 +544,7 @@ export function download(cmd: string, params?: any): Promise<OperationResponse> 
           }
         });
       })
-      .catch(function (responseHtml) {
+      .catch(function(responseHtml) {
         if (responseHtml === '401') {
           document.location.reload(true);
         } else {
