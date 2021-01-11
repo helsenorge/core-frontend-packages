@@ -4389,7 +4389,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_BrukOgTilganger_Title: string;
   /** 
-  * Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.
+  * Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang.
   */
   page_BrukOgTilganger_Desc: string;
   /** 
