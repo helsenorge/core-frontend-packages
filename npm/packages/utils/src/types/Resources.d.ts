@@ -23458,11 +23458,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_vedtak_DELVIS_INNVILGET: string;
   /** 
-  * Oversendt fylkesmannen.
+  * Oversendt Statsforvalteren.
   */
   overview_statuser_statusTypeKlage_vedtak_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /** 
-  * Behandlet av fylkesmannen.
+  * Behandlet av Statsforvalteren.
   */
   overview_statuser_statusTypeKlage_vedtak_KLAGE_BEHANDLET_FYLKESMANNEN: string;
   /** 
@@ -25494,7 +25494,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_klage_INNSENDING_FEILET: string;
   /** 
-  * Oversendt fylkesmannen.
+  * Oversendt Statsforvalteren.
   */
   overview_statuser_statusTypeKlage_klage_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /** 
