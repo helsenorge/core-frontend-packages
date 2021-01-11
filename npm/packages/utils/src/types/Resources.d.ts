@@ -25126,7 +25126,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   klager_klageSkjema_begrunnelseIngress: string;
   /** 
-  * Klagen din behandles av Pasientreiser. Hvis vedtaket ikke endres, blir klagen din sendt videre til fylkesmannen for behandling.
+  * Klagen din behandles av Pasientreiser. Hvis vedtaket ikke endres, blir klagen din sendt videre til Statsforvalteren for behandling.
   */
   klager_klageSkjema_begrunnelseLabel: string;
   /** 
