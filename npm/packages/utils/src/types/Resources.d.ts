@@ -19427,7 +19427,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_klage_VEDTAK_OPPHEVET: string;
   /** 
-  * Klagen er behandlet av fylkesmannen (vedtak opphevet).
+  * Klagen er behandlet av Statsforvalteren (vedtak opphevet).
   */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_OPPHEVET: string;
   /** 
@@ -25454,7 +25454,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_ledsager_MOT_title: string;
   /** 
-  * Klagen er oversendt fylkesmannen.
+  * Klagen er oversendt Statsforvalteren.
   */
   overview_statuser_statusTypeKlage_soknad_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /** 
@@ -25478,7 +25478,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_OMGJORT: string;
   /** 
-  * Klagen er behandlet av fylkesmannen (vedtak stadfestet).
+  * Klagen er behandlet av Statsforvalteren (vedtak stadfestet).
   */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_STADFESTET: string;
   /** 
@@ -25514,7 +25514,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_klage_VEDTAK_OMGJORT: string;
   /** 
-  * Behandlet av fylkesmannen.
+  * Behandlet av Statsforvalteren.
   */
   overview_statuser_statusTypeKlage_klage_VEDTAK_STADFESTET: string;
   /** 
