@@ -6377,7 +6377,7 @@
     "overview_statuser_statusTypeKlage_klage_SENDT": "Sendt",
     "overview_statuser_statusTypeKlage_klage_INNSENDING_FEILET": "Innsending feilet. Du må sende inn klagen på nytt.",
     "overview_statuser_statusTypeKlage_klage_KLAGE_OVERSENDT_FYLKESMANNEN": "Oversendt Statsforvalteren.",
-    "overview_statuser_statusTypeKlage_klage_KLAGE_BEHANDLET_FYLKESMANNEN": "Behandlet av fylkesmannen.",
+    "overview_statuser_statusTypeKlage_klage_KLAGE_BEHANDLET_FYLKESMANNEN": "Behandlet av Statsforvalteren.",
     "overview_statuser_statusTypeKlage_klage_UNDER_BEHANDLING": "Under behandling.",
     "overview_statuser_statusTypeKlage_klage_VEDTAK_FATTET": "Behandlet",
     "overview_statuser_statusTypeKlage_klage_VEDTAK_OMGJORT": "Behandlet av Statsforvalteren.",
