@@ -25498,7 +25498,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_klage_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /** 
-  * Behandlet av fylkesmannen.
+  * Behandlet av Statsforvalteren.
   */
   overview_statuser_statusTypeKlage_klage_KLAGE_BEHANDLET_FYLKESMANNEN: string;
   /** 
