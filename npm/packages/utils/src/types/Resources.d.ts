@@ -4389,7 +4389,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_BrukOgTilganger_Title: string;
   /**
-   * Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.
+   * Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang.
    */
   page_BrukOgTilganger_Desc: string;
   /**
@@ -19423,11 +19423,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   samtykke_digitalehelsetjenester_content: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_VEDTAK_OPPHEVET: string;
   /**
-   * Klagen er behandlet av fylkesmannen (vedtak opphevet).
+   * Klagen er behandlet av Statsforvalteren (vedtak opphevet).
    */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_OPPHEVET: string;
   /**
@@ -23458,11 +23458,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_statuser_statusTypeKlage_vedtak_DELVIS_INNVILGET: string;
   /**
-   * Oversendt fylkesmannen.
+   * Oversendt Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_vedtak_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_vedtak_KLAGE_BEHANDLET_FYLKESMANNEN: string;
   /**
@@ -25126,7 +25126,7 @@ export type HNMinHelsePasientreiserJS = {
    */
   klager_klageSkjema_begrunnelseIngress: string;
   /**
-   * Klagen din behandles av Pasientreiser. Hvis vedtaket ikke endres, blir klagen din sendt videre til fylkesmannen for behandling.
+   * Klagen din behandles av Pasientreiser. Hvis vedtaket ikke endres, blir klagen din sendt videre til Statsforvalteren for behandling.
    */
   klager_klageSkjema_begrunnelseLabel: string;
   /**
@@ -25454,11 +25454,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   krav_ledsager_MOT_title: string;
   /**
-   * Klagen er oversendt fylkesmannen.
+   * Klagen er oversendt Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_soknad_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /**
-   * Klagen er behandlet av fylkesmannen.
+   * Klagen er behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_soknad_KLAGE_BEHANDLET_FYLKESMANNEN: string;
   /**
@@ -25474,11 +25474,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_statuser_statusTypeKlage_soknad_AVVIST: string;
   /**
-   * Klagen er behandlet av fylkesmannen.
+   * Klagen er behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_OMGJORT: string;
   /**
-   * Klagen er behandlet av fylkesmannen (vedtak stadfestet).
+   * Klagen er behandlet av Statsforvalteren (vedtak stadfestet).
    */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_STADFESTET: string;
   /**
@@ -25494,11 +25494,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_statuser_statusTypeKlage_klage_INNSENDING_FEILET: string;
   /**
-   * Oversendt fylkesmannen.
+   * Oversendt Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_KLAGE_BEHANDLET_FYLKESMANNEN: string;
   /**
@@ -25510,11 +25510,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_statuser_statusTypeKlage_klage_VEDTAK_FATTET: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_VEDTAK_OMGJORT: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_VEDTAK_STADFESTET: string;
   /**
@@ -26646,12 +26646,14 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
    * Du har ikke tilgang til samtykkedefinisjonen.
    */
   samtykkeDefinisjonAccessDeniedBody: string;
-  /**
-   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
-   */
+  /** 
+  * {"defaulttekst_overskrift":"Bruk og tilganger","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Helsenorge-tjenester.</p><p><b>Logg over bruk</b><br/> Loggen viser en kronologisk oversikt over aktivitet. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også. Denne loggen viser bare at noen har vært inne på en tjeneste – og ikke detaljer om hva vedkommende eventuelt spesifikt har gjort.</p>
+<h3>Aktive innlogginger</h3><p>xxx</p>
+<p><b>Tillatelser</b></p>"}
+  */
   hjelpekontekst_profilBrukOgTilganger: string;
   /**
-   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
+   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
    */
   hjelpekontekst_profilLogg: string;
   /**
