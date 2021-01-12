@@ -26647,12 +26647,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   samtykkeDefinisjonAccessDeniedBody: string;
   /** 
-  * {"defaulttekst_overskrift":"Bruk og tilganger","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Helsenorge-tjenester.</p><p><b>Logg over bruk</b><br/> Loggen viser en kronologisk oversikt over aktivitet. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også. Denne loggen viser bare at noen har vært inne på en tjeneste – og ikke detaljer om hva vedkommende eventuelt spesifikt har gjort.</p>
-<h3>Aktive innlogginger</h3><p>xxx</p>
-<p><b>Tillatelser</b></p>"}
-  */
-  hjelpekontekst_profilBrukOgTilganger: string;
-  /** 
   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
   */
   hjelpekontekst_profilLogg: string;
