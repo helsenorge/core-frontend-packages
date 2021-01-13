@@ -26064,6 +26064,12 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
+  * {"defaulttekst_overskrift":"Bruk og tilganger","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Helsenorge-tjenester.</p><p><b>Logg over bruk</b><br/> Loggen viser en kronologisk oversikt over aktivitet. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også. Denne loggen viser bare at noen har vært inne på en tjeneste – og ikke detaljer om hva vedkommende eventuelt spesifikt har gjort.</p>
+<h3>Aktive innlogginger</h3><p>xxx</p>
+<p><b>Tillatelser</b></p>"}
+  */
+  hjelpekontekst_profilBrukOgTilganger: string;
+  /** 
   * Helsenorge
   */
   organisasjonsnavn_fullmakt: string;
