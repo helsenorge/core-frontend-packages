@@ -6670,7 +6670,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsAppointmentStatusOtherDoctor: string;
   /** 
-  * Tjenesten kunne ikke hente ledige timer.
+  * Tjenesten kunne ikke hente ledige timer. Prøv igjen senere.
   */
   bookingCalendarChangeAppointmentFetchError: string;
   /** 
@@ -9364,7 +9364,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   getAvailableAppointmentsCouldNotFetch: string;
   /** 
-  * Tjenesten kunne ikke hente ledige timer.
+  * Tjenesten kunne ikke hente ledige timer. Prøv igjen senere.
   */
   getAvailableAppointmentsCouldNotFetchOfflineAlternative: string;
   /** 
