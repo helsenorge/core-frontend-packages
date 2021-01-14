@@ -279,7 +279,7 @@ export type HNCoreFrontendNPMPackagesFramework = {
    */
   representasjonerBarn16Plus: string;
   /**
-   * Barn som ikke er registrert på samme folkeregistrerte adresse som sine foreldre vises ikke på Helsenorge. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
+   * Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
    */
   representasjonerBarnAnnenAdresse: string;
   /**
@@ -4389,7 +4389,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_BrukOgTilganger_Title: string;
   /**
-   * Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.
+   * Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang.
    */
   page_BrukOgTilganger_Desc: string;
   /**
@@ -6670,7 +6670,7 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentDetailsAppointmentStatusOtherDoctor: string;
   /**
-   * Tjenesten kunne ikke hente ledige timer.
+   * Tjenesten kunne ikke hente ledige timer. Prøv igjen senere.
    */
   bookingCalendarChangeAppointmentFetchError: string;
   /**
@@ -9364,7 +9364,7 @@ Hvis du ikke møter vil du bli belastet for timen.
    */
   getAvailableAppointmentsCouldNotFetch: string;
   /**
-   * Tjenesten kunne ikke hente ledige timer.
+   * Tjenesten kunne ikke hente ledige timer. Prøv igjen senere.
    */
   getAvailableAppointmentsCouldNotFetchOfflineAlternative: string;
   /**
@@ -19387,6 +19387,14 @@ export type HNMinHelsePasientjournal = {
    * Unntatt fra visning på nett
    */
   documentIsRestricted: string;
+  /**
+   * Oslo universitetssykehus HF (U1)
+   */
+  xDS_LokasjonFeil_OUSHF_U1: string;
+  /**
+   * Oslo universitetssykehus HF (PP)
+   */
+  xDS_LokasjonFeil_OUSHF_PP: string;
 };
 
 export type HNMinHelsePasientreiserJS = {
@@ -19415,11 +19423,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   samtykke_digitalehelsetjenester_content: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_VEDTAK_OPPHEVET: string;
   /**
-   * Klagen er behandlet av fylkesmannen (vedtak opphevet).
+   * Klagen er behandlet av Statsforvalteren (vedtak opphevet).
    */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_OPPHEVET: string;
   /**
@@ -23450,11 +23458,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_statuser_statusTypeKlage_vedtak_DELVIS_INNVILGET: string;
   /**
-   * Oversendt fylkesmannen.
+   * Oversendt Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_vedtak_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_vedtak_KLAGE_BEHANDLET_FYLKESMANNEN: string;
   /**
@@ -25118,7 +25126,7 @@ export type HNMinHelsePasientreiserJS = {
    */
   klager_klageSkjema_begrunnelseIngress: string;
   /**
-   * Klagen din behandles av Pasientreiser. Hvis vedtaket ikke endres, blir klagen din sendt videre til fylkesmannen for behandling.
+   * Klagen din behandles av Pasientreiser. Hvis vedtaket ikke endres, blir klagen din sendt videre til Statsforvalteren for behandling.
    */
   klager_klageSkjema_begrunnelseLabel: string;
   /**
@@ -25446,11 +25454,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   krav_ledsager_MOT_title: string;
   /**
-   * Klagen er oversendt fylkesmannen.
+   * Klagen er oversendt Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_soknad_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /**
-   * Klagen er behandlet av fylkesmannen.
+   * Klagen er behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_soknad_KLAGE_BEHANDLET_FYLKESMANNEN: string;
   /**
@@ -25466,11 +25474,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_statuser_statusTypeKlage_soknad_AVVIST: string;
   /**
-   * Klagen er behandlet av fylkesmannen.
+   * Klagen er behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_OMGJORT: string;
   /**
-   * Klagen er behandlet av fylkesmannen (vedtak stadfestet).
+   * Klagen er behandlet av Statsforvalteren (vedtak stadfestet).
    */
   overview_statuser_statusTypeKlage_soknad_VEDTAK_STADFESTET: string;
   /**
@@ -25486,11 +25494,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_statuser_statusTypeKlage_klage_INNSENDING_FEILET: string;
   /**
-   * Oversendt fylkesmannen.
+   * Oversendt Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_KLAGE_OVERSENDT_FYLKESMANNEN: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_KLAGE_BEHANDLET_FYLKESMANNEN: string;
   /**
@@ -25502,11 +25510,11 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_statuser_statusTypeKlage_klage_VEDTAK_FATTET: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_VEDTAK_OMGJORT: string;
   /**
-   * Behandlet av fylkesmannen.
+   * Behandlet av Statsforvalteren.
    */
   overview_statuser_statusTypeKlage_klage_VEDTAK_STADFESTET: string;
   /**
@@ -26055,6 +26063,12 @@ export type HNMinHelsePasientReiserStrings = {
 };
 
 export type HNMinHelsePersonvernStrings = {
+  /** 
+  * {"defaulttekst_overskrift":"Bruk og tilganger","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Helsenorge-tjenester.</p><p><b>Logg over bruk</b><br/> Loggen viser en kronologisk oversikt over aktivitet. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også. Denne loggen viser bare at noen har vært inne på en tjeneste – og ikke detaljer om hva vedkommende eventuelt spesifikt har gjort.</p>
+<h3>Aktive innlogginger</h3><p>xxx</p>
+<p><b>Tillatelser</b></p>"}
+  */
+  hjelpekontekst_profilBrukOgTilganger: string;
   /**
    * Helsenorge
    */
@@ -26639,11 +26653,7 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
    */
   samtykkeDefinisjonAccessDeniedBody: string;
   /**
-   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
-   */
-  hjelpekontekst_profilBrukOgTilganger: string;
-  /**
-   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
+   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
    */
   hjelpekontekst_profilLogg: string;
   /**
@@ -26756,7 +26766,7 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
    */
   page_Kontakt_HentPaNytt: string;
   /**
-   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Varseloppsett","seksjonstekst_brodtekst":"<p>\nI varseloppsettet kan du bestemme om du ønsker SMS- eller e-postvarsel når du mottar informasjon på helsenorge.no, og hvilke varsler du får.\n</p>\n\n<p>\nHvis du ikke har valgt noe annet, blir varsel sendt på SMS. Varsel sendes til e-post og mobilnummer som er registrert hos <a href=\"https://www.norge.no/nb/oppdater-kontaktinformasjon\">kontakt- og reservasjonsregisteret (ID-porten)</a>. Varsler kan sendes til både norske og utenlandske mobiltelefonnumre, og gjelder bare tjenester på helsenorge.no.\n</p>\n\n<p>\nHvis du har foreldreansvar for barn, vil du få samme type varsler for dem som du får for deg selv.\n</p>\n\n<h3>\nObligatoriske varsler\n</h3>\n\n<p>\nDisse varslene vil du få uansett hvilket alternativ du velger:\n</p>\n\n<ul>\n<li>Varsler om nye, endrede eller avlyste timeavtaler som vises på Helsenorge. Sykehus i Helse Vest og Helse Nord vil selv varsle om timer.</li>\n<li>Påminnelser om timeavtaler hos fastlegen</li>\n<li>Meldinger fra helsepersonell</li>\n<li>Innkallingsbrev og andre viktige brev</li>\n<li>Vedtak og brev fra Pasientreiser</li>\n<li>Varsel om ny melding angående opprettelse, endring eller sletting av en fullmakt, eller påminnelse om noe av dette</li>\n<li>Varsel om at et digitalt verktøy er tilgjengelig</li>\n<li>Varsel om at du har et nytt skjema å fylle ut, eller påminnelse om at fristen snart går ut på et skjema</li>\n</ul>\n\n<h3>\nViktige varsler\n</h3>\n\n<p>\nHvis du ønsker det kan du få andre viktige varsler, i tillegg til de obligatoriske, det vil si:\n</p>\n\n<ul>\n<li>Varsel om ny melding angående innsyn eller feil i besøkshistorikk</li>\n<li>Varsel om mottak av rapporter fra helseregistre</li>\n<li>Varsel om at du har fått melding på Helsenorge fra en helseundersøkelse eller klinisk studie du deltar i</li>\n<li>Varsel om fornyelse av resept</li>\n</ul>\n\n<h3>\nAlle varsler\n</h3>\n\n<p>\nØnsker du å motta alle varsler som finnes, vil du i tillegg få varsel om:\n</p>\n\n<ul>\n<li>At hjemmebesøk i kommunehelsetjenesten er utført</li>\n</ul>"}
+   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Varseloppsett","seksjonstekst_brodtekst":"<p>\nI varseloppsettet kan du bestemme om du ønsker SMS- eller e-postvarsel når du mottar informasjon på helsenorge.no, og hvilke varsler du får.\n</p>\n\n<p>\nHvis du ikke har valgt noe annet, blir varsel sendt på SMS. Varsel sendes til e-post og mobilnummer som er registrert hos <a href=\"https://www.norge.no/nb/oppdater-kontaktinformasjon\">kontakt- og reservasjonsregisteret (ID-porten)</a>. Varsler kan sendes til både norske og utenlandske mobiltelefonnumre, og gjelder bare tjenester på helsenorge.no.\n</p>\n\n<p>\nHvis du har foreldreansvar for barn, vil du få samme type varsler for dem som du får for deg selv.\n</p>\n\n<p>\nDu vil bare få varsler knyttet til de tjenestene du har tilgang til. <a href=\"https://tjenester.helsenorge.no/personverninnstillinger\" target=\"_blank\">Her kan du logge inn og se hvilke tjenester du har samtykket til å bruke</a>.\n</p>\n\n<h3>\nObligatoriske varsler\n</h3>\n\n<p>\nDisse varslene vil du få uansett hvilket alternativ du velger:\n</p>\n\n<ul>\n<li>Varsler om nye, endrede eller avlyste timeavtaler som vises på Helsenorge. Sykehus i Helse Vest og Helse Nord vil selv varsle om timer.</li>\n<li>Påminnelser om timeavtaler hos fastlegen</li>\n<li>Meldinger fra helsepersonell</li>\n<li>Innkallingsbrev og andre viktige brev</li>\n<li>Vedtak og brev fra Pasientreiser</li>\n<li>Varsel om ny melding angående opprettelse, endring eller sletting av en fullmakt, eller påminnelse om noe av dette</li>\n<li>Varsel om at et digitalt verktøy er tilgjengelig</li>\n<li>Varsel om at du har et nytt skjema å fylle ut, eller påminnelse om at fristen snart går ut på et skjema</li>\n<li>Varsel om prøvesvar</li>\n</ul>\n\n<h3>\nViktige varsler\n</h3>\n\n<p>\nHvis du ønsker det kan du få andre viktige varsler, i tillegg til de obligatoriske, det vil si:\n</p>\n\n<ul>\n<li>Varsel om ny melding angående innsyn eller feil i besøkshistorikk</li>\n<li>Varsel om mottak av rapporter fra helseregistre</li>\n<li>Varsel om at du har fått melding på Helsenorge fra en helseundersøkelse eller klinisk studie du deltar i</li>\n<li>Varsel om fornyelse av resept</li>\n</ul>\n\n<h3>\nAlle varsler\n</h3>\n\n<p>\nØnsker du å motta alle varsler som finnes, vil du i tillegg få varsel om:\n</p>\n\n<ul>\n<li>At hjemmebesøk i kommunehelsetjenesten er utført</li>\n</ul>"}
    */
   hjelpetrigger_kontaktVarseloppsett: string;
   /**
@@ -26952,7 +26962,7 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
    */
   page_Kontakt_NotificationProfile_MissingContactInformation_Description: string;
   /**
-   * Her velger du hvordan du vil varsles når du mottar meldinger på helsenorge.no. Varsler sendes mellom 07:00 og 23:00.
+   * Her velger du hvordan du vil varsles når du mottar meldinger på helsenorge.no. Du vil bare få varsler knyttet til de tjenestene du har tilgang til. Varsler sendes mellom 07:00 og 23:00.
    */
   page_Kontakt_NotificationProfile_Description: string;
   /**
