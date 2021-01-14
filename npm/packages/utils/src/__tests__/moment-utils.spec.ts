@@ -203,6 +203,18 @@ describe('Moment-utils', () => {
     });
   });
 
+  describe('Når isBeforeMinDate blir kalt', () => {
+    it('Så returnerer den true hvis det ene tidspunktet er før det andre og false hvis det er likt eller etter', () => {
+      const a = moment('22.05.2020 12:00', 'DD.MM.YYYY HH:mm');
+      const b = moment('22.05.2020 12:00', 'DD.MM.YYYY HH:mm');
+      const c = moment('23.05.2020 18:00', 'DD.MM.YYYY HH:mm');
+
+      expect(momentUtilsFunctions.isBeforeMinDate(a, b)).toBeFalsy();
+      expect(momentUtilsFunctions.isBeforeMinDate(a, c)).toBeTruthy();
+      expect(momentUtilsFunctions.isBeforeMinDate(c, a)).toBeFalsy();
+    });
+  });
+
   describe('Når isInclusivelyAfterDay blir kalt', () => {
     it('Så returnerer den true hvis den ene datoen er på samme dag eller etter den andre og false hvis ikke', () => {
       const a = moment('22.05.2020', 'DD.MM.YYYY');
@@ -212,6 +224,18 @@ describe('Moment-utils', () => {
       expect(momentUtilsFunctions.isInclusivelyAfterDay(a, b)).toBeTruthy();
       expect(momentUtilsFunctions.isInclusivelyAfterDay(a, c)).toBeFalsy();
       expect(momentUtilsFunctions.isInclusivelyAfterDay(c, a)).toBeTruthy();
+    });
+  });
+
+  describe('Når isAfterMaxDate blir kalt', () => {
+    it('Så returnerer den true hvis det ene tidspunktet er etter det andre og false hvis det er likt eller etter', () => {
+      const a = moment('22.05.2020 12:00', 'DD.MM.YYYY HH:mm');
+      const b = moment('22.05.2020 12:00', 'DD.MM.YYYY HH:mm');
+      const c = moment('23.05.2020 18:00', 'DD.MM.YYYY HH:mm');
+
+      expect(momentUtilsFunctions.isAfterMaxDate(a, b)).toBeFalsy();
+      expect(momentUtilsFunctions.isAfterMaxDate(a, c)).toBeFalsy();
+      expect(momentUtilsFunctions.isAfterMaxDate(c, a)).toBeTruthy();
     });
   });
 
