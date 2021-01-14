@@ -279,7 +279,7 @@ export type HNCoreFrontendNPMPackagesFramework = {
    */
   representasjonerBarn16Plus: string;
   /**
-   * Barn som ikke er registrert på samme folkeregistrerte adresse som sine foreldre vises ikke på Helsenorge. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
+   * Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
    */
   representasjonerBarnAnnenAdresse: string;
   /**
@@ -6670,7 +6670,7 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentDetailsAppointmentStatusOtherDoctor: string;
   /**
-   * Tjenesten kunne ikke hente ledige timer.
+   * Tjenesten kunne ikke hente ledige timer. Prøv igjen senere.
    */
   bookingCalendarChangeAppointmentFetchError: string;
   /**
@@ -9364,7 +9364,7 @@ Hvis du ikke møter vil du bli belastet for timen.
    */
   getAvailableAppointmentsCouldNotFetch: string;
   /**
-   * Tjenesten kunne ikke hente ledige timer.
+   * Tjenesten kunne ikke hente ledige timer. Prøv igjen senere.
    */
   getAvailableAppointmentsCouldNotFetchOfflineAlternative: string;
   /**
@@ -26063,6 +26063,12 @@ export type HNMinHelsePasientReiserStrings = {
 };
 
 export type HNMinHelsePersonvernStrings = {
+  /** 
+  * {"defaulttekst_overskrift":"Bruk og tilganger","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Helsenorge-tjenester.</p><p><b>Logg over bruk</b><br/> Loggen viser en kronologisk oversikt over aktivitet. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også. Denne loggen viser bare at noen har vært inne på en tjeneste – og ikke detaljer om hva vedkommende eventuelt spesifikt har gjort.</p>
+<h3>Aktive innlogginger</h3><p>xxx</p>
+<p><b>Tillatelser</b></p>"}
+  */
+  hjelpekontekst_profilBrukOgTilganger: string;
   /**
    * Helsenorge
    */
@@ -26646,12 +26652,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
    * Du har ikke tilgang til samtykkedefinisjonen.
    */
   samtykkeDefinisjonAccessDeniedBody: string;
-  /** 
-  * {"defaulttekst_overskrift":"Bruk og tilganger","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Helsenorge-tjenester.</p><p><b>Logg over bruk</b><br/> Loggen viser en kronologisk oversikt over aktivitet. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også. Denne loggen viser bare at noen har vært inne på en tjeneste – og ikke detaljer om hva vedkommende eventuelt spesifikt har gjort.</p>
-<h3>Aktive innlogginger</h3><p>xxx</p>
-<p><b>Tillatelser</b></p>"}
-  */
-  hjelpekontekst_profilBrukOgTilganger: string;
   /**
    * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
    */
