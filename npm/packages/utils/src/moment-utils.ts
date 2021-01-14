@@ -291,7 +291,7 @@ export const isAfterToday = (a: MomentInput): boolean => {
 };
 
 /**
- * Sammeligner to datoer og returnerer true hvis den første datoen er etter den andre (fungerer også med tid)
+ * Sammenligner to datoer og returnerer true hvis den første datoen er etter den andre (fungerer også med tid)
  * @param a - moment dato
  * @param max - maksimum dato grense
  */
@@ -326,7 +326,7 @@ export const isBeforeToday = (a: MomentInput): boolean => {
 };
 
 /**
- * Sammeligner to datoer og returnerer true hvis den første datoen er før den andre (fungerer også med tid)
+ * Sammenligner to datoer og returnerer true hvis den første datoen er før den andre (fungerer også med tid)
  * @param a - moment dato
  * @param min - minimum dato grense
  */
