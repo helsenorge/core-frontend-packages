@@ -160,6 +160,48 @@ describe('Date-utils', () => {
     });
   });
 
+  describe('Når getHoursFromTimeString blir kalt med undefined dato', () => {
+    it('Så returnerer den tom streng', () => {
+      const date = dateUtilsFunctions.getHoursFromTimeString(undefined, ':');
+      expect(date).toEqual('');
+    });
+  });
+
+  describe('Når getHoursFromTimeString blir kalt med en timeString med feil separator', () => {
+    it('Så returnerer den opprinnelig strengen', () => {
+      const date = dateUtilsFunctions.getHoursFromTimeString('12-52', ':');
+      expect(date).toEqual('12-52');
+    });
+  });
+
+  describe('Når getHoursFromTimeString blir kalt med en timeString', () => {
+    it('Så returnerer den riktig antall timer', () => {
+      const date = dateUtilsFunctions.getHoursFromTimeString('12:52', ':');
+      expect(date).toEqual('12');
+    });
+  });
+
+  describe('Når getMinutesFromTimeString blir kalt med undefined dato', () => {
+    it('Så returnerer den tom streng', () => {
+      const date = dateUtilsFunctions.getMinutesFromTimeString(undefined, ':');
+      expect(date).toEqual('');
+    });
+  });
+
+  describe('Når getMinutesFromTimeString blir kalt med en timeString med feil separator', () => {
+    it('Så returnerer den undefined', () => {
+      const date = dateUtilsFunctions.getMinutesFromTimeString('12-52', ':');
+      expect(date).toEqual(undefined);
+    });
+  });
+
+  describe('Når getMinutesFromTimeString blir kalt med en timeString', () => {
+    it('Så returnerer den riktig antall timer', () => {
+      const date = dateUtilsFunctions.getMinutesFromTimeString('12:52', ':');
+      expect(date).toEqual('52');
+    });
+  });
+
   describe('Når beforeToday blir kalt med en gammel dato', () => {
     it('Så returnerer den true', () => {
       const date = dateUtilsFunctions.beforeToday(new Date('2010-04-13T12:42:00.000'));
