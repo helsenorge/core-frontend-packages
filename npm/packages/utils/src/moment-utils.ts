@@ -291,6 +291,13 @@ export const isAfterToday = (a: MomentInput): boolean => {
 };
 
 /**
+ * Sammeligner to datoer og returnerer true hvis den første datoen er etter den andre (fungerer også med tid)
+ * @param a - moment dato
+ * @param max - maksimum dato grense
+ */
+export const isAfterMaxDate = (a: moment.Moment, b: moment.Moment | undefined): boolean => !!(b && a.isAfter(b));
+
+/**
  * Returnerer true hvis dato a er på samme dag eller før dato b
  * @param a MomentInput som skal sammenlignes
  * @param b MomentInput som skal sammenlignes
@@ -317,6 +324,13 @@ export const isBefore = (a: MomentInput): boolean => {
 export const isBeforeToday = (a: MomentInput): boolean => {
   return moment(a).diff(moment(), 'days') < 0;
 };
+
+/**
+ * Sammeligner to datoer og returnerer true hvis den første datoen er før den andre (fungerer også med tid)
+ * @param a - moment dato
+ * @param min - minimum dato grense
+ */
+export const isBeforeMinDate = (a: moment.Moment, b: moment.Moment | undefined): boolean => !!(b && a.isBefore(b));
 
 /**
  * Returnerer true hvis input er dagens dato

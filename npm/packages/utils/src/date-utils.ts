@@ -221,6 +221,30 @@ export const timeToString = (date: Date): string => {
   return `${padStr(date.getHours())}:${padStr(date.getMinutes())}`;
 };
 
+/**
+ * Returnerer timer (12) fra en timeString (12:00)
+ * @param timeString string som splittes på separatoren
+ * @param sparator string som brukes til å splitte timeString
+ */
+export const getHoursFromTimeString = (timeString: string | undefined, separator: string): string => {
+  if (!timeString || timeString === 'undefined') {
+    return '';
+  }
+  return timeString.split(separator)[0];
+};
+
+/**
+ * Returnerer timinuttermer (52) på en timeString (12:52)
+ * @param timeString string som splittes på separatoren
+ * @param sparator string som brukes til å splitte timeString
+ */
+export const getMinutesFromTimeString = (timeString: string | undefined, separator: string): string => {
+  if (!timeString || timeString === 'undefined') {
+    return '';
+  }
+  return timeString.split(separator)[1];
+};
+
 //////////////// To-DO: MANGLENEDE TESTER ETTER DET PUNKTET
 
 /**
