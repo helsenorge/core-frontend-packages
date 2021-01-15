@@ -25907,7 +25907,7 @@ export type HNMinHelsePasientReiserStrings = {
   /** 
   * Det er ikke mulig å klage på et vedtak som er til behandling hos fylkesmannen.
   */
-  error_KlageHosFylkesmannen_Desc: string;
+  error_KlageHosStatsforvalteren_Desc: string;
   /** 
   * Kan ikke sende inn
   */

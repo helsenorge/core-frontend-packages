@@ -6480,7 +6480,7 @@
     "error_BilagOverMaxStr_Body": "Fjern noen bilag for å sende inn",
     "error_KlageKanIkkeOpprettes_Title": "Kan ikke opprette klage",
     "error_KlageInnvilget_Desc": "Det er ikke mulig å klage på et vedtak som er innvilget!",
-    "error_KlageHosFylkesmannen_Desc": "Det er ikke mulig å klage på et vedtak som er til behandling hos fylkesmannen.",
+    "error_KlageHosStatsforvalteren_Desc": "Det er ikke mulig å klage på et vedtak som er til behandling hos fylkesmannen.",
     "error_KlageSendtInn_Title": "Kan ikke sende inn",
     "error_KlageSendtInn_Desc": "Klagen er allerede sendt inn",
     "error_KlageFristUtgaatt_Title": "Frist utgått",
