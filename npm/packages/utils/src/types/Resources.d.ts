@@ -23460,11 +23460,11 @@ export type HNMinHelsePasientreiserJS = {
   /** 
   * Oversendt Statsforvalteren.
   */
-  overview_statuser_statusTypeKlage_vedtak_KLAGE_OVERSENDT_FYLKESMANNEN: string;
+  overview_statuser_statusTypeKlage_vedtak_KLAGE_OVERSENDT_STATSFORVALTEREN: string;
   /** 
   * Behandlet av Statsforvalteren.
   */
-  overview_statuser_statusTypeKlage_vedtak_KLAGE_BEHANDLET_FYLKESMANNEN: string;
+  overview_statuser_statusTypeKlage_vedtak_KLAGE_BEHANDLET_STATSFORVALTEREN: string;
   /** 
   * Trukket
   */
@@ -25456,11 +25456,11 @@ export type HNMinHelsePasientreiserJS = {
   /** 
   * Klagen er oversendt Statsforvalteren.
   */
-  overview_statuser_statusTypeKlage_soknad_KLAGE_OVERSENDT_FYLKESMANNEN: string;
+  overview_statuser_statusTypeKlage_soknad_KLAGE_OVERSENDT_STATSFORVALTEREN: string;
   /** 
   * Klagen er behandlet av Statsforvalteren.
   */
-  overview_statuser_statusTypeKlage_soknad_KLAGE_BEHANDLET_FYLKESMANNEN: string;
+  overview_statuser_statusTypeKlage_soknad_KLAGE_BEHANDLET_STATSFORVALTEREN: string;
   /** 
   * Klagen er trukket.
   */
@@ -25496,11 +25496,11 @@ export type HNMinHelsePasientreiserJS = {
   /** 
   * Oversendt Statsforvalteren.
   */
-  overview_statuser_statusTypeKlage_klage_KLAGE_OVERSENDT_FYLKESMANNEN: string;
+  overview_statuser_statusTypeKlage_klage_KLAGE_OVERSENDT_STATSFORVALTEREN: string;
   /** 
   * Behandlet av Statsforvalteren.
   */
-  overview_statuser_statusTypeKlage_klage_KLAGE_BEHANDLET_FYLKESMANNEN: string;
+  overview_statuser_statusTypeKlage_klage_KLAGE_BEHANDLET_STATSFORVALTEREN: string;
   /** 
   * Under behandling.
   */
@@ -25905,7 +25905,7 @@ export type HNMinHelsePasientReiserStrings = {
   */
   error_KlageInnvilget_Desc: string;
   /** 
-  * Det er ikke mulig å klage på et vedtak som er til behandling hos fylkesmannen.
+  * Det er ikke mulig å klage på et vedtak som er til behandling hos Statsforvalteren.
   */
   error_KlageHosStatsforvalteren_Desc: string;
   /** 
@@ -26064,9 +26064,7 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
-  * {"defaulttekst_overskrift":"Bruk og tilganger","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av Helsenorge-tjenester.</p><p><b>Logg over bruk</b><br/> Loggen viser en kronologisk oversikt over aktivitet. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også. Denne loggen viser bare at noen har vært inne på en tjeneste – og ikke detaljer om hva vedkommende eventuelt spesifikt har gjort.</p>
-<h3>Aktive innlogginger</h3><p>xxx</p>
-<p><b>Tillatelser</b></p>"}
+  * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
   */
   hjelpekontekst_profilBrukOgTilganger: string;
   /** 
