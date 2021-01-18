@@ -41,8 +41,7 @@ const getDefaultRequestParams = (): Record<string, string> => {
     'X-hn-hendelselogg': HN.Rest.__HendelseLoggType__,
   };
 };
-
-/**
+/*
  * Returnerer baseUrl til Tjenester basert på HN Rest objektet
  */
 export const getTjenesterUrl = () => {
@@ -50,11 +49,14 @@ export const getTjenesterUrl = () => {
 };
 
 /**
- * Returnerer true når window urlen er lik tjenester baseUrl
+ * TODO TING SOM KOMMER FRA HEADER-FOOTER services
+ * UNITTEST
  */
 export const erTjenester = () => {
   return window.location.origin === HN?.Rest?.__TjenesterApiUrl__;
 };
+
+//
 
 /**
  * Returnerer Headers som trengs i en vanlig request
