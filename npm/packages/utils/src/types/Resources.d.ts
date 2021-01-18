@@ -421,6 +421,10 @@ export type HNCoreFrontendWebForside = {
   * Du er logget ut
   */
   signedOut_SignedOut_Title: string;
+  /** 
+  * Du er nå logget ut
+  */
+  signedOut_SignedOut_Explanation: string;
 };
 
 export type HNDialogCommonJS = { 
