@@ -2,6 +2,7 @@ import { trackError } from './adobe-analytics';
 import * as DateUtils from './date-utils';
 import { isAuthorized, hashIsAuthorized } from './hn-authorize';
 import { getCookieValue } from './cookie';
+import { getTjenesterUrl } from './hn-proxy-service';
 
 /****************************************************************/
 /**************** DENNE FILEN ER DEPRECATED *********************/
@@ -111,6 +112,7 @@ export interface OperationResponse extends Response {
 
 const minHelsePath = '/api/v1/MinHelse/';
 const portalPath = '/api/v1/Portal/';
+const crossDomainPath = '/api/v1/CrossDomain/';
 const openCmd = 'HelseNorge/';
 const uploadCmd = 'Upload/';
 
@@ -142,10 +144,11 @@ window.HN.Commands = window.HN.Commands || {};
 window.HN.PortalCommands = window.HN.PortalCommands || {};
 
 /**
+ * DEPRECATED: Bruk getTjenesterUrl i hn-proxy-service
  * Returnerer baseUrl til MinHelse basert på HN Rest objektet
  */
 export const getMinHelseUrl = () => {
-  return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? HN.Rest.__TjenesterApiUrl__ : '';
+  return getTjenesterUrl();
 };
 
 export function usePasientensLegemiddelliste() {
@@ -194,15 +197,15 @@ export function getAutoCommand(): CommandsType {
 }
 
 function getMinHelseEnvironmentPath(): string {
-  return getMinHelseUrl() + minHelsePath;
+  return getTjenesterUrl() + minHelsePath;
 }
 
 function getPortalEnvironmentPath(): string {
-  return getMinHelseUrl() + portalPath;
+  return getTjenesterUrl() + portalPath;
 }
 
 export function getMinHelseOpenEnvironmentPath() {
-  return getMinHelseUrl() + minHelsePath + openCmd;
+  return getTjenesterUrl() + minHelsePath + openCmd;
 }
 
 function getAutoPath(): string {
@@ -315,6 +318,15 @@ export function get<T extends OperationResponse>(cmd: string, params?: any): Pro
   }).then(checkStatus);
 }
 
+export function getCrossDomain<T extends Response | {}>(command: string, params?: any): Promise<T> {
+  const headers = createHeaders();
+  return fetch(getTjenesterUrl() + crossDomainPath + command + parseParams(params, true), {
+    method: 'get',
+    credentials: 'include',
+    headers,
+  }).then(checkStatus);
+}
+
 export function getPortal<T extends OperationResponse>(cmd: string, params?: any): Promise<T> {
   if (!params) {
     const cmdKey = '__' + cmd + '__';
@@ -324,16 +336,6 @@ export function getPortal<T extends OperationResponse>(cmd: string, params?: any
   }
   const headers = createPortalHeaders();
   return fetch(getPortalEnvironmentPath() + cmd + parseParams(params, true), {
-    method: 'get',
-    credentials: 'include',
-    headers,
-  }).then(checkStatus);
-}
-
-export function getVBS<T>(cmd: string, params?: any): Promise<T> {
-  const headers = createHeaders();
-  const vbsRestUrl = `${window.location.origin}/_vti_bin/VBS/vbsrest.svc/`;
-  return fetch(vbsRestUrl + cmd + parseParams(params, true), {
     method: 'get',
     credentials: 'include',
     headers,
