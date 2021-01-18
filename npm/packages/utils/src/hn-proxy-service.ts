@@ -108,7 +108,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
   const contentType: string | null = response.headers.get('content-type');
   if (contentType && contentType.indexOf('application/json') !== -1) {
     if (response.status === 204) {
-      return new Promise((resolve) => resolve(null));
+      return new Promise(resolve => resolve(null));
     }
     if (response.ok) {
       return response.json();
@@ -149,7 +149,7 @@ const baseCrud = <T, R>(method: string, url: string, proxyName: string, params?:
     headers: createHeaders(),
   })
     .then((response: Response) => checkStatus<T>(response as Response))
-    .catch((err) => {
+    .catch(err => {
       trackError('level1');
       if (err == 'TypeError: Failed to fetch') {
         throw {
@@ -239,13 +239,13 @@ export const download = (cmd: string, proxyName: string, params?: ParamsObj): Pr
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
 
-  return new Promise(function (resolve, reject) {
+  return new Promise(function(resolve, reject) {
     fetch(url, {
       method: 'get',
       credentials: 'include',
       headers,
     })
-      .then(function (res) {
+      .then(function(res) {
         const contentDisposition = res.headers.get('content-disposition');
         const match =
           contentDisposition && contentDisposition.match(/filename="(.+)"/) ? contentDisposition.match(/filename="(.+)"/) : false;
@@ -256,10 +256,10 @@ export const download = (cmd: string, proxyName: string, params?: ParamsObj): Pr
         const blobPromise = res.blob();
         return { blobPromise, fileName };
       })
-      .then(function (respObj) {
+      .then(function(respObj) {
         const fileName = respObj.fileName;
 
-        respObj.blobPromise.then(function (blob) {
+        respObj.blobPromise.then(function(blob) {
           if (window.navigator && window.navigator.msSaveOrOpenBlob) {
             window.navigator.msSaveOrOpenBlob(blob, fileName);
             resolve();
@@ -275,7 +275,7 @@ export const download = (cmd: string, proxyName: string, params?: ParamsObj): Pr
           }
         });
       })
-      .catch(function (responseHtml: string) {
+      .catch(function(responseHtml: string) {
         if (responseHtml === '401') {
           document.location.reload(true);
         } else {
