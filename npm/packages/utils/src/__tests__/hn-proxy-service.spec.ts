@@ -1,4 +1,4 @@
-import { getErrorFromHTML, get, post, put, remove, link } from '../hn-proxy-service';
+import { getErrorFromHTML, get, post, put, remove, link, erTjenester } from '../hn-proxy-service';
 
 window.HN = window.HN || {};
 window.HN.Rest = window.HN.Rest || {};
@@ -186,6 +186,45 @@ describe('Gitt at en proxy link skal genereres', () => {
       expect(fullUrl).toBe(
         'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Filtere=a&Filtere=b&Filtere=c'
       );
+    });
+  });
+});
+
+describe('erTjenester', () => {
+  const tjenesterUrl = 'https://tjenester.helsenorge.utvikling';
+  const helsenorgeUrl = 'https://helsenorge.no';
+
+  beforeEach(() => {
+    window.HN = {};
+    window.HN.Rest = {};
+    window.HN.Rest.__TjenesterApiUrl__ = tjenesterUrl;
+  });
+
+  describe('Når en bruker besøker en side på helsenorge.no', () => {
+    beforeEach(() => {
+      Object.defineProperty(window, 'location', {
+        writable: true,
+        value: {
+          origin: helsenorgeUrl,
+        },
+      });
+    });
+    it('Så returneres false', () => {
+      expect(erTjenester()).toBeFalsy();
+    });
+  });
+
+  describe('Når en bruker besøker en side på tjenester.helsenorge.no', () => {
+    beforeEach(() => {
+      Object.defineProperty(window, 'location', {
+        writable: true,
+        value: {
+          origin: tjenesterUrl,
+        },
+      });
+    });
+    it('Så returneres true', () => {
+      expect(erTjenester()).toBeTruthy();
     });
   });
 });
