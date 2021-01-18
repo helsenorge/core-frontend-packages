@@ -41,22 +41,6 @@ const getDefaultRequestParams = (): Record<string, string> => {
     'X-hn-hendelselogg': HN.Rest.__HendelseLoggType__,
   };
 };
-/*
- * Returnerer baseUrl til Tjenester basert på HN Rest objektet
- */
-export const getTjenesterUrl = () => {
-  return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? HN.Rest.__TjenesterApiUrl__ : '';
-};
-
-/**
- * TODO TING SOM KOMMER FRA HEADER-FOOTER services
- * UNITTEST
- */
-export const erTjenester = () => {
-  return window.location.origin === HN?.Rest?.__TjenesterApiUrl__;
-};
-
-//
 
 /**
  * Returnerer baseUrl til Tjenester basert på HN Rest objektet
