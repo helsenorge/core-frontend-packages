@@ -2361,7 +2361,7 @@
     "messageAttachment_UnsupportedFormat_Title": "Formatet er ikke støttet",
     "persistentMessage_UnsupportedService_Body": "Tjenesten du prøver å utføre er ikke støttet av motparten. Dersom dette er en tjeneste som tidligere har fungert, så kan dette skje dersom motparten har gjort endringer i tjenestetilbudet som er registrert i adresseregisteret. ",
     "persistentMessage_UnsupportedService_Title": "Tjenesten er ikke støttet av motpart",
-    "clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Body": "<span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet.</span><span>Du finner sendte og mottatte meldinger på timeavtalen. Du vil også finne dem i innboksen.</span>",
+    "clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Body": "<span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet. Du finner sendte og mottatte meldinger i innboksen.</span>",
     "clientOperation_NewOnlineAppointment_SaveError_Body": "Prøv på nytt senere, eller kontakt behandlingsstedet.",
     "clientOperation_NewOnlineAppointment_SaveError_Title": "Timebestillingen ble ikke utført",
     "clientOperation_NewOnlineAppointment_SendError_Body": "Timebestillingen ble ikke utført. Prøv igjen senere.",
@@ -4099,7 +4099,8 @@
     "mho_prescription_no_deliveries": "Ingen resepter eller resepter med utleveringer siste tre år.",
     "legemidlerDefaultHeading": "Legemidler",
     "legemidlerDefaultIngress": "Her finner du en samlet oversikt over dine resepter på legemidler og andre varer. Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og din <a href='/kjernejournal-innsyn'>kjernejournal</a>, hvor du også kan se logg over bruk.",
-    "legemidler_default_hjelpeskuff": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Om legemidler\",\"seksjonstekst_brodtekst\":\"<p>Her vises dine resepter og informasjon om utleverte legemidler, næringsmidler og medisinsk forbruksmateriell. I <strong>Legemidler</strong>-fanen vises aktive resepter og resepter med utleveringer de siste 12 månedene. I <strong>Resepthistorikk</strong>-fanen vises alle resepter og utleveringer tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller bandasjisten. Reseptene er merket med kilden.</p>\\n\\n<p>På siden om <a href=\\\"/reseptformidleren\\\">reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href=\\\"/kjernejournal-innsyn\\\">kjernejournal</a>.</p>\\n<p><a href=\\\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\\\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>\"}"
+    "legemidler_default_hjelpeskuff": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Om legemidler\",\"seksjonstekst_brodtekst\":\"<p>Her vises dine resepter og informasjon om utleverte legemidler, næringsmidler og medisinsk forbruksmateriell. I <strong>Legemidler</strong>-fanen vises aktive resepter og resepter med utleveringer de siste 12 månedene. I <strong>Resepthistorikk</strong>-fanen vises alle resepter og utleveringer tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller bandasjisten. Reseptene er merket med kilden.</p>\\n\\n<p>På siden om <a href=\\\"/reseptformidleren\\\">reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href=\\\"/kjernejournal-innsyn\\\">kjernejournal</a>.</p>\\n<p><a href=\\\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\\\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>\"}",
+    "testcontext": "{\"defaulttekst_overskrift\":\"test\",\"defaulttekst_brodtekst\":\"test\"}"
   },
   "HNMinHelseLegemidler": {
     "lobTabellVisningSeperator": "ved",
@@ -4145,7 +4146,7 @@
     "tile_EksterneTjenester_Description": "",
     "tile_EksterneTjenester_Resepter_Title": "Mine resepter",
     "tile_EksterneTjenester_Title": "Andre tjenester",
-    "tile_EksterneTjenester_Trygdekort_Title": "Bestill europeisk helsetrygdkort (nav)",
+    "tile_EksterneTjenester_Trygdekort_Title": "Bestill Europeisk helsetrygdkort",
     "tile_EksterneTjenester_Vaksiner_Title": "Mine vaksiner",
     "tile_Helsekontakter_Description": "Behandlere og kontaktpersoner.",
     "tile_Helsekontakter_Title": "Helsekontakter",
