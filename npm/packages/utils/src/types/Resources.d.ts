@@ -26080,6 +26080,10 @@ export type HNMinHelsePersonvernStrings = {
   */
   hjelpekontekst_profilBrukOgTilganger: string;
   /** 
+  * Samtykke til datautveksling
+  */
+  page_HendelsesLogg_43: string;
+  /** 
   * Helsenorge
   */
   organisasjonsnavn_fullmakt: string;
