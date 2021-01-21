@@ -367,11 +367,6 @@
     "healthcareProfessionalHelsesekretaer": "Helsesekretær",
     "healthcareProfessionalHelsesykepleier": "Helsesykepleier"
   },
-  "HNGeneriskStatusJS": { 
-    "reservasjon_negative_funn": "Personverninnstillinger",
-    "response_error_description": "Det har skjedd en teknisk feil. Prøv igjen senere.",
-    "response_error_title": "Teknisk feil"
-  },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
     "bfl_ResultPage_VentelisteDialog_VelgPersoner": "Velg barn",
