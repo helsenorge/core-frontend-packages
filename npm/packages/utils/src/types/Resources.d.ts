@@ -26081,6 +26081,14 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_40: string;
   /** 
+  * Personopplysninger
+  */
+  page_HendelsesLogg_46: string;
+  /** 
+  * Meldinger og hendelser
+  */
+  page_HendelsesLogg_47: string;
+  /** 
   * Helsenorge
   */
   organisasjonsnavn_fullmakt: string;

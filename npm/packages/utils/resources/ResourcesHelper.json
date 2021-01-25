@@ -6524,6 +6524,8 @@
     "hjelpekontekst_profilBrukOgTilganger": "{\"defaulttekst_overskrift\":\"Bruk og tilganger - Personvern\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "page_HendelsesLogg_43": "Samtykke til datautveksling",
     "page_HendelsesLogg_40": "Helsenorge-tjenester",
+    "page_HendelsesLogg_46": "Personopplysninger",
+    "page_HendelsesLogg_47": "Meldinger og hendelser",
     "organisasjonsnavn_fullmakt": "Helsenorge",
     "discardDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort.",
     "discardHeading": "Det finnes endringer som ikke er lagret",
