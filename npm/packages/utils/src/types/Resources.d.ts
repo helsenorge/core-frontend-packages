@@ -16396,10 +16396,6 @@ Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og d
   */
   legemidler_default_hjelpeskuff: string;
   /** 
-  * {"defaulttekst_overskrift":"test","defaulttekst_brodtekst":"test"}
-  */
-  testcontext: string;
-  /** 
   * {"defaulttekst_overskrift":"Om legemidler","defaulttekst_brodtekst":"<p>Her vises dine resepter og informasjon om utleverte legemidler, næringsmidler og medisinsk forbruksmateriell. I <strong>Legemidler</strong>-fanen vises aktive resepter og resepter med utleveringer de siste 12 månedene. I <strong>Resepthistorikk</strong>-fanen vises alle resepter og utleveringer tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller bandasjisten. Reseptene er merket med kilden.</p>\n\n<p>På siden om <a href=\"/reseptformidleren\">reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href=\"/kjernejournal-innsyn\">kjernejournal</a>.</p>\n<p><a href=\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>"}
   */
   legemidler_default_hjelpekontekst: string;
@@ -16407,6 +16403,10 @@ Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og d
   * {"defaulttekst_overskrift":"Om legemiddellisten","defaulttekst_brodtekst":"<p> Her vises din legemiddelliste, samt dine resepter og informasjon om utleverte legemidler, næringsmidler og forbruksmateriell .<br>\nLegemiddellisten gir deg og helsepersonell en oppdatert oversikt over hvilke legemidler du skal bruke. </p>\n<p>I fanen «Legemiddelliste» vises din legemiddelliste, i tillegg til  aktive resepter og resepter med utleveringer de siste 12 månedene.  I fanen «Resepthistorikk» vises alle resepter  og utleveringer  tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller hos bandasjisten. Reseptene er merket med kilden.</p>\n<p> På siden om <a href='/reseptformidleren'>reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href='/kjernejournal-innsyn'>kjernejournal</a>.</p>\n<p><a href=\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>"}
   */
   hjelpekontekst_lib_hjelpeskuff: string;
+  /** 
+  * {"defaulttekst_overskrift":"test","defaulttekst_brodtekst":"test"}
+  */
+  testcontext: string;
 };
 
 export type HNMinHelseLegemidler = { 
@@ -26076,6 +26076,10 @@ export type HNMinHelsePersonvernStrings = {
   * Samtykke til datautveksling
   */
   page_HendelsesLogg_43: string;
+  /** 
+  * Helsenorge-tjenester
+  */
+  page_HendelsesLogg_40: string;
   /** 
   * Helsenorge
   */
