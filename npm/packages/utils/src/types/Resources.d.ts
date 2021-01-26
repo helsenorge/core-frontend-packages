@@ -1449,21 +1449,6 @@ export type HNDialogCommonJS = {
   healthcareProfessionalHelsesykepleier: string;
 };
 
-export type HNGeneriskStatusJS = {
-  /**
-   * Personverninnstillinger
-   */
-  reservasjon_negative_funn: string;
-  /**
-   * Det har skjedd en teknisk feil. Prøv igjen senere.
-   */
-  response_error_description: string;
-  /**
-   * Teknisk feil
-   */
-  response_error_title: string;
-};
-
 export type HNMinHelseByttFastlegeJS = {
   /**
    * Kvittering
@@ -11419,7 +11404,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   deling_startet_warning: string;
   /**
-   * {"defaulttekst_overskrift":"Om dokumenter","defaulttekst_brodtekst":"<p>Det kan finnes mer oppdaterte versjoner av dokumentene andre steder, for eksempel hos din behandler.</p>\n<p>Tidligere ble også vedlegg utvekslet i meldinger til og fra helsetjenesten vist her. Disse vises nå kun som vedlegg i selve meldingen.</p>\n<h3>Tilgang</h3>\n<p>Det er bare du som har tilgang til dokumenter som er lagret på Helsenorge. Du må også være logget inn for å kunne hente dem frem og se dem.</p>\n<h3>Sletting</h3>\n<p>Du kan slette dokumenter fra denne tjenesten men da slettes kun versjonen som ligger på Helsenorge. Din behandler kan fremdeles ha lagret en versjon av dokumentet hos seg.</p>\n<h3>Deling</h3>\n<p>Du kan dele noen utvalgte skjema med din fastlege, hvis fastlegen har tatt i bruk de nødvendige IT-systemene.</p>"}
+   * {"defaulttekst_overskrift":"Om dokumenter","defaulttekst_brodtekst":"<p>\nDet kan finnes mer oppdaterte versjoner av dokumentene andre steder, for eksempel hos din behandler.\n</p>\n\n<p>\nVedlegg utvekslet i meldinger til og fra helsetjenesten vises ikke her. Disse vises kun som vedlegg i selve meldingen.\n</p>\n\n<h3>Tilgang</h3>\n<p>\nDet er bare du som har tilgang til dokumenter som er lagret på Helsenorge. Du må også være logget inn for å kunne hente dem frem og se dem.\n</p>\n\n<h3>Sletting</h3>\n<p>\nDu kan slette dokumenter fra denne tjenesten men da slettes kun versjonen som ligger på Helsenorge. Din behandler kan fremdeles ha lagret en versjon av dokumentet hos seg.\n</p>\n\n<h3>Deling</h3>\n<p>\nDu kan dele noen utvalgte skjema med din fastlege, hvis fastlegen har tatt i bruk de nødvendige IT-systemene.\n</p>\n\n<p>\n<a href=\"https://www.helsenorge.no/dokumenter/om\">Les mer om dokumenter her</a>.\n</p>"}
    */
   hjelpekontekst_dokumentarkiv: string;
   /**
@@ -16410,6 +16395,14 @@ Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og d
    * {"synlig":"True","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Om legemidler","seksjonstekst_brodtekst":"<p>Her vises dine resepter og informasjon om utleverte legemidler, næringsmidler og medisinsk forbruksmateriell. I <strong>Legemidler</strong>-fanen vises aktive resepter og resepter med utleveringer de siste 12 månedene. I <strong>Resepthistorikk</strong>-fanen vises alle resepter og utleveringer tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller bandasjisten. Reseptene er merket med kilden.</p>\n\n<p>På siden om <a href=\"/reseptformidleren\">reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href=\"/kjernejournal-innsyn\">kjernejournal</a>.</p>\n<p><a href=\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>"}
    */
   legemidler_default_hjelpeskuff: string;
+  /**
+   * {"defaulttekst_overskrift":"Om legemidler","defaulttekst_brodtekst":"<p>Her vises dine resepter og informasjon om utleverte legemidler, næringsmidler og medisinsk forbruksmateriell. I <strong>Legemidler</strong>-fanen vises aktive resepter og resepter med utleveringer de siste 12 månedene. I <strong>Resepthistorikk</strong>-fanen vises alle resepter og utleveringer tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller bandasjisten. Reseptene er merket med kilden.</p>\n\n<p>På siden om <a href=\"/reseptformidleren\">reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href=\"/kjernejournal-innsyn\">kjernejournal</a>.</p>\n<p><a href=\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>"}
+   */
+  legemidler_default_hjelpekontekst: string;
+  /**
+   * {"defaulttekst_overskrift":"Om legemiddellisten","defaulttekst_brodtekst":"<p> Her vises din legemiddelliste, samt dine resepter og informasjon om utleverte legemidler, næringsmidler og forbruksmateriell .<br>\nLegemiddellisten gir deg og helsepersonell en oppdatert oversikt over hvilke legemidler du skal bruke. </p>\n<p>I fanen «Legemiddelliste» vises din legemiddelliste, i tillegg til  aktive resepter og resepter med utleveringer de siste 12 månedene.  I fanen «Resepthistorikk» vises alle resepter  og utleveringer  tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller hos bandasjisten. Reseptene er merket med kilden.</p>\n<p> På siden om <a href='/reseptformidleren'>reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href='/kjernejournal-innsyn'>kjernejournal</a>.</p>\n<p><a href=\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>"}
+   */
+  hjelpekontekst_lib_hjelpeskuff: string;
   /**
    * {"defaulttekst_overskrift":"test","defaulttekst_brodtekst":"test"}
    */
@@ -26080,6 +26073,22 @@ export type HNMinHelsePersonvernStrings = {
    */
   hjelpekontekst_profilBrukOgTilganger: string;
   /**
+   * Samtykke til datautveksling
+   */
+  page_HendelsesLogg_43: string;
+  /**
+   * Helsenorge-tjenester
+   */
+  page_HendelsesLogg_40: string;
+  /**
+   * Personopplysninger
+   */
+  page_HendelsesLogg_46: string;
+  /**
+   * Meldinger og hendelser
+   */
+  page_HendelsesLogg_47: string;
+  /**
    * Helsenorge
    */
   organisasjonsnavn_fullmakt: string;
@@ -26775,10 +26784,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
    * Hent på nytt
    */
   page_Kontakt_HentPaNytt: string;
-  /**
-   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Varseloppsett","seksjonstekst_brodtekst":"<p>\nI varseloppsettet kan du bestemme om du ønsker SMS- eller e-postvarsel når du mottar informasjon på helsenorge.no, og hvilke varsler du får.\n</p>\n\n<p>\nHvis du ikke har valgt noe annet, blir varsel sendt på SMS. Varsel sendes til e-post og mobilnummer som er registrert hos <a href=\"https://www.norge.no/nb/oppdater-kontaktinformasjon\">kontakt- og reservasjonsregisteret (ID-porten)</a>. Varsler kan sendes til både norske og utenlandske mobiltelefonnumre, og gjelder bare tjenester på helsenorge.no.\n</p>\n\n<p>\nHvis du har foreldreansvar for barn, vil du få samme type varsler for dem som du får for deg selv.\n</p>\n\n<p>\nDu vil bare få varsler knyttet til de tjenestene du har tilgang til. <a href=\"https://tjenester.helsenorge.no/personverninnstillinger\" target=\"_blank\">Her kan du logge inn og se hvilke tjenester du har samtykket til å bruke</a>.\n</p>\n\n<h3>\nObligatoriske varsler\n</h3>\n\n<p>\nDisse varslene vil du få uansett hvilket alternativ du velger:\n</p>\n\n<ul>\n<li>Varsler om nye, endrede eller avlyste timeavtaler som vises på Helsenorge. Sykehus i Helse Vest og Helse Nord vil selv varsle om timer.</li>\n<li>Påminnelser om timeavtaler hos fastlegen</li>\n<li>Meldinger fra helsepersonell</li>\n<li>Innkallingsbrev og andre viktige brev</li>\n<li>Vedtak og brev fra Pasientreiser</li>\n<li>Varsel om ny melding angående opprettelse, endring eller sletting av en fullmakt, eller påminnelse om noe av dette</li>\n<li>Varsel om at et digitalt verktøy er tilgjengelig</li>\n<li>Varsel om at du har et nytt skjema å fylle ut, eller påminnelse om at fristen snart går ut på et skjema</li>\n<li>Varsel om prøvesvar</li>\n</ul>\n\n<h3>\nViktige varsler\n</h3>\n\n<p>\nHvis du ønsker det kan du få andre viktige varsler, i tillegg til de obligatoriske, det vil si:\n</p>\n\n<ul>\n<li>Varsel om ny melding angående innsyn eller feil i besøkshistorikk</li>\n<li>Varsel om mottak av rapporter fra helseregistre</li>\n<li>Varsel om at du har fått melding på Helsenorge fra en helseundersøkelse eller klinisk studie du deltar i</li>\n<li>Varsel om fornyelse av resept</li>\n</ul>\n\n<h3>\nAlle varsler\n</h3>\n\n<p>\nØnsker du å motta alle varsler som finnes, vil du i tillegg få varsel om:\n</p>\n\n<ul>\n<li>At hjemmebesøk i kommunehelsetjenesten er utført</li>\n</ul>"}
-   */
-  hjelpetrigger_kontaktVarseloppsett: string;
   /**
    * Det har skjedd en teknisk feil
    */
