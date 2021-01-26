@@ -3695,10 +3695,6 @@ export type HNMinHelseCommonJS = {
   */
   footer_scroll_top: string;
   /** 
-  * Om helsenorge.no
-  */
-  footer_about_heading: string;
-  /** 
   * Innhold A - Å
   */
   footer_about_innholdsoversikt: string;
@@ -3714,10 +3710,6 @@ export type HNMinHelseCommonJS = {
   * Samarbeidspartnere
   */
   footer_about_samarbeidspartnere: string;
-  /** 
-  * Om helsenorge.no
-  */
-  footer_about_helsenorge: string;
   /** 
   * Logg ut
   */
