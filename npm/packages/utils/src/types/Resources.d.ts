@@ -3511,66 +3511,6 @@ export type HNMinHelseCommonJS = {
   */
   hendelserAppointmentNewNoSender: string;
   /** 
-  * Mer informasjon
-  */
-  footer_disclaimer_title: string;
-  /** 
-  * Informasjonen på helsenorge.no er levert av ulike organisasjoner i helsesektoren og er laget for å gi deg generell kunnskap. Det er ingen erstatning for undersøkelse eller behandling hos helsepersonell. Dersom du er syk eller trenger medisinsk hjelp av andre grunner, bør du oppsøke fastlegen. Når fastlegen ikke er tilgjengelig og hjelpen ikke kan vente - ring legevaktnummer
-  */
-  footer_disclaimer_text: string;
-  /** 
-  * 116 117
-  */
-  footer_disclaimer_legevakt: string;
-  /** 
-  * 113
-  */
-  footer_disclaimer_emergency: string;
-  /** 
-  * Ring
-  */
-  footer_disclaimer_callstarttext: string;
-  /** 
-  * når det er akutt og står om liv.
-  */
-  footer_disclaimer_callendtext: string;
-  /** 
-  * Ansvarlig redaktør:
-  */
-  footer_helsedir_ansvarlig: string;
-  /** 
-  * Direktoratet for e-helse
-  */
-  footer_helsedir_direktoratet: string;
-  /** 
-  * Bruksstatistikk
-  */
-  footer_social_bruksstatistikk: string;
-  /** 
-  * Besøk oss på Facebook
-  */
-  footer_followonfacebook: string;
-  /** 
-  * Besøk oss på Twitter
-  */
-  footer_followontwitter: string;
-  /** 
-  * Hjelp og brukerstøtte
-  */
-  footer_support_heading: string;
-  /** 
-  * Veiledning helsenorge.no (23 32 70 00) – tastevalg 1
-  */
-  footer_support_helfo: string;
-  /** 
-  * Kontakt oss
-  */
-  footer_support_kontakt: string;
-  /** 
-  * Information in English
-  */
-  footer_support_english: string;
-  /** 
   * Du har en nettleser som vi ikke støtter.
   */
   unsupported_text: string;
@@ -3631,18 +3571,6 @@ export type HNMinHelseCommonJS = {
   */
   unknownErrorAction: string;
   /** 
-  * Skriftstørrelse
-  */
-  footer_support_size: string;
-  /** 
-  * Vis Skriftstørrelse
-  */
-  footer_support_show_size: string;
-  /** 
-  * Hold inn Ctrl-tasten (Cmd-tasten på Mac). Trykk samtidig på + for å forstørre eller - for å forminske.
-  */
-  footer_support_size_description: string;
-  /** 
   * Du kan prøve igjen senere.
   */
   bruksvilkar_popup_error_description: string;
@@ -3679,37 +3607,9 @@ export type HNMinHelseCommonJS = {
   */
   startInfoPanel_Title2: string;
   /** 
-  * Min helse
-  */
-  backbar_home: string;
-  /** 
-  * Navigasjonssti
-  */
-  backbar_header: string;
-  /** 
   * helsenorge.no
   */
   header_home: string;
-  /** 
-  * Til toppen
-  */
-  footer_scroll_top: string;
-  /** 
-  * Innhold A - Å
-  */
-  footer_about_innholdsoversikt: string;
-  /** 
-  * Personvern og nettsikkerhet
-  */
-  footer_about_personvern: string;
-  /** 
-  * Informasjonskapsler
-  */
-  footer_about_informasjonskapsler: string;
-  /** 
-  * Samarbeidspartnere
-  */
-  footer_about_samarbeidspartnere: string;
   /** 
   * Logg ut
   */
@@ -3742,14 +3642,6 @@ export type HNMinHelseCommonJS = {
   * Min helse
   */
   breadCrumb_MinHelse: string;
-  /** 
-  * Les bloggen til helsenorge.no
-  */
-  footer_social_blog: string;
-  /** 
-  * .
-  */
-  footer_disclaimer_endtext: string;
   /** 
   * Jeg forstår og vil gå videre
   */
