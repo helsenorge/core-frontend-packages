@@ -1,7 +1,12 @@
 import * as contentAPIService from '../cms-content-api-service';
+import * as mockLogger from '../logger';
+
+jest.mock('../logger.ts', () => ({
+  warn: jest.fn(),
+}));
 
 describe('CMS content API service', () => {
-  afterAll(() => {
+  afterEach(() => {
     jest.clearAllMocks();
   });
 
@@ -95,6 +100,45 @@ describe('CMS content API service', () => {
           headers: { _headers: { accept: ['application/json'], 'content-type': ['application/json'] } },
           method: 'get',
         });
+      });
+    });
+    describe('Når fetch ikke klarer å koble til content-apiet på grunn av nettverksfeil', () => {
+      it('Så kastes det en exception, og det logges en warning', async () => {
+        jest.spyOn(global, 'fetch').mockRejectedValue(new TypeError('Failed to fetch'));
+
+        await expect(contentAPIService.get('entrypoint')).rejects.toThrow('Failed to fetch');
+
+        expect(mockLogger.warn).toHaveBeenCalledTimes(1);
+        expect(mockLogger.warn).toHaveBeenCalledWith(
+          'Kall til content-apiet feilet: /contentapi/internal/v1/entrypoint. Mottok ingen respons fra tjenesten.'
+        );
+      });
+    });
+    describe('Når content-apiet returnerer 404', () => {
+      it('Så kastes det en exception, og det logges en warning', async () => {
+        const mockErrorResponse = {
+          error: {
+            message: 'Fant ikke siden',
+          },
+        };
+        const response = new Response(JSON.stringify(mockErrorResponse), {
+          headers: contentAPIService.createHeaders(),
+          status: 404,
+          statusText: 'Not Found',
+        });
+        const mockFetchPromise = Promise.resolve(response);
+        jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+
+        try {
+          await contentAPIService.get('entrypoint');
+        } catch (error) {
+          expect(error).toEqual(mockErrorResponse);
+        }
+
+        expect(mockLogger.warn).toHaveBeenCalledTimes(1);
+        expect(mockLogger.warn).toHaveBeenCalledWith(
+          'Kall til content-apiet feilet: /contentapi/internal/v1/entrypoint. Feilmelding: {"error":{"message":"Fant ikke siden"}}'
+        );
       });
     });
   });

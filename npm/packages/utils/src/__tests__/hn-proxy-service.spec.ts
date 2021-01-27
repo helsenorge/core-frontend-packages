@@ -1,4 +1,9 @@
-import { getErrorFromHTML, get, post, put, remove, link, erTjenester } from '../hn-proxy-service';
+import { getErrorFromHTML, get, post, put, remove, link, erTjenester, createHeaders } from '../hn-proxy-service';
+import * as mockLogger from '../logger';
+
+jest.mock('../logger.ts', () => ({
+  warn: jest.fn(),
+}));
 
 window.HN = window.HN || {};
 window.HN.Rest = window.HN.Rest || {};
@@ -29,7 +34,6 @@ describe('Gitt at det har skjedd en Error i en av de hn-proxy-service methodene'
 
 describe('Gitt at baseCrud er definert', () => {
   const fetchMock = jest.spyOn(global, 'fetch');
-
   describe('Når get kalles get', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
       get('lorem/ipsum', 'proxyName', { testParam: 3 });
@@ -115,6 +119,56 @@ describe('Gitt at baseCrud er definert', () => {
         },
       });
       expect(fetchMock.mock.calls[3][1].method).toBe('delete');
+    });
+  });
+});
+
+describe('gitt at get kalles', () => {
+  const fetchMock = jest.spyOn(global, 'fetch');
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+  describe('Når fetch ikke klarer å koble til på grunn av nettverksfeil', () => {
+    it('Så kastes det en exception, og det logges en warning', async () => {
+      fetchMock.mockRejectedValueOnce(new TypeError('Failed to fetch'));
+
+      try {
+        await get('lorem/ipsum', 'proxyName', { testParam: 3 });
+      } catch (error) {
+        expect(error).toEqual({
+          Message: 'Det har skjedd en teknisk feil. Prøv igjen senere.',
+        });
+      }
+
+      expect(mockLogger.warn).toHaveBeenCalledTimes(1);
+      expect(mockLogger.warn).toHaveBeenCalledWith(
+        'Kall til følgende URL feilet: https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3. Mottok ingen respons fra tjenesten.'
+      );
+    });
+  });
+
+  describe('Når fetch klarer å hente, men APIet svarer med en feilmelding', () => {
+    it('Så kastes det en exception, men det logges ikke en warning', async () => {
+      const mockErrorResponse = {
+        error: {
+          message: 'Fant ikke siden',
+        },
+      };
+      const response = new Response(JSON.stringify(mockErrorResponse), {
+        headers: createHeaders(),
+        status: 404,
+        statusText: 'Not found',
+      });
+      const mockFetchPromise = Promise.resolve(response);
+      jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+
+      try {
+        await get('lorem/ipsum', 'proxyName');
+      } catch (error) {
+        expect(error).toEqual(mockErrorResponse);
+      }
+
+      expect(mockLogger.warn).toHaveBeenCalledTimes(0);
     });
   });
 });
