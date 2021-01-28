@@ -26327,7 +26327,7 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_11: string;
   /** 
-  * Min helse forside
+  * Tjenesteforside, Helsenorge
   */
   page_HendelsesLogg_15: string;
   /** 
