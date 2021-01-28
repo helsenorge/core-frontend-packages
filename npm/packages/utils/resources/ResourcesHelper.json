@@ -1035,7 +1035,7 @@
     "page_AskForAccessToService_Title": "Du har ikke tilgang til denne tjenesten",
     "page_NotAccessToService_Desc": "Du har forsøkt å bruke en tjeneste som ikke er tilgjengelig for deg eller den du representerer. Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tillater at du bruker denne tjenesten eller at du som forelder ikke har lov til å bruke tjenesten for barnet ditt.",
     "page_NotAccessToService_Title": "Du har ikke tilgang til denne tjenesten",
-    "page_HendelsesLogg_Desc": "Her vises en oversikt over din bruk av Min helse. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.",
+    "page_HendelsesLogg_Desc": "Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.",
     "page_Appointments_Desc": "Her kan du se dine timer hos fastlegen, sykehus, kommunal helse- og omsorgstjeneste og enkelte andre aktører. Foreløpig er ikke alle timeavtaler tilgjengelige på Helsenorge.",
     "page_Appointments_Title": "Timeavtaler",
     "page_Messages_Desc": "Her ser du meldinger du har sendt og mottatt via helsenorge.no.",
