@@ -39,8 +39,10 @@ interface Category {
   contentGrouping: string;
 }
 
+type TrackFunction = (val: string) => void;
+
 interface Satellite {
-  track: (val: string) => void;
+  track: TrackFunction;
 }
 
 export interface SelfService extends Object {
@@ -122,10 +124,16 @@ export interface Error {
   siteError: string;
 }
 
+interface HasDigitalData {
+  digitalData: DigitalData;
+}
+
+interface HasSatellite {
+  _satellite: Satellite;
+}
+
 declare global {
-  interface Window {
-    digitalData: DigitalData;
-    _satellite: Satellite;
+  interface Window extends Partial<HasDigitalData>, Partial<HasSatellite> {
     opera?: unknown;
   }
 }
@@ -137,6 +145,42 @@ export type ErrorType = 'level1' | 'level2' | 'level3' | 'level4';
 export type ProsesshjelpActionType = 'Open' | 'Close';
 
 /**
+ * Brukes for å sjekke om window.digitalData er klar til bruk
+ * @param x objektet som skal sjekkes, normalt window.digitalData
+ */
+const isDigitalData = (x: unknown): x is DigitalData => {
+  return typeof x === 'object';
+};
+
+/**
+ * Brukes for å sjekke om window._satellite er klar for tracking
+ * @param x objektet som skal sjekkes, normalt window._satellite
+ */
+const isSatellite = (x: Satellite | unknown): x is Satellite => {
+  const satellite = x as Satellite;
+
+  return satellite?.track !== undefined && typeof satellite.track === 'function';
+};
+
+/**
+ * Sjekker om window._satellite er klar for tracking
+ * Brukes når man bare trenger window._satellite, og ikke window.digitalData
+ * @param x objektet som skal sjekkes, normalt window
+ */
+const isSatelliteReady = (x: Window): x is Window & HasSatellite => {
+  return isSatellite(x._satellite);
+};
+
+/**
+ * Sjekker om både window.digitalData og window._satellite er klare for tracking,
+ * inkludert om det er trygt å kalle window._satellite.track()
+ * @param x objektet som skal sjekkes, normalt window
+ */
+export const isTrackingready = (x: Window): x is Window & HasDigitalData & HasSatellite => {
+  return isDigitalData(x.digitalData) && isSatellite(x._satellite);
+};
+
+/**
  * @param event hvor langt brukeren har kommet i selvbetjeningsløsningen (starter/fullfører/avbryter/lagrer)
  * @param name definerer navnet på selvbetjeningsløsningen.
  * @param type spesifiserer type hvis selvbetjeningsløsningen har flere varianter.
@@ -144,10 +188,7 @@ export type ProsesshjelpActionType = 'Open' | 'Close';
  * @param labels spesifiserer tilleggsinformasjon man vil skille brukere på. (F.eks. foretrukket kontaktmåte).
  */
 export const trackSelfService = (event: SelfServiceTrackType, name: string, type?: string, action?: string, labels?: string): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
+  if (isTrackingready(window)) {
     const selfService: SelfService = {
       selfServiceName: name,
     };
@@ -155,9 +196,9 @@ export const trackSelfService = (event: SelfServiceTrackType, name: string, type
     if (action) selfService.selfServiceAction = action;
     if (labels) selfService.selfServiceLabels = labels;
 
-    digitalData.selfService = selfService;
+    window.digitalData.selfService = selfService;
 
-    _satellite.track(`self service ${event}`);
+    window._satellite.track(`self service ${event}`);
   }
 };
 
@@ -174,10 +215,7 @@ export const trackConsent = (
   stepNumber: number,
   consentType: 'Nytt samtykke' | 'Endre samtykke'
 ): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
+  if (isTrackingready(window)) {
     const selfService: ConsentSelfService = {
       consentFunnelName: 'Samtykkeflyt',
       consentType: consentType,
@@ -201,9 +239,9 @@ export const trackConsent = (
       trackText = 'consent complete';
     }
 
-    digitalData.selfService = selfService;
+    window.digitalData.selfService = selfService;
     if (trackText) {
-      _satellite.track(trackText);
+      window._satellite.track(trackText);
     }
   }
 };
@@ -214,31 +252,28 @@ export const trackConsent = (
  * @param trackType definerer type tracking: 'usage' | 'expand' | 'search' | 'groupExpand'
  */
 export const trackFilters = (name: string, trackType: FiltersTrackType): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.filters = {
+  if (isTrackingready(window)) {
+    window.digitalData.filters = {
       filterName: name,
     };
 
     if (trackType === 'usage') {
-      digitalData.filters.filterUsage = 'true';
-      _satellite.track('filter use');
+      window.digitalData.filters.filterUsage = 'true';
+      window._satellite.track('filter use');
     }
     if (trackType === 'expand') {
-      digitalData.filters.filterExpand = 'true';
-      _satellite.track('filter expand');
+      window.digitalData.filters.filterExpand = 'true';
+      window._satellite.track('filter expand');
     }
 
     if (trackType === 'groupExpand') {
-      digitalData.filters.filterGroupExpand = 'true';
-      _satellite.track('filter group expand');
+      window.digitalData.filters.filterGroupExpand = 'true';
+      window._satellite.track('filter group expand');
     }
 
     if (trackType === 'search') {
-      digitalData.filters.filterSearch = 'true';
-      _satellite.track('filter search');
+      window.digitalData.filters.filterSearch = 'true';
+      window._satellite.track('filter search');
     }
   }
 };
@@ -248,10 +283,8 @@ export const trackFilters = (name: string, trackType: FiltersTrackType): void =>
  * @param partner definerer partner som settes i pageInfo
  */
 export const trackPagePartner = (partner: string): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-
-  if (digitalData && digitalData.page && digitalData.page.pageInfo) {
-    digitalData.page.pageInfo.partner = partner;
+  if (window.digitalData && window.digitalData.page && window.digitalData.page.pageInfo) {
+    window.digitalData.page.pageInfo.partner = partner;
   }
 };
 
@@ -260,14 +293,11 @@ export const trackPagePartner = (partner: string): void => {
  * @param hasUnReadAlerts true/false
  */
 export const trackUnreadAlert = (hasUnReadAlerts: boolean): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.user = {
+  if (isTrackingready(window)) {
+    window.digitalData.user = {
       unReadAlerts: hasUnReadAlerts ? true : false,
     };
-    _satellite.track('first logged in page');
+    window._satellite.track('first logged in page');
   }
 };
 
@@ -276,14 +306,11 @@ export const trackUnreadAlert = (hasUnReadAlerts: boolean): void => {
  * @param hasUnReadMessages true/false
  */
 export const trackUnreadMessage = (hasUnReadMessages: boolean): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.user = {
+  if (isTrackingready(window)) {
+    window.digitalData.user = {
       unReadMessages: hasUnReadMessages ? true : false,
     };
-    _satellite.track('first logged in page');
+    window._satellite.track('first logged in page');
   }
 };
 
@@ -292,15 +319,12 @@ export const trackUnreadMessage = (hasUnReadMessages: boolean): void => {
  * @param contentType type som settes på page category
  */
 export const trackReadMessageType = (contentType: string): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-
-  if (digitalData && digitalData.page && digitalData.page.category) {
-    digitalData.page.category.contentType = contentType;
+  if (window.digitalData && window.digitalData.page && window.digitalData.page.category) {
+    window.digitalData.page.category.contentType = contentType;
   }
 
-  const _satellite: Satellite = window._satellite || undefined;
-  if (_satellite) {
-    _satellite.track('message content type');
+  if (isSatelliteReady(window)) {
+    window._satellite.track('message content type');
   }
 };
 
@@ -311,11 +335,8 @@ export const trackReadMessageType = (contentType: string): void => {
  * @param resultsCount antall søkeresultater som settes på search resultsCount
  */
 export const trackSearch = (term: string, name: string, resultsCount: number): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.search = {
+  if (isTrackingready(window)) {
+    window.digitalData.search = {
       searchTerm: term,
       searchType: name,
       resultsCount: resultsCount,
@@ -323,10 +344,10 @@ export const trackSearch = (term: string, name: string, resultsCount: number): v
     };
 
     if (resultsCount === 0) {
-      digitalData.search.nullResult = 'true';
-      _satellite.track('search null results');
+      window.digitalData.search.nullResult = 'true';
+      window._satellite.track('search null results');
     } else {
-      _satellite.track('internal search');
+      window._satellite.track('internal search');
     }
   }
 };
@@ -336,16 +357,13 @@ export const trackSearch = (term: string, name: string, resultsCount: number): v
  * @param searchposition position til søkeresultatet som lagres på search searchposition
  */
 export const trackSearchThrough = (searchposition: number): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.search = {
+  if (isTrackingready(window)) {
+    window.digitalData.search = {
       clickThrough: 'true',
       searchposition: searchposition,
     };
 
-    _satellite.track('search click through');
+    window._satellite.track('search click through');
   }
 };
 
@@ -354,15 +372,12 @@ export const trackSearchThrough = (searchposition: number): void => {
  * @param name navn som lagres på user profileInteractionName
  */
 export const trackProfileInteraction = (name: string): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.user = {
+  if (isTrackingready(window)) {
+    window.digitalData.user = {
       profileInteraction: 'true',
       profileInteractionName: name,
     };
-    _satellite.track('profile interaction');
+    window._satellite.track('profile interaction');
   }
 };
 
@@ -370,9 +385,8 @@ export const trackProfileInteraction = (name: string): void => {
  * Spor verdien for 'user' representasjon etter at den ble valgt i  personvelger
  */
 export const setValueForSelectedUser = (): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  if (digitalData && digitalData.page) {
-    digitalData.page.user = { onBehalfOf: 'Eget bruk', role: 'Eget bruk' };
+  if (window.digitalData && window.digitalData.page) {
+    window.digitalData.page.user = { onBehalfOf: 'Eget bruk', role: 'Eget bruk' };
   }
 };
 
@@ -384,8 +398,7 @@ export const setValueForSelectedUser = (): void => {
  * @param actionType action-type som lagres på toolAction og som definerer label (Close or Open)
  */
 export const trackProsesshjelp = (name: string, toolType: string, label: string, actionType: ProsesshjelpActionType): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const toolLabels = actionType === 'Close' && digitalData.tool ? digitalData.tool.toolLabels : label;
+  const toolLabels = actionType === 'Close' && window.digitalData && window.digitalData.tool ? window.digitalData.tool.toolLabels : label;
   const satelliteTrackContent = actionType + ' context help';
   trackTool(name, toolType, toolLabels, actionType, satelliteTrackContent);
 };
@@ -405,18 +418,16 @@ export const trackTool = (
   toolAction: string,
   satelliteTrackContent?: string
 ): void => {
-  const digitalData = window.digitalData || undefined;
-  const _satellite = window._satellite || undefined;
   satelliteTrackContent = satelliteTrackContent || 'use tool';
 
-  if (digitalData && _satellite) {
-    digitalData.tool = {
+  if (isTrackingready(window)) {
+    window.digitalData.tool = {
       toolName,
       toolType,
       toolLabels,
       toolAction,
     };
-    _satellite.track(satelliteTrackContent);
+    window._satellite.track(satelliteTrackContent);
   }
 };
 
@@ -426,10 +437,8 @@ export const trackTool = (
  * @param userAttributes objekt med verdier som enten legges til eller oppdaterer eksisterende data om brukeren
  */
 export const updateUserAttributes = (userAttributes: UserAttributes): void => {
-  const digitalData: DigitalData = window.digitalData || undefined;
-
-  if (digitalData) {
-    digitalData.user = { ...digitalData.user, ...userAttributes };
+  if (window.digitalData) {
+    window.digitalData.user = { ...window.digitalData.user, ...userAttributes };
   }
 };
 
@@ -438,36 +447,33 @@ export const updateUserAttributes = (userAttributes: UserAttributes): void => {
  * trackPageview()
  */
 export const trackPageview = (): void => {
-  const _satellite = window._satellite || undefined;
-
-  if (_satellite) {
-    _satellite.track('track pageview');
+  if (isSatelliteReady(window)) {
+    window._satellite.track('track pageview');
   }
 };
 
-/* ********************************************** */
-/* *************** DEPRECATED ******************* */
-/* ********************************************** */
-
-// For tracking pageInfo partner - muligens deprecated
-export function trackServiceAlert(hasContent: boolean) {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
-    digitalData.user = {
+/**
+ * Spor om en tjeneste har innhold eller ikke, f.eks.
+ * trackServiceAlert(true)
+ * @param hasContent Boolean som sier om det er innhold i tjenesten eller ikke
+ */
+export const trackServiceAlert = (hasContent: boolean): void => {
+  if (isTrackingready(window)) {
+    window.digitalData.user = {
       serviceAlert: hasContent ? 'Har innhold' : 'Har ikke innhold',
     };
-    _satellite.track('service alert');
+    window._satellite.track('service alert');
   }
-}
+};
 
-// For tracking error
-export function trackError(level: ErrorType, details?: string): void {
-  const digitalData: DigitalData = window.digitalData || undefined;
-  const _satellite: Satellite = window._satellite || undefined;
-
-  if (digitalData && _satellite) {
+/**
+ * Spor feil, f.eks.
+ * trackError("level1", "Beskrivelse av feilen")
+ * @param level Alvorlighetsgrad (level1, level2, level3 eller level4)
+ * @param details Tekst som beskriver feilen
+ */
+export const trackError = (level: ErrorType, details?: string): void => {
+  if (isTrackingready(window)) {
     let errorType;
     if (level === 'level1') {
       errorType = 'Nivå 1: Teknisk feil';
@@ -480,9 +486,9 @@ export function trackError(level: ErrorType, details?: string): void {
     } else {
       return;
     }
-    digitalData.error = {
+    window.digitalData.error = {
       siteError: !details ? errorType : `${errorType} – ${details}`,
     };
-    _satellite.track('site error');
+    window._satellite.track('site error');
   }
-}
+};
