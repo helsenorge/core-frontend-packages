@@ -16722,7 +16722,7 @@ export type HNMinHelseNotificationStrings = {
   */
   changeAppointment_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din time hos ${ActorName} er endret til ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   changeAppointment_EmailMessage_Body_Self: string;
   /** 
@@ -16734,11 +16734,11 @@ export type HNMinHelseNotificationStrings = {
   */
   changeAppointment_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} sin time hos ${ActorName} er endret til ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   changeAppointment_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din time hos ${ActorName} er endret til ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   changeAppointment_TextMessage_Body_Self: string;
   /** 
@@ -17406,15 +17406,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   endrePrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} sin time hos ${ActorName} er endret til ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   endrePrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din time hos ${ActorName} er endret til ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   endrePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin time hos ${ActorName} er endret til ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
@@ -17446,7 +17446,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din time hos ${ActorName} er endret til ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
@@ -17694,11 +17694,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyVideotime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin videotime hos ${ActorName} er endret til ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * En videotime ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   endreVideotime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din videotime hos ${ActorName} er endret til ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en videotime du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   endreVideotime_EmailMessage_Body_Self: string;
   /** 
@@ -17710,11 +17710,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   endreVideotime_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} sin videotime hos ${ActorName} er endret til ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * En videotime ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   endreVideotime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din videotime hos ${ActorName} er endret til ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en videotime du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   endreVideotime_TextMessage_Body_Self: string;
   /** 
