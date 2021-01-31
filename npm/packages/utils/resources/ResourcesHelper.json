@@ -4181,7 +4181,7 @@
     "cancelAppointment_EmailMessage_Subject_Self": "Varsel om ny melding på helsenorge.no",
     "cancelAppointment_TextMessage_Body_Representation": "${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.",
     "cancelAppointment_TextMessage_Body_Self": "${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.",
-    "changeAppointment_EmailMessage_Body_Representation": "${FirstName} sin time hos ${ActorName} er endret til ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.",
+    "changeAppointment_EmailMessage_Body_Representation": "En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.",
     "changeAppointment_EmailMessage_Body_Self": "${FirstName}, din time hos ${ActorName} er endret til ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.",
     "changeAppointment_EmailMessage_Subject_Representation": "Varsel om ny melding på helsenorge.no",
     "changeAppointment_EmailMessage_Subject_Self": "Varsel om ny melding på helsenorge.no",
