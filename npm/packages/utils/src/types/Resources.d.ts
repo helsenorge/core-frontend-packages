@@ -16718,7 +16718,7 @@ export type HNMinHelseNotificationStrings = {
   */
   cancelAppointment_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin time hos ${ActorName} er endret til ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
   */
   changeAppointment_EmailMessage_Body_Representation: string;
   /** 
