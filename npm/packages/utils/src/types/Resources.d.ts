@@ -23288,7 +23288,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_ledsager_MEDISINSK_BEHOV_begrunnelse: string;
   /** 
-  * Det var ikke mulig å bruke offentlig transport, og drosje kunne ikke forhåndsbestilles av behandler eller pasientreisekontor.
+  * Det var ikke mulig å bruke offentlig transport, og drosje kunne ikke forhåndsbestilles av behandler eller pasientreisekontor. Jeg kjørte bil på grunn av koronasituasjonen.
   */
   krav_ledsager_KOMMUNIKASJONSMESSIGE_FORHOLD_innledendeTekst: string;
   /** 

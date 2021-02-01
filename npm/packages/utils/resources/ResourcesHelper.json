@@ -5823,7 +5823,7 @@
     "krav_FORESATT_KOMMUNIKASJONSMESSIGE_FORHOLD_begrunnelse": "fordi barnet ikke kunne bruke offentlig transport.",
     "krav_ledsager_MEDISINSK_BEHOV_innledendeTekst": "Behandler har dokumentert at reiseledsager måtte reise med egen bil eller drosje",
     "krav_ledsager_MEDISINSK_BEHOV_begrunnelse": "på grunn av helsetilstand (må dokumenteres av behandler)",
-    "krav_ledsager_KOMMUNIKASJONSMESSIGE_FORHOLD_innledendeTekst": "Det var ikke mulig å bruke offentlig transport, og drosje kunne ikke forhåndsbestilles av behandler eller pasientreisekontor.",
+    "krav_ledsager_KOMMUNIKASJONSMESSIGE_FORHOLD_innledendeTekst": "Det var ikke mulig å bruke offentlig transport, og drosje kunne ikke forhåndsbestilles av behandler eller pasientreisekontor. Jeg kjørte bil på grunn av koronasituasjonen.",
     "krav_ledsager_KOMMUNIKASJONSMESSIGE_FORHOLD_begrunnelse": "fordi offentlig transport ikke kunne benyttes",
     "krav_ledsager_KOMMUNIKASJONSMESSIGE_FORHOLD_begrunnelseLabel": "Hvorfor kunne du ikke bruke offentlig eller rekvirert transport?",
     "krav_ledsager_KOMMUNIKASJONSMESSIGE_FORHOLD_placeholder": "Skriv inn din forklaring:",
