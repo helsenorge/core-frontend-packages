@@ -5819,7 +5819,7 @@
     "krav_PASIENT_REISE_UNDER_10_KM_begrunnelser_OYEBLIKKELIG_HJELP": "fordi jeg trengte øyeblikkelig hjelp (må dokumenteres av behandler).",
     "krav_PASIENT_REISE_UNDER_10_KM_begrunnelser_KOMMUNIKASJONSMESSIGE_FORHOLD": "fordi jeg ikke kunne bruke offentlig transport.",
     "krav_FORESATT_OYEBLIKKELIG_HJELP_begrunnelse": "fordi barnet trengte øyeblikkelig hjelp (må dokumenteres av behandler).",
-    "krav_FORESATT_KOMMUNIKASJONSMESSIGE_FORHOLD_innledendeTekst": "Det var ikke mulig å bruke offentlig transport, og drosje kunne ikke forhåndsbestilles av behandler eller pasientreisekontor.",
+    "krav_FORESATT_KOMMUNIKASJONSMESSIGE_FORHOLD_innledendeTekst": "Det var ikke mulig å bruke offentlig transport, og drosje kunne ikke forhåndsbestilles av behandler eller pasientreisekontor. Jeg kjørte bil på grunn av koronasituasjonen.",
     "krav_FORESATT_KOMMUNIKASJONSMESSIGE_FORHOLD_begrunnelse": "fordi barnet ikke kunne bruke offentlig transport.",
     "krav_ledsager_MEDISINSK_BEHOV_innledendeTekst": "Behandler har dokumentert at reiseledsager måtte reise med egen bil eller drosje",
     "krav_ledsager_MEDISINSK_BEHOV_begrunnelse": "på grunn av helsetilstand (må dokumenteres av behandler)",
