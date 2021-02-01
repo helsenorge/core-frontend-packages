@@ -4210,14 +4210,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Kontaktinformasjon_Description: string;
   /** 
-  * Innsyn i personopplysninger samlet om deg i Smittestopp
-  */
-  page_InnsynSmittestopp_Title: string;
-  /** 
-  * TODO: beskrivelse av innsyn smittestopp
-  */
-  page_InnsynSmittestopp_Desc: string;
-  /** 
   * Tilgangstyring av helseopplysninger
   */
   page_Tilgangsstyring_Title: string;

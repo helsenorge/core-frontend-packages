@@ -1061,8 +1061,6 @@
     "page_Samvalg_NavigateBackLinkURL": "{HelsenorgeUrl}/samvalg",
     "page_Kontaktinformasjon_Title": "Kontaktinformasjon",
     "page_Kontaktinformasjon_Description": "Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.",
-    "page_InnsynSmittestopp_Title": "Innsyn i personopplysninger samlet om deg i Smittestopp",
-    "page_InnsynSmittestopp_Desc": "TODO: beskrivelse av innsyn smittestopp",
     "page_Tilgangsstyring_Title": "Tilgangstyring av helseopplysninger",
     "page_Tilgangsstyring_Desc": "Du kan selv gjøre endringer i egne eller andres tilgang til dine tjenester og helseopplysninger.",
     "page_Tilgangsstyring_NavigateBackLinkTitle": "Personverninnstillinger",
