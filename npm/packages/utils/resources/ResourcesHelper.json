@@ -2962,7 +2962,6 @@
     "bestillingPaaVentMessage": "Du har bestilt følgende innsynsrapport(er) og venter fremdeles på svar. Behandlingstid er normalt ikke mer enn 30 dager. Innsynsrapporten vil inneholde opplysninger registrert til og med dagen din forespørsel behandles.",
     "bestillInnsynKvitteringsTekst": "Du vil få et varsel på helsenorge.no når rapporten er klar. Rapporten lagres automatisk i <strong>Dokumenter</strong>. Behandlingstid er normalt ikke mer enn 30 dager.",
     "bestillInnsynKvitteringsHeader": "Innsynsrapport er bestilt",
-    "register_tidligeresvar": "Her vises de siste innsynsrapportene du har mottatt fra dette registeret. Disse og tidligere mottatte rapporter ligger lagret i <a href=\"/dokumenter\">Dokumenter</a>.",
     "meldeFeil_meldingsendt": "Melding sendt",
     "varselmeny_InnsynsrapportManglendeApprec_Emne": "Bestilling av rapport fra {0} den {1} feilet. Vennligst prøv igjen.",
     "clientOperation_GetRegisteroppforing_Warning_Title": "Visningen kan være ufullstendig",

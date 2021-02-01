@@ -11798,10 +11798,6 @@ export type HNMinHelseHelseregistreJS = {
   */
   bestillInnsynKvitteringsHeader: string;
   /** 
-  * Her vises de siste innsynsrapportene du har mottatt fra dette registeret. Disse og tidligere mottatte rapporter ligger lagret i <a href="/dokumenter">Dokumenter</a>.
-  */
-  register_tidligeresvar: string;
-  /** 
   * Melding sendt
   */
   meldeFeil_meldingsendt: string;
