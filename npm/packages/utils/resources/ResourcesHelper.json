@@ -5811,7 +5811,7 @@
     "krav_PASIENT_MEDISINSK_BEHOV_begrunnelse": "på grunn av min helsetilstand (må dokumenteres av behandler)",
     "krav_PASIENT_OYEBLIKKELIG_HJELP_innledendeTekst": "Jeg trengte øyeblikkelig hjelp og har dokumentasjon fra behandler på dette.",
     "krav_PASIENT_OYEBLIKKELIG_HJELP_begrunnelse": "fordi jeg trengte øyeblikkelig hjelp (må dokumenteres av behandler)",
-    "krav_PASIENT_KOMMUNIKASJONSMESSIGE_FORHOLD_innledendeTekst": "Det var ikke mulig å bruke offentlig transport, og drosje kunne ikke forhåndsbestilles av behandler eller pasientreisekontor.",
+    "krav_PASIENT_KOMMUNIKASJONSMESSIGE_FORHOLD_innledendeTekst": "Det var ikke mulig å bruke offentlig transport, og drosje kunne ikke forhåndsbestilles av behandler eller pasientreisekontor. Jeg kjørte bil på grunn av koronasituasjonen.",
     "krav_PASIENT_KOMMUNIKASJONSMESSIGE_FORHOLD_begrunnelse": "fordi jeg ikke kunne bruke offentlig transport",
     "krav_PASIENT_KOMMUNIKASJONSMESSIGE_FORHOLD_begrunnelseLabel": "Hvorfor kunne du ikke bruke offentlig eller rekvirert transport?",
     "krav_PASIENT_KOMMUNIKASJONSMESSIGE_FORHOLD_placeholder": "Skriv inn din forklaring:",
