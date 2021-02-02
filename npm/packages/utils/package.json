@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "5.5.0-beta-fetch-logging",
+  "version": "5.5.0-beta-fetch-logging-og-adobe-analytics",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
