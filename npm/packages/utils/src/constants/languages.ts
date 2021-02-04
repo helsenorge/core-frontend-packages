@@ -8,3 +8,5 @@ export enum LanguageLocales {
   ROMANIAN = 'ro-RO',
   SAMI_NORTHERN = 'se-NO',
 }
+
+export default LanguageLocales;
