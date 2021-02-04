@@ -11595,6 +11595,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Skjul for fullmektige
    */
   actionSkjulFullmektige: string;
+  /**
+   * Delings logg over bruk
+   */
+  dokumenter_deling_logg_table_caption: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
@@ -25390,6 +25394,18 @@ export type HNMinHelsePersonvernStrings = {
    */
   page_HendelsesLogg_43: string;
   /**
+   * Helsenorge-tjenester
+   */
+  page_HendelsesLogg_40: string;
+  /**
+   * Personopplysninger
+   */
+  page_HendelsesLogg_46: string;
+  /**
+   * Meldinger og hendelser
+   */
+  page_HendelsesLogg_47: string;
+  /**
    * Du har ikke tilgang til samtykkedefinisjonen.
    */
   samtykkeDefinisjonAccessDeniedBody: string;
@@ -25686,18 +25702,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
    * Lukk
    */
   page_Opplysninger_Kontakt_Close: string;
-  /**
-   * Helsenorge-tjenester
-   */
-  page_HendelsesLogg_40: string;
-  /**
-   * Personopplysninger
-   */
-  page_HendelsesLogg_46: string;
-  /**
-   * Meldinger og hendelser
-   */
-  page_HendelsesLogg_47: string;
   /**
    * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
    */

@@ -2908,7 +2908,8 @@
     "fullmektig_error_title": "Handlingen mislyktes. Prøv igjen senere.",
     "skjult_for_fullmektig": "Skjult for fullmektig",
     "actionVisFullmektige": "Vis for fullmektige",
-    "actionSkjulFullmektige": "Skjul for fullmektige"
+    "actionSkjulFullmektige": "Skjul for fullmektige",
+    "dokumenter_deling_logg_table_caption": "Delings logg over bruk"
   },
   "HNMinHelseHealthArchiveStrings": {
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
@@ -6351,6 +6352,9 @@
   "HNMinHelsePersonvernStrings": {
     "hjelpekontekst_profilBrukOgTilganger": "{\"defaulttekst_overskrift\":\"Bruk og tilganger - Personvern\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "page_HendelsesLogg_43": "Samtykke til datautveksling",
+    "page_HendelsesLogg_40": "Helsenorge-tjenester",
+    "page_HendelsesLogg_46": "Personopplysninger",
+    "page_HendelsesLogg_47": "Meldinger og hendelser",
     "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
     "shared_Fullmakt": "Ved fullmakt",
     "shared_Foreldrerepresentasjon": "Foreldreansvar",
@@ -6425,9 +6429,6 @@
     "tjenesteOmrade_DigitalHelsetjeneste": "Digital helsetjeneste",
     "tjenesteOmrade_DigitalHelsetjeneste_Description": "Digital helsetjeneste",
     "page_Opplysninger_Kontakt_Close": "Lukk",
-    "page_HendelsesLogg_40": "Helsenorge-tjenester",
-    "page_HendelsesLogg_46": "Personopplysninger",
-    "page_HendelsesLogg_47": "Meldinger og hendelser",
     "hjelpekontekst_profilLogg": "{\"defaulttekst_overskrift\":\"Logg over bruk\",\"defaulttekst_brodtekst\":\"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>\"}",
     "page_Helseopplysninger_PLL_Selected_Log_ContentTilgangsbegrensningTitle": "Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon",
     "page_Helseopplysninger_PLL_Log_AllBlockTilgangsbegrensningTitle": "Blokker tilgang for alt helsepersonell (unntatt din fastlege) i din legemiddelinformasjon",
