@@ -11596,7 +11596,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   actionSkjulFullmektige: string;
   /**
-   * Delings logg over bruk
+   * Oppslag gjort av helsepersonell i dette dokumentet
    */
   dokumenter_deling_logg_table_caption: string;
 };
