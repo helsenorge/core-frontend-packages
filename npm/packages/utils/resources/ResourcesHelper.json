@@ -2909,7 +2909,7 @@
     "skjult_for_fullmektig": "Skjult for fullmektig",
     "actionVisFullmektige": "Vis for fullmektige",
     "actionSkjulFullmektige": "Skjul for fullmektige",
-    "dokumenter_deling_logg_table_caption": "Delings logg over bruk"
+    "dokumenter_deling_logg_table_caption": "Oppslag gjort av helsepersonell i dette dokumentet"
   },
   "HNMinHelseHealthArchiveStrings": { 
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
