@@ -45,7 +45,7 @@ const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string)
               resolve(true);
             }
           },
-          'http://www.pinlady.net/PluginDetect/files/empty.pdf'
+          `${getAssets()}/forside/static/media/empty.pdf`
         );
     },
     () => {
