@@ -17098,7 +17098,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   helseregisterNyInnsynsrapport_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
+  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
   */
   helseregisterNyInnsynsrapport_EmailMessage_Body_Self: string;
   /** 
@@ -17110,11 +17110,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   helseregisterNyInnsynsrapport_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
+  * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
   */
   helseregisterNyInnsynsrapport_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Helseregistre.
+  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
   */
   helseregisterNyInnsynsrapport_TextMessage_Body_Self: string;
   /** 
