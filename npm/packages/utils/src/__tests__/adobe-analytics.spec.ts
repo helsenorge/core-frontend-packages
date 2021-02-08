@@ -464,5 +464,204 @@ describe('Adobe-analytics', () => {
         expect(mockTrack).toHaveBeenCalledWith('track pageview');
       });
     });
+    describe('mens windows._satellite.track er undefined', () => {
+      it('Så kalles ikke satellite.track', () => {
+        const originalSatellite = global.window['_satellite'];
+        global.window['_satellite'] = {
+          track: undefined,
+        };
+        adobeFunctions.trackPageview();
+
+        expect(mockTrack).toHaveBeenCalledTimes(0);
+        global.window['_satellite'] = originalSatellite;
+      });
+    });
+  });
+  describe('Når trackServiceAlert kalles', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    describe('med true som argument', () => {
+      it('Så kalles satellite.track med "service alert" og "Har innhold" i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = {};
+
+        adobeFunctions.trackServiceAlert(true);
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('service alert');
+        expect(window.digitalData?.user?.serviceAlert).toBe('Har innhold');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+    describe('med false som argument', () => {
+      it('Så kalles satellite.track med "service alert" og "Har ikke innhold" i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = {};
+
+        adobeFunctions.trackServiceAlert(false);
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('service alert');
+        expect(window.digitalData?.user?.serviceAlert).toBe('Har ikke innhold');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+  });
+  describe('Når trackError kalles', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    describe('med level1', () => {
+      it('Så kalles satellite.track med "site error" og beskrivelse tilpasset nivået på feilen i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = {};
+
+        adobeFunctions.trackError('level1');
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('site error');
+        expect(window.digitalData?.error?.siteError).toBe('Nivå 1: Teknisk feil');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+    describe('med level2', () => {
+      it('Så kalles satellite.track med "site error" og beskrivelse tilpasset nivået på feilen i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = {};
+
+        adobeFunctions.trackError('level2');
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('site error');
+        expect(window.digitalData?.error?.siteError).toBe('Nivå 2: Driftsmelding');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+    describe('med level3', () => {
+      it('Så kalles satellite.track med "site error" og beskrivelse tilpasset nivået på feilen i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = {};
+
+        adobeFunctions.trackError('level3');
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('site error');
+        expect(window.digitalData?.error?.siteError).toBe('Nivå 3: JavaScript feil');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+    describe('med level4', () => {
+      it('Så kalles satellite.track med "site error" og beskrivelse tilpasset nivået på feilen i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = {};
+
+        adobeFunctions.trackError('level4');
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('site error');
+        expect(window.digitalData?.error?.siteError).toBe('Nivå 4: Interaksjonsfeil');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+    describe('med level4 og detaljer om feilen', () => {
+      it('Så kalles satellite.track med "site error" beskrivelse tilpasset nivået på feilen i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = {};
+
+        adobeFunctions.trackError('level4', 'Beskrivelse av feilen');
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('site error');
+        expect(window.digitalData?.error?.siteError).toBe('Nivå 4: Interaksjonsfeil – Beskrivelse av feilen');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+    describe('med level4 (som ikke er en gyldig level)', () => {
+      it('Så kalles ikke satellite.track', () => {
+        const originalDigitalData = global.window['digitalData'];
+        adobeFunctions.trackError('level5');
+
+        expect(mockTrack).toHaveBeenCalledTimes(0);
+      });
+    });
+  });
+});
+describe('Gitt at isTrackingready kalles', () => {
+  const originalDigitalData = global.window['digitalData'];
+  const originalSatellite = global.window['_satellite'];
+  const digitalData = {
+    selfService: {},
+  };
+  beforeAll(() => {
+    global.window['digitalData'] = digitalData;
+  });
+  afterAll(() => {
+    global.window['digitalData'] = originalDigitalData;
+  });
+  describe('når digitalData er undefined', () => {
+    it('så skal isTrackingready returnere false', () => {
+      global.window['digitalData'] = undefined;
+      const result = adobeFunctions.isTrackingready(global.window);
+
+      expect(result).toBeFalsy();
+      global.window['digitalData'] = digitalData;
+    });
+  });
+  describe('når _satellite er undefined', () => {
+    it('så skal isTrackingready returnere false', () => {
+      global.window['_satellite'] = undefined;
+      const result = adobeFunctions.isTrackingready(global.window);
+
+      expect(result).toBeFalsy();
+      global.window['_satellite'] = originalSatellite;
+    });
+  });
+  describe('når _satellite.track er en funksjon', () => {
+    it('så skal isTrackingready returnere true', () => {
+      const result = adobeFunctions.isTrackingready(global.window);
+
+      expect(result).toBeTruthy();
+    });
+  });
+  describe('når _satellite.track er null', () => {
+    it('så skal isTrackingready returnere false', () => {
+      global.window['_satellite'] = {
+        track: null,
+      };
+      const result = adobeFunctions.isTrackingready(global.window);
+
+      expect(result).toBeFalsy();
+      global.window['_satellite'] = originalSatellite;
+    });
+  });
+  describe('når _satellite.track er et objekt', () => {
+    it('så skal isTrackingready returnere false', () => {
+      global.window['_satellite'] = {
+        track: {},
+      };
+      const result = adobeFunctions.isTrackingready(global.window);
+
+      expect(result).toBeFalsy();
+      global.window['_satellite'] = originalSatellite;
+    });
+  });
+  describe('når _satellite.track er undefined', () => {
+    it('så skal isTrackingready returnere false', () => {
+      global.window['_satellite'] = {
+        track: undefined,
+      };
+      const result = adobeFunctions.isTrackingready(global.window);
+
+      expect(result).toBeFalsy();
+      global.window['_satellite'] = originalSatellite;
+    });
   });
 });

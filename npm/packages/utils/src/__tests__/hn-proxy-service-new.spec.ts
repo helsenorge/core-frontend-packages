@@ -1,4 +1,9 @@
-import { getErrorFromHTML, get, post, put, remove, link } from '../hn-proxy-service-new';
+import { getErrorFromHTML, get, post, put, remove, link, createHeaders } from '../hn-proxy-service-new';
+import * as mockLogger from '../logger';
+
+jest.mock('../logger.ts', () => ({
+  warn: jest.fn(),
+}));
 
 window.HN = window.HN || {};
 window.HN.Rest = window.HN.Rest || {};
@@ -115,6 +120,56 @@ describe('Gitt at baseCrud er definert', () => {
         },
       });
       expect(fetchMock.mock.calls[3][1].method).toBe('delete');
+    });
+  });
+});
+
+describe('gitt at get kalles', () => {
+  const fetchMock = jest.spyOn(global, 'fetch');
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+  describe('Når fetch ikke klarer å koble til på grunn av nettverksfeil', () => {
+    it('Så kastes det en exception, og det logges en warning', async () => {
+      fetchMock.mockRejectedValueOnce(new TypeError('Failed to fetch'));
+
+      try {
+        await get('tokenserviceinternal', 'v1/ActiveTokens', { testParam: 3 });
+      } catch (error) {
+        expect(error).toEqual({
+          Message: 'Det har skjedd en teknisk feil. Prøv igjen senere.',
+        });
+      }
+
+      expect(mockLogger.warn).toHaveBeenCalledTimes(1);
+      expect(mockLogger.warn).toHaveBeenCalledWith(
+        'Kall til følgende URL feilet: https://proxy.test.nhn.no/proxy/tokenserviceinternal/v1/ActiveTokens?testParam=3. Mottok ingen respons fra tjenesten.'
+      );
+    });
+  });
+
+  describe('Når fetch klarer å hente, men APIet svarer med en feilmelding', () => {
+    it('Så kastes det en exception, men det logges ikke en warning', async () => {
+      const mockErrorResponse = {
+        error: {
+          message: 'Fant ikke siden',
+        },
+      };
+      const response = new Response(JSON.stringify(mockErrorResponse), {
+        headers: createHeaders(),
+        status: 404,
+        statusText: 'Not found',
+      });
+      const mockFetchPromise = Promise.resolve(response);
+      jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+
+      try {
+        await get('tokenserviceinternal', 'v1/ActiveTokens');
+      } catch (error) {
+        expect(error).toEqual(mockErrorResponse);
+      }
+
+      expect(mockLogger.warn).toHaveBeenCalledTimes(0);
     });
   });
 });

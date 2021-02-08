@@ -1,4 +1,5 @@
 import { trackError } from './adobe-analytics';
+import { warn } from './logger';
 
 /**
  * Returnerer __CmsContentApiUrl__ fra window.HN.Rest
@@ -57,14 +58,27 @@ export const checkStatus = (response: Response): Promise<{}> | undefined => {
 };
 
 /**
- * Lager fetch call mot Content API'et. Returnerer en HTTP Response
- * @param cmd command strengen som sendes mot API'et
+ * Henter JSON fra content-apiet med fetch(). Returnerer et Promise.
+ * Logger eventuelle feil med warn().
+ * @param cmd command strengen som sendes mot content-apiet
  * @param params object med parameters { param1 : 'myparam1', param2: 'myparam2'}
+ * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
 export const get = (cmd: string, params?: object): Promise<{} | Response | undefined> => {
-  return fetch(getContentApiUrl() + '/contentapi/internal/v1/' + cmd + parseParams(params), {
+  const apiUrl = getContentApiUrl() + '/contentapi/internal/v1/' + cmd + parseParams(params);
+  return fetch(apiUrl, {
     method: 'get',
     credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
     headers: createHeaders(),
-  }).then(checkStatus);
+  })
+    .then(checkStatus)
+    .catch(error => {
+      if (error == 'TypeError: Failed to fetch') {
+        warn(`Kall til content-apiet feilet: ${apiUrl}. Mottok ingen respons fra tjenesten.`);
+      } else {
+        warn(`Kall til content-apiet feilet: ${apiUrl}. Feilmelding: ${JSON.stringify(error)}`);
+      }
+
+      throw error;
+    });
 };
