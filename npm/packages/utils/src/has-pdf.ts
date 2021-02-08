@@ -19,7 +19,7 @@ const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string)
   // For å omgå popup-blokkering må vi åpne nytt vindu før async-kall.
   const newWindow: Window | null = window.open();
   // Full documentation: http://www.pinlady.net/PluginDetect/PDFjs/
-  const scriptUrl = `${getAssets()}/forside/static/js/plugindetectpdfjs.js`;
+  const scriptUrl = `${getAssets()}/forside/static/js/detectpdf.min.js`;
   loadScriptES6(scriptUrl).then(
     () => {
       newWindow &&
@@ -30,7 +30,6 @@ const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string)
           () => {
             const result: number = PluginDetect && PluginDetect.isMinVersion ? PluginDetect.isMinVersion('PDFjs') : -1;
             // Hack: Delete document.documentMode for problems with React browser check
-
             if ('documentMode' in document && typeof document['documentMode'] === 'undefined') {
               delete document['documentMode'];
             }
