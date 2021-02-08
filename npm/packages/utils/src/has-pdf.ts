@@ -18,7 +18,8 @@ const isAndroid = (): boolean => {
 const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string): void => {
   // For å omgå popup-blokkering må vi åpne nytt vindu før async-kall.
   const newWindow: Window | null = window.open();
-  const scriptUrl = `${getAssets()}/hn.portal/js/plugindetectpdfjs.js`;
+  // Full documentation: http://www.pinlady.net/PluginDetect/PDFjs/
+  const scriptUrl = `${getAssets()}/forside/static/js/detectpdf.min.js`;
   loadScriptES6(scriptUrl).then(
     () => {
       newWindow &&
@@ -29,22 +30,21 @@ const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string)
           () => {
             const result: number = PluginDetect && PluginDetect.isMinVersion ? PluginDetect.isMinVersion('PDFjs') : -1;
             // Hack: Delete document.documentMode for problems with React browser check
-
             if ('documentMode' in document && typeof document['documentMode'] === 'undefined') {
               delete document['documentMode'];
             }
 
             if (result === 0) {
-              // PDF.js is used as default
+              // Returns 0 if installed & enabled and is the default PDF viewer in the browser. The version of the viewer is unknown. PDF documents will be displayed in the browser using PDF.js
               newWindow.location.href = pdfUrl;
               resolve(false);
             } else if (result === -1) {
-              // PDF.js will not be used
+              // Returns -1 if not installed or not enabled or is not the default viewer. PDF.js will NOT be used to display PDF documents in the browser.
               newWindow.close();
               resolve(true);
             }
           },
-          getAssets() + '/hn.portal/assets/dummy.pdf'
+          `${getAssets()}/forside/static/media/empty.pdf`
         );
     },
     () => {

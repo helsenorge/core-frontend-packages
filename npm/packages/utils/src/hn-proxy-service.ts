@@ -1,6 +1,7 @@
 import { trackError } from './adobe-analytics';
 import { parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
 import * as DateUtils from './date-utils';
+import { warn } from './logger';
 
 declare const HN: {
   Rest: {
@@ -60,7 +61,7 @@ export const erTjenester = () => {
  * Returnerer Headers som trengs i en vanlig request
  * @param type optional content-type - default er json
  */
-const createHeaders = (type = 'application/json'): Headers => {
+export const createHeaders = (type = 'application/json'): Headers => {
   const headers: Headers = new Headers(getDefaultRequestParams());
   headers.append('Accept', type);
   headers.append('Content-Type', type);
@@ -129,18 +130,20 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
 };
 
 /**
- * baseCrud som brukes for å fetche
+ * baseCrud som brukes for å fetche. Logger eventuelle nettverksfeil med warn().
  * @param method
  * @param url
  * @param proxyName
  * @param params
  * @param data
+ * @throws {Error} Dersom det skjedde en feil under fetch-kallet
  */
 const baseCrud = <T, R>(method: string, url: string, proxyName: string, params?: RequestParamType, data?: R): Promise<T | null> => {
   const queryString = params && Object.keys(params).length > 0 ? createQueryString(params) : '';
   const baseUrl = getProxyEnvironmentPath(proxyName);
   const requestBody = data ? { body: JSON.stringify(data) } : {};
-  return fetch(baseUrl + url + queryString, {
+  const apiUrl = baseUrl + url + queryString;
+  return fetch(apiUrl, {
     ...requestBody,
     method,
     credentials: 'include',
@@ -150,6 +153,7 @@ const baseCrud = <T, R>(method: string, url: string, proxyName: string, params?:
     .catch(err => {
       trackError('level1');
       if (err == 'TypeError: Failed to fetch') {
+        warn(`Kall til følgende URL feilet: ${apiUrl}. Mottok ingen respons fra tjenesten.`);
         throw {
           Message: 'Det har skjedd en teknisk feil. Prøv igjen senere.',
         };
