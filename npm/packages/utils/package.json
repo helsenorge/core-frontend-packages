@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "5.5.0-beta02",
+  "version": "5.5.0",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -26,7 +26,7 @@
   "type": "module",
   "devDependencies": {
     "@helsenorge/core-build": "^17.0.5",
-    "@helsenorge/designsystem-react": "1.0.0-beta36",
+    "@helsenorge/designsystem-react": "1.0.0-beta37",
     "@types/react-router-dom": "^5.1.3",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/redux": "^3.6.0",
