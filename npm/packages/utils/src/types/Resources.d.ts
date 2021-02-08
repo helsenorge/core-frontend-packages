@@ -11576,7 +11576,7 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   lightbox_til_deling_lukkknapp: string;
   /** 
-  * Skjult for fullmektige
+  * Skjult for fullmakt
   */
   skjult_for_fullmektige: string;
   /** 
@@ -11588,11 +11588,11 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   skjult_for_fullmektig: string;
   /** 
-  * Vis for fullmektige
+  * Vis for fullmakt
   */
   actionVisFullmektige: string;
   /** 
-  * Skjul for fullmektige
+  * Skjul for fullmakt
   */
   actionSkjulFullmektige: string;
   /** 
