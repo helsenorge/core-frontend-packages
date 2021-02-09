@@ -10402,7 +10402,7 @@ export type HNMinHelseDinFastlegeJS = {
   */
   dfl_DinFastlegeBanner_Apningstider: string;
   /** 
-  * Gå til legekontorets egne nettsider
+  * Gå til legekontorets nettsider
   */
   dfl_DinFastlegeBanner_LegekontorLink: string;
   /** 
