@@ -2172,7 +2172,7 @@
     "kommunalHelsetilbudInfoLabel": "Informasjon fra kommunen",
     "kommunalHelsetilbudHjemmesideLabel": "Hjemmeside",
     "kommunalHelsetilbudKontaktmuligheterLabel": "Kontaktmuligheter",
-    "conversationItemFastlegeAccessDeniedHeader": "Du har ikke tilgang til tjenesten.",
+    "conversationItemFastlegeAccessDeniedHeader": "Legekontoret har sperret din tilgang til denne tjenesten.",
     "conversationItemFastlegeAccessDeniedBody": "Kontakt fastlegekontoret ved eventuelle spørsmål.",
     "conversationItemFastlegeGeneralErrorHeader": "Det har skjedd en teknisk feil.",
     "conversationItemFastlegeGeneralErrorBody": "Prøv igjen senere, eller kontakt ditt legekontor.",
