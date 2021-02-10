@@ -8664,7 +8664,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   kommunalHelsetilbudKontaktmuligheterLabel: string;
   /** 
-  * Du har ikke tilgang til tjenesten.
+  * Legekontoret har sperret din tilgang til denne tjenesten.
   */
   conversationItemFastlegeAccessDeniedHeader: string;
   /** 
