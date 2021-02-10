@@ -1667,7 +1667,7 @@
     "conversationSpecialistConfirmAppointment": "Bekreft timen",
     "conversationSpecialistStopTreatment": "Avslutt behandlingsløp",
     "conversationSpecialistTimeChange": "Endre tidspunkt",
-    "conversationItemAccessDenied": "Du har ikke tilgang til tjenesten. Kontakt fastlegekontoret ved eventuelle spørsmål.",
+    "conversationItemAccessDenied": "Mottaker har sperret din tilgang til tjenesten. Kontakt mottaker ved eventuelle spørsmål.",
     "appointmentSubmitAvailableErrorBody": "Prøv igjen senere eller kontakt oss på telefon.",
     "appointmentSubmitAvailableErrorTitle": "Timebestillingen ble ikke utført",
     "appointmentSubmitRejectedBody": "Valgt tidspunkt er ikke lenger tilgjengelig.",

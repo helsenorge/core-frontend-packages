@@ -6635,7 +6635,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationSpecialistTimeChange: string;
   /** 
-  * Du har ikke tilgang til tjenesten. Kontakt fastlegekontoret ved eventuelle spørsmål.
+  * Mottaker har sperret din tilgang til tjenesten. Kontakt mottaker ved eventuelle spørsmål.
   */
   conversationItemAccessDenied: string;
   /** 
