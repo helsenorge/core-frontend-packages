@@ -147,7 +147,7 @@ window.HN.PortalCommands = window.HN.PortalCommands || {};
  * DEPRECATED: Bruk getTjenesterUrl i hn-proxy-service
  * Returnerer baseUrl til MinHelse basert på HN Rest objektet
  */
-export const getMinHelseUrl = () => {
+export const TjenesterUrl = () => {
   return getTjenesterUrl();
 };
 
