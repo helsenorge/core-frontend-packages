@@ -3930,7 +3930,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_KJCriticalInfo_Title: string;
   /** 
-  * Her finner du dine registrerte egenandeler for helsetjenester både for egenandelstak 1 og for egenandelstak 2
+  * Her finner du dine registrerte egenandeler for helsetjenester.
   */
   page_Egenandeler_Desc: string;
   /** 
