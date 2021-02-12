@@ -1,5 +1,6 @@
 import { trackError } from './adobe-analytics';
-import { TjenesterUrl, parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
+import { parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
+import { getTjenesterUrl } from './hn-proxy-service';
 import * as DateUtils from './date-utils';
 import { warn } from './logger';
 
@@ -28,7 +29,7 @@ export interface ProxyErrorResponse extends Response {
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  */
 const getProxyEnvironmentPath = (proxyName: string, endpoint: string): string => {
-  return `${TjenesterUrl()}/proxy/${proxyName}/${endpoint}`;
+  return `${getTjenesterUrl()}/proxy/${proxyName}/${endpoint}`;
 };
 
 /**
@@ -106,7 +107,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
         document.location.href.indexOf('autosignout=1') === -1
       ) {
         // redirect dersom token er utgått eller ugyldig
-        window.location.href = `${TjenesterUrl()}/auth/autosignout`;
+        window.location.href = `${getTjenesterUrl()}/auth/autosignout`;
       }
       throw err;
     });
