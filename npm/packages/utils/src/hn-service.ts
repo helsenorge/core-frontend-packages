@@ -143,14 +143,6 @@ window.HN.Rest = window.HN.Rest || {};
 window.HN.Commands = window.HN.Commands || {};
 window.HN.PortalCommands = window.HN.PortalCommands || {};
 
-/**
- * DEPRECATED: Bruk getTjenesterUrl i hn-proxy-service
- * Returnerer baseUrl til MinHelse basert på HN Rest objektet
- */
-export const TjenesterUrl = () => {
-  return getTjenesterUrl();
-};
-
 export function usePasientensLegemiddelliste() {
   return HN.Rest.__PasientensLegemiddelliste__ !== undefined && HN.Rest.__PasientensLegemiddelliste__ !== null
     ? HN.Rest.__PasientensLegemiddelliste__
