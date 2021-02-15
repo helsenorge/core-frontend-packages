@@ -1,7 +1,8 @@
 import { Dispatch, Action } from 'redux';
 
 import { OperationResponse, TextMessage, EmptyAction } from './types/entities';
-import { get } from './hn-proxy-service';
+import { erTjenester, get as getTjenesterProxy } from './hn-proxy-service';
+import { getHelsenorgeProxy } from './cms-content-api-service';
 import { getVersion } from './hn-page';
 
 interface SotProxyOperationResponse {
@@ -178,7 +179,7 @@ function parseResult(resources: string, success: (data: ResourceItem) => void): 
 }
 
 /**
- * Kaller get gjennom hn-proxy-service
+ * Kaller get gjennom hn-proxy-service (benytter helsenorgeProxy utenfor tjenester)
  * @param name - Filename param som sendes til SOT UIResource
  * @param culture - Culture param som sendes til SOT UIResource
  * @param success - methode som kalles ved success. Tar imot ResourceItem som param
@@ -190,7 +191,15 @@ export const getProxyResx = (
   success: (data: ResourceItem) => void,
   failure?: (error?: TextMessage) => void
 ): void => {
-  get('UIResource', 'sot', {
+  let getMethod: (url: string, proxyName: string, params?: object) => Promise<{} | Response | undefined | null>;
+
+  if (erTjenester()) {
+    getMethod = getTjenesterProxy;
+  } else {
+    getMethod = getHelsenorgeProxy;
+  }
+
+  getMethod('UIResource', 'sot', {
     Culture: culture,
     Filename: name,
     Rev: getVersion() || new Date().getDate(),
