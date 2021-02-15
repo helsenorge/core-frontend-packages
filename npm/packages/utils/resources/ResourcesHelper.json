@@ -365,7 +365,9 @@
     "videoEventAlertHelsetilbudDescription": "Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved behandlerkontoret. Du betaler samme egenandel som ved vanlig legetime.",
     "videoEventAlertTitle": "Du har valgt en videotime",
     "videoEventLocation": "Videotime",
-    "videoEventsHeading": "Timer på video"
+    "videoEventsHeading": "Timer på video",
+    "velgBehandlerNeste": "Neste",
+    "velgBehandlerAvbryt": "Avbryt"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
