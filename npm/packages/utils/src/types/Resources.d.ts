@@ -1447,6 +1447,14 @@ export type HNDialogCommonJS = {
   * Timer på video
   */
   videoEventsHeading: string;
+  /** 
+  * Neste
+  */
+  velgBehandlerNeste: string;
+  /** 
+  * Avbryt
+  */
+  velgBehandlerAvbryt: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
