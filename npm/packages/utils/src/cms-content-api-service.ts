@@ -1,5 +1,6 @@
 import { trackError } from './adobe-analytics';
 import { warn } from './logger';
+import { getHelsenorgeUrl } from './hn-service';
 
 /**
  * Returnerer __CmsContentApiUrl__ fra window.HN.Rest
@@ -94,7 +95,7 @@ export const get = (cmd: string, params?: object): Promise<{} | Response | undef
  */
 
 export const getHelsenorgeProxy = (endpoint: string, proxyName: string, params?: object): Promise<{} | Response | undefined> => {
-  const apiUrl = getContentApiUrl() + '/proxy/' + proxyName + '/api/v1/' + endpoint + parseParams(params);
+  const apiUrl = getHelsenorgeUrl() + '/proxy/' + proxyName + '/api/v1/' + endpoint + parseParams(params);
   return fetch(apiUrl, {
     method: 'get',
     credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
