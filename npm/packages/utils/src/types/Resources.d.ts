@@ -1455,6 +1455,10 @@ export type HNDialogCommonJS = {
   * Avbryt
   */
   velgBehandlerAvbryt: string;
+  /** 
+  * Bestill time hos
+  */
+  bookingHeaderKommune: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
