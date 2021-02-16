@@ -368,7 +368,8 @@
     "videoEventsHeading": "Timer på video",
     "velgBehandlerNeste": "Neste",
     "velgBehandlerAvbryt": "Avbryt",
-    "bookingHeaderKommune": "Bestill time hos"
+    "bookingHeaderKommune": "Bestill time hos",
+    "bookingSubHeaderKommune": "Timebestilling vil sendes til"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
