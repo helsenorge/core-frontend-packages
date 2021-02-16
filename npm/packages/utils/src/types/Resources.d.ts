@@ -1459,6 +1459,10 @@ export type HNDialogCommonJS = {
   * Bestill time hos
   */
   bookingHeaderKommune: string;
+  /** 
+  * Timebestilling vil sendes til
+  */
+  bookingSubHeaderKommune: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
