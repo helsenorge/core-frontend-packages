@@ -82,3 +82,32 @@ export const get = (cmd: string, params?: object): Promise<{} | Response | undef
       throw error;
     });
 };
+
+/**
+ * Henter JSON fra Helsenorge-proxy (samme domene som content-apiet) med fetch().
+ * Skal kun benyttes for åpne api-kall til tjenester der det er satt opp proxy (SOT).
+ * Returnerer et Promise.
+ * Logger eventuelle feil med warn().
+ * @param cmd command strengen som sendes mot content-apiet
+ * @param params object med parameters { param1 : 'myparam1', param2: 'myparam2'}
+ * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
+ */
+
+export const getHelsenorgeProxy = (endpoint: string, proxyName: string, params?: object): Promise<{} | Response | undefined> => {
+  const apiUrl = getContentApiUrl() + '/proxy/' + proxyName + '/api/v1/' + endpoint + parseParams(params);
+  return fetch(apiUrl, {
+    method: 'get',
+    credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
+    headers: createHeaders(),
+  })
+    .then(r => checkStatus(r as Response))
+    .catch(error => {
+      if (error == 'TypeError: Failed to fetch') {
+        warn(`Kall til helsenorge proxy: ${apiUrl}. Mottok ingen respons fra tjenesten.`);
+      } else {
+        warn(`Kall til helsenorge proxy feilet: ${apiUrl}. Feilmelding: ${JSON.stringify(error)}`);
+      }
+
+      throw error;
+    });
+};
