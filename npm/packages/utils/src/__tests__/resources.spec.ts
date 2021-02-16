@@ -129,7 +129,7 @@ describe('Resources', () => {
   describe('Gitt at hn-proxy-service fungerer og er på tjenester', () => {
     beforeEach(() => {
       jest.resetAllMocks();
-      jest.spyOn(HNProxyServiceFunctions, 'erTjenester').mockImplementation(() => true);
+      jest.spyOn(HNProxyServiceFunctions, 'erHelsenorge').mockImplementation(() => false);
     });
 
     describe('Når getProxyResx kalles', () => {
@@ -166,7 +166,7 @@ describe('Resources', () => {
   describe('Gitt at helsenorge proxy fungerer og ikke er på tjenester', () => {
     beforeEach(() => {
       jest.resetAllMocks();
-      jest.spyOn(HNProxyServiceFunctions, 'erTjenester').mockImplementation(() => false);
+      jest.spyOn(HNProxyServiceFunctions, 'erHelsenorge').mockImplementation(() => true);
     });
 
     describe('Når getProxyResx kalles', () => {
