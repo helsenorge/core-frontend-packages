@@ -1,7 +1,7 @@
 import { Dispatch, Action } from 'redux';
 
 import { OperationResponse, TextMessage, EmptyAction } from './types/entities';
-import { erTjenester, get as getTjenesterProxy } from './hn-proxy-service';
+import { erHelsenorge, get as getTjenesterProxy } from './hn-proxy-service';
 import { getHelsenorgeProxy } from './cms-content-api-service';
 import { getVersion } from './hn-page';
 
@@ -193,10 +193,10 @@ export const getProxyResx = (
 ): void => {
   let getMethod: (url: string, proxyName: string, params?: object) => Promise<{} | Response | undefined | null>;
 
-  if (erTjenester()) {
-    getMethod = getTjenesterProxy;
-  } else {
+  if (erHelsenorge()) {
     getMethod = getHelsenorgeProxy;
+  } else {
+    getMethod = getTjenesterProxy;
   }
 
   getMethod('UIResource', 'sot', {
