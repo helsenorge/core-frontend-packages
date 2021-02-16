@@ -367,7 +367,8 @@
     "videoEventLocation": "Videotime",
     "videoEventsHeading": "Timer på video",
     "velgBehandlerNeste": "Neste",
-    "velgBehandlerAvbryt": "Avbryt"
+    "velgBehandlerAvbryt": "Avbryt",
+    "bookingHeaderKommune": "Bestill time hos"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
