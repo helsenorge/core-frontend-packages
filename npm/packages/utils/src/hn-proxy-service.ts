@@ -11,6 +11,7 @@ declare const HN: {
     __TjenesteType__: string;
     __TimeStamp__: string;
     __HendelseLoggType__: string;
+    __HelseNorgeUrl__: string;
   };
 };
 type RequestParamArrayType = string | number;
@@ -26,7 +27,6 @@ export interface ProxyErrorResponse extends Response {
  * Returnerer proxy url med MinHelse baseUrl og proxynavnet
  * @param proxyName navn til proxy
  */
-//getProxyEnvironmentPath
 const getTjenesterApiUrl = (proxyName: string): string => {
   return `${getTjenesterUrl()}/proxy/${proxyName}/api/v1/`;
 };
@@ -82,6 +82,13 @@ export const getErrorFromHTML = (html: string): JSON | null => {
   }
   return JSON.parse(everything);
 };
+
+/**
+ * Returnerer
+ */
+export function getHelsenorgeUrl() {
+  return HN.Rest.__HelseNorgeUrl__ !== undefined && HN.Rest.__HelseNorgeUrl__ !== null ? HN.Rest.__HelseNorgeUrl__ : '';
+}
 
 /**
  * Returnerer full query string basert på parametrene sendt som argument '?param1=value&param2=value'
