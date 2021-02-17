@@ -26,7 +26,8 @@ export interface ProxyErrorResponse extends Response {
  * Returnerer proxy url med MinHelse baseUrl og proxynavnet
  * @param proxyName navn til proxy
  */
-const getProxyEnvironmentPath = (proxyName: string): string => {
+//getProxyEnvironmentPath
+const getTjenesterApiUrl = (proxyName: string): string => {
   return `${getTjenesterUrl()}/proxy/${proxyName}/api/v1/`;
 };
 
@@ -140,7 +141,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
  */
 const baseCrud = <T, R>(method: string, url: string, proxyName: string, params?: RequestParamType, data?: R): Promise<T | null> => {
   const queryString = params && Object.keys(params).length > 0 ? createQueryString(params) : '';
-  const baseUrl = getProxyEnvironmentPath(proxyName);
+  const baseUrl = getTjenesterApiUrl(proxyName);
   const requestBody = data ? { body: JSON.stringify(data) } : {};
   const apiUrl = baseUrl + url + queryString;
   return fetch(apiUrl, {
@@ -227,7 +228,7 @@ export const remove = <T extends Response | {}, R>(
  * @param params
  */
 export const link = (url: string, proxyName: string, params?: RequestParamType): string => {
-  return getProxyEnvironmentPath(proxyName) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
+  return getTjenesterApiUrl(proxyName) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
 };
 
 /**
@@ -237,7 +238,7 @@ export const link = (url: string, proxyName: string, params?: RequestParamType):
  * @param params
  */
 export const download = (cmd: string, proxyName: string, params?: ParamsObj): Promise<OperationResponse> => {
-  let url = getProxyEnvironmentPath(proxyName) + cmd + parseParams(addParams(params), true);
+  let url = getTjenesterApiUrl(proxyName) + cmd + parseParams(addParams(params), true);
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
 
