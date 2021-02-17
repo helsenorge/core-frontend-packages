@@ -1296,7 +1296,7 @@ export type HNDialogCommonJS = {
   */
   fastlegeOrdinaryEventsHeading: string;
   /** 
-  * Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor.
+  * Ingen ordinære videotimer er tilgjengelig. Du kan bestille en vanlig time og spørre om den kan gjennomføres på video eller telefon i stedet. Bruk Hva gjelder timen-feltet nedenfor, men møt opp som vanlig hvis du ikke får annen beskjed.
   */
   fastlegeVideoEventsEmptyText: string;
   /** 
@@ -8612,7 +8612,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   commonFastlegeOrdinaryEventsHeading: string;
   /** 
-  * Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor.
+  * Ingen ordinære videotimer er tilgjengelig. Du kan bestille en vanlig time og spørre om den kan gjennomføres på video eller telefon i stedet. Bruk Hva gjelder timen-feltet nedenfor, men møt opp som vanlig hvis du ikke får annen beskjed.
   */
   commonFastlegeVideoEventsEmptyText: string;
   /** 
