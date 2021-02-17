@@ -1,4 +1,4 @@
-import { warn } from './logger';
+import { error } from './logger';
 
 /**
  * Returnerer document.activeElement (element in focus), uavhengig av om den er i document-dom rllrt shadow-dom
@@ -11,7 +11,7 @@ export const getDocumentActiveElement = (element: HTMLElement | string): Element
     const root = domNode.getRootNode() as HTMLDocument;
     return root.activeElement;
   } catch (e) {
-    warn('Feil ved å ta tak i active element basert på angitt node: ', element, e);
+    error('Feil ved å ta tak i active element basert på angitt node: ', element, e);
     return null;
   }
 };
