@@ -165,10 +165,6 @@ export function getPasientreiserUrl() {
     : '';
 }
 
-export function getHelsenorgeUrl() {
-  return HN.Rest.__HelseNorgeUrl__ !== undefined && HN.Rest.__HelseNorgeUrl__ !== null ? HN.Rest.__HelseNorgeUrl__ : '';
-}
-
 export function isSkjemautfyller() {
   return HN.Page.__Path__ !== undefined && HN.Page.__Path__ !== null && HN.Page.__Path__ === 'skjemautfyller';
 }
