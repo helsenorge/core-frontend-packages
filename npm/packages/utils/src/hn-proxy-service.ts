@@ -12,7 +12,6 @@ declare const HN: {
     __TjenesteType__: string;
     __TimeStamp__: string;
     __HendelseLoggType__: string;
-    __HelseNorgeUrl__: string;
   };
 };
 type RequestParamArrayType = string | number;
