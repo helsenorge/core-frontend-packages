@@ -92,7 +92,7 @@ export const getErrorFromHTML = (html: string): JSON | null => {
 };
 
 /**
- * Returnerer
+ * Returnerer url basert på HN Rest objektet
  */
 export function getHelsenorgeUrl() {
   return HN.Rest.__HelseNorgeUrl__ !== undefined && HN.Rest.__HelseNorgeUrl__ !== null ? HN.Rest.__HelseNorgeUrl__ : '';
