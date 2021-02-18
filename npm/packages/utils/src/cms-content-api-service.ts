@@ -1,6 +1,6 @@
 import { trackError } from './adobe-analytics';
 import { warn } from './logger';
-import { getHelsenorgeUrl } from './hn-proxy-service';
+import { getHelsenorgeUrl } from './hn-service';
 
 /**
  * Returnerer __CmsContentApiUrl__ fra window.HN.Rest

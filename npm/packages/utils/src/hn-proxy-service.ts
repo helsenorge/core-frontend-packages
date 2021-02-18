@@ -27,7 +27,7 @@ export interface ProxyErrorResponse extends Response {
  * Returnerer proxy url med MinHelse baseUrl og proxynavnet
  * @param proxyName navn til proxy
  */
-const getTjenesterApiUrl = (proxyName: string): string => {
+const getProxyEnvironmentPath = (proxyName: string): string => {
   return `${getTjenesterUrl()}/proxy/${proxyName}/api/v1/`;
 };
 
@@ -91,13 +91,6 @@ export const getErrorFromHTML = (html: string): JSON | null => {
 };
 
 /**
- * Returnerer
- */
-export function getHelsenorgeUrl() {
-  return HN.Rest.__HelseNorgeUrl__ !== undefined && HN.Rest.__HelseNorgeUrl__ !== null ? HN.Rest.__HelseNorgeUrl__ : '';
-}
-
-/**
  * Returnerer full query string basert på parametrene sendt som argument '?param1=value&param2=value'
  * @param params opjekt med parametrene
  */
@@ -155,7 +148,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
  */
 const baseCrud = <T, R>(method: string, url: string, proxyName: string, params?: RequestParamType, data?: R): Promise<T | null> => {
   const queryString = params && Object.keys(params).length > 0 ? createQueryString(params) : '';
-  const baseUrl = getTjenesterApiUrl(proxyName);
+  const baseUrl = getProxyEnvironmentPath(proxyName);
   const requestBody = data ? { body: JSON.stringify(data) } : {};
   const apiUrl = baseUrl + url + queryString;
   return fetch(apiUrl, {
@@ -242,7 +235,7 @@ export const remove = <T extends Response | {}, R>(
  * @param params
  */
 export const link = (url: string, proxyName: string, params?: RequestParamType): string => {
-  return getTjenesterApiUrl(proxyName) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
+  return getProxyEnvironmentPath(proxyName) + url + createQueryString({ ...getDefaultRequestParams(), ...params });
 };
 
 /**
@@ -252,7 +245,7 @@ export const link = (url: string, proxyName: string, params?: RequestParamType):
  * @param params
  */
 export const download = (cmd: string, proxyName: string, params?: ParamsObj): Promise<OperationResponse> => {
-  let url = getTjenesterApiUrl(proxyName) + cmd + parseParams(addParams(params), true);
+  let url = getProxyEnvironmentPath(proxyName) + cmd + parseParams(addParams(params), true);
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
 
