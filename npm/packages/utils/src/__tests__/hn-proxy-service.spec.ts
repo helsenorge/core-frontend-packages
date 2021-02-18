@@ -1,4 +1,4 @@
-import { getErrorFromHTML, get, post, put, remove, link, erTjenester, createHeaders } from '../hn-proxy-service';
+import { getErrorFromHTML, get, post, put, remove, link, erTjenester, createHeaders, erHelsenorge } from '../hn-proxy-service';
 import * as mockLogger from '../logger';
 
 jest.mock('../logger.ts', () => ({
@@ -279,6 +279,45 @@ describe('erTjenester', () => {
     });
     it('Så returneres true', () => {
       expect(erTjenester()).toBeTruthy();
+    });
+  });
+});
+
+describe('erHelsenorge', () => {
+  const tjenesterUrl = 'https://tjenester.helsenorge.utvikling';
+  const helsenorgeUrl = 'https://helsenorge.no';
+
+  beforeEach(() => {
+    window.HN = {};
+    window.HN.Rest = {};
+    window.HN.Rest.__HelseNorgeUrl__ = helsenorgeUrl;
+  });
+
+  describe('Når en bruker besøker en side på helsenorge.no', () => {
+    beforeEach(() => {
+      Object.defineProperty(window, 'location', {
+        writable: true,
+        value: {
+          origin: helsenorgeUrl,
+        },
+      });
+    });
+    it('Så returneres true', () => {
+      expect(erHelsenorge()).toBeTruthy();
+    });
+  });
+
+  describe('Når en bruker besøker en side på tjenester.helsenorge.no', () => {
+    beforeEach(() => {
+      Object.defineProperty(window, 'location', {
+        writable: true,
+        value: {
+          origin: tjenesterUrl,
+        },
+      });
+    });
+    it('Så returneres true', () => {
+      expect(erHelsenorge()).toBeFalsy();
     });
   });
 });
