@@ -1,4 +1,16 @@
-import { getErrorFromHTML, get, post, put, remove, link, erTjenester, createHeaders } from '../hn-proxy-service';
+import {
+  getErrorFromHTML,
+  get,
+  post,
+  put,
+  remove,
+  link,
+  erTjenester,
+  createHeaders,
+  erHelsenorge,
+  getTjenesterUrl,
+  getHelsenorgeUrl,
+} from '../hn-proxy-service';
 import * as mockLogger from '../logger';
 
 jest.mock('../logger.ts', () => ({
@@ -280,6 +292,115 @@ describe('erTjenester', () => {
     });
     it('Så returneres true', () => {
       expect(erTjenester()).toBeTruthy();
+    });
+  });
+});
+
+describe('erHelsenorge', () => {
+  const tjenesterUrl = 'https://tjenester.helsenorge.utvikling';
+  const helsenorgeUrl = 'https://helsenorge.no';
+
+  beforeEach(() => {
+    window.HN = {};
+    window.HN.Rest = {};
+    window.HN.Rest.__HelseNorgeUrl__ = helsenorgeUrl;
+  });
+
+  describe('Når en bruker besøker en side på helsenorge.no', () => {
+    beforeEach(() => {
+      Object.defineProperty(window, 'location', {
+        writable: true,
+        value: {
+          origin: helsenorgeUrl,
+        },
+      });
+    });
+    it('Så returneres true', () => {
+      expect(erHelsenorge()).toBeTruthy();
+    });
+  });
+
+  describe('Når en bruker besøker en side på tjenester.helsenorge.no', () => {
+    beforeEach(() => {
+      Object.defineProperty(window, 'location', {
+        writable: true,
+        value: {
+          origin: tjenesterUrl,
+        },
+      });
+    });
+    it('Så returneres true', () => {
+      expect(erHelsenorge()).toBeFalsy();
+    });
+  });
+});
+
+describe('getTjenesterUrl', () => {
+  const tjenesterApiUrl = 'https://tjenesterApiUrl.no';
+  const undefinedApiUrl = '';
+
+  describe('Når tjenesterApiUrl er definert', () => {
+    it('Så returneres adressen til API sin adresse', () => {
+      const HN = {
+        Rest: {
+          __TjenesterApiUrl__: tjenesterApiUrl,
+        },
+      };
+      const originalWindowHN = global.window['HN'];
+      global.window['HN'] = HN;
+      const apiUrl = getTjenesterUrl();
+      expect(apiUrl).toBe(tjenesterApiUrl);
+      global.window['HN'] = originalWindowHN;
+    });
+  });
+
+  describe('Når tjenesterApiUrl ikke er definert', () => {
+    it('Så returneres en tom streng', () => {
+      const HN = {
+        Rest: {
+          __TjenesterApiUrl__: undefined,
+        },
+      };
+      const originalWindowHN = global.window['HN'];
+      global.window['HN'] = HN;
+      const apiUrl = getTjenesterUrl();
+      expect(apiUrl).toBe(undefinedApiUrl);
+      global.window['HN'] = originalWindowHN;
+    });
+  });
+});
+
+describe('getHelsenorgeUrl', () => {
+  const helsenorgeUrl = 'https://helsenorge.no';
+  const undefinedhelsenorgeUrl = '';
+
+  describe('Når getHelsenorgeUrl er definert', () => {
+    it('Så returneres adressen til API sin adresse', () => {
+      const HN = {
+        Rest: {
+          __HelseNorgeUrl__: helsenorgeUrl,
+        },
+      };
+      const originalWindowHN = global.window['HN'];
+      global.window['HN'] = HN;
+      const apiUrl = getHelsenorgeUrl();
+      expect(apiUrl).toBe(helsenorgeUrl);
+      global.window['HN'] = originalWindowHN;
+    });
+  });
+
+  describe('Når getHelsenorgeUrl ikke er definert', () => {
+    it('Så returneres en tom streng', () => {
+      const HN = {
+        Rest: {
+          __HelseNorgeUrl__: undefined,
+        },
+      };
+      const originalWindowHN = global.window['HN'];
+      global.window['HN'] = HN;
+      const apiUrl = getHelsenorgeUrl();
+      expect(apiUrl).toBe(undefinedhelsenorgeUrl);
+      global.window['HN'] = originalWindowHN;
     });
   });
 });
