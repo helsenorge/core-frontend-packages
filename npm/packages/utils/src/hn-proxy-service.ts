@@ -6,6 +6,7 @@ import { warn } from './logger';
 declare const HN: {
   Rest: {
     __TjenesterApiUrl__: string;
+    __HelseNorgeUrl__: string;
     __AnonymousHash__: string;
     __AuthenticatedHash__: string;
     __TjenesteType__: string;
@@ -56,6 +57,13 @@ export const getTjenesterUrl = () => {
  */
 export const erTjenester = () => {
   return window.location.origin === HN?.Rest?.__TjenesterApiUrl__;
+};
+
+/**
+ * Returnerer true når window urlen er lik Helsenorge baseUrl
+ */
+export const erHelsenorge = () => {
+  return window.location.origin === HN?.Rest?.__HelseNorgeUrl__;
 };
 
 /**
