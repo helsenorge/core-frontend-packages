@@ -143,14 +143,6 @@ window.HN.Rest = window.HN.Rest || {};
 window.HN.Commands = window.HN.Commands || {};
 window.HN.PortalCommands = window.HN.PortalCommands || {};
 
-/**
- * DEPRECATED: Bruk getTjenesterUrl i hn-proxy-service
- * Returnerer baseUrl til MinHelse basert på HN Rest objektet
- */
-export const getMinHelseUrl = () => {
-  return getTjenesterUrl();
-};
-
 export function usePasientensLegemiddelliste() {
   return HN.Rest.__PasientensLegemiddelliste__ !== undefined && HN.Rest.__PasientensLegemiddelliste__ !== null
     ? HN.Rest.__PasientensLegemiddelliste__
@@ -171,10 +163,6 @@ export function getPasientreiserUrl() {
   return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null
     ? `${HN.Rest.__TjenesterApiUrl__}/pasientreiser`
     : '';
-}
-
-export function getHelsenorgeUrl() {
-  return HN.Rest.__HelseNorgeUrl__ !== undefined && HN.Rest.__HelseNorgeUrl__ !== null ? HN.Rest.__HelseNorgeUrl__ : '';
 }
 
 export function isSkjemautfyller() {

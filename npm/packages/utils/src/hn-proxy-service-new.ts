@@ -1,5 +1,6 @@
 import { trackError } from './adobe-analytics';
-import { getMinHelseUrl, parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
+import { parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
+import { getTjenesterUrl } from './hn-proxy-service';
 import * as DateUtils from './date-utils';
 import { warn } from './logger';
 
@@ -27,8 +28,9 @@ export interface ProxyErrorResponse extends Response {
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  */
-const getProxyEnvironmentPath = (proxyName: string, endpoint: string): string => {
-  return `${getMinHelseUrl()}/proxy/${proxyName}/${endpoint}`;
+
+const getTjenesterApiUrl = (proxyName: string, endpoint: string): string => {
+  return `${getTjenesterUrl()}/proxy/${proxyName}/${endpoint}`;
 };
 
 /**
@@ -106,7 +108,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
         document.location.href.indexOf('autosignout=1') === -1
       ) {
         // redirect dersom token er utgått eller ugyldig
-        window.location.href = `${getMinHelseUrl()}/auth/autosignout`;
+        window.location.href = `${getTjenesterUrl()}/auth/autosignout`;
       }
       throw err;
     });
@@ -127,7 +129,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
  */
 const baseCrud = <T, R>(method: string, proxyName: string, endpoint: string, params?: RequestParamType, data?: R): Promise<T | null> => {
   const queryString = params && Object.keys(params).length > 0 ? createQueryString(params) : '';
-  const baseUrl = getProxyEnvironmentPath(proxyName, endpoint);
+  const baseUrl = getTjenesterApiUrl(proxyName, endpoint);
   const requestBody = data ? { body: JSON.stringify(data) } : {};
   const apiUrl = baseUrl + queryString;
   return fetch(apiUrl, {
@@ -215,7 +217,7 @@ export const remove = <T extends Response | {}, R>(
  * @param params parametere som sendes med som query string
  */
 export const link = (proxyName: string, endpoint: string, params?: RequestParamType): string => {
-  return getProxyEnvironmentPath(proxyName, endpoint) + createQueryString({ ...getDefaultRequestParams(), ...params });
+  return getTjenesterApiUrl(proxyName, endpoint) + createQueryString({ ...getDefaultRequestParams(), ...params });
 };
 
 /**
@@ -225,7 +227,7 @@ export const link = (proxyName: string, endpoint: string, params?: RequestParamT
  * @param params parametere som sendes med som query string
  */
 export const download = (proxyName: string, endpoint: string, params?: ParamsObj): Promise<OperationResponse | void> => {
-  let url = getProxyEnvironmentPath(proxyName, endpoint) + parseParams(addParams(params), true);
+  let url = getTjenesterApiUrl(proxyName, endpoint) + parseParams(addParams(params), true);
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
 
