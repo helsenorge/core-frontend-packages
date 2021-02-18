@@ -1,5 +1,6 @@
 import * as resourcesFunctions from '../resources';
 import * as HNProxyServiceFunctions from '../hn-proxy-service';
+import * as CmsContentApiService from '../cms-content-api-service';
 
 describe('Resources', () => {
   afterAll(() => {
@@ -125,7 +126,12 @@ describe('Resources', () => {
     });
   });
 
-  describe('Gitt at hn-proxy-service fungerer', () => {
+  describe('Gitt at hn-proxy-service fungerer og er på tjenester', () => {
+    beforeEach(() => {
+      jest.resetAllMocks();
+      jest.spyOn(HNProxyServiceFunctions, 'erHelsenorge').mockImplementation(() => false);
+    });
+
     describe('Når getProxyResx kalles', () => {
       it('Så kalles det get med riktig parameters', () => {
         const mockSuccessResponse = {
@@ -145,10 +151,51 @@ describe('Resources', () => {
           () => {},
           () => {}
         );
+        expect(getMock).toBeCalled();
         expect(getMock.mock.calls[0][0]).toEqual('UIResource');
         expect(getMock.mock.calls[0][1]).toEqual('sot');
         expect(getMock.mock.calls[0][2].Culture).toEqual('culture');
         expect(getMock.mock.calls[0][2].Filename).toEqual('name');
+
+        const getMockHelsenorgeProxy = jest.spyOn(CmsContentApiService, 'getHelsenorgeProxy');
+        expect(getMockHelsenorgeProxy).not.toBeCalled();
+      });
+    });
+  });
+
+  describe('Gitt at helsenorge proxy fungerer og ikke er på tjenester', () => {
+    beforeEach(() => {
+      jest.resetAllMocks();
+      jest.spyOn(HNProxyServiceFunctions, 'erHelsenorge').mockImplementation(() => true);
+    });
+
+    describe('Når getProxyResx kalles', () => {
+      it('Så kalles det get i cmscontent med riktig parameters', () => {
+        const mockSuccessResponse = {
+          resources: 'smthg',
+        };
+        const response = new Response(JSON.stringify(mockSuccessResponse), {
+          headers: {},
+          status: 200,
+          statusText: 'OK',
+        });
+        const mockFetchPromise = Promise.resolve(response);
+
+        const getHelsenorgeProxyMock = jest.spyOn(CmsContentApiService, 'getHelsenorgeProxy').mockImplementation(() => mockFetchPromise);
+        resourcesFunctions.getProxyResx(
+          'name',
+          'culture',
+          () => {},
+          () => {}
+        );
+        expect(getHelsenorgeProxyMock).toBeCalled();
+        expect(getHelsenorgeProxyMock.mock.calls[0][0]).toEqual('UIResource');
+        expect(getHelsenorgeProxyMock.mock.calls[0][1]).toEqual('sot');
+        expect(getHelsenorgeProxyMock.mock.calls[0][2].Culture).toEqual('culture');
+        expect(getHelsenorgeProxyMock.mock.calls[0][2].Filename).toEqual('name');
+
+        const getMock = jest.spyOn(HNProxyServiceFunctions, 'get');
+        expect(getMock).not.toBeCalled();
       });
     });
   });

@@ -1296,7 +1296,7 @@ export type HNDialogCommonJS = {
    */
   fastlegeOrdinaryEventsHeading: string;
   /**
-   * Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor.
+   * Ingen ordinære videotimer er tilgjengelig. Du kan bestille en vanlig time og spørre om den kan gjennomføres på video eller telefon i stedet. Bruk Hva gjelder timen-feltet nedenfor, men møt opp som vanlig hvis du ikke får annen beskjed.
    */
   fastlegeVideoEventsEmptyText: string;
   /**
@@ -1447,6 +1447,22 @@ export type HNDialogCommonJS = {
    * Timer på video
    */
   videoEventsHeading: string;
+  /**
+   * Neste
+   */
+  velgBehandlerNeste: string;
+  /**
+   * Avbryt
+   */
+  velgBehandlerAvbryt: string;
+  /**
+   * Bestill time hos
+   */
+  bookingHeaderKommune: string;
+  /**
+   * Timebestilling vil sendes til
+   */
+  bookingSubHeaderKommune: string;
 };
 
 export type HNMinHelseByttFastlegeJS = {
@@ -3930,7 +3946,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_KJCriticalInfo_Title: string;
   /**
-   * Her finner du dine registrerte egenandeler for helsetjenester både for egenandelstak 1 og for egenandelstak 2
+   * Her finner du dine registrerte egenandeler for helsetjenester.
    */
   page_Egenandeler_Desc: string;
   /**
@@ -6635,7 +6651,7 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   conversationSpecialistTimeChange: string;
   /**
-   * Du har ikke tilgang til tjenesten. Kontakt fastlegekontoret ved eventuelle spørsmål.
+   * Mottaker har sperret din tilgang til tjenesten. Kontakt mottaker ved eventuelle spørsmål.
    */
   conversationItemAccessDenied: string;
   /**
@@ -8596,7 +8612,7 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   commonFastlegeOrdinaryEventsHeading: string;
   /**
-   * Ingen ordinære videotimer er tilgjengelig. Du kan likevel be om video- eller telefonkonsultasjon. Bestill en vanlig time og be om å få gjennomføre timen på video. Bruk Hva gjelder timen-feltet nedenfor.
+   * Ingen ordinære videotimer er tilgjengelig. Du kan bestille en vanlig time og spørre om den kan gjennomføres på video eller telefon i stedet. Bruk Hva gjelder timen-feltet nedenfor, men møt opp som vanlig hvis du ikke får annen beskjed.
    */
   commonFastlegeVideoEventsEmptyText: string;
   /**
@@ -8664,7 +8680,7 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   kommunalHelsetilbudKontaktmuligheterLabel: string;
   /**
-   * Du har ikke tilgang til tjenesten.
+   * Legekontoret har sperret din tilgang til denne tjenesten.
    */
   conversationItemFastlegeAccessDeniedHeader: string;
   /**
@@ -10401,9 +10417,9 @@ export type HNMinHelseDinFastlegeJS = {
    * Kontorets åpningstider
    */
   dfl_DinFastlegeBanner_Apningstider: string;
-  /** 
-  * Gå til legekontorets nettsider
-  */
+  /**
+   * Gå til legekontorets nettsider
+   */
   dfl_DinFastlegeBanner_LegekontorLink: string;
   /**
    * Din fastlege siden
@@ -11279,9 +11295,9 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Ikke alle leger kan se delte dokumenter, og de varsles heller ikke når du deler et dokument. Du må derfor selv informere legen når du gjør dette.
    */
   deling_startet_warning: string;
-  /** 
-  * {"defaulttekst_overskrift":"Om dokumenter","defaulttekst_brodtekst":"<p>\nDet kan finnes mer oppdaterte versjoner av dokumentene andre steder, for eksempel hos din behandler.\n</p>\n\n<p>\nVedlegg utvekslet i meldinger til og fra helsetjenesten vises ikke her. Disse vises kun som vedlegg i selve meldingen.\n</p>\n\n<h3>Tilgang</h3>\n<p>\nDet er bare du eller den du har gitt fullmakt som har tilgang til dokumenter som er lagret på Helsenorge. Du eller den du har gitt fullmakt må også være logget inn for å kunne hente dem frem og se dem.\n</p>\n\n<h3>\nSkjule dokumenter\n</h3>\n<p>\nDu kan velge å skjule dokumenter for de du har gitt fullmakt til, slik at du bare kan se dem selv.\n</p>\n\n<h3>Sletting</h3>\n<p>\nDu kan slette dokumenter fra denne tjenesten men da slettes kun versjonen som ligger på Helsenorge. Din behandler kan fremdeles ha lagret en versjon av dokumentet hos seg.\n</p>\n\n<h3>Deling</h3>\n<p>\nDu kan dele noen utvalgte skjema med din fastlege, hvis fastlegen har tatt i bruk de nødvendige IT-systemene.\n</p>\n\n<p>\n<a href=\"https://www.helsenorge.no/dokumenter/om\">Les mer om dokumenter her</a>.\n</p>"}
-  */
+  /**
+   * {"defaulttekst_overskrift":"Om dokumenter","defaulttekst_brodtekst":"<p>\nDet kan finnes mer oppdaterte versjoner av dokumentene andre steder, for eksempel hos din behandler.\n</p>\n\n<p>\nVedlegg utvekslet i meldinger til og fra helsetjenesten vises ikke her. Disse vises kun som vedlegg i selve meldingen.\n</p>\n\n<h3>Tilgang</h3>\n<p>\nDet er bare du eller den du har gitt fullmakt som har tilgang til dokumenter som er lagret på Helsenorge. Du eller den du har gitt fullmakt må også være logget inn for å kunne hente dem frem og se dem.\n</p>\n\n<h3>\nSkjule dokumenter\n</h3>\n<p>\nDu kan velge å skjule dokumenter for de du har gitt fullmakt til, slik at du bare kan se dem selv.\n</p>\n\n<h3>Sletting</h3>\n<p>\nDu kan slette dokumenter fra denne tjenesten men da slettes kun versjonen som ligger på Helsenorge. Din behandler kan fremdeles ha lagret en versjon av dokumentet hos seg.\n</p>\n\n<h3>Deling</h3>\n<p>\nDu kan dele noen utvalgte skjema med din fastlege, hvis fastlegen har tatt i bruk de nødvendige IT-systemene.\n</p>\n\n<p>\n<a href=\"https://www.helsenorge.no/dokumenter/om\">Les mer om dokumenter her</a>.\n</p>"}
+   */
   hjelpekontekst_dokumentarkiv: string;
   /**
    * Ok
@@ -11575,9 +11591,9 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Lukk
    */
   lightbox_til_deling_lukkknapp: string;
-  /** 
-  * Skjult for fullmakt
-  */
+  /**
+   * Skjult for fullmakt
+   */
   skjult_for_fullmektige: string;
   /**
    * Handlingen mislyktes. Prøv igjen senere.
@@ -11587,13 +11603,13 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Skjult for fullmektig
    */
   skjult_for_fullmektig: string;
-  /** 
-  * Vis for fullmakt
-  */
+  /**
+   * Vis for fullmakt
+   */
   actionVisFullmektige: string;
-  /** 
-  * Skjul for fullmakt
-  */
+  /**
+   * Skjul for fullmakt
+   */
   actionSkjulFullmektige: string;
   /**
    * Oppslag gjort av helsepersonell i dette dokumentet
@@ -16709,13 +16725,13 @@ export type HNMinHelseNotificationStrings = {
    * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
    */
   cancelAppointment_TextMessage_Body_Self: string;
-  /** 
-  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   changeAppointment_EmailMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   changeAppointment_EmailMessage_Body_Self: string;
   /**
    * Varsel om ny melding på helsenorge.no
@@ -16725,13 +16741,13 @@ export type HNMinHelseNotificationStrings = {
    * Varsel om ny melding på helsenorge.no
    */
   changeAppointment_EmailMessage_Subject_Self: string;
-  /** 
-  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   changeAppointment_TextMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   changeAppointment_TextMessage_Body_Self: string;
   /**
    * ${FirstName} sin time hos ${ActorName} ble ikke reservert. Gå til helsenorge.no for å bestille ny time eller kontakt fastlegekontoret.
@@ -17093,13 +17109,13 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Varsel om ny melding på helsenorge.no
    */
   paminnelseFormidling_EmailMessage_Subject_Self: string;
-  /** 
-  * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
-  */
+  /**
+   * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
+   */
   helseregisterNyInnsynsrapport_EmailMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
-  */
+  /**
+   * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
+   */
   helseregisterNyInnsynsrapport_EmailMessage_Body_Self: string;
   /**
    * Varsel om ny innsynsrapport på helsenorge.no
@@ -17109,13 +17125,13 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Varsel om ny innsynsrapport på helsenorge.no
    */
   helseregisterNyInnsynsrapport_EmailMessage_Subject_Self: string;
-  /** 
-  * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
-  */
+  /**
+   * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
+   */
   helseregisterNyInnsynsrapport_TextMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
-  */
+  /**
+   * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
+   */
   helseregisterNyInnsynsrapport_TextMessage_Body_Self: string;
   /**
    * Sending av melding for ${FirstName} fra helsenorge.no har feilet.
@@ -17397,17 +17413,17 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Varsel om endret time på helsenorge.no
    */
   endrePrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
-  /** 
-  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   endrePrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   endrePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
-  /** 
-  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /**
    * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
@@ -17437,9 +17453,9 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * ${FirstName} har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
    */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /**
    * Husk at ${FirstName} har en timeavtale hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
@@ -17685,13 +17701,13 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * ${FirstName}, du har fått en ny videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
    */
   nyVideotime_TextMessage_Body_Self: string;
-  /** 
-  * En videotime ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * En videotime ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   endreVideotime_EmailMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, en videotime du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * ${FirstName}, en videotime du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   endreVideotime_EmailMessage_Body_Self: string;
   /**
    * Varsel om ny melding på helsenorge.no
@@ -17701,13 +17717,13 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Varsel om ny melding på helsenorge.no
    */
   endreVideotime_EmailMessage_Subject_Self: string;
-  /** 
-  * En videotime ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * En videotime ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   endreVideotime_TextMessage_Body_Representation: string;
-  /** 
-  * ${FirstName}, en videotime du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
-  */
+  /**
+   * ${FirstName}, en videotime du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+   */
   endreVideotime_TextMessage_Body_Self: string;
   /**
    * Varsel om time på helsenorge.no
