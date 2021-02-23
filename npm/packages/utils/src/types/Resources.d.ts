@@ -240,6 +240,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Hvem sine helseopplysninger vil du se?
   */
   personvelgerHeader: string;
+  /** 
+  * /se/
+  */
+  headerMenuBasicSamiskUrl: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
