@@ -241,9 +241,13 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   personvelgerHeader: string;
   /** 
-  * /se/
+  * /se/saami/
   */
   headerMenuBasicSamiskUrl: string;
+  /** 
+  * Sámegiella
+  */
+  headerMenuBasicSamiskTitle: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
