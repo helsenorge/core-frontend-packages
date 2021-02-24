@@ -59,7 +59,9 @@
     "errorGlobalMeny": "Det oppstod en feil ved henting av globalmenyen.",
     "errorRepresentasjoner": "Det oppstod en feil ved henting av representasjoner.",
     "personvelgerIngress": "Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.",
-    "personvelgerHeader": "Hvem sine helseopplysninger vil du se?"
+    "personvelgerHeader": "Hvem sine helseopplysninger vil du se?",
+    "headerMenuBasicSamiskUrl": "/se/saami/",
+    "headerMenuBasicSamiskTitle": "Sámegiella"
   },
   "HNCoreFrontendNPMPackagesCMS": {
     "searchPlaceholder": "Søk",
@@ -987,7 +989,7 @@
     "group_Members_Description": "",
     "group_Members_Title": "Min Helse-medlemmer",
     "group_Owners_Description": "",
-    "page_Referrals_Desc": "Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest og Helse Nord tilgjengelig.",
+    "page_Referrals_Desc": "Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest, Helse Nord og Helse Sør-Øst tilgjengelig.",
     "page_Referrals_Title": "Henvisninger til spesialisthelsetjenesten",
     "page_Pdf_Desc": "",
     "page_Pdf_Title": "Pdf",

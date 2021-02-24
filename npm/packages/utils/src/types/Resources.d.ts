@@ -240,6 +240,14 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    * Hvem sine helseopplysninger vil du se?
    */
   personvelgerHeader: string;
+  /**
+   * /se/saami/
+   */
+  headerMenuBasicSamiskUrl: string;
+  /**
+   * Sámegiella
+   */
+  headerMenuBasicSamiskTitle: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = {
@@ -3912,7 +3920,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   group_Owners_Description: string;
   /**
-   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest og Helse Nord tilgjengelig.
+   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest, Helse Nord og Helse Sør-Øst tilgjengelig.
    */
   page_Referrals_Desc: string;
   /**
