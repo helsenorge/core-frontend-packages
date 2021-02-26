@@ -369,6 +369,7 @@
     "videoEventLocation": "Videotime",
     "videoEventsHeading": "Timer på video",
     "koronatestVeiviserUrl": "/veileder?Query=Questionnaire%2F310",
+    "koronavaksineVeiviserUrl": "/veileder?Query=Questionnaire%2F314",
     "velgBehandlerNeste": "Neste",
     "velgBehandlerAvbryt": "Avbryt",
     "bookingHeaderKommune": "Bestill time hos",

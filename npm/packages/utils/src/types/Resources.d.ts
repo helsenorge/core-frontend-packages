@@ -1460,6 +1460,10 @@ export type HNDialogCommonJS = {
   */
   koronatestVeiviserUrl: string;
   /** 
+  * /veileder?Query=Questionnaire%2F314
+  */
+  koronavaksineVeiviserUrl: string;
+  /** 
   * Neste
   */
   velgBehandlerNeste: string;
