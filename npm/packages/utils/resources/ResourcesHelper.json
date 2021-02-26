@@ -114,10 +114,10 @@
     "signedOut_SignedOut_Explanation": "Du er nå logget ut"
   },
   "HNDialogCommonJS": { 
+    "healthcareProfessionalJordmor": "Jordmor",
     "bookingEmptyTextHelsetilbudVirksomhet": "Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.",
     "utenBehandlerEventsHeading": "Timer på legekontoret",
     "bookingSubHeaderVaccination": "Timebestillingen vil sendes til Vaksinasjon",
-    "healthcareProfessionalJordmor": "Jordmor",
     "videoDialogDropinInfoMessage": "Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.",
     "healthcareProfessionalHjelpepleier": "Hjelpepleier",
     "afterDeadlineBubbleText": "Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.",
@@ -368,6 +368,7 @@
     "videoEventAlertTitle": "Du har valgt en videotime",
     "videoEventLocation": "Videotime",
     "videoEventsHeading": "Timer på video",
+    "koronatestVeiviserUrl": "/veileder?Query=Questionnaire%2F310",
     "velgBehandlerNeste": "Neste",
     "velgBehandlerAvbryt": "Avbryt",
     "bookingHeaderKommune": "Bestill time hos",
@@ -4722,7 +4723,6 @@
     "overview_statuser_statusTypeSoknad_soknad_KLAGE_SENDT": "Klagen er sendt",
     "klager_klageSkjema_skyggetekst": "",
     "overview_klage_ulesteVedtak": "Du må åpne og lese vedtaksbrevet, før du kan sende en klage. Vær oppmerksom på at fristen for å klage er fire uker fra du mottok vedtak i saken din.",
-    "distanse_ugyldig": "Distanse må være mellom 0 og 3000km.",
     "reiseoversikt_refusjonsdetaljer_FORESATT_minstetakstsone": "En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.",
     "reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone": "En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter.",
     "kvittering_undersokelseTittel": "Vil du delta i en brukerundersøkelse om Pasientreiser?",
@@ -6270,7 +6270,8 @@
     "krav_ledsager_DROSJE_info": "",
     "krav_ledsager_DROSJE_harKrav": "Du har oppgitt at du måtte kjøre bil på grunn av din helsetilstand på reisen eller fordi det ikke gikk offentlig transport på strekningen,  du har derfor rett til å få dekket nødvendige tilleggsutgifter.",
     "krav_ledsager_DROSJE_ikkeHarKrav": "For å få dekket utgifter til reise med drosje, må du huke av for rett begrunnelse i punktet \"Dekning av utgifter for reiseledsager\". Du kan ellers ha rett til å få dekket utgiftene med en standardsats.",
-    "generisk_kilometer": "kilometer"
+    "generisk_kilometer": "kilometer",
+    "distanse_ugyldig": "Distanse må være mellom 0 og 3000km."
   },
   "HNMinHelsePasientReiserStrings": { 
     "hjelpetrigger_ledsager_tapt_arbeidsfortjeneste": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Dekning av utgifter for reiseledsager\",\"seksjonstekst_brodtekst\":\"<p>Hvis du skal søke om å få dekket tapt arbeidsfortjeneste for reiseledsager, må dette gjøres på papir, og sendes per post til Pasientreiser. Du må legge ved dokumentasjon som viser antall timer reiseledsager er trukket i lønn/har betalt for leiet hjelp, samt beløpet som er trukket/betalt. Dette dekkes etter faste satser. Husk at dokumentasjon du legger ved må være fra arbeidsgiver/regnskapsfører. Søknad om dette sendes til Pasientreiser HF, Postboks 2533 Kjørbekk, 3702 Skien.</p>\"}",
