@@ -437,10 +437,6 @@ export type HNCoreFrontendWebForside = {
 
 export type HNDialogCommonJS = { 
   /** 
-  * Jordmor
-  */
-  healthcareProfessionalJordmor: string;
-  /** 
   * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
@@ -452,6 +448,10 @@ export type HNDialogCommonJS = {
   * Timebestillingen vil sendes til Vaksinasjon
   */
   bookingSubHeaderVaccination: string;
+  /** 
+  * Jordmor
+  */
+  healthcareProfessionalJordmor: string;
   /** 
   * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
   */
@@ -18886,6 +18886,10 @@ export type HNMinHelsePasientreiserJS = {
   * Du må åpne og lese vedtaksbrevet, før du kan sende en klage. Vær oppmerksom på at fristen for å klage er fire uker fra du mottok vedtak i saken din.
   */
   overview_klage_ulesteVedtak: string;
+  /** 
+  * Reiselengden kan ikke være over 3000 km
+  */
+  reiselengder_max_error: string;
   /** 
   * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.
   */
