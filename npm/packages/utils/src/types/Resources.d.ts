@@ -20648,7 +20648,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiselengder_oppgiBegrunnelse: string;
   /** 
-  * Reiselengden kan ikke være over 999 999km
+  * Reiselengden kan ikke være over 3000 km
   */
   reiselengder_valideringMax: string;
   /** 
