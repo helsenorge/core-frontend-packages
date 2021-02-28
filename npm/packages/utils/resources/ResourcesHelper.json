@@ -5163,7 +5163,7 @@
     "reiselengder_manglerManueltOppgittDistanse": "Distanseberegning mangler fordi du har oppgitt adresse manuelt. Vennligst legg inn distanse.",
     "reiselengder_manglerManueltOppgittDistanseBecauseOfAtv": "Distanse for strekningen som ble kjørt med ATV/snøscooter eller privat båt kunne ikke automatisk beregnes. Vennligst legg inn distanse.",
     "reiselengder_oppgiBegrunnelse": "Du må oppgi begrunnelse",
-    "reiselengder_valideringMax": "Reiselengden kan ikke være over 999 999km",
+    "reiselengder_valideringMax": "Reiselengden kan ikke være over 3000 km",
     "refusjonsboks_kunneIkkeBeregne": "Foreløpig dekket beløp er: Kunne ikke beregnes.",
     "refusjonsboks_forelopigDekket": "Foreløpig dekket beløp er: {0} kroner. ",
     "refusjonsboks_egenandelTrekk": "Det er trukket {0} kroner i egenandel. ",
