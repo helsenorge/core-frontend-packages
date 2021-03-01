@@ -13,7 +13,7 @@
     "sourceMap": false,
     "declaration": true,
     "outDir": "../lib",
-    "typeRoots": ["../node_modules/@types", "../src/types"]
+    "typeRoots": ["../../../../node_modules/@types", "../node_modules/@types", "../src/types"]
   },
   "exclude": ["../**/__tests__/**", "../**/__devonly__/**"],
   "include": ["../src/**/*.ts", "../src/**/*.tsx"]
