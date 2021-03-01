@@ -437,6 +437,10 @@ export type HNCoreFrontendWebForside = {
 
 export type HNDialogCommonJS = {
   /**
+   * Jordmor
+   */
+  healthcareProfessionalJordmor: string;
+  /**
    * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
    */
   bookingEmptyTextHelsetilbudVirksomhet: string;
@@ -448,10 +452,6 @@ export type HNDialogCommonJS = {
    * Timebestillingen vil sendes til Vaksinasjon
    */
   bookingSubHeaderVaccination: string;
-  /**
-   * Jordmor
-   */
-  healthcareProfessionalJordmor: string;
   /**
    * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
    */
@@ -8967,6 +8967,10 @@ export type HNMinHelseDialog = {
    */
   getReferral_WarningHelseSorOstSourceSystem: string;
   /**
+   * Din time hos {0} {1} er registrert som ikke møtt
+   */
+  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
+  /**
    * Sending av melding har feilet
    */
   varselmeny_NegativAppRec_Emne: string;
@@ -11608,14 +11612,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   lightbox_til_deling_lukkknapp: string;
   /**
-   * Skjult for fullmakt
-   */
-  skjult_for_fullmektige: string;
-  /**
-   * Handlingen mislyktes. Prøv igjen senere.
-   */
-  fullmektig_error_title: string;
-  /**
    * Skjult for fullmektig
    */
   skjult_for_fullmektig: string;
@@ -11627,6 +11623,14 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Skjul for fullmakt
    */
   actionSkjulFullmektige: string;
+  /**
+   * Skjult for fullmakt
+   */
+  skjult_for_fullmektige: string;
+  /**
+   * Handlingen mislyktes. Prøv igjen senere.
+   */
+  fullmektig_error_title: string;
   /**
    * Oppslag gjort av helsepersonell i dette dokumentet
    */
@@ -18887,10 +18891,6 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_klage_ulesteVedtak: string;
   /**
-   * Reiselengden kan ikke være over 3000 km
-   */
-  reiselengder_max_error: string;
-  /**
    * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.
    */
   reiseoversikt_refusjonsdetaljer_FORESATT_minstetakstsone: string;
@@ -25087,6 +25087,10 @@ export type HNMinHelsePasientreiserJS = {
    * kilometer
    */
   generisk_kilometer: string;
+  /**
+   * Reiselengden kan ikke være over 3000 km
+   */
+  reiselengder_max_error: string;
   /**
    * Distanse må være mellom 0 og 3000km.
    */
