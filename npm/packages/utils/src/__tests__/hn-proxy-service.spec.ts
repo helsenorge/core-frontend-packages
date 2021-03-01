@@ -1,16 +1,4 @@
-import {
-  getErrorFromHTML,
-  get,
-  post,
-  put,
-  remove,
-  link,
-  erTjenester,
-  createHeaders,
-  erHelsenorge,
-  getTjenesterUrl,
-  getHelsenorgeUrl,
-} from '../hn-proxy-service';
+import { getErrorFromHTML, get, post, put, remove, link, erTjenester, createHeaders, erHelsenorge } from '../hn-proxy-service';
 import * as mockLogger from '../logger';
 
 jest.mock('../logger.ts', () => ({
@@ -46,13 +34,12 @@ describe('Gitt at det har skjedd en Error i en av de hn-proxy-service methodene'
 
 describe('Gitt at baseCrud er definert', () => {
   const fetchMock = jest.spyOn(global, 'fetch');
-
   describe('Når get kalles get', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      get('tokenserviceinternal', 'v1/ActiveTokens', { testParam: 3 });
+      get('lorem/ipsum', 'proxyName', { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(1);
 
-      expect(fetchMock.mock.calls[0][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/v1/ActiveTokens?testParam=3');
+      expect(fetchMock.mock.calls[0][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
       expect(fetchMock.mock.calls[0][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[0][1].headers).toEqual({
         _headers: {
@@ -71,10 +58,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles post', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      post('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
+      post('lorem/ipsum', 'proxyName', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(2);
 
-      expect(fetchMock.mock.calls[1][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
+      expect(fetchMock.mock.calls[1][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
       expect(fetchMock.mock.calls[1][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[1][1].headers).toEqual({
         _headers: {
@@ -93,10 +80,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles put', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      put('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
+      put('lorem/ipsum', 'proxyName', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(3);
 
-      expect(fetchMock.mock.calls[2][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
+      expect(fetchMock.mock.calls[2][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
       expect(fetchMock.mock.calls[2][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[2][1].headers).toEqual({
         _headers: {
@@ -115,10 +102,10 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles remove', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
-      remove('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
+      remove('lorem/ipsum', 'proxyName', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(4);
 
-      expect(fetchMock.mock.calls[3][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
+      expect(fetchMock.mock.calls[3][0]).toBe('https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3');
       expect(fetchMock.mock.calls[3][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[3][1].headers).toEqual({
         _headers: {
@@ -146,7 +133,7 @@ describe('gitt at get kalles', () => {
       fetchMock.mockRejectedValueOnce(new TypeError('Failed to fetch'));
 
       try {
-        await get('tokenserviceinternal', 'v1/ActiveTokens', { testParam: 3 });
+        await get('lorem/ipsum', 'proxyName', { testParam: 3 });
       } catch (error) {
         expect(error).toEqual({
           Message: 'Det har skjedd en teknisk feil. Prøv igjen senere.',
@@ -155,7 +142,7 @@ describe('gitt at get kalles', () => {
 
       expect(mockLogger.warn).toHaveBeenCalledTimes(1);
       expect(mockLogger.warn).toHaveBeenCalledWith(
-        'Kall til følgende URL feilet: https://proxy.test.nhn.no/proxy/tokenserviceinternal/v1/ActiveTokens?testParam=3. Mottok ingen respons fra tjenesten.'
+        'Kall til følgende URL feilet: https://proxy.test.nhn.no/proxy/proxyName/api/v1/lorem/ipsum?testParam=3. Mottok ingen respons fra tjenesten.'
       );
     });
   });
@@ -176,7 +163,7 @@ describe('gitt at get kalles', () => {
       jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
 
       try {
-        await get('tokenserviceinternal', 'v1/ActiveTokens');
+        await get('lorem/ipsum', 'proxyName');
       } catch (error) {
         expect(error).toEqual(mockErrorResponse);
       }
@@ -189,7 +176,7 @@ describe('gitt at get kalles', () => {
 describe('Gitt at en proxy link skal genereres', () => {
   describe('Når link ikke har noen ekstra request parameter', () => {
     it('Så skal link med headers som parameter returneres', () => {
-      const fullUrl = link('testProxyTest', 'api/v1/MinHelse/testtest');
+      const fullUrl = link('MinHelse/testtest', 'testProxyTest');
       expect(fullUrl).toBe(
         'https://proxy.test.nhn.no/proxy/testProxyTest/api/v1/MinHelse/testtest?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg'
       );
@@ -201,7 +188,7 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         Sok: 'fastlege',
       };
-      const fullUrl = link('p', 'api/v1/url', params);
+      const fullUrl = link('url', 'p', params);
       expect(fullUrl).toBe(
         'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Sok=fastlege'
       );
@@ -213,7 +200,7 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         maxCount: 3,
       };
-      const fullUrl = link('p', 'api/v1/url', params);
+      const fullUrl = link('url', 'p', params);
       expect(fullUrl).toBe(
         'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&maxCount=3'
       );
@@ -225,7 +212,7 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         VisLegerUtenVenteliste: true,
       };
-      const fullUrl = link('p', 'api/v1/url', params);
+      const fullUrl = link('url', 'p', params);
       expect(fullUrl).toBe(
         'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&VisLegerUtenVenteliste=true'
       );
@@ -237,7 +224,7 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         Filtere: [1, 2, 4],
       };
-      const fullUrl = link('p', 'api/v1/url', params);
+      const fullUrl = link('url', 'p', params);
       expect(fullUrl).toBe(
         'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Filtere=1&Filtere=2&Filtere=4'
       );
@@ -249,7 +236,7 @@ describe('Gitt at en proxy link skal genereres', () => {
       const params = {
         Filtere: ['a', 'b', 'c'],
       };
-      const fullUrl = link('p', 'api/v1/url', params);
+      const fullUrl = link('url', 'p', params);
       expect(fullUrl).toBe(
         'https://proxy.test.nhn.no/proxy/p/api/v1/url?HNAnonymousHash=hash1&HNAuthenticatedHash=hash2&HNTjeneste=tjeneste&HNTimeStamp=time&X-hn-hendelselogg=logg&Filtere=a&Filtere=b&Filtere=c'
       );
@@ -331,76 +318,6 @@ describe('erHelsenorge', () => {
     });
     it('Så returneres true', () => {
       expect(erHelsenorge()).toBeFalsy();
-    });
-  });
-});
-
-describe('getTjenesterUrl', () => {
-  const tjenesterApiUrl = 'https://tjenesterApiUrl.no';
-  const undefinedApiUrl = '';
-
-  describe('Når tjenesterApiUrl er definert', () => {
-    it('Så returneres adressen til API sin adresse', () => {
-      const HN = {
-        Rest: {
-          __TjenesterApiUrl__: tjenesterApiUrl,
-        },
-      };
-      const originalWindowHN = global.window['HN'];
-      global.window['HN'] = HN;
-      const apiUrl = getTjenesterUrl();
-      expect(apiUrl).toBe(tjenesterApiUrl);
-      global.window['HN'] = originalWindowHN;
-    });
-  });
-
-  describe('Når tjenesterApiUrl ikke er definert', () => {
-    it('Så returneres en tom streng', () => {
-      const HN = {
-        Rest: {
-          __TjenesterApiUrl__: undefined,
-        },
-      };
-      const originalWindowHN = global.window['HN'];
-      global.window['HN'] = HN;
-      const apiUrl = getTjenesterUrl();
-      expect(apiUrl).toBe(undefinedApiUrl);
-      global.window['HN'] = originalWindowHN;
-    });
-  });
-});
-
-describe('getHelsenorgeUrl', () => {
-  const helsenorgeUrl = 'https://helsenorge.no';
-  const undefinedhelsenorgeUrl = '';
-
-  describe('Når getHelsenorgeUrl er definert', () => {
-    it('Så returneres adressen til API sin adresse', () => {
-      const HN = {
-        Rest: {
-          __HelseNorgeUrl__: helsenorgeUrl,
-        },
-      };
-      const originalWindowHN = global.window['HN'];
-      global.window['HN'] = HN;
-      const apiUrl = getHelsenorgeUrl();
-      expect(apiUrl).toBe(helsenorgeUrl);
-      global.window['HN'] = originalWindowHN;
-    });
-  });
-
-  describe('Når getHelsenorgeUrl ikke er definert', () => {
-    it('Så returneres en tom streng', () => {
-      const HN = {
-        Rest: {
-          __HelseNorgeUrl__: undefined,
-        },
-      };
-      const originalWindowHN = global.window['HN'];
-      global.window['HN'] = HN;
-      const apiUrl = getHelsenorgeUrl();
-      expect(apiUrl).toBe(undefinedhelsenorgeUrl);
-      global.window['HN'] = originalWindowHN;
     });
   });
 });
