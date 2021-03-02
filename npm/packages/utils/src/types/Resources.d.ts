@@ -18899,7 +18899,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone: string;
   /** 
-  * Vil du delta i en brukerundersøkelse om Pasientreiser?
+  * Vil du svare på to korte spørsmål fra Pasientreiser?
   */
   kvittering_undersokelseTittel: string;
   /** 
@@ -18907,7 +18907,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   kvittering_undersokelseIngress: string;
   /** 
-  * https://response.questback.com/pasientreiserhf/rur2020
+  * https://response.questback.com/pasientreiserhf/transportmiddel
   */
   kvittering_undersokelseLenke: string;
   /** 
