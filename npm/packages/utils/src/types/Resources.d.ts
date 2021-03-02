@@ -18903,7 +18903,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   kvittering_undersokelseTittel: string;
   /** 
-  * Det tar ca. 3 minutter å svare på undersøkelsen.
+  * Det tar under 1 minutt å svare på undersøkelsen.
   */
   kvittering_undersokelseIngress: string;
   /** 
