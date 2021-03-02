@@ -4728,7 +4728,7 @@
     "reiseoversikt_refusjonsdetaljer_FORESATT_minstetakstsone": "En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.",
     "reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone": "En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder deg, må du gå tilbake og velge søknad med tilleggsutgifter.",
     "kvittering_undersokelseTittel": "Vil du svare på to korte spørsmål fra Pasientreiser?",
-    "kvittering_undersokelseIngress": "Det tar ca. 3 minutter å svare på undersøkelsen.",
+    "kvittering_undersokelseIngress": "Det tar under 1 minutt å svare på undersøkelsen.",
     "kvittering_undersokelseLenke": "https://response.questback.com/pasientreiserhf/transportmiddel",
     "overview_statuser_statusTypeRekvisjon_soknad_VEDTAK_OMGJORT": "Vedtaket er revidert",
     "samtykke_pasientreiser_avsnitt4": "kan behandle søknaden min automatisk.",
