@@ -6,7 +6,6 @@ import { warn } from './logger';
 declare const HN: {
   Rest: {
     __TjenesterUrl__: string;
-    __TjenesterApiUrl__: string;
     __HelseNorgeUrl__: string;
     __AnonymousHash__: string;
     __AuthenticatedHash__: string;
