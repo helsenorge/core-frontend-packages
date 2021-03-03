@@ -71,6 +71,13 @@ export const HNeventRefreshVarslinger = (): void => {
   }
 };
 
+export const HNeventSetDriftsmeldingPath = (path: string): void => {
+  const webcompheader = document.querySelector('hn-webcomp-driftspanel');
+  if (webcompheader && webcompheader.dispatchEvent) {
+    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.setdriftsmeldingpath, { detail: { path } }));
+  }
+};
+
 export const HNeventRefreshVarslingerOgHendelsesmeny = (): void => {
   const webcompheader = document.querySelector('hn-webcomp-header');
   if (webcompheader && webcompheader.dispatchEvent) {
