@@ -6,6 +6,7 @@ import { warn } from './logger';
 declare const HN: {
   Rest: {
     __TjenesterUrl__: string;
+    __TjenesterApiUrl__: string;
     __HelseNorgeUrl__: string;
     __AnonymousHash__: string;
     __AuthenticatedHash__: string;
@@ -42,8 +43,8 @@ export const erTjenester = () => {
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  */
-const getTjenesterApiUrl = (proxyName: string, endpoint: string): string => {
-  return `${getTjenesterUrl()}/proxy/${proxyName}/${endpoint}`;
+export const getTjenesterApiUrl = (proxyName: string, endpoint: string): string => {
+  return `${HN.Rest.__TjenesterApiUrl__}/proxy/${proxyName}/${endpoint}`;
 };
 
 /**
