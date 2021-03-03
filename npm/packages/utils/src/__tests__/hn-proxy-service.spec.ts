@@ -339,8 +339,8 @@ describe('getTjenesterUrl', () => {
   const tjenesterUrl = 'https://tjenesterUrl.no';
   const undefinedUrl = '';
 
-  describe('Når tjenesterApiUrl er definert', () => {
-    it('Så returneres adressen til API sin adresse', () => {
+  describe('Når tjenesterUrl er definert', () => {
+    it('Så returneres adressen til tjenesten', () => {
       const HN = {
         Rest: {
           __TjenesterUrl__: tjenesterUrl,
@@ -348,13 +348,13 @@ describe('getTjenesterUrl', () => {
       };
       const originalWindowHN = global.window['HN'];
       global.window['HN'] = HN;
-      const apiUrl = getTjenesterUrl();
-      expect(apiUrl).toBe(tjenesterUrl);
+      const tjenesteUrl = getTjenesterUrl();
+      expect(tjenesteUrl).toBe(tjenesterUrl);
       global.window['HN'] = originalWindowHN;
     });
   });
 
-  describe('Når tjenesterApiUrl ikke er definert', () => {
+  describe('Når tjenesterUrl ikke er definert', () => {
     it('Så returneres en tom streng', () => {
       const HN = {
         Rest: {
@@ -363,8 +363,8 @@ describe('getTjenesterUrl', () => {
       };
       const originalWindowHN = global.window['HN'];
       global.window['HN'] = HN;
-      const apiUrl = getTjenesterUrl();
-      expect(apiUrl).toBe(undefinedUrl);
+      const tjenesteUrl = getTjenesterUrl();
+      expect(tjenesteUrl).toBe(undefinedUrl);
       global.window['HN'] = originalWindowHN;
     });
   });
