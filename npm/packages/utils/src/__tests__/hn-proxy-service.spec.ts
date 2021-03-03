@@ -9,7 +9,6 @@ import {
   createHeaders,
   erHelsenorge,
   getTjenesterUrl,
-  getTjenesterApiUrl,
   getHelsenorgeUrl,
 } from '../hn-proxy-service';
 import * as mockLogger from '../logger';
@@ -20,7 +19,7 @@ jest.mock('../logger.ts', () => ({
 
 window.HN = window.HN || {};
 window.HN.Rest = window.HN.Rest || {};
-window.HN.Rest.__TjenesterUrl__ = 'https://tjenesterurl.no';
+window.HN.Rest.__TjenesterUrl__ = 'https://tjenesterUrl.no';
 window.HN.Rest.__TjenesterApiUrl__ = 'https://proxy.test.nhn.no';
 window.HN.Rest.__AnonymousHash__ = 'hash1';
 window.HN.Rest.__AuthenticatedHash__ = 'hash2';
@@ -53,8 +52,10 @@ describe('Gitt at baseCrud er definert', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
       get('tokenserviceinternal', 'v1/ActiveTokens', { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(1);
-      const apiUrl = getTjenesterApiUrl('tokenserviceinternal', 'v1/ActiveTokens?testParam=3');
-      expect(fetchMock.mock.calls[0][0]).toBe(apiUrl);
+
+      expect(fetchMock.mock.calls[0][0]).toBe(
+        `${window.HN.Rest.__TjenesterApiUrl__}/proxy/tokenserviceinternal/v1/ActiveTokens?testParam=3`
+      );
       expect(fetchMock.mock.calls[0][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[0][1].headers).toEqual({
         _headers: {
@@ -76,9 +77,9 @@ describe('Gitt at baseCrud er definert', () => {
       post('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(2);
 
-      const apiUrl = getTjenesterApiUrl('tokenserviceinternal', 'api/v1/ActiveTokens?testParam=3');
-
-      expect(fetchMock.mock.calls[1][0]).toBe(apiUrl);
+      expect(fetchMock.mock.calls[1][0]).toBe(
+        `${window.HN.Rest.__TjenesterApiUrl__}/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3`
+      );
       expect(fetchMock.mock.calls[1][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[1][1].headers).toEqual({
         _headers: {
@@ -100,8 +101,9 @@ describe('Gitt at baseCrud er definert', () => {
       put('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(3);
 
-      const apiUrl = getTjenesterApiUrl('tokenserviceinternal', 'api/v1/ActiveTokens?testParam=3');
-      expect(fetchMock.mock.calls[2][0]).toBe(apiUrl);
+      expect(fetchMock.mock.calls[2][0]).toBe(
+        `${window.HN.Rest.__TjenesterApiUrl__}/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3`
+      );
       expect(fetchMock.mock.calls[2][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[2][1].headers).toEqual({
         _headers: {
@@ -123,8 +125,9 @@ describe('Gitt at baseCrud er definert', () => {
       remove('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(4);
 
-      const apiUrl = getTjenesterApiUrl('tokenserviceinternal', 'api/v1/ActiveTokens?testParam=3');
-      expect(fetchMock.mock.calls[3][0]).toBe(apiUrl);
+      expect(fetchMock.mock.calls[3][0]).toBe(
+        `${window.HN.Rest.__TjenesterApiUrl__}/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3`
+      );
       expect(fetchMock.mock.calls[3][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[3][1].headers).toEqual({
         _headers: {
