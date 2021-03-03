@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "5.7.0",
+  "version": "6.0.0-beta03",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -10,7 +10,6 @@
   "scripts": {
     "build": "node scripts/build.cjs",
     "postbuild": "rimraf lib/_devonly",
-    "prepublishOnly": "npm run build",
     "change-versions": "node scripts/change-versions.js",
     "publish:beta": "cd lib && npm publish --tag=beta",
     "precommit-script": "pretty-quick --staged",
