@@ -19,7 +19,7 @@ jest.mock('../logger.ts', () => ({
 
 window.HN = window.HN || {};
 window.HN.Rest = window.HN.Rest || {};
-window.HN.Rest.__TjenesterApiUrl__ = 'https://proxy.test.nhn.no';
+window.HN.Rest.__TjenesterUrl__ = 'https://proxy.test.nhn.no';
 window.HN.Rest.__AnonymousHash__ = 'hash1';
 window.HN.Rest.__AuthenticatedHash__ = 'hash2';
 window.HN.Rest.__TjenesteType__ = 'tjeneste';
@@ -264,7 +264,7 @@ describe('erTjenester', () => {
   beforeEach(() => {
     window.HN = {};
     window.HN.Rest = {};
-    window.HN.Rest.__TjenesterApiUrl__ = tjenesterUrl;
+    window.HN.Rest.__TjenesterUrl__ = tjenesterUrl;
   });
 
   describe('Når en bruker besøker en side på helsenorge.no', () => {
@@ -336,20 +336,20 @@ describe('erHelsenorge', () => {
 });
 
 describe('getTjenesterUrl', () => {
-  const tjenesterApiUrl = 'https://tjenesterApiUrl.no';
-  const undefinedApiUrl = '';
+  const tjenesterUrl = 'https://tjenesterUrl.no';
+  const undefinedUrl = '';
 
   describe('Når tjenesterApiUrl er definert', () => {
     it('Så returneres adressen til API sin adresse', () => {
       const HN = {
         Rest: {
-          __TjenesterApiUrl__: tjenesterApiUrl,
+          __TjenesterUrl__: tjenesterUrl,
         },
       };
       const originalWindowHN = global.window['HN'];
       global.window['HN'] = HN;
       const apiUrl = getTjenesterUrl();
-      expect(apiUrl).toBe(tjenesterApiUrl);
+      expect(apiUrl).toBe(tjenesterUrl);
       global.window['HN'] = originalWindowHN;
     });
   });
@@ -358,13 +358,13 @@ describe('getTjenesterUrl', () => {
     it('Så returneres en tom streng', () => {
       const HN = {
         Rest: {
-          __TjenesterApiUrl__: undefined,
+          __TjenesterUrl__: undefined,
         },
       };
       const originalWindowHN = global.window['HN'];
       global.window['HN'] = HN;
       const apiUrl = getTjenesterUrl();
-      expect(apiUrl).toBe(undefinedApiUrl);
+      expect(apiUrl).toBe(undefinedUrl);
       global.window['HN'] = originalWindowHN;
     });
   });
