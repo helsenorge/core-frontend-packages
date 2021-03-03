@@ -43,7 +43,7 @@ export const erTjenester = () => {
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  */
-export const getTjenesterApiUrl = (proxyName: string, endpoint: string): string => {
+const getTjenesterApiUrl = (proxyName: string, endpoint: string): string => {
   return `${HN.Rest.__TjenesterApiUrl__}/proxy/${proxyName}/${endpoint}`;
 };
 
