@@ -9554,7 +9554,7 @@ export type HNMinHelseDialogVPJS = {
   */
   summaryPrefix: string;
   /** 
-  * Siste innsyn
+  * Siste tilgang
   */
   tilgangsloggKolonneSisteInnsyn: string;
   /** 
@@ -9566,7 +9566,7 @@ export type HNMinHelseDialogVPJS = {
   */
   tilgangsloggKolonneAnsattStilling: string;
   /** 
-  * Bakgrunn for innsyn
+  * Bakgrunn for tilgang
   */
   tilgangsloggKolonneBakgrunnForInnsyn: string;
   /** 
