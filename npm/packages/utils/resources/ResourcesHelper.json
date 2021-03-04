@@ -2395,10 +2395,10 @@
   "HNMinHelseDialogVPJS": { 
     "summaryInfix": " av ",
     "summaryPrefix": "Viser ",
-    "tilgangsloggKolonneSisteInnsyn": "Siste innsyn",
+    "tilgangsloggKolonneSisteInnsyn": "Siste tilgang",
     "tilgangsloggKolonneAnsattNavn": "Person",
     "tilgangsloggKolonneAnsattStilling": "Rolle",
-    "tilgangsloggKolonneBakgrunnForInnsyn": "Bakgrunn for innsyn",
+    "tilgangsloggKolonneBakgrunnForInnsyn": "Bakgrunn for tilgang",
     "tilgangsloggTabellCaption": "{0} innsyn",
     "cancelDialogCancel": "Avbryt",
     "cancelDialogContent": "Alle endringer du har gjort vil gå tapt.",
