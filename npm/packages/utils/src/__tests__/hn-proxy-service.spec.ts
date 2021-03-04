@@ -19,6 +19,7 @@ jest.mock('../logger.ts', () => ({
 
 window.HN = window.HN || {};
 window.HN.Rest = window.HN.Rest || {};
+window.HN.Rest.__TjenesterUrl__ = 'https://tjenesterUrl.no';
 window.HN.Rest.__TjenesterApiUrl__ = 'https://proxy.test.nhn.no';
 window.HN.Rest.__AnonymousHash__ = 'hash1';
 window.HN.Rest.__AuthenticatedHash__ = 'hash2';
@@ -52,7 +53,9 @@ describe('Gitt at baseCrud er definert', () => {
       get('tokenserviceinternal', 'v1/ActiveTokens', { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(1);
 
-      expect(fetchMock.mock.calls[0][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/v1/ActiveTokens?testParam=3');
+      expect(fetchMock.mock.calls[0][0]).toBe(
+        `${window.HN.Rest.__TjenesterApiUrl__}/proxy/tokenserviceinternal/v1/ActiveTokens?testParam=3`
+      );
       expect(fetchMock.mock.calls[0][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[0][1].headers).toEqual({
         _headers: {
@@ -74,7 +77,9 @@ describe('Gitt at baseCrud er definert', () => {
       post('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(2);
 
-      expect(fetchMock.mock.calls[1][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
+      expect(fetchMock.mock.calls[1][0]).toBe(
+        `${window.HN.Rest.__TjenesterApiUrl__}/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3`
+      );
       expect(fetchMock.mock.calls[1][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[1][1].headers).toEqual({
         _headers: {
@@ -96,7 +101,9 @@ describe('Gitt at baseCrud er definert', () => {
       put('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(3);
 
-      expect(fetchMock.mock.calls[2][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
+      expect(fetchMock.mock.calls[2][0]).toBe(
+        `${window.HN.Rest.__TjenesterApiUrl__}/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3`
+      );
       expect(fetchMock.mock.calls[2][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[2][1].headers).toEqual({
         _headers: {
@@ -118,7 +125,9 @@ describe('Gitt at baseCrud er definert', () => {
       remove('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(4);
 
-      expect(fetchMock.mock.calls[3][0]).toBe('https://proxy.test.nhn.no/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3');
+      expect(fetchMock.mock.calls[3][0]).toBe(
+        `${window.HN.Rest.__TjenesterApiUrl__}/proxy/tokenserviceinternal/api/v1/ActiveTokens?testParam=3`
+      );
       expect(fetchMock.mock.calls[3][1].credentials).toBe('include');
       expect(fetchMock.mock.calls[3][1].headers).toEqual({
         _headers: {
@@ -264,7 +273,7 @@ describe('erTjenester', () => {
   beforeEach(() => {
     window.HN = {};
     window.HN.Rest = {};
-    window.HN.Rest.__TjenesterApiUrl__ = tjenesterUrl;
+    window.HN.Rest.__TjenesterUrl__ = tjenesterUrl;
   });
 
   describe('Når en bruker besøker en side på helsenorge.no', () => {
@@ -336,35 +345,35 @@ describe('erHelsenorge', () => {
 });
 
 describe('getTjenesterUrl', () => {
-  const tjenesterApiUrl = 'https://tjenesterApiUrl.no';
-  const undefinedApiUrl = '';
+  const tjenesterUrl = 'https://tjenesterUrl.no';
+  const undefinedUrl = '';
 
-  describe('Når tjenesterApiUrl er definert', () => {
-    it('Så returneres adressen til API sin adresse', () => {
+  describe('Når tjenesterUrl er definert', () => {
+    it('Så returneres adressen til tjenesten', () => {
       const HN = {
         Rest: {
-          __TjenesterApiUrl__: tjenesterApiUrl,
+          __TjenesterUrl__: tjenesterUrl,
         },
       };
       const originalWindowHN = global.window['HN'];
       global.window['HN'] = HN;
-      const apiUrl = getTjenesterUrl();
-      expect(apiUrl).toBe(tjenesterApiUrl);
+      const tjenesteUrl = getTjenesterUrl();
+      expect(tjenesteUrl).toBe(tjenesterUrl);
       global.window['HN'] = originalWindowHN;
     });
   });
 
-  describe('Når tjenesterApiUrl ikke er definert', () => {
+  describe('Når tjenesterUrl ikke er definert', () => {
     it('Så returneres en tom streng', () => {
       const HN = {
         Rest: {
-          __TjenesterApiUrl__: undefined,
+          __TjenesterUrl__: undefined,
         },
       };
       const originalWindowHN = global.window['HN'];
       global.window['HN'] = HN;
-      const apiUrl = getTjenesterUrl();
-      expect(apiUrl).toBe(undefinedApiUrl);
+      const tjenesteUrl = getTjenesterUrl();
+      expect(tjenesteUrl).toBe(undefinedUrl);
       global.window['HN'] = originalWindowHN;
     });
   });

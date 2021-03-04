@@ -5,6 +5,7 @@ import { warn } from './logger';
 
 declare const HN: {
   Rest: {
+    __TjenesterUrl__: string;
     __TjenesterApiUrl__: string;
     __HelseNorgeUrl__: string;
     __AnonymousHash__: string;
@@ -27,14 +28,14 @@ export interface ProxyErrorResponse extends Response {
  * Returnerer baseUrl til Tjenester basert på HN Rest objektet
  */
 export const getTjenesterUrl = () => {
-  return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? HN.Rest.__TjenesterApiUrl__ : '';
+  return HN.Rest.__TjenesterUrl__ !== undefined && HN.Rest.__TjenesterUrl__ !== null ? HN.Rest.__TjenesterUrl__ : '';
 };
 
 /**
  * Returnerer true når window urlen er lik tjenester baseUrl
  */
 export const erTjenester = () => {
-  return window.location.origin === HN?.Rest?.__TjenesterApiUrl__;
+  return window.location.origin === HN?.Rest?.__TjenesterUrl__;
 };
 
 /**
@@ -43,7 +44,7 @@ export const erTjenester = () => {
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  */
 const getTjenesterApiUrl = (proxyName: string, endpoint: string): string => {
-  return `${getTjenesterUrl()}/proxy/${proxyName}/${endpoint}`;
+  return `${HN.Rest.__TjenesterApiUrl__}/proxy/${proxyName}/${endpoint}`;
 };
 
 /**
