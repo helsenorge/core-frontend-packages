@@ -338,7 +338,7 @@ export type HNCoreFrontendWebForside = {
   */
   tjenestepanelVisFarre: string;
   /** 
-  * Tjenester utenfor Helsenorge
+  * Andre tjenester
   */
   tjenestepanelEksterne: string;
   /** 
