@@ -338,7 +338,7 @@ export type HNCoreFrontendWebForside = {
    */
   tjenestepanelVisFarre: string;
   /**
-   * Tjenester utenfor Helsenorge
+   * Andre tjenester
    */
   tjenestepanelEksterne: string;
   /**
@@ -3928,7 +3928,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   group_Owners_Description: string;
   /**
-   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest, Helse Nord og Helse Sør-Øst tilgjengelig.
+   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest og Helse Nord tilgjengelig.
    */
   page_Referrals_Desc: string;
   /**
@@ -9554,7 +9554,7 @@ export type HNMinHelseDialogVPJS = {
    */
   summaryPrefix: string;
   /**
-   * Siste innsyn
+   * Siste tilgang
    */
   tilgangsloggKolonneSisteInnsyn: string;
   /**
@@ -9566,11 +9566,11 @@ export type HNMinHelseDialogVPJS = {
    */
   tilgangsloggKolonneAnsattStilling: string;
   /**
-   * Bakgrunn for innsyn
+   * Bakgrunn for tilgang
    */
   tilgangsloggKolonneBakgrunnForInnsyn: string;
   /**
-   * {0} innsyn
+   * {0} tilganger
    */
   tilgangsloggTabellCaption: string;
   /**
@@ -9730,7 +9730,7 @@ export type HNMinHelseDialogVPJS = {
    */
   tilgangsloggKolonneHelseforetak: string;
   /**
-   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Om tilgangsloggen","seksjonstekst_brodtekst":"<p>\nTilgangsloggen viser en liste over alt helsepersonell som har arbeidet eller slått opp i pasientjournalen din. Alle som arbeider eller slår opp i en pasientjournal må ha et legitimt behov for det.\n</p>\n\n<p>\nHelsepersonell med mange ulike funksjoner og arbeidsoppgaver kan ha et legitimt behov for å arbeide eller slå opp i en pasientjournal, for eksempel med å registrere opplysninger, kvalitetssikre registrert aktivitet, gjøre etterarbeid og annet administrativt vedlikehold av journalen. Slike oppslag blir også loggført, og du kan derfor se mange oppslag i tilgangsloggen din.\n</p>\n\n<h3>\nHva viser tabellen?\n</h3>\n\n<p>\nHver rad viser ett eller flere innsyn gjort av en ansatt da du var til behandling på en avdeling hvor han eller hun jobber. Klikk i første kolonne for å se flere detaljer.\n</p>\n\n<p>\nEn rad kan i tillegg vise innsyn gjort av annet helsepersonell som har bedt om tilgang av en spesiell grunn, for eksempel på grunn av en akuttsituasjon. Helsepersonell kan også slå opp i din pasientjournal via kjernejournal.\n</p>\n\n<p>\nI «bakgrunn for innsyn» kan du se hvorfor vedkommende har slått opp eller arbeidet i din pasientjournal eller helseopplysninger. Det kan for eksempel være arbeid i forbindelse med:\n</p>\n\n<ul>\n<li>behandling på sykehus</li>\n<li>planlegging, kvalitetssikring og logistikk</li>\n<li>det elektroniske pasientjournalsystemet, som for eksempel brukerstøtte til helsepersonell eller retting av feil</li>\n</ul>\n\n<p>\nSelv om noen har arbeidet eller slått opp i journalen din, er det ikke sikkert vedkommende har åpnet noen av dokumentene i den.\n</p>\n\n<p>\nHvis noen har åpnet journaldokumenter, finner du en liste med disse dokumentene under «Handlinger».\n</p>\n\n<h3>\nRette feil eller melde om urettmessig innsyn\n</h3>\n\n<p>\nHvis du ønsker å få rettet noe du mener er feil eller melde om innsyn du mener kan være gjort på feil grunnlag, ta kontakt med sykehuset det gjelder. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Sykehus i Helse Sør-Øst</a></li>\n</ul>"}
+   * {"synlig":"true","sporsmalstekst":"","bobletekst":"","seksjonstekst_overskrift":"Om tilgangsloggen","seksjonstekst_brodtekst":"<p>\nTilgangsloggen viser en liste over alt helsepersonell som har arbeidet eller slått opp i pasientjournalen din. Alle som arbeider eller slår opp i en pasientjournal må ha et legitimt behov for det.\n</p>\n\n<p>\nHelsepersonell med mange ulike funksjoner og arbeidsoppgaver kan ha et legitimt behov for å arbeide eller slå opp i en pasientjournal, for eksempel med å registrere opplysninger, kvalitetssikre registrert aktivitet, gjøre etterarbeid og annet administrativt vedlikehold av journalen. Slike oppslag blir også loggført, og du kan derfor se mange oppslag i tilgangsloggen din.\n</p>\n\n<h3>\nHva viser tabellen?\n</h3>\n\n<p>\nHver rad viser ett eller flere tilganger utført av en ansatt da du var til behandling på en avdeling hvor han eller hun jobber. Klikk i første kolonne for å se flere detaljer.\n</p>\n\n<p>\nEn rad kan i tillegg vise tilganger utført av annet helsepersonell som har bedt om tilgang av en spesiell grunn, for eksempel på grunn av en akuttsituasjon. Helsepersonell kan også slå opp i din pasientjournal via kjernejournal.\n</p>\n\n<p>\nI «bakgrunn for tilgang» kan du se hvorfor vedkommende har slått opp eller arbeidet i din pasientjournal eller helseopplysninger. Det kan for eksempel være arbeid i forbindelse med:\n</p>\n\n<ul>\n<li>behandling på sykehus</li>\n<li>planlegging, kvalitetssikring og logistikk</li>\n<li>det elektroniske pasientjournalsystemet, som for eksempel brukerstøtte til helsepersonell eller retting av feil</li>\n</ul>\n\n<p>\nSelv om noen har arbeidet eller slått opp i journalen din, er det ikke sikkert vedkommende har åpnet noen av dokumentene i den.\n</p>\n\n<p>\nHvis noen har åpnet journaldokumenter, finner du en liste med disse dokumentene under «Handlinger».\n</p>\n\n<h3>\nRette feil eller melde om urettmessig tilgang\n</h3>\n\n<p>\nHvis du ønsker å få rettet noe du mener er feil eller melde om tilganger du mener kan være gjort på feil grunnlag, ta kontakt med sykehuset det gjelder. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Sykehus i Helse Sør-Øst</a></li>\n</ul>"}
    */
   tilgangsloggTabell: string;
   /**
@@ -9750,7 +9750,7 @@ export type HNMinHelseDialogVPJS = {
    */
   openedBy: string;
   /**
-   * Tidsperiode for innsyn
+   * Tidsperiode for tilgang
    */
   tilgangsloggPeriode: string;
   /**
@@ -9786,7 +9786,7 @@ export type HNMinHelseDialogVPJS = {
    */
   tilgangsloggKommentar: string;
   /**
-   * {"defaulttekst_overskrift":"Om tilgangsloggen","defaulttekst_brodtekst":"<p>\nTilgangsloggen viser en liste over alle sykehusansatte som har arbeidet eller slått opp i pasientjournalen din. Alle som arbeider eller slår opp i en pasientjournal må ha et legitimt behov for det.\n</p>\n\n<p>\nHelsepersonell med mange ulike funksjoner og arbeidsoppgaver kan ha et legitimt behov for å arbeide eller slå opp i en pasientjournal, for eksempel med å registrere opplysninger, kvalitetssikre registrert aktivitet, gjøre etterarbeid og annet administrativt vedlikehold av journalen. Slike oppslag blir også loggført, og du kan derfor se mange oppslag i tilgangsloggen din.\n</p>\n\n<h3>\nHva viser tabellen?\n</h3>\n\n<p>\nHver rad viser ett eller flere innsyn gjort av en ansatt da du var til behandling på en avdeling hvor han eller hun jobber. Klikk i første kolonne for å se flere detaljer.\n</p>\n\n<p>\nEn rad kan også vise innsyn gjort av andre som har bedt om tilgang av en spesiell grunn, for eksempel på grunn av en akuttsituasjon.\n</p>\n\n<p>\nI «bakgrunn for innsyn» kan du se hvorfor vedkommende har slått opp eller arbeidet i din pasientjournal eller helseopplysninger. Det kan for eksempel være arbeid i forbindelse med:\n</p>\n\n<ul>\n<li>behandling på sykehus</li>\n<li>planlegging, kvalitetssikring og logistikk</li>\n<li>det elektroniske pasientjournalsystemet, som for eksempel brukerstøtte til helsepersonell eller retting av feil</li>\n</ul>\n\n<p>\nSelv om noen har arbeidet eller slått opp i journalen din, er det ikke sikkert vedkommende har åpnet noen av dokumentene i den.\n</p>\n\n<p>\nHvis en ansatt har åpnet journaldokumenter, finner du en liste med disse dokumentene under \"Handlinger\".\n</p>\n\n<h3>\nRette feil eller melde om urettmessig innsyn\n</h3>\n\n<p>\nHvis du ønsker å få rettet noe du mener er feil eller melde om innsyn du mener kan være gjort på feil grunnlag, ta kontakt med sykehuset det gjelder. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Sykehus i Helse Sør-Øst</a></li>\n</ul>"}
+   * {"defaulttekst_overskrift":"Om tilgangsloggen","defaulttekst_brodtekst":"<p>\nTilgangsloggen viser en liste over alle sykehusansatte som har arbeidet eller slått opp i pasientjournalen din. Alle som arbeider eller slår opp i en pasientjournal må ha et legitimt behov for det.\n</p>\n\n<p>\nHelsepersonell med mange ulike funksjoner og arbeidsoppgaver kan ha et legitimt behov for å arbeide eller slå opp i en pasientjournal, for eksempel med å registrere opplysninger, kvalitetssikre registrert aktivitet, gjøre etterarbeid og annet administrativt vedlikehold av journalen. Slike oppslag blir også loggført, og du kan derfor se mange oppslag i tilgangsloggen din.\n</p>\n\n<h3>\nHva viser tabellen?\n</h3>\n\n<p>\nHver rad viser en eller flere tilganger utført av en ansatt da du var til behandling på en avdeling hvor han eller hun jobber. Klikk i første kolonne for å se flere detaljer.\n</p>\n\n<p>\nEn rad kan også vise tilganger utført av andre som har bedt om tilgang av en spesiell grunn, for eksempel på grunn av en akuttsituasjon.\n</p>\n\n<p>\nI «bakgrunn for tilgang» kan du se hvorfor vedkommende har slått opp eller arbeidet i din pasientjournal eller helseopplysninger. Det kan for eksempel være arbeid i forbindelse med:\n</p>\n\n<ul>\n<li>behandling på sykehus</li>\n<li>planlegging, kvalitetssikring og logistikk</li>\n<li>det elektroniske pasientjournalsystemet, som for eksempel brukerstøtte til helsepersonell eller retting av feil</li>\n</ul>\n\n<p>\nSelv om noen har arbeidet eller slått opp i journalen din, er det ikke sikkert vedkommende har åpnet noen av dokumentene i den.\n</p>\n\n<p>\nHvis en ansatt har åpnet journaldokumenter, finner du en liste med disse dokumentene under \"Handlinger\".\n</p>\n\n<h3>\nRette feil eller melde om urettmessig tilgang\n</h3>\n\n<p>\nHvis du ønsker å få rettet noe du mener er feil eller melde om tilganger du mener kan være gjort på feil grunnlag, ta kontakt med sykehuset det gjelder. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Sykehus i Helse Sør-Øst</a></li>\n</ul>"}
    */
   tilgangsloggHjelpeKontekst: string;
   /**
@@ -18899,15 +18899,15 @@ export type HNMinHelsePasientreiserJS = {
    */
   reiseoversikt_refusjonsdetaljer_PASIENT_minstetakstsone: string;
   /**
-   * Vil du delta i en brukerundersøkelse om Pasientreiser?
+   * Vil du svare på to korte spørsmål fra Pasientreiser?
    */
   kvittering_undersokelseTittel: string;
   /**
-   * Det tar ca. 3 minutter å svare på undersøkelsen.
+   * Det tar under 1 minutt å svare på undersøkelsen.
    */
   kvittering_undersokelseIngress: string;
   /**
-   * https://response.questback.com/pasientreiserhf/rur2020
+   * https://response.questback.com/pasientreiserhf/transportmiddel
    */
   kvittering_undersokelseLenke: string;
   /**
