@@ -252,6 +252,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * /bruk-og-tilganger
   */
   headerMenuProfileLinksBrukOgTilgangerUrl: string;
+  /** 
+  * Bruk og tilganger
+  */
+  headerMenuProfileLinksBrukOgTilgangerTitle: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 

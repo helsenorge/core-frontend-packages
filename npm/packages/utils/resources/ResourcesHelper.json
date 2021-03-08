@@ -62,7 +62,8 @@
     "personvelgerHeader": "Hvem sine helseopplysninger vil du se?",
     "headerMenuBasicSamiskUrl": "/se/saami/",
     "headerMenuBasicSamiskTitle": "Sámegiella",
-    "headerMenuProfileLinksBrukOgTilgangerUrl": "/bruk-og-tilganger"
+    "headerMenuProfileLinksBrukOgTilgangerUrl": "/bruk-og-tilganger",
+    "headerMenuProfileLinksBrukOgTilgangerTitle": "Bruk og tilganger"
   },
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk",
