@@ -248,13 +248,13 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    * Sámegiella
    */
   headerMenuBasicSamiskTitle: string;
-  /** 
-  * /bruk-og-tilganger
-  */
+  /**
+   * /bruk-og-tilganger
+   */
   headerMenuProfileLinksBrukOgTilgangerUrl: string;
-  /** 
-  * Bruk og tilganger
-  */
+  /**
+   * Bruk og tilganger
+   */
   headerMenuProfileLinksBrukOgTilgangerTitle: string;
 };
 
