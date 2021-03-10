@@ -481,29 +481,9 @@ export type HNDialogCommonJS = {
   */
   afterDeadlineMoreHelpText: string;
   /** 
-  * Dersom behandlingsstedet trenger mer informasjon eller fraråder avslutning av videre oppfølging, vil du bli kontaktet.
-  */
-  appointmentCancelDescription: string;
-  /** 
-  * Be om å få avsluttet behandlingsløp ved
-  */
-  appointmentCancelHeading: string;
-  /** 
   * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
   */
   appointmentCancelHelsestasjonDescription: string;
-  /** 
-  * Du vil få svar innen to arbeidsdager.
-  */
-  appointmentRequestInfoDescription: string;
-  /** 
-  * Skriv melding angående timeavtale
-  */
-  appointmentRequestInfoHeadingLong: string;
-  /** 
-  * Du kan foreslå tidspunkter selv slik at vi kan prøve å finne en time som passer. Vær likevel oppmerksom på at endring av timen kan medføre lengre ventetid. Du vil bli kontaktet innen to arbeidsdager.
-  */
-  appointmentRescheduleDescription: string;
   /** 
   * Oppmøtested:
   */
@@ -657,76 +637,6 @@ export type HNDialogCommonJS = {
   */
   bestillVaksinasjonVelgerAnnet: string;
   /** 
-  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
-<p>Henvendelsen vil bli journalført.</p>
-  */
-  ekonsultasjonBottomInfo: string;
-  /** 
-  * Still et medisinsk spørsmål til fastlegen din. Du betaler samme egenandel som ved vanlig legetime. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  ekonsultasjonFastlegeBeskrivelse: string;
-  /** 
-  * Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  ekonsultasjonFastlegeSvarBeskrivelse: string;
-  /** 
-  * E-konsultasjon
-  */
-  ekonsultasjonHeader: string;
-  /** 
-  * Still et helserelatert spørsmål til din helseperson. Ved fravær kan meldingen bli lest og besvart av annen helseperson enn din faste helseperson. Du vil bli kontaktet senest innen 3 arbeidsdager.
-  */
-  ekonsultasjonHelsestasjonBeskrivelse: string;
-  /** 
-  * Ved fravær kan meldingen bli lest og besvart av annen helseperson enn din faste helseperson. Du vil bli kontaktet senest innen 3 arbeidsdager.
-  */
-  ekonsultasjonHelsestasjonSvarBeskrivelse: string;
-  /** 
-  * Still et medisinsk spørsmål til behandleren din. Du betaler samme egenandel som ved vanlig time. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  ekonsultasjonHelsetilbudBeskrivelse: string;
-  /** 
-  * Ved fravær kan meldingen bli lest og besvart av annet helsepersonell enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  ekonsultasjonHelsetilbudSvarBeskrivelse: string;
-  /** 
-  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
-<p>Henvendelsen vil bli journalført.</p>
-  */
-  ekontaktBottomInfo: string;
-  /** 
-  * Still et praktisk spørsmål til resepsjonen ved fastlegekontoret. Du vil bli kontaktet innen fem arbeidsdager.
-  */
-  ekontaktFastlegeBeskrivelse: string;
-  /** 
-  * Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  ekontaktFastlegeSvarBeskrivelse: string;
-  /** 
-  * Kontakt
-  */
-  ekontaktHeader: string;
-  /** 
-  * Skriv melding til
-  */
-  ekontaktHeaderSkrivMelding: string;
-  /** 
-  * Still et praktisk spørsmål til de som sitter i resepsjonen. Du vil bli kontaktet senest innen 3 arbeidsdager.
-  */
-  ekontaktHelsestasjonBeskrivelse: string;
-  /** 
-  * Du vil bli kontaktet senest innen 3 arbeidsdager.
-  */
-  ekontaktHelsestasjonSvarBeskrivelse: string;
-  /** 
-  * Still et praktisk spørsmål til resepsjonen. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  ekontaktHelsetilbudBeskrivelse: string;
-  /** 
-  * Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  ekontaktHelsetilbudSvarBeskrivelse: string;
-  /** 
   * Du må fylle ut emne
   */
   emneError: string;
@@ -875,65 +785,9 @@ export type HNDialogCommonJS = {
   */
   healthcareProfessionalVeterinaer: string;
   /** 
-  * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
-  */
-  helsefagligKontaktBeskrivelse: string;
-  /** 
-  * <p>Henvendelsen vil bli journalført.</p>
-  */
-  helsefagligKontaktBottomInfo: string;
-  /** 
-  * Skriv melding til
-  */
-  helsefagligKontaktHeader: string;
-  /** 
-  * Beskrivelse
-  */
-  innsynPasientjournalBeskrivelse: string;
-  /** 
-  * Jeg ønsker en digital kopi av min pasientjournal
-  */
-  innsynPasientjournalBeskrivelseBody: string;
-  /** 
-  * Emne
-  */
-  innsynPasientjournalEmne: string;
-  /** 
-  * Kopi av pasientjournal
-  */
-  innsynPasientjournalEmneBody: string;
-  /** 
-  * Kopi av pasientjournal
-  */
-  innsynPasientjournalHeader: string;
-  /** 
   * Teknisk feil hos mottaker. Kontakt mottaker på annen måte.
   */
   invalidCertificateMessage: string;
-  /** 
-  * Forventet svartid på meldinger er første virkedag. Akutte henvendelser skal ikke sendes via melding.
-  */
-  kommuneMeldingBeskrivelse: string;
-  /** 
-  * <p>Henvendelsen vil bli journalført.</p>
-  */
-  kommuneMeldingBottomInfo: string;
-  /** 
-  * Skriv melding til
-  */
-  kommuneMeldingHeader: string;
-  /** 
-  * Meldingen vil besvares så snart som mulig, som oftest innen to arbeidsdager. Stedfortreder vil besvare meldingen ved fravær. Hvis det haster bør du ta kontakt per telefon i ordinær arbeidstid.
-  */
-  koordinatorMeldingBeskrivelse: string;
-  /** 
-  * <p>Henvendelsen vil bli journalført.</p>
-  */
-  koordinatorMeldingBottomInfo: string;
-  /** 
-  * Skriv melding til
-  */
-  koordinatorMeldingHeader: string;
   /** 
   * E-konsultasjon
   */
@@ -1031,70 +885,6 @@ export type HNDialogCommonJS = {
   */
   pendingChangesSubmitDiscardHeading: string;
   /** 
-  * Det er ikke lenger mulig å sende melding.
-  */
-  replyMessageUnavailableBody: string;
-  /** 
-  * Denne mottakeren er ikke lenger tilgjengelig
-  */
-  replyMessageUnavailableTitle: string;
-  /** 
-  * F. eks. forny allergimedisin
-  */
-  reseptfornyelseEmnePlaceholder: string;
-  /** 
-  * Be om å få fornyet en eller flere resepter. Merk at meldingen kan bli lest av andre ved legekontoret enn fastlegen. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  reseptfornyelseFastlegeBeskrivelse: string;
-  /** 
-  * Merk at meldingen kan bli lest av andre ved legekontoret enn fastlegen. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  reseptfornyelseFastlegeSvarBeskrivelse: string;
-  /** 
-  * Reseptfornyelse
-  */
-  reseptfornyelseHeader: string;
-  /** 
-  * Be om å få fornyet en eller flere resepter. Merk at meldingen kan bli lest av andre ved behandlerkontoret enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  reseptfornyelseHelsetilbudBeskrivelse: string;
-  /** 
-  * Merk at meldingen kan bli lest av andre ved behandlerkontoret enn behandler. Du vil bli kontaktet senest innen fem arbeidsdager.
-  */
-  reseptfornyelseHelsetilbudSvarBeskrivelse: string;
-  /** 
-  * <p>Henvendelsen vil bli journalført.</p>
-  */
-  reseptfornyelseJournal: string;
-  /** 
-  * Eventuelle kommentarer
-  */
-  reseptfornyelseKommentarer: string;
-  /** 
-  * Du må skrive inn hvilken resept du ønsker å fornye
-  */
-  reseptfornyelseResepterError: string;
-  /** 
-  * Resepter du ønsker å fornye
-  */
-  reseptfornyelseResepterHeader: string;
-  /** 
-  * Navn på legemiddel, form(tablett, flytende), mengde
-  */
-  reseptfornyelseResepterLabel: string;
-  /** 
-  * Legg til flere resepter
-  */
-  reseptfornyelseResepterLeggTil: string;
-  /** 
-  * F. eks. Panodil, tabletter, 50 mg
-  */
-  reseptfornyelseResepterPlaceholder: string;
-  /** 
-  * Slett
-  */
-  reseptfornyelseResepterSlett: string;
-  /** 
   * Ansvarlig jordmor
   */
   roleToPatientAnsvarligJordmor: string;
@@ -1183,19 +973,6 @@ export type HNDialogCommonJS = {
   */
   selectedEventIconLabel: string;
   /** 
-  * Tjenesten er gratis. Meldingen kan leses av helsepersonell ved {0}. Du vil bli kontaktet innen fem arbeidsdager.
-  */
-  spesialistMeldingBeskrivelse: string;
-  /** 
-  * <p>Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. <strong>Ring 113 for øyeblikkelig hjelp.</strong></p>
-<p>Henvendelsen vil bli journalført.</p>
-  */
-  spesialistMeldingBottomInfo: string;
-  /** 
-  * Henvendelse til
-  */
-  spesialistMeldingHeader: string;
-  /** 
   * OK
   */
   submitConfirmationButtonText: string;
@@ -1203,10 +980,6 @@ export type HNDialogCommonJS = {
   * Takk for din henvendelse.
   */
   submitConfirmationDescription: string;
-  /** 
-  * Du finner sendte og mottatte meldinger i innboksen.
-  */
-  submitConfirmationDescription2: string;
   /** 
   * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
   */
@@ -1251,14 +1024,6 @@ export type HNDialogCommonJS = {
   * Til {0}
   */
   velgBehandlerTilHeader: string;
-  /** 
-  * Avbryt
-  */
-  velgBehandlingsstedAvbryt: string;
-  /** 
-  * Hvem vil du sende melding til?
-  */
-  velgBehandlingsstedHeader: string;
   /** 
   * Fortsett senere
   */
