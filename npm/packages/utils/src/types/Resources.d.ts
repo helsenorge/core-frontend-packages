@@ -480,13 +480,13 @@ export type HNDialogCommonJS = {
    * Les mer om behandlingsfrister
    */
   afterDeadlineMoreHelpText: string;
-  /**
-   * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
-   */
+  /** 
+  * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
+  */
   appointmentCancelHelsestasjonDescription: string;
-  /**
-   * Oppmøtested:
-   */
+  /** 
+  * Oppmøtested:
+  */
   appointmentlistelementMeetup: string;
   /**
    * Last opp fil
@@ -636,9 +636,9 @@ export type HNDialogCommonJS = {
    * Gå direkte til vaksinasjonsbestilling
    */
   bestillVaksinasjonVelgerAnnet: string;
-  /**
-   * Du må fylle ut emne
-   */
+  /** 
+  * Du må fylle ut emne
+  */
   emneError: string;
   /**
    * Emne
@@ -784,13 +784,13 @@ export type HNDialogCommonJS = {
    * Veterinær
    */
   healthcareProfessionalVeterinaer: string;
-  /**
-   * Teknisk feil hos mottaker. Kontakt mottaker på annen måte.
-   */
+  /** 
+  * Teknisk feil hos mottaker. Kontakt mottaker på annen måte.
+  */
   invalidCertificateMessage: string;
-  /**
-   * E-konsultasjon
-   */
+  /** 
+  * E-konsultasjon
+  */
   meldingsvelgerEkonsultasjon: string;
   /**
    * Still et helserelatert spørsmål til din helseperson.
@@ -884,9 +884,9 @@ export type HNDialogCommonJS = {
    * Det finnes endringer som ikke er lagret
    */
   pendingChangesSubmitDiscardHeading: string;
-  /**
-   * Ansvarlig jordmor
-   */
+  /** 
+  * Ansvarlig jordmor
+  */
   roleToPatientAnsvarligJordmor: string;
   /**
    * Behandlingsansvarlig lege
@@ -972,17 +972,17 @@ export type HNDialogCommonJS = {
    * Valgt kalendertime
    */
   selectedEventIconLabel: string;
-  /**
-   * OK
-   */
+  /** 
+  * OK
+  */
   submitConfirmationButtonText: string;
   /**
    * Takk for din henvendelse.
    */
   submitConfirmationDescription: string;
-  /**
-   * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
-   */
+  /** 
+  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+  */
   submitConfirmationDraftDescription: string;
   /**
    * Melding lagret som utkast
@@ -1024,9 +1024,9 @@ export type HNDialogCommonJS = {
    * Til {0}
    */
   velgBehandlerTilHeader: string;
-  /**
-   * Fortsett senere
-   */
+  /** 
+  * Fortsett senere
+  */
   conversationSubmitDraftButtonText: string;
   /**
    * Sjekk at alt er riktig utfylt
