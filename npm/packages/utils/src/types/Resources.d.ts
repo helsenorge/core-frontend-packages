@@ -505,10 +505,6 @@ export type HNDialogCommonJS = {
   */
   appointmentRescheduleDescription: string;
   /** 
-  * Endre tidspunkt for timeavtale
-  */
-  appointmentRescheduleHeading: string;
-  /** 
   * Oppmøtested:
   */
   appointmentlistelementMeetup: string;
