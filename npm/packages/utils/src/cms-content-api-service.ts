@@ -61,12 +61,12 @@ export const checkStatus = (response: Response): Promise<{}> | undefined => {
 /**
  * Henter JSON fra content-apiet med fetch(). Returnerer et Promise.
  * Logger eventuelle feil med warn().
- * @param cmd command strengen som sendes mot content-apiet
+ * @param endpoint command strengen som sendes mot content-apiet
  * @param params object med parameters { param1 : 'myparam1', param2: 'myparam2'}
  * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
-export const get = (cmd: string, params?: object): Promise<{} | Response | undefined> => {
-  const apiUrl = getContentApiUrl() + '/contentapi/internal/v1/' + cmd + parseParams(params);
+export const get = (endpoint: string, params?: object): Promise<{} | Response | undefined> => {
+  const apiUrl = getContentApiUrl() + '/contentapi/internal/v1/' + endpoint + parseParams(params);
   return fetch(apiUrl, {
     method: 'get',
     credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
@@ -89,13 +89,14 @@ export const get = (cmd: string, params?: object): Promise<{} | Response | undef
  * Skal kun benyttes for åpne api-kall til tjenester der det er satt opp proxy (SOT).
  * Returnerer et Promise.
  * Logger eventuelle feil med warn().
- * @param cmd command strengen som sendes mot content-apiet
+ * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
+ * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  * @param params object med parameters { param1 : 'myparam1', param2: 'myparam2'}
  * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
+export const getHelsenorgeProxy = (proxyName: string, endpoint: string, params?: object): Promise<{} | Response | undefined> => {
+  const apiUrl = getHelsenorgeUrl() + '/proxy/' + proxyName + '/' + endpoint + parseParams(params);
 
-export const getHelsenorgeProxy = (endpoint: string, proxyName: string, params?: object): Promise<{} | Response | undefined> => {
-  const apiUrl = getHelsenorgeUrl() + '/proxy/' + proxyName + '/api/v1/' + endpoint + parseParams(params);
   return fetch(apiUrl, {
     method: 'get',
     credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
