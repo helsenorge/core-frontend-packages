@@ -1233,6 +1233,14 @@ export type HNDialogCommonJS = {
   */
   koronavaksineVeiviserUrl: string;
   /** 
+  * Du kan likevel bestille time hos
+  */
+  bookingIngenBehandlereInfoFastlege: string;
+  /** 
+  * Du kan dessverre ikke bestille time nå.
+  */
+  bookingIngenBehandlereInfoPrimaer: string;
+  /** 
   * Neste
   */
   velgBehandlerNeste: string;
@@ -8736,10 +8744,6 @@ export type HNMinHelseDialog = {
   */
   getReferral_WarningHelseSorOstSourceSystem: string;
   /** 
-  * Din time hos {0} {1} er registrert som ikke møtt
-  */
-  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
-  /** 
   * Sending av melding har feilet
   */
   varselmeny_NegativAppRec_Emne: string;
@@ -9311,6 +9315,10 @@ Vel møtt!
   * Avbestilling av time ble ikke utført
   */
   clientOperation_CancelAppointment_SaveError_Title: string;
+  /** 
+  * Din time hos {0} {1} er registrert som ikke møtt
+  */
+  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
 };
 
 export type HNMinHelseDialogVPJS = { 
@@ -11381,6 +11389,14 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   lightbox_til_deling_lukkknapp: string;
   /** 
+  * Skjult for fullmakt
+  */
+  skjult_for_fullmektige: string;
+  /** 
+  * Handlingen mislyktes. Prøv igjen senere.
+  */
+  fullmektig_error_title: string;
+  /** 
   * Skjult for fullmektig
   */
   skjult_for_fullmektig: string;
@@ -11392,14 +11408,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Skjul for fullmakt
   */
   actionSkjulFullmektige: string;
-  /** 
-  * Skjult for fullmakt
-  */
-  skjult_for_fullmektige: string;
-  /** 
-  * Handlingen mislyktes. Prøv igjen senere.
-  */
-  fullmektig_error_title: string;
   /** 
   * Oppslag gjort av helsepersonell i dette dokumentet
   */
