@@ -8752,6 +8752,10 @@ export type HNMinHelseDialog = {
   */
   varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
   /** 
+  * For mer informasjon om avtalen, logg inn på helsenorge.no.
+  */
+  downloadCalendar_HnTimeavtaleAppointment_Description: string;
+  /** 
   * Sending av melding har feilet
   */
   varselmeny_NegativAppRec_Emne: string;
@@ -11393,18 +11397,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   lightbox_til_deling_lukkknapp: string;
   /** 
-  * Oppslag gjort av helsepersonell i dette dokumentet
-  */
-  dokumenter_deling_logg_table_caption: string;
-  /** 
-  * Skjult for fullmakt
-  */
-  skjult_for_fullmektige: string;
-  /** 
-  * Handlingen mislyktes. Prøv igjen senere.
-  */
-  fullmektig_error_title: string;
-  /** 
   * Skjult for fullmektig
   */
   skjult_for_fullmektig: string;
@@ -11416,6 +11408,18 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Skjul for fullmakt
   */
   actionSkjulFullmektige: string;
+  /** 
+  * Oppslag gjort av helsepersonell i dette dokumentet
+  */
+  dokumenter_deling_logg_table_caption: string;
+  /** 
+  * Skjult for fullmakt
+  */
+  skjult_for_fullmektige: string;
+  /** 
+  * Handlingen mislyktes. Prøv igjen senere.
+  */
+  fullmektig_error_title: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
