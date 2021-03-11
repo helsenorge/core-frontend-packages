@@ -8756,6 +8756,14 @@ export type HNMinHelseDialog = {
   */
   downloadCalendar_HnTimeavtaleAppointment_Description: string;
   /** 
+  * Time hos {0} for {1}
+  */
+  downloadCalendar_HnTimeavtaleAppointment_Summary: string;
+  /** 
+  * Videotime hos {0} for {1}
+  */
+  downloadCalendar_HnTimeavtaleVideoAppointment_Summary: string;
+  /** 
   * Sending av melding har feilet
   */
   varselmeny_NegativAppRec_Emne: string;
