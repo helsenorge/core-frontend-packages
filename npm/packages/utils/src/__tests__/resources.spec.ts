@@ -152,8 +152,8 @@ describe('Resources', () => {
           () => {}
         );
         expect(getMock).toBeCalled();
-        expect(getMock.mock.calls[0][0]).toEqual('UIResource');
-        expect(getMock.mock.calls[0][1]).toEqual('sot');
+        expect(getMock.mock.calls[0][0]).toEqual('sot');
+        expect(getMock.mock.calls[0][1]).toEqual('api/v1/UIResource');
         expect(getMock.mock.calls[0][2].Culture).toEqual('culture');
         expect(getMock.mock.calls[0][2].Filename).toEqual('name');
 
@@ -189,8 +189,8 @@ describe('Resources', () => {
           () => {}
         );
         expect(getHelsenorgeProxyMock).toBeCalled();
-        expect(getHelsenorgeProxyMock.mock.calls[0][0]).toEqual('UIResource');
-        expect(getHelsenorgeProxyMock.mock.calls[0][1]).toEqual('sot');
+        expect(getHelsenorgeProxyMock.mock.calls[0][0]).toEqual('sot');
+        expect(getHelsenorgeProxyMock.mock.calls[0][1]).toEqual('api/v1/UIResource');
         expect(getHelsenorgeProxyMock.mock.calls[0][2].Culture).toEqual('culture');
         expect(getHelsenorgeProxyMock.mock.calls[0][2].Filename).toEqual('name');
 
