@@ -2197,6 +2197,8 @@
     "getReferral_WarningHelseSorOstSourceSystem": "For øyeblikket kan det hende at ikke alle henvisningene hos Helse Sør-Øst vises.",
     "varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne": "Din time hos {0} {1} er registrert som ikke møtt",
     "downloadCalendar_HnTimeavtaleAppointment_Description": "For mer informasjon om avtalen, logg inn på helsenorge.no.",
+    "downloadCalendar_HnTimeavtaleAppointment_Summary": "Time hos {0} for {1}",
+    "downloadCalendar_HnTimeavtaleVideoAppointment_Summary": "Videotime hos {0} for {1}",
     "varselmeny_NegativAppRec_Emne": "Sending av melding har feilet",
     "clientOperation_NewJournalAccess_SendError_Title": "Det har skjedd en teknisk feil",
     "clientOperation_NewJournalAccess_SendError_Body": "Du kan prøve igjen senere.",
