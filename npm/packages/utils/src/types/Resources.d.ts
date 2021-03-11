@@ -449,6 +449,42 @@ export type HNDialogCommonJS = {
   */
   healthcareProfessionalJordmor: string;
   /** 
+  * /veileder?Query=Questionnaire%2F310
+  */
+  koronatestVeiviserUrl: string;
+  /** 
+  * /veileder?Query=Questionnaire%2F314
+  */
+  koronavaksineVeiviserUrl: string;
+  /** 
+  * Neste
+  */
+  velgBehandlerNeste: string;
+  /** 
+  * Avbryt
+  */
+  velgBehandlerAvbryt: string;
+  /** 
+  * Bestill time hos
+  */
+  bookingHeaderKommune: string;
+  /** 
+  * Timebestilling vil sendes til
+  */
+  bookingSubHeaderKommune: string;
+  /** 
+  * Du kan likevel bestille time hos
+  */
+  bookingIngenBehandlereInfoFastlege: string;
+  /** 
+  * Du kan dessverre ikke bestille time nå.
+  */
+  bookingIngenBehandlereInfoPrimaer: string;
+  /** 
+  * Du kan likevel bestille time hos
+  */
+  bookingEnBehandlerInfo: string;
+  /** 
   * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
@@ -1224,38 +1260,6 @@ export type HNDialogCommonJS = {
   * Timer på video
   */
   videoEventsHeading: string;
-  /** 
-  * /veileder?Query=Questionnaire%2F310
-  */
-  koronatestVeiviserUrl: string;
-  /** 
-  * /veileder?Query=Questionnaire%2F314
-  */
-  koronavaksineVeiviserUrl: string;
-  /** 
-  * Du kan likevel bestille time hos
-  */
-  bookingIngenBehandlereInfoFastlege: string;
-  /** 
-  * Du kan dessverre ikke bestille time nå.
-  */
-  bookingIngenBehandlereInfoPrimaer: string;
-  /** 
-  * Neste
-  */
-  velgBehandlerNeste: string;
-  /** 
-  * Avbryt
-  */
-  velgBehandlerAvbryt: string;
-  /** 
-  * Bestill time hos
-  */
-  bookingHeaderKommune: string;
-  /** 
-  * Timebestilling vil sendes til
-  */
-  bookingSubHeaderKommune: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
@@ -8744,6 +8748,10 @@ export type HNMinHelseDialog = {
   */
   getReferral_WarningHelseSorOstSourceSystem: string;
   /** 
+  * Din time hos {0} {1} er registrert som ikke møtt
+  */
+  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
+  /** 
   * Sending av melding har feilet
   */
   varselmeny_NegativAppRec_Emne: string;
@@ -9315,10 +9323,6 @@ Vel møtt!
   * Avbestilling av time ble ikke utført
   */
   clientOperation_CancelAppointment_SaveError_Title: string;
-  /** 
-  * Din time hos {0} {1} er registrert som ikke møtt
-  */
-  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
 };
 
 export type HNMinHelseDialogVPJS = { 
@@ -11389,6 +11393,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   */
   lightbox_til_deling_lukkknapp: string;
   /** 
+  * Oppslag gjort av helsepersonell i dette dokumentet
+  */
+  dokumenter_deling_logg_table_caption: string;
+  /** 
   * Skjult for fullmakt
   */
   skjult_for_fullmektige: string;
@@ -11408,10 +11416,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Skjul for fullmakt
   */
   actionSkjulFullmektige: string;
-  /** 
-  * Oppslag gjort av helsepersonell i dette dokumentet
-  */
-  dokumenter_deling_logg_table_caption: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
@@ -18668,6 +18672,10 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_klage_ulesteVedtak: string;
   /** 
+  * Distanse må være mellom 0 og 3000km.
+  */
+  distanse_ugyldig: string;
+  /** 
   * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.
   */
   reiseoversikt_refusjonsdetaljer_FORESATT_minstetakstsone: string;
@@ -24868,10 +24876,6 @@ export type HNMinHelsePasientreiserJS = {
   * Reiselengden kan ikke være over 3000 km
   */
   reiselengder_max_error: string;
-  /** 
-  * Distanse må være mellom 0 og 3000km.
-  */
-  distanse_ugyldig: string;
 };
 
 export type HNMinHelsePasientReiserStrings = { 
