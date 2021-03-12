@@ -449,6 +449,42 @@ export type HNDialogCommonJS = {
    */
   healthcareProfessionalJordmor: string;
   /**
+   * /veileder?Query=Questionnaire%2F310
+   */
+  koronatestVeiviserUrl: string;
+  /**
+   * /veileder?Query=Questionnaire%2F314
+   */
+  koronavaksineVeiviserUrl: string;
+  /**
+   * Neste
+   */
+  velgBehandlerNeste: string;
+  /**
+   * Avbryt
+   */
+  velgBehandlerAvbryt: string;
+  /**
+   * Bestill time hos
+   */
+  bookingHeaderKommune: string;
+  /**
+   * Timebestilling vil sendes til
+   */
+  bookingSubHeaderKommune: string;
+  /**
+   * Du kan likevel bestille time hos
+   */
+  bookingIngenBehandlereInfoFastlege: string;
+  /**
+   * Du kan dessverre ikke bestille time nå.
+   */
+  bookingIngenBehandlereInfoPrimaer: string;
+  /**
+   * Du kan likevel bestille time hos
+   */
+  bookingEnBehandlerInfo: string;
+  /**
    * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
    */
   bookingEmptyTextHelsetilbudVirksomhet: string;
@@ -480,13 +516,13 @@ export type HNDialogCommonJS = {
    * Les mer om behandlingsfrister
    */
   afterDeadlineMoreHelpText: string;
-  /** 
-  * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
-  */
+  /**
+   * Hvis du avlyser mindre enn ett døgn før timen, kan behandler likevel fakturere deg.
+   */
   appointmentCancelHelsestasjonDescription: string;
-  /** 
-  * Oppmøtested:
-  */
+  /**
+   * Oppmøtested:
+   */
   appointmentlistelementMeetup: string;
   /**
    * Last opp fil
@@ -636,9 +672,9 @@ export type HNDialogCommonJS = {
    * Gå direkte til vaksinasjonsbestilling
    */
   bestillVaksinasjonVelgerAnnet: string;
-  /** 
-  * Du må fylle ut emne
-  */
+  /**
+   * Du må fylle ut emne
+   */
   emneError: string;
   /**
    * Emne
@@ -784,13 +820,13 @@ export type HNDialogCommonJS = {
    * Veterinær
    */
   healthcareProfessionalVeterinaer: string;
-  /** 
-  * Teknisk feil hos mottaker. Kontakt mottaker på annen måte.
-  */
+  /**
+   * Teknisk feil hos mottaker. Kontakt mottaker på annen måte.
+   */
   invalidCertificateMessage: string;
-  /** 
-  * E-konsultasjon
-  */
+  /**
+   * E-konsultasjon
+   */
   meldingsvelgerEkonsultasjon: string;
   /**
    * Still et helserelatert spørsmål til din helseperson.
@@ -884,9 +920,9 @@ export type HNDialogCommonJS = {
    * Det finnes endringer som ikke er lagret
    */
   pendingChangesSubmitDiscardHeading: string;
-  /** 
-  * Ansvarlig jordmor
-  */
+  /**
+   * Ansvarlig jordmor
+   */
   roleToPatientAnsvarligJordmor: string;
   /**
    * Behandlingsansvarlig lege
@@ -972,17 +1008,17 @@ export type HNDialogCommonJS = {
    * Valgt kalendertime
    */
   selectedEventIconLabel: string;
-  /** 
-  * OK
-  */
+  /**
+   * OK
+   */
   submitConfirmationButtonText: string;
   /**
    * Takk for din henvendelse.
    */
   submitConfirmationDescription: string;
-  /** 
-  * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
-  */
+  /**
+   * Meldingen er lagret som et utkast. Du finner utkastet igjen i innboksen.
+   */
   submitConfirmationDraftDescription: string;
   /**
    * Melding lagret som utkast
@@ -1024,9 +1060,9 @@ export type HNDialogCommonJS = {
    * Til {0}
    */
   velgBehandlerTilHeader: string;
-  /** 
-  * Fortsett senere
-  */
+  /**
+   * Fortsett senere
+   */
   conversationSubmitDraftButtonText: string;
   /**
    * Sjekk at alt er riktig utfylt
@@ -1224,30 +1260,6 @@ export type HNDialogCommonJS = {
    * Timer på video
    */
   videoEventsHeading: string;
-  /**
-   * /veileder?Query=Questionnaire%2F310
-   */
-  koronatestVeiviserUrl: string;
-  /**
-   * /veileder?Query=Questionnaire%2F314
-   */
-  koronavaksineVeiviserUrl: string;
-  /**
-   * Neste
-   */
-  velgBehandlerNeste: string;
-  /**
-   * Avbryt
-   */
-  velgBehandlerAvbryt: string;
-  /**
-   * Bestill time hos
-   */
-  bookingHeaderKommune: string;
-  /**
-   * Timebestilling vil sendes til
-   */
-  bookingSubHeaderKommune: string;
 };
 
 export type HNMinHelseByttFastlegeJS = {
@@ -8740,6 +8752,18 @@ export type HNMinHelseDialog = {
    */
   varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
   /**
+   * For mer informasjon om avtalen, logg inn på helsenorge.no.
+   */
+  downloadCalendar_HnTimeavtaleAppointment_Description: string;
+  /**
+   * Time hos {0} for {1}
+   */
+  downloadCalendar_HnTimeavtaleAppointment_Summary: string;
+  /**
+   * Videotime hos {0} for {1}
+   */
+  downloadCalendar_HnTimeavtaleVideoAppointment_Summary: string;
+  /**
    * Sending av melding har feilet
    */
   varselmeny_NegativAppRec_Emne: string;
@@ -11393,6 +11417,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   actionSkjulFullmektige: string;
   /**
+   * Oppslag gjort av helsepersonell i dette dokumentet
+   */
+  dokumenter_deling_logg_table_caption: string;
+  /**
    * Skjult for fullmakt
    */
   skjult_for_fullmektige: string;
@@ -11400,10 +11428,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Handlingen mislyktes. Prøv igjen senere.
    */
   fullmektig_error_title: string;
-  /**
-   * Oppslag gjort av helsepersonell i dette dokumentet
-   */
-  dokumenter_deling_logg_table_caption: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
@@ -18660,6 +18684,10 @@ export type HNMinHelsePasientreiserJS = {
    */
   overview_klage_ulesteVedtak: string;
   /**
+   * Distanse må være mellom 0 og 3000km.
+   */
+  distanse_ugyldig: string;
+  /**
    * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.
    */
   reiseoversikt_refusjonsdetaljer_FORESATT_minstetakstsone: string;
@@ -24860,10 +24888,6 @@ export type HNMinHelsePasientreiserJS = {
    * Reiselengden kan ikke være over 3000 km
    */
   reiselengder_max_error: string;
-  /**
-   * Distanse må være mellom 0 og 3000km.
-   */
-  distanse_ugyldig: string;
 };
 
 export type HNMinHelsePasientReiserStrings = {
@@ -26815,7 +26839,7 @@ export type HNMinHelseSkjemautfyller = {
    */
   sidebar_titleVeileder: string;
   /**
-   * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
+   * Ta kontakt med Veiledning helsenorge.no på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
    */
   sidebarSectionText_Veileder_Veiledning_KontaktHelsenorge: string;
   /**
@@ -26899,7 +26923,7 @@ export type HNMinHelseSkjemautfyller = {
    */
   sidebarSectionText_Alternativer_Representasjon: string;
   /**
-   * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
+   * Ta kontakt med Veiledning helsenorge.no på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
    */
   sidebarSectionText_Veiledning_KontaktHelsenorge: string;
   /**
