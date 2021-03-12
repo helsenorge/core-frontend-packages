@@ -9,6 +9,7 @@ import {
   createHeaders,
   erHelsenorge,
   getTjenesterUrl,
+  getTjenesterApiUrl,
   getHelsenorgeUrl,
 } from '../hn-proxy-service';
 import * as mockLogger from '../logger';
@@ -344,11 +345,11 @@ describe('erHelsenorge', () => {
   });
 });
 
-describe('getTjenesterUrl', () => {
+describe('Gitt at __TjenesterUrl__ skal brukes', () => {
   const tjenesterUrl = 'https://tjenesterUrl.no';
   const undefinedUrl = '';
 
-  describe('Når tjenesterUrl er definert', () => {
+  describe('Når __TjenesterUrl__ er definert', () => {
     it('Så returneres adressen til tjenesten', () => {
       const HN = {
         Rest: {
@@ -363,7 +364,7 @@ describe('getTjenesterUrl', () => {
     });
   });
 
-  describe('Når tjenesterUrl ikke er definert', () => {
+  describe('Når __TjenesterUrl__ ikke er definert', () => {
     it('Så returneres en tom streng', () => {
       const HN = {
         Rest: {
@@ -379,11 +380,48 @@ describe('getTjenesterUrl', () => {
   });
 });
 
-describe('getHelsenorgeUrl', () => {
+describe('Gitt at __TjenesterApiUrl__ skal brukes', () => {
+  const tjenesterApiUrl = 'https://tjenesterUrl.no';
+  const proxyName = 'Behandling';
+  const endPoint = 'api/v1/Behandlinger';
+  const undefinedUrl = '';
+
+  describe('Når __TjenesterApiUrl__ er definert', () => {
+    it('så skal den returnere adressen', () => {
+      const HN = {
+        Rest: {
+          __TjenesterApiUrl__: tjenesterApiUrl,
+        },
+      };
+      const originalWindowHN = global.window['HN'];
+      global.window['HN'] = HN;
+      const tjenesteUrl = getTjenesterApiUrl(proxyName, endPoint);
+      expect(tjenesteUrl).toBe(`${tjenesterApiUrl}/proxy/${proxyName}/${endPoint}`);
+      global.window['HN'] = originalWindowHN;
+    });
+  });
+
+  describe('Når __TjenesterApiUrl__ ikke er definert', () => {
+    it('så skal det kun returneres proxy med proxyname og endpoint', () => {
+      const HN = {
+        Rest: {
+          __TjenesterApiUrl__: undefined,
+        },
+      };
+      const originalWindowHN = global.window['HN'];
+      global.window['HN'] = HN;
+      const tjenesteUrl = getTjenesterApiUrl('Behandling', 'api/v1/Behandlinger');
+      expect(tjenesteUrl).toBe(`${undefinedUrl}/proxy/${proxyName}/${endPoint}`);
+      global.window['HN'] = originalWindowHN;
+    });
+  });
+});
+
+describe('Gitt at __HelseNorgeUrl__ skal brukes', () => {
   const helsenorgeUrl = 'https://helsenorge.no';
   const undefinedhelsenorgeUrl = '';
 
-  describe('Når getHelsenorgeUrl er definert', () => {
+  describe('Når __HelseNorgeUrl__ er definert', () => {
     it('Så returneres adressen til API sin adresse', () => {
       const HN = {
         Rest: {
@@ -398,7 +436,7 @@ describe('getHelsenorgeUrl', () => {
     });
   });
 
-  describe('Når getHelsenorgeUrl ikke er definert', () => {
+  describe('Når __HelseNorgeUrl__ ikke er definert', () => {
     it('Så returneres en tom streng', () => {
       const HN = {
         Rest: {

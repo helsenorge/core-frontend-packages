@@ -43,8 +43,9 @@ export const erTjenester = () => {
  * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
  * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
  */
-const getTjenesterApiUrl = (proxyName: string, endpoint: string): string => {
-  return `${HN.Rest.__TjenesterApiUrl__}/proxy/${proxyName}/${endpoint}`;
+export const getTjenesterApiUrl = (proxyName: string, endpoint: string): string => {
+  const apiUrl = HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? HN.Rest.__TjenesterApiUrl__ : '';
+  return `${apiUrl}/proxy/${proxyName}/${endpoint}`;
 };
 
 /**
