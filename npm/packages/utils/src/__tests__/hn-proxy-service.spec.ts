@@ -380,14 +380,14 @@ describe('getTjenesterUrl', () => {
   });
 });
 
-describe('getTjenesterApiUrl', () => {
+describe('Gitt at __TjenesterApiUrl__', () => {
   const tjenesterApiUrl = 'https://tjenesterUrl.no';
   const proxyName = 'Behandling';
   const endPoint = 'api/v1/Behandlinger';
   const undefinedUrl = '';
 
-  describe('Når getTjenesterApiUrl er definert', () => {
-    it('Så skal den returneres adressen', () => {
+  describe('er definert', () => {
+    it('så skal den returneres adressen', () => {
       const HN = {
         Rest: {
           __TjenesterApiUrl__: tjenesterApiUrl,
@@ -401,8 +401,8 @@ describe('getTjenesterApiUrl', () => {
     });
   });
 
-  describe('Når getTjenesterApiUrl ikke er definert', () => {
-    it('Så skal den returneres adressen', () => {
+  describe('ikke er definert', () => {
+    it('så skal det kun returneres proxy med proxyname og endpoint', () => {
       const HN = {
         Rest: {
           __TjenesterApiUrl__: undefined,
