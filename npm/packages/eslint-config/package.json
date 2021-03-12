@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "18.3.0-samvalgbeta",
+  "version": "19.0.0-beta07",
   "main": "./index.js",
   "maintainers": [
     "ROX"
