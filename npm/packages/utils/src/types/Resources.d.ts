@@ -26839,7 +26839,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   sidebar_titleVeileder: string;
   /** 
-  * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
+  * Ta kontakt med Veiledning helsenorge.no på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
   */
   sidebarSectionText_Veileder_Veiledning_KontaktHelsenorge: string;
   /** 
@@ -26923,7 +26923,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   sidebarSectionText_Alternativer_Representasjon: string;
   /** 
-  * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
+  * Ta kontakt med Veiledning helsenorge.no på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
   */
   sidebarSectionText_Veiledning_KontaktHelsenorge: string;
   /** 
