@@ -17303,11 +17303,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeVideoTime_EmailMessage_Body_Self: string;
   /** 
-  * Påminnelse om videotime med fastlegen
+  * Påminnelse om videotime med ${ActorName}
   */
   paminnelseFastlegeVideoTime_EmailMessage_Subject_Representation: string;
   /** 
-  * Påminnelse om videotime med fastlegen
+  * Påminnelse om videotime med ${ActorName}
   */
   paminnelseFastlegeVideoTime_EmailMessage_Subject_Self: string;
   /** 
