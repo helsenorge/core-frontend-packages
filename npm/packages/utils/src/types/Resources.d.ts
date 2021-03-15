@@ -16663,7 +16663,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName}, husk timeavtalen med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * ${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
   paminnelseFastlegeTime_EmailMessage_Body_Self: string;
   /** 
