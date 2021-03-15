@@ -16651,27 +16651,27 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   newAppointment_EmailMessage_Body_Representation: string;
   /**
-   * Husk at ${FirstName} har en timeavtale med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * Husk at ${FirstName} har en timeavtale med $ActorName ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_TextMessage_Body_Representation: string;
   /**
-   * Husk at ${FirstName} har en timeavtale med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * Husk at ${FirstName} har en timeavtale med {ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName}, husk timeavtalen med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * ${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_TextMessage_Body_Self: string;
   /**
-   * ${FirstName}, husk timeavtalen med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * ${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_EmailMessage_Body_Self: string;
   /**
-   * Påminnelse om timeavtale med fastlegen
+   * Påminnelse om timeavtale med ${ActorName}
    */
   paminnelseFastlegeTime_EmailMessage_Subject_Representation: string;
   /**
-   * Påminnelse om timeavtale med fastlegen
+   * Påminnelse om timeavtale med $ActorName
    */
   paminnelseFastlegeTime_EmailMessage_Subject_Self: string;
   /**
@@ -17483,11 +17483,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   nasjonalBreddingNyTime_TextMessage_Body_Self: string;
   /**
-   * Påminnelse om timeavtale med fastlegen
+   * Påminnelse om timeavtale med $ActorName
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self: string;
   /**
-   * Påminnelse om timeavtale med fastlegen
+   * Påminnelse om timeavtale med $ActorName
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation: string;
   /**
