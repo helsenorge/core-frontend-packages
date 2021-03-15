@@ -4371,7 +4371,7 @@
     "nasjonalBreddingNyTime_TextMessage_Body_Representation": "${FirstName} har fått time hos ${ActorName}. Logg inn på helsenorge.no for å se mer.",
     "nasjonalBreddingNyTime_EmailMessage_Body_Representation": "${FirstName} har fått time hos ${ActorName}. Logg inn på helsenorge.no for å se mer.",
     "nasjonalBreddingNyTime_TextMessage_Body_Self": "${FirstName}, du har fått time hos ${ActorName}. Logg inn på helsenorge.no for å se mer.",
-    "paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self": "Påminnelse om timeavtale med fastlegen",
+    "paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self": "Påminnelse om timeavtale med $ActorName",
     "paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation": "Påminnelse om timeavtale med $ActorName",
     "nyVideotime_EmailMessage_Body_Representation": "${FirstName} har fått en ny videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.",
     "nyVideotime_EmailMessage_Body_Self": "${FirstName}, du har fått en ny videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.",

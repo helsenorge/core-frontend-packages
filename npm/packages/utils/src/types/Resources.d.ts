@@ -17483,7 +17483,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingNyTime_TextMessage_Body_Self: string;
   /** 
-  * Påminnelse om timeavtale med fastlegen
+  * Påminnelse om timeavtale med $ActorName
   */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self: string;
   /** 
