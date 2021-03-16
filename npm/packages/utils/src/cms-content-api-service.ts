@@ -1,12 +1,26 @@
 import { trackError } from './adobe-analytics';
 import { warn } from './logger';
-import { getHelsenorgeUrl } from './hn-proxy-service';
+import { getHelsenorgeUrl } from './hn-service';
 
 /**
  * Returnerer __CmsContentApiUrl__ fra window.HN.Rest
  */
 export const getContentApiUrl = (): string => {
   return !!window.HN && !!window.HN.Rest && !!window.HN.Rest.__CmsContentApiUrl__ ? window.HN.Rest.__CmsContentApiUrl__ : '';
+};
+
+/**
+ * Returnerer __CmsContentApiPreviewUrl__ fra window.HN.Rest
+ */
+export const getContentApiPreviewUrl = (): string => {
+  return !!window.HN && !!window.HN.Rest && !!window.HN.Rest.__CmsContentApiPreviewUrl__ ? window.HN.Rest.__CmsContentApiPreviewUrl__ : '';
+};
+
+/**
+ * Returnerer true dersom URLen man står på inneholder content-api-preview=true
+ */
+export const enableContentApiPreview = (): boolean => {
+  return !!window && window.location.href.indexOf('content-api-preview=true') !== -1;
 };
 
 /**
@@ -61,16 +75,23 @@ export const checkStatus = (response: Response): Promise<{}> | undefined => {
 /**
  * Henter JSON fra content-apiet med fetch(). Returnerer et Promise.
  * Logger eventuelle feil med warn().
- * @param endpoint command strengen som sendes mot content-apiet
+ * @param cmd command strengen som sendes mot content-apiet
  * @param params object med parameters { param1 : 'myparam1', param2: 'myparam2'}
  * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
 export const get = (endpoint: string, params?: object): Promise<{} | Response | undefined> => {
-  const apiUrl = getContentApiUrl() + '/contentapi/internal/v1/' + endpoint + parseParams(params);
+  const preview = enableContentApiPreview();
+  const hostName = preview ? getContentApiPreviewUrl() : getContentApiUrl();
+  const credentials = preview ? 'include' : 'omit';
+  const headers = createHeaders();
+  if (preview) {
+    headers.append('X-Preview', 'true');
+  }
+  const apiUrl = hostName + '/contentapi/internal/v1/' + endpoint + parseParams(params);
   return fetch(apiUrl, {
     method: 'get',
-    credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
-    headers: createHeaders(),
+    credentials: credentials, // Må settes til omit for å kunne bruke wildcard for domener i CORS
+    headers: headers,
   })
     .then(checkStatus)
     .catch(error => {
@@ -89,14 +110,13 @@ export const get = (endpoint: string, params?: object): Promise<{} | Response | 
  * Skal kun benyttes for åpne api-kall til tjenester der det er satt opp proxy (SOT).
  * Returnerer et Promise.
  * Logger eventuelle feil med warn().
- * @param proxyName navn på api-et/løsningsområdet. Eks pasientjournal eller velgbehandlingssted
- * @param endpoint  path for endepunktet inkludert versjon. Eks: api/v1/Behandlinger eller v1/Behandlinger
+ * @param cmd command strengen som sendes mot content-apiet
  * @param params object med parameters { param1 : 'myparam1', param2: 'myparam2'}
  * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
-export const getHelsenorgeProxy = (proxyName: string, endpoint: string, params?: object): Promise<{} | Response | undefined> => {
-  const apiUrl = getHelsenorgeUrl() + '/proxy/' + proxyName + '/' + endpoint + parseParams(params);
 
+export const getHelsenorgeProxy = (endpoint: string, proxyName: string, params?: object): Promise<{} | Response | undefined> => {
+  const apiUrl = getHelsenorgeUrl() + '/proxy/' + proxyName + '/api/v1/' + endpoint + parseParams(params);
   return fetch(apiUrl, {
     method: 'get',
     credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
