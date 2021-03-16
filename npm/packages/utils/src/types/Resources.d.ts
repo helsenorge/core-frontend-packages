@@ -16655,7 +16655,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeTime_TextMessage_Body_Representation: string;
   /** 
-  * Husk at ${FirstName} har en timeavtale med {ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
   paminnelseFastlegeTime_EmailMessage_Body_Representation: string;
   /** 
@@ -17483,11 +17483,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingNyTime_TextMessage_Body_Self: string;
   /** 
-  * Påminnelse om timeavtale med $ActorName
+  * Påminnelse om timeavtale med ${ActorName}
   */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self: string;
   /** 
-  * Påminnelse om timeavtale med $ActorName
+  * Påminnelse om timeavtale med ${ActorName}
   */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation: string;
   /** 
