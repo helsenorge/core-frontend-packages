@@ -27,6 +27,48 @@ describe('CMS content API service', () => {
     });
   });
 
+  describe('Gitt at getContentApiPreviewUrl kalles', () => {
+    describe('Når __CmsContentApiPreviewUrl__ er definert i HN objektet', () => {
+      it('Så returnerer den riktig url', () => {
+        const HN = {
+          Rest: {
+            __CmsContentApiPreviewUrl__: 'https://redaktordomene',
+          },
+        };
+        const originalWindowHN = global.window['HN'];
+        global.window['HN'] = HN;
+        const url = contentAPIService.getContentApiPreviewUrl();
+        expect(url).toEqual('https://redaktordomene');
+        global.window['HN'] = originalWindowHN;
+      });
+    });
+  });
+
+  describe('Gitt at enableContentApiPreview kalles', () => {
+    describe('Når URLen inneholder content-api-preview=true', () => {
+      it('Så returnerer den true', () => {
+        const originalLocation = window.location;
+        delete window.location;
+        window.location = new URL('https://tjenester.helsenorge.no/samvalg/?content-api-preview=true');
+
+        const enableContentApiPreview = contentAPIService.enableContentApiPreview();
+        expect(enableContentApiPreview).toEqual(true);
+        window.location = originalLocation;
+      });
+    });
+    describe('Når URLen ikke inneholder content-api-preview=true', () => {
+      it('Så returnerer den false', () => {
+        const originalLocation = window.location;
+        delete window.location;
+        window.location = new URL('https://tjenester.helsenorge.no/samvalg/');
+
+        const enableContentApiPreview = contentAPIService.enableContentApiPreview();
+        expect(enableContentApiPreview).toEqual(false);
+        window.location = originalLocation;
+      });
+    });
+  });
+
   describe('Gitt at createHeaders kalles', () => {
     it('Så returnerer den riktig Header objekt', () => {
       const headers = contentAPIService.createHeaders();
@@ -139,6 +181,45 @@ describe('CMS content API service', () => {
         expect(mockLogger.warn).toHaveBeenCalledWith(
           'Kall til content-apiet feilet: /contentapi/internal/v1/entrypoint. Feilmelding: {"error":{"message":"Fant ikke siden"}}'
         );
+      });
+    });
+  });
+  describe('Gitt at get kalles i forhåndsvisningsmodus', () => {
+    describe('Når fetch kalles', () => {
+      it('Så sendes det riktig headers, parameters og den går mot riktig entrypoint', async () => {
+        const originalLocation = window.location;
+        delete window.location;
+        window.location = new URL('https://tjenester.helsenorge.no/samvalg/?content-api-preview=true');
+
+        const HN = {
+          Rest: {
+            __CmsContentApiPreviewUrl__: 'https://redaktordomene',
+          },
+        };
+        const originalWindowHN = global.window['HN'];
+        global.window['HN'] = HN;
+        const mockSuccessResponse = {
+          responsetest: {
+            lorem: 'ipsum',
+          },
+        };
+        const response = new Response(JSON.stringify(mockSuccessResponse), {
+          headers: contentAPIService.createHeaders(),
+          status: 200,
+          statusText: 'OK',
+        });
+        const mockFetchPromise = Promise.resolve(response);
+        const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+
+        await contentAPIService.get('samvalgverktoypage');
+
+        await expect(fetchMock).toBeCalledWith('https://redaktordomene/contentapi/internal/v1/samvalgverktoypage', {
+          credentials: 'include',
+          headers: { _headers: { 'x-preview': ['true'], accept: ['application/json'], 'content-type': ['application/json'] } },
+          method: 'get',
+        });
+        global.window['HN'] = originalWindowHN;
+        window.location = originalLocation;
       });
     });
   });
