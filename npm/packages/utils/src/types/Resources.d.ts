@@ -1045,7 +1045,7 @@ export type HNDialogCommonJS = {
   */
   unavailableFastlegeHeader: string;
   /** 
-  * Kontakt tjenesten hvis du har noen spørsmål.
+  * Kontakt eventuelt mottaker på telefon eller annen måte.
   */
   unavailableHelsetilbudDescription: string;
   /** 
@@ -8369,7 +8369,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsVideoUserManualLinkText: string;
   /** 
-  * Kontakt tjenesten hvis du har noen spørsmål.
+  * Kontakt eventuelt mottaker på telefon eller annen måte.
   */
   commonUnavailableHelsetilbudDescription: string;
   /** 
