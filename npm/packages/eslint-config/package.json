@@ -29,6 +29,5 @@
     "eslint-plugin-react": "7.17.0",
     "prettier": "1.19.1",
     "pretty-quick": "2.0.1"
-  },
-  "gitHead": "929884eef85f6dffd3be37574f1187e034d51ea8"
+  }
 }
