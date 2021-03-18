@@ -10,6 +10,20 @@ export const getContentApiUrl = (): string => {
 };
 
 /**
+ * Returnerer __CmsContentApiPreviewUrl__ fra window.HN.Rest
+ */
+export const getContentApiPreviewUrl = (): string => {
+  return !!window.HN && !!window.HN.Rest && !!window.HN.Rest.__CmsContentApiPreviewUrl__ ? window.HN.Rest.__CmsContentApiPreviewUrl__ : '';
+};
+
+/**
+ * Returnerer true dersom URLen man står på inneholder content-api-preview=true
+ */
+export const enableContentApiPreview = (): boolean => {
+  return !!window && window.location.href.indexOf('content-api-preview=true') !== -1;
+};
+
+/**
  * Oppretter ny Header objekt med Accept og Content-type satt til application/json
  */
 export const createHeaders = (): Headers => {
@@ -66,11 +80,18 @@ export const checkStatus = (response: Response): Promise<{}> | undefined => {
  * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
 export const get = (endpoint: string, params?: object): Promise<{} | Response | undefined> => {
-  const apiUrl = getContentApiUrl() + '/contentapi/internal/v1/' + endpoint + parseParams(params);
+  const preview = enableContentApiPreview();
+  const hostName = preview ? getContentApiPreviewUrl() : getContentApiUrl();
+  const credentials = preview ? 'include' : 'omit';
+  const headers = createHeaders();
+  if (preview) {
+    headers.append('X-Preview', 'true');
+  }
+  const apiUrl = hostName + '/contentapi/internal/v1/' + endpoint + parseParams(params);
   return fetch(apiUrl, {
     method: 'get',
-    credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
-    headers: createHeaders(),
+    credentials: credentials, // Må settes til omit for å kunne bruke wildcard for domener i CORS
+    headers: headers,
   })
     .then(checkStatus)
     .catch(error => {
