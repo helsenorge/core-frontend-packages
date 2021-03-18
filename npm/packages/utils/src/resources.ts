@@ -191,7 +191,7 @@ export const getProxyResx = (
   success: (data: ResourceItem) => void,
   failure?: (error?: TextMessage) => void
 ): void => {
-  let getMethod: (url: string, proxyName: string, params?: object) => Promise<{} | Response | undefined | null>;
+  let getMethod: (proxyName: string, endpoint: string, params?: object) => Promise<{} | Response | undefined | null>;
 
   if (erHelsenorge()) {
     getMethod = getHelsenorgeProxy;
@@ -199,7 +199,7 @@ export const getProxyResx = (
     getMethod = getTjenesterProxy;
   }
 
-  getMethod('UIResource', 'sot', {
+  getMethod('sot', 'api/v1/UIResource', {
     Culture: culture,
     Filename: name,
     Rev: getVersion() || new Date().getDate(),

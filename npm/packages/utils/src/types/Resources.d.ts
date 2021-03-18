@@ -449,6 +449,42 @@ export type HNDialogCommonJS = {
    */
   healthcareProfessionalJordmor: string;
   /**
+   * /veileder?Query=Questionnaire%2F310
+   */
+  koronatestVeiviserUrl: string;
+  /**
+   * /veileder?Query=Questionnaire%2F314
+   */
+  koronavaksineVeiviserUrl: string;
+  /**
+   * Neste
+   */
+  velgBehandlerNeste: string;
+  /**
+   * Avbryt
+   */
+  velgBehandlerAvbryt: string;
+  /**
+   * Bestill time hos
+   */
+  bookingHeaderKommune: string;
+  /**
+   * Timebestilling vil sendes til
+   */
+  bookingSubHeaderKommune: string;
+  /**
+   * Du kan likevel bestille time hos
+   */
+  bookingIngenBehandlereInfoFastlege: string;
+  /**
+   * Du kan dessverre ikke bestille time nå.
+   */
+  bookingIngenBehandlereInfoPrimaer: string;
+  /**
+   * Du kan likevel bestille time hos
+   */
+  bookingEnBehandlerInfo: string;
+  /**
    * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
    */
   bookingEmptyTextHelsetilbudVirksomhet: string;
@@ -1009,7 +1045,7 @@ export type HNDialogCommonJS = {
    */
   unavailableFastlegeHeader: string;
   /**
-   * Kontakt tjenesten hvis du har noen spørsmål.
+   * Kontakt eventuelt mottaker på telefon eller annen måte.
    */
   unavailableHelsetilbudDescription: string;
   /**
@@ -1224,30 +1260,6 @@ export type HNDialogCommonJS = {
    * Timer på video
    */
   videoEventsHeading: string;
-  /**
-   * /veileder?Query=Questionnaire%2F310
-   */
-  koronatestVeiviserUrl: string;
-  /**
-   * /veileder?Query=Questionnaire%2F314
-   */
-  koronavaksineVeiviserUrl: string;
-  /**
-   * Neste
-   */
-  velgBehandlerNeste: string;
-  /**
-   * Avbryt
-   */
-  velgBehandlerAvbryt: string;
-  /**
-   * Bestill time hos
-   */
-  bookingHeaderKommune: string;
-  /**
-   * Timebestilling vil sendes til
-   */
-  bookingSubHeaderKommune: string;
 };
 
 export type HNMinHelseByttFastlegeJS = {
@@ -8357,7 +8369,7 @@ behandlingsstedet ved eventuelle spørsmål.
    */
   appointmentDetailsVideoUserManualLinkText: string;
   /**
-   * Kontakt tjenesten hvis du har noen spørsmål.
+   * Kontakt eventuelt mottaker på telefon eller annen måte.
    */
   commonUnavailableHelsetilbudDescription: string;
   /**
@@ -8739,6 +8751,18 @@ export type HNMinHelseDialog = {
    * Din time hos {0} {1} er registrert som ikke møtt
    */
   varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
+  /**
+   * For mer informasjon om avtalen, logg inn på helsenorge.no.
+   */
+  downloadCalendar_HnTimeavtaleAppointment_Description: string;
+  /**
+   * Time hos {0} for {1}
+   */
+  downloadCalendar_HnTimeavtaleAppointment_Summary: string;
+  /**
+   * Videotime hos {0} for {1}
+   */
+  downloadCalendar_HnTimeavtaleVideoAppointment_Summary: string;
   /**
    * Sending av melding har feilet
    */
@@ -11393,6 +11417,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   actionSkjulFullmektige: string;
   /**
+   * Oppslag gjort av helsepersonell i dette dokumentet
+   */
+  dokumenter_deling_logg_table_caption: string;
+  /**
    * Skjult for fullmakt
    */
   skjult_for_fullmektige: string;
@@ -11400,10 +11428,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Handlingen mislyktes. Prøv igjen senere.
    */
   fullmektig_error_title: string;
-  /**
-   * Oppslag gjort av helsepersonell i dette dokumentet
-   */
-  dokumenter_deling_logg_table_caption: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
@@ -16627,27 +16651,27 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   newAppointment_EmailMessage_Body_Representation: string;
   /**
-   * Husk at ${FirstName} har en timeavtale med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_TextMessage_Body_Representation: string;
   /**
-   * Husk at ${FirstName} har en timeavtale med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName}, husk timeavtalen med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * ${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_TextMessage_Body_Self: string;
   /**
-   * ${FirstName}, husk timeavtalen med fastlegen ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * ${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_EmailMessage_Body_Self: string;
   /**
-   * Påminnelse om timeavtale med fastlegen
+   * Påminnelse om timeavtale med ${ActorName}
    */
   paminnelseFastlegeTime_EmailMessage_Subject_Representation: string;
   /**
-   * Påminnelse om timeavtale med fastlegen
+   * Påminnelse om timeavtale med ${ActorName}
    */
   paminnelseFastlegeTime_EmailMessage_Subject_Self: string;
   /**
@@ -17271,19 +17295,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   paminnelseFastlegeVideoTime_TextMessage_Body_Self: string;
   /**
-   * Husk at ${FirstName} har en videotime med fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
+   * Husk at ${FirstName} har en videotime med ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
    */
   paminnelseFastlegeVideoTime_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName}, husk videotimen med fastlegen ${DateTime}. Logg inn på helsenorge.no for å se mer.
+   * ${FirstName}, husk videotimen med ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
    */
   paminnelseFastlegeVideoTime_EmailMessage_Body_Self: string;
   /**
-   * Påminnelse om videotime med fastlegen
+   * Påminnelse om videotime med ${ActorName}
    */
   paminnelseFastlegeVideoTime_EmailMessage_Subject_Representation: string;
   /**
-   * Påminnelse om videotime med fastlegen
+   * Påminnelse om videotime med ${ActorName}
    */
   paminnelseFastlegeVideoTime_EmailMessage_Subject_Self: string;
   /**
@@ -17459,11 +17483,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   nasjonalBreddingNyTime_TextMessage_Body_Self: string;
   /**
-   * Påminnelse om timeavtale med fastlegen
+   * Påminnelse om timeavtale med ${ActorName}
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self: string;
   /**
-   * Påminnelse om timeavtale med fastlegen
+   * Påminnelse om timeavtale med ${ActorName}
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation: string;
   /**
@@ -18659,6 +18683,10 @@ export type HNMinHelsePasientreiserJS = {
    * Du må åpne og lese vedtaksbrevet, før du kan sende en klage. Vær oppmerksom på at fristen for å klage er fire uker fra du mottok vedtak i saken din.
    */
   overview_klage_ulesteVedtak: string;
+  /**
+   * Distanse må være mellom 0 og 3000km.
+   */
+  distanse_ugyldig: string;
   /**
    * En eller flere av reisene er innenfor et minstetakstsone. Reiseutgifter dekkes ikke når offentlig transport til lokal minstetakst eller enhetstakst kunne vært brukt på reisen. Unntak fra dette er hvis reisen gjelder øyeblikkelig hjelp, det er dokumentert at barnets helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen, eller det ikke finnes et tilbud om offentlig transport på strekningen. Om dette gjelder barnet, må du gå tilbake og velge søknad med tilleggsutgifter.
    */
@@ -24860,10 +24888,6 @@ export type HNMinHelsePasientreiserJS = {
    * Reiselengden kan ikke være over 3000 km
    */
   reiselengder_max_error: string;
-  /**
-   * Distanse må være mellom 0 og 3000km.
-   */
-  distanse_ugyldig: string;
 };
 
 export type HNMinHelsePasientReiserStrings = {
@@ -26815,7 +26839,7 @@ export type HNMinHelseSkjemautfyller = {
    */
   sidebar_titleVeileder: string;
   /**
-   * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
+   * Ta kontakt med Veiledning helsenorge.no på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
    */
   sidebarSectionText_Veileder_Veiledning_KontaktHelsenorge: string;
   /**
@@ -26899,7 +26923,7 @@ export type HNMinHelseSkjemautfyller = {
    */
   sidebarSectionText_Alternativer_Representasjon: string;
   /**
-   * Ta kontakt med Veiledning Helsenorge på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
+   * Ta kontakt med Veiledning helsenorge.no på 23 32 70 00 hvis du har spørsmål om hvordan du bruker Helsenorge.
    */
   sidebarSectionText_Veiledning_KontaktHelsenorge: string;
   /**
