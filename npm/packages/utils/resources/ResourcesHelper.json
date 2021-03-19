@@ -9,7 +9,7 @@
   "HNCoreFrontendMicrowebHeaderFooter": { 
     "headerMenuProfileLinksFullmakterUrl": "/fullmakt",
     "headerMenuProfileLinksFullmakterTitle": "Fullmakter",
-    "headerMenuProfileLinksLoggOverBrukTitle": "Logg over bruk",
+    "headerMenuProfileLinksLoggOverBrukTitle": "Bruk og tilganger",
     "headerMenuProfileLinksLoggOverBrukUrl": "/logg-over-bruk-av-tjenester",
     "headerButtonLoginUrl": "/auth/signin",
     "headerButtonLogoutUrl": "/auth/signout",

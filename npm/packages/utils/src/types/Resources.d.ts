@@ -37,7 +37,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuProfileLinksFullmakterTitle: string;
   /** 
-  * Logg over bruk
+  * Bruk og tilganger
   */
   headerMenuProfileLinksLoggOverBrukTitle: string;
   /** 
