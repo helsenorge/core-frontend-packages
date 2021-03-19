@@ -189,7 +189,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   lightbox_Inactivity_Title: string;
   /** 
-  * /logg-over-bruk
+  * /bruk-og-tilganger
   */
   headerMenuProfileLinksLoggOverBrukV2Url: string;
   /** 
