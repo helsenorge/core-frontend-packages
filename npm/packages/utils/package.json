@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "19.1.0-samvalgbeta02",
+  "version": "19.1.0-samvalgbeta03",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -26,7 +26,7 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@helsenorge/core-build": "^19.1.0-samvalgbeta02",
+    "@helsenorge/core-build": "^19.1.0-samvalgbeta03",
     "@helsenorge/designsystem-react": "1.0.0-beta43",
     "@types/react-router-dom": "5.1.5",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
