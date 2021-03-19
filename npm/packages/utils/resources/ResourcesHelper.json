@@ -47,7 +47,7 @@
     "lightbox_Inactivity_DoYouWantToStay": "Vil du fortsatt være innlogget på Helsenorge?",
     "lightbox_Inactivity_Timer": "Du blir automatisk logget ut om {min}:{sec} minutter.",
     "lightbox_Inactivity_Title": "Er du der fortsatt?",
-    "headerMenuProfileLinksLoggOverBrukV2Url": "/logg-over-bruk",
+    "headerMenuProfileLinksLoggOverBrukV2Url": "/bruk-og-tilganger",
     "headerMenuProfileLinksKontaktinformasjonTitle": "Kontaktinformasjon",
     "headerMenuProfileLinksKontaktinformasjonURL": "/kontaktinformasjon",
     "errorInnloggetBruker": "Det oppstod en feil ved henting av data om innlogget bruker.",
