@@ -7740,7 +7740,7 @@
     "page_ventetiderforbehandling_tabell_empty_title": "Vi har ingen behandlingssteder som har registrerte ventetider med angitt filtrering",
     "page_ventetiderforbehandling_tabell_empty_description": "Prøv å endre filtervalg eller ring Veiledning helsenorge.no på telefon 23 32 70 00 og be om å få snakke med en pasientrådgiver for mer informasjon om behandlinger og ventetider."
   },
-  "HNVelgBehandlingssted": { 
+  "HNVelgBehandlingsstedold": { 
     "field_Ventetider_MeldingForBehandling_Title": "Viktig!",
     "field_WaitingTimeNotCalculated_Title": "Ikke beregnet",
     "field_WaitingTimeNotOffered_Title": "Tilbys ikke",
