@@ -37,7 +37,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    */
   headerMenuProfileLinksFullmakterTitle: string;
   /**
-   * Logg over bruk
+   * Bruk og tilganger
    */
   headerMenuProfileLinksLoggOverBrukTitle: string;
   /**
@@ -189,7 +189,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
    */
   lightbox_Inactivity_Title: string;
   /**
-   * /logg-over-bruk
+   * /bruk-og-tilganger
    */
   headerMenuProfileLinksLoggOverBrukV2Url: string;
   /**
@@ -456,6 +456,10 @@ export type HNDialogCommonJS = {
    * /veileder?Query=Questionnaire%2F314
    */
   koronavaksineVeiviserUrl: string;
+  /**
+   * Du kan likevel bestille time hos
+   */
+  bookingEnBehandlerInfoWithWarning: string;
   /**
    * Neste
    */
@@ -11405,18 +11409,6 @@ export type HNMinHelseHealthArchiveStringsJS = {
    */
   lightbox_til_deling_lukkknapp: string;
   /**
-   * Skjult for fullmektig
-   */
-  skjult_for_fullmektig: string;
-  /**
-   * Vis for fullmakt
-   */
-  actionVisFullmektige: string;
-  /**
-   * Skjul for fullmakt
-   */
-  actionSkjulFullmektige: string;
-  /**
    * Oppslag gjort av helsepersonell i dette dokumentet
    */
   dokumenter_deling_logg_table_caption: string;
@@ -11428,6 +11420,18 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Handlingen mislyktes. Prøv igjen senere.
    */
   fullmektig_error_title: string;
+  /**
+   * Skjult for fullmektig
+   */
+  skjult_for_fullmektig: string;
+  /**
+   * Vis for fullmakt
+   */
+  actionVisFullmektige: string;
+  /**
+   * Skjul for fullmakt
+   */
+  actionSkjulFullmektige: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = {
