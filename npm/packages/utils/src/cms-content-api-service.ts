@@ -77,9 +77,10 @@ export const checkStatus = (response: Response): Promise<{}> | undefined => {
  * Logger eventuelle feil med warn().
  * @param endpoint command strengen som sendes mot content-apiet
  * @param params object med parameters { param1 : 'myparam1', param2: 'myparam2'}
+ * @param version setter hvilken versjon av conetnapi som skal kalles (v1/, v2/)
  * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
-export const get = (endpoint: string, params?: object): Promise<{} | Response | undefined> => {
+export const get = (endpoint: string, params?: object, version = 'v1/'): Promise<{} | Response | undefined> => {
   const preview = enableContentApiPreview();
   const hostName = preview ? getContentApiPreviewUrl() : getContentApiUrl();
   const credentials = preview ? 'include' : 'omit';
@@ -87,7 +88,7 @@ export const get = (endpoint: string, params?: object): Promise<{} | Response | 
   if (preview) {
     headers.append('X-Preview', 'true');
   }
-  const apiUrl = hostName + '/contentapi/internal/v1/' + endpoint + parseParams(params);
+  const apiUrl = `${hostName}/contentapi/internal/${version}${endpoint}${parseParams(params)}`;
   return fetch(apiUrl, {
     method: 'get',
     credentials: credentials, // Må settes til omit for å kunne bruke wildcard for domener i CORS
