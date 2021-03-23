@@ -1,5 +1,6 @@
 import * as contentAPIService from '../cms-content-api-service';
 import * as mockLogger from '../logger';
+import { CmsContentApiVersions } from '../types/entities';
 
 jest.mock('../logger.ts', () => ({
   warn: jest.fn(),
@@ -218,6 +219,46 @@ describe('CMS content API service', () => {
           headers: { _headers: { 'x-preview': ['true'], accept: ['application/json'], 'content-type': ['application/json'] } },
           method: 'get',
         });
+
+        global.window['HN'] = originalWindowHN;
+        window.location = originalLocation;
+      });
+    });
+
+    describe('Når fetch kalles med v2 parameter', () => {
+      it('Så sendes det riktig headers, parameters og den går mot riktig entrypoint', async () => {
+        const originalLocation = window.location;
+        delete window.location;
+        window.location = new URL('https://tjenester.helsenorge.no/samvalg/?content-api-preview=true');
+
+        const HN = {
+          Rest: {
+            __CmsContentApiPreviewUrl__: 'https://redaktordomene',
+          },
+        };
+        const originalWindowHN = global.window['HN'];
+        global.window['HN'] = HN;
+        const mockSuccessResponse = {
+          responsetest: {
+            lorem: 'ipsum',
+          },
+        };
+        const response = new Response(JSON.stringify(mockSuccessResponse), {
+          headers: contentAPIService.createHeaders(),
+          status: 200,
+          statusText: 'OK',
+        });
+        const mockFetchPromise = Promise.resolve(response);
+        const fetchMock = jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+
+        await contentAPIService.get('samvalgverktoypage', undefined, CmsContentApiVersions.V2);
+
+        await expect(fetchMock).toBeCalledWith('https://redaktordomene/contentapi/internal/v2/samvalgverktoypage', {
+          credentials: 'include',
+          headers: { _headers: { 'x-preview': ['true'], accept: ['application/json'], 'content-type': ['application/json'] } },
+          method: 'get',
+        });
+
         global.window['HN'] = originalWindowHN;
         window.location = originalLocation;
       });
