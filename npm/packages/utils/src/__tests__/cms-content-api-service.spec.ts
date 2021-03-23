@@ -225,7 +225,7 @@ describe('CMS content API service', () => {
       });
     });
 
-    describe('Når fetch kalles med v2 parameter', () => {
+    describe('Når fetch kalles med v2/ parameter', () => {
       it('Så sendes det riktig headers, parameters og den går mot riktig entrypoint', async () => {
         const originalLocation = window.location;
         delete window.location;
