@@ -16715,7 +16715,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   timeIkkeAvbestilt_EmailMessage_Subject_Self: string;
   /** 
-  * fastlegen
+  * ${ActorName}
   */
   actor_GeneralPractitioner: string;
   /** 
