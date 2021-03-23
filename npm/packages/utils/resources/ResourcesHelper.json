@@ -9,7 +9,7 @@
   "HNCoreFrontendMicrowebHeaderFooter": {
     "headerMenuProfileLinksFullmakterUrl": "/fullmakt",
     "headerMenuProfileLinksFullmakterTitle": "Fullmakter",
-    "headerMenuProfileLinksLoggOverBrukTitle": "Logg over bruk",
+    "headerMenuProfileLinksLoggOverBrukTitle": "Bruk og tilganger",
     "headerMenuProfileLinksLoggOverBrukUrl": "/logg-over-bruk-av-tjenester",
     "headerButtonLoginUrl": "/auth/signin",
     "headerButtonLogoutUrl": "/auth/signout",
@@ -47,7 +47,7 @@
     "lightbox_Inactivity_DoYouWantToStay": "Vil du fortsatt være innlogget på Helsenorge?",
     "lightbox_Inactivity_Timer": "Du blir automatisk logget ut om {min}:{sec} minutter.",
     "lightbox_Inactivity_Title": "Er du der fortsatt?",
-    "headerMenuProfileLinksLoggOverBrukV2Url": "/logg-over-bruk",
+    "headerMenuProfileLinksLoggOverBrukV2Url": "/bruk-og-tilganger",
     "headerMenuProfileLinksKontaktinformasjonTitle": "Kontaktinformasjon",
     "headerMenuProfileLinksKontaktinformasjonURL": "/kontaktinformasjon",
     "errorInnloggetBruker": "Det oppstod en feil ved henting av data om innlogget bruker.",
@@ -119,6 +119,7 @@
     "healthcareProfessionalJordmor": "Jordmor",
     "koronatestVeiviserUrl": "/veileder?Query=Questionnaire%2F310",
     "koronavaksineVeiviserUrl": "/veileder?Query=Questionnaire%2F314",
+    "bookingEnBehandlerInfoWithWarning": "Du kan likevel bestille time hos",
     "velgBehandlerNeste": "Neste",
     "velgBehandlerAvbryt": "Avbryt",
     "bookingHeaderKommune": "Bestill time hos",
@@ -2862,12 +2863,12 @@
     "lightbox_til_deling_description": "Skjemaet er fullført og lagret i Dokumenter. Noen fastleger kan få tilgang til skjemaet dersom du velger å dele det. Hvis du vil at fastlegen skal se skjemaet når du har legetime, kan du forsøke å dele det med han eller henne.",
     "lightbox_til_deling_deleknapp": "Gå til Deling",
     "lightbox_til_deling_lukkknapp": "Lukk",
-    "skjult_for_fullmektig": "Skjult for fullmektig",
-    "actionVisFullmektige": "Vis for fullmakt",
-    "actionSkjulFullmektige": "Skjul for fullmakt",
     "dokumenter_deling_logg_table_caption": "Oppslag gjort av helsepersonell i dette dokumentet",
     "skjult_for_fullmektige": "Skjult for fullmakt",
-    "fullmektig_error_title": "Handlingen mislyktes. Prøv igjen senere."
+    "fullmektig_error_title": "Handlingen mislyktes. Prøv igjen senere.",
+    "skjult_for_fullmektig": "Skjult for fullmektig",
+    "actionVisFullmektige": "Vis for fullmakt",
+    "actionSkjulFullmektige": "Skjul for fullmakt"
   },
   "HNMinHelseHealthArchiveStrings": {
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
