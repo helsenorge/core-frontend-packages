@@ -30918,7 +30918,7 @@ export type HNVelgBehandlingsstedJS = {
   page_ventetiderforbehandling_tabell_empty_description: string;
 };
 
-export type HNVelgBehandlingsstedold = { 
+export type HNVelgBehandlingssted = { 
   /** 
   * Viktig!
   */
