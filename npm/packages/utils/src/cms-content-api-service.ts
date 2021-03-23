@@ -1,6 +1,7 @@
 import { trackError } from './adobe-analytics';
 import { warn } from './logger';
 import { getHelsenorgeUrl } from './hn-proxy-service';
+import { CmsContentApiVersions } from './types/entities';
 
 /**
  * Returnerer __CmsContentApiUrl__ fra window.HN.Rest
@@ -80,7 +81,11 @@ export const checkStatus = (response: Response): Promise<{}> | undefined => {
  * @param version setter hvilken versjon av conetnapi som skal kalles (v1/, v2/)
  * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
-export const get = (endpoint: string, params?: object, version = 'v1/'): Promise<{} | Response | undefined> => {
+export const get = (
+  endpoint: string,
+  params?: object,
+  version: CmsContentApiVersions = CmsContentApiVersions.V1
+): Promise<{} | Response | undefined> => {
   const preview = enableContentApiPreview();
   const hostName = preview ? getContentApiPreviewUrl() : getContentApiUrl();
   const credentials = preview ? 'include' : 'omit';
