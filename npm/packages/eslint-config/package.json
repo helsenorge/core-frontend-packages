@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "19.1.0-samvalgbeta07",
+  "version": "19.1.0",
   "main": "./index.js",
   "maintainers": [
     "ROX"
@@ -29,5 +29,6 @@
     "eslint-plugin-react": "7.17.0",
     "prettier": "1.19.1",
     "pretty-quick": "2.0.1"
-  }
+  },
+  "gitHead": "a06c863196dcfb6cf6b0ade52a40897e70d546ba"
 }
