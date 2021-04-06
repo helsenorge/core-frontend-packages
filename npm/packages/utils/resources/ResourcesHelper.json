@@ -2868,7 +2868,8 @@
     "fullmektig_error_title": "Handlingen mislyktes. Prøv igjen senere.",
     "skjult_for_fullmektig": "Skjult for fullmektig",
     "actionVisFullmektige": "Vis for fullmakt",
-    "actionSkjulFullmektige": "Skjul for fullmakt"
+    "actionSkjulFullmektige": "Skjul for fullmakt",
+    "dokument_filter_innholdTypeValue_5": "Prøvesvar"
   },
   "HNMinHelseHealthArchiveStrings": { 
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
@@ -6728,7 +6729,7 @@
     "message_printVersionAvailable": "Alternativt kan du fylle ut på papir, se {omSkjemaLink}.",
     "message_canRepresentOthers": "Velg {omSkjemaLink} hvis du har spørsmål eller ønsker å fylle ut på vegne av andre enn deg selv. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.",
     "message_canNotRepresentOthers": "Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.",
-    "message_noAccessToTjeneste": "Du må utvide Helsenorge-samtykket ditt for å fylle ut dette skjemaet. Gå til {personverninnstillingerLink} for å gjøre dette.",
+    "message_noAccessToTjeneste": "Du har ikke tilgang til å fylle ut dette skjemaet. Du kan få tilgang ved å endre samtykket ditt på helsenorge.no.",
     "message_noAccessToTjenesteRepresentasjon": "Fullmakten din omfatter ikke utfylling av dette skjemaet…",
     "message_subjectOnly": "Dette skjemaet kan ikke fylles ut på vegne av andre…",
     "omSkjemaLink": "Om skjema",

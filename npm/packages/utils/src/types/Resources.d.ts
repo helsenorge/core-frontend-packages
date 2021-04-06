@@ -11432,6 +11432,10 @@ export type HNMinHelseHealthArchiveStringsJS = {
   * Skjul for fullmakt
   */
   actionSkjulFullmektige: string;
+  /** 
+  * Prøvesvar
+  */
+  dokument_filter_innholdTypeValue_5: string;
 };
 
 export type HNMinHelseHealthArchiveStrings = { 
@@ -26887,7 +26891,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   message_canNotRepresentOthers: string;
   /** 
-  * Du må utvide Helsenorge-samtykket ditt for å fylle ut dette skjemaet. Gå til {personverninnstillingerLink} for å gjøre dette.
+  * Du har ikke tilgang til å fylle ut dette skjemaet. Du kan få tilgang ved å endre samtykket ditt på helsenorge.no.
   */
   message_noAccessToTjeneste: string;
   /** 
