@@ -4164,7 +4164,7 @@
     "default_TextMessage_Body_Self": "${FirstName}, du har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.",
     "footer_EmailMessage": "<br/>\n<br/>\nDu kan se din kontaktinformasjon og endre ditt varseloppsett på helsenorge.no.\n<br/>\n<br/>\nHelsenorge vil aldri be om at du oppgir opplysninger om helsetilstand, passord, brukernavn eller lignende i e-post, SMS eller på telefon.\n<br/>\n<br/>\nMERK: Svar til denne e-postadressen blir ikke behandlet.",
     "footer_TextMessage": " Du kan ikke svare på denne SMSen.",
-    "newAppointment_EmailMessage_Body_Representation": "${FirstName} har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
+    "newAppointment_EmailMessage_Body_Representation": "${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
     "paminnelseFastlegeTime_TextMessage_Body_Representation": "Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
     "paminnelseFastlegeTime_EmailMessage_Body_Representation": "Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
     "paminnelseFastlegeTime_TextMessage_Body_Self": "${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
