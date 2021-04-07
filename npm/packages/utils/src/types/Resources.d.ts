@@ -16459,7 +16459,7 @@ export type HNMinHelseNotificationStrings = {
   */
   contact_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName}, du har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
   newAppointment_EmailMessage_Body_Self: string;
   /** 
@@ -16471,11 +16471,11 @@ export type HNMinHelseNotificationStrings = {
   */
   newAppointment_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   newAppointment_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   newAppointment_TextMessage_Body_Self: string;
   /** 
@@ -17207,7 +17207,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   pasientreiserInnsendingFeilet_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
@@ -17219,11 +17219,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Subject_Representation: string;
   /** 
-  * ${FirstName} har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   nyPrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   nyPrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /** 
@@ -17271,7 +17271,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avlystPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
@@ -17499,11 +17499,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation: string;
   /** 
-  * ${FirstName} har fått en ny videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
   */
   nyVideotime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en ny videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
   */
   nyVideotime_EmailMessage_Body_Self: string;
   /** 
@@ -17515,11 +17515,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyVideotime_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en ny videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
   */
   nyVideotime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en ny videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
   */
   nyVideotime_TextMessage_Body_Self: string;
   /** 
