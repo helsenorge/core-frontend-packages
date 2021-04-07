@@ -16655,7 +16655,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   footer_TextMessage: string;
   /** 
-  * ${FirstName} har fått en ny time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
   */
   newAppointment_EmailMessage_Body_Representation: string;
   /** 
