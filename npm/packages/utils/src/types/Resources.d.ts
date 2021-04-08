@@ -16463,11 +16463,11 @@ export type HNMinHelseNotificationStrings = {
   */
   newAppointment_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om time på helsenorge.no
   */
   newAppointment_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om time på helsenorge.no
   */
   newAppointment_EmailMessage_Subject_Self: string;
   /** 
@@ -17455,11 +17455,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingOppdatertTime_EmailMessage_Subject_Self: string;
   /** 
-  * Varsel om endret time
+  * Varsel om endret time på helsenorge.no
   */
   nasjonalBreddingAnnetTime_EmailMessage_Subject_Self: string;
   /** 
-  * Varsel om endret time
+  * Varsel om endret time på helsenorge.no
   */
   nasjonalBreddingAnnetTime_EmailMessage_Subject_Representation: string;
   /** 
