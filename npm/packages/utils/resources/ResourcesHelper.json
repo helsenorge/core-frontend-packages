@@ -4189,7 +4189,7 @@
     "appointmentDialog_TextMessage_Body_Self": "${FirstName}, du har fått en melding knyttet til en time hos ${ActorName}. Logg inn på helsenorge.no for å lese den.",
     "cancelAppointment_EmailMessage_Body_Representation": "${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer. ",
     "cancelAppointment_EmailMessage_Body_Self": "${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.",
-    "cancelAppointment_EmailMessage_Subject_Representation": "Varsel om ny melding på helsenorge.no",
+    "cancelAppointment_EmailMessage_Subject_Representation": "Varsel om avlyst time på helsenorge.no",
     "videreformidling_EmailMessage_Body_Representation_IkkeSensitivAvsender": "${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.",
     "videreformidling_EmailMessage_Body_Self_IkkeSensitivAvsender": "${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.",
     "videreformidling_EmailMessage_Subject_Representation_IkkeSensitivAvsender": "Varsel om nytt brev på helsenorge.no",

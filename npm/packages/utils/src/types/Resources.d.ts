@@ -16755,7 +16755,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   cancelAppointment_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om avlyst time på helsenorge.no
   */
   cancelAppointment_EmailMessage_Subject_Representation: string;
   /** 
