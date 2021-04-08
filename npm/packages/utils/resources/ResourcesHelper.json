@@ -4304,7 +4304,7 @@
     "pasientreiserInnsendingFeilet_EmailMessage_Body_Representation": "Innsending av søknaden for ${FirstName} til Pasientreiser feilet. Logg inn på helsenorge.no for å søke på nytt.",
     "nyPrimarhelsetjenesteTime_EmailMessage_Body_Self": "${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.",
     "nyPrimarhelsetjenesteTime_EmailMessage_Subject_Self": "Varsel om ny time på helsenorge.no",
-    "nyPrimarhelsetjenesteTime_EmailMessage_Subject_Representation": "Varsel om ny time på helsenorge.no",
+    "nyPrimarhelsetjenesteTime_EmailMessage_Subject_Representation": "Varsel om time på helsenorge.no",
     "nyPrimarhelsetjenesteTime_TextMessage_Body_Representation": "${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.",
     "nyPrimarhelsetjenesteTime_TextMessage_Body_Self": "${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.",
     "endrePrimarhelsetjenesteTime_EmailMessage_Subject_Representation": "Varsel om endret time på helsenorge.no",

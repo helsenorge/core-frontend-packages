@@ -17215,7 +17215,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
   /** 
-  * Varsel om ny time på helsenorge.no
+  * Varsel om time på helsenorge.no
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Subject_Representation: string;
   /** 
