@@ -16755,7 +16755,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   cancelAppointment_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om avlyst time på helsenorge.no
   */
   cancelAppointment_EmailMessage_Subject_Representation: string;
   /** 
@@ -17211,11 +17211,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny time på helsenorge.no
+  * Varsel om time på helsenorge.no
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
   /** 
-  * Varsel om ny time på helsenorge.no
+  * Varsel om time på helsenorge.no
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Subject_Representation: string;
   /** 
@@ -17471,7 +17471,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingEndretTime_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel time på helsenorge.no
+  * Varsel om time på helsenorge.no
   */
   nasjonalBreddingNyTime_EmailMessage_Subject_Representation: string;
   /** 
@@ -17507,11 +17507,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyVideotime_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om time på helsenorge.no
   */
   nyVideotime_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om time på helsenorge.no
   */
   nyVideotime_EmailMessage_Subject_Self: string;
   /** 
