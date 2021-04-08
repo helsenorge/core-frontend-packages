@@ -16535,7 +16535,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserVedtak_EmailMessage_Subject_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om avlyst time på helsenorge.no
   */
   cancelAppointment_EmailMessage_Subject_Self: string;
   /** 
