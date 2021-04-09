@@ -491,7 +491,7 @@ export function open(cmd: string, params?: any) {
  * params(optional): Parametres used for authentication and hashing.
  *
  */
-export function download(cmd: string, params?: any): Promise<OperationResponse> {
+export function download(cmd: string, params?: any): Promise<OperationResponse | void> {
   let url = getMinHelseEnvironmentPath() + cmd + parseParams(addParams(params), true);
   const headers = createHeaders();
   headers.set('Content-Type', 'multipart/form-data');
@@ -502,7 +502,13 @@ export function download(cmd: string, params?: any): Promise<OperationResponse> 
       credentials: 'include',
       headers,
     })
-      .then(function(res) {
+      .then(async function(res) {
+        if (!res.ok) {
+          // Hvis det skjer en 4XX- eller 5XX-feil
+          const errorHtml = await res.text();
+          throw errorHtml;
+        }
+
         const contentDisposition = res.headers.get('content-disposition');
         const match =
           contentDisposition && contentDisposition.match(/filename="(.+)"/) ? contentDisposition.match(/filename="(.+)"/) : false;
@@ -532,20 +538,30 @@ export function download(cmd: string, params?: any): Promise<OperationResponse> 
           }
         });
       })
-      .catch(function(responseHtml) {
-        if (responseHtml === '401') {
-          document.location.reload(true);
+      .catch(function(error: string | TypeError) {
+        if (error instanceof TypeError) {
+          // 1. Nettverksfeil når fetch() kalles
+          reject({
+            ErrorMessage: {
+              Title: 'Det har skjedd en teknisk feil.',
+              Body: 'Prøv igjen senere.',
+            },
+          });
+        } else if (error === '401') {
+          // 2. Autentiseringsfeil, bruker må logge inn på nytt
+          window.location.reload();
+          reject(error);
         } else {
-          console.error('responseHtml', responseHtml);
-          const errorResponse = getErrorFromHTML(responseHtml);
+          // 3. Serveren har returnert en feilmelding
+          console.error('responseHtml', error);
+          const errorResponse = getErrorFromHTML(error);
           let response;
-          if (errorResponse && errorResponse.ErrorMessage) {
+          if (errorResponse && ((errorResponse as unknown) as OperationResponse).ErrorMessage) {
             response = errorResponse;
           } else {
             response = {
               ErrorMessage: {
-                Title:
-                  typeof errorResponse === 'string' || errorResponse instanceof String ? errorResponse : 'Det har skjedd en teknisk feil.',
+                Title: 'Det har skjedd en teknisk feil.',
                 Body: '',
               },
             };
