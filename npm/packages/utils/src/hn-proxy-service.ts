@@ -266,7 +266,13 @@ export const download = (proxyName: string, endpoint: string, params?: ParamsObj
       credentials: 'include',
       headers,
     })
-      .then(function(res) {
+      .then(async function(res) {
+        if (!res.ok) {
+          // Hvis det skjer en 4XX- eller 5XX-feil
+          const errorHtml = await res.text();
+          throw errorHtml;
+        }
+
         const contentDisposition = res.headers.get('content-disposition');
         const match =
           contentDisposition && contentDisposition.match(/filename="(.+)"/) ? contentDisposition.match(/filename="(.+)"/) : false;
@@ -296,20 +302,30 @@ export const download = (proxyName: string, endpoint: string, params?: ParamsObj
           }
         });
       })
-      .catch(function(responseHtml: string) {
-        if (responseHtml === '401') {
-          document.location.reload(true);
+      .catch(function(error: string | TypeError) {
+        if (error instanceof TypeError) {
+          // 1. Nettverksfeil når fetch() kalles
+          reject({
+            ErrorMessage: {
+              Title: 'Det har skjedd en teknisk feil.',
+              Body: 'Prøv igjen senere.',
+            },
+          });
+        } else if (error === '401') {
+          // 2. Autentiseringsfeil, bruker må logge inn på nytt
+          window.location.reload();
+          reject(error);
         } else {
-          console.error('responseHtml', responseHtml);
-          const errorResponse = getErrorFromHTML(responseHtml);
+          // 3. Serveren har returnert en feilmelding
+          console.error('responseHtml', error);
+          const errorResponse = getErrorFromHTML(error);
           let response;
           if (errorResponse && ((errorResponse as unknown) as OperationResponse).ErrorMessage) {
             response = errorResponse;
           } else {
             response = {
               ErrorMessage: {
-                Title:
-                  typeof errorResponse === 'string' || errorResponse instanceof String ? errorResponse : 'Det har skjedd en teknisk feil.',
+                Title: 'Det har skjedd en teknisk feil.',
                 Body: '',
               },
             };
