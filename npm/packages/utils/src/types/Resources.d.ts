@@ -17207,7 +17207,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   pasientreiserInnsendingFeilet_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
@@ -17219,11 +17219,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Subject_Representation: string;
   /** 
-  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   nyPrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   nyPrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /** 
@@ -17271,7 +17271,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avlystPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
