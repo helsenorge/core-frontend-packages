@@ -3712,9 +3712,9 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    *
    */
   group_Owners_Description: string;
-  /**
-   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest, Helse Nord og Helse Sør-Øst tilgjengelig.
-   */
+  /** 
+  * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest, Helse Nord og Helse Sør-Øst tilgjengelig.
+  */
   page_Referrals_Desc: string;
   /**
    * Henvisninger til spesialisthelsetjenesten
@@ -11432,9 +11432,9 @@ export type HNMinHelseHealthArchiveStringsJS = {
    * Skjul for fullmakt
    */
   actionSkjulFullmektige: string;
-  /**
-   * Prøvesvar
-   */
+  /** 
+  * Prøvesvar
+  */
   dokument_filter_innholdTypeValue_5: string;
 };
 
@@ -16458,25 +16458,25 @@ export type HNMinHelseNotificationStrings = {
    * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
    */
   contact_EmailMessage_Body_Self: string;
-  /**
-   * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
-   */
+  /** 
+  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  */
   newAppointment_EmailMessage_Body_Self: string;
-  /**
-   * Varsel om time på helsenorge.no
-   */
+  /** 
+  * Varsel om time på helsenorge.no
+  */
   newAppointment_EmailMessage_Subject_Representation: string;
-  /**
-   * Varsel om time på helsenorge.no
-   */
+  /** 
+  * Varsel om time på helsenorge.no
+  */
   newAppointment_EmailMessage_Subject_Self: string;
-  /**
-   * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  */
   newAppointment_TextMessage_Body_Representation: string;
-  /**
-   * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  */
   newAppointment_TextMessage_Body_Self: string;
   /**
    * ${FirstName}, du har fått en ny versjon av innkallingsbrevet. Les brevet for å se om du må gjøre forberedelser i forkant av timen.
@@ -16534,9 +16534,9 @@ export type HNMinHelseNotificationStrings = {
    * Nytt vedtak fra Pasientreiser
    */
   pasientreiserVedtak_EmailMessage_Subject_Self: string;
-  /**
-   * Varsel om avlyst time på helsenorge.no
-   */
+  /** 
+  * Varsel om avlyst time på helsenorge.no
+  */
   cancelAppointment_EmailMessage_Subject_Self: string;
   /**
    * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
@@ -16554,13 +16554,13 @@ export type HNMinHelseNotificationStrings = {
    * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
    */
   changeAppointment_EmailMessage_Body_Self: string;
-  /**
-   * Varsel om endret time på helsenorge.no
-   */
+  /** 
+  * Varsel om endret time på helsenorge.no
+  */
   changeAppointment_EmailMessage_Subject_Representation: string;
-  /**
-   * Varsel om endret time på helsenorge.no
-   */
+  /** 
+  * Varsel om endret time på helsenorge.no
+  */
   changeAppointment_EmailMessage_Subject_Self: string;
   /**
    * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
@@ -16654,9 +16654,9 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    *  Du kan ikke svare på denne SMSen.
    */
   footer_TextMessage: string;
-  /**
-   * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
-   */
+  /** 
+  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  */
   newAppointment_EmailMessage_Body_Representation: string;
   /**
    * Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
@@ -16718,9 +16718,9 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Varsel om ny melding på helsenorge.no
    */
   timeIkkeAvbestilt_EmailMessage_Subject_Self: string;
-  /**
-   * ${ActorName}
-   */
+  /** 
+  * ${ActorName}
+  */
   actor_GeneralPractitioner: string;
   /**
    * ${FirstName} har fått en melding knyttet til en time hos ${ActorName}. Logg inn på helsenorge.no for å lese den.
@@ -16754,9 +16754,9 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
    */
   cancelAppointment_EmailMessage_Body_Self: string;
-  /**
-   * Varsel om avlyst time på helsenorge.no
-   */
+  /** 
+  * Varsel om avlyst time på helsenorge.no
+  */
   cancelAppointment_EmailMessage_Subject_Representation: string;
   /**
    * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
@@ -17206,25 +17206,25 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Innsending av søknaden for ${FirstName} til Pasientreiser feilet. Logg inn på helsenorge.no for å søke på nytt.
    */
   pasientreiserInnsendingFeilet_EmailMessage_Body_Representation: string;
-  /**
-   * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
-  /**
-   * Varsel om time på helsenorge.no
-   */
+  /** 
+  * Varsel om time på helsenorge.no
+  */
   nyPrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
-  /**
-   * Varsel om time på helsenorge.no
-   */
+  /** 
+  * Varsel om time på helsenorge.no
+  */
   nyPrimarhelsetjenesteTime_EmailMessage_Subject_Representation: string;
-  /**
-   * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  */
   nyPrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
-  /**
-   * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName}, du har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  */
   nyPrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /**
    * Varsel om endret time på helsenorge.no
@@ -17270,9 +17270,9 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
    */
   avlystPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
-  /**
-   * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName} har fått time hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /**
    * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
@@ -17454,13 +17454,13 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Varsel om oppdatert time på helsenorge.no
    */
   nasjonalBreddingOppdatertTime_EmailMessage_Subject_Self: string;
-  /**
-   * Varsel om endret time på helsenorge.no
-   */
+  /** 
+  * Varsel om endret time på helsenorge.no
+  */
   nasjonalBreddingAnnetTime_EmailMessage_Subject_Self: string;
-  /**
-   * Varsel om endret time på helsenorge.no
-   */
+  /** 
+  * Varsel om endret time på helsenorge.no
+  */
   nasjonalBreddingAnnetTime_EmailMessage_Subject_Representation: string;
   /**
    * Varsel om avlyst time på helsenorge.no
@@ -17470,9 +17470,9 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Varsel om endret time på helsenorge.no
    */
   nasjonalBreddingEndretTime_EmailMessage_Subject_Representation: string;
-  /**
-   * Varsel om time på helsenorge.no
-   */
+  /** 
+  * Varsel om time på helsenorge.no
+  */
   nasjonalBreddingNyTime_EmailMessage_Subject_Representation: string;
   /**
    * Varsel om oppdatert time på helsenorge.no
@@ -17498,29 +17498,29 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * Påminnelse om timeavtale med ${ActorName}
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation: string;
-  /**
-   * ${FirstName} har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName} har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  */
   nyVideotime_EmailMessage_Body_Representation: string;
-  /**
-   * ${FirstName}, du har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName}, du har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  */
   nyVideotime_EmailMessage_Body_Self: string;
-  /**
-   * Varsel om time på helsenorge.no
-   */
+  /** 
+  * Varsel om time på helsenorge.no
+  */
   nyVideotime_EmailMessage_Subject_Representation: string;
-  /**
-   * Varsel om time på helsenorge.no
-   */
+  /** 
+  * Varsel om time på helsenorge.no
+  */
   nyVideotime_EmailMessage_Subject_Self: string;
-  /**
-   * ${FirstName} har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName} har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  */
   nyVideotime_TextMessage_Body_Representation: string;
-  /**
-   * ${FirstName}, du har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
-   */
+  /** 
+  * ${FirstName}, du har fått videotime hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  */
   nyVideotime_TextMessage_Body_Self: string;
   /**
    * En videotime ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
@@ -17530,13 +17530,13 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * ${FirstName}, en videotime du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
    */
   endreVideotime_EmailMessage_Body_Self: string;
-  /**
-   * Varsel om endret time på helsenorge.no
-   */
+  /** 
+  * Varsel om endret time på helsenorge.no
+  */
   endreVideotime_EmailMessage_Subject_Representation: string;
-  /**
-   * Varsel om endret time på helsenorge.no
-   */
+  /** 
+  * Varsel om endret time på helsenorge.no
+  */
   endreVideotime_EmailMessage_Subject_Self: string;
   /**
    * En videotime ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
@@ -26890,9 +26890,9 @@ export type HNMinHelseSkjemautfyller = {
    * Velg {omSkjemaLink} hvis du har spørsmål. Her finner du informasjon om hvor du kan henvende deg og hvordan opplysningene du oppgir vil bli behandlet.
    */
   message_canNotRepresentOthers: string;
-  /**
-   * Du har ikke tilgang til å fylle ut dette skjemaet. Du kan få tilgang ved å endre samtykket ditt på helsenorge.no.
-   */
+  /** 
+  * Du har ikke tilgang til å fylle ut dette skjemaet. Du kan få tilgang ved å endre samtykket ditt på helsenorge.no.
+  */
   message_noAccessToTjeneste: string;
   /**
    * Fullmakten din omfatter ikke utfylling av dette skjemaet…
