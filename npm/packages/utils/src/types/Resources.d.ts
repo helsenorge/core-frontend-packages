@@ -15847,7 +15847,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Koronasertifikat_Title: string;
   /** 
-  * Ikke avklart
+  * Ikke avklart!
   */
   tile_Koronasertifikat_Description: string;
   /** 
@@ -16555,11 +16555,11 @@ export type HNMinHelseNotificationStrings = {
   */
   cancelAppointment_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
   */
   cancelAppointment_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
   */
   cancelAppointment_TextMessage_Body_Self: string;
   /** 
@@ -16763,11 +16763,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   appointmentDialog_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer. 
+  * ${FirstName} sin timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
   */
   cancelAppointment_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
   */
   cancelAppointment_EmailMessage_Body_Self: string;
   /** 
@@ -17039,7 +17039,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   primarhelsetjenesteTimeIkkeTilgjengelig_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din time hos ${ActorName} ble ikke reservert. Gå til helsenorge.no for å bestille ny time eller kontakt behandlingsstedet.
+  * ${FirstName}, din time${AvtaleType} hos ${ActorName} ble ikke reservert. Gå til helsenorge.no for å bestille ny time eller kontakt behandlingsstedet.
   */
   primarhelsetjenesteTimeIkkeTilgjengelig_TextMessage_Body_Self: string;
   /** 
@@ -17103,11 +17103,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelsePrimarhelsetjenesteVideoTime_TextMessage_Body_Self: string;
   /** 
-  * Husk at ${FirstName} har en timeavtale hos ${ActorName} ${DateTime}. ${Lokasjon}
+  * Husk at ${FirstName} har en timeavtale${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}
   */
   paminnelsePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. ${Lokasjon}
+  * ${FirstName}, husk timeavtalen${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}
   */
   paminnelsePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
@@ -17119,11 +17119,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelsePrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
   /** 
-  * Husk at ${FirstName} har en timeavtale hos ${ActorName} ${DateTime}. ${Lokasjon}
+  * Husk at ${FirstName} har en timeavtale${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}
   */
   paminnelsePrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. ${Lokasjon}
+  * ${FirstName}, husk timeavtalen${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}
   */
   paminnelsePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /** 
@@ -17251,15 +17251,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   endrePrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
   /** 
-  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+  * En time ${FirstName} har${AvtaleType} med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
   */
   endrePrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+  * ${FirstName}, en time du har${AvtaleType} med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
   */
   endrePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /** 
-  * En time ${FirstName} har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+  * En time ${FirstName} har${AvtaleType} med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
   */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
@@ -17291,7 +17291,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyPrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, en time du har med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
+  * ${FirstName}, en time du har${AvtaleType} med ${ActorName} er endret. Logg inn på helsenorge.no for å se oppdatert informasjon om timen.
   */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
