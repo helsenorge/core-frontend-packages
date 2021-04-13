@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "19.2.1",
+  "version": "19.3.0-samvalg02",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -26,8 +26,8 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@helsenorge/core-build": "^19.2.0",
-    "@helsenorge/designsystem-react": "1.0.0-beta37",
+    "@helsenorge/core-build": "^19.3.0-samvalg02",
+    "@helsenorge/designsystem-react": "1.0.0-beta43",
     "@types/react-router-dom": "5.1.5",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/redux": "^3.6.0",
@@ -57,5 +57,5 @@
       "last 1 safari version"
     ]
   },
-  "gitHead": "a06c863196dcfb6cf6b0ade52a40897e70d546ba"
+  "gitHead": "b65d6536981f1a835cb171ea90fde4d55d3c99ad"
 }
