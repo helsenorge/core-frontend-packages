@@ -15827,6 +15827,10 @@ export type HNMinHelseNavigation = {
   */
   tile_Korona_Description: string;
   /** 
+  * Koronasertifikat
+  */
+  tile_Koronasertifikat_Title: string;
+  /** 
   * Helsetjenester
   */
   group_Helsetjenester_Title: string;
