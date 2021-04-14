@@ -4170,7 +4170,7 @@
     "footer_TextMessage": " Du kan ikke svare på denne SMSen.",
     "newAppointment_EmailMessage_Body_Representation": "${FirstName} har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
     "paminnelseFastlegeTime_TextMessage_Body_Representation": "Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
-    "paminnelseFastlegeTime_EmailMessage_Body_Representation": "Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
+    "paminnelseFastlegeTime_EmailMessage_Body_Representation": "Husk at ${FirstName} har en timeavtale${AvtaleType} med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
     "paminnelseFastlegeTime_TextMessage_Body_Self": "${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
     "paminnelseFastlegeTime_EmailMessage_Body_Self": "${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
     "paminnelseFastlegeTime_EmailMessage_Subject_Representation": "Påminnelse om timeavtale med ${ActorName}",
