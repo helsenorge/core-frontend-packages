@@ -233,3 +233,9 @@ export enum PersonverninnstillingKategori {
   Reservasjon = 2,
   Tilgangsbegrensning = 3,
 }
+
+/* CMS-CONTENT-API-SERVICE */
+export enum CmsContentApiVersions {
+  V1 = 'v1/',
+  V2 = 'v2/',
+}
