@@ -16419,11 +16419,11 @@ export type HNMinHelseNotificationStrings = {
    */
   timeIkkeAvbestilt_TextMessage_Body_Self: string;
   /**
-   * Timen er ikke tilgjengelig. ${FirstName} sin time hos ${ActorName} ble ikke endret. Gå til helsenorge.no og prøv igjen med et annet tidspunkt.
+   * Timen er ikke tilgjengelig. ${FirstName} sin time${AvtaleType} hos ${ActorName} ble ikke endret. Gå til helsenorge.no og prøv igjen med et annet tidspunkt.
    */
   timeIkkeEndret_EmailMessage_Body_Representation: string;
   /**
-   * Timen er ikke tilgjengelig. ${FirstName}, din time hos ${ActorName} ble ikke endret. Gå til helsenorge.no og prøv igjen med et annet tidspunkt.
+   * Timen er ikke tilgjengelig. ${FirstName}, din time${AvtaleType} hos ${ActorName} ble ikke endret. Gå til helsenorge.no og prøv igjen med et annet tidspunkt.
    */
   timeIkkeEndret_EmailMessage_Body_Self: string;
   /**
@@ -16435,11 +16435,11 @@ export type HNMinHelseNotificationStrings = {
    */
   timeIkkeEndret_EmailMessage_Subject_Self: string;
   /**
-   * Timen er ikke tilgjengelig. ${FirstName} sin time hos ${ActorName} ble ikke endret. Gå til helsenorge.no og prøv igjen med et annet tidspunkt.
+   * Timen er ikke tilgjengelig. ${FirstName} sin time${AvtaleType} hos ${ActorName} ble ikke endret. Gå til helsenorge.no og prøv igjen med et annet tidspunkt.
    */
   timeIkkeEndret_TextMessage_Body_Representation: string;
   /**
-   * Timen er ikke tilgjengelig. ${FirstName}, din time hos ${ActorName} ble ikke endret. Gå til helsenorge.no og prøv igjen med et annet tidspunkt.
+   * Timen er ikke tilgjengelig. ${FirstName}, din time${AvtaleType} hos ${ActorName} ble ikke endret. Gå til helsenorge.no og prøv igjen med et annet tidspunkt.
    */
   timeIkkeEndret_TextMessage_Body_Self: string;
   /**
@@ -16675,7 +16675,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   newAppointment_EmailMessage_Body_Representation: string;
   /**
-   * Husk at ${FirstName} har en timeavtale med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * Husk at ${FirstName} har en timeavtale${AvtaleType} med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_TextMessage_Body_Representation: string;
   /**
@@ -16683,19 +16683,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   paminnelseFastlegeTime_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * ${FirstName}, husk timeavtalen${AvtaleType} med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_TextMessage_Body_Self: string;
   /**
-   * ${FirstName}, husk timeavtalen med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+   * ${FirstName}, husk timeavtalen${AvtaleType} med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
    */
   paminnelseFastlegeTime_EmailMessage_Body_Self: string;
   /**
-   * Påminnelse om timeavtale med ${ActorName}
+   * Påminnelse om timeavtale${AvtaleType} med ${ActorName}
    */
   paminnelseFastlegeTime_EmailMessage_Subject_Representation: string;
   /**
-   * Påminnelse om timeavtale med ${ActorName}
+   * Påminnelse om timeavtale${AvtaleType} med ${ActorName}
    */
   paminnelseFastlegeTime_EmailMessage_Subject_Self: string;
   /**
@@ -17111,11 +17111,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   paminnelsePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /**
-   * Påminnelse om timeavtale hos ${ActorName}
+   * Påminnelse om timeavtale${AvtaleType} hos ${ActorName}
    */
   paminnelsePrimarhelsetjenesteTime_EmailMessage_Subject_Representation: string;
   /**
-   * Påminnelse om timeavtale hos ${ActorName}
+   * Påminnelse om timeavtale${AvtaleType} hos ${ActorName}
    */
   paminnelsePrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
   /**
@@ -17295,19 +17295,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /**
-   * Husk at ${FirstName} har en timeavtale hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
+   * Husk at ${FirstName} har en timeavtale${AvtaleType} hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
+   * ${FirstName}, husk timeavtalen${AvtaleType} hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Body_Self: string;
   /**
-   * Husk at ${FirstName} har en timeavtale hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
+   * Husk at ${FirstName} har en timeavtale${AvtaleType} hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
    */
   paminnelseFastlegeTimeOppmoteSted_TextMessage_Body_Representation: string;
   /**
-   * ${FirstName}, husk timeavtalen hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
+   * ${FirstName}, husk timeavtalen${AvtaleType} hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
    */
   paminnelseFastlegeTimeOppmoteSted_TextMessage_Body_Self: string;
   /**
@@ -17507,11 +17507,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   nasjonalBreddingNyTime_TextMessage_Body_Self: string;
   /**
-   * Påminnelse om timeavtale med ${ActorName}
+   * Påminnelse om timeavtale${AvtaleType} med ${ActorName}
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Self: string;
   /**
-   * Påminnelse om timeavtale med ${ActorName}
+   * Påminnelse om timeavtale${AvtaleType} med ${ActorName}
    */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Subject_Representation: string;
   /**
