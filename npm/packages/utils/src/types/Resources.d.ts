@@ -17263,7 +17263,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
   */
   avlystPrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /** 
@@ -17275,15 +17275,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avlystPrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
   */
   avlystPrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
   */
   avlystPrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
   */
   avlystPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
