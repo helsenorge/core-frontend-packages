@@ -29115,7 +29115,11 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   group_Samvalg_Visitors_Title: string;
   /** 
-  * Du har ikke tilgang til de innloggede tjenestene på Helsenorge
+  * Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema.
+
+<a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf">Skjema for voksne: skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge</a>
+
+<a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf">Skjema for barn under 16 år: skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge.</a>
   */
   userControl_Start_ReservationMessage: string;
   /** 
