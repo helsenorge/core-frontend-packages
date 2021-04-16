@@ -7286,7 +7286,7 @@
     "group_Samvalg_Owners_Title": "Samvalg-eiere",
     "group_Samvalg_Visitors_Description": "",
     "group_Samvalg_Visitors_Title": "Samvalg-besøkende",
-    "userControl_Start_ReservationMessage": "Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema.\n\n<a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\">Skjema for voksne: skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge</a>\n\n<a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\">Skjema for barn under 16 år: skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge.</a>",
+    "userControl_Start_ReservationMessage": "Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema.\n\nFor voksne: <a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\">skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge</a>\n\nFor barn under 16 år: <a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\"> skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge.</a>",
     "field_BsvRefleksjonerPrioriteringsliste_Desc": "Utsagnlisten som skal vises på mine refleksjoner",
     "field_BsvRefleksjonerPrioriteringsliste_Title": "Utsagnliste",
     "field_BsvRefleksjonerSeksjon1_Title": "Hva er viktigst for meg?",
