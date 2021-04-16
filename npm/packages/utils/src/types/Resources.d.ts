@@ -3999,13 +3999,9 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_BrukOgTilganger_Desc: string;
   /**
-   * Koronasertifikat
+   * Koronasertifikat QR code testside
    */
-  page_Koronasertifikat_Title: string;
-  /**
-   * Ikke avklart
-   */
-  page_Koronasertifikat_Desc: string;
+  page_QrCode_Title: string;
   /**
    * Prøvesvar
    */
@@ -4274,6 +4270,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    * /helseregistre
    */
   page_Reseptformidleren_NavigateBackLinkURL: string;
+  /**
+   * Koronasertifikat
+   */
+  page_Koronasertifikat_Title: string;
+  /**
+   * Ikke avklart
+   */
+  page_Koronasertifikat_Desc: string;
 };
 
 export type HNMinHelseDialogGPStrings = {
