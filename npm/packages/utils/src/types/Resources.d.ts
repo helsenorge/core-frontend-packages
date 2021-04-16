@@ -25247,6 +25247,10 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
+  * Koronasertifikat
+  */
+  page_HendelsesLogg_49: string;
+  /** 
   * Ved fullmakt
   */
   shared_Fullmakt: string;
