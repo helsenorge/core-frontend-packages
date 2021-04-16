@@ -6316,6 +6316,7 @@
     "error_FeatureNotSupported_Title": "Funksjon ikke støttet"
   },
   "HNMinHelsePersonvernStrings": {
+    "page_HendelsesLogg_49": "Koronasertifikat",
     "shared_Fullmakt": "Ved fullmakt",
     "shared_Foreldrerepresentasjon": "Foreldreansvar",
     "shared_InnloggetBruker": "Egen bruk",
