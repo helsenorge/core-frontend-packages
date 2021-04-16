@@ -938,7 +938,7 @@
     "group_Members_Description": "",
     "group_Members_Title": "Min Helse-medlemmer",
     "group_Owners_Description": "",
-    "page_Referrals_Desc": "Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest, Helse Nord og Helse Sør-Øst tilgjengelig.",
+    "page_Referrals_Desc": "Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest og Helse Nord tilgjengelig.",
     "page_Referrals_Title": "Henvisninger til spesialisthelsetjenesten",
     "page_Pdf_Desc": "",
     "page_Pdf_Title": "Pdf",
@@ -1078,7 +1078,7 @@
     "page_Reseptformidleren_NavigateBackLinkTitle": "til Helseregistre",
     "page_Reseptformidleren_NavigateBackLinkURL": "/helseregistre",
     "page_Koronasertifikat_Title": "Koronasertifikat",
-    "page_Koronasertifikat_Desc": "Ikke avklart"
+    "page_Koronasertifikat_Desc": "Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet."
   },
   "HNMinHelseDialogGPStrings": {
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
