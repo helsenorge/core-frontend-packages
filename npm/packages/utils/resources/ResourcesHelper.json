@@ -1078,7 +1078,7 @@
     "page_Reseptformidleren_NavigateBackLinkTitle": "til Helseregistre",
     "page_Reseptformidleren_NavigateBackLinkURL": "/helseregistre",
     "page_Koronasertifikat_Title": "Koronasertifikat",
-    "page_Koronasertifikat_Desc": "Ikke avklart"
+    "page_Koronasertifikat_Desc": "Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet."
   },
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
