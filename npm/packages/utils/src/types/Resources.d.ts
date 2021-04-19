@@ -1272,6 +1272,10 @@ export type HNDialogCommonJS = {
   * Fastlegen din er ${name}
   */
   fastlegepanelHeader: string;
+  /** 
+  * Fastlegen din er ${name} ved ${business}
+  */
+  fastlegepanelHeaderWithBusiness: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
