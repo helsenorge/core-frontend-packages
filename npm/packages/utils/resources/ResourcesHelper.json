@@ -321,7 +321,8 @@
     "videoEventAlertHelsetilbudDescription": "Hvis du vet at du trenger undersøkelse eller å ta prøver, må du velge en vanlig time ved behandlerkontoret. Du betaler samme egenandel som ved vanlig legetime.",
     "videoEventAlertTitle": "Du har valgt en videotime",
     "videoEventLocation": "Videotime",
-    "videoEventsHeading": "Timer på video"
+    "videoEventsHeading": "Timer på video",
+    "fastlegepanelHeader": "Fastlegen din er ${name}"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
@@ -1010,7 +1011,6 @@
     "page_Forside_Title": "Helsenorge – din helse på nett",
     "page_BrukOgTilganger_Title": "Bruk og tilganger",
     "page_BrukOgTilganger_Desc": "Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang.",
-    "page_QrCode_Title": "Koronasertifikat QR code testside",
     "page_Provesvar_Title": "Prøvesvar",
     "page_Provesvar_Desc": "Her vises en oversikt over dine prøvesvar for koronavirus.",
     "page_Innboks_Title": "Innboks",
@@ -1079,7 +1079,8 @@
     "page_Reseptformidleren_NavigateBackLinkTitle": "til Helseregistre",
     "page_Reseptformidleren_NavigateBackLinkURL": "/helseregistre",
     "page_Koronasertifikat_Title": "Koronasertifikat",
-    "page_Koronasertifikat_Desc": "Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet."
+    "page_Koronasertifikat_Desc": "Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet.",
+    "page_QrCode_Title": "Koronasertifikat QR code testside"
   },
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
