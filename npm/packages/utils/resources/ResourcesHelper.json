@@ -322,7 +322,8 @@
     "videoEventAlertTitle": "Du har valgt en videotime",
     "videoEventLocation": "Videotime",
     "videoEventsHeading": "Timer på video",
-    "fastlegepanelHeader": "Fastlegen din er ${name}"
+    "fastlegepanelHeader": "Fastlegen din er ${name}",
+    "fastlegepanelHeaderWithBusiness": "Fastlegen din er ${name} ved ${business}"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
