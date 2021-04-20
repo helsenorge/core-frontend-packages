@@ -323,7 +323,8 @@
     "videoEventLocation": "Videotime",
     "videoEventsHeading": "Timer på video",
     "fastlegepanelHeader": "Fastlegen din er ${name}",
-    "fastlegepanelHeaderWithBusiness": "Fastlegen din er ${name} ved ${business}"
+    "fastlegepanelHeaderWithBusiness": "Fastlegen din er ${name} ved ${business}",
+    "fastlegepanelKontaktLegekontoret": "Kontakt legekontoret"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
@@ -1079,9 +1080,9 @@
     "page_Pasientjournal_Desc": "På denne siden får du se utvalgt innhold i pasientjournalen og hvilket helsepersonell som har arbeidet i den. Foreløpig er kun dokumenter fra sykehus i Helse Nord, Helse Vest og Helse Sør-Øst tilgjengelig.<br />Husk at det kan ta tid før et dokument er ferdig og kan vises her.<br />Er det ord eller uttrykk du lurer på? Søk etter <a href=\"https://nhi.no/ordliste/\" target=\"_blank\" class=\"external\">ordforklaringer hos Norsk helseinformatikk</a>.",
     "page_Reseptformidleren_NavigateBackLinkTitle": "til Helseregistre",
     "page_Reseptformidleren_NavigateBackLinkURL": "/helseregistre",
+    "page_QrCode_Title": "Koronasertifikat QR code testside",
     "page_Koronasertifikat_Title": "Koronasertifikat",
-    "page_Koronasertifikat_Desc": "Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet.",
-    "page_QrCode_Title": "Koronasertifikat QR code testside"
+    "page_Koronasertifikat_Desc": "Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet."
   },
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",

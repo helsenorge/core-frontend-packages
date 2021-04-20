@@ -1276,6 +1276,10 @@ export type HNDialogCommonJS = {
   * Fastlegen din er ${name} ved ${business}
   */
   fastlegepanelHeaderWithBusiness: string;
+  /** 
+  * Kontakt legekontoret
+  */
+  fastlegepanelKontaktLegekontoret: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
@@ -4279,6 +4283,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Reseptformidleren_NavigateBackLinkURL: string;
   /** 
+  * Koronasertifikat QR code testside
+  */
+  page_QrCode_Title: string;
+  /** 
   * Koronasertifikat
   */
   page_Koronasertifikat_Title: string;
@@ -4286,10 +4294,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet.
   */
   page_Koronasertifikat_Desc: string;
-  /** 
-  * Koronasertifikat QR code testside
-  */
-  page_QrCode_Title: string;
 };
 
 export type HNMinHelseDialogGPStrings = { 
