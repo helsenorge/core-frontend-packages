@@ -336,7 +336,8 @@
     "fastlegepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge, men kan ha andre digitale kontaktmuligheter på sin hjemmeside.",
     "fastlegepanelFornyResept": "Forny resept",
     "fastlegepanelEkonsultasjon": "Start e-konsultasjon",
-    "fastlegepanelVideokonsultasjon": "Videokonsultasjon"
+    "fastlegepanelVideokonsultasjon": "Videokonsultasjon",
+    "fastlegepanelFastlegekonsultasjon": "Fastlegekonsultasjon"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",

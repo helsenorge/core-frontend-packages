@@ -1328,6 +1328,10 @@ export type HNDialogCommonJS = {
   * Videokonsultasjon
   */
   fastlegepanelVideokonsultasjon: string;
+  /** 
+  * Fastlegekonsultasjon
+  */
+  fastlegepanelFastlegekonsultasjon: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
