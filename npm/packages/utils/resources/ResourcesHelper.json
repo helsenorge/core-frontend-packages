@@ -324,7 +324,19 @@
     "videoEventsHeading": "Timer på video",
     "fastlegepanelHeader": "Fastlegen din er ${name}",
     "fastlegepanelHeaderWithBusiness": "Fastlegen din er ${name} ved ${business}",
-    "fastlegepanelKontaktLegekontoret": "Kontakt legekontoret"
+    "fastlegepanelKontaktLegekontoret": "Kontakt legekontoret",
+    "fastlegepanelFastlegeInfoLink": "Se informasjon om fastlegen din",
+    "fastlegepanelHelsekontakterLink": "Se alle helsekontaktene dine",
+    "fastlegepanelInfoAbroad": "Du er registrert som bosatt i utlandet og har for tiden ikke fastlege i Norge.",
+    "fastlegepanelInfoHeader": "Informasjon fra legekontoret",
+    "fastlegepanelInfoNoAssigned": "Ingen fastlege registrert.",
+    "fastlegepanelInfoVacantList": "Du tilhører ${business} som er bemannet av vikar inntil fastlege blir ansatt.",
+    "fastlegepanelBestillTime": "Bestill time",
+    "fastlegepanelBestillVaksinasjon": "Bestill influensavaksine",
+    "fastlegepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge, men kan ha andre digitale kontaktmuligheter på sin hjemmeside.",
+    "fastlegepanelFornyResept": "Forny resept",
+    "fastlegepanelEkonsultasjon": "Start e-konsultasjon",
+    "fastlegepanelVideokonsultasjon": "Videokonsultasjon"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",

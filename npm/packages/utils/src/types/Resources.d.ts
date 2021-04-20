@@ -1280,6 +1280,54 @@ export type HNDialogCommonJS = {
   * Kontakt legekontoret
   */
   fastlegepanelKontaktLegekontoret: string;
+  /** 
+  * Se informasjon om fastlegen din
+  */
+  fastlegepanelFastlegeInfoLink: string;
+  /** 
+  * Se alle helsekontaktene dine
+  */
+  fastlegepanelHelsekontakterLink: string;
+  /** 
+  * Du er registrert som bosatt i utlandet og har for tiden ikke fastlege i Norge.
+  */
+  fastlegepanelInfoAbroad: string;
+  /** 
+  * Informasjon fra legekontoret
+  */
+  fastlegepanelInfoHeader: string;
+  /** 
+  * Ingen fastlege registrert.
+  */
+  fastlegepanelInfoNoAssigned: string;
+  /** 
+  * Du tilhører ${business} som er bemannet av vikar inntil fastlege blir ansatt.
+  */
+  fastlegepanelInfoVacantList: string;
+  /** 
+  * Bestill time
+  */
+  fastlegepanelBestillTime: string;
+  /** 
+  * Bestill influensavaksine
+  */
+  fastlegepanelBestillVaksinasjon: string;
+  /** 
+  * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge, men kan ha andre digitale kontaktmuligheter på sin hjemmeside.
+  */
+  fastlegepanelNoServiceDescription: string;
+  /** 
+  * Forny resept
+  */
+  fastlegepanelFornyResept: string;
+  /** 
+  * Start e-konsultasjon
+  */
+  fastlegepanelEkonsultasjon: string;
+  /** 
+  * Videokonsultasjon
+  */
+  fastlegepanelVideokonsultasjon: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
