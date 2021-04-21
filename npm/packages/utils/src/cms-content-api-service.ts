@@ -1,12 +1,27 @@
 import { trackError } from './adobe-analytics';
 import { warn } from './logger';
 import { getHelsenorgeUrl } from './hn-proxy-service';
+import { CmsContentApiVersions } from './types/entities';
 
 /**
  * Returnerer __CmsContentApiUrl__ fra window.HN.Rest
  */
 export const getContentApiUrl = (): string => {
   return !!window.HN && !!window.HN.Rest && !!window.HN.Rest.__CmsContentApiUrl__ ? window.HN.Rest.__CmsContentApiUrl__ : '';
+};
+
+/**
+ * Returnerer __CmsContentApiPreviewUrl__ fra window.HN.Rest
+ */
+export const getContentApiPreviewUrl = (): string => {
+  return !!window.HN && !!window.HN.Rest && !!window.HN.Rest.__CmsContentApiPreviewUrl__ ? window.HN.Rest.__CmsContentApiPreviewUrl__ : '';
+};
+
+/**
+ * Returnerer true dersom URLen man står på inneholder content-api-preview=true
+ */
+export const enableContentApiPreview = (): boolean => {
+  return !!window && window.location.href.indexOf('content-api-preview=true') !== -1;
 };
 
 /**
@@ -63,14 +78,26 @@ export const checkStatus = (response: Response): Promise<{}> | undefined => {
  * Logger eventuelle feil med warn().
  * @param endpoint command strengen som sendes mot content-apiet
  * @param params object med parameters { param1 : 'myparam1', param2: 'myparam2'}
+ * @param version setter hvilken versjon av conetnapi som skal kalles (v1/, v2/)
  * @throws {Error} Dersom det skjedde en feil under henting av data fra content-apiet.
  */
-export const get = (endpoint: string, params?: object): Promise<{} | Response | undefined> => {
-  const apiUrl = getContentApiUrl() + '/contentapi/internal/v1/' + endpoint + parseParams(params);
+export const get = (
+  endpoint: string,
+  params?: object,
+  version: CmsContentApiVersions = CmsContentApiVersions.V1
+): Promise<{} | Response | undefined> => {
+  const preview = enableContentApiPreview();
+  const hostName = preview ? getContentApiPreviewUrl() : getContentApiUrl();
+  const credentials = preview ? 'include' : 'omit';
+  const headers = createHeaders();
+  if (preview) {
+    headers.append('X-Preview', 'true');
+  }
+  const apiUrl = `${hostName}/contentapi/internal/${version}${endpoint}${parseParams(params)}`;
   return fetch(apiUrl, {
     method: 'get',
-    credentials: 'omit', // Må settes til omit for å kunne bruke wildcard for domener i CORS
-    headers: createHeaders(),
+    credentials: credentials, // Må settes til omit for å kunne bruke wildcard for domener i CORS
+    headers: headers,
   })
     .then(checkStatus)
     .catch(error => {

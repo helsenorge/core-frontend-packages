@@ -275,6 +275,10 @@ export type HNCoreFrontendNPMPackagesCMS = {
 
 export type HNCoreFrontendNPMPackagesFramework = {
   /**
+   * Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar" target="_blank">Les mer om foreldrerepresentasjon</a>.
+   */
+  representasjonerManglendeForeldreansvar: string;
+  /**
    * Fortsett redigering
    */
   pendingChangesConfirm: string;
@@ -481,7 +485,7 @@ export type HNDialogCommonJS = {
    */
   bookingIngenBehandlereInfoPrimaer: string;
   /**
-   * Du kan likevel bestille time hos
+   * Du kan bestille time hos
    */
   bookingEnBehandlerInfo: string;
   /**
@@ -1264,6 +1268,70 @@ export type HNDialogCommonJS = {
    * Timer på video
    */
   videoEventsHeading: string;
+  /**
+   * Fastlegen din er ${name}
+   */
+  fastlegepanelHeader: string;
+  /**
+   * Fastlegen din er ${name} ved ${business}
+   */
+  fastlegepanelHeaderWithBusiness: string;
+  /**
+   * Kontakt legekontoret
+   */
+  fastlegepanelKontaktLegekontoret: string;
+  /**
+   * Se informasjon om fastlegen din
+   */
+  fastlegepanelFastlegeInfoLink: string;
+  /**
+   * Se alle helsekontaktene dine
+   */
+  fastlegepanelHelsekontakterLink: string;
+  /**
+   * Du er registrert som bosatt i utlandet og har for tiden ikke fastlege i Norge.
+   */
+  fastlegepanelInfoAbroad: string;
+  /**
+   * Informasjon fra legekontoret
+   */
+  fastlegepanelInfoHeader: string;
+  /**
+   * Ingen fastlege registrert.
+   */
+  fastlegepanelInfoNoAssigned: string;
+  /**
+   * Du tilhører ${business} som er bemannet av vikar inntil fastlege blir ansatt.
+   */
+  fastlegepanelInfoVacantList: string;
+  /**
+   * Bestill time
+   */
+  fastlegepanelBestillTime: string;
+  /**
+   * Bestill influensavaksine
+   */
+  fastlegepanelBestillVaksinasjon: string;
+  /**
+   * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge, men kan ha andre digitale kontaktmuligheter på sin hjemmeside.
+   */
+  fastlegepanelNoServiceDescription: string;
+  /**
+   * Forny resept
+   */
+  fastlegepanelFornyResept: string;
+  /**
+   * Start e-konsultasjon
+   */
+  fastlegepanelEkonsultasjon: string;
+  /**
+   * Videokonsultasjon
+   */
+  fastlegepanelVideokonsultasjon: string;
+  /**
+   * Fastlegekonsultasjon
+   */
+  fastlegepanelFastlegekonsultasjon: string;
 };
 
 export type HNMinHelseByttFastlegeJS = {
@@ -3713,7 +3781,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   group_Owners_Description: string;
   /**
-   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest, Helse Nord og Helse Sør-Øst tilgjengelig.
+   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest og Helse Nord tilgjengelig.
    */
   page_Referrals_Desc: string;
   /**
@@ -3999,14 +4067,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   page_BrukOgTilganger_Desc: string;
   /**
-   * Koronasertifikat
-   */
-  page_Koronasertifikat_Title: string;
-  /**
-   * Ikke avklart
-   */
-  page_Koronasertifikat_Desc: string;
-  /**
    * Prøvesvar
    */
   page_Provesvar_Title: string;
@@ -4274,6 +4334,18 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    * /helseregistre
    */
   page_Reseptformidleren_NavigateBackLinkURL: string;
+  /**
+   * Koronasertifikat QR code testside
+   */
+  page_QrCode_Title: string;
+  /**
+   * Koronasertifikat
+   */
+  page_Koronasertifikat_Title: string;
+  /**
+   * Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet.
+   */
+  page_Koronasertifikat_Desc: string;
 };
 
 export type HNMinHelseDialogGPStrings = {
@@ -17263,7 +17335,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /**
-   * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+   * ${FirstName} sin timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
    */
   avlystPrimarhelsetjenesteTime_EmailMessage_Body_Representation: string;
   /**
@@ -17275,15 +17347,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    */
   avlystPrimarhelsetjenesteTime_EmailMessage_Subject_Self: string;
   /**
-   * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+   * ${FirstName}, din timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
    */
   avlystPrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /**
-   * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+   * ${FirstName} sin timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
    */
   avlystPrimarhelsetjenesteTime_TextMessage_Body_Representation: string;
   /**
-   * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+   * ${FirstName}, din timeavtale${AvtaleType} hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
    */
   avlystPrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /**
@@ -25247,6 +25319,10 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = {
   /**
+   * Koronasertifikat
+   */
+  page_HendelsesLogg_49: string;
+  /**
    * Ved fullmakt
    */
   shared_Fullmakt: string;
@@ -29114,9 +29190,13 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
    * Samvalg-besøkende
    */
   group_Samvalg_Visitors_Title: string;
-  /**
-   * Du har ikke tilgang til de innloggede tjenestene på Helsenorge
-   */
+  /** 
+  * Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema.
+
+For voksne: <a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf">skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge</a>
+
+For barn under 16 år: <a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf"> skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge.</a>
+  */
   userControl_Start_ReservationMessage: string;
   /**
    * Utsagnlisten som skal vises på mine refleksjoner
