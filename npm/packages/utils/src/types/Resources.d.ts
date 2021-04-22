@@ -1332,6 +1332,14 @@ export type HNDialogCommonJS = {
   * Kontakt fastlegen - Be om time eller råd
   */
   fastlegepanelFastlegekonsultasjon: string;
+  /** 
+  * Fastlegeavtale uten fast lege
+  */
+  fastlegeBannerUtenFastlege: string;
+  /** 
+  * Din fastlege siden
+  */
+  fastlegeBannerSiden: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
