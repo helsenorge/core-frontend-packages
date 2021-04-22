@@ -3781,7 +3781,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
    */
   group_Owners_Description: string;
   /**
-   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest og Helse Nord tilgjengelig.
+   * Her ser du status på henvisningene dine til sykehus/spesialist. Foreløpig er kun henvisninger til sykehus i Helse Vest, Helse Nord og Helse Sør-Øst tilgjengelig.
    */
   page_Referrals_Desc: string;
   /**
@@ -15919,7 +15919,7 @@ export type HNMinHelseNavigation = {
    */
   tile_Koronasertifikat_Title: string;
   /**
-   * Ikke avklart!
+   * Vaksiner og siste test.
    */
   tile_Koronasertifikat_Description: string;
   /**
@@ -29191,11 +29191,10 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
    */
   group_Samvalg_Visitors_Title: string;
   /** 
-  * Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema.
+  * Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.
 
-For voksne: <a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf">skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge</a>
-
-For barn under 16 år: <a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf"> skjema for å gjenåpne tilgang til innloggede tjenester på Helsenorge.</a>
+Skjema for voksne: https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf
+Skjema for barn under 16 år: https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf
   */
   userControl_Start_ReservationMessage: string;
   /**
