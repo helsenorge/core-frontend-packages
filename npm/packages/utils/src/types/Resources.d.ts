@@ -15919,7 +15919,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Koronasertifikat_Title: string;
   /** 
-  * Ikke avklart!
+  * Vaksiner og siste test.
   */
   tile_Koronasertifikat_Description: string;
   /** 
