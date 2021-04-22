@@ -29217,8 +29217,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   /** 
   * <p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p>
 
-<a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf">Skjema for voksne</a>
-
+<a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf">Skjema for voksne</a> <br/><br/>
 <a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf">Skjema for barn under 16 år</a>
   */
   userControl_Start_ReservationMessage: string;
