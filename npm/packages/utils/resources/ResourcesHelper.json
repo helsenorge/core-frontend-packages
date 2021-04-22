@@ -337,7 +337,9 @@
     "fastlegepanelFornyResept": "Forny resept",
     "fastlegepanelEkonsultasjon": "Start e-konsultasjon",
     "fastlegepanelVideokonsultasjon": "Videokonsultasjon",
-    "fastlegepanelFastlegekonsultasjon": "Kontakt fastlegen - Be om time eller råd"
+    "fastlegepanelFastlegekonsultasjon": "Kontakt fastlegen - Be om time eller råd",
+    "fastlegeBannerUtenFastlege": "Fastlegeavtale uten fast lege",
+    "fastlegeBannerSiden": "Din fastlege siden"
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
