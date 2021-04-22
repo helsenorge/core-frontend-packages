@@ -1329,9 +1329,29 @@ export type HNDialogCommonJS = {
    */
   fastlegepanelVideokonsultasjon: string;
   /**
-   * Fastlegekonsultasjon
+   * Kontakt fastlegen - Be om time eller råd
    */
   fastlegepanelFastlegekonsultasjon: string;
+  /**
+   * Fastlegeavtale uten fast lege
+   */
+  fastlegeBannerUtenFastlege: string;
+  /**
+   * Din fastlege siden
+   */
+  fastlegeBannerSiden: string;
+  /**
+   * Gå til legekontorets nettsider
+   */
+  fastlegeBannerLegekontorLink: string;
+  /**
+   * Digitale tjenester på Helsenorge
+   */
+  fastlegeBannerDigitaletjenester: string;
+  /**
+   * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
+   */
+  fastlegeBannerIngenTilgjengelige: string;
 };
 
 export type HNMinHelseByttFastlegeJS = {

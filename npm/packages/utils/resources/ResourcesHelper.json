@@ -337,7 +337,12 @@
     "fastlegepanelFornyResept": "Forny resept",
     "fastlegepanelEkonsultasjon": "Start e-konsultasjon",
     "fastlegepanelVideokonsultasjon": "Videokonsultasjon",
-    "fastlegepanelFastlegekonsultasjon": "Fastlegekonsultasjon"
+    "fastlegepanelFastlegekonsultasjon": "Kontakt fastlegen - Be om time eller råd",
+    "fastlegeBannerUtenFastlege": "Fastlegeavtale uten fast lege",
+    "fastlegeBannerSiden": "Din fastlege siden",
+    "fastlegeBannerLegekontorLink": "Gå til legekontorets nettsider",
+    "fastlegeBannerDigitaletjenester": "Digitale tjenester på Helsenorge",
+    "fastlegeBannerIngenTilgjengelige": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge."
   },
   "HNMinHelseByttFastlegeJS": {
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
