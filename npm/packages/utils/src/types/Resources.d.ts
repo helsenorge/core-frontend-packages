@@ -1329,7 +1329,7 @@ export type HNDialogCommonJS = {
   */
   fastlegepanelVideokonsultasjon: string;
   /** 
-  * Fastlegekonsultasjon
+  * Kontakt fastlegen - Be om time eller råd
   */
   fastlegepanelFastlegekonsultasjon: string;
 };
