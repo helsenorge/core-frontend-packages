@@ -1356,6 +1356,10 @@ export type HNDialogCommonJS = {
   * Informasjon fra legekontoret
   */
   fastlegeBannerInformasjonLegekontor: string;
+  /** 
+  * Du kan ikke bestille time nå.
+  */
+  bestillTimeIngenBehandlereMedAdvarselText: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
