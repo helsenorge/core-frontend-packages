@@ -1360,6 +1360,10 @@ export type HNDialogCommonJS = {
   * Du kan ikke bestille time nå.
   */
   bestillTimeIngenBehandlereMedAdvarselText: string;
+  /** 
+  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
+  */
+  bestillTimeIngenBehandlereUtenAdvarselText: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
@@ -29220,7 +29224,6 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   group_Samvalg_Visitors_Title: string;
   /** 
   * <p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p>
-<br />
 <br />
 <a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf">Skjema for voksne</a> <br />
 <a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf">Skjema for barn under 16 år</a>

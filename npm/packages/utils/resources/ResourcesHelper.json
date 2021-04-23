@@ -344,7 +344,8 @@
     "fastlegeBannerDigitaletjenester": "Digitale tjenester på Helsenorge",
     "fastlegeBannerIngenTilgjengelige": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.",
     "fastlegeBannerInformasjonLegekontor": "Informasjon fra legekontoret",
-    "bestillTimeIngenBehandlereMedAdvarselText": "Du kan ikke bestille time nå."
+    "bestillTimeIngenBehandlereMedAdvarselText": "Du kan ikke bestille time nå.",
+    "bestillTimeIngenBehandlereUtenAdvarselText": "Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte."
   },
   "HNMinHelseByttFastlegeJS": { 
     "bfl_ResultPage_VentelisteDialog_Step3": "Kvittering",
@@ -7312,7 +7313,7 @@
     "group_Samvalg_Owners_Title": "Samvalg-eiere",
     "group_Samvalg_Visitors_Description": "",
     "group_Samvalg_Visitors_Title": "Samvalg-besøkende",
-    "userControl_Start_ReservationMessage": "<p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p>\n<br />\n<br />\n<a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\">Skjema for voksne</a> <br />\n<a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\">Skjema for barn under 16 år</a>",
+    "userControl_Start_ReservationMessage": "<p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p>\n<br />\n<a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\">Skjema for voksne</a> <br />\n<a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\">Skjema for barn under 16 år</a>",
     "field_BsvRefleksjonerPrioriteringsliste_Desc": "Utsagnlisten som skal vises på mine refleksjoner",
     "field_BsvRefleksjonerPrioriteringsliste_Title": "Utsagnliste",
     "field_BsvRefleksjonerSeksjon1_Title": "Hva er viktigst for meg?",
