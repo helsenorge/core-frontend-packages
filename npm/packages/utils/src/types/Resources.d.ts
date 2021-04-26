@@ -17139,7 +17139,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   primarhelsetjenesteTimeIkkeTilgjengelig_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} sin time hos ${ActorName} ble ikke reservert. Gå til helsenorge.no for å bestille ny time eller kontakt behandlingsstedet.
+  * ${FirstName} sin time${AvtaleType} hos ${ActorName} ble ikke reservert. Gå til helsenorge.no for å bestille ny time eller kontakt behandlingsstedet.
   */
   primarhelsetjenesteTimeIkkeTilgjengelig_TextMessage_Body_Representation: string;
   /** 
