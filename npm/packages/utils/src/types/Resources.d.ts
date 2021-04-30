@@ -16579,7 +16579,7 @@ export type HNMinHelseNotificationStrings = {
   */
   contact_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName}, du har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * ${FirstName}, du har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   newAppointment_EmailMessage_Body_Self: string;
   /** 

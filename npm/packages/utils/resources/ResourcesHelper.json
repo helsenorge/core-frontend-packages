@@ -4147,7 +4147,7 @@
     "consultation_TextMessage_Body_Self": "${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.",
     "contact_EmailMessage_Body_Representation": "${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den. ",
     "contact_EmailMessage_Body_Self": "${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.",
-    "newAppointment_EmailMessage_Body_Self": "${FirstName}, du har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.",
+    "newAppointment_EmailMessage_Body_Self": "${FirstName}, du har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.",
     "newAppointment_EmailMessage_Subject_Representation": "Varsel om time på helsenorge.no",
     "newAppointment_EmailMessage_Subject_Self": "Varsel om time på helsenorge.no",
     "newAppointment_TextMessage_Body_Representation": "${FirstName} har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.",
