@@ -16775,7 +16775,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   footer_TextMessage: string;
   /** 
-  * ${FirstName} har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * ${FirstName} har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
   */
   newAppointment_EmailMessage_Body_Representation: string;
   /** 
