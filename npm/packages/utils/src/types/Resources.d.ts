@@ -11859,6 +11859,10 @@ opplysninger jeg mener skal korrigeres:
   * Din forespørsel vil normalt bli besvart i løpet av 30 dager.
   */
   messageSubmitDescription: string;
+  /** 
+  * Denne tjenesten er ikke tilgjengelig
+  */
+  clientOperation_GetRegisteroppforingPortal_not_available: string;
 };
 
 export type HNMinHelseKJStringsJS = { 
