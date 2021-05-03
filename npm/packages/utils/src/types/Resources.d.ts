@@ -3556,7 +3556,7 @@ export type HNMinHelseCommonJS = {
   */
   breadCrumb_home: string;
   /** 
-  * Min helse
+  * Forside
   */
   breadCrumb_MinHelse: string;
   /** 
