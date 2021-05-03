@@ -2977,7 +2977,8 @@
     "meldeFeilInfo": "Jeg har spørsmål om opplysninger i registeret, eller det er registrert opplysninger om meg som er feil. Her følger mine spørsmål, eller beskrivelse av hvilke\nopplysninger jeg mener skal korrigeres:",
     "meldeFeilLink": "Still spørsmål eller meld fra om feil i opplysninger som er registrert om meg",
     "meldeFeilSubject": "Spørsmål eller melding om feil i opplysninger som er registrert om meg",
-    "messageSubmitDescription": "Din forespørsel vil normalt bli besvart i løpet av 30 dager."
+    "messageSubmitDescription": "Din forespørsel vil normalt bli besvart i løpet av 30 dager.",
+    "clientOperation_GetRegisteroppforingPortal_not_available": "Denne tjenesten er ikke tilgjengelig"
   },
   "HNMinHelseKJStringsJS": { 
     "page_KI_validFrom": "Gyldig fra:",
