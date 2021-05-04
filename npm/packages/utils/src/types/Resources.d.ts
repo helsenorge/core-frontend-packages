@@ -3750,7 +3750,7 @@ export type HNMinHelseContent = {
   */
   page_Pasientreisersoknad_Title: string;
   /** 
-  * Pasientreiser
+  * 
   */
   page_Pasientreiser_Desc: string;
   /** 

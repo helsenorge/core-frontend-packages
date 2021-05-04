@@ -948,7 +948,7 @@
   "HNMinHelseContent": { 
     "page_Pasientreisersoknad_Desc": "Pasientreiser",
     "page_Pasientreisersoknad_Title": "Pasientreiser",
-    "page_Pasientreiser_Desc": "Pasientreiser",
+    "page_Pasientreiser_Desc": "",
     "page_Pasientreiser_Title": "Pasientreiser",
     "page_KJLogg_Desc": "Dette er en oversikt over aktiviteter i kjernejournalen din. Du kan se hvem som har åpnet den, og om det er gjort registreringer eller endringer.",
     "page_KJLogg_Title": "Logg over bruk",
