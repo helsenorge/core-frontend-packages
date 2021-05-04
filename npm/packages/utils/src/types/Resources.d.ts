@@ -3742,7 +3742,7 @@ export type HNMinHelseCommon = {
 
 export type HNMinHelseContent = { 
   /** 
-  * 
+  * Pasientreiser
   */
   page_Pasientreisersoknad_Desc: string;
   /** 
