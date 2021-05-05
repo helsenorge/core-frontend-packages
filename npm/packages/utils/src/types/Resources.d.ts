@@ -2168,7 +2168,7 @@ export type HNMinHelseByttFastlegeJS = {
   */
   bfl_ResultPage_Byttedialog_PostPhaError: string;
   /** 
-  * Din fastlege: 
+  * Din fastlege:
   */
   bfl_DinFastlegeBanner_HiddenBeforeFastlegeName: string;
   /** 
@@ -3006,11 +3006,11 @@ export type HNMinHelseCommonJS = {
   */
   resetFilters: string;
   /** 
-  * Visning filtrert på 
+  * Visning filtrert på
   */
   selectedFilters: string;
   /** 
-  * Antall resultater: 
+  * Antall resultater:
   */
   numResults: string;
   /** 
@@ -3154,7 +3154,7 @@ export type HNMinHelseCommonJS = {
   */
   moreHelp: string;
   /** 
-  * Ingen treff på 
+  * Ingen treff på
   */
   noResults: string;
   /** 
@@ -4382,7 +4382,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
 
 export type HNMinHelseDialogGPStrings = { 
   /** 
-  * Tjenesten kunne ikke hente tilgjengelige timer. 
+  * Tjenesten kunne ikke hente tilgjengelige timer.
   */
   service_Appointment_Error: string;
   /** 
@@ -4482,7 +4482,7 @@ export type HNMinHelseDialogGPStrings = {
   */
   webPart_Sf_So_Appointment_SubCalendarOfflineLinkButton: string;
   /** 
-  * Du kan også 
+  * Du kan også
   */
   webPart_Sf_So_Appointment_SubCalendarOfflineOnlineText: string;
   /** 
@@ -4697,7 +4697,7 @@ Du kan legge til inntil 3 vedlegg.
   */
   webPart_Sf_So_MissingData_Error_Description: string;
   /** 
-  * Telefon: 
+  * Telefon:
   */
   webPart_GPInfo_Telephone: string;
   /** 
@@ -4805,7 +4805,7 @@ Du kan legge til inntil 3 vedlegg.
   */
   webPart_GPInfo_Title_ContactInfo: string;
   /** 
-  * GPS Koordinater: 
+  * GPS Koordinater:
   */
   webPart_GPInfo_Title_Coordinates: string;
 };
@@ -4832,7 +4832,7 @@ export type HNMinHelseDialogJS = {
   */
   conversationSystemDialogueChangeDeniedPostfix: string;
   /** 
-  * Ønsket timeavtale 
+  * Ønsket timeavtale
   */
   conversationSystemDialogueChangeDeniedPrefix: string;
   /** 
@@ -5140,7 +5140,7 @@ export type HNMinHelseDialogJS = {
   */
   shortcutContactMoreInfo: string;
   /** 
-  * Din fastlege siden 
+  * Din fastlege siden
   */
   servicepanelAppointedFromGeneralPractitioner: string;
   /** 
@@ -5904,7 +5904,7 @@ Du kan prøve på nytt senere eller kontakte oss på telefon.
   */
   servicepanelMakeAnAppointment: string;
   /** 
-  * Telefonnummer: 
+  * Telefonnummer:
   */
   servicepanelPhone: string;
   /** 
@@ -6085,7 +6085,7 @@ Finner du ingen tilgjengelige timer som passer deg, kan du kontakte legekontoret
   */
   eContactReplyDescription: string;
   /** 
-  * Fastlegekontoret 
+  * Fastlegekontoret
   */
   conversationGeneralPractiotionerRecipient: string;
   /** 
@@ -6700,7 +6700,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationConfirmDeleteDraftTitle: string;
   /** 
-  * Oppdatert 
+  * Oppdatert
   */
   conversationAttachmentUpdated: string;
   /** 
@@ -6728,11 +6728,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentlistelementPreparationsLimitedIngress: string;
   /** 
-  * Meldingen er ikke sendt. Utkast lagret: 
+  * Meldingen er ikke sendt. Utkast lagret:
   */
   conversationLabelSaved: string;
   /** 
-  *  på vegne av 
+  *  på vegne av
   */
   messageOnBehalfOf: string;
   /** 
@@ -6840,11 +6840,11 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   bookingManualTab: string;
   /** 
-  * Endre tidspunkt for timeavtale: 
+  * Endre tidspunkt for timeavtale:
   */
   appointmentRescheduleBookableHeading: string;
   /** 
-  * Når vil du ha time? 
+  * Når vil du ha time?
   */
   appointmentRescheduleBookablePurpose: string;
   /** 
@@ -6856,7 +6856,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentlistelementSubjectFallback: string;
   /** 
-  * kl. 
+  * kl.
   */
   appointmentlistelementTimeOfDayPrefix: string;
   /** 
@@ -6925,7 +6925,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationLabelRecievedHN: string;
   /** 
-  * Sendt 
+  * Sendt
   */
   conversationLabelSent: string;
   /** 
@@ -9210,7 +9210,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   messageAttachment_UnsupportedFormat_Title: string;
   /** 
-  * Tjenesten du prøver å utføre er ikke støttet av motparten. Dersom dette er en tjeneste som tidligere har fungert, så kan dette skje dersom motparten har gjort endringer i tjenestetilbudet som er registrert i adresseregisteret. 
+  * Tjenesten du prøver å utføre er ikke støttet av motparten. Dersom dette er en tjeneste som tidligere har fungert, så kan dette skje dersom motparten har gjort endringer i tjenestetilbudet som er registrert i adresseregisteret.
   */
   persistentMessage_UnsupportedService_Body: string;
   /** 
@@ -9286,7 +9286,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   appointmentCommand_MissingCalendar_Title: string;
   /** 
-  * Det oppstod en feil under uthenting av arkivdokumentet. Prøv igjen senere. 
+  * Det oppstod en feil under uthenting av arkivdokumentet. Prøv igjen senere.
   */
   archiveDocument_DownloadError_Body: string;
   /** 
@@ -9362,7 +9362,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   clientServiceHost_Unauthorized_Body: string;
   /** 
-  * Du har ikke tilgang til denne tjenesten. 
+  * Du har ikke tilgang til denne tjenesten.
   */
   clientServiceHost_Unauthorized_Title: string;
   /** 
@@ -9370,7 +9370,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   confirmEncounter_Body_Default: string;
   /** 
-  * Avtalen som ble spesifisert kunne ikke bli funnet. 
+  * Avtalen som ble spesifisert kunne ikke bli funnet.
   */
   downloadCalendar_AppointmentNotFound_Body: string;
   /** 
@@ -9378,7 +9378,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   downloadCalendar_AppointmentNotFound_Title: string;
   /** 
-  * Nedlasting av kalender er ikke implementert for denne motparten. 
+  * Nedlasting av kalender er ikke implementert for denne motparten.
   */
   downloadCalendar_CounterpartyNotImplemented_Body: string;
   /** 
@@ -9455,11 +9455,11 @@ Vel møtt!
 
 export type HNMinHelseDialogVPJS = { 
   /** 
-  *  av 
+  *  av
   */
   summaryInfix: string;
   /** 
-  * Viser 
+  * Viser
   */
   summaryPrefix: string;
   /** 
@@ -9551,7 +9551,7 @@ export type HNMinHelseDialogVPJS = {
   */
   documentsErrorLoadConversation: string;
   /** 
-  * Filtrer tabell på 
+  * Filtrer tabell på
   */
   legendPrefix: string;
   /** 
@@ -9611,7 +9611,7 @@ export type HNMinHelseDialogVPJS = {
   */
   conversationErrorLoadConversationDescription: string;
   /** 
-  * Vis dokumenter den ansatte har åpnet i perioden 
+  * Vis dokumenter den ansatte har åpnet i perioden
   */
   dateFilterPrefix: string;
   /** 
@@ -9655,7 +9655,7 @@ export type HNMinHelseDialogVPJS = {
   */
   tilgangsloggInfoboksTomBeskrivelse: string;
   /** 
-  * Dokumenter åpnet av 
+  * Dokumenter åpnet av
   */
   openedBy: string;
   /** 
@@ -9687,7 +9687,7 @@ export type HNMinHelseDialogVPJS = {
   */
   tilgangsloggSeApnedeDokumenter: string;
   /** 
-  * Utskrift fra pasientjournal fungerer for tiden ikke riktig. Hvis du trenger en utskrift av dette dokumentet, kan du lagre det i ditt personlige helsearkiv og skrive det ut derfra. 
+  * Utskrift fra pasientjournal fungerer for tiden ikke riktig. Hvis du trenger en utskrift av dette dokumentet, kan du lagre det i ditt personlige helsearkiv og skrive det ut derfra.
   */
   printMessage: string;
   /** 
@@ -9758,7 +9758,7 @@ export type HNMinHelseDialogVP = {
   */
   userControl_Audit_ShowDetails: string;
   /** 
-  * : 
+  * :
   */
   userControl_Records_Colon: string;
   /** 
@@ -9908,7 +9908,7 @@ export type HNMinHelseDialogVP = {
   */
   userControl_Records_SortBy: string;
   /** 
-  * Sortert på: 
+  * Sortert på:
   */
   userControl_Records_SortingBy: string;
   /** 
@@ -9968,7 +9968,7 @@ export type HNMinHelseDialogVP = {
   */
   userControl_Audit_LoadMore: string;
   /** 
-  * Dokumenter åpnet av 
+  * Dokumenter åpnet av
   */
   userControl_Audit_OpenedBy: string;
   /** 
@@ -10028,7 +10028,7 @@ export type HNMinHelseDialogVP = {
   */
   userControl_Records_OpenFilterMobile: string;
   /** 
-  * Dato: 
+  * Dato:
   */
   userControl_Audit_DatePrefix: string;
   /** 
@@ -11803,7 +11803,7 @@ export type HNMinHelseHelseregistreJS = {
   */
   hjelpekontekst_helseregistre: string;
   /** 
-  * Les mer om 
+  * Les mer om
   */
   informasjonLenkePrefix: string;
   /** 
@@ -11823,7 +11823,7 @@ export type HNMinHelseHelseregistreJS = {
   */
   innsynHelseopplysningerSubject: string;
   /** 
-  * Les mer om innsynsrett i 
+  * Les mer om innsynsrett i
   */
   innsynsrettLenkePrefix: string;
   /** 
@@ -11923,7 +11923,7 @@ export type HNMinHelseKJStringsJS = {
   */
   page_KI_diagnose: string;
   /** 
-  * Implantert: 
+  * Implantert:
   */
   page_KI_implantStart: string;
   /** 
@@ -11931,11 +11931,11 @@ export type HNMinHelseKJStringsJS = {
   */
   page_KI_SubcategoryCode_Implant: string;
   /** 
-  * Behandlingsstart: 
+  * Behandlingsstart:
   */
   page_KI_treatmentStart: string;
   /** 
-  * Diagnosetidspunkt: 
+  * Diagnosetidspunkt:
   */
   page_KI_criticalStart: string;
   /** 
@@ -11992,7 +11992,7 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_logg_varslingEpostOppdater: string;
   /** 
-  * E-post vil bli sendt til 
+  * E-post vil bli sendt til
   */
   page_logg_varslingEpostRegistrert: string;
   /** 
@@ -12072,19 +12072,19 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_Besokshistorikk_Lightbox_ReportError_Item_Description: string;
   /** 
-  * Helseforetak: 
+  * Helseforetak:
   */
   page_Besokshistorikk_Lightbox_ReportError_Item_Institution: string;
   /** 
-  * Antall: 
+  * Antall:
   */
   page_Besokshistorikk_Lightbox_ReportError_Item_Number: string;
   /** 
-  * Periode: 
+  * Periode:
   */
   page_Besokshistorikk_Lightbox_ReportError_Item_Period: string;
   /** 
-  * Fagenhet/spesialist: 
+  * Fagenhet/spesialist:
   */
   page_Besokshistorikk_Lightbox_ReportError_Item_SpecialistUnit: string;
   /** 
@@ -12400,7 +12400,7 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_logg_virksomhet: string;
   /** 
-  *  av 
+  *  av
   */
   page_logg_av: string;
   /** 
@@ -13040,7 +13040,7 @@ export type HNMinHelseKJStrings = {
   */
   webPart_NotificationKJ_WeeklyEmail_Text: string;
   /** 
-  * Din kjernejournal ble opprettet: 
+  * Din kjernejournal ble opprettet:
   */
   webPart_PdfPrintLightbox_ActivatedDate: string;
   /** 
@@ -13088,7 +13088,7 @@ export type HNMinHelseKJStrings = {
   */
   mho_healthepisodes_report_title: string;
   /** 
-  * For å kunne melde feil i besøkshistorikken må du ha samtykket til personlig helsearkiv (PHA). 
+  * For å kunne melde feil i besøkshistorikken må du ha samtykket til personlig helsearkiv (PHA).
   */
   mho_healthepisodes_pha_description: string;
   /** 
@@ -13416,7 +13416,7 @@ export type HNMinHelseKJStrings = {
   */
   mho_prescriptions_dispenced: string;
   /** 
-  * Tilbakekalt: 
+  * Tilbakekalt:
   */
   mho_prescriptions_dispenced_recall: string;
   /** 
@@ -13464,7 +13464,7 @@ export type HNMinHelseKJStrings = {
   */
   mho_prescriptions_merchandise_group: string;
   /** 
-  * (byttepreparat) 
+  * (byttepreparat)
   */
   mho_prescriptions_exchange: string;
   /** 
@@ -13509,7 +13509,6 @@ export type HNMinHelseKJStrings = {
   mho_prescription_statusInactive: string;
   /** 
   * Denne resepten er tilbakekalt og ikke aktiv.
-
   */
   mho_prescription_statusInactiveInfo: string;
   /** 
@@ -13820,7 +13819,7 @@ Ved flytting sender du flyttemelding til <a href="http://skatteetaten.no/no/pers
   */
   mho_healthepisodes_receipt_description: string;
   /** 
-  * Ved eventuelle spørsmål kan du bli oppringt på 
+  * Ved eventuelle spørsmål kan du bli oppringt på
   */
   mho_healthepisodes_receipt_description_have_phone: string;
   /** 
@@ -14036,7 +14035,7 @@ Ved flytting sender du flyttemelding til <a href="http://skatteetaten.no/no/pers
   */
   mho_employer_title: string;
   /** 
-  * FEILMELDING: 
+  * FEILMELDING:
   */
   mho_error_type_error: string;
   /** 
@@ -14371,7 +14370,7 @@ Selv om du har kjernejournal bør du opplyse helsepersonell om dine sykdommer og
   */
   webPart_BlockForInternet_InfoboxNotBlocked: string;
   /** 
-  * MHO BlockForInternet: 
+  * MHO BlockForInternet:
   */
   webPart_BlockForInternet_LogPrefix: string;
   /** 
@@ -14507,11 +14506,11 @@ Selv om du har kjernejournal bør du opplyse helsepersonell om dine sykdommer og
   */
   mho_notes_footertext: string;
   /** 
-  * Feil i besøkshistorikk er meldt, sist oppdatert 
+  * Feil i besøkshistorikk er meldt, sist oppdatert
   */
   mho_notes_introtext_history: string;
   /** 
-  * Feil i legemidler er meldt, sist oppdatert 
+  * Feil i legemidler er meldt, sist oppdatert
   */
   mho_notes_introtext_prescriptions: string;
   /** 
@@ -14635,7 +14634,7 @@ Selv om du har kjernejournal bør du opplyse helsepersonell om dine sykdommer og
   */
   webPart_Default_GraphicsLabelText: string;
   /** 
-  * Avhengig av om man er logget inn eller ikke vil denne webdelen rendre en knapp/lenke direkte til den eksterne tjenesten eller til MinHelse logg inn. 
+  * Avhengig av om man er logget inn eller ikke vil denne webdelen rendre en knapp/lenke direkte til den eksterne tjenesten eller til MinHelse logg inn.
   */
   webPart_ExternalServiceRedirect_Desc: string;
   /** 
@@ -14705,11 +14704,11 @@ Du kan selv bestemme hvordan din kjernejournal skal brukes og eventuelt begrense
   */
   webPart_ReservationStatus_LogPrefix: string;
   /** 
-  * Reservasjonen ble registrert: 
+  * Reservasjonen ble registrert:
   */
   webPart_ReservationStatus_ReservationDateText: string;
   /** 
-  * Din kjernejournal vil bli slettet: 
+  * Din kjernejournal vil bli slettet:
   */
   webPart_ReservationStatus_ReservationDeletionDateText: string;
   /** 
@@ -14957,11 +14956,11 @@ Det er også mulig å <b>blokkere</b> enkeltpersoner slik at de aldri vil kunne 
   */
   webPart_BlockForPersonnel_InfoTextLabel: string;
   /** 
-  * Sist endret: 
+  * Sist endret:
   */
   webPart_BlockForPersonnel_LastChanged: string;
   /** 
-  * MHO BlockForPersonnel: 
+  * MHO BlockForPersonnel:
   */
   webPart_BlockForPersonnel_LogPrefix: string;
   /** 
@@ -15062,7 +15061,7 @@ Du kan legge inn nye begrensninger når du ønsker det.
   */
   mho_activitylog_others_empty: string;
   /** 
-  * Periode: 
+  * Periode:
   */
   mho_activitylog_periode: string;
   /** 
@@ -16046,7 +16045,7 @@ export type HNMinHelseNHNStrings = {
   */
   webPart_MHOAddress_InfoText: string;
   /** 
-  * Dette er din registrerte bostedsadresse. 
+  * Dette er din registrerte bostedsadresse.
   */
   webPart_MHOAddress_IntroText: string;
   /** 
@@ -16136,7 +16135,7 @@ export type HNMinHelseNHNStrings = {
   */
   webPart_FamilyRelations_IntroText: string;
   /** 
-  * MHO FamilyRelations: 
+  * MHO FamilyRelations:
   */
   webPart_FamilyRelations_LogPrefix: string;
   /** 
@@ -16188,7 +16187,7 @@ export type HNMinHelseNHNStrings = {
   */
   webPart_GeneralPractitionerContactInfo_Desc: string;
   /** 
-  * Din fastlege siden 
+  * Din fastlege siden
   */
   webPart_GeneralPractitionerContactInfo_LastChanged: string;
   /** 
@@ -16252,7 +16251,7 @@ export type HNMinHelseNHNStrings = {
   */
   field_Source_Desc: string;
   /** 
-  * Kilde: 
+  * Kilde:
   */
   field_Source_Prefix: string;
   /** 
@@ -16260,7 +16259,7 @@ export type HNMinHelseNHNStrings = {
   */
   field_Source_Title: string;
   /** 
-  * FEILMELDING: 
+  * FEILMELDING:
   */
   mho_error_type_error: string;
   /** 
@@ -16320,7 +16319,7 @@ export type HNMinHelseNHNStrings = {
   */
   serviceName: string;
   /** 
-  * : 
+  * :
   */
   webControl_FieldValueSouce_Separator: string;
   /** 
@@ -16384,7 +16383,7 @@ export type HNMinHelseNHNStrings = {
   */
   webPart_GeneralPract_InfoPanelText: string;
   /** 
-  * Koordinater: 
+  * Koordinater:
   */
   webPart_GPInfo_Title_Coordinates: string;
   /** 
@@ -16392,7 +16391,7 @@ export type HNMinHelseNHNStrings = {
   */
   webPart_LoggedInIdentification_Desc: string;
   /** 
-  * F.nr: 
+  * F.nr:
   */
   webPart_LoggedInIdentification_IdPrefix: string;
   /** 
@@ -16423,7 +16422,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserVedtak_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding om resept fra ${ActorName}. Logg inn på helsenorge.no for å lese den. 
+  * ${FirstName} har fått en melding om resept fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
   */
   prescription_EmailMessage_Body_Representation: string;
   /** 
@@ -16551,7 +16550,7 @@ export type HNMinHelseNotificationStrings = {
   */
   timeIkkeEndret_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den. 
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
   */
   consultation_EmailMessage_Body_Representation: string;
   /** 
@@ -16575,7 +16574,7 @@ export type HNMinHelseNotificationStrings = {
   */
   consultation_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den. 
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
   */
   contact_EmailMessage_Body_Representation: string;
   /** 
@@ -16715,7 +16714,7 @@ export type HNMinHelseNotificationStrings = {
   */
   contact_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den. 
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
   */
   coordinator_EmailMessage_Body_Representation: string;
   /** 
@@ -16827,7 +16826,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   timeIkkeTilgjengelig_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin time hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt fastlegekontoret. 
+  * ${FirstName} sin time hos ${ActorName} ${DateTime} kunne ikke avbestilles. Kontakt fastlegekontoret.
   */
   timeIkkeAvbestilt_EmailMessage_Body_Representation: string;
   /** 
@@ -17890,11 +17889,11 @@ export type HNMinHelsePages = {
   */
   resetFilters: string;
   /** 
-  * Visning filtrert på 
+  * Visning filtrert på
   */
   selectedFilters: string;
   /** 
-  * Antall resultater: 
+  * Antall resultater:
   */
   numResults: string;
   /** 
@@ -17910,7 +17909,7 @@ export type HNMinHelsePages = {
   */
   filterMobileNavigateBack: string;
   /** 
-  * Filtrer på: 
+  * Filtrer på:
   */
   filterOn: string;
   /** 
@@ -17918,7 +17917,7 @@ export type HNMinHelsePages = {
   */
   chosen: string;
   /** 
-  * Ingen treff på 
+  * Ingen treff på
   */
   noResults: string;
   /** 
@@ -18001,7 +18000,7 @@ export type HNMinHelsePasientjournal = {
   */
   filterUseFilter: string;
   /** 
-  * Mediatype: 
+  * Mediatype:
   */
   mimeType: string;
   /** 
@@ -18081,7 +18080,7 @@ export type HNMinHelsePasientjournal = {
   */
   sortDocumentsNotLoadedMsg: string;
   /** 
-  * Viser 
+  * Viser
   */
   summaryPrefix: string;
   /** 
@@ -18323,7 +18322,7 @@ export type HNMinHelsePasientjournal = {
   */
   documentType: string;
   /** 
-  * Filstørrelse: 
+  * Filstørrelse:
   */
   fileSize: string;
   /** 
@@ -18977,7 +18976,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_FORESATT_REFUSJON_AV_FORELDET_REISE_begrunnelser_AAPENBART_FORHINDRET: string;
   /** 
-  * Et helseforetak ga meg feil opplysninger om fristen for å sende inn søknaden. 
+  * Et helseforetak ga meg feil opplysninger om fristen for å sende inn søknaden.
   */
   krav_FORESATT_REFUSJON_AV_FORELDET_REISE_begrunnelser_FEIL_INFORMASJON_FRISTER: string;
   /** 
@@ -19105,7 +19104,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_minAvstandEnkel: string;
   /** 
-  * En eller flere av reisene er over 300 kilometer. For reiser over 300 kilometer får du dekket utgifter tilsvarende kostnaden til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Du får derfor ingen foreløpig beregning. 
+  * En eller flere av reisene er over 300 kilometer. For reiser over 300 kilometer får du dekket utgifter tilsvarende kostnaden til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Du får derfor ingen foreløpig beregning.
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_maxAvstandEnkel: string;
   /** 
@@ -19113,7 +19112,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_minAvstandUsikkerRefusjon: string;
   /** 
-  * Din reise er beregnet til {0} kilometer. For reiser over 300 kilometer får du dekket utgifter til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Du får derfor ingen foreløpig beregning. 
+  * Din reise er beregnet til {0} kilometer. For reiser over 300 kilometer får du dekket utgifter til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Du får derfor ingen foreløpig beregning.
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_maxAvstandUsikkerRefusjon: string;
   /** 
@@ -19261,11 +19260,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_PASIENT_REFUSJON_AV_FORELDET_REISE_begrunnelser_INGEN_VALGENE_GJELDER: string;
   /** 
-  * Jeg var forhindret fra å søke, og kan dokumentere dette. 
+  * Jeg var forhindret fra å søke, og kan dokumentere dette.
   */
   krav_PASIENT_REFUSJON_AV_FORELDET_REISE_begrunnelser_AAPENBART_FORHINDRET: string;
   /** 
-  * Et helseforetak har gitt meg feil opplysninger om fristen for å sende inn søknaden. 
+  * Et helseforetak har gitt meg feil opplysninger om fristen for å sende inn søknaden.
   */
   krav_PASIENT_REFUSJON_AV_FORELDET_REISE_begrunnelser_FEIL_INFORMASJON_FRISTER: string;
   /** 
@@ -19273,7 +19272,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_PASIENT_REFUSJON_AV_FORELDET_REISE_begrunnelser_INGEN: string;
   /** 
-  * Ved spesielle tilfeller kan du ha rett til å få dekket nødvendige utgifter til forsendelse av reisegods. Dette kan for eksempel være rullestol. 
+  * Ved spesielle tilfeller kan du ha rett til å få dekket nødvendige utgifter til forsendelse av reisegods. Dette kan for eksempel være rullestol.
   */
   krav_PASIENT_REFUSJON_TRANSPORT_REISEGODS_info: string;
   /** 
@@ -19285,7 +19284,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_PASIENT_REFUSJON_TRANSPORT_REISEGODS_checkbox: string;
   /** 
-  * Jeg vil søke om å få dekket sending av nødvendig gods på: 
+  * Jeg vil søke om å få dekket sending av nødvendig gods på:
   */
   krav_PASIENT_REFUSJON_TRANSPORT_REISEGODS_gjelderForLabel: string;
   /** 
@@ -19381,7 +19380,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_PASIENT_PASIENT_TAPT_ARBEIDSINNTEKT_checkbox: string;
   /** 
-  * Hvor lenge var du borte fra jobben? 
+  * Hvor lenge var du borte fra jobben?
   */
   krav_PASIENT_PASIENT_TAPT_ARBEIDSINNTEKT_antallTimer: string;
   /** 
@@ -19393,7 +19392,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_PASIENT_PASIENT_TAPT_ARBEIDSINNTEKT_kostnader___TAPT_ARBEIDSINNTEKT___oppsummering: string;
   /** 
-  * Store ekstrautgifter til rengjøring av drosje, leiebil eller egen bil etter endt transport, kan dekkes, for eksempel ved fødsel i bil. 
+  * Store ekstrautgifter til rengjøring av drosje, leiebil eller egen bil etter endt transport, kan dekkes, for eksempel ved fødsel i bil.
   */
   krav_PASIENT_RENGJORING_AV_BIL_info: string;
   /** 
@@ -19425,7 +19424,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_PASIENT_REFUSJON_NODVENDIGE_UTGIFTER_ikkeHarKrav: string;
   /** 
-  * Som hovedregel får du dekket reisen med en standardsats per kilometer når du har kjørt egen bil til behandling. Hvis du hadde spesielle grunner til at du måtte kjøre bil, kan du også ha rett til å få dekket nødvendige tilleggsutgifter. 
+  * Som hovedregel får du dekket reisen med en standardsats per kilometer når du har kjørt egen bil til behandling. Hvis du hadde spesielle grunner til at du måtte kjøre bil, kan du også ha rett til å få dekket nødvendige tilleggsutgifter.
   */
   krav_PASIENT_REFUSJON_NODVENDIGE_UTGIFTER_title: string;
   /** 
@@ -19673,7 +19672,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_FORESATT_OVERNATTING_checkbox: string;
   /** 
-  * Antall døgn vi søker om godtgjørelse for overnatting: 
+  * Antall døgn vi søker om godtgjørelse for overnatting:
   */
   krav_FORESATT_OVERNATTING_antallDogn: string;
   /** 
@@ -20205,7 +20204,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_hvaBetyrDette_content: string;
   /** 
-  * Hvilken reisevei gjelder dette? 
+  * Hvilken reisevei gjelder dette?
   */
   krav_detteGjelder: string;
   /** 
@@ -20329,7 +20328,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   bomutgifter_titleMedUtgifter: string;
   /** 
-  * Teknisk feil. 
+  * Teknisk feil.
   */
   ikkeKritiskeFeil_valideringsfeil_title: string;
   /** 
@@ -20357,7 +20356,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   etapper_headers_korrigerDistanse: string;
   /** 
-  * Endre distanse til: 
+  * Endre distanse til:
   */
   etapper_headers_antallKm: string;
   /** 
@@ -20517,7 +20516,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiselengder_beregnetLengdeHeader: string;
   /** 
-  * Beregnet reiselengde er {0} km tur og {1} km retur 
+  * Beregnet reiselengde er {0} km tur og {1} km retur
   */
   reiselengder_beregnetLengdeHeaderTurRetur: string;
   /** 
@@ -20585,11 +20584,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   refusjonsboks_kunneIkkeBeregne: string;
   /** 
-  * Foreløpig dekket beløp er: {0} kroner. 
+  * Foreløpig dekket beløp er: {0} kroner.
   */
   refusjonsboks_forelopigDekket: string;
   /** 
-  * Det er trukket {0} kroner i egenandel. 
+  * Det er trukket {0} kroner i egenandel.
   */
   refusjonsboks_egenandelTrekk: string;
   /** 
@@ -20597,7 +20596,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   refusjonsboks_frikort: string;
   /** 
-  * Systemet kunne ikke beregne riktig egenandel.  Det kan derfor være avvik mellom foreløpig dekket beløp og beløpet du får dekket etter vedtak.  
+  * Systemet kunne ikke beregne riktig egenandel.  Det kan derfor være avvik mellom foreløpig dekket beløp og beløpet du får dekket etter vedtak.
   */
   refusjonsboks_avvikBelop: string;
   /** 
@@ -20729,7 +20728,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_kanIkkeBeregnesMeldinger_pasient_etappeneManglerDistanse: string;
   /** 
-  * Foreløpig dekket beløp kunne ikke beregnes fordi  distanse mangler på hele eller deler av reisen. Du kan oppgi distanse ved å endre reisen. 
+  * Foreløpig dekket beløp kunne ikke beregnes fordi  distanse mangler på hele eller deler av reisen. Du kan oppgi distanse ved å endre reisen.
   */
   reiseoversikt_kanIkkeBeregnesMeldinger_pasient_manglerDistanseEnkelReise: string;
   /** 
@@ -20741,7 +20740,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_kanIkkeBeregnesMeldinger_pasient_minsteTakst: string;
   /** 
-  * Foreløpig dekket beløp kunne ikke beregnes fordi distansen som er registrert er lengre enn det systemet beregner er korteste reisevei. Du kan gå tilbake i søknaden for å gjøre endringer. 
+  * Foreløpig dekket beløp kunne ikke beregnes fordi distansen som er registrert er lengre enn det systemet beregner er korteste reisevei. Du kan gå tilbake i søknaden for å gjøre endringer.
   */
   reiseoversikt_kanIkkeBeregnesMeldinger_pasient_avvikDistansePasient: string;
   /** 
@@ -20801,11 +20800,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_maxAvstandHeader: string;
   /** 
-  * Din reise er beregnet til {0} kilometer. For reiser over 300 kilometer får du dekket utgifter til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Du får derfor ingen foreløpig beregning. 
+  * Din reise er beregnet til {0} kilometer. For reiser over 300 kilometer får du dekket utgifter til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Du får derfor ingen foreløpig beregning.
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_maxAvstandUsikkerRefusjonEnvei: string;
   /** 
-  * Din reise er beregnet til {0} kilometer og {1} kilomter. For reiser over 300 kilometer får du dekket utgifter til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Du får derfor ingen foreløpig beregning. 
+  * Din reise er beregnet til {0} kilometer og {1} kilomter. For reiser over 300 kilometer får du dekket utgifter til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Du får derfor ingen foreløpig beregning.
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_maxAvstandUsikkerRefusjonBegge: string;
   /** 
@@ -20917,7 +20916,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_FORESATT_minAvstandUsikkerRefusjon: string;
   /** 
-  * Reisen er beregnet til {0} kilometer. Reiser over 300 kilometer dekkes  med reisekostnad til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Det gis derfor ingen foreløpig beregning av dekket beløp. 
+  * Reisen er beregnet til {0} kilometer. Reiser over 300 kilometer dekkes  med reisekostnad til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Det gis derfor ingen foreløpig beregning av dekket beløp.
   */
   reiseoversikt_refusjonsdetaljer_FORESATT_maxAvstandUsikkerRefusjon: string;
   /** 
@@ -20933,7 +20932,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_kanIkkeBeregnesManglerDistanse: string;
   /** 
-  * Foreløpig dekning kan ikke beregnes fordi distanse ikke er lagt inn. Du kan gå tilbake i søknaden og oppgi distanse. 
+  * Foreløpig dekning kan ikke beregnes fordi distanse ikke er lagt inn. Du kan gå tilbake i søknaden og oppgi distanse.
   */
   reiseoversikt_refusjonsdetaljer_kanIkkeBeregnesManglerDistanseEnkelReise: string;
   /** 
@@ -20949,7 +20948,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_kanIkkeBeregnesAvvikDistansePasient: string;
   /** 
-  * Foreløpig dekning kan ikke beregnes fordi du har oppgitt at du har hatt behandlinger flere dager etter hverandre. 
+  * Foreløpig dekning kan ikke beregnes fordi du har oppgitt at du har hatt behandlinger flere dager etter hverandre.
   */
   reiseoversikt_refusjonsdetaljer_kanIkkeBeregnesEtterFolgendeBehandling: string;
   /** 
@@ -20957,7 +20956,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_kanIkkeBeregnesLedsagerReturLengreEnnTur: string;
   /** 
-  * Foreløpig dekning kan ikke beregnes fordi ledsagers reise eller deler av reisen mangler distanse. Du kan gå tilbake i søknaden for å oppgi distanse. 
+  * Foreløpig dekning kan ikke beregnes fordi ledsagers reise eller deler av reisen mangler distanse. Du kan gå tilbake i søknaden for å oppgi distanse.
   */
   reiseoversikt_refusjonsdetaljer_kanIkkeBeregnesLedsagerReiseManglerDistanse: string;
   /** 
@@ -21001,7 +21000,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   ledsager_registrerLedsager_PASIENT_hvemReiste: string;
   /** 
-  * For at du skal kunne søke om å få dekket utgiftene til reiseledsager, må du registrere hvem du hadde med deg. 
+  * For at du skal kunne søke om å få dekket utgiftene til reiseledsager, må du registrere hvem du hadde med deg.
   */
   ledsager_registrerLedsager_PASIENT_intro: string;
   /** 
@@ -21013,7 +21012,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   ledsager_registrerLedsager_PASIENT_fellesreise_velgFremkomstmidler: string;
   /** 
-  * Kryss av for de strekningene du hadde med deg reiseledsager. Hvis du legger ved billetter som viser at dere har reist med offentlig transport, kan du  søke om å få dekket reiseutgifter til ledsager.  
+  * Kryss av for de strekningene du hadde med deg reiseledsager. Hvis du legger ved billetter som viser at dere har reist med offentlig transport, kan du  søke om å få dekket reiseutgifter til ledsager.
   */
   ledsager_registrerLedsager_PASIENT_fellesreise_kryssAvFellesEtapper: string;
   /** 
@@ -21085,7 +21084,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   ledsager_registrerLedsager_FORESATT_hvemReiste: string;
   /** 
-  * For at barnet skal kunne søke om å få dekket utgiftene til reiseledsager, må du registrere hvem barnet hadde med seg. 
+  * For at barnet skal kunne søke om å få dekket utgiftene til reiseledsager, må du registrere hvem barnet hadde med seg.
   */
   ledsager_registrerLedsager_FORESATT_intro: string;
   /** 
@@ -21097,7 +21096,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   ledsager_registrerLedsager_FORESATT_fellesreise_velgFremkomstmidler: string;
   /** 
-  * Kryss av for de strekningene barnet hadde med seg reiseledsager. Hvis du legger ved billetter som viser at barnet og reiseledsager har reist med offentlig transport, kan du søke om å få dekket reiseutgifter til ledsager.  
+  * Kryss av for de strekningene barnet hadde med seg reiseledsager. Hvis du legger ved billetter som viser at barnet og reiseledsager har reist med offentlig transport, kan du søke om å få dekket reiseutgifter til ledsager.
   */
   ledsager_registrerLedsager_FORESATT_fellesreise_kryssAvFellesEtapper: string;
   /** 
@@ -21253,7 +21252,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   ledsager_ledsagerTabell_title: string;
   /** 
-  * Utregning av reisekostnader for ledsager 
+  * Utregning av reisekostnader for ledsager
   */
   ledsager_ledsagerTabell_hiddenRefusjonstabellCaption: string;
   /** 
@@ -21305,11 +21304,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   behandlingssted_leggeInnManuell: string;
   /** 
-  * Tips: 
+  * Tips:
   */
   behandlingssted_tips: string;
   /** 
-  * Hvis du ikke finner ditt behandlingsted ved å søke kan du også selv legge inn informasjon om ditt behandlingssted i feltene under, du vil da ikke får en automatisk forhåndsberegning av beløp. Du kan likevel sende inn søknaden din. 
+  * Hvis du ikke finner ditt behandlingsted ved å søke kan du også selv legge inn informasjon om ditt behandlingssted i feltene under, du vil da ikke får en automatisk forhåndsberegning av beløp. Du kan likevel sende inn søknaden din.
   */
   behandlingssted_tipsContent: string;
   /** 
@@ -21345,7 +21344,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   behandlingsdato_foreldelsesfristBegrunn: string;
   /** 
-  * Beskriv situasjonen 
+  * Beskriv situasjonen
   */
   behandlingsdato_foreldelsesfristBegrunnPlaceholder: string;
   /** 
@@ -21461,11 +21460,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   sokBehandlingssted_minBokstaver: string;
   /** 
-  * Oppgi navn på behandlingssted 
+  * Oppgi navn på behandlingssted
   */
   sokBehandlingssted_navnPaaInstitusjon: string;
   /** 
-  * Du fikk ingen treff. Prøv å søke på behandlingsstedets besøksadresse, eller skriv inn flere tegn i søkefeltet. 
+  * Du fikk ingen treff. Prøv å søke på behandlingsstedets besøksadresse, eller skriv inn flere tegn i søkefeltet.
   */
   sokBehandlingssted_ingenTreff: string;
   /** 
@@ -21497,7 +21496,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   bilag_bilagskoder_NODVENDIG_BRUK_ATV_BAAT_SNOSCOOTER_MV: string;
   /** 
-  * dokumentasjonen fra behandler på at det var nødvendig å overnatte på reisen.  
+  * dokumentasjonen fra behandler på at det var nødvendig å overnatte på reisen.
   */
   bilag_bilagskoder_ATTESTERT_BEHOV_OVERNATTING: string;
   /** 
@@ -21545,7 +21544,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   bilag_bilagskoder_KOLLEKTIVBILLETT: string;
   /** 
-  * dokumentasjon fra behandler på livstruende sykdom. 
+  * dokumentasjon fra behandler på livstruende sykdom.
   */
   bilag_bilagskoder_PERMISJON: string;
   /** 
@@ -21561,11 +21560,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   bilag_bilagskoder_KLAGE: string;
   /** 
-  * For å få dekket reiseutgifter, må du ha dokumentasjon på henvisning. 
+  * For å få dekket reiseutgifter, må du ha dokumentasjon på henvisning.
   */
   bilag_kravkoder_PASIENT_REISE_UTENFOR_REGION_header: string;
   /** 
-  * Behandleren din kan gi deg dokumentasjon på at du er henvist til en slik behandling. 
+  * Behandleren din kan gi deg dokumentasjon på at du er henvist til en slik behandling.
   */
   bilag_kravkoder_PASIENT_REISE_UTENFOR_REGION_content: string;
   /** 
@@ -21577,11 +21576,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   bilag_kravkoder_PASIENT_REISE_UTENFOR_KOMMUNE_content: string;
   /** 
-  * For å få dekket reiseutgifter, må du ha dokumentasjon på  at barnet var henvist. 
+  * For å få dekket reiseutgifter, må du ha dokumentasjon på  at barnet var henvist.
   */
   bilag_kravkoder_FORESATT_REISE_UTENFOR_REGION_header: string;
   /** 
-  * Behandleren kan gi barnet dokumentasjon på at han/hun er henvist til en slik behandling. 
+  * Behandleren kan gi barnet dokumentasjon på at han/hun er henvist til en slik behandling.
   */
   bilag_kravkoder_FORESATT_REISE_UTENFOR_REGION_content: string;
   /** 
@@ -21593,7 +21592,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   bilag_kravkoder_FORESATT_REISE_UTENFOR_KOMMUNE_content: string;
   /** 
-  * Barnet må ha oppmøtebekreftelse. 
+  * Barnet må ha oppmøtebekreftelse.
   */
   bilag_kravkoder_OPPMOTEBEKREFTELSE_header: string;
   /** 
@@ -21649,7 +21648,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   bilag_wrapper_ekstraTilleggsutgifter_content: string;
   /** 
-  * Ja, jeg kan se et tydelig bilde av vedlegget jeg lastet opp og jeg bekrefter at dokumentet er riktig for søknaden min. 
+  * Ja, jeg kan se et tydelig bilde av vedlegget jeg lastet opp og jeg bekrefter at dokumentet er riktig for søknaden min.
   */
   bilag_godkjennVedlegg: string;
   /** 
@@ -21729,7 +21728,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   bilag_bilagElement_submitButton: string;
   /** 
-  * Hvis du ikke har de nødvendige dokumentene elektronisk nå, kan du laste dem opp til søknaden senere. Søknaden din er lagret. 
+  * Hvis du ikke har de nødvendige dokumentene elektronisk nå, kan du laste dem opp til søknaden senere. Søknaden din er lagret.
   */
   bilag_oppsummering_header: string;
   /** 
@@ -21949,7 +21948,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   tillegg_oppsummering_ekstraTilleggsutgifter: string;
   /** 
-  * Totalsum tilleggsutgifter: 
+  * Totalsum tilleggsutgifter:
   */
   tillegg_oppsummering_total: string;
   /** 
@@ -21973,7 +21972,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   tillegg_FORESATT_bilHeader: string;
   /** 
-  * Barnet har allerede fått dekket utgifter til denne delen av reisen. 
+  * Barnet har allerede fått dekket utgifter til denne delen av reisen.
   */
   tillegg_FORESATT_forhaandsbetalt: string;
   /** 
@@ -22217,7 +22216,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   changeLanguage: string;
   /** 
-  * Tjenesten som beregner distanse er nede. 
+  * Tjenesten som beregner distanse er nede.
   */
   calculations_feilmeldinger_primoNede: string;
   /** 
@@ -22301,7 +22300,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   attachmentList_header: string;
   /** 
-  * Dokumentasjonen laster du opp senere i søknaden. 
+  * Dokumentasjonen laster du opp senere i søknaden.
   */
   attachmentList_end: string;
   /** 
@@ -22337,7 +22336,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   newJourney_sporvelger_usikker_visResultat: string;
   /** 
-  * Basert på dine svar, skal du bruke  
+  * Basert på dine svar, skal du bruke
   */
   newJourney_sporvelger_usikker_riktigSkjema: string;
   /** 
@@ -22345,7 +22344,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   newJourney_sporvelger_usikker_pasient_1: string;
   /** 
-  * en reise jeg kunne reist med offentlig transport til minstetakst 
+  * en reise jeg kunne reist med offentlig transport til minstetakst
   */
   newJourney_sporvelger_usikker_pasient_2: string;
   /** 
@@ -22357,7 +22356,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   newJourney_sporvelger_usikker_pasient_4: string;
   /** 
-  * permisjonsreise mens jeg var innlagt 
+  * permisjonsreise mens jeg var innlagt
   */
   newJourney_sporvelger_usikker_pasient_5: string;
   /** 
@@ -22585,7 +22584,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_buttonText: string;
   /** 
-  * Innvilget beløp: 
+  * Innvilget beløp:
   */
   overview_granted: string;
   /** 
@@ -22593,7 +22592,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_estimatedGranted: string;
   /** 
-  * Innsendt: 
+  * Innsendt:
   */
   overview_submitted: string;
   /** 
@@ -22953,7 +22952,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   soknadsseksjoner_sendInn: string;
   /** 
-  * Var reisen en permisjonsreise? 
+  * Var reisen en permisjonsreise?
   */
   permisjon_PASIENT_permisjonsReise: string;
   /** 
@@ -23145,11 +23144,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_korrigert: string;
   /** 
-  * Systemet kunne ikke beregne riktig egenandel på reisen fordi det er lagt til nødvendige utgifter til transport av reisegods og/eller nødvendig rengjøring av bil.  
+  * Systemet kunne ikke beregne riktig egenandel på reisen fordi det er lagt til nødvendige utgifter til transport av reisegods og/eller nødvendig rengjøring av bil.
   */
   reiseoversikt_refusjonsdetaljer_harAvvikBelop: string;
   /** 
-  * Utregningen viser at du har rett til mindre enn 100 kroner i dekning for reisen. Beløp under 100 kroner utbetales ikke, men informasjonen lagres til neste gang du sender inn en søknad. Hvis du sender inn nye søknader de neste seks månedene, og beløpet til sammen blir over 100 kroner, får du utbetaling for alle reisene. Alle beløp, også de under 100 kroner, inngår i opptjeningen til frikort. 
+  * Utregningen viser at du har rett til mindre enn 100 kroner i dekning for reisen. Beløp under 100 kroner utbetales ikke, men informasjonen lagres til neste gang du sender inn en søknad. Hvis du sender inn nye søknader de neste seks månedene, og beløpet til sammen blir over 100 kroner, får du utbetaling for alle reisene. Alle beløp, også de under 100 kroner, inngår i opptjeningen til frikort.
   */
   reiseoversikt_refusjonsdetaljer_underMinstegrense: string;
   /** 
@@ -23597,7 +23596,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   fraTil_annenAdresse_PASIENT_uventetBehovInfo: string;
   /** 
-  * Hvis reisen var fra annen adresse enn folkeregistrert adresse, er hovedregelen at reisen dekkes som om den var fra folkeregistrert adresse. I noen tilfeller kan reisen dekkes fra oppholdssted til behandlingssted selv om denne reisen var dyrere. Dette gjelder dersom barnet måtte oppholde seg et annet sted på grunn av arbeid, studier eller opphold på institusjon. Det samme gjelder også hvis  barnet fikk et uventet behov for behandling mens han/hun oppholdt seg på en annen adresse. 
+  * Hvis reisen var fra annen adresse enn folkeregistrert adresse, er hovedregelen at reisen dekkes som om den var fra folkeregistrert adresse. I noen tilfeller kan reisen dekkes fra oppholdssted til behandlingssted selv om denne reisen var dyrere. Dette gjelder dersom barnet måtte oppholde seg et annet sted på grunn av arbeid, studier eller opphold på institusjon. Det samme gjelder også hvis  barnet fikk et uventet behov for behandling mens han/hun oppholdt seg på en annen adresse.
   */
   fraTil_annenAdresse_FORESATT_intro: string;
   /** 
@@ -23633,7 +23632,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   fraTil_uventetBehov_textAreaText: string;
   /** 
-  * Dette gjelder hvis alle punktene under gjelder deg: 
+  * Dette gjelder hvis alle punktene under gjelder deg:
   */
   fraTil_uventetBehov_PASIENT_vilkarText: string;
   /** 
@@ -23649,7 +23648,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   fraTil_uventetBehov_PASIENT_vilkarList_c: string;
   /** 
-  * Dette gjelder hvis alle punktene under gjelder barnets reise: 
+  * Dette gjelder hvis alle punktene under gjelder barnets reise:
   */
   fraTil_uventetBehov_FORESATT_vilkarText: string;
   /** 
@@ -23729,7 +23728,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_ledsager_REFUSJON_NODVENDIGE_UTGIFTER_title: string;
   /** 
-  * Hvis ledsager hadde spesielle grunner til at han/hun måtte  kjøre drosje, kan hun/han ha rett til å få dekket drosjeutgiftene. Ellers dekkes reisen med en standardsats per kilometer. 
+  * Hvis ledsager hadde spesielle grunner til at han/hun måtte  kjøre drosje, kan hun/han ha rett til å få dekket drosjeutgiftene. Ellers dekkes reisen med en standardsats per kilometer.
   */
   krav_ledsager_DROSJE_title: string;
   /** 
@@ -23833,11 +23832,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   etapper_klarerIkkeFinne: string;
   /** 
-  * Dokumentasjon: 
+  * Dokumentasjon:
   */
   etapper_dokumentasjon: string;
   /** 
-  * Tilleggsutgifter: 
+  * Tilleggsutgifter:
   */
   etapper_tilleggsutgifter: string;
   /** 
@@ -23949,11 +23948,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_FORESATT_maxAvstandHeader: string;
   /** 
-  * Barnets reise er beregnet til {0} kilometer. For reiser over 300 kilometer dekkes utgifter til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Det gis derfor ingen foreløpig beregning av dekket beløp. 
+  * Barnets reise er beregnet til {0} kilometer. For reiser over 300 kilometer dekkes utgifter til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Det gis derfor ingen foreløpig beregning av dekket beløp.
   */
   reiseoversikt_refusjonsdetaljer_FORESATT_maxAvstandUsikkerRefusjonEnvei: string;
   /** 
-  * Barnets reiser er beregnet til {0} kilometer og {1} kilometer. Reiser over 300 kilometer dekkes med kostnaden til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Reisene gis derfor ingen foreløpig beregning av dekket beløp. 
+  * Barnets reiser er beregnet til {0} kilometer og {1} kilometer. Reiser over 300 kilometer dekkes med kostnaden til billigste offentlige transportmiddel på strekningen, i stedet for standardsats per kilometer. Reisene gis derfor ingen foreløpig beregning av dekket beløp.
   */
   reiseoversikt_refusjonsdetaljer_FORESATT_maxAvstandUsikkerRefusjonBegge: string;
   /** 
@@ -23985,11 +23984,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_minAvstandLedsager: string;
   /** 
-  * En eller flere av reisene er over 300 kilometer. For reiser over 300 kilometer får du dekket utgifter tilsvarende reisekostnad med billigste offentlige transport, i stedet for standardsats per kilometer. Det gis derfor ingen foreløpig beregning for ledsagers reise. 
+  * En eller flere av reisene er over 300 kilometer. For reiser over 300 kilometer får du dekket utgifter tilsvarende reisekostnad med billigste offentlige transport, i stedet for standardsats per kilometer. Det gis derfor ingen foreløpig beregning for ledsagers reise.
   */
   reiseoversikt_refusjonsdetaljer_maxAvstandLedsager: string;
   /** 
-  * En av reisene er under 10 kilometer. Reise under 10 km dekkes bare hvis det oppsto et behov for øyeblikkelig hjelp, eller behandler har gitt dokumentasjon på at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen. 
+  * En av reisene er under 10 kilometer. Reise under 10 km dekkes bare hvis det oppsto et behov for øyeblikkelig hjelp, eller behandler har gitt dokumentasjon på at din helsetilstand gjorde det nødvendig å bruke egen bil eller drosje på reisen.
   */
   reiseoversikt_refusjonsdetaljer_minAvstandEnkel: string;
   /** 
@@ -24093,15 +24092,15 @@ export type HNMinHelsePasientreiserJS = {
   */
   distanse_grunnlag: string;
   /** 
-  * Du har reist til sammen {0} km. Dette vil være grunnlag for utregning av beløpet som kan dekkes. 
+  * Du har reist til sammen {0} km. Dette vil være grunnlag for utregning av beløpet som kan dekkes.
   */
   distanse_PASIENT_duHarReist: string;
   /** 
-  * Reisen er på totalt {0} km. Dette vil være grunnlag for utregning av beløpet som dekkes. 
+  * Reisen er på totalt {0} km. Dette vil være grunnlag for utregning av beløpet som dekkes.
   */
   distanse_FORESATT_duHarReist: string;
   /** 
-  * Beregning er gjort med informasjon du la inn. 
+  * Beregning er gjort med informasjon du la inn.
   */
   distanse_korrigert: string;
   /** 
@@ -24481,11 +24480,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   newJourney_date_errorMessages_afterReisenStarter: string;
   /** 
-  * Behandlingen kan ikke slutte før den har startet  
+  * Behandlingen kan ikke slutte før den har startet
   */
   newJourney_date_errorMessages_afterBehandlingStarter: string;
   /** 
-  * Reisen kan ikke slutte før behandlingen sluttet 
+  * Reisen kan ikke slutte før behandlingen sluttet
   */
   newJourney_date_errorMessages_afterBehandlingSlutter: string;
   /** 
@@ -24497,7 +24496,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   newJourney_date_errorMessages_reiseStartAfterReiseSlutt: string;
   /** 
-  * Du kan ikke registrere behandlinger som var før den nye Pasientforskriften tredde i kraft 01.10.2016 
+  * Du kan ikke registrere behandlinger som var før den nye Pasientforskriften tredde i kraft 01.10.2016
   */
   newJourney_date_errorMessages_beforeForskriftDate: string;
   /** 
@@ -24545,7 +24544,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   ledsager_PASIENT_dokumentasjonIntroInneSkjema: string;
   /** 
-  * Transportutgifter for reiseledsager dekkes kun ved bruk av offentlig transport. Dokumentasjon på at du hadde behov for ledsager på reisen må gis av din behandler og skal legges ved søknaden. Hovedregelen er at utgifter dekkes for én reiseledsager. 
+  * Transportutgifter for reiseledsager dekkes kun ved bruk av offentlig transport. Dokumentasjon på at du hadde behov for ledsager på reisen må gis av din behandler og skal legges ved søknaden. Hovedregelen er at utgifter dekkes for én reiseledsager.
   */
   ledsager_PASIENT_hovedInfo: string;
   /** 
@@ -24809,7 +24808,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   turretur_FORESATT_returLik: string;
   /** 
-  * Hvis reisen var samme vei til og fra behandlingsstedet, velger du tur-retur. 
+  * Hvis reisen var samme vei til og fra behandlingsstedet, velger du tur-retur.
   */
   turretur_FORESATT_info: string;
   /** 
@@ -24877,7 +24876,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   fraTil_FORESATT_annen: string;
   /** 
-  * Hvis du reiste fra annen adresse enn folkeregistrert adresse, er hovedregelen at du får dekket utgifter som om du reiste fra folkeregistrert adresse. I noen tilfeller kan du få dekket reiseutgifter fra oppholdssted til behandlingssted selv om denne reisen var dyrere. Dette gjelder dersom du måtte oppholde deg et annet sted på grunn av arbeid, studier, militærtjeneste eller opphold på institusjon. Det samme gjelder også dersom du fikk et uventet behov for behandling mens du oppholdt deg på en annen adresse. 
+  * Hvis du reiste fra annen adresse enn folkeregistrert adresse, er hovedregelen at du får dekket utgifter som om du reiste fra folkeregistrert adresse. I noen tilfeller kan du få dekket reiseutgifter fra oppholdssted til behandlingssted selv om denne reisen var dyrere. Dette gjelder dersom du måtte oppholde deg et annet sted på grunn av arbeid, studier, militærtjeneste eller opphold på institusjon. Det samme gjelder også dersom du fikk et uventet behov for behandling mens du oppholdt deg på en annen adresse.
   */
   fraTil_annenAdresse_PASIENT_intro: string;
   /** 
@@ -24989,7 +24988,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_ledsager_REFUSJON_NODVENDIGE_UTGIFTER_kostnader_PARKERING_belop: string;
   /** 
-  * Ledsager betalte piggdekkavgift. 
+  * Ledsager betalte piggdekkavgift.
   */
   krav_ledsager_REFUSJON_NODVENDIGE_UTGIFTER_kostnader_PIGGDEKKAVGIFT_checkbox: string;
   /** 
@@ -26075,7 +26074,7 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   page_Kontakt_FamilyRelations_Personalia_Empty: string;
   /** 
-  * Bruker født 
+  * Bruker født
   */
   shared_Text_UserBorn: string;
   /** 
@@ -26111,11 +26110,11 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   */
   page_Kontakt_NotificationProfile_Select_Contact: string;
   /** 
-  * På SMS: 
+  * På SMS:
   */
   page_Kontakt_NotificationProfile_Immediate_SMS: string;
   /** 
-  * På e-post: 
+  * På e-post:
   */
   page_Kontakt_NotificationProfile_Immediate_Email: string;
   /** 
@@ -28031,7 +28030,7 @@ export type HNPortal = {
   */
   field_BsvRefleksjonerBunnseksjonIngress_Desc: string;
   /** 
-  * Ingress til bunnseksjonen 
+  * Ingress til bunnseksjonen
   */
   field_BsvRefleksjonerBunnseksjonIngress_Title: string;
   /** 
@@ -28199,7 +28198,7 @@ export type HNPortal = {
   */
   webPart_LogOnView_Title: string;
   /** 
-  * Problem executing search for refiner redirect webpart: 
+  * Problem executing search for refiner redirect webpart:
   */
   webPart_RefinerRedirect_Error: string;
   /** 
@@ -28407,7 +28406,7 @@ export type HNPortal = {
   */
   field_VariationKey_Title: string;
   /** 
-  * Sist oppdatert: 
+  * Sist oppdatert:
   */
   page_LastUpdated_Text: string;
   /** 
@@ -28823,7 +28822,6 @@ NB: Ikke skriv inn sensitiv informasjon, for eksempel personnummer eller helseop
   /** 
   * Tilbakemeldingen ble sendt, du kan forvente et svar innen 2 virkedager.
 Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemelding.
-
   */
   page_ContactRespons_Desc: string;
   /** 
@@ -29071,11 +29069,11 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   group_VelgBehandlingssted_ManageHierarchy_Title: string;
   /** 
-  * Innhold levert av: 
+  * Innhold levert av:
   */
   page_Source_Text: string;
   /** 
-  * Kategoritransportlenker 
+  * Kategoritransportlenker
   */
   webPart_CategoryTransport_Title: string;
   /** 
@@ -29123,7 +29121,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   field_LukkeKnapp_Title: string;
   /** 
-  * Felt for å legge inn sider som driftsmeldingen skal vises på. 
+  * Felt for å legge inn sider som driftsmeldingen skal vises på.
   */
   field_Visningssider_Desc: string;
   /** 
@@ -29938,7 +29936,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   field_BsvMittValgSeksjon2Video_Desc: string;
   /** 
-  * Video - Hvor er jeg i sykdommen? 
+  * Video - Hvor er jeg i sykdommen?
   */
   field_BsvMittValgSeksjon2Video_Title: string;
   /** 
@@ -30050,7 +30048,7 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   */
   page_BreadCrumb_Description: string;
   /** 
-  * Foto: 
+  * Foto:
   */
   page_ImageSource_Title: string;
   /** 
