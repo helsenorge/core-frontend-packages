@@ -12789,11 +12789,11 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_KI_CheckBox_ShowAll: string;
   /** 
-  * .<br>Når feilen er registrert vil du få en kvittering i innboksen, og det vil opprettes en merknad i din kjernejournal, som forklarer helsepersonell at du har meldt om feil.
+  * [skal slettes]
   */
   page_KJ_besokshistorikk_Desc2: string;
   /** 
-  * feilmeldingsskjemaet
+  * [skal slettes]
   */
   page_KJ_besokshistorikk_OpenFormLabel: string;
   /** 
