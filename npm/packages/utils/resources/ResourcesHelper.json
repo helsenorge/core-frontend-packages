@@ -3210,7 +3210,6 @@
     "page_Opplysninger_Kommunikasjon_brukerKontaktlinser": "Bruker kontaktlinser",
     "page_SykdomOgKritiskInfo_kiIntro": "<p>Her vises kritiske helseopplysninger som legen i samråd med deg har registrert i din <a href=\"/kjernejournal\">kjernejournal</a>.</p><p>Er det feil eller mangler i opplysningene, ta kontakt med din fastlege.</p>",
     "page_KI_CheckBox_ShowAll": "Vis også utdaterte og avkreftede opplysninger",
-    "page_KJ_besokshistorikk_Desc2": "[skal slettes]",
     "page_KJ_openButton": "Se din kjernejournal",
     "page_KJ_ekspanderbarSeksjon": "Hvordan endre, rette eller slette opplysninger i din kjernejournal",
     "page_Opplysninger_Kommunikasjon_kognitiveVansker": "Kognitive vansker som påvirker kommunikasjon",

@@ -12789,10 +12789,6 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_KI_CheckBox_ShowAll: string;
   /** 
-  * [skal slettes]
-  */
-  page_KJ_besokshistorikk_Desc2: string;
-  /** 
   * Se din kjernejournal
   */
   page_KJ_openButton: string;
