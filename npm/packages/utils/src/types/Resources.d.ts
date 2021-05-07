@@ -12793,10 +12793,6 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_KJ_besokshistorikk_Desc2: string;
   /** 
-  * [skal slettes]
-  */
-  page_KJ_besokshistorikk_OpenFormLabel: string;
-  /** 
   * Se din kjernejournal
   */
   page_KJ_openButton: string;
