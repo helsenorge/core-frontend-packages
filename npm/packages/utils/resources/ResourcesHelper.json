@@ -1103,9 +1103,7 @@
     "page_Koronasertifikat_Desc": "Her vises en oversikt over koronavaksine og siste test. Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet.",
     "page_Forside_Title": "Helsenorge – din helse på nett",
     "page_BrukOgTilganger_Title": "Bruk og tilganger",
-    "page_BrukOgTilganger_Desc": "Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang.",
-    "page_TriageringTjenester_Title": "Velg hvordan du vil ta kontakt",
-    "page_TriageringTjenester_Desc": ""
+    "page_BrukOgTilganger_Desc": "Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang."
   },
   "HNMinHelseDialogGPStrings": { 
     "service_Appointment_Error": "Tjenesten kunne ikke hente tilgjengelige timer. ",
