@@ -127,6 +127,12 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
     if (response.status === 204) {
       return new Promise(resolve => resolve(null));
     }
+    if (response.status === 429) {
+      throw {
+        StatusCode: 429,
+        Message: 'Denne tjenesten er ikke tilgjengelig for øyeblikket. Det er for mange som ønsker å bruke tjenesten samtidig.',
+      };
+    }
     if (response.ok) {
       return response.json();
     }
