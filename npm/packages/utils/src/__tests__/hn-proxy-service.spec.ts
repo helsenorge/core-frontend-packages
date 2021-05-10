@@ -395,6 +395,27 @@ describe('gitt at get kalles', () => {
   });
 });
 
+describe('Når APIet svarer med en 429-feil og content-type er application/json', () => {
+  it('Så kastes en Error som forteller at tjenesten er utilgjengelig fordi det er for mange samtidige brukere', async () => {
+    const response = new Response('', {
+      headers: createHeaders('application/json'),
+      status: 429,
+      statusText: 'Too Many Requests',
+    });
+    const mockFetchPromise = Promise.resolve(response);
+    jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+
+    try {
+      await get('koronasertifikat', 'v1/CoronaCertificate');
+    } catch (error) {
+      expect(error).toEqual({
+        StatusCode: 429,
+        Message: 'Denne tjenesten er ikke tilgjengelig for øyeblikket. Det er for mange som ønsker å bruke tjenesten samtidig.',
+      });
+    }
+  });
+});
+
 describe('Gitt at en proxy link skal genereres', () => {
   describe('Når link ikke har noen ekstra request parameter', () => {
     it('Så skal link med headers som parameter returneres', () => {
