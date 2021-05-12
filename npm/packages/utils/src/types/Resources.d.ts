@@ -4363,7 +4363,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Koronasertifikat_Title: string;
   /** 
-  * Her vises en oversikt over koronavaksine og siste test. Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet.
+  * Her vises en oversikt over koronavaksine og siste test. Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine og smittestatus som er registrert hos Folkehelseinstituttet. <a href="https://www.helsenorge.no/koronavirus/informasjonstelefon-om-korona/">Informasjonstelefonen om korona</a> kan svare på spørsmål om sertifikatet.
   */
   page_Koronasertifikat_Desc: string;
   /** 
