@@ -25354,6 +25354,10 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_49: string;
   /** 
+  * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
+  */
+  page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
+  /** 
   * Ved fullmakt
   */
   shared_Fullmakt: string;
