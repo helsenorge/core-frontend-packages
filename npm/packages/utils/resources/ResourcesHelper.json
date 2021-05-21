@@ -4003,7 +4003,7 @@
     "group_Helsetjenester_Title": "Helsetjenester",
     "group_EksterneTjenester_Title": "Eksterne tjenester",
     "tile_Koronasertifikat_Title": "Koronasertifikat",
-    "tile_Koronasertifikat_Description": "Vaksiner og siste test."
+    "tile_Koronasertifikat_Description": "Dokumentasjon av beskyttelse og test."
   },
   "HNMinHelseNHNStrings": { 
     "error_HprPersonNotFound_Title": "Ugyldig nummer",

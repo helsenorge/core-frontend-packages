@@ -16010,7 +16010,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Koronasertifikat_Title: string;
   /** 
-  * Vaksiner og siste test.
+  * Dokumentasjon av beskyttelse og test.
   */
   tile_Koronasertifikat_Description: string;
 };
