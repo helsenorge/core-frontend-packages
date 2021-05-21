@@ -6343,6 +6343,7 @@
   },
   "HNMinHelsePersonvernStrings": { 
     "page_HendelsesLogg_49": "Koronasertifikat",
+    "page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent": "Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.",
     "shared_Fullmakt": "Ved fullmakt",
     "shared_Foreldrerepresentasjon": "Foreldreansvar",
     "shared_InnloggetBruker": "Egen bruk",
