@@ -28,77 +28,58 @@ export const getEventTarget = (e: Event | MouseEvent | KeyboardEvent): EventTarg
   return path[0];
 };
 
-export const HNeventSetSimplifiedHeader = (isSimplified: boolean = true): void => {
-  const webcompheader = document.querySelector('hn-webcomp-header');
-  if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(
-      new CustomEvent(HeaderFooterEvents.setsimplifiedheader, {
-        detail: { simplifiedHeader: isSimplified },
+interface EventDetails {
+  [key: string]: any;
+}
+
+const dispatchCustomEvent = (
+  selector: string,
+  eventType: HeaderFooterEvents | CmsBlocksEvents | CommonEvents,
+  detail: EventDetails
+): void => {
+  const element = document.querySelector(selector);
+  if (element && element.dispatchEvent) {
+    element.dispatchEvent(
+      new CustomEvent(eventType, {
+        detail,
       })
     );
   }
 };
 
-export const HNeventSetHiddenHeader = (isHidden: boolean = true): void => {
-  const webcompheader = document.querySelector('hn-webcomp-header');
-  if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.sethiddenheader, { detail: { hiddenHeader: isHidden } }));
-  }
-};
+export const HNeventSetSimplifiedHeader = (isSimplified: boolean = true): void =>
+  dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.setsimplifiedheader, { simplifiedHeader: isSimplified });
 
-export const HNeventSetSimplifiedFooter = (text: string, isSimplified: boolean = true): void => {
-  const webcompheader = document.querySelector('hn-webcomp-footer');
-  if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(
-      new CustomEvent(HeaderFooterEvents.setsimplifiedfooter, {
-        detail: { simplifiedFooter: isSimplified, simplifiedFooterText: text },
-      })
-    );
-  }
-};
+export const HNeventSetAnonymousHeader = (isAnonymous: boolean = true): void =>
+  dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.setanonymousheader, { anonymousHeader: isAnonymous });
 
-export const HNeventSetHiddenFooter = (isHidden: boolean = true): void => {
-  const webcompheader = document.querySelector('hn-webcomp-footer');
-  if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.sethiddenfooter, { detail: { hiddenFooter: isHidden } }));
-  }
-};
+export const HNeventSetHiddenHeader = (isHidden: boolean = true): void =>
+  dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.sethiddenheader, { hiddenHeader: isHidden });
 
-export const HNeventRefreshVarslinger = (): void => {
-  const webcompheader = document.querySelector('hn-webcomp-header');
-  if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.refreshvarslinger, { detail: {} }));
-  }
-};
+export const HNeventSetSimplifiedFooter = (text: string, isSimplified: boolean = true): void =>
+  dispatchCustomEvent('hn-webcomp-footer', HeaderFooterEvents.setsimplifiedfooter, {
+    simplifiedFooter: isSimplified,
+    simplifiedFooterText: text,
+  });
 
-export const HNeventSetDriftsmeldingPath = (path: string): void => {
-  const webcompheader = document.querySelector('hn-webcomp-driftspanel');
-  if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.setdriftsmeldingpath, { detail: { path } }));
-  }
-};
+export const HNeventSetHiddenFooter = (isHidden: boolean = true): void =>
+  dispatchCustomEvent('hn-webcomp-footer', HeaderFooterEvents.sethiddenfooter, {
+    hiddenFooter: isHidden,
+  });
 
-export const HNeventRefreshVarslingerOgHendelsesmeny = (): void => {
-  const webcompheader = document.querySelector('hn-webcomp-header');
-  if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.refreshvarslingeroghendelsesmeny, { detail: {} }));
-  }
-};
+export const HNeventRefreshVarslinger = (): void => dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.refreshvarslinger, {});
 
-export const HNeventSetOnShowSignoutbox = (fn: (data: ShowSignOutBoxData) => SessionTimeoutAction): void => {
-  const webcompheader = document.querySelector('hn-webcomp-header');
-  if (webcompheader && webcompheader.dispatchEvent) {
-    webcompheader.dispatchEvent(new CustomEvent(HeaderFooterEvents.setonshowsignoutbox, { detail: { onShowSignOutBox: fn } }));
-  }
-};
+export const HNeventSetDriftsmeldingPath = (path: string): void =>
+  dispatchCustomEvent('hn-webcomp-driftspanel', HeaderFooterEvents.setdriftsmeldingpath, { path });
 
-export const HNeventSetHiddenPromopanel = (isHidden: boolean): void => {
-  const webcomppromopanel = document.querySelector('hn-webcomp-cms-block-promopanel');
+export const HNeventRefreshVarslingerOgHendelsesmeny = (): void =>
+  dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.refreshvarslingeroghendelsesmeny, {});
 
-  if (webcomppromopanel && webcomppromopanel.dispatchEvent) {
-    webcomppromopanel.dispatchEvent(new CustomEvent(CmsBlocksEvents.setHiddenPromopanel, { detail: { hiddenPromopanel: isHidden } }));
-  }
-};
+export const HNeventSetOnShowSignoutbox = (fn: (data: ShowSignOutBoxData) => SessionTimeoutAction): void =>
+  dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.setonshowsignoutbox, { onShowSignOutBox: fn });
+
+export const HNeventSetHiddenPromopanel = (isHidden: boolean): void =>
+  dispatchCustomEvent('hn-webcomp-cms-block-promopanel', CmsBlocksEvents.setHiddenPromopanel, { hiddenPromopanel: isHidden });
 
 export const HNeventIsMicroFrontendMounted = (webcomponentName: string): void => {
   const webcomponent = document.querySelector(webcomponentName);
