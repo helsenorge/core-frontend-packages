@@ -10076,7 +10076,7 @@ export type HNMinHelseDialogVP = {
   */
   userControl_Timeline_StatusValue_REF: string;
   /** 
-  * Avslått
+  * Avvist
   */
   userControl_Timeline_StatusValue_REJ: string;
   /** 

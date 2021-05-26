@@ -2524,7 +2524,7 @@
     "userControl_Timeline_StatusValue_EVA": "Vurdering pågår",
     "userControl_Timeline_StatusValue_FIN": "Behandling avsluttet",
     "userControl_Timeline_StatusValue_REF": "Videresendt",
-    "userControl_Timeline_StatusValue_REJ": "Avslått",
+    "userControl_Timeline_StatusValue_REJ": "Avvist",
     "userControl_Timeline_StatusValue_ROA": "Avsluttet",
     "userControl_Timeline_StatusValue_ROD": "Videresendt",
     "userControl_Timeline_StatusValue_RQA": "Forespørsel besvart",
