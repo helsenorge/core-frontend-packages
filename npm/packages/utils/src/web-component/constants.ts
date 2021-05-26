@@ -1,6 +1,7 @@
 export enum HeaderFooterEvents {
   setlistenerready = 'hn-webcomp-header-footer-event-setlistenerready',
   setsimplifiedheader = 'hn-webcomp-header-footer-event-setsimplifiedheader',
+  setanonymousheader = 'hn-webcomp-header-footer-event-setanonymousheader',
   sethiddenheader = 'hn-webcomp-header-footer-event-sethiddenheader',
   setdriftsmeldingpath = 'hn-webcomp-header-footer-event-setdriftsmeldingpath',
   setsimplifiedfooter = 'hn-webcomp-header-footer-event-setsimplifiedfooter',
