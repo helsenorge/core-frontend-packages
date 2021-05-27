@@ -15890,7 +15890,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Pasientjournal_Title: string;
   /** 
-  * Søk om få dekket en reise til behandling.
+  * Se dine reiser og søk om dekning av utgifter.
   */
   tile_Pasientreiser_Description: string;
   /** 
