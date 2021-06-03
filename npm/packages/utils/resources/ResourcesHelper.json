@@ -6255,6 +6255,7 @@
     "krav_ledsager_DROSJE_ikkeHarKrav": "For å få dekket utgifter til reise med drosje, må du huke av for rett begrunnelse i punktet \"Dekning av utgifter for reiseledsager\". Du kan ellers ha rett til å få dekket utgiftene med en standardsats.",
     "generisk_kilometer": "kilometer",
     "distanse_ugyldig": "Distanse må være mellom 0 og 3000km.",
+    "generisk_brev": "brev",
     "reiselengder_max_error": "Reiselengden kan ikke være over 3000 km"
   },
   "HNMinHelsePasientReiserStrings": { 

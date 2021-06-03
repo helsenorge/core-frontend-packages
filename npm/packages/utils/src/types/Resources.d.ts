@@ -25012,6 +25012,10 @@ export type HNMinHelsePasientreiserJS = {
   */
   distanse_ugyldig: string;
   /** 
+  * brev
+  */
+  generisk_brev: string;
+  /** 
   * Reiselengden kan ikke være over 3000 km
   */
   reiselengder_max_error: string;
