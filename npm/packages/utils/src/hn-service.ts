@@ -3,6 +3,7 @@ import * as DateUtils from './date-utils';
 import { isAuthorized, hashIsAuthorized } from './hn-authorize';
 import { getCookieValue } from './cookie';
 import { getTjenesterUrl } from './hn-proxy-service';
+import { error as logError } from './logger';
 
 /****************************************************************/
 /**************** DENNE FILEN ER DEPRECATED *********************/
@@ -350,6 +351,19 @@ export function getAuto<T extends OperationResponse>(cmd: string, params?: {}): 
   }
 }
 
+function getXmlResult(reader: any, decoder: any, partialXmlResult: string): string {
+  let xmlResult = partialXmlResult;
+  return reader.read().then((result: any) => {
+    if (result.done) {
+      return xmlResult;
+    }
+    xmlResult += decoder.decode(result.value || new Uint8Array(0), {
+      stream: !result.done,
+    });
+    return getXmlResult(reader, decoder, xmlResult);
+  });
+}
+
 export function getXml(cmd: string, params?: any): Promise<any> {
   return fetch(getMinHelseEnvironmentPath() + cmd + parseParams(params, true), {
     method: 'get',
@@ -363,19 +377,6 @@ export function getXml(cmd: string, params?: any): Promise<any> {
     } else {
       return response.text();
     }
-  });
-}
-
-function getXmlResult(reader: any, decoder: any, partialXmlResult: string): string {
-  let xmlResult = partialXmlResult;
-  return reader.read().then((result: any) => {
-    if (result.done) {
-      return xmlResult;
-    }
-    xmlResult += decoder.decode(result.value || new Uint8Array(0), {
-      stream: !result.done,
-    });
-    return getXmlResult(reader, decoder, xmlResult);
   });
 }
 
@@ -553,7 +554,7 @@ export function download(cmd: string, params?: any): Promise<OperationResponse |
           reject(error);
         } else {
           // 3. Serveren har returnert en feilmelding
-          console.error('responseHtml', error);
+          logError('responseHtml', error);
           const errorResponse = getErrorFromHTML(error);
           let response;
           if (errorResponse && ((errorResponse as unknown) as OperationResponse).ErrorMessage) {

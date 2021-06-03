@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+/* eslint-disable @typescript-eslint/no-use-before-define */
 import { postAuto, getPortal, OperationResponse } from './hn-service';
 
 export enum LogLevel {

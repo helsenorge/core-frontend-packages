@@ -88,6 +88,7 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
       }
 
       if (!this.domNode) {
+        // eslint-disable-next-line react/no-find-dom-node
         const node = ReactDOM.findDOMNode(this);
         if (node instanceof Element) {
           this.domNode = node;

@@ -391,19 +391,6 @@ export const setValueForSelectedUser = (): void => {
 };
 
 /**
- * Spor åpning/lukking av hjelpeskuff
- * @param name navn som lagres på tool toolName
- * @param toolType type som lagres på tool toolType
- * @param label label som lagres på tool toolLabels
- * @param actionType action-type som lagres på toolAction og som definerer label (Close or Open)
- */
-export const trackProsesshjelp = (name: string, toolType: string, label: string, actionType: ProsesshjelpActionType): void => {
-  const toolLabels = actionType === 'Close' && window.digitalData && window.digitalData.tool ? window.digitalData.tool.toolLabels : label;
-  const satelliteTrackContent = actionType + ' context help';
-  trackTool(name, toolType, toolLabels, actionType, satelliteTrackContent);
-};
-
-/**
  * spor handlinger med kun ett steg, e.g.
  * trackTool('kontaktskjema', 'hjelp', 'bytte fastlege', 'send')
  * @param name navn som lagres på tool toolName
@@ -429,6 +416,19 @@ export const trackTool = (
     };
     window._satellite.track(satelliteTrackContent);
   }
+};
+
+/**
+ * Spor åpning/lukking av hjelpeskuff
+ * @param name navn som lagres på tool toolName
+ * @param toolType type som lagres på tool toolType
+ * @param label label som lagres på tool toolLabels
+ * @param actionType action-type som lagres på toolAction og som definerer label (Close or Open)
+ */
+export const trackProsesshjelp = (name: string, toolType: string, label: string, actionType: ProsesshjelpActionType): void => {
+  const toolLabels = actionType === 'Close' && window.digitalData && window.digitalData.tool ? window.digitalData.tool.toolLabels : label;
+  const satelliteTrackContent = actionType + ' context help';
+  trackTool(name, toolType, toolLabels, actionType, satelliteTrackContent);
 };
 
 /**

@@ -29,7 +29,7 @@ export const getEventTarget = (e: Event | MouseEvent | KeyboardEvent): EventTarg
 };
 
 interface EventDetails {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const dispatchCustomEvent = (

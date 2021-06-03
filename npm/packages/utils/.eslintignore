@@ -1,1 +1,2 @@
-src/types/**
+src/types/**/*
+src/**/*.spec.ts
