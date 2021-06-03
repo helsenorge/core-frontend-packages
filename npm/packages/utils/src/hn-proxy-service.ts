@@ -1,7 +1,7 @@
 import { trackError } from './adobe-analytics';
 import { parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
 import * as DateUtils from './date-utils';
-import { warn } from './logger';
+import { warn, error as logError } from './logger';
 
 declare const HN: {
   Rest: {
@@ -323,7 +323,7 @@ export const download = (proxyName: string, endpoint: string, params?: ParamsObj
           reject(error);
         } else {
           // 3. Serveren har returnert en feilmelding
-          console.error('responseHtml', error);
+          logError('responseHtml', error);
           const errorResponse = getErrorFromHTML(error);
           let response;
           if (errorResponse && ((errorResponse as unknown) as OperationResponse).ErrorMessage) {

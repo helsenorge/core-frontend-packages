@@ -16,6 +16,8 @@
     "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx} --quiet",
+    "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
     "test:watch": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --watch",
     "helsenorge-notify": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js notify"
   },

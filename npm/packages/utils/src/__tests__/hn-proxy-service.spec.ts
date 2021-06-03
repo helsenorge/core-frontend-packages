@@ -21,6 +21,7 @@ import * as mockLogger from '../logger';
 
 jest.mock('../logger.ts', () => ({
   warn: jest.fn(),
+  error: jest.fn(),
 }));
 
 window.HN = window.HN || {};

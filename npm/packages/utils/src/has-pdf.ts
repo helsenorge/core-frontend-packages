@@ -1,5 +1,6 @@
 import { getAssets } from './hn-page';
 import { loadScriptES6 } from './loadscript-utils';
+import { log } from './logger';
 
 interface PluginDetectInterface {
   onDetectionDone?: (plugin: string, f: () => void, dummyPDF: string) => void;
@@ -48,7 +49,7 @@ const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string)
         );
     },
     () => {
-      console.log('fail to load script: ', scriptUrl);
+      log('fail to load script: ', scriptUrl);
     }
   );
 };
