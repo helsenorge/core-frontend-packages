@@ -4027,7 +4027,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_HendelsesLogg_Desc: string;
   /** 
-  * Her kan du se dine timer hos fastlegen, sykehus, kommunal helse- og omsorgstjeneste og enkelte andre aktører. Foreløpig er ikke alle timeavtaler tilgjengelige på Helsenorge.
+  * Her kan du se dine timeavtaler. Oversikten er ikke fullstendig, men viser blant annet timer fra fastlege, sykehus, helsestasjon og kommunehelsetjenesten. Mange fastleger og enkelte kommuner tilbyr også timebestilling.
   */
   page_Appointments_Desc: string;
   /** 
@@ -25015,6 +25015,10 @@ export type HNMinHelsePasientreiserJS = {
   * brev
   */
   generisk_brev: string;
+  /** 
+  * klage
+  */
+  generisk_klage: string;
   /** 
   * Reiselengden kan ikke være over 3000 km
   */
