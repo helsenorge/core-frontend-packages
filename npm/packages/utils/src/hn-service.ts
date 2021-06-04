@@ -161,9 +161,7 @@ export function useBetaTjeneste() {
 }
 
 export function getPasientreiserUrl() {
-  return HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null
-    ? `${HN.Rest.__TjenesterApiUrl__}/pasientreiser`
-    : '';
+  return HN.Rest.__TjenesterUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? `${HN.Rest.__TjenesterUrl__}/pasientreiser` : '';
 }
 
 export function isSkjemautfyller() {
@@ -206,9 +204,7 @@ function canCallAutoService(): boolean {
 }
 
 function createHeaders(type = 'application/json'): Headers {
-  const headers: Headers = new Headers();
-  headers.append('Accept', type);
-  headers.append('Content-Type', type);
+  const headers: Headers = createBaseHeaders(type);
   if (!!HN.Rest?.__AuthenticatedHash__ && !!HN.Rest?.__AnonymousHash__) {
     headers.append('HNAnonymousHash', HN.Rest.__AnonymousHash__);
     headers.append('HNAuthenticatedHash', HN.Rest.__AuthenticatedHash__);
@@ -221,7 +217,7 @@ function createHeaders(type = 'application/json'): Headers {
   return headers;
 }
 
-function createPortalHeaders(type = 'application/json'): Headers {
+export function createBaseHeaders(type = 'application/json'): Headers {
   const headers: Headers = new Headers();
   headers.append('Accept', type);
   headers.append('Content-Type', type);
@@ -323,7 +319,7 @@ export function getPortal<T extends OperationResponse>(cmd: string, params?: any
       return Promise.resolve(HN.PortalCommands[cmdKey]);
     }
   }
-  const headers = createPortalHeaders();
+  const headers = createBaseHeaders();
   return fetch(getPortalEnvironmentPath() + cmd + parseParams(params, true), {
     method: 'get',
     credentials: 'include',

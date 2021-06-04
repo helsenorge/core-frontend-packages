@@ -13,6 +13,7 @@ declare const HN: {
     __TjenesteType__: string;
     __TimeStamp__: string;
     __HendelseLoggType__: string;
+    __LogLevel__: number;
   };
 };
 type RequestParamArrayType = string | number;
@@ -47,6 +48,10 @@ export const getTjenesterApiUrl = (proxyName: string, endpoint: string): string 
   const apiUrl = HN.Rest.__TjenesterApiUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? HN.Rest.__TjenesterApiUrl__ : '';
   return `${apiUrl}/proxy/${proxyName}/${endpoint}`;
 };
+
+export function getServerLogLevel() {
+  return HN.Rest.__LogLevel__ !== undefined && HN.Rest.__LogLevel__ !== null ? HN.Rest.__LogLevel__ : null;
+}
 
 /**
  * Returnerer default params som trengs i en vanlig request

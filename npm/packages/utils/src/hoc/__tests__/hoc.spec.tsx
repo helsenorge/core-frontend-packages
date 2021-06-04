@@ -1,5 +1,6 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter as Router, Route } from 'react-router-dom';
+import { act } from 'react-dom/test-utils';
 import * as adobeUtils from '../../adobe-analytics';
 import { mount } from 'enzyme';
 import mountHOC from '../mount';
@@ -125,7 +126,7 @@ describe('HOC utils', () => {
 
   describe('Gitt at en komponent wrappes i track-route-change HOC', () => {
     describe('Når den instansieres', () => {
-      it('Så kaller den adobe-analytics og rendres riktig', () => {
+      it('Så kaller den ikke adobe-analytics og rendres riktig', () => {
         const adobeMock = jest.spyOn(adobeUtils, 'trackPageview');
 
         const wrapper = mount(
@@ -136,7 +137,37 @@ describe('HOC utils', () => {
           </Router>
         );
 
-        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.html()).toMatchSnapshot();
+        expect(adobeMock).not.toHaveBeenCalled();
+      });
+    });
+
+    describe('Når route endres', () => {
+      it('Så kaller den adobe-analytics', async () => {
+        const adobeMock = jest.spyOn(adobeUtils, 'trackPageview');
+        let testHistory: any, testLocation: any;
+
+        const wrapper = mount(
+          <Router>
+            <TrackRouteChange>
+              <Route
+                path="*"
+                render={({ history, location }) => {
+                  testHistory = history;
+                  testLocation = location;
+                  return null;
+                }}
+              />
+            </TrackRouteChange>
+          </Router>
+        );
+
+        await act(async () => {
+          testHistory.push('/other');
+        });
+
+        wrapper.update();
+
         expect(adobeMock).toHaveBeenCalled();
       });
     });
