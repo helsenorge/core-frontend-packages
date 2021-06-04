@@ -7,7 +7,6 @@ import { trackPageview } from '../adobe-analytics';
  */
 class TrackRouteChange extends React.Component<RouteComponentProps<{}>, {}> {
   componentDidMount(): void {
-    trackPageview();
     this.props.history.listen(() => {
       trackPageview();
     });

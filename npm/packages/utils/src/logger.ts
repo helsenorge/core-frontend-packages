@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-use-before-define */
-import { postAuto, getPortal, OperationResponse } from './hn-service';
+import { getServerLogLevel, getTjenesterUrl } from './hn-proxy-service';
+import { createBaseHeaders } from './hn-service';
 
 export enum LogLevel {
   Trace = 0,
@@ -12,38 +13,11 @@ export enum LogLevel {
   Off = 6,
 }
 
-interface GetEnvironmentOperationResponse extends OperationResponse {
-  Level: LogLevel;
-}
-
-let ServerLogLevel: LogLevel | undefined = undefined;
-
 interface LogEntry {
   Level: LogLevel;
   Url: string;
   Message?: string;
 }
-
-const logQueue: LogEntry[] = [];
-
-const processQueue = (queue: LogEntry[], serverLogLevel: number): void => {
-  const entry = queue.shift();
-  if (entry && entry.Level >= serverLogLevel) {
-    postAuto('Log', entry).catch();
-    processQueue(queue, serverLogLevel);
-  }
-};
-
-const SetupLogLevel = (): void => {
-  getPortal('GetEnvironment')
-    .then((data: GetEnvironmentOperationResponse) => {
-      ServerLogLevel = data.Level;
-      processQueue(logQueue, data.Level);
-    })
-    .catch(() => {
-      ServerLogLevel = LogLevel.Off;
-    });
-};
 
 const unwrapError = (potentialError: Error | Array<Error | string> | string): string => {
   if (potentialError instanceof Error) {
@@ -70,15 +44,22 @@ const generateEntry = (level: LogLevel, message?: string, ...optionalParams: Arr
   };
 };
 
+const postLogEntry = (logEntry: LogEntry): void => {
+  fetch(getTjenesterUrl() + '/api/v1/Frontend/Log', {
+    method: 'post',
+    headers: createBaseHeaders(),
+    credentials: 'include',
+    body: JSON.stringify(logEntry),
+  }).catch();
+};
+
 /**
  * Logger error til serveren
  */
 export const logToServer = (level: LogLevel, message?: string, ...optionalParams: Array<unknown>): void => {
-  if (ServerLogLevel === undefined) {
-    SetupLogLevel();
-    logQueue.push(generateEntry(level, message, optionalParams));
-  } else if (level >= ServerLogLevel) {
-    postAuto('Log', generateEntry(level, message, optionalParams)).catch();
+  const logLevel = getServerLogLevel();
+  if (logLevel !== null && level >= logLevel) {
+    postLogEntry(generateEntry(level, message, optionalParams));
   }
 };
 
