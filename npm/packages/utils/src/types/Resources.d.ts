@@ -15930,11 +15930,11 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Description: string;
   /** 
-  * Koronaverktøy
+  * Bestill koronatime
   */
   tile_Korona_Title: string;
   /** 
-  * Hjelp til å stoppe spredningen av viruset.
+  * Timebestilling i din kommune.
   */
   tile_Korona_Description: string;
   /** 
