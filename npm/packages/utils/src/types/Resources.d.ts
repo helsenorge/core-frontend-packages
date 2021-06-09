@@ -17861,6 +17861,10 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.
   */
   videreformidling_TextMessage_Body_Self_FunksjonellMotpart: string;
+  /** 
+  * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  */
+  spesialistInnkallingsbrev_EmailMessage_Body_Representation_IkkeSensitivAvsender: string;
 };
 
 export type HNMinHelsePages = { 
@@ -25358,6 +25362,10 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
+  * Ingen samtykkedefinisjoner funnet.
+  */
+  samtykkeDefinisjonerIkkeFunnetBody: string;
+  /** 
   * Koronasertifikat
   */
   page_HendelsesLogg_49: string;
@@ -25365,10 +25373,6 @@ export type HNMinHelsePersonvernStrings = {
   * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
   */
   page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
-  /** 
-  * Ingen samtykkedefinisjoner funnet.
-  */
-  samtykkeDefinisjonerIkkeFunnetBody: string;
   /** 
   * Ved fullmakt
   */
