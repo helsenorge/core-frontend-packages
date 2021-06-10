@@ -3813,11 +3813,11 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   group_Owners_Description: string;
   /** 
-  * Her ser du status på henvisningene dine til sykehus/spesialist.
+  * Her kan du se status og annen informasjon for henvisninger til sykehus eller spesialist.
   */
   page_Referrals_Desc: string;
   /** 
-  * Henvisninger til spesialisthelsetjenesten
+  * Henvisninger
   */
   page_Referrals_Title: string;
   /** 
@@ -4936,7 +4936,7 @@ export type HNMinHelseDialogJS = {
   */
   hjelpetrigger_timeavtaleForberedelser: string;
   /** 
-  * {"defaulttekst_overskrift":"Om henvisninger","defaulttekst_brodtekst":"<p>\nKlikk deg inn på henvisningen for å se mer detaljert informasjon.\n</p>\n<p>\nSykehuset som vurderer henvisningen din, sender deg også et brev med informasjon om hva som blir resultatet av den. Da får du også informasjon om dine rettigheter som pasient, og tidsfrister hvis du vil klage på noe i henvisningsprosessen. \n</p>\n\n<h3>\nHvem kan du se henvisninger fra?\n</h3>\n<p>\nForeløpig ser du kun henvisninger til sykehus i \n</p>\n<ul>\n<li>Helse Vest</li>\n<li>Helse Nord</li>\n<li>Helse Sør-Øst: Oslo universitetssykehus og Sørlandet sykehus</li>\n</ul>\n\n<p>\nDe andre sykehusene i Helse Sør-Øst skal etter planen vise henvisninger fra høsten 2021.\n</p>\n\n<h3>\nHvilke henvisninger kan du se?\n</h3>\n\n<p>\nDu kan se både aktive og avsluttede henvisninger.\n</p>\n\n<ul>\n<li>Helse Sør-Øst: Henvisninger sendt fra og med januar 2021</li>\n<li>Helse Vest: Henvisninger sendt fra og med januar 2014</li>\n<li>Helse Nord: Henvisninger sendt så langt tilbake som teknisk mulig</li>\n</ul>\n<p>\nTjenesten er tilgjengelig for alle over 16 år. Foreldre kan også bruke tjenesten på vegne av barn under 12 år i Helse Vest og Helse Nord.\n</p>\n\n<p>\n<a href=\"https://www.helsenorge.no/henvisninger/om/\">Les mer om Henvisninger</a>\n</p>"}
+  * {"defaulttekst_overskrift":"Om henvisninger","defaulttekst_brodtekst":"<p>\nKlikk deg inn på henvisningen for å se mer detaljert informasjon.\n</p>\n<p>\nSykehuset som vurderer henvisningen din, sender deg også et brev med informasjon om hva som blir resultatet av den. Da får du også informasjon om dine rettigheter som pasient, og tidsfrister hvis du vil klage på noe i henvisningsprosessen. \n</p>\n\n<h3>\nHvem kan du se henvisninger fra?\n</h3>\n<p>\nForeløpig ser du kun henvisninger til sykehus i \n</p>\n<ul>\n<li>Helse Vest</li>\n<li>Helse Nord</li>\n<li>Helse Sør-Øst: Oslo universitetssykehus og Sørlandet sykehus</li>\n</ul>\n<p>\nDe andre sykehusene i Helse Sør-Øst skal etter planen vise henvisninger fra høsten 2021.\n</p>\n\n<h3>\nHvilke henvisninger kan du se?\n</h3>\n<p>\nDu kan se både aktive og avsluttede henvisninger.\n</p>\n<ul>\n<li>Helse Sør-Øst: Henvisninger sendt fra og med januar 2021</li>\n<li>Helse Vest: Henvisninger sendt fra og med januar 2014</li>\n<li>Helse Nord: Henvisninger sendt så langt tilbake som teknisk mulig</li>\n</ul>\n<p>\nTjenesten er tilgjengelig for alle over 16 år. Foreldre kan også bruke tjenesten på vegne av barn under 12 år i Helse Vest og Helse Nord.\n</p>\n\n<p>\n<a href=\"https://www.helsenorge.no/henvisninger/om/\">Les mer om Henvisninger</a>\n</p>"}
   */
   hjelpekontekst_henvisningInfo: string;
   /** 
