@@ -16,6 +16,15 @@ const isAndroid = (): boolean => {
   return navigator.userAgent.toLowerCase().indexOf('android') > -1;
 };
 
+const isIos = () => {
+  // https://stackoverflow.com/questions/9038625/detect-if-device-is-ios
+  return (
+    ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) ||
+    // iPad on iOS 13 detection
+    (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
+  );
+};
+
 const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string): void => {
   // For å omgå popup-blokkering må vi åpne nytt vindu før async-kall.
   const newWindow: Window | null = window.open();
@@ -83,7 +92,9 @@ export const hasPdf = (): boolean => {
 export const handlePdfOpening = (pdfUrl: string): Promise<boolean> => {
   const pdfCompatibility: Promise<boolean> = new Promise(function(resolve, reject) {
     let pdfIncompatible = false;
-    if (isAndroid()) {
+    if (isIos()) {
+      window.open(pdfUrl);
+    } else if (isAndroid()) {
       pdfIncompatible = true;
     } else if (isFirefox()) {
       isPdfIncompatibleFF(resolve, pdfUrl);

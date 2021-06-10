@@ -37,15 +37,44 @@ describe('Has-pdf', () => {
   });
 
   describe('Gitt at det kalles handlePdfOpening', () => {
+    let originalWindowOpen;
+    beforeEach(async () => {
+      jest.useFakeTimers();
+
+      originalWindowOpen = global.window['open'];
+      delete window.open;
+      window.open = jest.fn();
+    });
+
     describe('Når pdf er støttet (android, firefox og i nettleseren returnerer true) ', () => {
       it('Så kaller den window.open', async () => {
-        jest.useFakeTimers();
         const originalNavigatorMimeTypes = global.navigator['mimeTypes'];
         global.navigator.mimeTypes = { 'application/pdf': true };
 
-        const originalWindowOpen = global.window['open'];
-        delete window.open;
-        window.open = jest.fn();
+        // Issue with jest spyOn - kan ikke sjekke at isAndroid og isFirefox er called, returnerer stadig false pga async
+        const urlString = 'lorem/ipsum';
+        await hasPdfFunctions.handlePdfOpening(urlString).then((incompatible: boolean) => {
+          expect(incompatible).toBeFalsy();
+        });
+
+        jest.runAllTimers();
+        const flushPromises = () => new Promise(setImmediate);
+        await flushPromises();
+        expect(window.open).toHaveBeenCalled();
+        global.navigator['mimeTypes'] = originalNavigatorMimeTypes;
+      });
+    });
+    describe('Når plattform er iOS', () => {
+      it('Så kaller den window.open', async () => {
+        const originalNavigatorMimeTypes = global.navigator['mimeTypes'];
+        global.navigator.mimeTypes = {};
+
+        const originalPlatform = window.navigator.platform;
+
+        Object.defineProperty(window.navigator, 'platform', {
+          value: 'iPhone',
+          writable: true,
+        });
 
         // Issue with jest spyOn - kan ikke sjekke at isAndroid og isFirefox er called, returnerer stadig false pga async
         const urlString = 'lorem/ipsum';
@@ -59,7 +88,12 @@ describe('Has-pdf', () => {
         expect(window.open).toHaveBeenCalled();
         global.navigator['mimeTypes'] = originalNavigatorMimeTypes;
         window['open'] = originalWindowOpen;
+        global.navigator['platform'] = originalPlatform;
       });
+    });
+
+    afterEach(async () => {
+      window['open'] = originalWindowOpen;
     });
   });
 });
