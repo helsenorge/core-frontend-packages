@@ -3817,7 +3817,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Referrals_Desc: string;
   /** 
-  * Henvisninger
+  * Henvisninger til spesialisthelsetjenesten
   */
   page_Referrals_Title: string;
   /** 
