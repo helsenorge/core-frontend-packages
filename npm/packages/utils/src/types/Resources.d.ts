@@ -15930,7 +15930,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Description: string;
   /** 
-  * Bestill koronatime
+  * Bestill koronatest
   */
   tile_Korona_Title: string;
   /** 
