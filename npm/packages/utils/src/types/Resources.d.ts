@@ -19144,7 +19144,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   reiseoversikt_refusjonsdetaljer_PASIENT_begrunnUnder10Km: string;
   /** 
-  * Søknad er sendt.
+  * Søknaden er sendt.
   */
   overview_statuser_statusTypeSoknad_soknad_SENDT: string;
   /** 
@@ -22712,7 +22712,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_revidert: string;
   /** 
-  * Saken er under behandling
+  * Søknaden er under behandling
   */
   overview_statuser_avventerOppmotebekreftelse: string;
   /** 
@@ -22720,7 +22720,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_avventerDokumentasjon: string;
   /** 
-  * Søknad er sendt.
+  * Søknaden er sendt.
   */
   overview_statuser_statusTypeSoknad_soknad_UNDER_INNSENDING: string;
   /** 
@@ -22728,7 +22728,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeSoknad_soknad_INNSENDING_FEILET: string;
   /** 
-  * Søknad under behandling.
+  * Søknaden er under behandling.
   */
   overview_statuser_statusTypeSoknad_soknad_UNDER_BEHANDLING: string;
   /** 
