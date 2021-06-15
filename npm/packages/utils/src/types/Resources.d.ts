@@ -23516,7 +23516,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   kopierSoknad_kopier: string;
   /** 
-  * Søknad innsend
+  * Sendt
   */
   overview_innsendt: string;
   /** 
