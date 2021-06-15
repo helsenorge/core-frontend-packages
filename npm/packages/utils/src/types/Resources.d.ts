@@ -19156,31 +19156,31 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeSoknad_soknad_INNVILGET: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeSoknad_soknad_DELVIS_INNVILGET: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeSoknad_soknad_AVSLAG: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeSoknad_soknad_AVVIST: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeSoknad_vedtak_INNVILGET: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeSoknad_vedtak_DELVIS_INNVILGET: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeSoknad_vedtak_AVSLAG: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeSoknad_vedtak_AVVIST: string;
   /** 
@@ -22688,11 +22688,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_underBehandling: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_innvilget: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_delvisInnvilget: string;
   /** 
@@ -22704,7 +22704,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_innsendingFeilet: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_avslag: string;
   /** 
@@ -22752,11 +22752,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_klage_KLAGE_TRUKKET: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeKlage_vedtak_INNVILGET: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeKlage_vedtak_DELVIS_INNVILGET: string;
   /** 
@@ -22772,11 +22772,11 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_vedtak_KLAGE_TRUKKET: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeKlage_vedtak_KLAGE_AVVIST: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeKlage_vedtak_AVVIST: string;
   /** 
