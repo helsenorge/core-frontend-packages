@@ -4790,7 +4790,7 @@
     "reiseoversikt_refusjonsdetaljer_PASIENT_begrunnUnder10Km": "Forklar hvorfor du søker om å få dekket reiseutgifter til en reise under 10 kilometer.",
     "overview_statuser_statusTypeSoknad_soknad_SENDT": "Søknad er sendt.",
     "overview_statuser_statusTypeSoknad_soknad_VENTER_OPPMOTEBEKREFTELSE_FRA_BEHANDLER": "Under behandling.",
-    "overview_statuser_statusTypeSoknad_soknad_INNVILGET": "Vedtak mottatt",
+    "overview_statuser_statusTypeSoknad_soknad_INNVILGET": "Vedtaket er mottatt",
     "overview_statuser_statusTypeSoknad_soknad_DELVIS_INNVILGET": "Vedtaket er mottatt",
     "overview_statuser_statusTypeSoknad_soknad_AVSLAG": "Vedtaket er mottatt",
     "overview_statuser_statusTypeSoknad_soknad_AVVIST": "Vedtaket er mottatt",

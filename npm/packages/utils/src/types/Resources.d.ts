@@ -19152,7 +19152,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeSoknad_soknad_VENTER_OPPMOTEBEKREFTELSE_FRA_BEHANDLER: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeSoknad_soknad_INNVILGET: string;
   /** 
