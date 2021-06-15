@@ -5687,7 +5687,7 @@
     "overview_statuser_statusTypeSoknad_soknad_UNDER_BEHANDLING": "Søknad under behandling.",
     "overview_statuser_statusTypeKlage_soknad_INNVILGET": "Klagen er behandlet.",
     "overview_statuser_statusTypeKlage_soknad_DELVIS_INNVILGET": "Klagen er behandlet.",
-    "overview_statuser_statusTypeKlage_klage_AVVIST": "Vedtak mottatt",
+    "overview_statuser_statusTypeKlage_klage_AVVIST": "Vedtaket er mottatt",
     "overview_statuser_statusTypeKlage_klage_KLAGE_AVVIST": "Behandlet",
     "overview_statuser_statusTypeKlage_klage_KLAGE_TRUKKET": "Trukket",
     "overview_statuser_statusTypeKlage_vedtak_INNVILGET": "Vedtaket er mottatt",

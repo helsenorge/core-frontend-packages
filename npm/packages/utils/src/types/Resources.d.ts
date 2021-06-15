@@ -22740,7 +22740,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   overview_statuser_statusTypeKlage_soknad_DELVIS_INNVILGET: string;
   /** 
-  * Vedtak mottatt
+  * Vedtaket er mottatt
   */
   overview_statuser_statusTypeKlage_klage_AVVIST: string;
   /** 
