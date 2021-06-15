@@ -6105,7 +6105,7 @@
     "klager_klageSkjema_slettKlage": "Slett klage",
     "klager_klageSkjema_kladdGammel": "Du kan bare klage på det nyeste vedtaket du har fått. Det er ikke mulig å klage når søknaden er til behandling.",
     "klager_klageSkjema_utgattFristen": "Fristen for å klage er utgått. Har du spørsmål som gjelder ditt vedtak, kan du ringe ditt lokale pasientreisekontor på telefon 05515.",
-    "klager_klageSkjema_frist": "Dersom du er uenig i dette vedtaket kan du sende inn en klage. Klagefristen er {0}.",
+    "klager_klageSkjema_frist": "Hvis du er uenig i dette vedtaket, kan du sende inn en klage. Klagefristen er {0}.",
     "klager_klageSkjema_klagePaaVedtaket": "Klag på vedtaket",
     "klager_klageSkjema_title": "Jeg vil klage på vedtaket",
     "klager_klageSkjema_begrunnelseIngress": "Begrunn hvorfor du klager, og beskriv hva du mener bør endres fra det opprinnelige vedtaket. Du kan legge ved dokumentasjon hvis du trenger det. Hvis du har spørsmål om vedtaket, må du ta kontakt med brukerstøtte på telefon 05515.",

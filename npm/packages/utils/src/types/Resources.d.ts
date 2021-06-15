@@ -24412,7 +24412,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   klager_klageSkjema_utgattFristen: string;
   /** 
-  * Dersom du er uenig i dette vedtaket kan du sende inn en klage. Klagefristen er {0}.
+  * Hvis du er uenig i dette vedtaket, kan du sende inn en klage. Klagefristen er {0}.
   */
   klager_klageSkjema_frist: string;
   /** 
