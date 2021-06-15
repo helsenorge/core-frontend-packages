@@ -4359,7 +4359,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_QrCode_Title: string;
   /** 
-  * Korona&shy;sertifikat
+  * Koronasertifikat
   */
   page_Koronasertifikat_Title: string;
   /** 
