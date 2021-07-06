@@ -10164,7 +10164,7 @@ export type HNMinHelseDialogVP = {
   */
   userControl_Timeline_StatusInfo_REF: string;
   /** 
-  * Henvisningen er vurdert, men avslått. Når henvisningen er avslått, kan det være fordi den er vurdert som behovet for helsehjelp i spesialisthelsetjenesten ikke er tilstede. Se mottatt brev om avslag for nærmere beskrivelse eller kontakt det aktuelle foretaket.​
+  * Henvisningen er vurdert, men avslått. Se mottatt brev om avslag for nærmere beskrivelse eller kontakt det aktuelle foretaket.​
   */
   userControl_Timeline_StatusInfo_REJ: string;
   /** 
