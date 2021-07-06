@@ -2546,7 +2546,7 @@
     "userControl_Timeline_StatusInfo_EVA": "Henvisningen er mottatt og utredning av rett til helsehjelp pågår.",
     "userControl_Timeline_StatusInfo_FIN": "Behandlingen din relatert til denne henvisningen er avsluttet. Kontakt fastlege eller henviser ved spørsmål.",
     "userControl_Timeline_StatusInfo_REF": "Henvisningen er videresendt til et annet behandlingssted. Henvisningen beholder sin plass i køen. Kontakt fastlege eller henviser ved spørsmål.",
-    "userControl_Timeline_StatusInfo_REJ": "Henvisningen er vurdert, men avvist. Kontakt fastlege eller henviser ved spørsmål.",
+    "userControl_Timeline_StatusInfo_REJ": "Henvisningen er vurdert, men avslått. Når henvisningen er avslått, kan det være fordi den er vurdert som behovet for helsehjelp i spesialisthelsetjenesten ikke er tilstede. Se mottatt brev om avslag for nærmere beskrivelse eller kontakt det aktuelle foretaket.​",
     "userControl_Timeline_StatusInfo_ROA": "Sykehuset har besvart en forespørsel i forbindelse med din behandling.",
     "userControl_Timeline_StatusInfo_ROD": "Henvisningen er videresendt til et behandlingssted som ligger utenfor Helse Vest. Henvisningen vil bli behandlet i tråd med fristen, men vil ikke vises i denne listen. Kontakt fastlege eller henviser dersom du har spørsmål.",
     "userControl_Timeline_StatusInfo_RQA": "Behandlingsstedet har besvart en forespørsel i forbindelse med din behandling. Kontakt fastlege eller henviser ved spørsmål.",
