@@ -22329,7 +22329,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   soknadsseksjoner_FORESATT_fritakEgenandel: string;
   /** 
-  * Andre krav og tilleggsutgifter
+  * Vil du søke om godtgjørelse til andre utgifter?
   */
   soknadsseksjoner_tilleggsutgifter: string;
   /** 
