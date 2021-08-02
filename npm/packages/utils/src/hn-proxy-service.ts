@@ -1,6 +1,6 @@
 import { trackError } from './adobe-analytics';
-import { parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
 import * as DateUtils from './date-utils';
+import { parseParams, addParams, OperationResponse, ParamsObj } from './hn-service';
 import { warn, error as logError } from './logger';
 
 declare const HN: {
@@ -82,6 +82,32 @@ export const createHeaders = (type = 'application/json'): Headers => {
   headers.append('Accept', type);
   headers.append('Content-Type', type);
   return headers;
+};
+
+/**
+ * Returnerer filnavn fra et Response-objekt ved nedlasting av filer
+ * @param response Responsen fra et fetch-kall
+ * @returns filnavn fra Content-Disposition-header, eller en fallback dersom headeren ikke finnes
+ */
+export const getFilenameFromResponse = (response: Response): string => {
+  let filename = 'nedlasting-' + DateUtils.todaysDate() + '-helseNorge';
+  const contentDisposition = response.headers.get('content-disposition');
+  if (contentDisposition) {
+    const utf8Regex = /filename\*=utf-8''(.+)/i;
+    const asciiRegex = /filename="(.+)"/i;
+    const match = contentDisposition.match(utf8Regex) ?? contentDisposition.match(asciiRegex) ?? false;
+    if (match) {
+      try {
+        filename = decodeURI(match[1]);
+      } catch (e) {
+        logError(
+          `Responsen fra ${response.url} inneholder ugyldige tegn i filnavnet i Content-Disposition-headeren: ${contentDisposition}`
+        );
+      }
+    }
+  }
+
+  return filename;
 };
 
 /**
@@ -284,13 +310,7 @@ export const download = (proxyName: string, endpoint: string, params?: ParamsObj
           throw errorHtml;
         }
 
-        const contentDisposition = res.headers.get('content-disposition');
-        const match =
-          contentDisposition && contentDisposition.match(/filename="(.+)"/) ? contentDisposition.match(/filename="(.+)"/) : false;
-        let fileName = 'nedlasting-' + DateUtils.todaysDate() + '-helseNorge';
-        if (match) {
-          fileName = match[1];
-        }
+        const fileName = getFilenameFromResponse(res);
         const blobPromise = res.blob();
         return { blobPromise, fileName };
       })

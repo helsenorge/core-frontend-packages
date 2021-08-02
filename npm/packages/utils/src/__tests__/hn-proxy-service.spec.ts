@@ -1,3 +1,5 @@
+import * as AdobeAnalytics from '../adobe-analytics';
+import * as DateUtils from '../date-utils';
 import {
   getErrorFromHTML,
   get,
@@ -8,15 +10,12 @@ import {
   erTjenester,
   createHeaders,
   erHelsenorge,
+  getFilenameFromResponse,
   getTjenesterUrl,
   getTjenesterApiUrl,
   getHelsenorgeUrl,
   download,
 } from '../hn-proxy-service';
-import * as AdobeAnalytics from '../adobe-analytics';
-// TODO: Kan tas i bruk når isomorphic-fetch er oppgradert til 3.0.0
-// Nåværende versjon bruker en gammel node-fetch som ikke støtter blob()
-// import * as DateUtils from '../date-utils';
 import * as mockLogger from '../logger';
 
 jest.mock('../logger.ts', () => ({
@@ -669,6 +668,72 @@ describe('Gitt at __HelseNorgeUrl__ skal brukes', () => {
       const apiUrl = getHelsenorgeUrl();
       expect(apiUrl).toBe(undefinedhelsenorgeUrl);
       global.window['HN'] = originalWindowHN;
+    });
+  });
+});
+
+describe('gitt at getFilenameFromResponse kalles', () => {
+  describe('når Content-Disposition inneholder filnavn både som utf8 og ascii', () => {
+    it('Så returneres filnavn som utf8', () => {
+      const response = new Response('body', {
+        headers: {
+          'Content-Disposition': `attachment; filename="Provesvar - 22.04.2021.pdf"; filename*=utf-8''Pr%C3%B8vesvar%20-%2022.04.2021.pdf`,
+        },
+      });
+
+      const filename = getFilenameFromResponse(response);
+
+      expect(filename).toEqual('Prøvesvar - 22.04.2021.pdf');
+    });
+  });
+  describe('når Content-Disposition inneholder filnavn bare som ascii', () => {
+    it('Så returneres filnavn som ascii', () => {
+      const response = new Response('body', {
+        headers: {
+          'Content-Disposition': `attachment; filename="Provesvar - 22.04.2021.pdf"`,
+        },
+      });
+
+      const filename = getFilenameFromResponse(response);
+
+      expect(filename).toEqual('Provesvar - 22.04.2021.pdf');
+    });
+  });
+  describe('når Content-Disposition ikke finnes', () => {
+    it('Så returneres et standard filnavn med dagens dato', () => {
+      jest.spyOn(DateUtils, 'todaysDate').mockReturnValueOnce('2021-3-15');
+      const response = new Response('body', {
+        headers: {},
+      });
+
+      const filename = getFilenameFromResponse(response);
+
+      expect(filename).toEqual('nedlasting-2021-3-15-helseNorge');
+    });
+  });
+  describe('når Content-Disposition inneholder filnavn med ugyldige tegn', () => {
+    it('Så returneres et standard filnavn med dagens dato og det logges en error', () => {
+      jest.spyOn(DateUtils, 'todaysDate').mockReturnValueOnce('2021-3-15');
+      const response = new Response('body', {
+        headers: {
+          'Content-Disposition': `attachment; filename="Provesvar - 22.04.2021.pdf"; filename*=utf-8''Pr%C4%97%vesvar%20-%2022.04.2021.pdf`,
+        },
+      });
+
+      Object.defineProperties(response, {
+        url: {
+          configurable: true,
+          value: '/proxy/TjenesteNavn/api/v1/LastNedPdf',
+        },
+      });
+
+      const filename = getFilenameFromResponse(response);
+
+      expect(filename).toEqual('nedlasting-2021-3-15-helseNorge');
+      expect(mockLogger.error).toHaveBeenCalledTimes(1);
+      expect(mockLogger.error).toHaveBeenCalledWith(
+        `Responsen fra /proxy/TjenesteNavn/api/v1/LastNedPdf inneholder ugyldige tegn i filnavnet i Content-Disposition-headeren: attachment; filename=\"Provesvar - 22.04.2021.pdf\"; filename*=utf-8''Pr%C4%97%vesvar%20-%2022.04.2021.pdf`
+      );
     });
   });
 });
