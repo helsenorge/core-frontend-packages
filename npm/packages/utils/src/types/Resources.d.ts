@@ -18208,7 +18208,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   kvittering_undersokelseIngress: string;
   /** 
-  * https://response.questback.com/pasientreiserhf/transportmiddel
+  * https://response.questback.com/isa/qbv.dll/bylink?p=WwGKzZ_TC3Oaw7-DkzjBfst_32KUPxdG7QmqyR8ias8w1DXv8HDsPW6oHbdtEDivVTvHcB5vbTeqtv8NQdeI_A2
   */
   kvittering_undersokelseLenke: string;
   /** 
