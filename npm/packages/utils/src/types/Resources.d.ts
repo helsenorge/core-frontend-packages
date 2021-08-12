@@ -9754,7 +9754,7 @@ export type HNMinHelseDialogVPJS = {
 
 export type HNMinHelseDialogVP = { 
   /** 
-  * Viderehenvist
+  * Videresendt
   */
   userControl_Timeline_StatusValue_Viderehenvist: string;
   /** 
