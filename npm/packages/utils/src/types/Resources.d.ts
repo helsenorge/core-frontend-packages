@@ -7065,7 +7065,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsCancellationReasonDidNotMeet: string;
   /** 
-  * Viderehenvist:
+  * Viderehenvist til
   */
   referrallistelementHenvistTil: string;
   /** 
