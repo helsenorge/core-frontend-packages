@@ -7065,7 +7065,7 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   appointmentDetailsCancellationReasonDidNotMeet: string;
   /** 
-  * Viderehenvist:
+  * Viderehenvist til:
   */
   referrallistelementHenvistTil: string;
   /** 
@@ -9754,7 +9754,7 @@ export type HNMinHelseDialogVPJS = {
 
 export type HNMinHelseDialogVP = { 
   /** 
-  * Viderehenvist
+  * Videresendt
   */
   userControl_Timeline_StatusValue_Viderehenvist: string;
   /** 
