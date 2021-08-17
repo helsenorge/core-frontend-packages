@@ -1775,7 +1775,7 @@
     "kommunalHelsetilbudHjemmesideLabel": "Hjemmeside",
     "kommunalHelsetilbudKontaktmuligheterLabel": "Kontaktmuligheter",
     "appointmentDetailsCancellationReasonDidNotMeet": "Innbygger møtte ikke til timen.",
-    "referrallistelementHenvistTil": "Viderehenvist:",
+    "referrallistelementHenvistTil": "Viderehenvist til:",
     "skjemautsteder": "utsteder av skjema",
     "conversationItemFastlegeAccessDeniedHeader": "Legekontoret har sperret din tilgang til denne tjenesten.",
     "conversationItemFastlegeAccessDeniedBody": "Kontakt fastlegekontoret ved eventuelle spørsmål.",
@@ -2447,7 +2447,7 @@
     "tilgangsloggTabellSortShow": "Vis resultat"
   },
   "HNMinHelseDialogVP": { 
-    "userControl_Timeline_StatusValue_Viderehenvist": "Viderehenvist",
+    "userControl_Timeline_StatusValue_Viderehenvist": "Videresendt",
     "userControl_Audit_ShowDetails": "Vis detaljer",
     "userControl_Records_Colon": ": ",
     "webPart_DocumentDetails_Dictionary": "Ordforklaringer",
