@@ -1353,6 +1353,10 @@ export type HNDialogCommonJS = {
   */
   healthcareProfessionalHjelpepleier: string;
   /** 
+  * Informasjon du opphav blir sendt til legelkontorer når du fullfører
+  */
+  triageringsvedleggInfoTitle: string;
+  /** 
   * /veileder?Query=Questionnaire%2F310
   */
   koronatestVeiviserUrl: string;
