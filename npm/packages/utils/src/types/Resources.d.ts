@@ -1353,9 +1353,25 @@ export type HNDialogCommonJS = {
   */
   healthcareProfessionalHjelpepleier: string;
   /** 
-  * Informasjon du opphav blir sendt til legelkontorer når du fullfører
+  * Informasjon du oppgav blir sendt til legelkontorer når du fullfører
   */
   triageringsvedleggInfoTitle: string;
+  /** 
+  * Se kartleggingsinformasjon
+  */
+  kartleggingsdataLinkText: string;
+  /** 
+  * Se tilleggsopplysninger
+  */
+  sjekkpunktLinkText: string;
+  /** 
+  * En feil oppsto ved henting av vedlegg med dine besvarelser
+  */
+  triageringsvedleggErrorTitle: string;
+  /** 
+  * Du kan likevel sende meldingen uten denne informasjonen.
+  */
+  triageringsvedleggErrorText: string;
   /** 
   * /veileder?Query=Questionnaire%2F310
   */
@@ -8848,26 +8864,6 @@ behandlingsstedet ved eventuelle spørsmål.
   * Meldingen inneholder et skjema, som også vil bli slettet. Skjemaet vil fortsatt være lagret hos mottaker av skjemaet.
   */
   conversationConfirmDeleteInnsendtSkjema: string;
-  /** 
-  * Informasjon du oppgav blir sendt til legelkontorer når du fullfører
-  */
-  triageringsvedleggInfoTitle: string;
-  /** 
-  * Se kartleggingsinformasjon
-  */
-  kartleggingsdataLinkText: string;
-  /** 
-  * Se tilleggsopplysninger
-  */
-  sjekkpunktLinkText: string;
-  /** 
-  * En feil oppsto ved henting av vedlegg med dine besvarelser
-  */
-  triageringsvedleggErrorTitle: string;
-  /** 
-  * Du kan likevel sende meldingen uten denne informasjonen.
-  */
-  triageringsvedleggErrorText: string;
   /** 
   * Informasjon om timen
   */
