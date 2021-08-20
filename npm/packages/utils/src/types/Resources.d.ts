@@ -8849,6 +8849,22 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   triageringsvedleggInfoTitle: string;
   /** 
+  * Se kartleggingsinformasjon
+  */
+  kartleggingsdataLinkText: string;
+  /** 
+  * Se tilleggsopplysninger
+  */
+  sjekkpunktLinkText: string;
+  /** 
+  * En feil oppsto ved henting av vedlegg med dine besvarelser
+  */
+  triageringsvedleggErrorTitle: string;
+  /** 
+  * Du kan likevel sende meldingen uten denne informasjonen.
+  */
+  triageringsvedleggErrorText: string;
+  /** 
   * Informasjon om timen
   */
   timeavtaleInfoHeader: string;
