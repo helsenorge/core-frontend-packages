@@ -8845,6 +8845,10 @@ behandlingsstedet ved eventuelle spørsmål.
   */
   conversationConfirmDeleteInnsendtSkjema: string;
   /** 
+  * Informasjon du oppgav blir sendt til legelkontorer når du fullfører
+  */
+  triageringsvedleggInfoTitle: string;
+  /** 
   * Informasjon om timen
   */
   timeavtaleInfoHeader: string;

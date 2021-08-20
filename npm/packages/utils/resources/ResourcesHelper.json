@@ -2218,6 +2218,7 @@
     "conversationConfirmDeleteMellomlagretSkjema": "Meldingen inneholder et skjema. Skjemaet og eventuelle vedlegg vil også bli slettet.",
     "conversationConfirmDeleteQuestionSkjema": "Vil du virkelig slette melding og skjema?",
     "conversationConfirmDeleteInnsendtSkjema": "Meldingen inneholder et skjema, som også vil bli slettet. Skjemaet vil fortsatt være lagret hos mottaker av skjemaet.",
+    "triageringsvedleggInfoTitle": "Informasjon du oppgav blir sendt til legelkontorer når du fullfører",
     "timeavtaleInfoHeader": "Informasjon om timen",
     "timeavtaleInfoError": "Klarte ikke å hente informasjon om timen",
     "appointmentCancelHelsestasjonSubHeader": "Hvis du avbestiller timen, kan det ta tid før du får en ny time."
