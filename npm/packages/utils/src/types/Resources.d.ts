@@ -1353,26 +1353,6 @@ export type HNDialogCommonJS = {
   */
   healthcareProfessionalHjelpepleier: string;
   /** 
-  * Informasjon du oppgav blir sendt til legelkontorer når du fullfører
-  */
-  triageringsvedleggInfoTitle: string;
-  /** 
-  * Se kartleggingsinformasjon
-  */
-  kartleggingsdataLinkText: string;
-  /** 
-  * Se tilleggsopplysninger
-  */
-  sjekkpunktLinkText: string;
-  /** 
-  * En feil oppsto ved henting av vedlegg med dine besvarelser
-  */
-  triageringsvedleggErrorTitle: string;
-  /** 
-  * Du kan likevel sende meldingen uten denne informasjonen.
-  */
-  triageringsvedleggErrorText: string;
-  /** 
   * /veileder?Query=Questionnaire%2F310
   */
   koronatestVeiviserUrl: string;
