@@ -343,6 +343,11 @@
     "bookingSubHeaderVaccination": "Timebestillingen vil sendes til Vaksinasjon",
     "healthcareProfessionalJordmor": "Jordmor",
     "healthcareProfessionalHjelpepleier": "Hjelpepleier",
+    "triageringsvedleggInfoTitle": "Informasjon du oppgav blir sendt til legelkontorer når du fullfører",
+    "kartleggingsdataLinkText": "Se kartleggingsinformasjon",
+    "sjekkpunktLinkText": "Se tilleggsopplysninger",
+    "triageringsvedleggErrorTitle": "En feil oppsto ved henting av vedlegg med dine besvarelser",
+    "triageringsvedleggErrorText": "Du kan likevel sende meldingen uten denne informasjonen.",
     "koronatestVeiviserUrl": "/veileder?Query=Questionnaire%2F310",
     "koronavaksineVeiviserUrl": "/veileder?Query=Questionnaire%2F314",
     "bookingEnBehandlerInfoWithWarning": "Du kan likevel bestille time hos"
