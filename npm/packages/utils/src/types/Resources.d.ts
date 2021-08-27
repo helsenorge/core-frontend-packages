@@ -1353,7 +1353,7 @@ export type HNDialogCommonJS = {
   */
   healthcareProfessionalHjelpepleier: string;
   /** 
-  * Informasjon du oppgav blir sendt til legelkontorer når du fullfører
+  * Informasjonen du oppgav blir sendt til legekontoret når du fullfører
   */
   triageringsvedleggInfoTitle: string;
   /** 
