@@ -2232,6 +2232,7 @@
     "downloadCalendar_HnTimeavtaleAppointment_Description": "For mer informasjon om avtalen, logg inn på helsenorge.no.",
     "downloadCalendar_HnTimeavtaleAppointment_Summary": "Time hos {0} for {1}",
     "downloadCalendar_HnTimeavtaleVideoAppointment_Summary": "Videotime hos {0} for {1}",
+    "commonInnsynPasientjournalHeader": "Kopi av pasientjournal",
     "clientOperation_HelseregisterDialog_Disabled_Title": "Dialog ikke tilgjengelig",
     "clientOperation_HelseregisterDialog_Disabled_Body": "",
     "getScheduledAppointments_WarningHelseOmsorg": "For øyeblikket vises ikke timer fra helse og omsorg.",

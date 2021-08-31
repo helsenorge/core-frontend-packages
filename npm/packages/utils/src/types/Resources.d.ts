@@ -8896,6 +8896,10 @@ export type HNMinHelseDialog = {
   */
   downloadCalendar_HnTimeavtaleVideoAppointment_Summary: string;
   /** 
+  * Kopi av pasientjournal
+  */
+  commonInnsynPasientjournalHeader: string;
+  /** 
   * Dialog ikke tilgjengelig
   */
   clientOperation_HelseregisterDialog_Disabled_Title: string;
