@@ -15339,7 +15339,7 @@ export type HNMinHelseNavigation = {
   */
   tile_EksterneTjenester_Title: string;
   /** 
-  * Bestill europeisk helsetrygdkort
+  * Bestill Europeisk helsetrygdkort
   */
   tile_EksterneTjenester_Trygdekort_Title: string;
   /** 
