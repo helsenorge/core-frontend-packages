@@ -15227,6 +15227,10 @@ export type HNMinHelseNavigation = {
   */
   tile_EksterneTjenester_Bivirkninger_Description: string;
   /** 
+  * Gjelder i EU/EØS og er gyldig i 3 år
+  */
+  tile_EksterneTjenester_Trygdekort_Description: string;
+  /** 
   * Vaksiner
   */
   tile_Vaksiner_Title: string;
@@ -15319,7 +15323,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Egenandeler_Title: string;
   /** 
-  * Meld bivirkninger på legemidler og vaksiner
+  * Meld bivirkninger
   */
   tile_EksterneTjenester_Bivirkninger_Title: string;
   /** 
@@ -15335,7 +15339,7 @@ export type HNMinHelseNavigation = {
   */
   tile_EksterneTjenester_Title: string;
   /** 
-  * Bestill Europeisk helsetrygdkort
+  * Bestill europeisk helsetrygdkort
   */
   tile_EksterneTjenester_Trygdekort_Title: string;
   /** 
