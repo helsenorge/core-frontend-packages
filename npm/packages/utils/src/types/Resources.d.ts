@@ -15223,6 +15223,10 @@ export type HNMinHelseNavigation = {
   */
   group_EksterneTjenester_Title: string;
   /** 
+  * Si fra om bivirkninger på legemidler og vaksiner
+  */
+  tile_EksterneTjenester_Bivirkninger_Description: string;
+  /** 
   * Vaksiner
   */
   tile_Vaksiner_Title: string;

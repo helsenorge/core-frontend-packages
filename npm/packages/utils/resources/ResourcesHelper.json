@@ -3805,6 +3805,7 @@
     "tile_Korona_Description": "Timebestilling i din kommune.",
     "group_Helsetjenester_Title": "Helsetjenester",
     "group_EksterneTjenester_Title": "Eksterne tjenester",
+    "tile_EksterneTjenester_Bivirkninger_Description": "Si fra om bivirkninger på legemidler og vaksiner",
     "tile_Vaksiner_Title": "Vaksiner",
     "tile_Vaksiner_Description": "Oversikt over registrerte vaksiner.",
     "tile_Velgbehandlingssted_Title": "Velg behandlingssted",
