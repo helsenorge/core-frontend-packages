@@ -32,7 +32,8 @@ interface Props {
 export const fetchWebComp = (props: Props): void => {
   const { domain, entryName, componentName, includeResetCss } = props;
   if (!isCustomElementRegistered(componentName)) {
-    fetch(`${domain}/assets.json`)
+    const assetsUrl = `${domain}/assets.json`;
+    fetch(assetsUrl)
       .then(response => {
         if (response.status === 200) {
           const resp = response.json();
@@ -69,7 +70,7 @@ export const fetchWebComp = (props: Props): void => {
         });
       })
       .catch(e => {
-        error(e);
+        error(e, assetsUrl);
       });
   }
 };
