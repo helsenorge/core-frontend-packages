@@ -15227,7 +15227,7 @@ export type HNMinHelseNavigation = {
   */
   tile_EksterneTjenester_Bivirkninger_Description: string;
   /** 
-  * Gjelder i EU/EØS og er gyldig i 3 år
+  * Gjelder i EU/EØS
   */
   tile_EksterneTjenester_Trygdekort_Description: string;
   /** 

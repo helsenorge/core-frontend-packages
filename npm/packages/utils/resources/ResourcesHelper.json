@@ -3806,7 +3806,7 @@
     "group_Helsetjenester_Title": "Helsetjenester",
     "group_EksterneTjenester_Title": "Eksterne tjenester",
     "tile_EksterneTjenester_Bivirkninger_Description": "Si fra om bivirkninger på legemidler og vaksiner",
-    "tile_EksterneTjenester_Trygdekort_Description": "Gjelder i EU/EØS og er gyldig i 3 år",
+    "tile_EksterneTjenester_Trygdekort_Description": "Gjelder i EU/EØS",
     "tile_Vaksiner_Title": "Vaksiner",
     "tile_Vaksiner_Description": "Oversikt over registrerte vaksiner.",
     "tile_Velgbehandlingssted_Title": "Velg behandlingssted",
