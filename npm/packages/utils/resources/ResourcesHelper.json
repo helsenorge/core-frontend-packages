@@ -348,7 +348,7 @@
     "bookingEnBehandlerInfoWithWarning": "Du kan likevel bestille time hos",
     "triageringsvedleggInfoTitle": "Informasjonen du oppgav blir sendt til legekontoret når du fullfører",
     "kartleggingsdataLinkText": "Se kartleggingsinformasjon",
-    "sjekkpunktLinkText": "Se tilleggsopplysninger",
+    "sjekkpunktLinkText": "Se tilleggsinformasjon",
     "triageringsvedleggErrorTitle": "En feil oppsto ved henting av vedlegg med dine besvarelser",
     "triageringsvedleggErrorText": "Du kan likevel sende meldingen uten denne informasjonen."
   },
