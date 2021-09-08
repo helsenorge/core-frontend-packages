@@ -1373,7 +1373,7 @@ export type HNDialogCommonJS = {
   */
   kartleggingsdataLinkText: string;
   /** 
-  * Se tilleggsopplysninger
+  * Se tilleggsinformasjon
   */
   sjekkpunktLinkText: string;
   /** 
