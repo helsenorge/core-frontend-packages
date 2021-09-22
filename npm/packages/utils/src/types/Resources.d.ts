@@ -260,6 +260,14 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Det har skjedd en teknisk feil
   */
   modalErrorTitle: string;
+  /** 
+  * Akkurat nå er deler av Helsenorge ikke tilgjengelig, og vi får ikke logget deg ut. Prøv igjen senere eller kontakt Veiledning Helsenorge (se kontaktinfo nederst på siden).
+  */
+  modalErrorDescription: string;
+  /** 
+  * OK
+  */
+  modalErrorButtonText: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
