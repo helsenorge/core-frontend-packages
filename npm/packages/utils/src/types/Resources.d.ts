@@ -256,6 +256,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Bruk og tilganger
   */
   headerMenuProfileLinksBrukOgTilgangerTitle: string;
+  /** 
+  * Det har skjedd en teknisk feil
+  */
+  modalErrorTitle: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
