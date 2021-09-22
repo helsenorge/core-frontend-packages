@@ -10,6 +10,12 @@ export enum HeaderFooterEvents {
   refreshvarslinger = 'hn-webcomp-header-footer-event-refreshvarslinger',
   refreshvarslingeroghendelsesmeny = 'hn-webcomp-header-footer-event-refreshvarslingeroghendelsesmeny',
   setonshowsignoutbox = 'hn-webcomp-header-footer-event-setonshowsignoutbox',
+  setrefresh = 'hn-webcomp-header-footer-event-setrefresh',
+  setfromlocation = 'hn-webcomp-header-footer-event-setfromlocation',
+  setredirecttourlafterlogin = 'hn-webcomp-header-footer-event-setredirecttourlafterlogin',
+  sethistory = 'hn-webcomp-header-footer-event-sethistory',
+  setlocation = 'hn-webcomp-header-footer-event-setlocation',
+  setuserloading = 'hn-webcomp-header-footer-event-setuserloading',
 }
 
 export enum CmsBlocksEvents {
