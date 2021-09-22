@@ -63,7 +63,8 @@
     "headerMenuBasicSamiskUrl": "/se/saami/",
     "headerMenuBasicSamiskTitle": "Sámegiella",
     "headerMenuProfileLinksBrukOgTilgangerUrl": "/bruk-og-tilganger",
-    "headerMenuProfileLinksBrukOgTilgangerTitle": "Bruk og tilganger"
+    "headerMenuProfileLinksBrukOgTilgangerTitle": "Bruk og tilganger",
+    "modalErrorTitle": "Det har skjedd en teknisk feil"
   },
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk",
