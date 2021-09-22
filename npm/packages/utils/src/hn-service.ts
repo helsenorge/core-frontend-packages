@@ -1,7 +1,6 @@
 import { trackError } from './adobe-analytics';
-import * as DateUtils from './date-utils';
-import { isAuthorized, hashIsAuthorized } from './hn-authorize';
 import { getCookieValue } from './cookie';
+import * as DateUtils from './date-utils';
 import { getTjenesterUrl } from './hn-proxy-service';
 import { error as logError } from './logger';
 
@@ -112,7 +111,6 @@ export interface OperationResponse extends Response {
 }
 
 const minHelsePath = '/api/v1/MinHelse/';
-const portalPath = '/api/v1/Portal/';
 const crossDomainPath = '/api/v1/CrossDomain/';
 const openCmd = 'HelseNorge/';
 const uploadCmd = 'Upload/';
@@ -164,10 +162,6 @@ export function getPasientreiserUrl() {
   return HN.Rest.__TjenesterUrl__ !== undefined && HN.Rest.__TjenesterApiUrl__ !== null ? `${HN.Rest.__TjenesterUrl__}/pasientreiser` : '';
 }
 
-export function isSkjemautfyller() {
-  return HN.Page.__Path__ !== undefined && HN.Page.__Path__ !== null && HN.Page.__Path__ === 'skjemautfyller';
-}
-
 // TO-DO kan denne fases ut og istedet brukes getCookieValue fra cookie.ts?
 function getCookie(name: string) {
   const re = new RegExp(name + '=([^;]+)');
@@ -179,28 +173,19 @@ export function isMHLoggedIn(): boolean {
   return getCookie('MH_LoggedIn') !== null ? true : false;
 }
 
-export function getAutoCommand(): CommandsType {
-  return isAuthorized() === true ? HN.Commands : HN.PortalCommands;
-}
-
 function getMinHelseEnvironmentPath(): string {
   return getTjenesterUrl() + minHelsePath;
-}
-
-function getPortalEnvironmentPath(): string {
-  return getTjenesterUrl() + portalPath;
 }
 
 export function getMinHelseOpenEnvironmentPath() {
   return getTjenesterUrl() + minHelsePath + openCmd;
 }
 
-function getAutoPath(): string {
-  return isAuthorized() === true ? getMinHelseEnvironmentPath() : getPortalEnvironmentPath();
-}
-
-function canCallAutoService(): boolean {
-  return (isAuthorized() === true && hashIsAuthorized() === true) || (isAuthorized() === false && hashIsAuthorized() === false);
+export function createBaseHeaders(type = 'application/json'): Headers {
+  const headers: Headers = new Headers();
+  headers.append('Accept', type);
+  headers.append('Content-Type', type);
+  return headers;
 }
 
 function createHeaders(type = 'application/json'): Headers {
@@ -214,13 +199,6 @@ function createHeaders(type = 'application/json'): Headers {
   } else if (getCookieValue('HN_CSRF_Token')) {
     headers.append('X-HN-CSRF-Token', getCookieValue('HN_CSRF_Token') as string);
   }
-  return headers;
-}
-
-export function createBaseHeaders(type = 'application/json'): Headers {
-  const headers: Headers = new Headers();
-  headers.append('Accept', type);
-  headers.append('Content-Type', type);
   return headers;
 }
 
@@ -312,41 +290,6 @@ export function getCrossDomain<T extends Response | {}>(command: string, params?
   }).then(checkStatus);
 }
 
-export function getPortal<T extends OperationResponse>(cmd: string, params?: any): Promise<T> {
-  if (!params) {
-    const cmdKey = '__' + cmd + '__';
-    if (HN.PortalCommands.hasOwnProperty(cmdKey)) {
-      return Promise.resolve(HN.PortalCommands[cmdKey]);
-    }
-  }
-  const headers = createBaseHeaders();
-  return fetch(getPortalEnvironmentPath() + cmd + parseParams(params, true), {
-    method: 'get',
-    credentials: 'include',
-    headers,
-  }).then(checkStatus);
-}
-
-export function getAuto<T extends OperationResponse>(cmd: string, params?: {}): Promise<T> {
-  if (canCallAutoService()) {
-    if (!params) {
-      const cmdKey = '__' + cmd + '__';
-      const commands = getAutoCommand();
-      if (commands.hasOwnProperty(cmdKey)) {
-        return Promise.resolve(commands[cmdKey]);
-      }
-    }
-    const headers = createHeaders();
-    return fetch(getAutoPath() + cmd + parseParams(params, true), {
-      method: 'get',
-      credentials: 'include',
-      headers,
-    }).then(checkStatus);
-  } else {
-    return Promise.resolve(new Response(undefined, { status: 401 })).then(checkStatus);
-  }
-}
-
 function getXmlResult(reader: any, decoder: any, partialXmlResult: string): string {
   let xmlResult = partialXmlResult;
   return reader.read().then((result: any) => {
@@ -397,33 +340,6 @@ function crud<T extends OperationResponse>(method: string, cmd: string, data?: a
         throw err;
       }
     });
-}
-
-function crudAuto<T extends OperationResponse>(method: string, cmd: string, data?: any, params?: any, forcePortal?: boolean): Promise<T> {
-  return fetch((forcePortal ? getPortalEnvironmentPath() : getAutoPath()) + cmd + parseParams(params, true), {
-    method,
-    credentials: 'include',
-    headers: createHeaders(),
-    body: JSON.stringify(data),
-  })
-    .then((response: Response) => checkStatus<T>(response))
-    .catch(err => {
-      trackError('level1');
-      if (err == 'TypeError: Failed to fetch') {
-        throw {
-          ErrorMessage: {
-            Title: 'Det har skjedd en teknisk feil.',
-            Body: 'Prøv igjen senere.',
-          },
-        };
-      } else {
-        throw err;
-      }
-    });
-}
-
-export function postAuto<T extends OperationResponse>(cmd: string, data?: any, params?: any, forcePortal?: boolean): Promise<T> {
-  return crudAuto<T>('post', cmd, data, params, forcePortal);
 }
 
 export function post<T extends OperationResponse>(cmd: string, data?: any, params?: any): Promise<T> {

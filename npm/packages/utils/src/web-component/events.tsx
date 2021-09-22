@@ -5,6 +5,8 @@ import { ShowSignOutBoxData, SessionTimeoutAction } from '../types/entities';
 /* Events from header-footer and cms-blocks webcomp */
 import { HeaderFooterEvents, CmsBlocksEvents, CommonEvents } from './constants';
 
+import * as History from 'history';
+
 export interface KeyboardEventWithPath extends KeyboardEvent {
   path?: string;
 }
@@ -77,6 +79,25 @@ export const HNeventRefreshVarslingerOgHendelsesmeny = (): void =>
 
 export const HNeventSetOnShowSignoutbox = (fn: (data: ShowSignOutBoxData) => SessionTimeoutAction): void =>
   dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.setonshowsignoutbox, { onShowSignOutBox: fn });
+
+export const HNeventSetUserLoading = (userLoading: boolean): void =>
+  dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.setuserloading, { userLoading });
+
+export const HNeventSetRefresh = (refresh: boolean): void => {
+  dispatchCustomEvent('hn-webcomp-personvelger', HeaderFooterEvents.setrefresh, { refresh });
+};
+
+export const HNeventSetFromLocation = (fromLocation: History.Location): void =>
+  dispatchCustomEvent('hn-webcomp-personvelger', HeaderFooterEvents.setfromlocation, { fromLocation });
+
+export const HNeventSetRedirectToUrlAfterLogin = (redirectToUrlAfterLogin: boolean): void =>
+  dispatchCustomEvent('hn-webcomp-personvelger', HeaderFooterEvents.setredirecttourlafterlogin, { redirectToUrlAfterLogin });
+
+export const HNeventSetHistory = (history: History.History<History.LocationState>): void =>
+  dispatchCustomEvent('hn-webcomp-personvelger', HeaderFooterEvents.sethistory, { history });
+
+export const HNeventSetLocation = (location: History.Location<History.LocationState>): void =>
+  dispatchCustomEvent('hn-webcomp-personvelger', HeaderFooterEvents.setlocation, { location });
 
 export const HNeventSetHiddenPromopanel = (isHidden: boolean): void =>
   dispatchCustomEvent('hn-webcomp-cms-block-promopanel', CmsBlocksEvents.setHiddenPromopanel, { hiddenPromopanel: isHidden });
