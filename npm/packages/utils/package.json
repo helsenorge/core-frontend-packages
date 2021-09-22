@@ -29,7 +29,7 @@
   "type": "module",
   "devDependencies": {
     "@helsenorge/core-build": "^20.5.0",
-    "@helsenorge/designsystem-react": "1.0.0-beta56",
+    "@helsenorge/designsystem-react": "1.0.0-beta60",
     "@types/react-router-dom": "5.1.5",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/redux": "^3.6.0",
