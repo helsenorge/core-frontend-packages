@@ -1273,14 +1273,6 @@ export type HNDialogCommonJS = {
   */
   fastlegepanelInfoVacantList: string;
   /** 
-  * Bestill time
-  */
-  fastlegepanelBestillTime: string;
-  /** 
-  * Bestill influensavaksine
-  */
-  fastlegepanelBestillVaksinasjon: string;
-  /** 
   * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge, men kan ha andre digitale kontaktmuligheter på sin hjemmeside.
   */
   fastlegepanelNoServiceDescription: string;
