@@ -323,8 +323,6 @@
     "fastlegepanelInfoHeader": "Informasjon fra legekontoret",
     "fastlegepanelInfoNoAssigned": "Ingen fastlege registrert.",
     "fastlegepanelInfoVacantList": "Du tilhører ${business} som er bemannet av vikar inntil fastlege blir ansatt.",
-    "fastlegepanelBestillTime": "Bestill time",
-    "fastlegepanelBestillVaksinasjon": "Bestill influensavaksine",
     "fastlegepanelNoServiceDescription": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge, men kan ha andre digitale kontaktmuligheter på sin hjemmeside.",
     "fastlegepanelFornyResept": "Forny resept",
     "fastlegepanelEkonsultasjon": "Start e-konsultasjon",
