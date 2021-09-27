@@ -1181,10 +1181,6 @@ export type HNDialogCommonJS = {
   */
   videoDialogCancelButton: string;
   /** 
-  * Fastlegen din tilbyr videokonsultasjon. Hvis du har en timeavtale på video nå, kan du gå til venterom.
-  */
-  videoDialogInfoMessage: string;
-  /** 
   * Gå til venterom
   */
   videoDialogSubmitButton: string;
@@ -1217,6 +1213,14 @@ export type HNDialogCommonJS = {
   */
   videoEventsHeading: string;
   /** 
+  * Du kan ikke bestille time nå.
+  */
+  bestillTimeIngenBehandlereMedAdvarselText: string;
+  /** 
+  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
+  */
+  bestillTimeIngenBehandlereUtenAdvarselText: string;
+  /** 
   * Informasjonen du oppgav blir sendt til legekontoret når du fullfører
   */
   triageringsvedleggInfoTitle: string;
@@ -1236,94 +1240,6 @@ export type HNDialogCommonJS = {
   * Du kan likevel sende meldingen uten denne informasjonen.
   */
   triageringsvedleggErrorText: string;
-  /** 
-  * Fastlegen din er ${name}
-  */
-  fastlegepanelHeader: string;
-  /** 
-  * Fastlegen din er ${name} ved ${business}
-  */
-  fastlegepanelHeaderWithBusiness: string;
-  /** 
-  * Kontakt legekontoret
-  */
-  fastlegepanelKontaktLegekontoret: string;
-  /** 
-  * Se informasjon om fastlegen din
-  */
-  fastlegepanelFastlegeInfoLink: string;
-  /** 
-  * Se alle helsekontaktene dine
-  */
-  fastlegepanelHelsekontakterLink: string;
-  /** 
-  * Du er registrert som bosatt i utlandet og har for tiden ikke fastlege i Norge.
-  */
-  fastlegepanelInfoAbroad: string;
-  /** 
-  * Informasjon fra legekontoret
-  */
-  fastlegepanelInfoHeader: string;
-  /** 
-  * Ingen fastlege registrert.
-  */
-  fastlegepanelInfoNoAssigned: string;
-  /** 
-  * Du tilhører ${business} som er bemannet av vikar inntil fastlege blir ansatt.
-  */
-  fastlegepanelInfoVacantList: string;
-  /** 
-  * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge, men kan ha andre digitale kontaktmuligheter på sin hjemmeside.
-  */
-  fastlegepanelNoServiceDescription: string;
-  /** 
-  * Forny resept
-  */
-  fastlegepanelFornyResept: string;
-  /** 
-  * Start e-konsultasjon
-  */
-  fastlegepanelEkonsultasjon: string;
-  /** 
-  * Videokonsultasjon
-  */
-  fastlegepanelVideokonsultasjon: string;
-  /** 
-  * Kontakt fastlegen - Be om time eller råd
-  */
-  fastlegepanelFastlegekonsultasjon: string;
-  /** 
-  * Fastlegeavtale uten fast lege
-  */
-  fastlegeBannerUtenFastlege: string;
-  /** 
-  * Din fastlege siden
-  */
-  fastlegeBannerSiden: string;
-  /** 
-  * Gå til legekontorets nettsider
-  */
-  fastlegeBannerLegekontorLink: string;
-  /** 
-  * Digitale tjenester på Helsenorge
-  */
-  fastlegeBannerDigitaletjenester: string;
-  /** 
-  * Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.
-  */
-  fastlegeBannerIngenTilgjengelige: string;
-  /** 
-  * Informasjon fra legekontoret
-  */
-  fastlegeBannerInformasjonLegekontor: string;
-  /** 
-  * Du kan ikke bestille time nå.
-  */
-  bestillTimeIngenBehandlereMedAdvarselText: string;
-  /** 
-  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
-  */
-  bestillTimeIngenBehandlereUtenAdvarselText: string;
   /** 
   * /veileder?Query=Questionnaire%2F310
   */
@@ -4167,6 +4083,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Koronasertifikat_Desc: string;
   /** 
+  * Koronasertifikat QR code testside
+  */
+  page_QrCode_Title: string;
+  /** 
+  * Velg hvordan du vil ta kontakt
+  */
+  page_TriageringTjenester_Title: string;
+  /** 
   * Samtykkeoppgave
   */
   page_Samtykkeoppgave_Title: string;
@@ -4230,14 +4154,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang.
   */
   page_BrukOgTilganger_Desc: string;
-  /** 
-  * Koronasertifikat QR code testside
-  */
-  page_QrCode_Title: string;
-  /** 
-  * Velg hvordan du vil ta kontakt
-  */
-  page_TriageringTjenester_Title: string;
   /** 
   * /provesvar
   */
@@ -5272,6 +5188,22 @@ Vel møtt!
   */
   clientOperation_CancelAppointment_SaveError_Title: string;
   /** 
+  * Din time hos {0} {1} er registrert som ikke møtt
+  */
+  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
+  /** 
+  * For mer informasjon om avtalen, logg inn på helsenorge.no.
+  */
+  downloadCalendar_HnTimeavtaleAppointment_Description: string;
+  /** 
+  * Time hos {0} for {1}
+  */
+  downloadCalendar_HnTimeavtaleAppointment_Summary: string;
+  /** 
+  * Videotime hos {0} for {1}
+  */
+  downloadCalendar_HnTimeavtaleVideoAppointment_Summary: string;
+  /** 
   * Kopi av pasientjournal
   */
   commonInnsynPasientjournalHeader: string;
@@ -5291,22 +5223,6 @@ Vel møtt!
   * Du har fått en ny versjon av innkallingsbrevet. Les brevet for å se om du må gjøre forberedelser i forkant av timen.
   */
   conversationItemInnkallingsbrevErErstattet: string;
-  /** 
-  * Din time hos {0} {1} er registrert som ikke møtt
-  */
-  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
-  /** 
-  * For mer informasjon om avtalen, logg inn på helsenorge.no.
-  */
-  downloadCalendar_HnTimeavtaleAppointment_Description: string;
-  /** 
-  * Time hos {0} for {1}
-  */
-  downloadCalendar_HnTimeavtaleAppointment_Summary: string;
-  /** 
-  * Videotime hos {0} for {1}
-  */
-  downloadCalendar_HnTimeavtaleVideoAppointment_Summary: string;
   /** 
   * For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.
   */
@@ -11155,6 +11071,14 @@ export type HNMinHelseMfr = {
 
 export type HNMinHelseNavigation = { 
   /** 
+  * Si fra om bivirkninger på legemidler og vaksiner
+  */
+  tile_EksterneTjenester_Bivirkninger_Description: string;
+  /** 
+  * Gjelder i EU/EØS
+  */
+  tile_EksterneTjenester_Trygdekort_Description: string;
+  /** 
   * Helsetjenester
   */
   group_Helsetjenester_Title: string;
@@ -11170,14 +11094,6 @@ export type HNMinHelseNavigation = {
   * Dokumentasjon av beskyttelse og test.
   */
   tile_Koronasertifikat_Description: string;
-  /** 
-  * Si fra om bivirkninger på legemidler og vaksiner
-  */
-  tile_EksterneTjenester_Bivirkninger_Description: string;
-  /** 
-  * Gjelder i EU/EØS
-  */
-  tile_EksterneTjenester_Trygdekort_Description: string;
   /** 
   * Prøvesvar
   */
@@ -13839,22 +13755,6 @@ export type HNMinHelsePasientjournal = {
   */
   filterHideFilter: string;
   /** 
-  * Listen er muligens ikke komplett
-  */
-  tilgangslogg_LokasjonFeil_Varsel_Title: string;
-  /** 
-  * Logg fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelig.
-  */
-  tilgangslogg_LokasjonFeil_Varsel_Body: string;
-  /** 
-  * Oslo universitetssykehus HF (U1)
-  */
-  xDS_LokasjonFeil_OUSHF_U1: string;
-  /** 
-  * Oslo universitetssykehus HF (PP)
-  */
-  xDS_LokasjonFeil_OUSHF_PP: string;
-  /** 
   * Lovisenberg Diakonale Sykehus AS
   */
   xDS_LokasjonFeil_LDS: string;
@@ -13894,6 +13794,22 @@ export type HNMinHelsePasientjournal = {
   * Kunne ikke hente alle innsyn. Vennligst prøv igjen senere.
   */
   tilgangslogg_GenerellDetaljerFeil_Body: string;
+  /** 
+  * Listen er muligens ikke komplett
+  */
+  tilgangslogg_LokasjonFeil_Varsel_Title: string;
+  /** 
+  * Logg fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelig.
+  */
+  tilgangslogg_LokasjonFeil_Varsel_Body: string;
+  /** 
+  * Oslo universitetssykehus HF (U1)
+  */
+  xDS_LokasjonFeil_OUSHF_U1: string;
+  /** 
+  * Oslo universitetssykehus HF (PP)
+  */
+  xDS_LokasjonFeil_OUSHF_PP: string;
   /** 
   * Du finner igjen dokumentet under <a href='/dokumenter'>Dokumenter</a>.
   */
@@ -20296,10 +20212,6 @@ export type HNMinHelsePasientreiserJS = {
   */
   distanse_ugyldig: string;
   /** 
-  * Reiselengden kan ikke være over 3000 km
-  */
-  reiselengder_max_error: string;
-  /** 
   * brev
   */
   generisk_brev: string;
@@ -20307,6 +20219,10 @@ export type HNMinHelsePasientreiserJS = {
   * klage
   */
   generisk_klage: string;
+  /** 
+  * Reiselengden kan ikke være over 3000 km
+  */
+  reiselengder_max_error: string;
   /** 
   * Gå til Personverninnstillinger for å gi samtykke.
   */
@@ -20755,13 +20671,17 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
+  * Koronasertifikat
+  */
+  page_HendelsesLogg_49: string;
+  /** 
   * Ingen samtykkedefinisjoner funnet.
   */
   samtykkeDefinisjonerIkkeFunnetBody: string;
   /** 
-  * Koronasertifikat
+  * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
   */
-  page_HendelsesLogg_49: string;
+  page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
   /** 
   * {"defaulttekst_overskrift":"Bruk og tilganger - Personvern","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
   */
@@ -20782,10 +20702,6 @@ export type HNMinHelsePersonvernStrings = {
   * Samtykke til datautveksling
   */
   page_HendelsesLogg_43: string;
-  /** 
-  * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
-  */
-  page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
   /** 
   * Ved fullmakt
   */
