@@ -1249,6 +1249,10 @@ export type HNDialogCommonJS = {
   */
   koronavaksineVeiviserUrl: string;
   /** 
+  * Du kan likevel bestille time hos
+  */
+  bookingEnBehandlerInfoWithWarning: string;
+  /** 
   * Neste
   */
   velgBehandlerNeste: string;
@@ -1264,10 +1268,6 @@ export type HNDialogCommonJS = {
   * Timebestilling vil sendes til
   */
   bookingSubHeaderKommune: string;
-  /** 
-  * Du kan likevel bestille time hos
-  */
-  bookingEnBehandlerInfoWithWarning: string;
   /** 
   * Du kan likevel bestille time hos
   */
@@ -1293,6 +1293,10 @@ export type HNDialogCommonJS = {
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
   /** 
+  * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
+  */
+  videoDialogDropinInfoMessage: string;
+  /** 
   * Jordmor
   */
   healthcareProfessionalJordmor: string;
@@ -1300,10 +1304,6 @@ export type HNDialogCommonJS = {
   * Hjelpepleier
   */
   healthcareProfessionalHjelpepleier: string;
-  /** 
-  * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
-  */
-  videoDialogDropinInfoMessage: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
@@ -4091,13 +4091,17 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_TriageringTjenester_Title: string;
   /** 
-  * Samtykkeoppgave
+  * Logg over bruk
   */
-  page_Samtykkeoppgave_Title: string;
+  page_HendelsesLogg_Title: string;
   /** 
-  * Helsenorge – din helse på nett
+  * Fullmakter
   */
-  page_Forside_Title: string;
+  page_Fullmakt_Title: string;
+  /** 
+  * <p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
+  */
+  page_Fullmakt_Description: string;
   /** 
   * Noe gikk dessverre galt
   */
@@ -4115,14 +4119,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Kontaktinformasjon_Description: string;
   /** 
-  * Prøvesvar
-  */
-  page_Provesvar_Title: string;
-  /** 
-  * Her vises en oversikt over dine prøvesvar for koronavirus.
-  */
-  page_Provesvar_Desc: string;
-  /** 
   * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
   */
   page_NotAccessToService_Link_Text: string;
@@ -4135,17 +4131,13 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_feilmelding_link_text: string;
   /** 
-  * Logg over bruk
+  * Samtykkeoppgave
   */
-  page_HendelsesLogg_Title: string;
+  page_Samtykkeoppgave_Title: string;
   /** 
-  * Fullmakter
+  * Helsenorge – din helse på nett
   */
-  page_Fullmakt_Title: string;
-  /** 
-  * <p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
-  */
-  page_Fullmakt_Description: string;
+  page_Forside_Title: string;
   /** 
   * Bruk og tilganger
   */
@@ -4182,6 +4174,14 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.
   */
   page_VelgBehandlingssted_Desc: string;
+  /** 
+  * Prøvesvar
+  */
+  page_Provesvar_Title: string;
+  /** 
+  * Her vises en oversikt over dine prøvesvar for koronavirus.
+  */
+  page_Provesvar_Desc: string;
   /** 
   * Meldingssystem for smittsomme sykdommer (MSIS)
   */
@@ -7069,6 +7069,14 @@ opplysninger jeg mener skal korrigeres:
   */
   arkivert_med_stor_a: string;
   /** 
+  * Du har bestilt innsyn i {0} men registeret svarer at det ikke har registrert noen opplysninger om deg. Ta evt. direkte kontakt med registeret.
+  */
+  varselmeny_RegisterInnsyn_SvarUtenData_tekst: string;
+  /** 
+  * Tomt registerinnsyn
+  */
+  varselmeny_RegisterInnsyn_SvarUtenData_emne: string;
+  /** 
   * Melding sendt
   */
   meldeFeil_meldingsendt: string;
@@ -7132,14 +7140,6 @@ opplysninger jeg mener skal korrigeres:
   * Innsynsrapport er bestilt
   */
   bestillInnsynKvitteringsHeader: string;
-  /** 
-  * Du har bestilt innsyn i {0} men registeret svarer at det ikke har registrert noen opplysninger om deg. Ta evt. direkte kontakt med registeret.
-  */
-  varselmeny_RegisterInnsyn_SvarUtenData_tekst: string;
-  /** 
-  * Tomt registerinnsyn
-  */
-  varselmeny_RegisterInnsyn_SvarUtenData_emne: string;
   /** 
   * Innsyn kan ikke lastes
   */
@@ -10410,10 +10410,6 @@ Du kan legge inn nye begrensninger når du ønsker det.
   */
   clientOperation_deleteKjKontaktperson_Error_Tekst: string;
   /** 
-  * Prøv på nytt senere, eller bruk <a href="https://helsenorge.no/kjernejournal/skjemaer-for-endring-i-kjernejournal">papirskjema</a> på helsenorge.no for å melde om feil i besøkshistorikk.
-  */
-  besokshistorikk_ReportError_Error_Body: string;
-  /** 
   * Årstallet er ikke gyldig
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title: string;
@@ -10421,10 +10417,6 @@ Du kan legge inn nye begrensninger når du ønsker det.
   * Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår.
   */
   page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message: string;
-  /** 
-  * Meldingen ble ikke sendt.
-  */
-  besokshistorikk_ReportError_Error_Title: string;
 };
 
 export type HNMinHelseLegemidlerJS = { 
@@ -10938,10 +10930,6 @@ Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og d
   */
   hjelpetrigger_lib_hjelpeskuff: string;
   /** 
-  * {"defaulttekst_overskrift":"test","defaulttekst_brodtekst":"test"}
-  */
-  testcontext: string;
-  /** 
   * {"defaulttekst_overskrift":"Om legemidler","defaulttekst_brodtekst":"<p>Her vises dine resepter og informasjon om utleverte legemidler, næringsmidler og medisinsk forbruksmateriell. I <strong>Legemidler</strong>-fanen vises aktive resepter og resepter med utleveringer de siste 12 månedene. I <strong>Resepthistorikk</strong>-fanen vises alle resepter og utleveringer tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller bandasjisten. Reseptene er merket med kilden.</p>\n\n<p>På siden om <a href=\"/reseptformidleren\">reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href=\"/kjernejournal-innsyn\">kjernejournal</a>.</p>\n<p><a href=\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>"}
   */
   legemidler_default_hjelpekontekst: string;
@@ -10949,6 +10937,10 @@ Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og d
   * {"defaulttekst_overskrift":"Om legemiddellisten","defaulttekst_brodtekst":"<p> Her vises din legemiddelliste, samt dine resepter og informasjon om utleverte legemidler, næringsmidler og forbruksmateriell .<br>\nLegemiddellisten gir deg og helsepersonell en oppdatert oversikt over hvilke legemidler du skal bruke. </p>\n<p>I fanen «Legemiddelliste» vises din legemiddelliste, i tillegg til  aktive resepter og resepter med utleveringer de siste 12 månedene.  I fanen «Resepthistorikk» vises alle resepter  og utleveringer  tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller hos bandasjisten. Reseptene er merket med kilden.</p>\n<p> På siden om <a href='/reseptformidleren'>reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href='/kjernejournal-innsyn'>kjernejournal</a>.</p>\n<p><a href=\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>"}
   */
   hjelpekontekst_lib_hjelpeskuff: string;
+  /** 
+  * {"defaulttekst_overskrift":"test","defaulttekst_brodtekst":"test"}
+  */
+  testcontext: string;
 };
 
 export type HNMinHelseLegemidler = { 
@@ -11075,14 +11067,6 @@ export type HNMinHelseNavigation = {
   */
   tile_EksterneTjenester_Trygdekort_Description: string;
   /** 
-  * Helsetjenester
-  */
-  group_Helsetjenester_Title: string;
-  /** 
-  * Eksterne tjenester
-  */
-  group_EksterneTjenester_Title: string;
-  /** 
   * Koronasertifikat
   */
   tile_Koronasertifikat_Title: string;
@@ -11091,21 +11075,13 @@ export type HNMinHelseNavigation = {
   */
   tile_Koronasertifikat_Description: string;
   /** 
-  * Prøvesvar
+  * Helsetjenester
   */
-  tile_Provesvar_Title: string;
+  group_Helsetjenester_Title: string;
   /** 
-  * Resultat av test for koronavirus.
+  * Eksterne tjenester
   */
-  tile_Provesvar_Description: string;
-  /** 
-  * Bestill koronatest
-  */
-  tile_Korona_Title: string;
-  /** 
-  * Timebestilling i din kommune.
-  */
-  tile_Korona_Description: string;
+  group_EksterneTjenester_Title: string;
   /** 
   * Egne dokumenter lagret på Helsenorge.
   */
@@ -11154,6 +11130,22 @@ export type HNMinHelseNavigation = {
   * Kurs og andre verktøy for læring og mestring.
   */
   tile_Verktoy_Description: string;
+  /** 
+  * Prøvesvar
+  */
+  tile_Provesvar_Title: string;
+  /** 
+  * Resultat av test for koronavirus.
+  */
+  tile_Provesvar_Description: string;
+  /** 
+  * Bestill koronatest
+  */
+  tile_Korona_Title: string;
+  /** 
+  * Timebestilling i din kommune.
+  */
+  tile_Korona_Description: string;
   /** 
   * Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk
   */
@@ -13755,10 +13747,6 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_LokasjonFeil_LDS: string;
   /** 
-  * Sykehus i Helse Nord
-  */
-  xDS_LokasjonFeil_HN: string;
-  /** 
   * Clinical care provision to an individual subject of care
   */
   tilgangsloggBakgrunnForInnsynClinicalCare: string;
@@ -13806,6 +13794,10 @@ export type HNMinHelsePasientjournal = {
   * Oslo universitetssykehus HF (PP)
   */
   xDS_LokasjonFeil_OUSHF_PP: string;
+  /** 
+  * Sykehus i Helse Nord
+  */
+  xDS_LokasjonFeil_HN: string;
   /** 
   * Du finner igjen dokumentet under <a href='/dokumenter'>Dokumenter</a>.
   */
@@ -20208,6 +20200,10 @@ export type HNMinHelsePasientreiserJS = {
   */
   distanse_ugyldig: string;
   /** 
+  * Reiselengden kan ikke være over 3000 km
+  */
+  reiselengder_max_error: string;
+  /** 
   * brev
   */
   generisk_brev: string;
@@ -20215,10 +20211,6 @@ export type HNMinHelsePasientreiserJS = {
   * klage
   */
   generisk_klage: string;
-  /** 
-  * Reiselengden kan ikke være over 3000 km
-  */
-  reiselengder_max_error: string;
   /** 
   * Gå til Personverninnstillinger for å gi samtykke.
   */
@@ -20667,6 +20659,10 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
+  * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
+  */
+  page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
+  /** 
   * Koronasertifikat
   */
   page_HendelsesLogg_49: string;
@@ -20675,13 +20671,17 @@ export type HNMinHelsePersonvernStrings = {
   */
   samtykkeDefinisjonerIkkeFunnetBody: string;
   /** 
-  * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
-  */
-  page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
-  /** 
   * {"defaulttekst_overskrift":"Bruk og tilganger - Personvern","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
   */
   hjelpekontekst_profilBrukOgTilganger: string;
+  /** 
+  * Du har ikke tilgang til samtykkedefinisjonen.
+  */
+  samtykkeDefinisjonAccessDeniedBody: string;
+  /** 
+  * Samtykke til datautveksling
+  */
+  page_HendelsesLogg_43: string;
   /** 
   * Helsenorge-tjenester
   */
@@ -20694,10 +20694,6 @@ export type HNMinHelsePersonvernStrings = {
   * Meldinger og hendelser
   */
   page_HendelsesLogg_47: string;
-  /** 
-  * Samtykke til datautveksling
-  */
-  page_HendelsesLogg_43: string;
   /** 
   * Oppgave
   */
@@ -20999,10 +20995,6 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * {"defaulttekst_overskrift":"Logg over bruk","defaulttekst_brodtekst":"<p>Her vises en oversikt over din bruk av innloggede tjenester på Helsenorge. Hvis andre har tilgang til tjenester på dine vegne gjennom foreldreansvar eller fullmakt, vises deres bruk også.</p><p>Denne loggen viser bare at noen har vært inne på en tjeneste - ikke hva vedkommende har gjort med den tjenesten.</p>"}
   */
   hjelpekontekst_profilLogg: string;
-  /** 
-  * Du har ikke tilgang til samtykkedefinisjonen.
-  */
-  samtykkeDefinisjonAccessDeniedBody: string;
   /** 
   * Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon
   */
@@ -22434,53 +22426,17 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionHeader_Veileder: string;
   /** 
-  * Du har skrevet for mange tegn. Gjør teksten kortere.
+  * Du må fylle ut dette feltet
   */
-  stringOverMaxLengthError: string;
-  /** 
-  * Maksimum {0} tegn
-  */
-  maxLengthText: string;
-  /** 
-  * Teknisk feil
-  */
-  autoSuggestLoadError: string;
+  formRequiredErrorMessage: string;
   /** 
   * Last opp fil
   */
   uploadButtonText: string;
   /** 
-  * Du må {loginLink} for å kunne sende skjema. Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
+  * Slett
   */
-  skjemaLoginMessageAuthenticationRequirementRequiredPrint: string;
-  /** 
-  * logge inn
-  */
-  loggeInnLinkText: string;
-  /** 
-  * utskriftsversjon av skjema
-  */
-  paPapirText: string;
-  /** 
-  * Du bør {loginLink} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
-  */
-  skjemaLoginMessageAuthenticationRequirementOptionalPrint: string;
-  /** 
-  * Du må {loginLink} for å fylle ut og sende dette skjemaet.
-  */
-  skjemaLoginMessageAuthenticationRequirementRequiredNoPrint: string;
-  /** 
-  * <p>En utskriftsversjon av skjemaet er tilgjengelig på disse språkene {0}</p>
-  */
-  skjemaAccessDeniedPrintVersionAvailable: string;
-  /** 
-  * Ukjent
-  */
-  skjemaAccessDeniedPrintVersionUnknownLanguage: string;
-  /** 
-  * Ingen treff på "{0}". Prøv med et annet ord eller sjekk for skrivefeil.
-  */
-  autosuggestNoSuggestions: string;
+  deleteAttachmentText: string;
   /** 
   * Om skjema
   */
@@ -22562,13 +22518,49 @@ Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tilla
   */
   sidebarSectionText_Veiledning_LagringDokument: string;
   /** 
-  * Slett
+  * Teknisk feil
   */
-  deleteAttachmentText: string;
+  autoSuggestLoadError: string;
   /** 
-  * Du må fylle ut dette feltet
+  * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
-  formRequiredErrorMessage: string;
+  stringOverMaxLengthError: string;
+  /** 
+  * Maksimum {0} tegn
+  */
+  maxLengthText: string;
+  /** 
+  * Du må {loginLink} for å kunne sende skjema. Alternativt kan du fylle ut på papir, se {omSkjemaLink}.
+  */
+  skjemaLoginMessageAuthenticationRequirementRequiredPrint: string;
+  /** 
+  * logge inn
+  */
+  loggeInnLinkText: string;
+  /** 
+  * utskriftsversjon av skjema
+  */
+  paPapirText: string;
+  /** 
+  * Du bør {loginLink} for å fylle ut og sende inn dette skjemaet, slik at du får lagre en kopi. Det er også mulig å sende inn dette skjemaet uten å logge inn. Du vil da ikke få noen kopi av skjemaet.
+  */
+  skjemaLoginMessageAuthenticationRequirementOptionalPrint: string;
+  /** 
+  * Du må {loginLink} for å fylle ut og sende dette skjemaet.
+  */
+  skjemaLoginMessageAuthenticationRequirementRequiredNoPrint: string;
+  /** 
+  * <p>En utskriftsversjon av skjemaet er tilgjengelig på disse språkene {0}</p>
+  */
+  skjemaAccessDeniedPrintVersionAvailable: string;
+  /** 
+  * Ukjent
+  */
+  skjemaAccessDeniedPrintVersionUnknownLanguage: string;
+  /** 
+  * Ingen treff på "{0}". Prøv med et annet ord eller sjekk for skrivefeil.
+  */
+  autosuggestNoSuggestions: string;
   /** 
   * mm
   */
