@@ -20703,6 +20703,10 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_43: string;
   /** 
+  * Oppgave
+  */
+  page_HendelsesLogg_42: string;
+  /** 
   * Ved fullmakt
   */
   shared_Fullmakt: string;
