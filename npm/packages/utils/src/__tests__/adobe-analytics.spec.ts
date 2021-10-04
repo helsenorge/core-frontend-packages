@@ -664,4 +664,35 @@ describe('Gitt at isTrackingready kalles', () => {
       global.window['_satellite'] = originalSatellite;
     });
   });
+
+  describe('Gitt at trackLoginStatus kalles', () => {
+    describe('Når bruker er logget inn', () => {
+      it('Så settes riktig verdi i digitalData', () => {
+        const digitalData = {
+          page: { pageInfo: {} },
+        };
+        const original = global.window['digitalData'];
+        global.window['digitalData'] = digitalData;
+        adobeFunctions.trackLoginStatus(true);
+
+        expect(digitalData.page.pageInfo.loggedIn).toEqual('innlogget');
+
+        global.window['digitalData'] = original;
+      });
+    });
+    describe('Når bruker ikke er logget inn', () => {
+      it('Så settes riktig verdi i digitalData', () => {
+        const digitalData = {
+          page: { pageInfo: {} },
+        };
+        const original = global.window['digitalData'];
+        global.window['digitalData'] = digitalData;
+        adobeFunctions.trackLoginStatus(false);
+
+        expect(digitalData.page.pageInfo.loggedIn).toEqual('ikke innlogget');
+
+        global.window['digitalData'] = original;
+      });
+    });
+  });
 });
