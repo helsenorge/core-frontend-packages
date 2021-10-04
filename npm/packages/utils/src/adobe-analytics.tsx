@@ -81,10 +81,13 @@ export interface Page extends Object {
   user?: PageUser;
 }
 
+export type LoginStatus = 'innlogget' | 'ikke innlogget';
+
 export interface PageInfo {
   partner?: string;
   pageURL?: string;
   pageName?: string;
+  loggedIn?: LoginStatus;
 }
 
 export interface User {
@@ -285,6 +288,16 @@ export const trackFilters = (name: string, trackType: FiltersTrackType): void =>
 export const trackPagePartner = (partner: string): void => {
   if (window.digitalData && window.digitalData.page && window.digitalData.page.pageInfo) {
     window.digitalData.page.pageInfo.partner = partner;
+  }
+};
+
+/**
+ * Setter informasjon om innlogget status i window.digitalData
+ * @param isLoggedIn Om bruker er logget inn eller ikke
+ */
+export const trackLoginStatus = (isLoggedIn: boolean): void => {
+  if (window.digitalData?.page?.pageInfo) {
+    window.digitalData.page.pageInfo.loggedIn = isLoggedIn ? 'innlogget' : 'ikke innlogget';
   }
 };
 
