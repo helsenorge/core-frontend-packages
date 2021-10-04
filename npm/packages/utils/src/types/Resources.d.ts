@@ -7910,10 +7910,6 @@ mol_emphasisbox mol_emphasisbox--grey">"Jeg ønsker ikke livsforlengende behandl
   */
   page_Besokshistorikk_Lightbox_ReportError_VisitIsWrong_Description: string;
   /** 
-  * Du har godtatt at det gjøres oppslag i din kjernejournal, og at saken din henvises videre til registereier i Helsedirektoratet. Du har også godtatt at sykehus og/eller spesialist involveres i saksbehandlingen.<br /><br />Alle henvendelser vil bli behandlet, men det kan ta flere måneder før du ser eventuelle endringer i din besøkshistorikk. Frem til saken er behandlet vil en merknad om feilen du har meldt være synlig for både deg og helsepersonell som er logget inn i din kjernejournal. Et endelig svarbrev vil bli sendt til din folkeregistrerte adresse når henvendelsen er ferdig behandlet.<br /><br />På helsenorge.no kan du lese mer om dine rettigheter i kjernejournal.<br />
-  */
-  page_Besokshistorikk_ReportError_HaveConcented: string;
-  /** 
   * Alle opplysninger (inkludert utdaterte og avkreftede)
   */
   page_KI_RadioGroup_All: string;
