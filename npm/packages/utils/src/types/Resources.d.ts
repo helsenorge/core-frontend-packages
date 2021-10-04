@@ -10382,10 +10382,6 @@ Du kan legge inn nye begrensninger når du ønsker det.
   */
   error_UknownException_Body: string;
   /** 
-  * Denne tjenesten er ikke tilgjengelig
-  */
-  clientOperation_getBesokshistorikk_not_available: string;
-  /** 
   * Donorkort er ikke tilgjengelig
   */
   clientOperation_getDonorKort_Error_Title: string;

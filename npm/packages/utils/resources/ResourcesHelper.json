@@ -2593,7 +2593,6 @@
     "mho_prescription_statusDispatching": "Under ekspedering",
     "error_UknownException_Title": "Det har skjedd en teknisk feil i kjernejournal",
     "error_UknownException_Body": "Prøv igjen senere.",
-    "clientOperation_getBesokshistorikk_not_available": "Denne tjenesten er ikke tilgjengelig",
     "clientOperation_getDonorKort_Error_Title": "Donorkort er ikke tilgjengelig",
     "clientOperation_getDonorKort_KJ_reservation_Error_Title": "For å opprette et digitalt donorkort må du først opprette en kjernejournal",
     "clientOperation_getDonorKort_not_available": "Denne tjenesten er ikke tilgjengelig",
