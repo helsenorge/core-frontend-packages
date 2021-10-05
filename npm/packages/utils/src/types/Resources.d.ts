@@ -11099,7 +11099,7 @@ export type HNMinHelseNavigation = {
   */
   tile_EksterneTjenester_Bivirkninger_Description: string;
   /** 
-  * Gjelder i EU/EØS
+  * Gjelder i EU/EØS.
   */
   tile_EksterneTjenester_Trygdekort_Description: string;
   /** 
