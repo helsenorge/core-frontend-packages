@@ -1213,6 +1213,14 @@ export type HNDialogCommonJS = {
   */
   videoEventsHeading: string;
   /** 
+  * Kartleggingsinformasjon
+  */
+  triageringsvedleggFilenameKartlegging: string;
+  /** 
+  * Tilleggsinformasjon
+  */
+  triageringsvedleggFilenameSjekkpunkt: string;
+  /** 
   * /veileder?Query=Questionnaire%2F310
   */
   koronatestVeiviserUrl: string;
@@ -5188,22 +5196,6 @@ Vel møtt!
   */
   clientOperation_CancelAppointment_SaveError_Title: string;
   /** 
-  * Din time hos {0} {1} er registrert som ikke møtt
-  */
-  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
-  /** 
-  * For mer informasjon om avtalen, logg inn på helsenorge.no.
-  */
-  downloadCalendar_HnTimeavtaleAppointment_Description: string;
-  /** 
-  * Time hos {0} for {1}
-  */
-  downloadCalendar_HnTimeavtaleAppointment_Summary: string;
-  /** 
-  * Videotime hos {0} for {1}
-  */
-  downloadCalendar_HnTimeavtaleVideoAppointment_Summary: string;
-  /** 
   * Kopi av pasientjournal
   */
   commonInnsynPasientjournalHeader: string;
@@ -5223,6 +5215,22 @@ Vel møtt!
   * Du har fått en ny versjon av innkallingsbrevet. Les brevet for å se om du må gjøre forberedelser i forkant av timen.
   */
   conversationItemInnkallingsbrevErErstattet: string;
+  /** 
+  * Din time hos {0} {1} er registrert som ikke møtt
+  */
+  varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne: string;
+  /** 
+  * For mer informasjon om avtalen, logg inn på helsenorge.no.
+  */
+  downloadCalendar_HnTimeavtaleAppointment_Description: string;
+  /** 
+  * Time hos {0} for {1}
+  */
+  downloadCalendar_HnTimeavtaleAppointment_Summary: string;
+  /** 
+  * Videotime hos {0} for {1}
+  */
+  downloadCalendar_HnTimeavtaleVideoAppointment_Summary: string;
   /** 
   * For øyeblikket vises ikke henvisningene hos Helse Sør-Øst.
   */
@@ -11079,14 +11087,6 @@ export type HNMinHelseNavigation = {
   */
   group_EksterneTjenester_Title: string;
   /** 
-  * Si fra om bivirkninger på legemidler og vaksiner
-  */
-  tile_EksterneTjenester_Bivirkninger_Description: string;
-  /** 
-  * Gjelder i EU/EØS
-  */
-  tile_EksterneTjenester_Trygdekort_Description: string;
-  /** 
   * Koronasertifikat
   */
   tile_Koronasertifikat_Title: string;
@@ -11094,6 +11094,14 @@ export type HNMinHelseNavigation = {
   * Dokumentasjon av beskyttelse og test.
   */
   tile_Koronasertifikat_Description: string;
+  /** 
+  * Si fra om bivirkninger på legemidler og vaksiner
+  */
+  tile_EksterneTjenester_Bivirkninger_Description: string;
+  /** 
+  * Gjelder i EU/EØS
+  */
+  tile_EksterneTjenester_Trygdekort_Description: string;
   /** 
   * Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk
   */
@@ -20607,6 +20615,10 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
+  * Oppgave
+  */
+  page_HendelsesLogg_42: string;
+  /** 
   * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
   */
   page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
@@ -20638,10 +20650,6 @@ export type HNMinHelsePersonvernStrings = {
   * Meldinger og hendelser
   */
   page_HendelsesLogg_47: string;
-  /** 
-  * Oppgave
-  */
-  page_HendelsesLogg_42: string;
   /** 
   * Ved fullmakt
   */
