@@ -54,7 +54,6 @@ export const HNeventSetSimplifiedHeader = (isSimplified: boolean = true): void =
 
 export const HNeventSetFirstTimeLogin = (isFirstTime: boolean = true): void =>
   dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.setfirsttimelogin, { firstTimeLogin: isFirstTime });
-
 export const HNeventSetAnonymousHeader = (isAnonymous: boolean = true): void =>
   dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.setanonymousheader, { anonymousHeader: isAnonymous });
 
