@@ -1652,7 +1652,14 @@
     "mfr_innsyn_tab_loggoverbruk": "Logg over bruk",
     "mfr_Page_Desc": "Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.",
     "mfr_Page_Title": "Medisinsk fødselsregister (MFR)",
-    "registereierskap_dataansvarlig": "Dataansvarlig"
+    "registereierskap_dataansvarlig": "Dataansvarlig",
+    "registereierskap_innledning_asynkron": "Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}) {RapportGenerert}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.",
+    "registereierskap_innledning_synkron": "Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}). Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.",
+    "registereierskap_lesmer": "Les mer",
+    "registereierskap_om_innsynsrett": "<a target=\"_blank\" href=\"{InnsynsrettLenke}\">Om innsynsrett i {Navn} ({Forkortelse})</a>",
+    "registereierskap_om_registeret": "Om registeret",
+    "registereierskap_om_registeret_lenke": "<a target=\"_blank\" href=\"{InformasjonLenke}\">Om {Navn} ({Forkortelse})</a>",
+    "registereierskap_personverninnstilling_lenke": "Se <a href=\"/personverninnstillinger/forskning-og-helseregistre/?Partkode={registerid}\">personverninnstillinger</a> for dette registeret"
   },
   "HNMinHelseDonorkort": { 
     "donorkort_nummer_validering_feil_tittel": "Pårørende er registrert, men SMS ble ikke sendt",
@@ -5045,9 +5052,9 @@
     "krav_ledsager_DROSJE_ikkeHarKrav": "For å få dekket utgifter til reise med drosje, må du huke av for rett begrunnelse i punktet \"Dekning av utgifter for reiseledsager\". Du kan ellers ha rett til å få dekket utgiftene med en standardsats.",
     "generisk_kilometer": "kilometer",
     "distanse_ugyldig": "Distanse må være mellom 0 og 3000km.",
+    "reiselengder_max_error": "Reiselengden kan ikke være over 3000 km",
     "generisk_brev": "brev",
     "generisk_klage": "klage",
-    "reiselengder_max_error": "Reiselengden kan ikke være over 3000 km",
     "samtykke_digitalehelsetjenester_link": "Gå til Personverninnstillinger for å gi samtykke.",
     "samtykke_digitalehelsetjenester_content": "For å bruke elektronisk søknad for pasientreiser, må du samtykke til å ta i bruk digitale helsetjenester.",
     "overview_statuser_statusTypeKlage_klage_VEDTAK_OPPHEVET": "Behandlet av Statsforvalteren.",
@@ -5162,8 +5169,8 @@
   },
   "HNMinHelsePersonvernStrings": { 
     "page_HendelsesLogg_42": "Oppgave",
-    "samtykkeDefinisjonerIkkeFunnetBody": "Ingen samtykkedefinisjoner funnet.",
     "page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent": "Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.",
+    "samtykkeDefinisjonerIkkeFunnetBody": "Ingen samtykkedefinisjoner funnet.",
     "page_HendelsesLogg_49": "Koronasertifikat",
     "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
     "page_HendelsesLogg_43": "Samtykke til datautveksling",
