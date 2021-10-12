@@ -6597,6 +6597,10 @@ export type HNMinHelseDirekteinnsynJS = {
   * Se <a href="/personverninnstillinger/forskning-og-helseregistre/?Partkode={registerid}">personverninnstillinger</a> for dette registeret
   */
   registereierskap_personverninnstilling_lenke: string;
+  /** 
+  * Det har skjedd en teknisk feil
+  */
+  registereierskap_error_message: string;
 };
 
 export type HNMinHelseDonorkort = { 
