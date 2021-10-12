@@ -461,6 +461,106 @@ export type HNCoreFrontendWebForside = {
 
 export type HNDialogCommonJS = { 
   /** 
+  * Kartleggingsinformasjon
+  */
+  triageringsvedleggFilenameKartlegging: string;
+  /** 
+  * Tilleggsinformasjon
+  */
+  triageringsvedleggFilenameSjekkpunkt: string;
+  /** 
+  * /veileder?Query=Questionnaire%2F310
+  */
+  koronatestVeiviserUrl: string;
+  /** 
+  * /veileder?Query=Questionnaire%2F314
+  */
+  koronavaksineVeiviserUrl: string;
+  /** 
+  * Du kan ikke bestille time nå.
+  */
+  bestillTimeIngenBehandlereMedAdvarselText: string;
+  /** 
+  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
+  */
+  bestillTimeIngenBehandlereUtenAdvarselText: string;
+  /** 
+  * Informasjonen du oppgav blir sendt til legekontoret når du fullfører
+  */
+  triageringsvedleggInfoTitle: string;
+  /** 
+  * Se kartleggingsinformasjon
+  */
+  kartleggingsdataLinkText: string;
+  /** 
+  * Se tilleggsinformasjon
+  */
+  sjekkpunktLinkText: string;
+  /** 
+  * En feil oppsto ved henting av vedlegg med dine besvarelser
+  */
+  triageringsvedleggErrorTitle: string;
+  /** 
+  * Du kan likevel sende meldingen uten denne informasjonen.
+  */
+  triageringsvedleggErrorText: string;
+  /** 
+  * Neste
+  */
+  velgBehandlerNeste: string;
+  /** 
+  * Avbryt
+  */
+  velgBehandlerAvbryt: string;
+  /** 
+  * Bestill time hos
+  */
+  bookingHeaderKommune: string;
+  /** 
+  * Timebestilling vil sendes til
+  */
+  bookingSubHeaderKommune: string;
+  /** 
+  * Du kan likevel bestille time hos
+  */
+  bookingEnBehandlerInfoWithWarning: string;
+  /** 
+  * Du kan likevel bestille time hos
+  */
+  bookingIngenBehandlereInfoFastlege: string;
+  /** 
+  * Du kan dessverre ikke bestille time nå.
+  */
+  bookingIngenBehandlereInfoPrimaer: string;
+  /** 
+  * Du kan bestille time hos
+  */
+  bookingEnBehandlerInfo: string;
+  /** 
+  * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
+  */
+  videoDialogDropinInfoMessage: string;
+  /** 
+  * Timer på legekontoret
+  */
+  utenBehandlerEventsHeading: string;
+  /** 
+  * Timebestillingen vil sendes til Vaksinasjon
+  */
+  bookingSubHeaderVaccination: string;
+  /** 
+  * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
+  */
+  bookingEmptyTextHelsetilbudVirksomhet: string;
+  /** 
+  * Jordmor
+  */
+  healthcareProfessionalJordmor: string;
+  /** 
+  * Hjelpepleier
+  */
+  healthcareProfessionalHjelpepleier: string;
+  /** 
   * Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.
   */
   afterDeadlineBubbleText: string;
@@ -1212,106 +1312,6 @@ export type HNDialogCommonJS = {
   * Timer på video
   */
   videoEventsHeading: string;
-  /** 
-  * Kartleggingsinformasjon
-  */
-  triageringsvedleggFilenameKartlegging: string;
-  /** 
-  * Tilleggsinformasjon
-  */
-  triageringsvedleggFilenameSjekkpunkt: string;
-  /** 
-  * /veileder?Query=Questionnaire%2F310
-  */
-  koronatestVeiviserUrl: string;
-  /** 
-  * /veileder?Query=Questionnaire%2F314
-  */
-  koronavaksineVeiviserUrl: string;
-  /** 
-  * Du kan ikke bestille time nå.
-  */
-  bestillTimeIngenBehandlereMedAdvarselText: string;
-  /** 
-  * Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.
-  */
-  bestillTimeIngenBehandlereUtenAdvarselText: string;
-  /** 
-  * Informasjonen du oppgav blir sendt til legekontoret når du fullfører
-  */
-  triageringsvedleggInfoTitle: string;
-  /** 
-  * Se kartleggingsinformasjon
-  */
-  kartleggingsdataLinkText: string;
-  /** 
-  * Se tilleggsinformasjon
-  */
-  sjekkpunktLinkText: string;
-  /** 
-  * En feil oppsto ved henting av vedlegg med dine besvarelser
-  */
-  triageringsvedleggErrorTitle: string;
-  /** 
-  * Du kan likevel sende meldingen uten denne informasjonen.
-  */
-  triageringsvedleggErrorText: string;
-  /** 
-  * Neste
-  */
-  velgBehandlerNeste: string;
-  /** 
-  * Avbryt
-  */
-  velgBehandlerAvbryt: string;
-  /** 
-  * Bestill time hos
-  */
-  bookingHeaderKommune: string;
-  /** 
-  * Timebestilling vil sendes til
-  */
-  bookingSubHeaderKommune: string;
-  /** 
-  * Du kan likevel bestille time hos
-  */
-  bookingEnBehandlerInfoWithWarning: string;
-  /** 
-  * Du kan likevel bestille time hos
-  */
-  bookingIngenBehandlereInfoFastlege: string;
-  /** 
-  * Du kan dessverre ikke bestille time nå.
-  */
-  bookingIngenBehandlereInfoPrimaer: string;
-  /** 
-  * Du kan bestille time hos
-  */
-  bookingEnBehandlerInfo: string;
-  /** 
-  * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
-  */
-  videoDialogDropinInfoMessage: string;
-  /** 
-  * Timer på legekontoret
-  */
-  utenBehandlerEventsHeading: string;
-  /** 
-  * Timebestillingen vil sendes til Vaksinasjon
-  */
-  bookingSubHeaderVaccination: string;
-  /** 
-  * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
-  */
-  bookingEmptyTextHelsetilbudVirksomhet: string;
-  /** 
-  * Jordmor
-  */
-  healthcareProfessionalJordmor: string;
-  /** 
-  * Hjelpepleier
-  */
-  healthcareProfessionalHjelpepleier: string;
 };
 
 export type HNMinHelseByttFastlegeJS = { 
@@ -6565,6 +6565,10 @@ export type HNMinHelseDirekteinnsynJS = {
   * Medisinsk fødselsregister (MFR)
   */
   mfr_Page_Title: string;
+  /** 
+  * Dataansvarlig
+  */
+  registereierskap_dataansvarlig: string;
 };
 
 export type HNMinHelseDonorkort = { 
@@ -20156,10 +20160,6 @@ export type HNMinHelsePasientreiserJS = {
   */
   distanse_ugyldig: string;
   /** 
-  * Reiselengden kan ikke være over 3000 km
-  */
-  reiselengder_max_error: string;
-  /** 
   * brev
   */
   generisk_brev: string;
@@ -20167,6 +20167,10 @@ export type HNMinHelsePasientreiserJS = {
   * klage
   */
   generisk_klage: string;
+  /** 
+  * Reiselengden kan ikke være over 3000 km
+  */
+  reiselengder_max_error: string;
   /** 
   * Gå til Personverninnstillinger for å gi samtykke.
   */
@@ -20619,13 +20623,13 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_42: string;
   /** 
-  * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
-  */
-  page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
-  /** 
   * Ingen samtykkedefinisjoner funnet.
   */
   samtykkeDefinisjonerIkkeFunnetBody: string;
+  /** 
+  * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
+  */
+  page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
   /** 
   * Koronasertifikat
   */
