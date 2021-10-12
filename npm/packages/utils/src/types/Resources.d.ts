@@ -6569,6 +6569,34 @@ export type HNMinHelseDirekteinnsynJS = {
   * Dataansvarlig
   */
   registereierskap_dataansvarlig: string;
+  /** 
+  * Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}) {RapportGenerert}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
+  */
+  registereierskap_innledning_asynkron: string;
+  /** 
+  * Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}). Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
+  */
+  registereierskap_innledning_synkron: string;
+  /** 
+  * Les mer
+  */
+  registereierskap_lesmer: string;
+  /** 
+  * <a target="_blank" href="{InnsynsrettLenke}">Om innsynsrett i {Navn} ({Forkortelse})</a>
+  */
+  registereierskap_om_innsynsrett: string;
+  /** 
+  * Om registeret
+  */
+  registereierskap_om_registeret: string;
+  /** 
+  * <a target="_blank" href="{InformasjonLenke}">Om {Navn} ({Forkortelse})</a>
+  */
+  registereierskap_om_registeret_lenke: string;
+  /** 
+  * Se <a href="/personverninnstillinger/forskning-og-helseregistre/?Partkode={registerid}">personverninnstillinger</a> for dette registeret
+  */
+  registereierskap_personverninnstilling_lenke: string;
 };
 
 export type HNMinHelseDonorkort = { 
@@ -20160,6 +20188,10 @@ export type HNMinHelsePasientreiserJS = {
   */
   distanse_ugyldig: string;
   /** 
+  * Reiselengden kan ikke være over 3000 km
+  */
+  reiselengder_max_error: string;
+  /** 
   * brev
   */
   generisk_brev: string;
@@ -20167,10 +20199,6 @@ export type HNMinHelsePasientreiserJS = {
   * klage
   */
   generisk_klage: string;
-  /** 
-  * Reiselengden kan ikke være over 3000 km
-  */
-  reiselengder_max_error: string;
   /** 
   * Gå til Personverninnstillinger for å gi samtykke.
   */
@@ -20623,13 +20651,13 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_42: string;
   /** 
-  * Ingen samtykkedefinisjoner funnet.
-  */
-  samtykkeDefinisjonerIkkeFunnetBody: string;
-  /** 
   * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
   */
   page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent: string;
+  /** 
+  * Ingen samtykkedefinisjoner funnet.
+  */
+  samtykkeDefinisjonerIkkeFunnetBody: string;
   /** 
   * Koronasertifikat
   */
