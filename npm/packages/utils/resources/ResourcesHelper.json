@@ -1659,7 +1659,8 @@
     "registereierskap_om_innsynsrett": "<a target=\"_blank\" href=\"{InnsynsrettLenke}\">Om innsynsrett i {Navn} ({Forkortelse})</a>",
     "registereierskap_om_registeret": "Om registeret",
     "registereierskap_om_registeret_lenke": "<a target=\"_blank\" href=\"{InformasjonLenke}\">Om {Navn} ({Forkortelse})</a>",
-    "registereierskap_personverninnstilling_lenke": "Se <a href=\"/personverninnstillinger/forskning-og-helseregistre/?Partkode={registerid}\">personverninnstillinger</a> for dette registeret"
+    "registereierskap_personverninnstilling_lenke": "Se <a href=\"/personverninnstillinger/forskning-og-helseregistre/?Partkode={registerid}\">personverninnstillinger</a> for dette registeret",
+    "registereierskap_error_message": "Det har skjedd en teknisk feil"
   },
   "HNMinHelseDonorkort": { 
     "donorkort_nummer_validering_feil_tittel": "Pårørende er registrert, men SMS ble ikke sendt",
