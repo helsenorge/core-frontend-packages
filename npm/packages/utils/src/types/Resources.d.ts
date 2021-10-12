@@ -10386,7 +10386,7 @@ Du kan legge inn nye begrensninger når du ønsker det.
   */
   clientOperation_getDonorKort_not_available: string;
   /** 
-  * <p>Donorkort er ikke tilgjengelig. Kontakt Veiledning helsenorge.no på telefon 23 32 70 00 hvis du ønsker mer informasjon om dette.</p>
+  * Donorkort er ikke tilgjengelig. Kontakt Veiledning helsenorge.no på telefon 23 32 70 00 hvis du ønsker mer informasjon om dette.
   */
   clientOperation_getDonorKort_KJ_blocked: string;
   /** 

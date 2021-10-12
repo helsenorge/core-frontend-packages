@@ -2594,7 +2594,7 @@
     "clientOperation_getDonorKort_Error_Title": "Donorkort er ikke tilgjengelig",
     "clientOperation_getDonorKort_KJ_reservation_Error_Title": "For å opprette et digitalt donorkort må du først opprette en kjernejournal",
     "clientOperation_getDonorKort_not_available": "Denne tjenesten er ikke tilgjengelig",
-    "clientOperation_getDonorKort_KJ_blocked": "<p>Donorkort er ikke tilgjengelig. Kontakt Veiledning helsenorge.no på telefon 23 32 70 00 hvis du ønsker mer informasjon om dette.</p>",
+    "clientOperation_getDonorKort_KJ_blocked": "Donorkort er ikke tilgjengelig. Kontakt Veiledning helsenorge.no på telefon 23 32 70 00 hvis du ønsker mer informasjon om dette.",
     "clientOperation_updateKjKontaktperson_Error_Title": "Denne tjenesten er ikke tilgjengelig",
     "clientOperation_updateKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å gjøre endringer på kontaktperson.",
     "clientOperation_deleteKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å slette kontaktperson.",
