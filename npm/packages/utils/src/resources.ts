@@ -4,6 +4,7 @@ import { OperationResponse, TextMessage, EmptyAction } from './types/entities';
 import { erHelsenorge, get as getTjenesterProxy } from './hn-proxy-service';
 import { getHelsenorgeProxy } from './cms-content-api-service';
 import { getVersion } from './hn-page';
+import LanguageLocales from './constants/languages';
 
 interface SotProxyOperationResponse {
   resources: string;
@@ -236,7 +237,7 @@ export const fetchResources = (
 ): ((dispatch: Dispatch<Action>, getState: () => GlobalStateWithResources) => null) => {
   return (dispatch: Dispatch<Action>, getState: () => GlobalStateWithResources): null => {
     if (!language) {
-      language = 'nb-NO';
+      language = LanguageLocales.NORWEGIAN;
     }
     if (shouldFetchResources(getState(), project, language)) {
       dispatch(requestResources(project, language));
