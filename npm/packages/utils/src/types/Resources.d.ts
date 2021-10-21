@@ -11103,7 +11103,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Legemidler_Description: string;
   /** 
-  * Søk Helfo om refusjon (altinn)
+  * Søk Helfo om refusjon
   */
   tile_EksterneTjenester_Refusjon_Title: string;
   /** 
