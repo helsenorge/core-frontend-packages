@@ -1,4 +1,5 @@
 import { SessionTimeoutAction } from '../../types/entities';
+
 import {
   HNeventRefreshVarslinger,
   HNeventRefreshVarslingerOgHendelsesmeny,
@@ -8,6 +9,7 @@ import {
   HNeventSetHiddenHeader,
   HNeventSetHiddenPromopanel,
   HNeventSetOnShowSignoutbox,
+  HNeventSetVisPersonvelger,
   HNeventSetSimplifiedFooter,
   HNeventSetSimplifiedHeader,
 } from '../events';
@@ -28,11 +30,13 @@ const promopanel = document.createElement('hn-webcomp-cms-block-promopanel');
 document.body.append(promopanel);
 const promopanelEventSpy = jest.spyOn(promopanel, 'dispatchEvent');
 
+const windowSpy = jest.spyOn(window, 'dispatchEvent');
+
 describe('Gitt at HNeventSetSimplifiedHeader kalles', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  describe('Når HNeventSetSimplifiedHeader kalles uten argumenter', () => {
+  describe('Når HNeventSetSimplifiedHeader kalles med true', () => {
     it('Så dispatches en event med simplifiedHeader true', () => {
       HNeventSetSimplifiedHeader(true);
 
@@ -44,7 +48,7 @@ describe('Gitt at HNeventSetSimplifiedHeader kalles', () => {
     });
   });
 
-  describe('Når HNeventSetSimplifiedHeader kalles uten argumenter', () => {
+  describe('Når HNeventSetSimplifiedHeader kalles med false', () => {
     it('Så dispatches en event med simplifiedHeader false', () => {
       HNeventSetSimplifiedHeader(false);
 
@@ -61,7 +65,7 @@ describe('Gitt at HNeventSetAnonymousHeader kalles', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  describe('Når HNeventSetAnonymousHeader kalles uten argumenter', () => {
+  describe('Når HNeventSetAnonymousHeader kalles med true', () => {
     it('Så dispatches en event med anonymousHeader true', () => {
       HNeventSetAnonymousHeader(true);
 
@@ -73,7 +77,7 @@ describe('Gitt at HNeventSetAnonymousHeader kalles', () => {
     });
   });
 
-  describe('Når HNeventSetAnonymousHeader kalles uten argumenter', () => {
+  describe('Når HNeventSetAnonymousHeader kalles med false', () => {
     it('Så dispatches en event med anonymousHeader false', () => {
       HNeventSetAnonymousHeader(false);
 
@@ -90,7 +94,7 @@ describe('Gitt at HNeventSetHiddenHeader kalles', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  describe('Når HNeventSetHiddenHeader kalles uten argumenter', () => {
+  describe('Når HNeventSetHiddenHeader kalles med true', () => {
     it('Så dispatches en event med hiddenHeader true', () => {
       HNeventSetHiddenHeader(true);
 
@@ -102,7 +106,7 @@ describe('Gitt at HNeventSetHiddenHeader kalles', () => {
     });
   });
 
-  describe('Når HNeventSetHiddenHeader kalles uten argumenter', () => {
+  describe('Når HNeventSetHiddenHeader kalles med false', () => {
     it('Så dispatches en event med hiddenHeader false', () => {
       HNeventSetHiddenHeader(false);
 
@@ -119,8 +123,8 @@ describe('Gitt at HNeventSetSimplifiedFooter kalles', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  describe('Når HNeventSetSimplifiedFooter kalles uten argumenter', () => {
-    it('Så dispatches en event med simplifiedFooter true', () => {
+  describe('Når HNeventSetSimplifiedFooter kalles med tekst', () => {
+    it('Så dispatches en event med simplifiedFooter true og tekst', () => {
       HNeventSetSimplifiedFooter('litt tekst');
 
       expect(footerEventSpy).toHaveBeenCalledTimes(1);
@@ -132,8 +136,8 @@ describe('Gitt at HNeventSetSimplifiedFooter kalles', () => {
     });
   });
 
-  describe('Når HNeventSetSimplifiedFooter kalles uten argumenter', () => {
-    it('Så dispatches en event med simplifiedFooter false', () => {
+  describe('Når HNeventSetSimplifiedFooter kalles med tekst og false', () => {
+    it('Så dispatches en event med simplifiedFooter false og tekst', () => {
       HNeventSetSimplifiedFooter('litt tekst', false);
 
       expect(footerEventSpy).toHaveBeenCalledTimes(1);
@@ -162,7 +166,7 @@ describe('Gitt at HNeventSetHiddenFooter kalles', () => {
     });
   });
 
-  describe('Når HNeventSetHiddenFooter kalles uten argumenter', () => {
+  describe('Når HNeventSetHiddenFooter kalles med false', () => {
     it('Så dispatches en event med hiddenFooter false', () => {
       HNeventSetHiddenFooter(false);
 
@@ -194,7 +198,7 @@ describe('Gitt at HNeventSetDriftsmeldingPath kalles', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  describe('Når HNeventSetDriftsmeldingPath kalles uten argumenter', () => {
+  describe('Når HNeventSetDriftsmeldingPath kalles med en path', () => {
     it('Så dispatches en event', () => {
       HNeventSetDriftsmeldingPath('en path');
 
@@ -242,7 +246,7 @@ describe('Gitt at HNeventSetHiddenPromopanel kalles', () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  describe('Når HNeventSetHiddenPromopanel kalles uten argumenter', () => {
+  describe('Når HNeventSetHiddenPromopanel kalles med true', () => {
     it('Så dispatches en event med simplifiedFooter true', () => {
       HNeventSetHiddenPromopanel(true);
 
@@ -254,7 +258,7 @@ describe('Gitt at HNeventSetHiddenPromopanel kalles', () => {
     });
   });
 
-  describe('Når HNeventSetHiddenPromopanel kalles uten argumenter', () => {
+  describe('Når HNeventSetHiddenPromopanel kalles med false', () => {
     it('Så dispatches en event med simplifiedFooter false', () => {
       HNeventSetHiddenPromopanel(false);
 
@@ -262,6 +266,35 @@ describe('Gitt at HNeventSetHiddenPromopanel kalles', () => {
       expect((promopanelEventSpy.mock.calls[0][0] as CustomEvent).type).toEqual('hn-webcomp-cms-blocks-event-sethiddenpromopanel');
       expect((promopanelEventSpy.mock.calls[0][0] as CustomEvent).detail).toEqual({
         hiddenPromopanel: false,
+      });
+    });
+  });
+});
+
+describe('Gitt at HNeventSetVisPersonvelger kalles', () => {
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+  describe('Når HNeventSetVisPersonvelger kalles med true', () => {
+    it('Så dispatches en event med visPersonvelger true', () => {
+      HNeventSetVisPersonvelger(true);
+
+      expect(windowSpy).toHaveBeenCalledTimes(1);
+      expect((windowSpy.mock.calls[0][0] as CustomEvent).type).toEqual('hn-webcomp-header-footer-event-setvispersonvelger');
+      expect((windowSpy.mock.calls[0][0] as CustomEvent).detail).toEqual({
+        visPersonvelger: true,
+      });
+    });
+  });
+
+  describe('Når HNeventSetVisPersonvelger kalles med false', () => {
+    it('Så dispatches en event med visPersonvelger false', () => {
+      HNeventSetVisPersonvelger(false);
+
+      expect(windowSpy).toHaveBeenCalledTimes(1);
+      expect((windowSpy.mock.calls[0][0] as CustomEvent).type).toEqual('hn-webcomp-header-footer-event-setvispersonvelger');
+      expect((windowSpy.mock.calls[0][0] as CustomEvent).detail).toEqual({
+        visPersonvelger: false,
       });
     });
   });
