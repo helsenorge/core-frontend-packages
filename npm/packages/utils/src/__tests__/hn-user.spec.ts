@@ -15,6 +15,7 @@ describe('hn-user', () => {
         __AvatarColor__: 3,
         __HasRepresentation__: true,
         __ShowWelcome__: true,
+        __VisPersonvelger__: true,
         __NewSocialSecurityNumber__: '000',
         __ShowBruksvilkar__: true,
         __Unsupported__: false,
@@ -95,6 +96,36 @@ describe('hn-user', () => {
         global.window['HN'] = HN;
         const user = HNuserFunctions.getShowWelcome();
         expect(user).toBeTruthy();
+        global.window['HN'] = originalWindowHN;
+      });
+    });
+    describe('Når getVisPersonvelger kalles', () => {
+      it('Så returnerer den verdien som er satt på __VisPersonvelger__', () => {
+        const originalWindowHN = global.window['HN'];
+        global.window['HN'] = HN;
+        const user = HNuserFunctions.getVisPersonvelger();
+        expect(user).toBeTruthy();
+        global.window['HN'] = originalWindowHN;
+      });
+    });
+
+    describe('Når setVisPersonvelger kalles med true', () => {
+      it('Så setter den verdien til __VisPersonvelger__ og __ShowWelcome__', () => {
+        const originalWindowHN = global.window['HN'];
+        global.window['HN'] = HN;
+        const user = HNuserFunctions.setVisPersonvelger(true);
+        expect(global.window['HN'].User.__VisPersonvelger__).toEqual(true);
+        expect(global.window['HN'].User.__ShowWelcome__).toEqual(true);
+        global.window['HN'] = originalWindowHN;
+      });
+    });
+    describe('Når setVisPersonvelger kalles med false', () => {
+      it('Så setter den verdien til __VisPersonvelger__', () => {
+        const originalWindowHN = global.window['HN'];
+        global.window['HN'] = HN;
+        const user = HNuserFunctions.setVisPersonvelger(false);
+        expect(global.window['HN'].User.__VisPersonvelger__).toEqual(false);
+        expect(global.window['HN'].User.__ShowWelcome__).toEqual(false);
         global.window['HN'] = originalWindowHN;
       });
     });

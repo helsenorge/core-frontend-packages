@@ -1,11 +1,12 @@
 import { useEffect } from 'react';
 
+import * as History from 'history';
+
 import { ShowSignOutBoxData, SessionTimeoutAction } from '../types/entities';
 
 /* Events from header-footer and cms-blocks webcomp */
+import { setVisPersonvelger } from '../hn-user';
 import { HeaderFooterEvents, CmsBlocksEvents, CommonEvents } from './constants';
-
-import * as History from 'history';
 
 export interface KeyboardEventWithPath extends KeyboardEvent {
   path?: string;
@@ -85,10 +86,6 @@ export const HNeventSetOnShowSignoutbox = (fn: (data: ShowSignOutBoxData) => Ses
 export const HNeventSetUserLoading = (userLoading: boolean): void =>
   dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.setuserloading, { userLoading });
 
-export const HNeventSetRefresh = (refresh: boolean): void => {
-  dispatchCustomEvent('hn-webcomp-personvelger', HeaderFooterEvents.setrefresh, { refresh });
-};
-
 export const HNeventSetFromLocation = (fromLocation: History.Location): void =>
   dispatchCustomEvent('hn-webcomp-personvelger', HeaderFooterEvents.setfromlocation, { fromLocation });
 
@@ -100,6 +97,19 @@ export const HNeventSetHistory = (history: History.History<History.LocationState
 
 export const HNeventSetLocation = (location: History.Location<History.LocationState>): void =>
   dispatchCustomEvent('hn-webcomp-personvelger', HeaderFooterEvents.setlocation, { location });
+
+export interface VisPersonvelgerDetail extends EventDetails {
+  visPersonvelger: boolean;
+}
+
+export const HNeventSetVisPersonvelger = (visPersonvelger: boolean): void => {
+  setVisPersonvelger(visPersonvelger);
+  window.dispatchEvent(
+    new CustomEvent<VisPersonvelgerDetail>(HeaderFooterEvents.setvispersonvelger, {
+      detail: { visPersonvelger },
+    })
+  );
+};
 
 export const HNeventSetHiddenPromopanel = (isHidden: boolean): void =>
   dispatchCustomEvent('hn-webcomp-cms-block-promopanel', CmsBlocksEvents.setHiddenPromopanel, { hiddenPromopanel: isHidden });
