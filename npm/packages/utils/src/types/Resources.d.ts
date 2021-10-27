@@ -485,7 +485,7 @@ export type HNDialogCommonJS = {
   */
   bestillTimeIngenBehandlereUtenAdvarselText: string;
   /** 
-  * Informasjonen du oppgav blir sendt til legekontoret når du fullfører
+  * Skjemaet du fylte ut blir sendt til legekontoret når du fullfører
   */
   triageringsvedleggInfoTitle: string;
   /** 
