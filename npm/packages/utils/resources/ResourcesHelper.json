@@ -5053,9 +5053,9 @@
     "krav_ledsager_DROSJE_ikkeHarKrav": "For å få dekket utgifter til reise med drosje, må du huke av for rett begrunnelse i punktet \"Dekning av utgifter for reiseledsager\". Du kan ellers ha rett til å få dekket utgiftene med en standardsats.",
     "generisk_kilometer": "kilometer",
     "distanse_ugyldig": "Distanse må være mellom 0 og 3000km.",
-    "reiselengder_max_error": "Reiselengden kan ikke være over 3000 km",
     "generisk_brev": "brev",
     "generisk_klage": "klage",
+    "reiselengder_max_error": "Reiselengden kan ikke være over 3000 km",
     "samtykke_digitalehelsetjenester_link": "Gå til Personverninnstillinger for å gi samtykke.",
     "samtykke_digitalehelsetjenester_content": "For å bruke elektronisk søknad for pasientreiser, må du samtykke til å ta i bruk digitale helsetjenester.",
     "overview_statuser_statusTypeKlage_klage_VEDTAK_OPPHEVET": "Behandlet av Statsforvalteren.",
@@ -5170,8 +5170,8 @@
   },
   "HNMinHelsePersonvernStrings": { 
     "page_HendelsesLogg_42": "Oppgave",
-    "page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent": "Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.",
     "samtykkeDefinisjonerIkkeFunnetBody": "Ingen samtykkedefinisjoner funnet.",
+    "page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent": "Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.",
     "page_HendelsesLogg_49": "Koronasertifikat",
     "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
     "page_HendelsesLogg_43": "Samtykke til datautveksling",
@@ -6524,6 +6524,7 @@
     "fylke_MoreOgRomsdal": "Møre og Romsdal"
   },
   "HNVidereformidling": { 
+    "videreformidling_Post_CO": "c/o",
     "videreformidling_Post_Ved_Foresatte": "v/Foresatte",
     "videreformidling_Sms_Varsel": "Du har fått et brev fra {aktørnavn}",
     "videreformidling_Epost_Varsel": "Du har fått et brev fra {aktørnavn}"
