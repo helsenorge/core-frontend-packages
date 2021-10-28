@@ -59,12 +59,7 @@ describe('Gitt at web component skal registreres', () => {
       const Testwebcomp: React.FC = () => {
         return <div id="testdiv">{'test'}</div>;
       };
-      registerWebCompFunctions.registerWebComp(
-        Testwebcomp,
-        'hn-webcomp-test',
-        { events: true, styledComponents: true },
-        'hn-webcomp-test-template'
-      );
+      registerWebCompFunctions.registerWebComp(Testwebcomp, 'hn-webcomp-test', { events: true }, 'hn-webcomp-test-template');
 
       const webCompName = window.customElements.get('hn-webcomp-test');
       await expect(webCompName).toBeTruthy();
