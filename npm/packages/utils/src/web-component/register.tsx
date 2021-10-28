@@ -1,13 +1,13 @@
 import React from 'react';
 import ReactDOM, { render } from 'react-dom';
 import retargetEvents from 'react-shadow-dom-retarget-events';
-import { styleInjector, RegisterWebCompSetup } from './helpers';
+import { RegisterWebCompSetup } from './helpers';
 import { error } from './../logger';
 
 /** Registrerer/oppretter ny web-komponent.
  *
  * Eksempel:
- * registerWebComp(HeaderWrapper, 'hn-webcomp-header', { events: true, styledComponents: true }, 'hn-webcomp-header-footer-template');
+ * registerWebComp(HeaderWrapper, 'hn-webcomp-header', { events: true }, 'hn-webcomp-header-footer-template');
  */
 
 export type Props = { ChildComponent: React.ComponentType<WebcompProps>; name: string; config: Config; templateName: string };
@@ -18,7 +18,6 @@ export interface WebcompProps {
 
 export interface Config {
   events: boolean;
-  styledComponents: boolean;
 }
 
 export const isCustomElementRegistered = (name: string): boolean => {
@@ -89,17 +88,11 @@ export function registerWebComp(
       shadowRoot.appendChild(this.mountPoint);
 
       render(
-        <RegisterWebCompSetup
-          config={config}
-          eventDispatcher={this.eventDispatcher}
-          subscribeDispatcher={this.subscribeDispatcher}
-          mountPoint={this.mountPoint}
-        >
+        <RegisterWebCompSetup config={config} eventDispatcher={this.eventDispatcher} subscribeDispatcher={this.subscribeDispatcher}>
           <ChildComponent {...this.props} />
         </RegisterWebCompSetup>,
         this.mountPoint
       );
-      styleInjector(this.props, shadowRoot);
       retargetEvents(shadowRoot);
     }
   }
