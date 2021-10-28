@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "21.1.1",
+  "version": "21.2.0",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -28,7 +28,7 @@
   "license": "ISC",
   "type": "module",
   "devDependencies": {
-    "@helsenorge/core-build": "^21.0.0",
+    "@helsenorge/core-build": "^21.2.0",
     "@helsenorge/designsystem-react": "1.0.0-beta70",
     "@types/react-router-dom": "5.1.5",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
