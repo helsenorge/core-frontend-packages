@@ -457,6 +457,12 @@ export type HNCoreFrontendWebForside = {
   * Du er nå logget ut
   */
   signedOut_SignedOut_Explanation: string;
+  /** 
+  * <p>Du har dessverre ikke tilgang til helsetjenester på helsenorge.no fordi du er logget inn med Feide. Bruk tjenester i Helsenorge-appen.<br /><br /></p>
+<p>Er du over 16 år og har BankID eller lignende, kan du logge deg inn på nytt for å få tilgang til dine helsetjenester.<br /><br /></p>
+<p>Les om <a className="https://www.helsenorge.no/ungdom/">Helsenorge for ungdom</a></p>
+  */
+  innloggetMedFeideNotificationText: string;
 };
 
 export type HNDialogCommonJS = { 
