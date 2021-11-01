@@ -22,7 +22,7 @@ export type HNCommon = {
   */
   webPart_PagePromotion_SelectPage_Text: string;
   /** 
-  * test ikke i bruk enda altså
+  * test ikke i bruk enda altså HEI!!
   */
   iKKE_BRUK_KUN_FOR_TEST: string;
 };
