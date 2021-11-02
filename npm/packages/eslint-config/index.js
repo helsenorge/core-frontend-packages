@@ -8,7 +8,7 @@ module.exports = {
   plugins: ['react', 'import'],
   rules: {
     '@typescript-eslint/no-loss-of-precision': 0,
-    '@typescript-eslint/camelcase': 0,
+    '@typescript-eslint/ban-types': 1,
     '@typescript-eslint/explicit-function-return-type': 1,
     '@typescript-eslint/no-empty-interface': 1,
     '@typescript-eslint/no-explicit-any': 2,
