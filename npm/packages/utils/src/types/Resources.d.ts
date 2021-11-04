@@ -467,10 +467,6 @@ export type HNCoreFrontendWebForside = {
 
 export type HNDialogCommonJS = { 
   /** 
-  * Kartleggingsinformasjon
-  */
-  triageringsvedleggFilenameKartlegging: string;
-  /** 
   * Tilleggsinformasjon
   */
   triageringsvedleggFilenameSjekkpunkt: string;
