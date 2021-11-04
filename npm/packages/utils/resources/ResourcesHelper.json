@@ -121,14 +121,11 @@
     "innloggetMedFeideNotificationText": "<p>Du har dessverre ikke tilgang til helsetjenester på helsenorge.no fordi du er logget inn med Feide. Bruk tjenester i Helsenorge-appen.<br /><br /></p>\n<p>Er du over 16 år og har BankID eller lignende, kan du logge deg inn på nytt for å få tilgang til dine helsetjenester.<br /><br /></p>\n<p>Les om <a className=\"https://www.helsenorge.no/ungdom/\">Helsenorge for ungdom</a></p>"
   },
   "HNDialogCommonJS": { 
-    "triageringsvedleggFilenameSjekkpunkt": "Tilleggsinformasjon",
     "koronatestVeiviserUrl": "/veileder?Query=Questionnaire%2F310",
     "koronavaksineVeiviserUrl": "/veileder?Query=Questionnaire%2F314",
     "bestillTimeIngenBehandlereMedAdvarselText": "Du kan ikke bestille time nå.",
     "bestillTimeIngenBehandlereUtenAdvarselText": "Du har dessverre ingen behandlere å bestille time hos på nett. Bestill time på annen måte.",
     "triageringsvedleggInfoTitle": "Skjemaet du fylte ut blir sendt til legekontoret når du fullfører",
-    "kartleggingsdataLinkText": "Se kartleggingsinformasjon",
-    "sjekkpunktLinkText": "Se tilleggsinformasjon",
     "triageringsvedleggErrorTitle": "En feil oppsto ved henting av vedlegg med dine besvarelser",
     "triageringsvedleggErrorText": "Du kan likevel sende meldingen uten denne informasjonen.",
     "velgBehandlerNeste": "Neste",
