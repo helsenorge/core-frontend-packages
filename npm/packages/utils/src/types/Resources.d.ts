@@ -467,10 +467,6 @@ export type HNCoreFrontendWebForside = {
 
 export type HNDialogCommonJS = { 
   /** 
-  * Tilleggsinformasjon
-  */
-  triageringsvedleggFilenameSjekkpunkt: string;
-  /** 
   * /veileder?Query=Questionnaire%2F310
   */
   koronatestVeiviserUrl: string;
@@ -490,14 +486,6 @@ export type HNDialogCommonJS = {
   * Skjemaet du fylte ut blir sendt til legekontoret når du fullfører
   */
   triageringsvedleggInfoTitle: string;
-  /** 
-  * Se kartleggingsinformasjon
-  */
-  kartleggingsdataLinkText: string;
-  /** 
-  * Se tilleggsinformasjon
-  */
-  sjekkpunktLinkText: string;
   /** 
   * En feil oppsto ved henting av vedlegg med dine besvarelser
   */
