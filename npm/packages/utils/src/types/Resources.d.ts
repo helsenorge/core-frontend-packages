@@ -268,6 +268,14 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * OK
   */
   modalErrorButtonText: string;
+  /** 
+  * Åpne
+  */
+  openMenu: string;
+  /** 
+  * Lukk
+  */
+  closeMenu: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
