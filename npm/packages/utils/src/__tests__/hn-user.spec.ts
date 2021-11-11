@@ -1,3 +1,4 @@
+import { deleteCookie, setCookie } from '../cookie';
 import * as HNuserFunctions from '../hn-user';
 
 describe('hn-user', () => {
@@ -317,6 +318,38 @@ describe('hn-user', () => {
         user = HNuserFunctions.getErIkkeSamtykkeKompetentFullmakt();
         expect(user).toBeFalsy();
         global.window['HN'] = originalWindowHN;
+      });
+    });
+  });
+  describe('gitt at getErInnloggetMedFeide kalles', () => {
+    const originalWindowHN = window.HN;
+    beforeEach(() => {
+      window.HN.Rest = {
+        __Environment__: '',
+      };
+    });
+    afterEach(() => {
+      window.HN = originalWindowHN;
+    });
+    describe('når identityprovider-cookie ikke finnes', () => {
+      it('så returnerer den false', () => {
+        deleteCookie('MH_Idp');
+
+        expect(HNuserFunctions.getErInnloggetMedFeide()).toEqual(false);
+      });
+    });
+    describe('når identityprovider-cookie er satt til noe annet', () => {
+      it('så returnerer den false', () => {
+        setCookie('MH_Idp', 'idporten');
+
+        expect(HNuserFunctions.getErInnloggetMedFeide()).toEqual(false);
+      });
+    });
+    describe('når identityprovider-cookie er satt til feide', () => {
+      it('så returnerer den true', () => {
+        setCookie('MH_Idp', 'feide');
+
+        expect(HNuserFunctions.getErInnloggetMedFeide()).toEqual(true);
       });
     });
   });
