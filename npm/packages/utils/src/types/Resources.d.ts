@@ -4033,7 +4033,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_BytteFastlege_Title: string;
   /** 
-  * Her ser du informasjon om dine kontaktpersoner og behandlere i helsetjenesten.
+  * Her ser du informasjon om dine kontaktpersoner i helsetjenesten, inkludert helse- og omsorgstilbudet i kommunen.
   */
   page_Helsekontakter_Desc: string;
   /** 
