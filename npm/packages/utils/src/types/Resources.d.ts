@@ -11053,7 +11053,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Title: string;
   /** 
-  * Resultat av test for koronavirus.
+  * Korona og luftveisinfeksjoner
   */
   tile_Provesvar_Description: string;
   /** 
