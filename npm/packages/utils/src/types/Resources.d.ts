@@ -11061,7 +11061,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Title: string;
   /** 
-  * Korona og luftveisinfeksjoner
+  * Korona og luftveisinfeksjoner.
   */
   tile_Provesvar_Description: string;
   /** 
