@@ -1158,7 +1158,7 @@
     "webPart_Sf_So_MaxLength200Placeholder": "(Maks 200 tegn)",
     "webPart_Sf_So_Btn_Cancel": "Avbryt",
     "webPart_Sf_So_Btn_Send": "Send",
-    "webPart_Sf_So_Consulting_Info": "Still et medisinsk spørsmål til fastlegen din. Du betaler vanlig egenandel. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret.",
+    "webPart_Sf_So_Consulting_Info": "Still et medisinsk spørsmål til fastlegen din. Du betaler vanlig egenandel. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret.\n\n<p>\nBeskriv hva du lurer på, hvilke symptomer du har, hvordan du har det nå og om det har endret seg i det siste.\n</p>\n \n<p>\nHvis du trenger fysisk undersøkelse eller ta prøver, bør du bestille en vanlig legetime.\n</p>",
     "webPart_Sf_So_Contact_AttachmentDescription": "Et vedlegg må ha format jpeg, png eller pdf. Maksimal størrelse er 4MB.\n\nDu kan legge til inntil 3 vedlegg.",
     "webPart_Sf_So_Contact_AttachmentDisk": "Jeg vil hente et dokument fra min lokale maskin.",
     "webPart_Sf_So_Contact_AttachmentDiskPha": "Jeg vil hente et dokument fra min lokale maskin og samtidig lagre den i mitt personlige helsearkiv.",
