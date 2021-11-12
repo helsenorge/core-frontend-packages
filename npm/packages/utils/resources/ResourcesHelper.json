@@ -2765,7 +2765,7 @@
   },
   "HNMinHelseNavigation": { 
     "tile_Provesvar_Title": "Prøvesvar",
-    "tile_Provesvar_Description": "Korona og luftveisinfeksjoner",
+    "tile_Provesvar_Description": "Korona og luftveisinfeksjoner.",
     "tile_Korona_Title": "Bestill koronatest",
     "tile_Korona_Description": "Timebestilling i din kommune.",
     "tile_DokumentArkiv_Description": "Egne dokumenter lagret på Helsenorge.",
