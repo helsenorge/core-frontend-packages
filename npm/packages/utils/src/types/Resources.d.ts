@@ -4594,6 +4594,14 @@ senere.
   webPart_Sf_So_Btn_Send: string;
   /** 
   * Still et medisinsk spørsmål til fastlegen din. Du betaler vanlig egenandel. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret.
+
+<p>
+Beskriv hva du lurer på, hvilke symptomer du har, hvordan du har det nå og om det har endret seg i det siste.
+</p>
+ 
+<p>
+Hvis du trenger fysisk undersøkelse eller ta prøver, bør du bestille en vanlig legetime.
+</p>
   */
   webPart_Sf_So_Consulting_Info: string;
   /** 
