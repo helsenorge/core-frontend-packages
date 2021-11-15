@@ -1651,6 +1651,7 @@
     "mfr_innsyn_tab_loggoverbruk": "Logg over bruk",
     "mfr_Page_Desc": "Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.",
     "mfr_Page_Title": "Medisinsk fødselsregister (MFR)",
+    "innsynsrettLenkePrefix": "Om innsynsrett i",
     "registereierskap_dataansvarlig": "Dataansvarlig",
     "registereierskap_innledning_asynkron": "Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}) {RapportGenerert}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.",
     "registereierskap_innledning_synkron": "Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}). Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.",
@@ -5168,8 +5169,8 @@
     "error_FeatureNotSupported_Title": "Funksjon ikke støttet"
   },
   "HNMinHelsePersonvernStrings": { 
-    "page_HendelsesLogg_42": "Oppgave",
     "samtykkeDefinisjonerIkkeFunnetBody": "Ingen samtykkedefinisjoner funnet.",
+    "page_HendelsesLogg_42": "Oppgave",
     "page_Fullmakt_Lightbox_SelectPerson_Error_NoConsent": "Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.",
     "page_HendelsesLogg_49": "Koronasertifikat",
     "samtykkeDefinisjonAccessDeniedBody": "Du har ikke tilgang til samtykkedefinisjonen.",
