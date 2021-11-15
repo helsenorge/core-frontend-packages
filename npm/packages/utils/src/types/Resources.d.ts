@@ -6572,6 +6572,10 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   mfr_Page_Title: string;
   /** 
+  * Om innsynsrett i
+  */
+  innsynsrettLenkePrefix: string;
+  /** 
   * Dataansvarlig
   */
   registereierskap_dataansvarlig: string;
@@ -20657,13 +20661,13 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
-  * Oppgave
-  */
-  page_HendelsesLogg_42: string;
-  /** 
   * Ingen samtykkedefinisjoner funnet.
   */
   samtykkeDefinisjonerIkkeFunnetBody: string;
+  /** 
+  * Oppgave
+  */
+  page_HendelsesLogg_42: string;
   /** 
   * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
   */
