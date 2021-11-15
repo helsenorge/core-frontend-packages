@@ -6576,6 +6576,10 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   innsynsrettLenkePrefix: string;
   /** 
+  * Om
+  */
+  informasjonLenkePrefix: string;
+  /** 
   * Dataansvarlig
   */
   registereierskap_dataansvarlig: string;
