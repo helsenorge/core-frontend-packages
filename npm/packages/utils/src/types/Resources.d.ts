@@ -6588,7 +6588,7 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_innledning_asynkron: string;
   /** 
-  * Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}). Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
+  * Opplysningene nedenfor er hentet fra {0}. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
   */
   registereierskap_innledning_synkron: string;
   /** 
@@ -6608,7 +6608,7 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_om_registeret_lenke: string;
   /** 
-  * Se <a href="/personverninnstillinger/forskning-og-helseregistre?partKode={registerid}">personverninnstillinger</a> for dette registeret
+  * Se <a href="/personverninnstillinger/forskning-og-helseregistre?partKode={0}">personverninnstillinger</a> for dette registeret
   */
   registereierskap_personverninnstilling_lenke: string;
   /** 
