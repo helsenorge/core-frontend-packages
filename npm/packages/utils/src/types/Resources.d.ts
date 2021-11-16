@@ -6584,7 +6584,7 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_dataansvarlig: string;
   /** 
-  * Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}) {RapportGenerert}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
+  * Opplysningene nedenfor er hentet fra {0} {1}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
   */
   registereierskap_innledning_asynkron: string;
   /** 
