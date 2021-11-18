@@ -164,7 +164,13 @@ export const getResourcesObjectFromState = (state: GlobalStateWithResources, pro
 
 function getResourceWithId(json: ResourceItem): ResourceItem {
   return Object.keys(json).reduce((previous, current: string) => {
-    previous[current] = json[current] + ' [' + current + ']';
+    const resourceText = json[current] as string;
+    if (resourceText.startsWith('{') && resourceText.endsWith('}')) {
+      previous[current] = resourceText;
+    } else {
+      previous[current] = resourceText + ' [' + current + ']';
+    }
+
     return previous;
   }, {});
 }
