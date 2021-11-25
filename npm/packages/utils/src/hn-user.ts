@@ -1,3 +1,4 @@
+import { getCookieValue } from './cookie';
 import { SamtykkeLevel, FullmaktType, FullmaktEgenskaper } from './types/entities';
 
 declare let HN: {
@@ -190,4 +191,13 @@ export const getErIkkeSamtykkeKompetentFullmakt = (): boolean => {
     if (egenskaper.FullmaktType === FullmaktType.UtenSamtykkekompenanseOver12) return true;
   }
   return false;
+};
+
+/**
+ * Returnerer true når bruker er logget inn med feide
+ */
+export const getErInnloggetMedFeide = (): boolean => {
+  const IDENTITY_PROVIDER_COOKIE_NAME = 'MH_Idp';
+
+  return getCookieValue(IDENTITY_PROVIDER_COOKIE_NAME) === 'feide';
 };

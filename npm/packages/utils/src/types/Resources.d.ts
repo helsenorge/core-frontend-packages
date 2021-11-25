@@ -268,6 +268,14 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * OK
   */
   modalErrorButtonText: string;
+  /** 
+  * Åpne
+  */
+  openMenu: string;
+  /** 
+  * Lukk
+  */
+  closeMenu: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
@@ -467,14 +475,6 @@ export type HNCoreFrontendWebForside = {
 
 export type HNDialogCommonJS = { 
   /** 
-  * Kartleggingsinformasjon
-  */
-  triageringsvedleggFilenameKartlegging: string;
-  /** 
-  * Tilleggsinformasjon
-  */
-  triageringsvedleggFilenameSjekkpunkt: string;
-  /** 
   * /veileder?Query=Questionnaire%2F310
   */
   koronatestVeiviserUrl: string;
@@ -494,14 +494,6 @@ export type HNDialogCommonJS = {
   * Skjemaet du fylte ut blir sendt til legekontoret når du fullfører
   */
   triageringsvedleggInfoTitle: string;
-  /** 
-  * Se kartleggingsinformasjon
-  */
-  kartleggingsdataLinkText: string;
-  /** 
-  * Se tilleggsinformasjon
-  */
-  sjekkpunktLinkText: string;
   /** 
   * En feil oppsto ved henting av vedlegg med dine besvarelser
   */
@@ -555,7 +547,7 @@ export type HNDialogCommonJS = {
   */
   bookingSubHeaderVaccination: string;
   /** 
-  * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer denne dagen. Virksomheten kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
   /** 
@@ -647,11 +639,11 @@ export type HNDialogCommonJS = {
   */
   bookingDisabledText: string;
   /** 
-  * Ingen ledige timer. Legekontoret kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer denne dagen. Legekontoret kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyText: string;
   /** 
-  * Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer denne dagen. Behandleren kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbud: string;
   /** 
@@ -4041,7 +4033,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_BytteFastlege_Title: string;
   /** 
-  * Her ser du informasjon om dine kontaktpersoner og behandlere i helsetjenesten.
+  * Her ser du informasjon om dine kontaktpersoner i helsetjenesten, inkludert helse- og omsorgstilbudet i kommunen.
   */
   page_Helsekontakter_Desc: string;
   /** 
@@ -4177,7 +4169,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Provesvar_Title: string;
   /** 
-  * Her vises en oversikt over dine prøvesvar for koronavirus.
+  * Her vises en oversikt over dine prøvesvar for koronavirus. Det kan også vises svar på andre typer virus og bakterier som kan gi luftveisinfeksjon.
   */
   page_Provesvar_Desc: string;
   /** 
@@ -4602,6 +4594,14 @@ senere.
   webPart_Sf_So_Btn_Send: string;
   /** 
   * Still et medisinsk spørsmål til fastlegen din. Du betaler vanlig egenandel. Ved fravær kan meldingen bli lest og besvart av annet helsepersonell ved legekontoret.
+
+<p>
+Beskriv hva du lurer på, hvilke symptomer du har, hvordan du har det nå og om det har endret seg i det siste.
+</p>
+ 
+<p>
+Hvis du trenger fysisk undersøkelse eller ta prøver, bør du bestille en vanlig legetime.
+</p>
   */
   webPart_Sf_So_Consulting_Info: string;
   /** 
@@ -6572,15 +6572,23 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   mfr_Page_Title: string;
   /** 
+  * Om innsynsrett i
+  */
+  innsynsrettLenkePrefix: string;
+  /** 
+  * Om
+  */
+  informasjonLenkePrefix: string;
+  /** 
   * Dataansvarlig
   */
   registereierskap_dataansvarlig: string;
   /** 
-  * Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}) {RapportGenerert}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
+  * Opplysningene nedenfor er hentet fra {0} {1}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
   */
   registereierskap_innledning_asynkron: string;
   /** 
-  * Opplysningene nedenfor er hentet fra {Navn} ({Forkortelse}). Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
+  * Opplysningene nedenfor er hentet fra {0}. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
   */
   registereierskap_innledning_synkron: string;
   /** 
@@ -6600,7 +6608,7 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_om_registeret_lenke: string;
   /** 
-  * Se <a href="/personverninnstillinger/forskning-og-helseregistre/?Partkode={registerid}">personverninnstillinger</a> for dette registeret
+  * Se <a href="/personverninnstillinger/forskning-og-helseregistre?partKode={0}">personverninnstillinger</a> for dette registeret
   */
   registereierskap_personverninnstilling_lenke: string;
   /** 
@@ -11061,7 +11069,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Title: string;
   /** 
-  * Resultat av test for koronavirus.
+  * Korona og luftveisinfeksjoner.
   */
   tile_Provesvar_Description: string;
   /** 
@@ -13343,7 +13351,7 @@ export type HNMinHelsePasientjournal = {
   */
   documentMessageTitle: string;
   /** 
-  * {"defaulttekst_overskrift":"Om pasientjournalen","defaulttekst_brodtekst":"<p>\nTjenesten gir deg kun lesetilgang – du kan ikke på egen hånd endre innholdet i pasientjournalen din.\n</p>\n\n<p>\nDatoen som vises ved dokumentnavnet viser når journaldokumentet ble opprettet - ikke nødvendigvis når det sist ble endret. Når du åpner et dokument vil du alltid se den nyeste versjonen av det.\n</p>\n\n<h3>\nIkke alle dokumenter kan vises digitalt\n</h3>\n\n<p>Pasientjournalen din kan inneholde dokumenter som ikke kan vises digitalt. Disse kan være tilgjengelige på papir, eller ved å kontakte sykehuset.</p>\n\n<p>\nHer finner du mer informasjon om hva hver helseregion kan tilby digitalt, og hvordan du går frem:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost\">Sykehus i Helse Sør-Øst</a></li>\n</ul>\n\n<h3>\nSlik kan du få papirkopier, melde om feil eller stille spørsmål\n</h3>\n\n<p>Vil du ha mer informasjon enn den digitale tjenesten kan tilby, eller melde om feil, må du kontakte sykehuset.</p>\n\n<p>\nFor sykehus i Helse Vest og de fleste sykehus i Helse Sør-Øst kan du bruke digitale skjema:\n</p>\n\n<ul>\n<li><a href=\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UJ-1\">Be om utskrift av pasientjournal</a></li>\n<li><a href=\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UI-1\">Be om utskrift av tilgangslogg</a></li>\n<li><a href=\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-ej-1\">Be om endring i pasientjournalen</a></li>\n<li><a href=\"https://tjenester.helsenorge.no/skjemautfyller/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-SI-1\">Stille spørsmål om oppslag i pasientjournalen</a></li>\n</ul>\n\n<p>\nMerk at disse sykehusene i Helse Sør-Øst ikke tilbyr digitale skjema:\n</p>\n<ul>\n<li>Betanien Hospital Skien</li>\n<li>Diakonhjemmet sykehus</li>\n<li>Lovisenberg diakonale sykehus</li>\n<li>Revmatismesykehuset</li>\n</ul>\n<p>\nDu kan i stedet kontakte sykehuset direkte. <a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Kontaktinformasjon til ulike sykehus i Helse Sør-Øst finner du her</a>.\n</p>\n\n<p>\nHelse Nord tilbyr ikke digitale skjema, men du kan i stedet bruke <a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#andre-mater-a-fa-innsyn-i-pasientjournalen-pa\">PDF-skjema for å få innsyn i pasientjournal og tilgangslogg fra Helse Nord</a>.\n</p>\n\n<h3>\nVed alvorlige feil i pasientjournalen\n</h3>\n\n<p>\nHvis du finner dokumenter som tilhører andre, må du straks ringe det aktuelle sykehuset. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Sør-Øst</a></li>\n</ul>\n\n<p>\n<strong>Det er ikke nødvendig å ringe hvis du vil melde om andre feil. Bruk i stedet skjemaene nevnt ovenfor.</strong>\n</p>"}
+  * {"defaulttekst_overskrift":"Om pasientjournalen","defaulttekst_brodtekst":"<p>\nTjenesten gir deg kun lesetilgang – du kan ikke på egen hånd endre innholdet i pasientjournalen din.\n</p>\n\n<p>\nDokumenter fra andre regioner enn Helse Nord, Helse Vest og Helse Sør-Øst er foreløpig ikke tilgjengelige i tjenesten.\n</p>\n\n<p>\nDatoen som vises ved dokumentnavnet viser når journaldokumentet ble opprettet - ikke nødvendigvis når det sist ble endret. Når du åpner et dokument vil du alltid se den nyeste versjonen.\n</p>\n\n<h3>\nIkke alle dokumenter kan vises digitalt\n</h3>\n\n<p>Pasientjournalen din kan inneholde dokumenter som ikke kan vises digitalt. Du kan få disse ved å kontakte sykehuset.</p>\n\n<p>\nHer finner du mer informasjon om hva hver helseregion kan tilby digitalt, og hvordan du går frem:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest\">Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord\">Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost\">Sykehus i Helse Sør-Øst</a></li>\n</ul>\n\n<h3>\nSlik kan du få papirkopier, melde om feil eller stille spørsmål\n</h3>\n\n<p>Vil du ha mer informasjon enn den digitale tjenesten kan tilby, eller melde om feil, må du kontakte sykehuset.</p>\n\n<p>\nFor sykehus i Helse Vest og Helse Sør-Øst kan du bruke følgende digitale skjema:\n</p>\n\n<ul>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UJ-1\">Be om utskrift av pasientjournal</a></li>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-UI-1\">Be om utskrift av tilgangslogg</a></li>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-ej-1\">Be om endring i pasientjournalen</a></li>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%3Fname%3DHSO-SI-1\">Stille spørsmål om oppslag i pasientjournalen</a></li>\n</ul>\n\n<p>\nFor sykehus i Helse Nord kan du bruke følgende digitale skjema:\n</p>\n\n<ul>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%2F600\">Be om utskrift av pasientjournal</a></li>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%2F602\">Be om utskrift av tilgangslogg</a></li>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%2F601\">Be om endring i pasientjournalen</a></li>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%2F603\">Stille spørsmål om oppslag i pasientjournalen</a></li>\n<li><a href=\"/skjemautfyller?Query=Questionnaire%2F604\">Forespørsel om sperring av pasientjournal</a></li>\n</ul>\n\n<h3>\nVed alvorlige feil i pasientjournalen\n</h3>\n\n<p>\nHvis du finner dokumenter som tilhører andre, må du straks ringe det aktuelle sykehuset. Kontaktinformasjon finner du her:\n</p>\n\n<ul>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-vest/#feil-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Vest</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-nord/#feil-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Nord</a></li>\n<li><a href=\"{HelsenorgeUrl}/pasientjournal/om/se-pasientjournalen-din-fra-helse-sor-ost/#feil-retting-og-sletting\">Kontaktinformasjon: Sykehus i Helse Sør-Øst</a></li>\n</ul>\n\n<p>\n<strong>Det er ikke nødvendig å ringe hvis du vil melde om andre feil. Bruk i stedet skjemaene nevnt ovenfor.</strong>\n</p>"}
   */
   hjelpeKontekstDokumentoversikt: string;
   /** 
@@ -20657,13 +20665,13 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
-  * Oppgave
-  */
-  page_HendelsesLogg_42: string;
-  /** 
   * Ingen samtykkedefinisjoner funnet.
   */
   samtykkeDefinisjonerIkkeFunnetBody: string;
+  /** 
+  * Oppgave
+  */
+  page_HendelsesLogg_42: string;
   /** 
   * Fullmakten kan ikke opprettes. Personen du forsøker å gi fullmakt til har ikke samtykket til bruk av Helsenorge.
   */
