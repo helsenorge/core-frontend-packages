@@ -13,7 +13,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'error',
     'react/jsx-no-literals': 'error',
     'react/display-name': 'warn',
-    'react/prop-types': 'warn',
     'no-console': 'error',
     'no-debugger': 'error',
     'import/order': [
