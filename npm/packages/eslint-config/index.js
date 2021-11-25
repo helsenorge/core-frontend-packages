@@ -7,7 +7,6 @@ module.exports = {
   },
   plugins: ['react', 'import', 'testing-library'],
   rules: {
-    '@typescript-eslint/no-loss-of-precision': 'off',
     '@typescript-eslint/ban-types': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'warn',
     '@typescript-eslint/no-empty-interface': 'warn',
