@@ -163,13 +163,13 @@ export const error = (message?: string, ...optionalParams: unknown[]): void => {
 };
 
 /**
- * Lager en console.exception og logger til serveren
- * @param message - string som sendes i console.exception og logges til serveren
- * @param optionalParams params som sendes til console.exception og logges til serveren
+ * Lager en console.error og logger til serveren
+ * @param message - string som sendes i console.error og logges til serveren
+ * @param optionalParams params som sendes til console.error og logges til serveren
  */
 export const exception = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
-    console.exception(message, optionalParams);
+    console.error(message, optionalParams);
   }
   exportFunctions.logToServer(LogLevel.Error, message, optionalParams);
 };

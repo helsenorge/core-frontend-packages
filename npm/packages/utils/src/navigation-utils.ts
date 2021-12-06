@@ -63,7 +63,7 @@ export const navigate = (location: Location, action: Action, focus: (targets: HT
  * @param target - HTMLElement som legges til
  */
 export const navigateAdd = (target: HTMLElement): Navigation[] | void => {
-  if (target && target.focus) {
+  if (target && !!target.focus) {
     if (navigationTrail.length > 0) {
       navigationTrail[navigationTrail.length - 1].targets.push(target);
       return navigationTrail;

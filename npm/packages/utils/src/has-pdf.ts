@@ -25,7 +25,7 @@ const isIos = () => {
   );
 };
 
-const isPdfIncompatibleFF = (resolve: (value?: boolean) => void, pdfUrl: string): void => {
+const isPdfIncompatibleFF = (resolve: (value?: boolean | PromiseLike<boolean>) => void, pdfUrl: string): void => {
   // For å omgå popup-blokkering må vi åpne nytt vindu før async-kall.
   const newWindow: Window | null = window.open();
   // Full documentation: http://www.pinlady.net/PluginDetect/PDFjs/
