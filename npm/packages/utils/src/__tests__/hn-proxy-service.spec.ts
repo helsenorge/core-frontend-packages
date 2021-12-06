@@ -34,76 +34,11 @@ window.HN.Rest.__TimeStamp__ = 'time';
 window.HN.Rest.__HendelseLoggType__ = 'logg';
 
 describe('gitt at download kalles', () => {
-  const fetchMock = jest.spyOn(global, 'fetch');
+  const fetchMock = jest.spyOn(window, 'fetch');
   const trackErrorMock = jest.spyOn(AdobeAnalytics, 'trackError');
   beforeEach(() => {
     jest.clearAllMocks();
   });
-  // TODO: Kan tas i bruk når isomorphic-fetch er oppgradert til 3.0.0
-  // describe('Når window.navigator.msSaveOrOpenBlob eksisterer', () => {
-  //   it('Så kalles msSaveOrOpenBlob med riktige parametere', async () => {
-  //     const originalMsSaveOrOpenBlob = window.navigator.msSaveOrOpenBlob;
-  //     const mockMsSaveOrOpenBlob = jest.fn();
-  //     window.navigator.msSaveOrOpenBlob = mockMsSaveOrOpenBlob;
-  //     const response = new Response(new Blob([], { type: 'application/pdf' }), {
-  //       status: 200,
-  //       headers: {
-  //         'content-disposition': 'filename="test.pdf"',
-  //       },
-  //     });
-  //     fetchMock.mockResolvedValueOnce(response);
-
-  //     await download('DownloadJournalDocument', 'api/v1/Behandlinger');
-
-  //     expect(mockMsSaveOrOpenBlob).toBeCalledTimes(1);
-  //     expect(mockMsSaveOrOpenBlob).toBeCalledWith(expect.any(Object), 'test.pdf');
-
-  //     window.navigator.msSaveOrOpenBlob = originalMsSaveOrOpenBlob;
-  //   });
-  // });
-
-  // describe('Når requesten mangler filename', () => {
-  //   it('Så kalles msSaveOrOpenBlob med et automatisk generert filnavn', async () => {
-  //     jest.spyOn(DateUtils, 'todaysDate').mockReturnValueOnce('2021-3-15');
-
-  //     const originalMsSaveOrOpenBlob = window.navigator.msSaveOrOpenBlob;
-  //     const mockMsSaveOrOpenBlob = jest.fn();
-  //     window.navigator.msSaveOrOpenBlob = mockMsSaveOrOpenBlob;
-  //     const response = new Response(new Blob([], { type: 'application/pdf' }), {
-  //       status: 200,
-  //     });
-  //     fetchMock.mockResolvedValueOnce(response);
-
-  //     await download('DownloadJournalDocument', 'api/v1/Behandlinger');
-
-  //     expect(mockMsSaveOrOpenBlob).toBeCalledTimes(1);
-  //     expect(mockMsSaveOrOpenBlob).toBeCalledWith(expect.any(Object), 'nedlasting-2021-3-15-helseNorge');
-
-  //     window.navigator.msSaveOrOpenBlob = originalMsSaveOrOpenBlob;
-  //   });
-  // });
-
-  // describe('Når window.navigator.msSaveOrOpenBlob ikke eksisterer', () => {
-  //   it('Så opprettes en link til PDFen', async () => {
-  //     window.URL.createObjectURL = jest.fn().mockReturnValue('mock-href');
-  //     window.URL.revokeObjectURL = jest.fn();
-
-  //     const response = new Response(new Blob([], { type: 'application/pdf' }), {
-  //       status: 200,
-  //       headers: {
-  //         'content-disposition': 'filename="test.pdf"',
-  //       },
-  //     });
-  //     fetchMock.mockResolvedValueOnce(response);
-
-  //     await download('DownloadJournalDocument', 'api/v1/Behandlinger');
-
-  //     const linkList = document.getElementsByTagName('a');
-
-  //     expect(linkList.length).toEqual(1);
-  //     expect(linkList[0].getAttribute('download')).toEqual('test.pdf');
-  //   });
-  // });
   describe('Når fetch ikke klarer å koble til på grunn av nettverksfeil', () => {
     it('Så returneres en feilmelding', async () => {
       fetchMock.mockRejectedValueOnce(new TypeError('Failed to fetch'));
@@ -246,10 +181,15 @@ describe('Gitt at det har skjedd en Error i en av de hn-proxy-service methodene'
 });
 
 describe('Gitt at baseCrud er definert', () => {
-  const fetchMock = jest.spyOn(global, 'fetch');
-
   describe('Når get kalles get', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
+      const response = new Response(JSON.stringify({}), {
+        headers: createHeaders(),
+        status: 200,
+      });
+      const mockFetchPromise = Promise.resolve(response);
+      const fetchMock = jest.spyOn(window, 'fetch').mockImplementation(() => mockFetchPromise);
+
       get('tokenserviceinternal', 'v1/ActiveTokens', { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(1);
 
@@ -274,6 +214,13 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles post', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
+      const response = new Response(JSON.stringify({}), {
+        headers: createHeaders(),
+        status: 200,
+      });
+      const mockFetchPromise = Promise.resolve(response);
+      const fetchMock = jest.spyOn(window, 'fetch').mockImplementation(() => mockFetchPromise);
+
       post('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(2);
 
@@ -298,6 +245,13 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles put', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
+      const response = new Response(JSON.stringify({}), {
+        headers: createHeaders(),
+        status: 200,
+      });
+      const mockFetchPromise = Promise.resolve(response);
+      const fetchMock = jest.spyOn(window, 'fetch').mockImplementation(() => mockFetchPromise);
+
       put('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(3);
 
@@ -322,6 +276,13 @@ describe('Gitt at baseCrud er definert', () => {
 
   describe('Når get kalles remove', () => {
     it('Så kalles det fetch med riktig argumenter', () => {
+      const response = new Response(JSON.stringify({}), {
+        headers: createHeaders(),
+        status: 200,
+      });
+      const mockFetchPromise = Promise.resolve(response);
+      const fetchMock = jest.spyOn(window, 'fetch').mockImplementation(() => mockFetchPromise);
+
       remove('tokenserviceinternal', 'api/v1/ActiveTokens', { data: 'mydata' }, { testParam: 3 });
       expect(fetchMock).toHaveBeenCalledTimes(4);
 
@@ -346,7 +307,7 @@ describe('Gitt at baseCrud er definert', () => {
 });
 
 describe('gitt at get kalles', () => {
-  const fetchMock = jest.spyOn(global, 'fetch');
+  const fetchMock = jest.spyOn(window, 'fetch');
   afterEach(() => {
     jest.clearAllMocks();
   });
@@ -382,7 +343,7 @@ describe('gitt at get kalles', () => {
         statusText: 'Not found',
       });
       const mockFetchPromise = Promise.resolve(response);
-      jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+      jest.spyOn(window, 'fetch').mockImplementation(() => mockFetchPromise);
 
       try {
         await get('tokenserviceinternal', 'v1/ActiveTokens');
@@ -403,7 +364,7 @@ describe('Når APIet svarer med en 429-feil og content-type er application/json'
       statusText: 'Too Many Requests',
     });
     const mockFetchPromise = Promise.resolve(response);
-    jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
+    jest.spyOn(window, 'fetch').mockImplementation(() => mockFetchPromise);
 
     try {
       await get('koronasertifikat', 'v1/CoronaCertificate');
