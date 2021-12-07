@@ -58,8 +58,6 @@ describe('Has-pdf', () => {
         });
 
         jest.runAllTimers();
-        const flushPromises = () => new Promise(setImmediate);
-        await flushPromises();
         expect(window.open).toHaveBeenCalled();
         global.navigator['mimeTypes'] = originalNavigatorMimeTypes;
       });
@@ -83,8 +81,7 @@ describe('Has-pdf', () => {
         });
 
         jest.runAllTimers();
-        const flushPromises = () => new Promise(setImmediate);
-        await flushPromises();
+
         expect(window.open).toHaveBeenCalled();
         global.navigator['mimeTypes'] = originalNavigatorMimeTypes;
         window['open'] = originalWindowOpen;
