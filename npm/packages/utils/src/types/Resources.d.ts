@@ -6221,7 +6221,7 @@ export type HNMinHelseDinFastlegeJS = {
   */
   dfl_DigitaleTjenester_FornyResept_TilbysText2: string;
   /** 
-  * Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. Ring 113 for øyeblikkelig hjelp. Når du har kontakt med fastlegen på nett får du svar senest innen fem arbeidsdager. Av sikkerhetsmessige årsaker blir du automatisk logget ut etter 30 minutter. Bruker du lenger tid enn dette kan du miste det du har skrevet.
+  * Trenger du hjelp utenom arbeidstid, kontakt legevakt på telefon 116 117. Ring 113 for øyeblikkelig hjelp. Når du har kontakt med fastlegen på nett får du svar senest innen fem arbeidsdager. Av sikkerhetsmessige årsaker blir du automatisk logget ut etter 30 minutter. Bruker du lenger tid enn dette kan du miste det du har skrevet.
   */
   dfl_DigitaleTjenester_Info: string;
   /** 
