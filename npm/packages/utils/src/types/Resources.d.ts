@@ -4513,7 +4513,7 @@ senere.
   */
   webPart_Sf_TabTitle: string;
   /** 
-  * Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. Ring 113 for øyeblikkelig hjelp. <br> Når du har <a href="/kontakt-fastlegen/hva-er-e-konsultasjon"> kontakt med fastlegen på nett </a> får du svar senest innen fem arbeidsdager. <br> Av sikkerhetsmessige årsaker blir du automatisk logget ut etter 30 minutter. Bruker du lenger tid enn dette kan du miste det du har skrevet.
+  * Trenger du hjelp utenom arbeidstid, kontakt legevakt på telefon 116 117. Ring 113 for øyeblikkelig hjelp. <br> Når du har <a href="/kontakt-fastlegen/hva-er-e-konsultasjon"> kontakt med fastlegen på nett </a> får du svar senest innen fem arbeidsdager. <br> Av sikkerhetsmessige årsaker blir du automatisk logget ut etter 30 minutter. Bruker du lenger tid enn dette kan du miste det du har skrevet.
   */
   webPart_Sf_TabTitleWarning: string;
   /** 
@@ -4545,7 +4545,7 @@ senere.
   */
   webPart_GPInfo_Title_OpenHours: string;
   /** 
-  * Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. Ring 113 for øyeblikkelig hjelp.<br> Når du har <a href="/kontakt-fastlegen/hva-er-e-konsultasjon"> kontakt med fastlegen på nett </a> får du svar senest innen fem arbeidsdager.
+  * Trenger du hjelp utenom arbeidstid, kontakt legevakt på telefon 116 117. Ring 113 for øyeblikkelig hjelp.<br> Når du har <a href="/kontakt-fastlegen/hva-er-e-konsultasjon"> kontakt med fastlegen på nett </a> får du svar senest innen fem arbeidsdager.
   */
   webPart_GPInfo_Title_ServiceOfferDescription: string;
   /** 
