@@ -5,15 +5,16 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'import'],
+  plugins: ['react', 'import', 'testing-library'],
   rules: {
-    '@typescript-eslint/camelcase': 0,
-    '@typescript-eslint/explicit-function-return-type': 1,
-    '@typescript-eslint/no-empty-interface': 1,
-    '@typescript-eslint/no-explicit-any': 2,
-    'react/jsx-no-literals': 2,
-    'no-console': 2,
-    'no-debugger': 2,
+    '@typescript-eslint/ban-types': 'warn',
+    '@typescript-eslint/explicit-function-return-type': 'warn',
+    '@typescript-eslint/no-empty-interface': 'warn',
+    '@typescript-eslint/no-explicit-any': 'error',
+    'react/jsx-no-literals': 'error',
+    'react/display-name': 'warn',
+    'no-console': 'error',
+    'no-debugger': 'error',
     'import/order': [
       'warn',
       {
@@ -118,4 +119,11 @@ module.exports = {
       version: 'detect',
     },
   },
+  overrides: [
+    {
+      // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching files!
+      files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
+    },
+  ],
 };

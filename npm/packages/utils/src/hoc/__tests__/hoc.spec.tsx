@@ -1,11 +1,14 @@
 import React from 'react';
-import { MemoryRouter as Router, Route } from 'react-router-dom';
-import { act } from 'react-dom/test-utils';
-import * as adobeUtils from '../../adobe-analytics';
+
 import { mount } from 'enzyme';
-import mountHOC from '../mount';
+import * as History from 'history';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter as Router, Route } from 'react-router-dom';
+
+import * as adobeUtils from '../../adobe-analytics';
 import becameVisible from '../became-visible';
 import layoutChange from '../layout-change';
+import mountHOC from '../mount';
 import RenderToBody from '../render-to-body';
 import TrackRouteChange from '../track-route-change';
 
@@ -145,16 +148,15 @@ describe('HOC utils', () => {
     describe('Når route endres', () => {
       it('Så kaller den adobe-analytics', async () => {
         const adobeMock = jest.spyOn(adobeUtils, 'trackPageview');
-        let testHistory: any, testLocation: any;
+        let testHistory: History.History<History.History.PoorMansUnknown>;
 
         const wrapper = mount(
           <Router>
             <TrackRouteChange>
               <Route
                 path="*"
-                render={({ history, location }) => {
+                render={({ history }) => {
                   testHistory = history;
-                  testLocation = location;
                   return null;
                 }}
               />
