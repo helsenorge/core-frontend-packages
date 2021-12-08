@@ -436,19 +436,14 @@ export function download(cmd: string, params?: any): Promise<OperationResponse |
         const fileName = respObj.fileName;
 
         respObj.blobPromise.then(function(blob) {
-          if (window.navigator && window.navigator.msSaveOrOpenBlob) {
-            window.navigator.msSaveOrOpenBlob(blob, fileName);
-            resolve();
-          } else {
-            const a = document.createElement('a');
-            document.body.appendChild(a);
-            url = window.URL.createObjectURL(blob);
-            a.href = url;
-            a.download = fileName;
-            a.click();
-            window.URL.revokeObjectURL(url);
-            resolve();
-          }
+          const a = document.createElement('a');
+          document.body.appendChild(a);
+          url = window.URL.createObjectURL(blob);
+          a.href = url;
+          a.download = fileName;
+          a.click();
+          window.URL.revokeObjectURL(url);
+          resolve();
         });
       })
       .catch(function(error: string | TypeError) {
