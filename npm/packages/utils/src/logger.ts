@@ -23,7 +23,7 @@ const unwrapError = (potentialError: Error | Array<Error | string> | string): st
   if (potentialError instanceof Error) {
     return potentialError.message + ' Stack: ' + potentialError.stack;
   } else if (typeof potentialError === 'string' || potentialError instanceof String) {
-    return (potentialError as unknown) as string;
+    return potentialError as unknown as string;
   } else if (potentialError.length > 0) {
     const innerError = potentialError[0];
     return unwrapError(innerError);
@@ -67,7 +67,7 @@ export const logToServer = (level: LogLevel, message?: string, ...optionalParams
  * Lager en event listener på errors og logger error til serveren
  */
 export const captureErrors = (): void => {
-  window.addEventListener('error', function(e: ErrorEvent) {
+  window.addEventListener('error', function (e: ErrorEvent) {
     let message = e.message;
     const error = e.error;
     if (error) {
@@ -156,18 +156,6 @@ export const dirxml = (value: unknown): void => {
  * @param optionalParams params som sendes til console.error og logges til serveren
  */
 export const error = (message?: string, ...optionalParams: unknown[]): void => {
-  if (process.env.NODE_ENV !== 'production') {
-    console.error(message, optionalParams);
-  }
-  exportFunctions.logToServer(LogLevel.Error, message, optionalParams);
-};
-
-/**
- * Lager en console.error og logger til serveren
- * @param message - string som sendes i console.error og logges til serveren
- * @param optionalParams params som sendes til console.error og logges til serveren
- */
-export const exception = (message?: string, ...optionalParams: unknown[]): void => {
   if (process.env.NODE_ENV !== 'production') {
     console.error(message, optionalParams);
   }
@@ -313,7 +301,6 @@ const exportFunctions = {
   dir,
   dirxml,
   error,
-  exception,
   group,
   groupCollapsed,
   groupEnd,
