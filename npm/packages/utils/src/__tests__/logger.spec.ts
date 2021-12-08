@@ -9,7 +9,6 @@ describe('Logger', () => {
   process.env['NODE_ENV'] = 'dev';
   const originalConsole = global.console;
   // adding console functions that are undefined
-  console.exception = () => {};
   console.profile = () => {};
   console.profileEnd = () => {};
 
@@ -83,19 +82,6 @@ describe('Logger', () => {
       });
     });
 
-    describe('Når exception kalles', () => {
-      it('Så logges det riktig', () => {
-        const consoleMock = jest.spyOn(global.console, 'exception');
-        try {
-          loggerUtils.exception('exception message', 'exception blabla');
-        } catch (e) {
-          expect(consoleMock.mock.calls[0][0]).toEqual('exception message');
-          expect(consoleMock.mock.calls[0][1]).toEqual(['exception blabla']);
-          expect(logToServerMock.mock.calls[2][0]).toEqual(['exception message']);
-        }
-      });
-    });
-
     describe('Når group kalles', () => {
       it('Så logges det riktig', () => {
         const consoleMock = jest.spyOn(global.console, 'group');
@@ -126,7 +112,7 @@ describe('Logger', () => {
         loggerUtils.info('info message', 'info blabla');
         expect(consoleMock.mock.calls[0][0]).toEqual('info message');
         expect(consoleMock.mock.calls[0][1]).toEqual(['info blabla']);
-        expect(logToServerMock.mock.calls[3][1]).toEqual('info message');
+        expect(logToServerMock.mock.calls[2][1]).toEqual('info message');
       });
     });
 
@@ -185,7 +171,7 @@ describe('Logger', () => {
         loggerUtils.trace('trace message', 'trace blabla');
         expect(consoleMock.mock.calls[0][0]).toEqual('trace message');
         expect(consoleMock.mock.calls[0][1]).toEqual(['trace blabla']);
-        expect(logToServerMock.mock.calls[4][1]).toEqual('trace message');
+        expect(logToServerMock.mock.calls[3][1]).toEqual('trace message');
       });
     });
 
@@ -195,7 +181,7 @@ describe('Logger', () => {
         loggerUtils.warn('warn message', 'warn blabla');
         expect(consoleMock.mock.calls[0][0]).toEqual('warn message');
         expect(consoleMock.mock.calls[0][1]).toEqual(['warn blabla']);
-        expect(logToServerMock.mock.calls[5][1]).toEqual('warn message');
+        expect(logToServerMock.mock.calls[4][1]).toEqual('warn message');
       });
     });
   });
