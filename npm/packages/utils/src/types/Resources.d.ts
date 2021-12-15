@@ -547,7 +547,7 @@ export type HNDialogCommonJS = {
   */
   bookingSubHeaderVaccination: string;
   /** 
-  * Ingen ledige timer denne dagen. Virksomheten kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
   /** 
@@ -643,7 +643,7 @@ export type HNDialogCommonJS = {
   */
   bookingEmptyText: string;
   /** 
-  * Ingen ledige timer denne dagen. Behandleren kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbud: string;
   /** 
