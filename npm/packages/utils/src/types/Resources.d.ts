@@ -639,7 +639,7 @@ export type HNDialogCommonJS = {
   */
   bookingDisabledText: string;
   /** 
-  * Ingen ledige timer denne dagen. Legekontoret kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Legekontoret kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyText: string;
   /** 
