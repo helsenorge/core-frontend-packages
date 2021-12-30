@@ -547,7 +547,7 @@ export type HNDialogCommonJS = {
   */
   bookingSubHeaderVaccination: string;
   /** 
-  * Ingen ledige timer denne dagen. Virksomheten kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
   /** 
@@ -639,11 +639,11 @@ export type HNDialogCommonJS = {
   */
   bookingDisabledText: string;
   /** 
-  * Ingen ledige timer denne dagen. Legekontoret kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Legekontoret kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyText: string;
   /** 
-  * Ingen ledige timer denne dagen. Behandleren kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbud: string;
   /** 
@@ -4513,7 +4513,7 @@ senere.
   */
   webPart_Sf_TabTitle: string;
   /** 
-  * Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. Ring 113 for øyeblikkelig hjelp. <br> Når du har <a href="/kontakt-fastlegen/hva-er-e-konsultasjon"> kontakt med fastlegen på nett </a> får du svar senest innen fem arbeidsdager. <br> Av sikkerhetsmessige årsaker blir du automatisk logget ut etter 30 minutter. Bruker du lenger tid enn dette kan du miste det du har skrevet.
+  * Trenger du hjelp utenom arbeidstid, kontakt legevakt på telefon 116 117. Ring 113 for øyeblikkelig hjelp. <br> Når du har <a href="/kontakt-fastlegen/hva-er-e-konsultasjon"> kontakt med fastlegen på nett </a> får du svar senest innen fem arbeidsdager. <br> Av sikkerhetsmessige årsaker blir du automatisk logget ut etter 30 minutter. Bruker du lenger tid enn dette kan du miste det du har skrevet.
   */
   webPart_Sf_TabTitleWarning: string;
   /** 
@@ -4545,7 +4545,7 @@ senere.
   */
   webPart_GPInfo_Title_OpenHours: string;
   /** 
-  * Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. Ring 113 for øyeblikkelig hjelp.<br> Når du har <a href="/kontakt-fastlegen/hva-er-e-konsultasjon"> kontakt med fastlegen på nett </a> får du svar senest innen fem arbeidsdager.
+  * Trenger du hjelp utenom arbeidstid, kontakt legevakt på telefon 116 117. Ring 113 for øyeblikkelig hjelp.<br> Når du har <a href="/kontakt-fastlegen/hva-er-e-konsultasjon"> kontakt med fastlegen på nett </a> får du svar senest innen fem arbeidsdager.
   */
   webPart_GPInfo_Title_ServiceOfferDescription: string;
   /** 
@@ -6221,7 +6221,7 @@ export type HNMinHelseDinFastlegeJS = {
   */
   dfl_DigitaleTjenester_FornyResept_TilbysText2: string;
   /** 
-  * Trenger du hjelp utenom arbeidstid, kontakt nærmeste legevakt. Ring 113 for øyeblikkelig hjelp. Når du har kontakt med fastlegen på nett får du svar senest innen fem arbeidsdager. Av sikkerhetsmessige årsaker blir du automatisk logget ut etter 30 minutter. Bruker du lenger tid enn dette kan du miste det du har skrevet.
+  * Trenger du hjelp utenom arbeidstid, kontakt legevakt på telefon 116 117. Ring 113 for øyeblikkelig hjelp. Når du har kontakt med fastlegen på nett får du svar senest innen fem arbeidsdager. Av sikkerhetsmessige årsaker blir du automatisk logget ut etter 30 minutter. Bruker du lenger tid enn dette kan du miste det du har skrevet.
   */
   dfl_DigitaleTjenester_Info: string;
   /** 
