@@ -333,8 +333,8 @@ describe('gitt at get kalles', () => {
   describe('Når fetch klarer å hente, men APIet svarer med en feilmelding', () => {
     it('Så kastes det en exception, men det logges ikke en warning', async () => {
       const mockErrorResponse = {
-        error: {
-          message: 'Fant ikke siden',
+        Error: {
+          Message: 'Fant ikke siden',
         },
       };
       const response = new Response(JSON.stringify(mockErrorResponse), {
@@ -348,7 +348,10 @@ describe('gitt at get kalles', () => {
       try {
         await get('tokenserviceinternal', 'v1/ActiveTokens');
       } catch (error) {
-        expect(error).toEqual(mockErrorResponse);
+        expect(error).toEqual({
+          StatusCode: 404,
+          Error: { Message: 'Fant ikke siden' },
+        });
       }
 
       expect(mockLogger.warn).toHaveBeenCalledTimes(0);

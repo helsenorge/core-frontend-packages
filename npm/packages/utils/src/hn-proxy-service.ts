@@ -176,7 +176,7 @@ const checkStatus = <T>(response: Response): Promise<T | null> => {
         // redirect dersom token er utgått eller ugyldig
         window.location.href = `${getTjenesterUrl()}/auth/autosignout`;
       }
-      throw err;
+      throw { StatusCode: response.status, ...err };
     });
   }
   throw {
