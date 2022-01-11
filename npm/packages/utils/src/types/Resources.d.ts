@@ -11145,9 +11145,13 @@ export type HNMinHelseNavigation = {
   */
   tile_Koronasertifikat_Description: string;
   /** 
-  * 
+  * Varsle om alvorlig hendelse
   */
   tile_MeldeHendelse_Title: string;
+  /** 
+  * Meld fra om alvorlige hendelser i helsetjenesten.
+  */
+  tile_MeldeHendelse_Description: string;
   /** 
   * Si fra om bivirkninger på legemidler og vaksiner
   */
