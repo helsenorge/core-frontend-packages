@@ -11145,6 +11145,10 @@ export type HNMinHelseNavigation = {
   */
   tile_Koronasertifikat_Description: string;
   /** 
+  * 
+  */
+  tile_MeldeHendelse_Title: string;
+  /** 
   * Si fra om bivirkninger på legemidler og vaksiner
   */
   tile_EksterneTjenester_Bivirkninger_Description: string;
