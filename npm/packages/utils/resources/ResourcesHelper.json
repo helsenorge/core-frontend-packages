@@ -3441,6 +3441,7 @@
     "filterChosen": "valgt",
     "filterHeading": "Filtrer visning",
     "filterHideFilter": "Finn dokument",
+    "pasientjournal_stempel_kontekst": "pasientjournal",
     "tilgangslogg_LokasjonFeil_Varsel_Title": "Listen er muligens ikke komplett",
     "tilgangslogg_LokasjonFeil_Varsel_Body": "Logg fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelig.",
     "xDS_LokasjonFeil_OUSHF_U1": "Oslo universitetssykehus HF (U1)",
