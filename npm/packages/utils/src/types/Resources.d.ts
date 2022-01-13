@@ -13757,6 +13757,10 @@ export type HNMinHelsePasientjournal = {
   */
   filterHideFilter: string;
   /** 
+  * pasientjournal
+  */
+  pasientjournal_stempel_kontekst: string;
+  /** 
   * Listen er muligens ikke komplett
   */
   tilgangslogg_LokasjonFeil_Varsel_Title: string;
