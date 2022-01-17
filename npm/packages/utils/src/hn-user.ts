@@ -9,7 +9,6 @@ declare let HN: {
     __RepresentedUser__: string;
     __AvatarColor__: number;
     __HasRepresentation__: boolean;
-    __ShowWelcome__: boolean;
     __VisPersonvelger__: boolean;
     __NewSocialSecurityNumber__: string;
     __ShowBruksvilkar__: boolean;
@@ -69,14 +68,6 @@ export const getHasRepresentation = (): boolean => {
 };
 
 /**
- * Returnerer verdien satt på HN User __ShowWelcome__
- * DEPRECATED: Bruk getVisPersonvelger() i stedet
- */
-export const getShowWelcome = (): boolean => {
-  return HN.User.__ShowWelcome__;
-};
-
-/**
  * Returnerer verdien satt på HN User __VisPersonvelger__
  */
 export const getVisPersonvelger = (): boolean => {
@@ -88,8 +79,6 @@ export const getVisPersonvelger = (): boolean => {
  */
 export const setVisPersonvelger = (visPersonvelger: boolean): void => {
   HN.User.__VisPersonvelger__ = visPersonvelger;
-  // TODO: Kan fjernes når getShowWelcome/HN.User.__ShowWelcome__ fases ut
-  HN.User.__ShowWelcome__ = visPersonvelger;
 };
 
 /**
