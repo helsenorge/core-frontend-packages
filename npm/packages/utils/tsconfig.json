@@ -9,6 +9,6 @@
     "baseUrl": ".",
     "typeRoots": ["../../../node_modules/@types", "node_modules/@types", "src/types"]
   },
-  "exclude": ["./node_modules", "**/__devonly__/**"],
+  "exclude": ["./node_modules", "**/__devonly__/**", "**/__tests__/*"],
   "include": ["src/**/*.ts", "src/**/*.tsx", "development/index.tsx"]
 }

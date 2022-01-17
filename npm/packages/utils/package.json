@@ -16,8 +16,12 @@
     "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx} --quiet",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
+    "prettier:fix": "npm run prettier -- --write",
+    "pretypecheck": "tsc -v",
+    "typecheck": "tsc --noEmit",
     "test:watch": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --watch",
     "helsenorge-notify": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js notify"
   },
@@ -27,6 +31,9 @@
   ],
   "license": "ISC",
   "type": "module",
+  "peerDependencies": {
+    "@helsenorge/designsystem-react": "^1.0.0-beta"
+  },
   "devDependencies": {
     "@helsenorge/core-build": "^21.3.1",
     "@helsenorge/designsystem-react": "1.0.0-alpha-nye-spacers-5",
