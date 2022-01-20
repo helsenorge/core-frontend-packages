@@ -3071,10 +3071,6 @@ export type HNMinHelseCommonJS = {
   */
   filterMobileNavigateBack: string;
   /** 
-  * Du har foreldreansvar
-  */
-  innbyggermenyForeldrerepresentasjon: string;
-  /** 
   * Du har fullmakt
   */
   innbyggermenyFullmakt: string;
