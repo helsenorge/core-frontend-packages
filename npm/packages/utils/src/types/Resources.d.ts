@@ -3171,10 +3171,6 @@ export type HNMinHelseCommonJS = {
   */
   unknownErrorAction: string;
   /** 
-  * Du står her:
-  */
-  breadCrumb_Description: string;
-  /** 
   * Trenger du hjelp til å logge inn?
   */
   startInfoPanel_helpLink: string;
@@ -3218,10 +3214,6 @@ export type HNMinHelseCommonJS = {
   * Forside
   */
   breadCrumb_home: string;
-  /** 
-  * Forside
-  */
-  breadCrumb_MinHelse: string;
   /** 
   * Jeg forstår og vil gå videre
   */
