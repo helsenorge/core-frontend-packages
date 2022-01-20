@@ -2765,26 +2765,6 @@ export type HNMinHelseCommonJS = {
   */
   noResults: string;
   /** 
-  * Avbryt
-  */
-  personvelgerAvbryt: string;
-  /** 
-  * Bytt person
-  */
-  personvelgerByttBruker: string;
-  /** 
-  * Vær oppmerksom på at samtykker og reservasjoner på denne siden gjelder {0}, ikke deg selv.
-  */
-  personvelgerChildIsSelectedInfo: string;
-  /** 
-  * Meg selv
-  */
-  personvelgerDefaultSelectValue: string;
-  /** 
-  * Det er for tiden ikke mulig å se data om eventuelle barn.
-  */
-  personvelgerErrorLabel: string;
-  /** 
   * For å kunne være innlogget på Helsenorge må først en av foreldrene dine samtykke til bruk av Helsenorge på dine vegne. Før de har samtykket kan du ikke være logget inn.
   */
   samtykkeInfoPopupMellom12Og16Innhold: string;
@@ -2907,42 +2887,6 @@ export type HNMinHelseCommonJS = {
   */
   filterDateErrorBeforeMinDate: string;
   /** 
-  * du har foreldreansvar
-  */
-  personvelgerForeldrerepresentasjon: string;
-  /** 
-  * du har fullmakt
-  */
-  personvelgerFullmakt: string;
-  /** 
-  * Du ser helseopplysningene til
-  */
-  personvelgerLabel: string;
-  /** 
-  * Lukk
-  */
-  personvelgerLukk: string;
-  /** 
-  * OK
-  */
-  personvelgerOK: string;
-  /** 
-  * Velg hvem du vil se helseopplysningene til
-  */
-  personvelgerPopUpHeader: string;
-  /** 
-  * Jeg samtykker i at min aktivitet på vegne av andre logges
-  */
-  personvelgerSamtykkeChkLabel: string;
-  /** 
-  * Du bytter nå til å se helseopplysningene til
-  */
-  personvelgerSamtykkeHeader: string;
-  /** 
-  * Du bytter nå tilbake til å se dine egne helseopplysninger
-  */
-  personvelgerSamtykkeHeaderSelf: string;
-  /** 
   * Fjern dette elementet
   */
   helpItemCloseButton: string;
@@ -3059,21 +3003,9 @@ export type HNMinHelseCommonJS = {
   */
   filterMobileNavigateBack: string;
   /** 
-  * Du har fullmakt
-  */
-  innbyggermenyFullmakt: string;
-  /** 
-  * Fullmakter
-  */
-  innbyggermenyFullmakter: string;
-  /** 
   * /fullmakter
   */
   innbyggermenyFullmakterUrl: string;
-  /** 
-  * Se helseopplysninger til...
-  */
-  innbyggermenyHeader: string;
   /** 
   * Deg
   */
