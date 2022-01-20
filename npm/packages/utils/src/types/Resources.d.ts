@@ -2765,18 +2765,6 @@ export type HNMinHelseCommonJS = {
   */
   noResults: string;
   /** 
-  * Lukk velkomstflis
-  */
-  welcomeTileClose: string;
-  /** 
-  * Ikke vis igjen
-  */
-  welcomeTileDontShowAgain: string;
-  /** 
-  * Les mer...
-  */
-  welcomeTileReadMore: string;
-  /** 
   * Avbryt
   */
   personvelgerAvbryt: string;
