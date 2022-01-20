@@ -3945,7 +3945,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Legemidler_Description: string;
   /** 
-  * Opplysninger om hvilke sykdommer du er vaksinert mot og når vaksinen er satt, er basert på innrapportering fra vaksinasjonsstedet.
+  * Opplysninger om hvilke sykdommer du er vaksinert mot og når vaksinen er satt, er basert på innrapportering fra vaksinasjonsstedet. Du finner flere detaljer om dine vaksinasjoner i <a href="/direkteinnsyn?Register=SYSVAK">Nasjonalt vaksinasjonsregister SYSVAK</a>.
   */
   page_Vaksiner_Desc: string;
   /** 
