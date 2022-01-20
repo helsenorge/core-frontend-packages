@@ -105,7 +105,7 @@ describe('Gitt at web component skal consumeres', () => {
       );
 
       await expect(global.fetch).toHaveBeenCalledTimes(1);
-      await expect(global.fetch).toHaveBeenCalledWith('mydomain/assets.json');
+      await expect(global.fetch).toHaveBeenCalledWith('mydomain/assets.json', {'cache': 'no-cache'});
       await expect(isCustomElementRegisteredMock).toHaveBeenCalledWith('hn-component');
       await expect(webCompFromMicroFrontend.render()).toMatchSnapshot();
     });
