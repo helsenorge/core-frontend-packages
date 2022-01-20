@@ -3007,29 +3007,13 @@ export type HNMinHelseCommonJS = {
   */
   innbyggermenyFullmakterUrl: string;
   /** 
-  * Deg
-  */
-  innbyggermenyInnloggetBruker: string;
-  /** 
-  * Valgt
-  */
-  innbyggermenyValgtBruker: string;
-  /** 
   * Innlogget som:
   */
   innbyggermenyInnloggetPrefix: string;
   /** 
-  * Logg ut
-  */
-  innbyggermenyLoggUt: string;
-  /** 
   * /auth/signout
   */
   innbyggermenyLoggUtUrl: string;
-  /** 
-  * Profil og innstillinger
-  */
-  innbyggermenyProfilHeader: string;
   /** 
   * Sist innlogget:
   */
@@ -3050,26 +3034,6 @@ export type HNMinHelseCommonJS = {
   * Kunne ikke hente hjelpeinfo. Prøv igjen senere, eller kontakt Veiledning helsenorge.no på telefon 23 32 70 00.
   */
   prosessHjelpErrorDescription: string;
-  /** 
-  * Velg helseregion
-  */
-  regionPopup_Heading: string;
-  /** 
-  * Helse Nord
-  */
-  regionPopup_HelseNord: string;
-  /** 
-  * Helse Vest
-  */
-  regionPopup_HelseVest: string;
-  /** 
-  * Du kan se pasientjournalen din i regionene Helse Nord og Helse Vest.
-  */
-  regionPopup_Intro: string;
-  /** 
-  * Lukk
-  */
-  regionPopup_Lukk: string;
   /** 
   * Antall nye meldinger
   */
@@ -3114,10 +3078,6 @@ export type HNMinHelseCommonJS = {
   * Samtykket ditt er oppdatert
   */
   samtykkeInfoPopupKonvertertOverskrift: string;
-  /** 
-  * Helsenorge har oppdatert samtykket ditt på grunn av nytt personvernregelverk. Dette medfører ingen endringer for din bruk av Helsenorge. Dersom du ønsker, kan du <a href="https://tjenester.helsenorge.no/personverninnstillinger">forandre på samtykkene dine</a>.
-  */
-  samtykkeInfoPopupKonvertertInnhold: string;
   /** 
   * Du må fornye samtykket ditt
   */
@@ -3211,18 +3171,6 @@ export type HNMinHelseCommonJS = {
   */
   unknownErrorAction: string;
   /** 
-  * Du kan prøve igjen senere.
-  */
-  bruksvilkar_popup_error_description: string;
-  /** 
-  * Det gikk ikke å lagre samtykket ditt.
-  */
-  bruksvilkar_popup_error_message: string;
-  /** 
-  * Bruksvilkår for Min helse
-  */
-  bruksvilkar_popup_header: string;
-  /** 
   * Du står her:
   */
   breadCrumb_Description: string;
@@ -3250,14 +3198,6 @@ export type HNMinHelseCommonJS = {
   * helsenorge.no
   */
   header_home: string;
-  /** 
-  * Logg ut
-  */
-  bruksvilkar_popup_logout_button: string;
-  /** 
-  * Jeg samtykker
-  */
-  bruksvilkar_popup_ok_button: string;
   /** 
   * Lukk
   */
