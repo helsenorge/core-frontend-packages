@@ -2753,10 +2753,6 @@ export type HNMinHelseCommonJS = {
   */
   chosen: string;
   /** 
-  * /auth/signin
-  */
-  innbyggermenyLoggInnUrl: string;
-  /** 
   * Mer hjelp.
   */
   moreHelp: string;
@@ -2899,10 +2895,6 @@ export type HNMinHelseCommonJS = {
   */
   gaTilSkjema: string;
   /** 
-  * Logg inn
-  */
-  innbyggermenyLoggInn: string;
-  /** 
   * Vis hjelp
   */
   helpDrawerToggleHelpButton: string;
@@ -3003,22 +2995,6 @@ export type HNMinHelseCommonJS = {
   */
   filterMobileNavigateBack: string;
   /** 
-  * /fullmakter
-  */
-  innbyggermenyFullmakterUrl: string;
-  /** 
-  * Innlogget som:
-  */
-  innbyggermenyInnloggetPrefix: string;
-  /** 
-  * /auth/signout
-  */
-  innbyggermenyLoggUtUrl: string;
-  /** 
-  * Sist innlogget:
-  */
-  innbyggermenySistInnlogget: string;
-  /** 
   * Påminnelse
   */
   paminnelse: string;
@@ -3042,10 +3018,6 @@ export type HNMinHelseCommonJS = {
   * Lukk
   */
   helpBubbleClose: string;
-  /** 
-  * Min helse
-  */
-  helsetjenesterTitle: string;
   /** 
   * Innhold i ulike helseregistre
   */
@@ -3226,14 +3198,6 @@ export type HNMinHelseCommonJS = {
   * Lukk
   */
   start_confirmation_close: string;
-  /** 
-  * På grunn av overgang til nytt fødselsnummer, kan enkelte tjenester være utilgjengelige en periode.
-  */
-  newSocialSecurityNumber_InformationDescription: string;
-  /** 
-  * Vi beklager!
-  */
-  newSocialSecurityNumber_InformationMessage: string;
   /** 
   * Når du logger inn får du tilgang på tjenester som hjelper deg å følge opp egen helse. Flere tjenester er under utvikling. Du ser også tjenester som er under utprøving i utvalgte områder i Norge. Etter hvert kan du benytte flere tjenester på vegne av dine barn og de som har gitt deg fullmakt.
   */
