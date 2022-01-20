@@ -3620,50 +3620,255 @@ export type HNMinHelseCommonJS = {
   pageNotFoundToStart: string;
 };
 
-export type HNMinHelseCommon = { 
-  /** 
-  * Du kan prøve igjen senere.
-  */
-  bruksvilkarPopup_ErrorDescription: string;
-  /** 
-  * Det gikk ikke å lagre samtykket ditt.
-  */
-  bruksvilkarPopup_ErrorMessage: string;
-  /** 
-  * Bruksvilkår for Min helse
-  */
-  bruksvilkarPopup_Header: string;
-  /** 
-  * Logg ut
-  */
-  bruksvilkarPopup_LogOutButton: string;
-  /** 
-  * Jeg samtykker
-  */
-  bruksvilkarPopup_OkButton: string;
-  /** 
-  * Helse Nord
-  */
-  regionPopup_HelseNord: string;
-  /** 
-  * Helse Vest
-  */
-  regionPopup_HelseVest: string;
-  /** 
-  * Lukk
-  */
-  regionPopup_Lukk: string;
-  /** 
-  * Velg helseregion
-  */
-  regionPopup_Heading: string;
-  /** 
-  * Du kan se pasientjournalen din i regionene Helse Nord og Helse Vest.
-  */
-  regionPopup_Intro: string;
-};
-
 export type HNMinHelseContent = { 
+  /** 
+  * Velg hvordan du vil ta kontakt
+  */
+  page_TriageringTjenester_Title: string;
+  /** 
+  * Samtykkeoppgave
+  */
+  page_Samtykkeoppgave_Title: string;
+  /** 
+  * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
+  */
+  page_NotAccessToService_Link_Text: string;
+  /** 
+  * <a class="Page_AskForAccessToService_Link_Text" href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no">Mer informasjon om hvordan representere andre på Helsenorge</a>
+  */
+  page_AskForAccessToService_Link_Text: string;
+  /** 
+  * Gå til forsiden
+  */
+  page_feilmelding_link_text: string;
+  /** 
+  * Logg over bruk
+  */
+  page_HendelsesLogg_Title: string;
+  /** 
+  * Fullmakter
+  */
+  page_Fullmakt_Title: string;
+  /** 
+  * <p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
+  */
+  page_Fullmakt_Description: string;
+  /** 
+  * Helsenorge – din helse på nett
+  */
+  page_Forside_Title: string;
+  /** 
+  * Bruk og tilganger
+  */
+  page_BrukOgTilganger_Title: string;
+  /** 
+  * Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang.
+  */
+  page_BrukOgTilganger_Desc: string;
+  /** 
+  * Koronasertifikat
+  */
+  page_Koronasertifikat_Title: string;
+  /** 
+  * Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine, smittestatus og gyldighet.
+  */
+  page_Koronasertifikat_Desc: string;
+  /** 
+  * Koronasertifikat QR code testside
+  */
+  page_QrCode_Title: string;
+  /** 
+  * /provesvar
+  */
+  page_Provesvar_NavigateBackLinkURL: string;
+  /** 
+  * Tilbake til Prøvesvar
+  */
+  page_Provesvar_NavigateBackLinkTitle: string;
+  /** 
+  * Innboks
+  */
+  page_Innboks_Title: string;
+  /** 
+  * Samvalg
+  */
+  page_Samvalg_NavigateBackLinkTitle: string;
+  /** 
+  * {HelsenorgeUrl}/samvalg
+  */
+  page_Samvalg_NavigateBackLinkURL: string;
+  /** 
+  * Noe gikk dessverre galt
+  */
+  page_feilmelding_title: string;
+  /** 
+  * Hvis du prøver å logge inn kan du gjøre et nytt forsøk senere.
+  */
+  page_feilmelding_description: string;
+  /** 
+  * Kontaktinformasjon
+  */
+  page_Kontaktinformasjon_Title: string;
+  /** 
+  * Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.
+  */
+  page_Kontaktinformasjon_Description: string;
+  /** 
+  * Prøvesvar
+  */
+  page_Provesvar_Title: string;
+  /** 
+  * Her vises en oversikt over dine prøvesvar for koronavirus. Det kan også vises svar på andre typer virus og bakterier som kan gi luftveisinfeksjon.
+  */
+  page_Provesvar_Desc: string;
+  /** 
+  * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
+  */
+  page_Dokumenter_Desc: string;
+  /** 
+  * Velg behandlingssted
+  */
+  page_VelgBehandlingssted_Title: string;
+  /** 
+  * Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.
+  */
+  page_VelgBehandlingssted_Desc: string;
+  /** 
+  * Meldingssystem for smittsomme sykdommer (MSIS)
+  */
+  page_msis_Title: string;
+  /** 
+  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
+  */
+  page_msis_Desc: string;
+  /** 
+  * Personverninnstillinger
+  */
+  page_Personverninnstillinger_Title: string;
+  /** 
+  * Tilgangstyring av helseopplysninger
+  */
+  page_Tilgangsstyring_Title: string;
+  /** 
+  * Du kan selv gjøre endringer i egne eller andres tilgang til dine tjenester og helseopplysninger.
+  */
+  page_Tilgangsstyring_Desc: string;
+  /** 
+  * Personverninnstillinger
+  */
+  page_Tilgangsstyring_NavigateBackLinkTitle: string;
+  /** 
+  * /personverninnstillinger
+  */
+  page_Tilgangsstyring_NavigateBackLinkURL: string;
+  /** 
+  * Tilgangstyring av helseopplysninger
+  */
+  page_TilgangsstyringReseptformidleren_NavigateBackLinkTitle: string;
+  /** 
+  * /tilgangsstyring-av-helseopplysninger
+  */
+  page_TilgangsstyringReseptformidleren_NavigateBackLinkURL: string;
+  /** 
+  * Reseptformidleren
+  */
+  page_TilgangsstyringReseptformidleren_Title: string;
+  /** 
+  * Du kan begrense helsepersonells tilgang til legemiddelinformasjonen din, slik at de ikke kan se hvilke legemidler du bruker. Du må imidlertid være oppmerksom på at dersom du begrenser tilgangen kan det hindre deg i å motta forsvarlig helsehjelp.
+  */
+  page_TilgangsstyringReseptformidleren_Desc: string;
+  /** 
+  * Søk Helfo om refusjon
+  */
+  page_Okonomi_Title: string;
+  /** 
+  * Du sender søknad til Helfo ved å bruke et skjema i Altinn.
+  */
+  page_Okonomi_Desc: string;
+  /** 
+  * Resepter
+  */
+  page_Resepter_Service: string;
+  /** 
+  * Kjernejournal
+  */
+  page_KJ_Service: string;
+  /** 
+  * Pasientjournal
+  */
+  page_Document_Service: string;
+  /** 
+  * Reseptoversikt
+  */
+  page_Resepter_Service_Name: string;
+  /** 
+  * Verktøy kan være et nettkurs, app eller video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang til å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.
+  */
+  page_Verktoy_Desc: string;
+  /** 
+  * Verktøy
+  */
+  page_Verktoy_Title: string;
+  /** 
+  * Kjernejournal - innsyn
+  */
+  page_Kjernejournal_Innsyn_Title: string;
+  /** 
+  * Her ser du alt som er registrert om deg i din kjernejournal.
+  */
+  page_Kjernejournal_Innsyn_Desc: string;
+  /** 
+  * Nasjonalt vaksinasjonsregister SYSVAK
+  */
+  page_Sysvak_Title: string;
+  /** 
+  * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
+  */
+  page_Sysvak_Desc: string;
+  /** 
+  * til Helseregistre
+  */
+  page_Helseregistre_NavigateBackLinkTitle: string;
+  /** 
+  * /helseregistre
+  */
+  page_Helseregistre_NavigateBackLinkURL: string;
+  /** 
+  * Medisinsk fødselsregister (MFR)
+  */
+  page_Mfr_Title: string;
+  /** 
+  * Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.
+  */
+  page_Mfr_Desc: string;
+  /** 
+  * Innsyn
+  */
+  page_Visregisterinnsyn_Title: string;
+  /** 
+  * Her kan du finne og bytte fastlege, og se hvem som er fastlegen din nå.
+  */
+  page_BytteFastlege_MetaDesc: string;
+  /** 
+  * Her finner du tjenester som hjelper deg å følge opp din egen helse. Etter hvert kan du benytte flere tjenester på vegne av dine barn og de som har gitt deg fullmakt.
+  */
+  page_Start_MetaDesc: string;
+  /** 
+  * Sykdom og kritisk informasjon
+  */
+  page_SykdomOgKritiskInfo_Title: string;
+  /** 
+  * Her vises helseopplysninger som helsepersonell skal kjenne til ved undersøkelser og behandling.
+  */
+  page_SykdomOgKritiskInfo_Desc: string;
+  /** 
+  * Forskning i forbindelse med kliniske studier har som formål å undersøke effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.<br/>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden.
+  */
+  page_Forskning_Desc: string;
+  /** 
+  * Forskning
+  */
+  page_Forskning_Title: string;
   /** 
   * Donorkort
   */
@@ -4057,254 +4262,6 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   * Forside
   */
   page_Start_Title: string;
-  /** 
-  * Velg hvordan du vil ta kontakt
-  */
-  page_TriageringTjenester_Title: string;
-  /** 
-  * Samtykkeoppgave
-  */
-  page_Samtykkeoppgave_Title: string;
-  /** 
-  * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
-  */
-  page_NotAccessToService_Link_Text: string;
-  /** 
-  * <a class="Page_AskForAccessToService_Link_Text" href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no">Mer informasjon om hvordan representere andre på Helsenorge</a>
-  */
-  page_AskForAccessToService_Link_Text: string;
-  /** 
-  * Gå til forsiden
-  */
-  page_feilmelding_link_text: string;
-  /** 
-  * Logg over bruk
-  */
-  page_HendelsesLogg_Title: string;
-  /** 
-  * Fullmakter
-  */
-  page_Fullmakt_Title: string;
-  /** 
-  * <p>Her kan du gi andre fullmakt til å bruke tjenester på Helsenorge på dine vegne, og du kan få tilsvarende fullmakt fra andre. Du vil aldri kunne gi andre tilgang til mer enn du selv har tilgang til.</p><p>Du må være over 16 år for å gi en fullmakt, og den som får fullmakten må være over 18 år.</p><p>For øyeblikket er det kun enkelte tjenester du kan gi andre fullmakt til å bruke på dine vegne. Etter hvert vil flere tjenester bli lagt til, slik at pårørende kan hjelpe så mye som mulig med digitale helsetjenester.</p>
-  */
-  page_Fullmakt_Description: string;
-  /** 
-  * Helsenorge – din helse på nett
-  */
-  page_Forside_Title: string;
-  /** 
-  * Bruk og tilganger
-  */
-  page_BrukOgTilganger_Title: string;
-  /** 
-  * Her får du oversikt over din bruk av Helsenorge og andre løsninger, verktøy og apper hvor du bruker din Helsenorge-bruker for å få tilgang.
-  */
-  page_BrukOgTilganger_Desc: string;
-  /** 
-  * Koronasertifikat
-  */
-  page_Koronasertifikat_Title: string;
-  /** 
-  * Innholdet i sertifikatet ditt oppdateres løpende med opplysninger om vaksine, smittestatus og gyldighet.
-  */
-  page_Koronasertifikat_Desc: string;
-  /** 
-  * Koronasertifikat QR code testside
-  */
-  page_QrCode_Title: string;
-  /** 
-  * /provesvar
-  */
-  page_Provesvar_NavigateBackLinkURL: string;
-  /** 
-  * Tilbake til Prøvesvar
-  */
-  page_Provesvar_NavigateBackLinkTitle: string;
-  /** 
-  * Innboks
-  */
-  page_Innboks_Title: string;
-  /** 
-  * Samvalg
-  */
-  page_Samvalg_NavigateBackLinkTitle: string;
-  /** 
-  * {HelsenorgeUrl}/samvalg
-  */
-  page_Samvalg_NavigateBackLinkURL: string;
-  /** 
-  * Noe gikk dessverre galt
-  */
-  page_feilmelding_title: string;
-  /** 
-  * Hvis du prøver å logge inn kan du gjøre et nytt forsøk senere.
-  */
-  page_feilmelding_description: string;
-  /** 
-  * Kontaktinformasjon
-  */
-  page_Kontaktinformasjon_Title: string;
-  /** 
-  * Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.
-  */
-  page_Kontaktinformasjon_Description: string;
-  /** 
-  * Prøvesvar
-  */
-  page_Provesvar_Title: string;
-  /** 
-  * Her vises en oversikt over dine prøvesvar for koronavirus. Det kan også vises svar på andre typer virus og bakterier som kan gi luftveisinfeksjon.
-  */
-  page_Provesvar_Desc: string;
-  /** 
-  * Her vises dokumenter som du har lagret på Helsenorge, for eksempel innsynsrapporter som du har bestilt fra helseregistre, eller journaldokumenter som du har kopiert fra pasientjournalen din.
-  */
-  page_Dokumenter_Desc: string;
-  /** 
-  * Velg behandlingssted
-  */
-  page_VelgBehandlingssted_Title: string;
-  /** 
-  * Hvis du har fått rett til nødvendig helsehjelp i spesialisthelsetjenesten kan du fritt velge behandlingssted for alle planlagte behandlinger og undersøkelser du har blitt henvist til.
-  */
-  page_VelgBehandlingssted_Desc: string;
-  /** 
-  * Meldingssystem for smittsomme sykdommer (MSIS)
-  */
-  page_msis_Title: string;
-  /** 
-  * MSIS er et landsomfattende helseregister som overvåker smittsomme sykdommer hos mennesker i Norge.
-  */
-  page_msis_Desc: string;
-  /** 
-  * Personverninnstillinger
-  */
-  page_Personverninnstillinger_Title: string;
-  /** 
-  * Tilgangstyring av helseopplysninger
-  */
-  page_Tilgangsstyring_Title: string;
-  /** 
-  * Du kan selv gjøre endringer i egne eller andres tilgang til dine tjenester og helseopplysninger.
-  */
-  page_Tilgangsstyring_Desc: string;
-  /** 
-  * Personverninnstillinger
-  */
-  page_Tilgangsstyring_NavigateBackLinkTitle: string;
-  /** 
-  * /personverninnstillinger
-  */
-  page_Tilgangsstyring_NavigateBackLinkURL: string;
-  /** 
-  * Tilgangstyring av helseopplysninger
-  */
-  page_TilgangsstyringReseptformidleren_NavigateBackLinkTitle: string;
-  /** 
-  * /tilgangsstyring-av-helseopplysninger
-  */
-  page_TilgangsstyringReseptformidleren_NavigateBackLinkURL: string;
-  /** 
-  * Reseptformidleren
-  */
-  page_TilgangsstyringReseptformidleren_Title: string;
-  /** 
-  * Du kan begrense helsepersonells tilgang til legemiddelinformasjonen din, slik at de ikke kan se hvilke legemidler du bruker. Du må imidlertid være oppmerksom på at dersom du begrenser tilgangen kan det hindre deg i å motta forsvarlig helsehjelp.
-  */
-  page_TilgangsstyringReseptformidleren_Desc: string;
-  /** 
-  * Søk Helfo om refusjon
-  */
-  page_Okonomi_Title: string;
-  /** 
-  * Du sender søknad til Helfo ved å bruke et skjema i Altinn.
-  */
-  page_Okonomi_Desc: string;
-  /** 
-  * Resepter
-  */
-  page_Resepter_Service: string;
-  /** 
-  * Kjernejournal
-  */
-  page_KJ_Service: string;
-  /** 
-  * Pasientjournal
-  */
-  page_Document_Service: string;
-  /** 
-  * Reseptoversikt
-  */
-  page_Resepter_Service_Name: string;
-  /** 
-  * Verktøy kan være et nettkurs, app eller video som hjelper deg å mestre din helse- og livssituasjon. De supplerer behandlingen du får. Ved å logge inn får du tilgang til å samle verktøy i din egen liste, og se verktøy som du har fått tilsendt fra din behandler.
-  */
-  page_Verktoy_Desc: string;
-  /** 
-  * Verktøy
-  */
-  page_Verktoy_Title: string;
-  /** 
-  * Kjernejournal - innsyn
-  */
-  page_Kjernejournal_Innsyn_Title: string;
-  /** 
-  * Her ser du alt som er registrert om deg i din kjernejournal.
-  */
-  page_Kjernejournal_Innsyn_Desc: string;
-  /** 
-  * Nasjonalt vaksinasjonsregister SYSVAK
-  */
-  page_Sysvak_Title: string;
-  /** 
-  * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
-  */
-  page_Sysvak_Desc: string;
-  /** 
-  * til Helseregistre
-  */
-  page_Helseregistre_NavigateBackLinkTitle: string;
-  /** 
-  * /helseregistre
-  */
-  page_Helseregistre_NavigateBackLinkURL: string;
-  /** 
-  * Medisinsk fødselsregister (MFR)
-  */
-  page_Mfr_Title: string;
-  /** 
-  * Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.
-  */
-  page_Mfr_Desc: string;
-  /** 
-  * Innsyn
-  */
-  page_Visregisterinnsyn_Title: string;
-  /** 
-  * Her kan du finne og bytte fastlege, og se hvem som er fastlegen din nå.
-  */
-  page_BytteFastlege_MetaDesc: string;
-  /** 
-  * Her finner du tjenester som hjelper deg å følge opp din egen helse. Etter hvert kan du benytte flere tjenester på vegne av dine barn og de som har gitt deg fullmakt.
-  */
-  page_Start_MetaDesc: string;
-  /** 
-  * Sykdom og kritisk informasjon
-  */
-  page_SykdomOgKritiskInfo_Title: string;
-  /** 
-  * Her vises helseopplysninger som helsepersonell skal kjenne til ved undersøkelser og behandling.
-  */
-  page_SykdomOgKritiskInfo_Desc: string;
-  /** 
-  * Forskning i forbindelse med kliniske studier har som formål å undersøke effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.<br/>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden.
-  */
-  page_Forskning_Desc: string;
-  /** 
-  * Forskning
-  */
-  page_Forskning_Title: string;
 };
 
 export type HNMinHelseDialogGPStrings = { 
