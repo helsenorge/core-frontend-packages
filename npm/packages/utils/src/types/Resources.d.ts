@@ -21883,45 +21883,6 @@ export type HNMinHelseResepter = {
   clientOperation_GetRFInnhold_EndpointError_Body: string;
 };
 
-export type HNMinHelseSecurityFramework = { 
-  /** 
-  * Gå til forsiden
-  */
-  inactivity_SignedOut_Button_GoToRoot: string;
-  /** 
-  * Logg inn på nytt
-  */
-  inactivity_SignedOut_Button_SignInAgain: string;
-  /** 
-  * Du var stille en stund og har blitt logget ut
-  */
-  inactivity_SignedOut_Title: string;
-  /** 
-  * Logg ut
-  */
-  lightbox_Inactivity_Button_SignOut: string;
-  /** 
-  * Ja
-  */
-  lightbox_Inactivity_Button_Yes: string;
-  /** 
-  * Du blir snart logget ut av Helsenorge fordi du ikke har gjort noe på en stund. Dette gjør vi for å beskytte helseopplysningene dine i tilfelle du har glemt å logge ut.
-  */
-  lightbox_Inactivity_Description: string;
-  /** 
-  * Vil du fortsatt være innlogget på Helsenorge?
-  */
-  lightbox_Inactivity_DoYouWantToStay: string;
-  /** 
-  * Du blir automatisk logget ut om {min}:{sec} minutter.
-  */
-  lightbox_Inactivity_Timer: string;
-  /** 
-  * Er du der fortsatt?
-  */
-  lightbox_Inactivity_Title: string;
-};
-
 export type HNMinHelseSkjemautfyller = { 
   /** 
   * Sendt inn {0} via helsenorge.no
@@ -22493,185 +22454,129 @@ export type HNMinHelseSysvak = {
 
 export type HNPortal = { 
   /** 
-  * Logg inn
+  * For å benytte denne siden når du er innlogget må du samtykke til digitale helsetjenester.
   */
-  userControl_StartInfoPanel_LoginButton_Text: string;
+  samvalg_HelsetjenesteText_TextString: string;
   /** 
-  * Min helse
+  * Gå til profilen din for å samtykke til digitale helsetjenester.
   */
-  userControl_StartInfoPanel_Title: string;
+  samvalg_HelsetjenesteText_LinkText: string;
   /** 
-  * Hvor langt har jeg kommet på veien mot å ta et valg?
+  * Avbryt
   */
-  field_BsvRefleksjonerSeksjon2_Title: string;
+  samvalg_HelsetjenesteText_Cancel: string;
   /** 
-  * Hvor bra passer de ulike mulighetene?
+  * Digitale helsetjenester
   */
-  field_BsvRefleksjonerSeksjon3_Title: string;
+  samvalg_HelsetjenesteText_Header: string;
   /** 
-  * Skriv inn ingressen som skal være i sliderseksjonen til behandlingsmulighetene
+  * Toppsak
   */
-  field_BsvRefleksjonerBehandlingsmuligheterIngress_Desc: string;
+  webPart_PromotedArticle_Title: string;
   /** 
-  * Ingress til slider-seksjon 2
+  * Webdel for å legge til toppsak
   */
-  field_BsvRefleksjonerBehandlingsmuligheterIngress_Title: string;
+  webPart_PromotedArticle_Desc: string;
   /** 
-  * Skriv inn ingressen som skal være i sliderseksjonen til hvor langt man har kommet i mine refleksjoner
+  * Referanser
   */
-  field_BsvRefleksjonerHvorLangtIngress_Desc: string;
+  page_ReferenceList_Title: string;
   /** 
-  * Ingress til slider-seksjon 1
+  * Hjelpeinformasjon
   */
-  field_BsvRefleksjonerHvorLangtIngress_Title: string;
+  webPart_SupportInfo_Title: string;
   /** 
-  * Skriv inn ingressen som skal være øverst på mine refleksjoner
+  * Webdel for å få listet ut hjelpeinformasjon.
   */
-  field_BsvRefleksjonerIngress_Desc: string;
+  webPart_SupportInfo_Desc: string;
   /** 
-  * Ingressen til mine refleksjoner
+  * Inkluder følgende enkeltsider
   */
-  field_BsvRefleksjonerIngress_Title: string;
+  field_IncludePages_Title: string;
   /** 
-  * Skriv inn en ingress som skal være over prioriteringslisten
+  * Felt for å inkludere enkeltsider
   */
-  field_BsvRefleksjonerPrioriteringslisteIngress_Desc: string;
+  field_IncludePages_Desc: string;
   /** 
-  * Ingressen til prioriteringslisten
+  * Ekskluder følgende enkeltsider
   */
-  field_BsvRefleksjonerPrioriteringslisteIngress_Title: string;
+  field_ExcludePages_Title: string;
   /** 
-  * Skriv inn tilleggsinnholdet til seksjonen: Hvorfor må det gjøres et valg?
+  * Felt for å ekskludere enkeltsider
   */
-  field_BsvMittValgSeksjon1Seksjon1TilleggsinfoContent_Desc: string;
+  field_ExcludePages_Desc: string;
   /** 
-  * Tilleggsinfo innhold seksjon 1
+  * Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?
   */
-  field_BsvMittValgSeksjon1TilleggsinfoContent_Title: string;
+  pdfCompatibilityBodyPreview: string;
   /** 
-  * Skriv inn tittel på seksjonen: Hvorfor må det gjøres et valg?
+  * Se forhåndsvisning
   */
-  field_BsvMittValgSeksjon1TilleggsinfoTitle_Desc: string;
-  /** 
-  * Tilleggsinfo tittel seksjon 1
-  */
-  field_BsvMittValgSeksjon1TilleggsinfoTitle_Title: string;
-  /** 
-  * Skriv inn ingressen til hva er min helsesituasjon?
-  */
-  field_BsvMittValgSeksjon2Ingress_Desc: string;
-  /** 
-  * Hva er min helsesituasjon?
-  */
-  field_BsvMittValgSeksjon2Ingress_Title: string;
-  /** 
-  * Skriv inn tilleggsinnholdet til seksjonen: Hva er min helsesituasjon?
-  */
-  field_BsvMittValgSeksjon2TilleggsinfoContent_Desc: string;
-  /** 
-  * Skriv inn en kort ingress som skal være på flisen til behandlingsmuligheten
-  */
-  field_BsvMulighetKortIngress_Desc: string;
-  /** 
-  * Kort ingress på behandlingsmulighet
-  */
-  field_BsvMulighetKortIngress_Title: string;
-  /** 
-  * Skriv inn innholdet til tilleggsinformasjon på seksjon gjennomføring
-  */
-  field_BsvMulighetSeksjon1TilleggsinfoContent_Desc: string;
-  /** 
-  * Innhold tilleggsinfo seksjon gjennomføring
-  */
-  field_BsvMulighetSeksjon1TilleggsinfoContent_Title: string;
-  /** 
-  * Skriv inn tittel på tilleggsinformasjon på seksjon Gjennomføring
-  */
-  field_BsvMulighetSeksjon1TilleggsinfoTitle_Desc: string;
-  /** 
-  * Tilleggsinfo tittel seksjon gjennomføring
-  */
-  field_BsvMulighetSeksjon1TilleggsinfoTitle_Title: string;
-  /** 
-  * Skriv om varigheten på behandlingen
-  */
-  field_BsvMulighetSeksjon2Ingress_Desc: string;
-  /** 
-  * Varighet
-  */
-  field_BsvMulighetSeksjon2Ingress_Title: string;
-  /** 
-  * Skriv inn innholdet til tilleggsinformasjon på seksjon varighet
-  */
-  field_BsvMulighetSeksjon2TilleggsinfoContent_Desc: string;
-  /** 
-  * Innhold tilleggsinfo seksjon varighet
-  */
-  field_BsvMulighetSeksjon2TilleggsinfoContent_Title: string;
-  /** 
-  * Skriv inn tittel på tilleggsinformasjon på seksjon varighet
-  */
-  field_BsvMulighetSeksjon2TilleggsinfoTitle_Desc: string;
-  /** 
-  * Tilleggsinfo tittel seksjon varighet
-  */
-  field_BsvMulighetSeksjon2TilleggsinfoTitle_Title: string;
-  /** 
-  * Skriv om hvordan behandlingen virker
-  */
-  field_BsvMulighetSeksjon3Ingress_Desc: string;
-  /** 
-  * Virker behandlingen?
-  */
-  field_BsvMulighetSeksjon3Ingress_Title: string;
-  /** 
-  * Skriv inn innholdet til tilleggsinformasjon på seksjon virker behandlingen
-  */
-  field_BsvMulighetSeksjon3TilleggsinfoContent_Desc: string;
-  /** 
-  * Innhold tilleggsinfo seksjon virker behandlingen
-  */
-  field_BsvMulighetSeksjon3TilleggsinfoContent_Title: string;
-  /** 
-  * Hvordan gjennomføres behandlingen?
-  */
-  field_BsvMulighetSeksjon1Ingress_Desc: string;
-  /** 
-  * Gjennomføring
-  */
-  field_BsvMulighetSeksjon1Ingress_Title: string;
-  /** 
-  * Skriv inn navnet på behandlingen
-  */
-  field_BsvMulighetTittel_Desc: string;
-  /** 
-  * Navnet på behandlingsmuligheten
-  */
-  field_BsvMulighetTittel_Title: string;
-  /** 
-  * Skriv inn ingressen til hvorfor det må gjøres et valg
-  */
-  field_BsvMittValgSeksjon1Ingress_Desc: string;
-  /** 
-  * Hvorfor må det gjøres et valg?
-  */
-  field_BsvMittValgSeksjon1Ingress_Title: string;
-  /** 
-  * Område for Samvalg
-  */
-  samvalg_Site_Description: string;
-  /** 
-  * Samvalg
-  */
-  samvalg_Site_Title: string;
+  pdfCompatibilityPreview: string;
   /** 
   * 
   */
-  group_Samvalg_Approvers_Description: string;
+  group_Kampanje_Visitors_Description: string;
   /** 
-  * Samvalg-godkjennere
+  * Kampanjer-besøkende
   */
-  group_Samvalg_Approvers_Title: string;
+  group_Kampanje_Visitors_Title: string;
+  /** 
+  * kliniske studier er åpne for rekruttering i Norge
+  */
+  webPart_RelatedClinicalTrials_MultipleOpenTrials: string;
+  /** 
+  * klinisk studie er åpen for rekruttering i Norge
+  */
+  webPart_RelatedClinicalTrials_OneOpenTrial: string;
+  /** 
+  * Område for kampanjer
+  */
+  kampanje_Site_Description: string;
+  /** 
+  * Kampanjer
+  */
+  kampanje_Site_Title: string;
+  /** 
+  * 
+  */
+  group_Kampanje_Approvers_Description: string;
+  /** 
+  * Kampanjer-godkjennere
+  */
+  group_Kampanje_Approvers_Title: string;
+  /** 
+  * 
+  */
+  group_Kampanje_Designers_Description: string;
+  /** 
+  * Kampanjer-utformere
+  */
+  group_Kampanje_Designers_Title: string;
+  /** 
+  * 
+  */
+  group_Kampanje_ManageHierarchy_Description: string;
+  /** 
+  * Kampanjer-behandle hierarki
+  */
+  group_Kampanje_ManageHierarchy_Title: string;
+  /** 
+  * 
+  */
+  group_Kampanje_Members_Description: string;
+  /** 
+  * Kampanjer-medlemmer
+  */
+  group_Kampanje_Members_Title: string;
+  /** 
+  * 
+  */
+  group_Kampanje_Owners_Description: string;
+  /** 
+  * Kampanjer-eiere
+  */
+  group_Kampanje_Owners_Title: string;
   /** 
   * Tilleggsinfo tittel seksjon 2
   */
@@ -23236,6 +23141,186 @@ export type HNPortal = {
   * Mine refleksjoner
   */
   samvalg_MineRefleksjoner: string;
+  /** 
+  * Logg inn
+  */
+  userControl_StartInfoPanel_LoginButton_Text: string;
+  /** 
+  * Min helse
+  */
+  userControl_StartInfoPanel_Title: string;
+  /** 
+  * Hvor langt har jeg kommet på veien mot å ta et valg?
+  */
+  field_BsvRefleksjonerSeksjon2_Title: string;
+  /** 
+  * Hvor bra passer de ulike mulighetene?
+  */
+  field_BsvRefleksjonerSeksjon3_Title: string;
+  /** 
+  * Skriv inn ingressen som skal være i sliderseksjonen til behandlingsmulighetene
+  */
+  field_BsvRefleksjonerBehandlingsmuligheterIngress_Desc: string;
+  /** 
+  * Ingress til slider-seksjon 2
+  */
+  field_BsvRefleksjonerBehandlingsmuligheterIngress_Title: string;
+  /** 
+  * Skriv inn ingressen som skal være i sliderseksjonen til hvor langt man har kommet i mine refleksjoner
+  */
+  field_BsvRefleksjonerHvorLangtIngress_Desc: string;
+  /** 
+  * Ingress til slider-seksjon 1
+  */
+  field_BsvRefleksjonerHvorLangtIngress_Title: string;
+  /** 
+  * Skriv inn ingressen som skal være øverst på mine refleksjoner
+  */
+  field_BsvRefleksjonerIngress_Desc: string;
+  /** 
+  * Ingressen til mine refleksjoner
+  */
+  field_BsvRefleksjonerIngress_Title: string;
+  /** 
+  * Skriv inn en ingress som skal være over prioriteringslisten
+  */
+  field_BsvRefleksjonerPrioriteringslisteIngress_Desc: string;
+  /** 
+  * Ingressen til prioriteringslisten
+  */
+  field_BsvRefleksjonerPrioriteringslisteIngress_Title: string;
+  /** 
+  * Skriv inn tilleggsinnholdet til seksjonen: Hvorfor må det gjøres et valg?
+  */
+  field_BsvMittValgSeksjon1Seksjon1TilleggsinfoContent_Desc: string;
+  /** 
+  * Tilleggsinfo innhold seksjon 1
+  */
+  field_BsvMittValgSeksjon1TilleggsinfoContent_Title: string;
+  /** 
+  * Skriv inn tittel på seksjonen: Hvorfor må det gjøres et valg?
+  */
+  field_BsvMittValgSeksjon1TilleggsinfoTitle_Desc: string;
+  /** 
+  * Tilleggsinfo tittel seksjon 1
+  */
+  field_BsvMittValgSeksjon1TilleggsinfoTitle_Title: string;
+  /** 
+  * Skriv inn ingressen til hva er min helsesituasjon?
+  */
+  field_BsvMittValgSeksjon2Ingress_Desc: string;
+  /** 
+  * Hva er min helsesituasjon?
+  */
+  field_BsvMittValgSeksjon2Ingress_Title: string;
+  /** 
+  * Skriv inn tilleggsinnholdet til seksjonen: Hva er min helsesituasjon?
+  */
+  field_BsvMittValgSeksjon2TilleggsinfoContent_Desc: string;
+  /** 
+  * Skriv inn en kort ingress som skal være på flisen til behandlingsmuligheten
+  */
+  field_BsvMulighetKortIngress_Desc: string;
+  /** 
+  * Kort ingress på behandlingsmulighet
+  */
+  field_BsvMulighetKortIngress_Title: string;
+  /** 
+  * Skriv inn innholdet til tilleggsinformasjon på seksjon gjennomføring
+  */
+  field_BsvMulighetSeksjon1TilleggsinfoContent_Desc: string;
+  /** 
+  * Innhold tilleggsinfo seksjon gjennomføring
+  */
+  field_BsvMulighetSeksjon1TilleggsinfoContent_Title: string;
+  /** 
+  * Skriv inn tittel på tilleggsinformasjon på seksjon Gjennomføring
+  */
+  field_BsvMulighetSeksjon1TilleggsinfoTitle_Desc: string;
+  /** 
+  * Tilleggsinfo tittel seksjon gjennomføring
+  */
+  field_BsvMulighetSeksjon1TilleggsinfoTitle_Title: string;
+  /** 
+  * Skriv om varigheten på behandlingen
+  */
+  field_BsvMulighetSeksjon2Ingress_Desc: string;
+  /** 
+  * Varighet
+  */
+  field_BsvMulighetSeksjon2Ingress_Title: string;
+  /** 
+  * Skriv inn innholdet til tilleggsinformasjon på seksjon varighet
+  */
+  field_BsvMulighetSeksjon2TilleggsinfoContent_Desc: string;
+  /** 
+  * Innhold tilleggsinfo seksjon varighet
+  */
+  field_BsvMulighetSeksjon2TilleggsinfoContent_Title: string;
+  /** 
+  * Skriv inn tittel på tilleggsinformasjon på seksjon varighet
+  */
+  field_BsvMulighetSeksjon2TilleggsinfoTitle_Desc: string;
+  /** 
+  * Tilleggsinfo tittel seksjon varighet
+  */
+  field_BsvMulighetSeksjon2TilleggsinfoTitle_Title: string;
+  /** 
+  * Skriv om hvordan behandlingen virker
+  */
+  field_BsvMulighetSeksjon3Ingress_Desc: string;
+  /** 
+  * Virker behandlingen?
+  */
+  field_BsvMulighetSeksjon3Ingress_Title: string;
+  /** 
+  * Skriv inn innholdet til tilleggsinformasjon på seksjon virker behandlingen
+  */
+  field_BsvMulighetSeksjon3TilleggsinfoContent_Desc: string;
+  /** 
+  * Innhold tilleggsinfo seksjon virker behandlingen
+  */
+  field_BsvMulighetSeksjon3TilleggsinfoContent_Title: string;
+  /** 
+  * Hvordan gjennomføres behandlingen?
+  */
+  field_BsvMulighetSeksjon1Ingress_Desc: string;
+  /** 
+  * Gjennomføring
+  */
+  field_BsvMulighetSeksjon1Ingress_Title: string;
+  /** 
+  * Skriv inn navnet på behandlingen
+  */
+  field_BsvMulighetTittel_Desc: string;
+  /** 
+  * Navnet på behandlingsmuligheten
+  */
+  field_BsvMulighetTittel_Title: string;
+  /** 
+  * Skriv inn ingressen til hvorfor det må gjøres et valg
+  */
+  field_BsvMittValgSeksjon1Ingress_Desc: string;
+  /** 
+  * Hvorfor må det gjøres et valg?
+  */
+  field_BsvMittValgSeksjon1Ingress_Title: string;
+  /** 
+  * Område for Samvalg
+  */
+  samvalg_Site_Description: string;
+  /** 
+  * Samvalg
+  */
+  samvalg_Site_Title: string;
+  /** 
+  * 
+  */
+  group_Samvalg_Approvers_Description: string;
+  /** 
+  * Samvalg-godkjennere
+  */
+  group_Samvalg_Approvers_Title: string;
   /** 
   * 
   */
@@ -25350,130 +25435,6 @@ Ved tilbakemelding om feil vil du ikke få svar, men vi takker for tilbakemeldin
   * Bildetekst
   */
   field_ImageCaption_Title: string;
-  /** 
-  * For å benytte denne siden når du er innlogget må du samtykke til digitale helsetjenester.
-  */
-  samvalg_HelsetjenesteText_TextString: string;
-  /** 
-  * Gå til profilen din for å samtykke til digitale helsetjenester.
-  */
-  samvalg_HelsetjenesteText_LinkText: string;
-  /** 
-  * Avbryt
-  */
-  samvalg_HelsetjenesteText_Cancel: string;
-  /** 
-  * Digitale helsetjenester
-  */
-  samvalg_HelsetjenesteText_Header: string;
-  /** 
-  * Toppsak
-  */
-  webPart_PromotedArticle_Title: string;
-  /** 
-  * Webdel for å legge til toppsak
-  */
-  webPart_PromotedArticle_Desc: string;
-  /** 
-  * Referanser
-  */
-  page_ReferenceList_Title: string;
-  /** 
-  * Hjelpeinformasjon
-  */
-  webPart_SupportInfo_Title: string;
-  /** 
-  * Webdel for å få listet ut hjelpeinformasjon.
-  */
-  webPart_SupportInfo_Desc: string;
-  /** 
-  * Inkluder følgende enkeltsider
-  */
-  field_IncludePages_Title: string;
-  /** 
-  * Felt for å inkludere enkeltsider
-  */
-  field_IncludePages_Desc: string;
-  /** 
-  * Ekskluder følgende enkeltsider
-  */
-  field_ExcludePages_Title: string;
-  /** 
-  * Felt for å ekskludere enkeltsider
-  */
-  field_ExcludePages_Desc: string;
-  /** 
-  * Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?
-  */
-  pdfCompatibilityBodyPreview: string;
-  /** 
-  * Se forhåndsvisning
-  */
-  pdfCompatibilityPreview: string;
-  /** 
-  * 
-  */
-  group_Kampanje_Visitors_Description: string;
-  /** 
-  * Kampanjer-besøkende
-  */
-  group_Kampanje_Visitors_Title: string;
-  /** 
-  * kliniske studier er åpne for rekruttering i Norge
-  */
-  webPart_RelatedClinicalTrials_MultipleOpenTrials: string;
-  /** 
-  * klinisk studie er åpen for rekruttering i Norge
-  */
-  webPart_RelatedClinicalTrials_OneOpenTrial: string;
-  /** 
-  * Område for kampanjer
-  */
-  kampanje_Site_Description: string;
-  /** 
-  * Kampanjer
-  */
-  kampanje_Site_Title: string;
-  /** 
-  * 
-  */
-  group_Kampanje_Approvers_Description: string;
-  /** 
-  * Kampanjer-godkjennere
-  */
-  group_Kampanje_Approvers_Title: string;
-  /** 
-  * 
-  */
-  group_Kampanje_Designers_Description: string;
-  /** 
-  * Kampanjer-utformere
-  */
-  group_Kampanje_Designers_Title: string;
-  /** 
-  * 
-  */
-  group_Kampanje_ManageHierarchy_Description: string;
-  /** 
-  * Kampanjer-behandle hierarki
-  */
-  group_Kampanje_ManageHierarchy_Title: string;
-  /** 
-  * 
-  */
-  group_Kampanje_Members_Description: string;
-  /** 
-  * Kampanjer-medlemmer
-  */
-  group_Kampanje_Members_Title: string;
-  /** 
-  * 
-  */
-  group_Kampanje_Owners_Description: string;
-  /** 
-  * Kampanjer-eiere
-  */
-  group_Kampanje_Owners_Title: string;
 };
 
 export type HNPortalStrings = { 
