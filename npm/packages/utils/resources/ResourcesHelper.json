@@ -995,7 +995,7 @@
     "page_My_Prescription_Description": "Her finner du en samlet oversikt over dine resepter. Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og din <a href='/kjernejournal-innsyn'>kjernejournal</a>, og vil være tydelig merket med kilden. Fra reseptformidleren er det kun aktive e-resepter som vises, mens fra kjernejournalen vises resepter, inkludert papir- og telefonresepter, tre år tilbake i tid.",
     "page_Legemidler_Title": "Legemidler",
     "page_Legemidler_Description": "Her finner du en samlet oversikt over dine resepter på legemidler og andre varer. Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og din <a href='/kjernejournal-innsyn'>kjernejournal</a>, hvor du også kan se logg over bruk.",
-    "page_Vaksiner_Desc": "Opplysninger om hvilke sykdommer du er vaksinert mot og når vaksinen er satt, er basert på innrapportering fra vaksinasjonsstedet.",
+    "page_Vaksiner_Desc": "Opplysninger om hvilke sykdommer du er vaksinert mot og når vaksinen er satt, er basert på innrapportering fra vaksinasjonsstedet. Du finner flere detaljer om dine vaksinasjoner i <a href=\"/direkteinnsyn?Register=SYSVAK\">Nasjonalt vaksinasjonsregister SYSVAK</a>.",
     "page_TestRegisterInnsyn_Title": "Test registerinnsyn",
     "page_Vaksiner_Title": "Vaksiner",
     "page_Samvalg_Title": "Samvalg",
