@@ -33,7 +33,9 @@ export const fetchWebComp = (props: Props): void => {
   const { domain, entryName, componentName, includeResetCss } = props;
   if (!isCustomElementRegistered(componentName)) {
     const assetsUrl = `${domain}/assets.json`;
-    fetch(assetsUrl)
+    // Sørg for å alltid hente nyeste assets.json
+    // https://developer.mozilla.org/en-US/docs/Web/API/Request/cache
+    fetch(assetsUrl, { cache: 'no-cache' })
       .then(response => {
         if (response.status === 200) {
           const resp = response.json();
