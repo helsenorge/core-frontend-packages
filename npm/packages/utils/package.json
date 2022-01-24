@@ -41,7 +41,6 @@
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
-    "ical.js": "1.4.0",
     "react-router-dom": "5.2.0"
   },
   "dependencies": {
