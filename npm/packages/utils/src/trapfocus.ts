@@ -2,7 +2,7 @@ import keyCode from './constants/key-code';
 import tabbable from 'tabbable';
 
 import { getDocumentActiveElement } from './focus-utils';
-import { getEventTarget } from './web-component/events';
+import { getEventTarget } from './events';
 
 /* Class som ved init låser fokuset inne i én DOMElement. Bruksområder er f.eks Modalvinduer.
 Tar imot en DomNode (HTMLElement eller string) som fokuset skal låses i. */
