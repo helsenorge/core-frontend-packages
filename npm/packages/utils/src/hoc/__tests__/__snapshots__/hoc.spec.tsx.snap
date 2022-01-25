@@ -42,5 +42,3 @@ exports[`HOC utils Gitt at en komponent wrappes i render-to-body HOC Når printa
   </Portal>
 </RenderToBody>
 `;
-
-exports[`HOC utils Gitt at en komponent wrappes i track-route-change HOC Når den instansieres Så kaller den ikke adobe-analytics og rendres riktig 1`] = `"<section>Track routing section</section>"`;
