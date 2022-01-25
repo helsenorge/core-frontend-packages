@@ -11,7 +11,6 @@
     "build": "node scripts/build.cjs",
     "postbuild": "rimraf lib/_devonly",
     "prepublishOnly": "npm run build",
-    "change-versions": "node scripts/change-versions.js",
     "publish:beta": "cd lib && npm publish --tag=beta",
     "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
