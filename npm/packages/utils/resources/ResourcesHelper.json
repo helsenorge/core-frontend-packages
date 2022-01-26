@@ -620,7 +620,8 @@
     "bfl_ResultPage_Table_Fastlege_Legekontoret_Primaerhelseteam_Text": "Dette kontoret har et primærhelseteam som kan gi et utvidet helsetilbud for pasienter.",
     "bfl_ResultPage_Filter_Other_Primaerhelseteam": "Kontorer med primærhelseteam",
     "bfl_ResultPage_PartialErrorMessage_Body": "Informasjonen som vises kan derfor være ufullstendig. Prøv igjen senere.",
-    "bfl_ResultPage_PartialErrorMessage_Title": "Det har skjedd en teknisk feil"
+    "bfl_ResultPage_PartialErrorMessage_Title": "Det har skjedd en teknisk feil",
+    "ikke_tilgang_errormessage_title": "Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon."
   },
   "HNMinHelseByttFastlege": { 
     "bFL_Organisasjonsnavn": "Helfo",
@@ -1356,6 +1357,7 @@
   "HNMinHelseDinFastlegeJS": { 
     "dfl_DigitaleTjenester_IngenTilgjengelige": "Din fastlege tilbyr ikke timebestilling og dialog på Helsenorge.",
     "dfl_DinFastlegeBanner_Digitaletjenester": "Digitale tjenester på Helsenorge",
+    "ikke_tilgang_errormessage_title": "Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.",
     "dfl_OmLegekontoret_Fellesliste_InfoText": "Legen har fellesliste med",
     "dfl_DigitaleTjenester_BestillTime": "Bestill time",
     "dfl_DigitaleTjenester_BestillTime_TilbysIkkeText": "Fastlegen tilbyr ikke bestill time",
@@ -1584,6 +1586,7 @@
     "filterRegistreAv": "av",
     "meldeFeilSubject": "Spørsmål eller melding om feil i opplysninger som er registrert om meg",
     "messageSubmitDescription": "Din forespørsel vil normalt bli besvart i løpet av 30 dager.",
+    "clientOperation_GetRegisteroppforingPortal_not_available": "Denne tjenesten er ikke tilgjengelig",
     "bestillInnsynLightBoxHeader": "Velg innsynsrapport",
     "bestillInnsynLightBoxDialog1": "Innsyn i opplysninger som er registrert om meg",
     "bestillInnsynLightBoxDialog2": "Innsyn i hvem som har fått utlevert opplysninger om meg",
@@ -1622,8 +1625,7 @@
     "default_ErrorMessage_Title": "Det har skjedd en teknisk feil",
     "label_emneord": "Emneord",
     "arkivert": "arkivert",
-    "arkivert_med_stor_a": "Arkivert",
-    "clientOperation_GetRegisteroppforingPortal_not_available": "Denne tjenesten er ikke tilgjengelig"
+    "arkivert_med_stor_a": "Arkivert"
   },
   "HNMinHelseKJStringsJS": { 
     "page_SykdomOgKritiskInfo_legge_til_ny_sykdom_validering": "Du kan maksimalt registrere 30 sykdommer. Du må slette noen før du kan registrere nye.",

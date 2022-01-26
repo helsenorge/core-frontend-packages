@@ -2466,6 +2466,10 @@ export type HNMinHelseByttFastlegeJS = {
   * Det har skjedd en teknisk feil
   */
   bfl_ResultPage_PartialErrorMessage_Title: string;
+  /** 
+  * Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.
+  */
+  ikke_tilgang_errormessage_title: string;
 };
 
 export type HNMinHelseByttFastlege = { 
@@ -5399,6 +5403,10 @@ export type HNMinHelseDinFastlegeJS = {
   */
   dfl_DinFastlegeBanner_Digitaletjenester: string;
   /** 
+  * Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.
+  */
+  ikke_tilgang_errormessage_title: string;
+  /** 
   * Legen har fellesliste med
   */
   dfl_OmLegekontoret_Fellesliste_InfoText: string;
@@ -6289,6 +6297,10 @@ opplysninger jeg mener skal korrigeres:
   */
   messageSubmitDescription: string;
   /** 
+  * Denne tjenesten er ikke tilgjengelig
+  */
+  clientOperation_GetRegisteroppforingPortal_not_available: string;
+  /** 
   * Velg innsynsrapport
   */
   bestillInnsynLightBoxHeader: string;
@@ -6444,10 +6456,6 @@ opplysninger jeg mener skal korrigeres:
   * Arkivert
   */
   arkivert_med_stor_a: string;
-  /** 
-  * Denne tjenesten er ikke tilgjengelig
-  */
-  clientOperation_GetRegisteroppforingPortal_not_available: string;
 };
 
 export type HNMinHelseKJStringsJS = { 
