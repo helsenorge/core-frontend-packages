@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimeInput Renders correctly 1`] = `
+<div
+  class="mol_timeinput mol_validation"
+  id="2-wrapper"
+>
+  <fieldset>
+    <div
+      class="mol_timeinput__inputs"
+    >
+      <div
+        class="safeInputField"
+        id="2_hours-wrapper"
+      >
+        <input
+          aria-label="Timer"
+          aria-required="false"
+          autocomplete="off"
+          class="hn-safe-input atom_input atom_input--medium atom_input--2"
+          max="23"
+          min="0"
+          type="number"
+          value=""
+        />
+      </div>
+      <span
+        class="mol_timeinput__separator"
+      >
+        :
+      </span>
+      <div
+        class="safeInputField"
+        id="2_minutes-wrapper"
+      >
+        <input
+          aria-label="Minutter"
+          aria-required="false"
+          autocomplete="off"
+          class="hn-safe-input atom_input atom_input--medium atom_input--2"
+          max="59"
+          min="0"
+          type="number"
+          value=""
+        />
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
+
+exports[`TimeInput Renders legend 1`] = `
+<div
+  class="mol_timeinput mol_validation"
+  id="3-wrapper"
+>
+  <fieldset>
+    <legend>
+      <span
+        class="mol_timeinput__legend"
+      >
+        <span
+          class="mol_timeinput__legend__label"
+        >
+          Klokkeslett
+        </span>
+      </span>
+    </legend>
+    <div
+      class="mol_timeinput__inputs"
+    >
+      <div
+        class="safeInputField"
+        id="3_hours-wrapper"
+      >
+        <input
+          aria-label="Timer"
+          aria-required="false"
+          autocomplete="off"
+          class="hn-safe-input atom_input atom_input--medium atom_input--2"
+          max="23"
+          min="0"
+          type="number"
+          value=""
+        />
+      </div>
+      <span
+        class="mol_timeinput__separator"
+      >
+        :
+      </span>
+      <div
+        class="safeInputField"
+        id="3_minutes-wrapper"
+      >
+        <input
+          aria-label="Minutter"
+          aria-required="false"
+          autocomplete="off"
+          class="hn-safe-input atom_input atom_input--medium atom_input--2"
+          max="59"
+          min="0"
+          type="number"
+          value=""
+        />
+      </div>
+    </div>
+  </fieldset>
+</div>
+`;
