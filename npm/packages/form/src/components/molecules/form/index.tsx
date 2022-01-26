@@ -5,7 +5,7 @@ import FormSubmitButton from './form-buttons/form-submit-button';
 import FormCancelButton from './form-buttons/form-cancel-button';
 import FormPauseButton from './form-buttons/form-pause-button';
 import FormDraftButton from './form-buttons/form-draft-button';
-import { Spinner } from '../../atoms/spinner';
+import { Spinner } from '@helsenorge/toolkit/components/atoms/spinner';
 import { ValidationSummaryPlacement } from './validationSummaryPlacement';
 import { ValidationProps } from './validation';
 import ValidationSummary from './validation-summary';

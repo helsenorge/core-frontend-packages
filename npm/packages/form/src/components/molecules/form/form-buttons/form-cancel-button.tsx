@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { ActionButton } from '../../../atoms/buttons/action-button';
-import { DisplayButton } from '../../../atoms/buttons/display-button';
+import { ActionButton } from '@helsenorge/toolkit/components/atoms/buttons/action-button';
+import { DisplayButton } from '@helsenorge/toolkit/components/atoms/buttons/display-button';
 import toolkitstyles from '../styles.module.scss';
 
 interface FormCancelButtonProps {

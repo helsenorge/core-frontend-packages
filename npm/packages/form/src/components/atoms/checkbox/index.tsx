@@ -2,7 +2,7 @@ import * as React from 'react';
 import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
-import CheckThick from './../../icons/CheckThick';
+import CheckThick from '@helsenorge/toolkit/components/icons/CheckThick';
 import ValidationError from './../../molecules/form/validation-error';
 
 import './styles.scss';

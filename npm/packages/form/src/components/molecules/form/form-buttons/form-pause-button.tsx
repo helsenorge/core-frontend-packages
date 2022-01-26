@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { FunctionButton } from '../../../atoms/buttons/function-button';
-import { ActionButton } from '../../../atoms/buttons/action-button';
-import { DisplayButton } from '../../../atoms/buttons/display-button';
-import Pause from '../../../icons/Pause';
+import { FunctionButton } from '@helsenorge/toolkit/components/atoms/buttons/function-button';
+import { ActionButton } from '@helsenorge/toolkit/components/atoms/buttons/action-button';
+import { DisplayButton } from '@helsenorge/toolkit/components/atoms/buttons/display-button';
+import Pause from '@helsenorge/toolkit/components/icons/Pause';
 import toolkitstyles from '../styles.module.scss';
 
 interface FormPauseButtonProps {
