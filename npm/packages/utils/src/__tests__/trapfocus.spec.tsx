@@ -2,8 +2,8 @@ import React from 'react';
 
 import { mount } from 'enzyme';
 
+import * as webcomputils from '../events';
 import TrapFocus from '../trapfocus';
-import * as webcomputils from '../web-component/events';
 
 // For some reason Istanbul soverage does not mark previousFocusableRadioButton and nextFocusableRadioButton as covered while they are
 
@@ -45,7 +45,7 @@ describe('Trapfocus', () => {
       it('Så ...', () => {
         const returnedChildren = node.children;
         const returnedNodeList = Array.from(returnedChildren);
-        jest.spyOn(node, 'querySelectorAll').mockReturnValue((returnedNodeList as unknown) as NodeListOf<Element>);
+        jest.spyOn(node, 'querySelectorAll').mockReturnValue(returnedNodeList as unknown as NodeListOf<Element>);
 
         const trapfocusFromString: TrapFocus = new TrapFocus('div', true);
         expect(trapfocusFromString.focusableItems.length).toEqual(5);

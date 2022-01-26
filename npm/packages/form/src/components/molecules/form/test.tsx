@@ -2,12 +2,12 @@ import * as React from 'react';
 import { shallow, ShallowWrapper, mount } from 'enzyme';
 import Form, { FormProps } from '.';
 import SafeInputField from '../../atoms/safe-input-field';
-import ActionButton from '../../atoms/buttons/action-button';
+import ActionButton from '@helsenorge/toolkit/components/atoms/buttons/action-button';
 import Validation from './validation';
 import ValidationError from './validation-error';
 import ValidationSummary from './validation-summary';
-import DisplayButton from '../../atoms/buttons/display-button';
-import { SaveButton } from '../../atoms/buttons/save-button';
+import DisplayButton from '@helsenorge/toolkit/components/atoms/buttons/display-button';
+import { SaveButton } from '@helsenorge/toolkit/components/atoms/buttons/save-button';
 
 describe('Form', () => {
   let mounted: ShallowWrapper<{}, {}> | undefined;
