@@ -7,8 +7,8 @@ import ReactAutosuggest, {
   OnSuggestionsClearRequested,
 } from 'react-autosuggest';
 
-import { Label } from './../../atoms/label';
-import ValidationError from '../form/validation-error';
+import { Label } from '@helsenorge/form/components/atoms/label';
+import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
 import autosuggesttheme from './theme.module.scss';
 
 import { isEmpty, hasInvalidCharacters } from '@helsenorge/core-utils/string-utils';
