@@ -1,7 +1,7 @@
 @import '~@helsenorge/designsystem-react/scss/_spacers.scss';
 @import '~@helsenorge/designsystem-react/scss/_breakpoints.scss';
 @import '~@helsenorge/designsystem-react/scss/_palette.scss';
-@import '../../../utils/variables';
+@import '~@helsenorge/toolkit/utils/variables';
 
 .mol_timeinput {
   &__legend {

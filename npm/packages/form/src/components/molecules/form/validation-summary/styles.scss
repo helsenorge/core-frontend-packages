@@ -1,6 +1,6 @@
 @import '~@helsenorge/designsystem-react/scss/_spacers.scss';
 @import '~@helsenorge/designsystem-react/scss/_breakpoints.scss';
-@import '../../../../utils/variables';
+@import '~@helsenorge/toolkit/utils/variables';
 
 .mol_validation-summary {
   background-color: $color-error-fill;

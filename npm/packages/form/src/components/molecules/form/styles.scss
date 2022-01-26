@@ -1,4 +1,4 @@
-@import '../../../utils/variables';
+@import '~@helsenorge/toolkit/utils/variables';
 
 $bgcolor: $color-error-fill;
 $background: linear-gradient(0deg, transparent, transparent 50%, $bgcolor 50%, $bgcolor 50%);

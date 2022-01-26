@@ -5,7 +5,7 @@ const filesMethods = require('@helsenorge/core-build/lib/files');
 const { name: packageName } = require('../package.json');
 
 //Files to copy
-const rootFiles = ['.npmrc'];
+const rootFiles = ['.npmrc', 'src/img'];
 const utilsFiles = [];
 
 /**
