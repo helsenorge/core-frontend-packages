@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+lib/
+.jest-cache/
+coverage/
+dist/
+dist_dev/
+test-report.xml

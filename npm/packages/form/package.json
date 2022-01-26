@@ -1,0 +1,59 @@
+{
+  "name": "@helsenorge/form",
+  "version": "21.9.0",
+  "main": "index.js",
+  "publishConfig": {
+    "directory": "lib"
+  },
+  "author": "Helsenorge",
+  "maintainers": [
+    "ROX"
+  ],
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "tfs",
+    "url": "https://dev.azure.com/nhnfelles/Helsenorge/_git/HN-Core-Frontend?path=%2Fnpm%2Fpackages%2Fform"
+  },
+  "files": [
+    "lib"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "npm-run-all --npm-path build:lib build:copy-files",
+    "build:lib": "tsc --p config/tsconfig.toolkitcomponents.json",
+    "build:copy-files": "node scripts/copy-files.cjs",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
+    "prettier:fix": "npm run prettier -- --write",
+    "pretypecheck": "tsc -v",
+    "typecheck": "tsc --noEmit",
+    "pretest": "crlf --set=LF \"src/**/*.{tsx,snap}\"",
+    "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
+    "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
+    "prepublishOnly": "npm run build",
+    "prebuild": "rimraf lib",
+    "precommit-script": "pretty-quick --staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "bash node_modules/@helsenorge/core-build/precommit.sh"
+    }
+  },
+  "peerDependencies": {
+    "@helsenorge/core-build": ">=21.0.0",
+    "@helsenorge/core-utils": ">=21.1.1",
+    "@helsenorge/designsystem-react": "^1.0.0-beta"
+  },
+  "devDependencies": {
+    "@helsenorge/core-build": "^21.3.1",
+    "@helsenorge/core-utils": "^21.6.3",
+    "@helsenorge/designsystem-react": "1.0.0-alpha-nye-spacers-5"
+  },
+  "browserslist": [
+    "> 0.2% in NO",
+    "not dead",
+    "not op_mini all",
+    "not ie > 0"
+  ]
+}
