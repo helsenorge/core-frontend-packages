@@ -19,7 +19,7 @@
   ],
   "type": "module",
   "scripts": {
-    "prebuild": "npm run clean",
+    "prebuild": "rimraf lib",
     "build": "tsc --p config/tsconfig.package.json",
     "postbuild": "node scripts/copy-files.cjs",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
@@ -32,7 +32,6 @@
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
     "prepublishOnly": "npm run build",
-    "clean": "rimraf lib",
     "precommit-script": "pretty-quick --staged"
   },
   "husky": {

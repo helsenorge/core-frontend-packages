@@ -8,8 +8,9 @@
     "directory": "lib"
   },
   "scripts": {
+    "prebuild": "rimraf lib",
     "build": "node scripts/build.cjs",
-    "postbuild": "rimraf lib/_devonly",
+    "postbuild": "rimraf lib/__devonly__",
     "prepublishOnly": "npm run build",
     "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
