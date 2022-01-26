@@ -1,0 +1,16 @@
+@import '~@helsenorge/designsystem-react/scss/_spacers.scss';
+@import '~@helsenorge/designsystem-react/scss/_breakpoints.scss';
+@import '~@helsenorge/designsystem-react/scss/_palette.scss';
+
+.form {
+  &__buttonwrapper {
+    display: block;
+    margin-top: getSpacer(m);
+
+    &__button {
+      display: inline-block;
+      margin-right: $spacer;
+      margin-bottom: getSpacer(2xs);
+    }
+  }
+}

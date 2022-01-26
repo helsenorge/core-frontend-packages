@@ -1,0 +1,150 @@
+@import '~@helsenorge/designsystem-react/scss/_spacers.scss';
+@import '~@helsenorge/designsystem-react/scss/_breakpoints.scss';
+@import '~@helsenorge/designsystem-react/scss/_palette.scss';
+@import '../../../utils/variables';
+
+$paddingX: 1.125rem;
+$extraWidth: 0.75rem;
+$numberArrowsChome: 1.5rem;
+
+/*** RESET ***/
+input:required {
+  box-shadow: none;
+}
+
+input[type='text'],
+input[type='tel'],
+input[type='email'],
+input[type='number'],
+input[type='password'],
+input[type='search'],
+input[type='date'] {
+  &.atom_input {
+    display: block;
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding: 0.75rem 1.125rem;
+    outline: none;
+    width: 99%;
+    border: 2px solid $neutral300;
+    background-color: $color-base-0;
+    border-radius: 0;
+    appearance: none;
+    transition: left 0.5s, width 0.5s;
+    left: 0;
+    line-height: 100%;
+
+    &--state_validationerror {
+      border: 2px solid $color-functional-3;
+    }
+
+    &--xsmall {
+      max-width: 6rem;
+    }
+
+    &--small {
+      max-width: 12rem;
+    }
+
+    &--medium {
+      max-width: 20rem;
+    }
+
+    &--large {
+      max-width: 26rem;
+    }
+
+    &--xlarge {
+      max-width: 32rem;
+    }
+
+    &--disabled {
+      background-color: $neutral50;
+      color: $neutral700;
+      font-style: italic;
+    }
+
+    // Gjør plass til en spinner på venstre side
+    &--loading {
+      left: 40px;
+      width: calc(99% - 40px);
+
+      + .atom_input__spinner {
+        position: absolute;
+        bottom: 8px;
+        left: 0;
+        opacity: 0;
+        animation: fadein ease-in 0.1s;
+        animation-fill-mode: forwards;
+        animation-delay: 0.2s;
+      }
+    }
+
+    &:hover:not(.atom_input--disabled) {
+      background-color: $neutral50;
+      border-color: $neutral400;
+      box-shadow: 0 0 0 2px $neutral400;
+    }
+
+    &:focus,
+    &:focus-within {
+      border-color: $black;
+      box-shadow: 0 0 0 2px $black;
+    }
+  }
+
+  //Sett maks lengde på input felt etter hva som er satt som max.
+  @for $i from 1 through 40 {
+    &.atom_input--#{$i} {
+      max-width: calc((0.8rem * #{$i}) + (#{$paddingX} * 2) + #{$extraWidth});
+    }
+  }
+
+  &.atom_input--spinnerright.atom_input--loading {
+    left: inherit;
+    width: 99%;
+
+    + .atom_input__spinner {
+      display: inline-block;
+      margin-left: 1rem;
+      position: static;
+      opacity: 0;
+      animation: fadein ease-in 0.1s;
+      animation-fill-mode: forwards;
+      animation-delay: 0.2s;
+    }
+  }
+}
+
+.mol_validation.mol_validation--active .atom_input--loading + .atom_input__spinner {
+  bottom: 24px;
+}
+
+//Maks lengde på input felt nummer trenger ekstra plass for piler på Chrome
+input.rw-input,
+input[type='number'],
+input[type='tel'] {
+  @for $i from 1 through 40 {
+    &.atom_input--#{$i} {
+      max-width: calc((0.75rem * #{$i}) + (#{$paddingX} * 2) + #{$numberArrowsChome} + #{$extraWidth});
+    }
+  }
+}
+
+@media (min-width: map-get($grid-breakpoints, lg)) {
+  input[type='text'] {
+    &.atom_input.inline {
+      width: calc(100% - 7rem);
+    }
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
