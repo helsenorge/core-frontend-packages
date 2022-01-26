@@ -15,11 +15,11 @@ import {
   ERROR_HOURS_BEFORE_MIN,
   ERROR_MINUTES_BEFORE_MIN,
 } from '../../../constants/datetime';
-import { Sublabel } from '../../atoms/label/sublabel';
-import Reset from '../../icons/Reset';
-import ValidationError from '../form/validation-error';
-import { FunctionButton } from './../../atoms/buttons/function-button';
-import SafeInputField from './../../atoms/safe-input-field';
+import { Sublabel } from '@helsenorge/form/components/atoms/label/sublabel';
+import Reset from '@helsenorge/toolkit/components/icons/Reset';
+import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
+import { FunctionButton } from '@helsenorge/toolkit/components/atoms/buttons/function-button';
+import SafeInputField from '@helsenorge/form/components/atoms/safe-input-field';
 
 import './styles.scss';
 

@@ -6,7 +6,7 @@ import moment from 'moment';
 import { DateRangePicker } from '../date-range-picker';
 import { Phrases, ErrorPhrases } from '../date-range-picker/date-range-picker-utils';
 import datepickerstyles from '../date-range-picker/styles.module.scss';
-import ValidationError from '../form/validation-error';
+import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
 import TimeInput from '../time-input';
 import DateTimePickerLegend from './date-time-picker-legend';
 import { DateTimePickerProps, DateTimePickerState } from './date-time-picker-types';

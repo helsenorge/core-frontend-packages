@@ -8,8 +8,8 @@ import {
   ERROR_YEAR_AFTER_MAX_DATE,
   ERROR_YEAR_BEFORE_MIN_DATE,
 } from '../../../constants/datetime';
-import SafeInputField from '../../atoms/safe-input-field';
-import ValidationError from './../../molecules/form/validation-error';
+import SafeInputField from '@helsenorge/form/components/atoms/safe-input-field';
+import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
 
 interface YearInputProps {
   /** Unik ID */
