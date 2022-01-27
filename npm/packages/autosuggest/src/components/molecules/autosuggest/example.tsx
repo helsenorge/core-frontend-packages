@@ -1,13 +1,15 @@
 import * as React from 'react';
+
 import {
   SuggestionsFetchRequested,
   SuggestionsFetchRequestedParams,
   OnSuggestionSelected,
   OnSuggestionsClearRequested,
 } from 'react-autosuggest';
+
 import Autosuggest, { Suggestion } from '.';
 
-class AutosuggestExample extends React.Component<{}, { suggestions: Array<Suggestion>; value: string }> {
+export class AutosuggestExample extends React.Component<{}, { suggestions: Array<Suggestion>; value: string }> {
   constructor(props: {}) {
     super(props);
     this.state = {
