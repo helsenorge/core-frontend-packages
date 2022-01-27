@@ -1,8 +1,10 @@
 import * as React from 'react';
-import SafeInputField from './index';
+
 import { isValid } from '@helsenorge/core-utils/string-utils';
 
-export default class SafeInputFieldExample extends React.Component<{}, {}> {
+import SafeInputField from './index';
+
+export class SafeInputFieldExample extends React.Component<{}, {}> {
   onBlur(): void {
     const info: Console = console;
     info.log('Input feltet har mistet fokus');
@@ -90,3 +92,5 @@ export default class SafeInputFieldExample extends React.Component<{}, {}> {
     );
   }
 }
+
+export default SafeInputFieldExample;

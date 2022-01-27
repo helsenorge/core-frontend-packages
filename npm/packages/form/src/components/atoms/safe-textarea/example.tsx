@@ -1,7 +1,10 @@
 import * as React from 'react';
-import { SafeTextarea } from '.';
-import { RadioGroup } from '../radio-group';
+
 import { isValid } from '@helsenorge/core-utils/string-utils';
+
+import { RadioGroup } from '../radio-group';
+
+import { SafeTextarea } from '.';
 
 const radioOptionsSize: { type: string; label: string }[] = [
   { type: 'small', label: 'Small' },
@@ -20,7 +23,7 @@ interface SafeTextareaExampleState {
   showmax: boolean;
 }
 
-export default class SafeTextareaExample extends React.Component<{}, SafeTextareaExampleState> {
+export class SafeTextareaExample extends React.Component<{}, SafeTextareaExampleState> {
   constructor(props: {}) {
     super(props);
     this.state = { isValid: false, value: '', size: 'medium', showmax: false, maxLength: 100 };
@@ -132,3 +135,5 @@ export default class SafeTextareaExample extends React.Component<{}, SafeTextare
     );
   }
 }
+
+export default SafeTextareaExample;

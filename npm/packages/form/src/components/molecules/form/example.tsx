@@ -1,7 +1,6 @@
 import * as React from 'react';
-import moment, { Moment } from 'moment';
-import { log } from '@helsenorge/core-utils/logger';
 
+import moment, { Moment } from 'moment';
 import {
   SuggestionsFetchRequested,
   SuggestionsFetchRequestedParams,
@@ -9,22 +8,20 @@ import {
   OnSuggestionsClearRequested,
 } from 'react-autosuggest';
 
-import Form from '.';
-
-import SafeInputField from '../../atoms/safe-input-field';
-import { SafeTextarea } from '../../atoms/safe-textarea';
-import { RadioGroup, Options } from '../../atoms/radio-group';
-
-import SafeSelect from './../../atoms/safe-select';
-import DateTimePicker from './../../molecules/date-time-picker';
-import { DateRangePicker } from '../../molecules/date-range-picker';
-
-import Autosuggest, { Suggestion } from '../../molecules/autosuggest';
+import Autosuggest, { Suggestion } from '@helsenorge/autosuggest/components/molecules/autosuggest';
+import { log } from '@helsenorge/core-utils/logger';
+import { DateRangePicker } from '@helsenorge/date-time/components/molecules/date-range-picker';
+import DateTimePicker from '@helsenorge/date-time/components/molecules/date-time-picker';
 
 import { CheckBox } from '../../atoms/checkbox';
-
+import { RadioGroup, Options } from '../../atoms/radio-group';
+import SafeInputField from '../../atoms/safe-input-field';
+import { SafeTextarea } from '../../atoms/safe-textarea';
+import SafeSelect from './../../atoms/safe-select';
 import WrappedComponent from './example/wrapped-component-example';
 import Validation from './validation';
+
+import Form from '.';
 
 interface ExampleState {
   minDate?: string;
@@ -57,7 +54,7 @@ interface ExampleState {
   inputFieldNumberValue: string;
 }
 
-export default class FormExample extends React.Component<{}, ExampleState> {
+export class FormExample extends React.Component<{}, ExampleState> {
   constructor(props: {}) {
     super(props);
 
@@ -599,3 +596,5 @@ export default class FormExample extends React.Component<{}, ExampleState> {
     );
   }
 }
+
+export default FormExample;

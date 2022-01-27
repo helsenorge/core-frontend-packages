@@ -1,9 +1,12 @@
 import * as React from 'react';
+
 import moment from 'moment';
+
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
+
 import { DateRangePicker } from '.';
 
-const example: React.FC<{}> = () => {
+export const DateRangePickerExample: React.FC<{}> = () => {
   const [startDatoValue, setStartDatoValue] = React.useState<moment.Moment>(moment('02.06.2021', 'DD.MM.YYYY'));
   const [sluttDatoValue, setSluttDatoValue] = React.useState<moment.Moment>(moment('03.06.2021', 'DD.MM.YYYY'));
 
@@ -180,4 +183,4 @@ const example: React.FC<{}> = () => {
   );
 };
 
-export default example;
+export default DateRangePickerExample;

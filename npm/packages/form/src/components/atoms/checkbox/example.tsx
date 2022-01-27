@@ -1,7 +1,9 @@
 import * as React from 'react';
+
+import { ActionButton } from '@helsenorge/toolkit/components/atoms/buttons/action-button';
+import HelpTrigger from '@helsenorge/toolkit/components/icons/HelpTrigger';
+
 import { CheckBox } from '.';
-import { ActionButton } from '../buttons/action-button';
-import HelpTrigger from '../../icons/HelpTrigger';
 
 interface CheckboxExampleState {
   isLillaChecked: boolean;
@@ -12,7 +14,7 @@ interface CheckboxExampleState {
   isHjelpVisible: boolean;
 }
 
-export default class CheckboxExample extends React.Component<{}, CheckboxExampleState> {
+export class CheckboxExample extends React.Component<{}, CheckboxExampleState> {
   constructor(props: {}) {
     super(props);
     this.state = {
@@ -126,3 +128,5 @@ export default class CheckboxExample extends React.Component<{}, CheckboxExample
     );
   }
 }
+
+export default CheckboxExample;

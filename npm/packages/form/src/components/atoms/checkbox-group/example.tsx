@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import CheckBoxGroup, { Option } from '.';
 
 const info: Console = console;
@@ -6,7 +7,7 @@ interface CheckBoxGroupExampleState {
   checkboxes: Array<Option>;
 }
 
-export default class CheckBoxGroupExample extends React.Component<{}, CheckBoxGroupExampleState> {
+export class CheckBoxGroupExample extends React.Component<{}, CheckBoxGroupExampleState> {
   constructor(props: {}) {
     super(props);
 
@@ -63,3 +64,5 @@ export default class CheckBoxGroupExample extends React.Component<{}, CheckBoxGr
     );
   }
 }
+
+export default CheckBoxGroupExample;

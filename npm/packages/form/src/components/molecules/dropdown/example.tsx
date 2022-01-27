@@ -1,9 +1,12 @@
 import * as React from 'react';
-import TransportAnnet from './../../icons/TransportAnnet';
-import Form, { FormChild } from './../../molecules/form';
-import SafeInputField from './../../atoms/safe-input-field';
+
+import TransportAnnet from '@helsenorge/toolkit/components//icons/TransportAnnet';
+
 import CheckBoxGroup, { Option } from './../../atoms/checkbox-group';
+import SafeInputField from './../../atoms/safe-input-field';
+import Form, { FormChild } from './../../molecules/form';
 import { Validation } from './../../molecules/form/validation';
+
 import { Dropdown } from '.';
 
 interface DropdownExampleState {
@@ -21,7 +24,7 @@ interface DropdownExampleState {
   checkboxes: Array<Option>;
 }
 
-export default class DropdownExample extends React.Component<{}, DropdownExampleState> {
+export class DropdownExample extends React.Component<{}, DropdownExampleState> {
   inputfieldInDropdownRef1: React.RefObject<FormChild>;
   inputfieldInDropdownRef2: React.RefObject<FormChild>;
   checkboxInDropdownRef: React.RefObject<FormChild>;
@@ -188,7 +191,7 @@ export default class DropdownExample extends React.Component<{}, DropdownExample
               isFullWidth
             >
               <SafeInputField
-                ref={(this.inputfieldInDropdownRef1 as unknown) as React.RefObject<SafeInputField>}
+                ref={this.inputfieldInDropdownRef1 as unknown as React.RefObject<SafeInputField>}
                 label="TestInputDropdown2"
                 inputName="TestInputDropdown2"
                 value={this.state.inputValue2}
@@ -211,7 +214,7 @@ export default class DropdownExample extends React.Component<{}, DropdownExample
                 isRequired
               />
               <SafeInputField
-                ref={(this.inputfieldInDropdownRef2 as unknown) as React.RefObject<SafeInputField>}
+                ref={this.inputfieldInDropdownRef2 as unknown as React.RefObject<SafeInputField>}
                 label="TestInputDropdown3"
                 inputName="TestInputDropdown3"
                 value={this.state.inputValue3}
@@ -252,7 +255,7 @@ export default class DropdownExample extends React.Component<{}, DropdownExample
         >
           <CheckBoxGroup
             id="dropdowncheckbox1"
-            ref={(this.checkboxInDropdownRef as unknown) as React.RefObject<CheckBoxGroup>}
+            ref={this.checkboxInDropdownRef as unknown as React.RefObject<CheckBoxGroup>}
             handleChange={this.updateCheckboxValue}
             errorMessage="Custom errorMessage: Du må velge min én transport og maks to"
             min={1}
@@ -268,3 +271,5 @@ export default class DropdownExample extends React.Component<{}, DropdownExample
     );
   }
 }
+
+export default DropdownExample;

@@ -1,13 +1,17 @@
 import * as React from 'react';
+
 import moment from 'moment';
-import DateTimePicker from '.';
+
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
 import { log } from '@helsenorge/core-utils/logger';
-import { Validation } from './../form/validation';
+import { Validation } from '@helsenorge/form/components/molecules/form/validation';
+
 import { Phrases } from './../date-range-picker/date-range-picker-utils';
 import { DateTimePickerResources } from './date-time-picker-types';
 
-export default class DateTimeExample extends React.Component<{}, {}> {
+import DateTimePicker from '.';
+
+export class DateTimePickerExample extends React.Component<{}, {}> {
   refs: {
     datetime1: DateTimePicker;
     datetime2: DateTimePicker;
@@ -139,3 +143,5 @@ export default class DateTimeExample extends React.Component<{}, {}> {
     );
   }
 }
+
+export default DateTimePickerExample;

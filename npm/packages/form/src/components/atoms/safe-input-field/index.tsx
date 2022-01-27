@@ -1,8 +1,10 @@
 import * as React from 'react';
+
 import classNames from 'classnames';
 
-import { Label } from './../../atoms/label';
 import { Spinner } from '@helsenorge/toolkit/components/atoms/spinner/';
+
+import { Label } from './../../atoms/label';
 import ValidationError from './../../molecules/form/validation-error';
 
 import './styles.scss';
@@ -103,7 +105,9 @@ export interface SafeInputFieldProps {
   helpButton?: JSX.Element;
   /** Element som vises når man klikker på HelpButton */
   helpElement?: JSX.Element;
-  /** @deprecated Events to be forwarded - brukes i gamle pasientreiser og skjemautfyller - kan muligens fases ut etterhvert */
+  /** Events to be forwarded - brukes i gamle pasientreiser og skjemautfyller - kan muligens fases ut etterhvert
+   *  @deprecated
+   */
   inputProps?: InputProps;
   /** attribute autocomplete,  */
   autocomplete?: string;

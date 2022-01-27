@@ -1,7 +1,8 @@
 import * as React from 'react';
+
 import SafeSelect from '.';
 
-export default class SafeSelectExample extends React.Component<{}, { selected: string | undefined; isValid: boolean }> {
+export class SafeSelectExample extends React.Component<{}, { selected: string | undefined; isValid: boolean }> {
   constructor(props: {}) {
     super(props);
     this.state = {
@@ -86,3 +87,5 @@ export default class SafeSelectExample extends React.Component<{}, { selected: s
     );
   }
 }
+
+export default SafeSelectExample;

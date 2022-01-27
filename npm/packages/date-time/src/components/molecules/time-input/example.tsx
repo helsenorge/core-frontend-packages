@@ -1,13 +1,15 @@
 import * as React from 'react';
+
+import { Validation } from '@helsenorge/form/components/molecules/form/validation';
+
 import TimeInput from '.';
-import { Validation } from './../form/validation';
 
 interface TimeInputExampleState {
   value: string;
   value2: string;
 }
 
-export default class TimeInputExample extends React.Component<{}, TimeInputExampleState> {
+export class TimeInputExample extends React.Component<{}, TimeInputExampleState> {
   timeInputRef: React.RefObject<TimeInput>;
   timeInputRef2: React.RefObject<TimeInput>;
 
@@ -71,3 +73,5 @@ export default class TimeInputExample extends React.Component<{}, TimeInputExamp
     );
   }
 }
+
+export default TimeInputExample;

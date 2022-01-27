@@ -1,10 +1,11 @@
 import * as React from 'react';
+
 import { RadioGroup, Options } from '.';
 
 interface State {
   selected: string;
 }
-export default class RadioGroupExample extends React.Component<{}, State> {
+export class RadioGroupExample extends React.Component<{}, State> {
   constructor(props: {}) {
     super(props);
     this.state = {
@@ -49,3 +50,5 @@ export default class RadioGroupExample extends React.Component<{}, State> {
     );
   }
 }
+
+export default RadioGroupExample;
