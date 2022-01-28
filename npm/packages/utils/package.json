@@ -16,12 +16,8 @@
     "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
-    "lint:fix": "npm run lint -- --fix",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx} --quiet",
     "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
-    "prettier:fix": "npm run prettier -- --write",
-    "pretypecheck": "tsc -v",
-    "typecheck": "tsc --noEmit",
     "test:watch": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --watch",
     "helsenorge-notify": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js notify"
   },
@@ -31,12 +27,9 @@
   ],
   "license": "ISC",
   "type": "module",
-  "peerDependencies": {
-    "@helsenorge/designsystem-react": "^1.0.0-beta"
-  },
   "devDependencies": {
     "@helsenorge/core-build": "^21.3.1",
-    "@helsenorge/designsystem-react": "1.0.0-alpha-nye-spacers-6",
+    "@helsenorge/designsystem-react": "1.0.0-beta100",
     "@types/react-router-dom": "5.1.5",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/redux": "^3.6.0",
@@ -52,10 +45,16 @@
       "pre-commit": "bash node_modules/@helsenorge/core-build/precommit.sh"
     }
   },
-  "browserslist": [
-    "> 0.2% in NO",
-    "not dead",
-    "not op_mini all",
-    "not ie > 0"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
