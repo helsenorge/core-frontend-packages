@@ -10367,7 +10367,7 @@ export type HNMinHelseNavigation = {
   */
   tile_MeldeHendelse_Description: string;
   /** 
-  * <p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p><br /><a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\">Skjema for voksne</a> <br /><a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\">Skjema for barn under 16 år</a>
+  * <p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p>\n<br />\n<a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\">Skjema for voksne</a> <br />\n<a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\">Skjema for barn under 16 år</a>
   */
   userControl_Start_ReservationMessage: string;
   /** 
@@ -18719,7 +18719,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_FORESATT_REISE_UNDER_10_KM_begrunnelser_INGEN: string;
   /** 
-  * 
+  * Klagen er behandlet av Statsforvalteren.
   */
   krav_FORESATT_REFUSJON_NODVENDIGE_UTGIFTER_info: string;
   /** 
@@ -20756,7 +20756,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   loadSkjemaButtonOk: string;
   /** 
-  * Avbryt
+  * Prøv igjen senere.
   */
   loadSkjemaButtonAvbryt: string;
   /** 
