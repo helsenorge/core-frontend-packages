@@ -10331,7 +10331,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Provesvar_Title: string;
   /** 
-  * Korona og luftveisinfeksjoner.
+  * Svar på koronatest, prøver og undersøkelser.
   */
   tile_Provesvar_Description: string;
   /** 
