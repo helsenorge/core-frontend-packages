@@ -3325,10 +3325,6 @@ export type HNMinHelseCommonJS = {
   */
   filterDateErrorBeforeMinDate: string;
   /** 
-  * Forkast endringer
-  */
-  pendingChangesClose: string;
-  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
@@ -3540,7 +3536,7 @@ export type HNMinHelseContent = {
   */
   page_Provesvar_Title: string;
   /** 
-  * Her kan du se prøvesvar for koronavirus og andre typer virus og bakterier som kan gi luftveisinfeksjon. Du kan også se svar på utvalgte prøver og undersøkelser ved sykehus i Helse Vest.
+  * Her vises en oversikt over dine prøvesvar for koronavirus. Det kan også vises svar på andre typer virus og bakterier som kan gi luftveisinfeksjon.
   */
   page_Provesvar_Desc: string;
   /** 
@@ -18723,7 +18719,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_FORESATT_REISE_UNDER_10_KM_begrunnelser_INGEN: string;
   /** 
-  * 
+  * Ingen av grunnene under gjelder barnets reise.
   */
   krav_FORESATT_REFUSJON_NODVENDIGE_UTGIFTER_info: string;
   /** 
@@ -20760,7 +20756,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   loadSkjemaButtonOk: string;
   /** 
-  * Avbryt
+  * Prøv igjen senere.
   */
   loadSkjemaButtonAvbryt: string;
   /** 
