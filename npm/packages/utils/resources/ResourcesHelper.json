@@ -838,6 +838,7 @@
     "filterDateNavigateForward": "Fram",
     "filterDateErrorDateFormat": "Datoen er oppgitt på feil format",
     "filterDateErrorBeforeMinDate": "Fra-dato kan ikke være senere enn til-dato",
+    "pendingChangesClose": "Forkast endringer",
     "stringOverMaxLengthError": "Du har skrevet for mange tegn. Gjør teksten kortere.",
     "backbar_pasientreiser": "Pasientreiser",
     "uploadButtonText": "Last opp fil",

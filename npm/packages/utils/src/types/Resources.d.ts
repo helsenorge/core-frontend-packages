@@ -3325,6 +3325,10 @@ export type HNMinHelseCommonJS = {
   */
   filterDateErrorBeforeMinDate: string;
   /** 
+  * Forkast endringer
+  */
+  pendingChangesClose: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
