@@ -265,6 +265,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
   */
   representasjonerBarnAnnenAdresse: string;
+  /** 
+  * Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  */
+  representasjonerManglendeForeldreansvar: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
