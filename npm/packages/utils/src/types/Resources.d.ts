@@ -3536,7 +3536,7 @@ export type HNMinHelseContent = {
   */
   page_Provesvar_Title: string;
   /** 
-  * Her vises en oversikt over dine prøvesvar for koronavirus. Det kan også vises svar på andre typer virus og bakterier som kan gi luftveisinfeksjon.
+  * Her kan du se prøvesvar for koronavirus og andre typer virus og bakterier som kan gi luftveisinfeksjon. Du kan også se svar på utvalgte prøver og undersøkelser ved sykehus i Helse Vest.
   */
   page_Provesvar_Desc: string;
   /** 
