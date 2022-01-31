@@ -222,6 +222,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   representasjonerBarn16Plus: string;
   /** 
+  * Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  */
+  representasjonerBarnAnnenAdresse: string;
+  /** 
   * /se/saami/
   */
   headerMenuBasicSamiskUrl: string;
@@ -295,10 +299,6 @@ export type HNCoreFrontendNPMPackagesFramework = {
   * Forkast endringer
   */
   pendingChangesClose: string;
-  /** 
-  * Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
-  */
-  representasjonerBarnAnnenAdresse: string;
   /** 
   * deg selv
   */
