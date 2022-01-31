@@ -218,10 +218,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   personvelgerHeader: string;
   /** 
-  * Det finnes endringer som ikke er lagret
-  */
-  pendingChangesHeader: string;
-  /** 
   * /se/saami/
   */
   headerMenuBasicSamiskUrl: string;
@@ -257,6 +253,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Lukk
   */
   closeMenu: string;
+  /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  pendingChangesHeader: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
@@ -276,6 +276,10 @@ export type HNCoreFrontendNPMPackagesCMS = {
 
 export type HNCoreFrontendNPMPackagesFramework = { 
   /** 
+  * Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  */
+  representasjonerManglendeForeldreansvar: string;
+  /** 
   * Fortsett redigering
   */
   pendingChangesConfirm: string;
@@ -284,9 +288,9 @@ export type HNCoreFrontendNPMPackagesFramework = {
   */
   pendingChangesClose: string;
   /** 
-  * Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  * Det finnes endringer som ikke er lagret
   */
-  representasjonerManglendeForeldreansvar: string;
+  pendingChangesHeader: string;
   /** 
   * Hvis du forlater siden, vil du miste alle endringer du har gjort.
   */
