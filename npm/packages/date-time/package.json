@@ -52,7 +52,7 @@
     "@helsenorge/form": "^21.6.3",
     "@helsenorge/toolkit": "^21.6.3",
     "@helsenorge/designsystem-react": "1.0.0-alpha-nye-spacers-5",
-    "@types/react-dates": "^21.8.3"
+    "@types/react-dates": "^21.8.1"
   },
   "dependencies": {
     "react-dates": "21.8.0"
