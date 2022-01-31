@@ -12192,7 +12192,7 @@ export type HNMinHelsePasientjournal = {
   */
   documentMessageTitle: string;
   /** 
-  * {"defaulttekst_overskrift":"Om pasientjournalen","defaulttekst_brodtekst":"<p>\nTjenesten gir deg kun lesetilgang til journaldokumenter fra behandlingen din. Tjenesten viser kun dokumenter fra sykehus i Helse Nord, Helse Vest og Helse Sør-Øst. \n</p>\n\n<h3>\nDato på dokument\n</h3>\n\n<p>\nDatoen viser når journaldokumentet ble opprettet, ikke nødvendigvis når det sist ble endret. Når du åpner et dokument vil du alltid se den nyeste versjonen.\n</p>\n\n<h3>\nInnsyn i pasientjournalen på vegne av barn\n</h3>\n\n<p>\nHvis du vil se pasientjournalen til et barn du har foreldreansvar for, velger du barnets navn under \"Hvem vil du bruke Helsenorge på vegne av\". Det er foreløpig kun Helse Nord og Helse Vest som tilbyr digitalt innsyn på vegne av barn under 12 år. \n</p>\n\n<h3>\nIkke alle dokumenter vises digitalt\n</h3>\n\n<p>\nPasientjournalen din kan inneholde dokumenter som ikke kan vises digitalt. \n<a href=\"{HelsenorgeUrl}/pasientjournal/om-pasientjournal/#be-om-utskrift-av-pasientjournal\">Be om utskrift av din pasientjournal</a>\n</p>\n\n<h3>\nNoe som er feil i din pasientjournal?\n</h3>\n\n<p>\nFor å be om endring kan du bruke ett skjema her: <a href=\"{HelsenorgeUrl}/pasientjournal/om-pasientjournal/#be-om-endring-i-pasientjournal\">Be om endring i pasientjournal</a>\n</p>\n\n<h3>\nVed alvorlige feil i pasientjournalen\n</h3>\n\n<p>\nHvis du finner dokumenter som tilhører andre, må du straks ringe sykehuset. <a href=\"{HelsenorgeUrl}/pasientjournal/om-pasientjournal/#pasientjournalen-din-pa-helsenorge\">Se kontaktopplysninger til sykehuset</a>\n</p>\n\n<h3>\nLurer du på noe mer om pasientjournal?\n</h3>\n\n<p>\n<a href=\"{HelsenorgeUrl}/pasientjournal/om-pasientjournal\">Les mer om pasientjournal</a>\n</p>"}
+  * {"defaulttekst_overskrift":"Om pasientjournalen","defaulttekst_brodtekst":"<p>\nTjenesten gir deg kun lesetilgang til journaldokumenter fra behandlingen din. Tjenesten viser kun dokumenter fra sykehus i Helse Nord, Helse Vest og Helse Sør-Øst. \n</p>\n\n<h3>\nDato på dokument\n</h3>\n\n<p>\nDatoen viser når journaldokumentet ble opprettet, ikke nødvendigvis når det sist ble endret. Når du åpner et dokument vil du alltid se den nyeste versjonen.\n</p>\n\n<h3>\nInnsyn i pasientjournalen på vegne av barn\n</h3>\n\n<p>\nHvis du vil se pasientjournalen til et barn du har foreldreansvar for, velger du barnets navn under \"Hvem vil du bruke Helsenorge på vegne av\". Det er foreløpig kun Helse Nord og Helse Vest som tilbyr digitalt innsyn på vegne av barn under 12 år. \n</p>\n\n<h3>\nIkke alle dokumenter vises digitalt\n</h3>\n\n<p>\nPasientjournalen din kan inneholde dokumenter som ikke kan vises digitalt. \n<a href=\"{HelsenorgeUrl}/pasientjournal/om/#be-om-utskrift-av-pasientjournal\">Be om utskrift av din pasientjournal</a>\n</p>\n\n<h3>\nNoe som er feil i din pasientjournal?\n</h3>\n\n<p>\nFor å be om endring kan du bruke ett skjema her: <a href=\"{HelsenorgeUrl}/pasientjournal/om/#be-om-endring-i-pasientjournal\">Be om endring i pasientjournal</a>\n</p>\n\n<h3>\nVed alvorlige feil i pasientjournalen\n</h3>\n\n<p>\nHvis du finner dokumenter som tilhører andre, må du straks ringe sykehuset. <a href=\"{HelsenorgeUrl}/pasientjournal/om/#pasientjournalen-din-pa-helsenorge\">Se kontaktopplysninger til sykehuset</a>\n</p>\n\n<h3>\nLurer du på noe mer om pasientjournal?\n</h3>\n\n<p>\n<a href=\"{HelsenorgeUrl}/pasientjournal/om\">Les mer om pasientjournal</a>\n</p>"}
   */
   hjelpeKontekstDokumentoversikt: string;
   /** 
@@ -18719,7 +18719,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_FORESATT_REISE_UNDER_10_KM_begrunnelser_INGEN: string;
   /** 
-  * Ingen av grunnene under gjelder barnets reise.
+  * 
   */
   krav_FORESATT_REFUSJON_NODVENDIGE_UTGIFTER_info: string;
   /** 
@@ -20756,7 +20756,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   loadSkjemaButtonOk: string;
   /** 
-  * Prøv igjen senere.
+  * Avbryt
   */
   loadSkjemaButtonAvbryt: string;
   /** 
