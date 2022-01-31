@@ -218,13 +218,9 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   personvelgerHeader: string;
   /** 
-  * Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  * Det finnes endringer som ikke er lagret
   */
-  representasjonerBarn16Plus: string;
-  /** 
-  * Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
-  */
-  representasjonerBarnAnnenAdresse: string;
+  pendingChangesHeader: string;
   /** 
   * /se/saami/
   */
@@ -242,10 +238,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuProfileLinksBrukOgTilgangerTitle: string;
   /** 
-  * Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar" target="_blank">Les mer om foreldrerepresentasjon</a>.
-  */
-  representasjonerManglendeForeldreansvar: string;
-  /** 
   * Det har skjedd en teknisk feil
   */
   modalErrorTitle: string;
@@ -257,10 +249,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * OK
   */
   modalErrorButtonText: string;
-  /** 
-  * Det finnes endringer som ikke er lagret
-  */
-  pendingChangesHeader: string;
   /** 
   * Åpne
   */
@@ -288,10 +276,6 @@ export type HNCoreFrontendNPMPackagesCMS = {
 
 export type HNCoreFrontendNPMPackagesFramework = { 
   /** 
-  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
-  */
-  pendingChangesDescription: string;
-  /** 
   * Fortsett redigering
   */
   pendingChangesConfirm: string;
@@ -299,6 +283,22 @@ export type HNCoreFrontendNPMPackagesFramework = {
   * Forkast endringer
   */
   pendingChangesClose: string;
+  /** 
+  * Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  */
+  representasjonerManglendeForeldreansvar: string;
+  /** 
+  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
+  */
+  pendingChangesDescription: string;
+  /** 
+  * Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  */
+  representasjonerBarn16Plus: string;
+  /** 
+  * Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  */
+  representasjonerBarnAnnenAdresse: string;
   /** 
   * deg selv
   */
