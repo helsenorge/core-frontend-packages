@@ -62,7 +62,9 @@
     "modalErrorButtonText": "OK",
     "openMenu": "Åpne",
     "closeMenu": "Lukk",
-    "pendingChangesHeader": "Det finnes endringer som ikke er lagret"
+    "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
+    "representasjonerBarn16Plus": "Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href=\"https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no\" target=\"_blank\">Les mer om foreldrerepresentasjon</a>.",
+    "representasjonerBarnAnnenAdresse": "Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href=\"https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no\" target=\"_blank\">Les mer om foreldrerepresentasjon</a>."
   },
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk",
