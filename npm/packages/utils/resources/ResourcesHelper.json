@@ -53,7 +53,6 @@
     "errorRepresentasjoner": "Det oppstod en feil ved henting av representasjoner.",
     "personvelgerIngress": "Alle opplysninger som vises vil være knyttet til personen du velger, og eventuelle oppdateringer du gjør vil være på dennes vegne. Når du bruker tjenester på vegne av andre, vil det registreres. Den du representerer vil kunne se dette under Logg over bruk.",
     "personvelgerHeader": "Hvem sine helseopplysninger vil du se?",
-    "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
     "headerMenuBasicSamiskUrl": "/se/saami/",
     "headerMenuBasicSamiskTitle": "Sámegiella",
     "headerMenuProfileLinksBrukOgTilgangerUrl": "/bruk-og-tilganger",
@@ -62,7 +61,8 @@
     "modalErrorDescription": "Akkurat nå er deler av Helsenorge ikke tilgjengelig, og vi får ikke logget deg ut. Prøv igjen senere eller kontakt Veiledning Helsenorge (se kontaktinfo nederst på siden).",
     "modalErrorButtonText": "OK",
     "openMenu": "Åpne",
-    "closeMenu": "Lukk"
+    "closeMenu": "Lukk",
+    "pendingChangesHeader": "Det finnes endringer som ikke er lagret"
   },
   "HNCoreFrontendNPMPackagesCMS": { 
     "searchPlaceholder": "Søk",
@@ -70,9 +70,10 @@
     "searchErrorSuggestionFetch": "Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere."
   },
   "HNCoreFrontendNPMPackagesFramework": { 
+    "representasjonerManglendeForeldreansvar": "Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href=\"https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar\" target=\"_blank\">Les mer om foreldrerepresentasjon</a>.",
     "pendingChangesConfirm": "Fortsett redigering",
     "pendingChangesClose": "Forkast endringer",
-    "representasjonerManglendeForeldreansvar": "Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href=\"https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar\" target=\"_blank\">Les mer om foreldrerepresentasjon</a>.",
+    "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
     "pendingChangesDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort.",
     "representasjonerBarn16Plus": "Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href=\"https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no\" target=\"_blank\">Les mer om foreldrerepresentasjon</a>.",
     "representasjonerBarnAnnenAdresse": "Du kan ikke representere et barn på Helsenorge hvis ikke minst én av foreldrene er folkeregistrert på samme adresse som barnet. <a href=\"https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no\" target=\"_blank\">Les mer om foreldrerepresentasjon</a>.",
