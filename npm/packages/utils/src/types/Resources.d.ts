@@ -218,6 +218,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   personvelgerHeader: string;
   /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  pendingChangesHeader: string;
+  /** 
   * /se/saami/
   */
   headerMenuBasicSamiskUrl: string;
@@ -233,6 +237,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Bruk og tilganger
   */
   headerMenuProfileLinksBrukOgTilgangerTitle: string;
+  /** 
+  * Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar" target="_blank">Les mer om foreldrerepresentasjon</a>.
+  */
+  representasjonerManglendeForeldreansvar: string;
   /** 
   * Det har skjedd en teknisk feil
   */
@@ -272,10 +280,6 @@ export type HNCoreFrontendNPMPackagesCMS = {
 
 export type HNCoreFrontendNPMPackagesFramework = { 
   /** 
-  * Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href="https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar" target="_blank">Les mer om foreldrerepresentasjon</a>.
-  */
-  representasjonerManglendeForeldreansvar: string;
-  /** 
   * Fortsett redigering
   */
   pendingChangesConfirm: string;
@@ -283,10 +287,6 @@ export type HNCoreFrontendNPMPackagesFramework = {
   * Forkast endringer
   */
   pendingChangesClose: string;
-  /** 
-  * Det finnes endringer som ikke er lagret
-  */
-  pendingChangesHeader: string;
   /** 
   * Hvis du forlater siden, vil du miste alle endringer du har gjort.
   */
@@ -3325,6 +3325,18 @@ export type HNMinHelseCommonJS = {
   */
   filterDateErrorBeforeMinDate: string;
   /** 
+  * Forkast endringer
+  */
+  pendingChangesClose: string;
+  /** 
+  * Fortsett redigering
+  */
+  pendingChangesConfirm: string;
+  /** 
+  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
+  */
+  pendingChangesDescription: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
@@ -3536,7 +3548,7 @@ export type HNMinHelseContent = {
   */
   page_Provesvar_Title: string;
   /** 
-  * Her vises en oversikt over dine prøvesvar for koronavirus. Det kan også vises svar på andre typer virus og bakterier som kan gi luftveisinfeksjon.
+  * Her kan du se prøvesvar for koronavirus og andre typer virus og bakterier som kan gi luftveisinfeksjon. Du kan også se svar på utvalgte prøver og undersøkelser ved sykehus i Helse Vest.
   */
   page_Provesvar_Desc: string;
   /** 
@@ -18719,7 +18731,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_FORESATT_REISE_UNDER_10_KM_begrunnelser_INGEN: string;
   /** 
-  * Ingen av grunnene under gjelder barnets reise.
+  * 
   */
   krav_FORESATT_REFUSJON_NODVENDIGE_UTGIFTER_info: string;
   /** 
@@ -20756,7 +20768,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   loadSkjemaButtonOk: string;
   /** 
-  * Prøv igjen senere.
+  * Avbryt
   */
   loadSkjemaButtonAvbryt: string;
   /** 
