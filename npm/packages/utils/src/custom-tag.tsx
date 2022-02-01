@@ -39,7 +39,7 @@ export default class CustomTag extends React.Component<CustomTagProps, {}> {
     const { id, tabIndex, tagName, className, focus } = this.props;
     const CustomTagName = tagName;
     return (
-      /* eslint-disable  @typescript-eslint/ban-ts-ignore */
+      /* eslint-disable  @typescript-eslint/ban-ts-comment */
       // @ts-ignore https://github.com/Microsoft/TypeScript/issues/28892
       <CustomTagName
         // @ts-ignore https://github.com/Microsoft/TypeScript/issues/28892
