@@ -18747,7 +18747,7 @@ export type HNMinHelsePasientreiserJS = {
   */
   krav_FORESATT_REISE_UNDER_10_KM_begrunnelser_INGEN: string;
   /** 
-  * Ingen av grunnene under gjelder barnets reise.
+  * 
   */
   krav_FORESATT_REFUSJON_NODVENDIGE_UTGIFTER_info: string;
   /** 
@@ -20784,7 +20784,7 @@ export type HNMinHelseSkjemautfyller = {
   */
   loadSkjemaButtonOk: string;
   /** 
-  * Prøv igjen senere.
+  * Avbryt
   */
   loadSkjemaButtonAvbryt: string;
   /** 
