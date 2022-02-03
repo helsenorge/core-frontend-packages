@@ -1,7 +1,8 @@
 import * as React from 'react';
-import { Label } from '\.';
 
-const LabelExample: React.FC<{}> = () => {
+import { Label } from '.';
+
+export const LabelExample: React.FC<{}> = () => {
   return (
     <div>
       <p>{'-> Label med text og children'}</p>
