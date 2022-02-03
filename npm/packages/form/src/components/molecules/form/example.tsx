@@ -1,14 +1,7 @@
 import * as React from 'react';
 
 import moment, { Moment } from 'moment';
-import {
-  SuggestionsFetchRequested,
-  SuggestionsFetchRequestedParams,
-  OnSuggestionSelected,
-  OnSuggestionsClearRequested,
-} from 'react-autosuggest';
 
-import Autosuggest, { Suggestion } from '@helsenorge/autosuggest/components/molecules/autosuggest';
 import { log } from '@helsenorge/core-utils/logger';
 import { DateRangePicker } from '@helsenorge/date-time/components/molecules/date-range-picker';
 import DateTimePicker from '@helsenorge/date-time/components/molecules/date-time-picker';
@@ -45,8 +38,6 @@ interface ExampleState {
   saved: boolean;
   radioGroupValue: string;
   formValidated: boolean;
-  suggestions: Array<Suggestion>;
-  autosuggestValue: string;
   inputFieldRequiredValue: string;
   inputFieldNameValue: string;
   saveButton: boolean;
@@ -80,8 +71,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
       saved: false,
       radioGroupValue: '',
       formValidated: false,
-      suggestions: [],
-      autosuggestValue: '',
       inputFieldRequiredValue: '',
       inputFieldNameValue: '',
       inputFieldDecimalValue: '',
@@ -153,42 +142,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
   inputFieldOnBlur = (): void => {
     const info: Console = console;
     info.log('inputFieldOnBlur');
-  };
-
-  onAutosuggestChange = (e: React.FormEvent<HTMLInputElement>, { newValue }: { newValue: string; method: string }): void => {
-    console.log('onAutosuggestChange', e, newValue);
-    this.setState({ autosuggestValue: newValue });
-  };
-
-  onSuggestionsFetchRequested: SuggestionsFetchRequested = (requestParams: SuggestionsFetchRequestedParams) => {
-    console.log('onSuggestionsFetchRequested', requestParams.value);
-    const suggestions: Array<Suggestion> = [
-      { label: 'First suggestion', value: 'First suggestion' },
-      {
-        label: 'Second suggestion which is very long and not accepted under validation',
-        value: 'Second suggestion which is very long and not accepted under validation',
-      },
-      { label: 'Third suggestion', value: 'Third suggestion' },
-      { label: 'Fourth suggestion', value: 'Fourth suggestion' },
-    ];
-
-    this.setState({
-      suggestions,
-    });
-  };
-
-  onSuggestionsSelected: OnSuggestionSelected<Suggestion> = (e, data) => {
-    console.log('onSuggestionsSelected', data.suggestion, e);
-    this.setState({
-      autosuggestValue: data.suggestion.value,
-    });
-  };
-
-  onSuggestionsClearRequested: OnSuggestionsClearRequested = () => {
-    console.log('onSuggestionsClearRequested');
-    this.setState({
-      suggestions: [],
-    });
   };
 
   onTextfieldChange = (event: React.FormEvent<{}>): void => {
@@ -453,25 +406,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
               pattern="^[A-Z][a-z]*"
             />
           </Validation>
-          <Validation>
-            <Autosuggest
-              id={'autosuggest-id'}
-              type="search"
-              placeholder={'Placeholder text'}
-              label={'This is an autosuggest field'}
-              subLabel={'and its sublabel'}
-              value={this.state.autosuggestValue}
-              suggestions={this.state.suggestions}
-              onChange={this.onAutosuggestChange}
-              onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
-              onSuggestionsClearRequested={this.onSuggestionsClearRequested}
-              onSuggestionSelected={this.onSuggestionsSelected}
-              errorMessage={'Feltet er påkrevd. Du må velge noe med minLength 2 og maxLength 25'}
-              isRequired={true}
-              minLength={2}
-              maxLength={25}
-            />
-          </Validation>
+
           <Validation>
             <SafeTextarea
               id="formTextarea"
