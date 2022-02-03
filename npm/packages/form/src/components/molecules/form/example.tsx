@@ -1,10 +1,6 @@
 import * as React from 'react';
 
-import moment, { Moment } from 'moment';
-
 import { log } from '@helsenorge/core-utils/logger';
-import { DateRangePicker } from '@helsenorge/date-time/components/molecules/date-range-picker';
-import DateTimePicker from '@helsenorge/date-time/components/molecules/date-time-picker';
 
 import { CheckBox } from '../../atoms/checkbox';
 import { RadioGroup, Options } from '../../atoms/radio-group';
@@ -17,8 +13,6 @@ import Validation from './validation';
 import Form from '.';
 
 interface ExampleState {
-  minDate?: string;
-  maxDate?: string;
   checkbox1Checked?: boolean;
   checkbox2Checked?: boolean;
   checkbox3Checked?: boolean;
@@ -27,13 +21,6 @@ interface ExampleState {
   inputFieldValue: string;
   textfieldValue: string;
   safeselect: string;
-  datetimeinputValue: Date | undefined;
-  datetimepickerDateValue: moment.Moment | undefined;
-  datetimepickerTimeValue: string | undefined;
-  datepickerValue: Date | undefined;
-  daterangepickerValue: Moment | undefined;
-  startDateValue: Moment | undefined;
-  endDateValue: Moment | undefined;
   saving: boolean;
   saved: boolean;
   radioGroupValue: string;
@@ -50,8 +37,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
     super(props);
 
     this.state = {
-      minDate: '01.01.2020',
-      maxDate: '31.12.2020',
       checkbox1Checked: false,
       checkbox2Checked: false,
       checkbox3Checked: false,
@@ -60,13 +45,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
       inputFieldValue: '',
       textfieldValue: '',
       safeselect: '',
-      datetimeinputValue: undefined,
-      datetimepickerDateValue: undefined,
-      datetimepickerTimeValue: undefined,
-      datepickerValue: undefined,
-      daterangepickerValue: undefined,
-      startDateValue: moment('10.09.2020', 'DD.MM.YYYY'),
-      endDateValue: undefined,
       saving: false,
       saved: false,
       radioGroupValue: '',
@@ -152,31 +130,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
     });
   };
 
-  onChangeDateTimeInput = (value: Date | undefined): void => {
-    const info: Console = console;
-    this.setState({
-      datetimeinputValue: value,
-    });
-    info.log('onChangeDateTimeInput', value);
-  };
-
-  onChangeDateTimePicker = (date: moment.Moment | undefined, time: string): void => {
-    const info: Console = console;
-    this.setState({
-      datetimepickerDateValue: date,
-      datetimepickerTimeValue: time,
-    });
-    info.log('onChangeDatePickerInput', date, time, '.->', date, time);
-  };
-
-  onChangeDatePicker = (value: Date | undefined): void => {
-    const info: Console = console;
-    this.setState({
-      datepickerValue: value,
-    });
-    info.log('onDatePickerChange', value);
-  };
-
   onSafeselectChange = (evt: React.MouseEvent): void => {
     const info: Console = console;
     const value = (evt.target as HTMLInputElement).value ? (evt.target as HTMLInputElement).value : '-1';
@@ -184,25 +137,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
       safeselect: value,
     });
     info.log('onSafeselectChange', value);
-  };
-
-  onChangeSingleDatePicker = (value: moment.Moment | { start: moment.Moment | null; end: moment.Moment | null } | null): void => {
-    const info: Console = console;
-
-    this.setState({
-      daterangepickerValue: value as moment.Moment,
-    });
-    info.log('onChangeSingleDatePicker', value);
-  };
-
-  onChangeRangeDatePicker = (value: { start: moment.Moment | null; end: moment.Moment | null }): void => {
-    const info: Console = console;
-    this.setState({
-      startDateValue: value.start as moment.Moment,
-      endDateValue: value.end as moment.Moment,
-    });
-
-    info.log('onDatePickerChange', value);
   };
 
   validateTextarea = (value: string): boolean => {
@@ -420,46 +354,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
               onChange={this.onTextfieldChange}
             />
           </Validation>
-          <Validation>
-            <DateTimePicker
-              id="date-time-picker"
-              legend="Når ble du behandlet?"
-              dateLabel={'Velg en dato'}
-              timeLabel={'og en tid'}
-              dateValue={this.state.datetimepickerDateValue}
-              timeValue={this.state.datetimepickerTimeValue}
-              minimumDateTime={moment('15.07.2020 12:10', 'DD.MM.YYYY HH:mm')}
-              maximumDateTime={moment('20.07.2020 12:10', 'DD.MM.YYYY HH:mm')}
-              onChange={this.onChangeDateTimePicker}
-              isRequired
-            />
-          </Validation>
 
-          <Validation>
-            <DateRangePicker
-              id="formdrpsingle"
-              type="single"
-              singleDateValue={this.state.daterangepickerValue}
-              isMonthHeaderSimplified
-              //initialDate={moment('08.09.2020', 'DD.MM.YYYY')}
-              minimumDate={moment('05.09.2020', 'DD.MM.YYYY')}
-              maximumDate={moment('10.09.2020', 'DD.MM.YYYY')}
-              dateValidator={(id, date) => {
-                const dateToCompare = moment('05.09.2020', 'DD.MM.YYYY');
-                const isValid = !date?.isSame(dateToCompare, 'day');
-                return { isValid, errorString: id + 'Custom Validator - Dato kan ikke være 05.09 - just because ;)' };
-              }}
-              onDateChange={this.onChangeSingleDatePicker}
-              onError={() => {
-                console.log('there is an error');
-              }}
-              label={'My new datepicker'}
-              requiredLabel={'My required label'}
-              optionalLabel={'med optional label'}
-              placeholder="placeholder"
-              isRequired
-            />
-          </Validation>
           <Validation>
             <SafeSelect
               id="selectexample"
@@ -485,31 +380,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
               }}
               requiredLabel={' (feltet er required)'}
               value={this.state.safeselect}
-              isRequired
-            />
-          </Validation>
-
-          <Validation>
-            <DateRangePicker
-              id="formdrprange"
-              type="range"
-              startDateValue={this.state.startDateValue}
-              endDateValue={this.state.endDateValue}
-              minimumDate={moment('05.09.2020', 'DD.MM.YYYY')}
-              maximumDate={moment('14.09.2020', 'DD.MM.YYYY')}
-              dateValidator={(id, start, end) => {
-                const dateToCompare = moment('05.09.2020', 'DD.MM.YYYY');
-                const isValid = !start?.isSame(dateToCompare, 'day') && !end?.isSame(dateToCompare, 'day');
-                return { isValid, errorString: id + 'Custom Validator - Datoene kan ikke være 05.09 - just because ;)' };
-              }}
-              minimumPeriod={3}
-              onError={() => {
-                console.log('there is an error');
-              }}
-              onDateChange={this.onChangeRangeDatePicker}
-              label={'My range datepicker'}
-              requiredLabel={'My required label'}
-              placeholder="dd.mm.åååå"
               isRequired
             />
           </Validation>
