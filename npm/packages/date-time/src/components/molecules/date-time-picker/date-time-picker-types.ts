@@ -1,8 +1,6 @@
 import { SingleDatePickerPhrases } from 'react-dates';
 import { Props as DateRangePickerProps, DatePickerErrorPhrases } from '../date-range-picker/date-range-picker-types';
 
-import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
-
 import { TimeResources } from '../time-input';
 
 export interface DateTimePickerResources {

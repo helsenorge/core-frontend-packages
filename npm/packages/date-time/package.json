@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/date-time",
-  "version": "21.9.0",
+  "version": "22.0.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -40,18 +40,18 @@
     }
   },
   "peerDependencies": {
-    "@helsenorge/core-build": ">=21.0.0",
-    "@helsenorge/core-utils": ">=21.1.1",
+    "@helsenorge/core-build": ">22.0.0",
+    "@helsenorge/core-utils": ">22.0.0",
     "@helsenorge/designsystem-react": "^1.0.0-beta",
-    "@helsenorge/form": ">=21.1.1",
-    "@helsenorge/toolkit": ">=21.1.1"
+    "@helsenorge/form": ">22.0.0",
+    "@helsenorge/toolkit": ">22.0.0"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^21.3.1",
-    "@helsenorge/core-utils": "^21.6.3",
-    "@helsenorge/designsystem-react": "1.0.0-alpha-nye-spacers-5",
-    "@helsenorge/form": "^21.6.3",
-    "@helsenorge/toolkit": "^21.6.3",
+    "@helsenorge/core-build": "^22.0.0",
+    "@helsenorge/core-utils": "^22.0.0",
+    "@helsenorge/designsystem-react": "1.0.0-beta101",
+    "@helsenorge/form": "^22.0.0",
+    "@helsenorge/toolkit": "^22.0.0",
     "@types/react-dates": "^21.8.1"
   },
   "dependencies": {
