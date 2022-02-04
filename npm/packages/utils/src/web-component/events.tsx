@@ -72,6 +72,11 @@ export const HNeventSetHiddenFooter = (isHidden: boolean = true): void =>
     hiddenFooter: isHidden,
   });
 
+export const HNeventSetNoMarginFooter = (noMargin: boolean = true): void =>
+  dispatchCustomEvent('hn-webcomp-footer', HeaderFooterEvents.setnomarginfooter, {
+    noMarginFooter: noMargin,
+  });
+
 export const HNeventRefreshVarslinger = (): void => dispatchCustomEvent('hn-webcomp-header', HeaderFooterEvents.refreshvarslinger, {});
 
 export const HNeventSetDriftsmeldingPath = (path: string): void =>
