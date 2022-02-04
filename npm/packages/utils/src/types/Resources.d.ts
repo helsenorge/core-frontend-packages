@@ -254,10 +254,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   closeMenu: string;
   /** 
-  * Det finnes endringer som ikke er lagret
-  */
-  pendingChangesHeader: string;
-  /** 
   * Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
   */
   representasjonerBarn16Plus: string;
@@ -3352,6 +3348,10 @@ export type HNMinHelseCommonJS = {
   * Hvis du forlater siden, vil du miste alle endringer du har gjort.
   */
   pendingChangesDescription: string;
+  /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  pendingChangesHeader: string;
   /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
