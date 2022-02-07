@@ -19,6 +19,7 @@
   ],
   "type": "module",
   "scripts": {
+    "start": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
     "prebuild": "rimraf lib",
     "build": "tsc --p config/tsconfig.package.json",
     "postbuild": "node scripts/copy-files.cjs",
