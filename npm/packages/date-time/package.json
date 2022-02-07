@@ -49,10 +49,10 @@
     "@helsenorge/core-build": "^22.0.0",
     "@helsenorge/core-utils": "^22.0.0",
     "@helsenorge/designsystem-react": "1.0.0-beta101",
-    "@helsenorge/form": "^22.0.0",
-    "@types/react-dates": "^21.8.1"
+    "@helsenorge/form": "^22.0.0"
   },
   "dependencies": {
+    "@types/react-dates": "^21.8.1",
     "react-dates": "21.8.0"
   },
   "browserslist": [
