@@ -49,10 +49,10 @@
     "@helsenorge/core-build": "^22.0.0",
     "@helsenorge/core-utils": "^22.0.0",
     "@helsenorge/designsystem-react": "1.0.0-beta101",
-    "@helsenorge/form": "^22.0.0",
-    "@types/react-autosuggest": "9.3.14"
+    "@helsenorge/form": "^22.0.0"
   },
   "dependencies": {
+    "@types/react-autosuggest": "9.3.14",
     "react-autosuggest": "10.1.0"
   },
   "browserslist": [
