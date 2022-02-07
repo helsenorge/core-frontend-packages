@@ -3,8 +3,15 @@ import * as React from 'react';
 import classNames from 'classnames';
 import moment from 'moment';
 
+import Button from '@helsenorge/designsystem-react/components/Button';
+import Icon from '@helsenorge/designsystem-react/components/Icons';
+import History from '@helsenorge/designsystem-react/components/Icons/History';
+
 import { getHoursFromTimeString, getMinutesFromTimeString } from '@helsenorge/core-utils/date-utils';
 import { getDocumentActiveElement } from '@helsenorge/core-utils/focus-utils';
+import { Sublabel } from '@helsenorge/form/components/atoms/label/sublabel';
+import SafeInputField from '@helsenorge/form/components/atoms/safe-input-field';
+import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
 
 import {
   TIME_SEPARATOR,
@@ -15,11 +22,6 @@ import {
   ERROR_HOURS_BEFORE_MIN,
   ERROR_MINUTES_BEFORE_MIN,
 } from '../../../constants/datetime';
-import { Sublabel } from '@helsenorge/form/components/atoms/label/sublabel';
-import Reset from '@helsenorge/toolkit/components/icons/Reset';
-import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
-import { FunctionButton } from '@helsenorge/toolkit/components/atoms/buttons/function-button';
-import SafeInputField from '@helsenorge/form/components/atoms/safe-input-field';
 
 import './styles.scss';
 
@@ -486,9 +488,10 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     if (this.props.resetButton && this.props.resetButton.resetButtonText) {
       return (
         <div className="mol_timeinput__resetbutton" onBlur={this.onBlur}>
-          <FunctionButton svgIcon={<Reset variant={'error'} />} onClick={this.resetFields}>
+          <Button onClick={this.resetFields} variant="borderless">
+            <Icon svgIcon={History} />
             {this.props.resetButton.resetButtonText}
-          </FunctionButton>
+          </Button>
         </div>
       );
     }
