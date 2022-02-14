@@ -1,1 +1,1 @@
-export * from '../components/molecules/autosuggest/example';
+export * from '../components/autosuggest/example';

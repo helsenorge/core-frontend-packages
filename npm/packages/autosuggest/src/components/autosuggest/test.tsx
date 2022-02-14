@@ -3,7 +3,7 @@ import * as React from 'react';
 import { mount } from 'enzyme';
 
 import Autosuggest, { Suggestion } from '.';
-import { Label } from '@helsenorge/form/components/atoms/label';
+import { Label } from '@helsenorge/form/components/label';
 
 describe('Autosuggest', () => {
   const suggestions: Array<Suggestion> = [
