@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { getHoursFromTimeString, getMinutesFromTimeString } from '@helsenorge/core-utils/date-utils';
-import { TIME_SEPARATOR } from '../../../constants/datetime';
+import { TIME_SEPARATOR } from '../../constants/datetime';
 
 export function parseDate(dateString: string): Date {
   return new Date(dateString);

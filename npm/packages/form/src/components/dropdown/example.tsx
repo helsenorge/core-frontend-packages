@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import TransportAnnet from '@helsenorge/toolkit/components//icons/TransportAnnet';
 
-import CheckBoxGroup, { Option } from './../../atoms/checkbox-group';
-import SafeInputField from './../../atoms/safe-input-field';
-import Form, { FormChild } from './../../molecules/form';
-import { Validation } from './../../molecules/form/validation';
+import CheckBoxGroup, { Option } from '../checkbox-group';
+import SafeInputField from '../safe-input-field';
+import Form, { FormChild } from '../form';
+import { Validation } from '../form/validation';
 
 import { Dropdown } from '.';
 

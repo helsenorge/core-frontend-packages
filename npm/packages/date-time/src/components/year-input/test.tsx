@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { mount, ReactWrapper } from 'enzyme';
 import { YearErrorResources, YearInput } from '.';
-import Form from '@helsenorge/form/components/molecules/form';
-import Validation from '@helsenorge/form/components/molecules/form/validation';
+import Form from '@helsenorge/form/components/form';
+import Validation from '@helsenorge/form/components/form/validation';
 
 describe('Git at YearInput felt rendres', () => {
   let wrapper: ReactWrapper<{}, {}>;

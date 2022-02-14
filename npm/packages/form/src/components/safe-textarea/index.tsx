@@ -1,9 +1,9 @@
 import * as React from 'react';
 import classNames from 'classnames';
 
-import { Label } from './../../atoms/label';
-import { Spinner } from '@helsenorge/toolkit/components/atoms/spinner';
-import ValidationError from './../../molecules/form/validation-error';
+import { Label } from '../label';
+import { Spinner } from '@helsenorge/toolkit/components/spinner';
+import ValidationError from '../form/validation-error';
 
 import toolkitstyles from './styles.module.scss';
 

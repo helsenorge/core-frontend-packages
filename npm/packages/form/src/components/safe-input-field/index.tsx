@@ -2,10 +2,10 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
-import { Spinner } from '@helsenorge/toolkit/components/atoms/spinner/';
+import { Spinner } from '@helsenorge/toolkit/components/spinner/';
 
-import { Label } from './../../atoms/label';
-import ValidationError from './../../molecules/form/validation-error';
+import { Label } from '../label';
+import ValidationError from '../form/validation-error';
 
 import './styles.scss';
 

@@ -4,9 +4,9 @@ import { mount, ReactWrapper } from 'enzyme';
 import LanguageLocales from '@helsenorge/core-utils/constants/languages';
 
 import { YearMonthResources, YearMonthInput } from '.';
-import Form from '@helsenorge/form/components/molecules/form';
-import Validation from '@helsenorge/form/components/molecules/form/validation';
-import SafeSelectField from '@helsenorge/form/components/atoms/safe-select';
+import Form from '@helsenorge/form/components/form';
+import Validation from '@helsenorge/form/components/form/validation';
+import SafeSelectField from '@helsenorge/form/components/safe-select';
 
 describe('Gitt at YearMonthInput felt rendres', () => {
   let wrapper: ReactWrapper<{}, {}>;

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { shallow, mount, ShallowWrapper } from 'enzyme';
-import ValidationSummary, { Props } from '../../../molecules/form/validation-summary';
-import SafeInputField from '../../../atoms/safe-input-field';
+import ValidationSummary, { Props } from '../../../form/validation-summary';
+import SafeInputField from '../../../safe-input-field';
 import { FormChild } from '..';
 
 describe('ValidationSummary', () => {

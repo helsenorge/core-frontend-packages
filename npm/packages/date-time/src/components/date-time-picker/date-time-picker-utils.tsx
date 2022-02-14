@@ -5,7 +5,7 @@ import {
   ERROR_REQUIRED_TIME,
   ERROR_TIME_BEFORE_MIN,
   ERROR_TIME_AFTER_MAX,
-} from '../../../constants/datetime';
+} from '../../constants/datetime';
 
 import { isAfterMaxDate, isBeforeMinDate } from '@helsenorge/core-utils/moment-utils';
 import { DateRangePicker } from '../date-range-picker';

@@ -2,11 +2,11 @@ import * as React from 'react';
 
 import { log } from '@helsenorge/core-utils/logger';
 
-import { CheckBox } from '../../atoms/checkbox';
-import { RadioGroup, Options } from '../../atoms/radio-group';
-import SafeInputField from '../../atoms/safe-input-field';
-import { SafeTextarea } from '../../atoms/safe-textarea';
-import SafeSelect from './../../atoms/safe-select';
+import { CheckBox } from '../checkbox';
+import { RadioGroup, Options } from '../radio-group';
+import SafeInputField from '../safe-input-field';
+import { SafeTextarea } from '../safe-textarea';
+import SafeSelect from '../safe-select';
 import WrappedComponent from './example/wrapped-component-example';
 import Validation from './validation';
 

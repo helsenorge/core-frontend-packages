@@ -51,7 +51,7 @@ import {
   ERROR_DATE_AFTER_MAX,
   PICK_MONTH_SE,
   PICK_YEAR_SE,
-} from '../../../constants/datetime';
+} from '../../constants/datetime';
 import HeaderNavIcon from './custom-icons/header-nav-icon';
 import InputIcon from './custom-icons/input-icon';
 import { DatePickerErrorPhrases, DateRangePickerProps } from './date-range-picker-types';

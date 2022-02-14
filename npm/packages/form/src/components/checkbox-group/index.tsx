@@ -2,7 +2,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 import { CheckBox } from '../checkbox';
-import ValidationError from './../../molecules/form/validation-error';
+import ValidationError from '../form/validation-error';
 import { Sublabel } from '../label/sublabel';
 
 export interface Option {

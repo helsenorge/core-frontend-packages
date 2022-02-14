@@ -5,9 +5,9 @@ import { SvgIconProps } from '@helsenorge/toolkit/components/icons/SvgIcon';
 import ChevronUp from '@helsenorge/toolkit/components/icons/ChevronUp';
 import ChevronDown from '@helsenorge/toolkit/components/icons/ChevronDown';
 import ChevronRight from '@helsenorge/toolkit/components/icons/ChevronRight';
-import { Label } from '../../atoms/label';
-import { FormChild } from './../../molecules/form';
-import ValidationError from './../../molecules/form/validation-error';
+import { Label } from '../label';
+import { FormChild } from '../form';
+import ValidationError from '../form/validation-error';
 
 import './styles.scss';
 

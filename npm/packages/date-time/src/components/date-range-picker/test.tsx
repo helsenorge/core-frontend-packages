@@ -8,7 +8,7 @@ import { SingleDatePicker as AirbnbSingleDatePicker, DateRangePicker as AirbnbDa
 
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
 
-import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
+import ValidationError from '@helsenorge/form/components/form/validation-error';
 import DateNativeInput from './date-native-input';
 import DateRangePickerLabel from './date-range-picker-label';
 import { DateRangePickerState } from './date-range-picker-types';

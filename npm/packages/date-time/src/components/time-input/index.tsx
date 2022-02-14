@@ -9,9 +9,9 @@ import History from '@helsenorge/designsystem-react/components/Icons/History';
 
 import { getHoursFromTimeString, getMinutesFromTimeString } from '@helsenorge/core-utils/date-utils';
 import { getDocumentActiveElement } from '@helsenorge/core-utils/focus-utils';
-import { Sublabel } from '@helsenorge/form/components/atoms/label/sublabel';
-import SafeInputField from '@helsenorge/form/components/atoms/safe-input-field';
-import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
+import { Sublabel } from '@helsenorge/form/components/label/sublabel';
+import SafeInputField from '@helsenorge/form/components/safe-input-field';
+import ValidationError from '@helsenorge/form/components/form/validation-error';
 
 import {
   TIME_SEPARATOR,
@@ -21,7 +21,7 @@ import {
   ERROR_MINUTES_AFTER_MAX,
   ERROR_HOURS_BEFORE_MIN,
   ERROR_MINUTES_BEFORE_MIN,
-} from '../../../constants/datetime';
+} from '../../constants/datetime';
 
 import './styles.scss';
 

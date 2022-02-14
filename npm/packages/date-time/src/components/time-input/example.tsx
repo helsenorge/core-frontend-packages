@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { Validation } from '@helsenorge/form/components/molecules/form/validation';
+import { Validation } from '@helsenorge/form/components/form/validation';
 
 import TimeInput from '.';
 

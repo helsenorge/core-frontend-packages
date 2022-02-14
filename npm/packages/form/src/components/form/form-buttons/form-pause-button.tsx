@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { FunctionButton } from '@helsenorge/toolkit/components/atoms/buttons/function-button';
-import { ActionButton } from '@helsenorge/toolkit/components/atoms/buttons/action-button';
-import { DisplayButton } from '@helsenorge/toolkit/components/atoms/buttons/display-button';
+import { FunctionButton } from '@helsenorge/toolkit/components/buttons/function-button';
+import { ActionButton } from '@helsenorge/toolkit/components/buttons/action-button';
+import { DisplayButton } from '@helsenorge/toolkit/components/buttons/display-button';
 import Pause from '@helsenorge/toolkit/components/icons/Pause';
 import toolkitstyles from '../styles.module.scss';
 

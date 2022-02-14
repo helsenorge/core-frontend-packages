@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ActionButton } from '@helsenorge/toolkit/components/atoms/buttons/action-button';
+import { ActionButton } from '@helsenorge/toolkit/components/buttons/action-button';
 import HelpTrigger from '@helsenorge/toolkit/components/icons/HelpTrigger';
 
 import { CheckBox } from '.';

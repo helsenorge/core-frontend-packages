@@ -5,7 +5,7 @@ import moment from 'moment';
 import { mount, ReactWrapper } from 'enzyme';
 
 import * as DateTimePickerUtils from './date-time-picker-utils';
-import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
+import ValidationError from '@helsenorge/form/components/form/validation-error';
 import DateTimePicker from '.';
 import { DateRangePicker } from '../date-range-picker';
 import TimeInput from '../time-input';

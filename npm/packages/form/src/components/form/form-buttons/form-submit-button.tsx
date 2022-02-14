@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { SaveButton } from '@helsenorge/toolkit/components/atoms/buttons/save-button';
-import { ActionButton } from '@helsenorge/toolkit/components/atoms/buttons/action-button';
-import { DisplayButton } from '@helsenorge/toolkit/components/atoms/buttons/display-button';
+import { SaveButton } from '@helsenorge/toolkit/components/buttons/save-button';
+import { ActionButton } from '@helsenorge/toolkit/components/buttons/action-button';
+import { DisplayButton } from '@helsenorge/toolkit/components/buttons/display-button';
 import toolkitstyles from '../styles.module.scss';
 
 interface FormSubmitButtonProps {

@@ -9,7 +9,7 @@ import {
   DateRangePickerShape,
 } from 'react-dates';
 
-import { SCREEN_READER_INPUT } from '../../../constants/datetime';
+import { SCREEN_READER_INPUT } from '../../constants/datetime';
 
 import ArrowIcon from './custom-icons/arrow-icon';
 import { PartialPropsForDesktop, DateRangePickerState } from './date-range-picker-types';

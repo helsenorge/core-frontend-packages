@@ -13,11 +13,11 @@ import {
   MONTH_PLACEHOLDER,
   YEAR_PLACEHOLDER,
   ERROR_INVALID_YEAR_MONTH_YEAR,
-} from '../../../constants/datetime';
-import { Sublabel } from '@helsenorge/form/components/atoms/label/sublabel';
-import SafeInputField from '@helsenorge/form/components/atoms/safe-input-field';
-import SafeSelectField from '@helsenorge/form/components/atoms/safe-select';
-import ValidationError from '@helsenorge/form/components/molecules/form/validation-error';
+} from '../../constants/datetime';
+import { Sublabel } from '@helsenorge/form/components/label/sublabel';
+import SafeInputField from '@helsenorge/form/components/safe-input-field';
+import SafeSelectField from '@helsenorge/form/components/safe-select';
+import ValidationError from '@helsenorge/form/components/form/validation-error';
 
 import toolkitstyles from './styles.module.scss';
 

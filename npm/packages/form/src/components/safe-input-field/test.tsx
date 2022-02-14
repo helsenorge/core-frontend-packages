@@ -5,8 +5,8 @@ import userEvent from '@testing-library/user-event';
 
 import SafeInputField from './index';
 import Label from './../label';
-import ValidationError from './../../molecules/form/validation-error';
-import { FormChild } from './../../molecules/form';
+import ValidationError from './../../form/validation-error';
+import { FormChild } from './../../form';
 
 describe('SafeInputField', () => {
   it('SafeInputField renders without crashing', () => {
