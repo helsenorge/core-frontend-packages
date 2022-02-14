@@ -16,14 +16,5 @@
   },
 
   "include": ["../src/**/*.tsx", "../src/**/*.ts"],
-  "exclude": [
-    "../src/docs/*",
-    "../src/**/*test*",
-    "../src/**/*spec*",
-    "**/test.tsx",
-    "./**/test.tsx",
-    "./**/**/test.tsx",
-    "../src/**/example.tsx",
-    "../src/**/**/example.tsx"
-  ]
+  "exclude": ["../src/**/*test*", "../src/**/*spec*", "**/test.tsx", "./**/test.tsx", "./**/**/test.tsx"]
 }
