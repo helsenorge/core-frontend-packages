@@ -1,5 +1,5 @@
 import keyCode from './constants/key-code';
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 
 import { getDocumentActiveElement } from './focus-utils';
 import { getEventTarget } from './events';

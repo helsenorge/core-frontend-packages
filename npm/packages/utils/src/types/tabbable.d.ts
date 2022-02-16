@@ -4,6 +4,5 @@ interface TabbableElement extends HTMLInputElement {
 }
 
 declare module 'tabbable' {
-  const tabbable: (container: Object) => Array<TabbableElement>;
-  export = tabbable;
+  export const tabbable: (container: Object) => Array<TabbableElement>;
 }

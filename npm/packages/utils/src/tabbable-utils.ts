@@ -1,4 +1,4 @@
-import tabbable from 'tabbable';
+import { tabbable } from 'tabbable';
 
 export interface TabbableContentWithTabIndexes {
   tabbableElements: Array<TabbableElement>;
