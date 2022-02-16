@@ -510,6 +510,36 @@ describe('Adobe-analytics', () => {
       });
     });
   });
+  describe('Når track404 kalles', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    it('Så kalles satellite.track med "404 not found" ', () => {
+      adobeFunctions.track404();
+
+      expect(mockTrack).toHaveBeenCalledTimes(1);
+      expect(mockTrack).toHaveBeenCalledWith('404 not found');
+    });
+  });
+  describe('Når trackLanguage kalles', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    describe('med engelsk', () => {
+      it('Så kalles satellite.track med "change language" og språket finnes i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = { page: { pageInfo: {} } };
+
+        adobeFunctions.trackLanguage('engelsk');
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('change language');
+        expect(window.digitalData?.page?.pageInfo.language).toBe('engelsk');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+  });
   describe('Når trackError kalles', () => {
     beforeEach(() => {
       jest.clearAllMocks();
