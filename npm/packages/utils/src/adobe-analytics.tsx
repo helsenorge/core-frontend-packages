@@ -10,7 +10,7 @@ export enum AnalyticsId {
   NavigationButton = 'navigation-button',
   ProcessStartButton = 'process-start-button',
   SaveButton = 'save-button',
-  BlockVideo = 'block-video',
+  Videokort = 'videokort',
 }
 
 interface DigitalData {
