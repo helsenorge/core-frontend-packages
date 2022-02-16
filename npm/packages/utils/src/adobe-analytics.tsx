@@ -89,6 +89,7 @@ export interface PageInfo {
   pageURL?: string;
   pageName?: string;
   loggedIn?: LoginStatus;
+  language?: string;
 }
 
 export interface User {
@@ -504,5 +505,18 @@ export const trackError = (level: ErrorType, details?: string): void => {
       siteError: !details ? errorType : `${errorType} – ${details}`,
     };
     window._satellite.track('site error');
+  }
+};
+
+/**
+ * Spor at bruker bytter språk.
+ * trackLanguage('English')
+ * @param language Språket bruker valgte.
+ */
+export const trackLanguage = (language: string): void => {
+  if (isTrackingready(window) && window.digitalData?.page?.pageInfo) {
+    window.digitalData.page.pageInfo.language = language;
+
+    window._satellite.track('change language');
   }
 };
