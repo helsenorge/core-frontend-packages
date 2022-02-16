@@ -510,6 +510,25 @@ describe('Adobe-analytics', () => {
       });
     });
   });
+  describe('Når trackLanguage kalles', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    describe('med engelsk', () => {
+      it('Så kalles satellite.track med "change language" og språket finnes i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = { page: { pageInfo: {} } };
+
+        adobeFunctions.trackLanguage('engelsk');
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('change language');
+        expect(window.digitalData?.page?.pageInfo.language).toBe('engelsk');
+
+        global.window['digitalData'] = originalDigitalData;
+      });
+    });
+  });
   describe('Når trackError kalles', () => {
     beforeEach(() => {
       jest.clearAllMocks();
