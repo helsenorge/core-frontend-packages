@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { shallow, ShallowWrapper, mount } from 'enzyme';
 import Form, { FormProps } from '.';
-import SafeInputField from '../../safe-input-field';
+import SafeInputField from '../safe-input-field';
 import ActionButton from '@helsenorge/toolkit/components/buttons/action-button';
 import Validation from './validation';
 import ValidationError from './validation-error';

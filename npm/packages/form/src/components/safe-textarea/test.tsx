@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { SafeTextarea } from '.';
-import ValidationError from './../../form/validation-error';
+import ValidationError from '../form/validation-error';
 
 describe('SafeTextarea', () => {
   it('SafeTextarea renders correctly', () => {
