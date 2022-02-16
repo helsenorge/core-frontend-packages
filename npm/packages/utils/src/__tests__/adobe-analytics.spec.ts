@@ -510,6 +510,17 @@ describe('Adobe-analytics', () => {
       });
     });
   });
+  describe('Når track404 kalles', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    it('Så kalles satellite.track med "404 not found" ', () => {
+      adobeFunctions.track404();
+
+      expect(mockTrack).toHaveBeenCalledTimes(1);
+      expect(mockTrack).toHaveBeenCalledWith('404 not found');
+    });
+  });
   describe('Når trackLanguage kalles', () => {
     beforeEach(() => {
       jest.clearAllMocks();
