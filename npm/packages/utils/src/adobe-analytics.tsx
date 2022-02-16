@@ -509,6 +509,15 @@ export const trackError = (level: ErrorType, details?: string): void => {
 };
 
 /**
+ * Spor 404-feil
+ */
+export const track404 = (): void => {
+  if (isSatelliteReady(window)) {
+    window._satellite.track('404 not found');
+  }
+};
+
+/**
  * Spor at bruker bytter språk.
  * trackLanguage('English')
  * @param language Språket bruker valgte.
