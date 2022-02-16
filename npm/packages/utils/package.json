@@ -1,18 +1,17 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "22.2.0",
+  "version": "22.0.4",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
   },
   "scripts": {
+    "prebuild": "rimraf lib",
     "build": "node scripts/build.cjs",
-    "postbuild": "rimraf lib/_devonly",
+    "postbuild": "rimraf lib/__devonly__",
     "prepublishOnly": "npm run build",
-    "change-versions": "node scripts/change-versions.js",
-    "publish:beta": "cd lib && npm publish --tag=beta",
     "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
@@ -41,7 +40,6 @@
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "@types/redux": "^3.6.0",
     "@types/redux-thunk": "^2.1.0",
-    "ical.js": "1.4.0",
     "react-router-dom": "5.2.0"
   },
   "dependencies": {
