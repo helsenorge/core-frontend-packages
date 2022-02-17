@@ -5830,6 +5830,10 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_error_message: string;
   /** 
+  * Teknisk feil
+  */
+  registereierskap_error_message_title: string;
+  /** 
   * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
   */
   sysvak_innsyn_footer_content: string;
