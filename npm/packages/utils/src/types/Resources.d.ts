@@ -5826,7 +5826,7 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_personverninnstilling_lenke: string;
   /** 
-  * Det har skjedd en teknisk feil
+  * Det har skjedd en teknisk feil. Prøv igjen senere.
   */
   registereierskap_error_message: string;
   /** 
