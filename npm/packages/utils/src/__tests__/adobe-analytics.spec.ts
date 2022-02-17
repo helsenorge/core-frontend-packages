@@ -510,6 +510,26 @@ describe('Adobe-analytics', () => {
       });
     });
   });
+  describe('Når trackNavigation kalles', () => {
+    beforeEach(() => {
+      jest.clearAllMocks();
+    });
+    describe('med name, label og pageSection', () => {
+      it('Så kalles satellite.track med "navigation" og data om navigasjon ligger i digitalData', () => {
+        const originalDigitalData = global.window['digitalData'];
+        global.window['digitalData'] = {};
+
+        adobeFunctions.trackNavigation('toppmeny', 'Sykdommer', 'sidetopp');
+
+        expect(mockTrack).toHaveBeenCalledTimes(1);
+        expect(mockTrack).toHaveBeenCalledWith('navigation');
+        expect(window.digitalData?.navigation?.name).toBe('toppmeny');
+        expect(window.digitalData?.navigation?.label).toBe('Sykdommer');
+        expect(window.digitalData?.navigation?.pageSection).toBe('sidetopp');
+      });
+    });
+  });
+
   describe('Når track404 kalles', () => {
     beforeEach(() => {
       jest.clearAllMocks();
@@ -521,6 +541,7 @@ describe('Adobe-analytics', () => {
       expect(mockTrack).toHaveBeenCalledWith('404 not found');
     });
   });
+
   describe('Når trackLanguage kalles', () => {
     beforeEach(() => {
       jest.clearAllMocks();
@@ -540,6 +561,7 @@ describe('Adobe-analytics', () => {
       });
     });
   });
+
   describe('Når trackError kalles', () => {
     beforeEach(() => {
       jest.clearAllMocks();

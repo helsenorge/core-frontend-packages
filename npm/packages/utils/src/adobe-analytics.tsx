@@ -16,6 +16,7 @@ export enum AnalyticsId {
 interface DigitalData {
   selfService?: SelfService | ConsentSelfService;
   filters?: Filters;
+  navigation?: Navigation;
   page?: Page;
   user?: User & UserAttributes;
   articletab?: ArticleTab;
@@ -70,6 +71,15 @@ export interface Filters extends Object {
   filterSearch?: string;
   filterGroupExpand?: string;
 }
+
+interface Navigation extends Object {
+  name: NavigationName;
+  label: string;
+  pageSection: NavigationPageSection;
+}
+
+type NavigationName = 'toppmeny' | 'brødsmulesti' | 'sidebunn';
+type NavigationPageSection = 'sidetopp' | 'brødsmulesti' | 'sidebunn';
 
 export interface PageUser {
   onBehalfOf?: string;
@@ -505,6 +515,25 @@ export const trackError = (level: ErrorType, details?: string): void => {
       siteError: !details ? errorType : `${errorType} – ${details}`,
     };
     window._satellite.track('site error');
+  }
+};
+
+/**
+ * Spor klikk i toppmenyen
+ * @param name string
+ * @param label navigationLabel
+ * @param pageSection navigationPageSection
+ */
+
+export const trackNavigation = (name: NavigationName, label: string, pageSection: NavigationPageSection): void => {
+  if (isTrackingready(window)) {
+    window.digitalData.navigation = {
+      name,
+      label,
+      pageSection,
+    };
+
+    window._satellite.track('navigation');
   }
 };
 
