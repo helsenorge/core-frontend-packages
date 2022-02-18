@@ -1,0 +1,66 @@
+{
+  "name": "@helsenorge/file-upload",
+  "version": "22.0.0",
+  "main": "index.js",
+  "publishConfig": {
+    "directory": "lib"
+  },
+  "author": "Helsenorge",
+  "maintainers": [
+    "ROX"
+  ],
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "tfs",
+    "url": "https://dev.azure.com/nhnfelles/Helsenorge/_git/HN-Core-Frontend?path=%2Fnpm%2Fpackages%2Fdropzone"
+  },
+  "files": [
+    "lib"
+  ],
+  "type": "module",
+  "scripts": {
+    "start": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
+    "prebuild": "rimraf lib",
+    "build": "tsc --p config/tsconfig.package.json",
+    "postbuild": "node scripts/copy-files.cjs",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
+    "prettier:fix": "npm run prettier -- --write",
+    "pretypecheck": "tsc -v",
+    "typecheck": "tsc --noEmit",
+    "pretest": "crlf --set=LF \"src/**/*.{tsx,snap}\"",
+    "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
+    "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
+    "prepublishOnly": "npm run build",
+    "precommit-script": "pretty-quick --staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "bash node_modules/@helsenorge/core-build/precommit.sh"
+    }
+  },
+  "peerDependencies": {
+    "@helsenorge/core-build": ">22.0.0",
+    "@helsenorge/core-utils": ">22.0.0",
+    "@helsenorge/designsystem-react": "^1.0.0-beta",
+    "@helsenorge/form": ">22.0.0",
+    "@helsenorge/toolkit": ">22.0.0"
+  },
+  "devDependencies": {
+    "@helsenorge/core-build": "^22.0.0",
+    "@helsenorge/core-utils": "^22.0.0",
+    "@helsenorge/designsystem-react": "1.0.0-beta108",
+    "@helsenorge/form": "^22.0.0",
+    "@helsenorge/toolkit": "^22.0.0"
+  },
+  "dependencies": {
+    "react-dropzone": "12.0.4"
+  },
+  "browserslist": [
+    "> 0.2% in NO",
+    "not dead",
+    "not op_mini all",
+    "not ie > 0"
+  ]
+}

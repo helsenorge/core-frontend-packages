@@ -1,0 +1,94 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dropzone renders children 1`] = `
+<div
+  className="dropzone mol_validation"
+  id="id-wrapper"
+>
+  <ForwardRef
+    className="dropzone__uploadButton undefined"
+    id="id"
+    onClick={[Function]}
+    svgIcon={<LastOpp />}
+  />
+  <Dropzone
+    disabled={false}
+    getFilesFromEvent={[Function]}
+    maxFiles={0}
+    maxSize={Infinity}
+    minSize={0}
+    multiple={false}
+    noClick={false}
+    noDrag={false}
+    noDragEventsBubbling={false}
+    noKeyboard={false}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
+    preventDropOnDocument={true}
+    useFsAccessApi={true}
+    validator={null}
+  >
+    <Component />
+  </Dropzone>
+  <div>
+    children
+  </div>
+</div>
+`;
+
+exports[`Dropzone renders uploaded files 1`] = `
+<div
+  className="dropzone mol_validation"
+  id="id-wrapper"
+>
+  <ul
+    className="dropzone__files"
+  >
+    <FileElement
+      deleteFile={[Function]}
+      fileId="id1"
+      fileName="name1"
+      key="id10"
+      loading={false}
+      shouldRenderDeleteButton={false}
+      type="verified"
+    />
+    <FileElement
+      deleteFile={[Function]}
+      fileId="id2"
+      fileName="name2"
+      key="id21"
+      loading={false}
+      shouldRenderDeleteButton={false}
+      type="verified"
+    />
+  </ul>
+  <ForwardRef
+    className="dropzone__uploadButton undefined"
+    id="id"
+    onClick={[Function]}
+    svgIcon={<LastOpp />}
+  />
+  <Dropzone
+    disabled={false}
+    getFilesFromEvent={[Function]}
+    maxFiles={0}
+    maxSize={Infinity}
+    minSize={0}
+    multiple={true}
+    noClick={false}
+    noDrag={false}
+    noDragEventsBubbling={false}
+    noKeyboard={false}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
+    preventDropOnDocument={true}
+    useFsAccessApi={true}
+    validator={null}
+  >
+    <Component />
+  </Dropzone>
+</div>
+`;
