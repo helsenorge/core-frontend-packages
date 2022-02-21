@@ -5,6 +5,19 @@ exports[`TimeInput Renders correctly 1`] = `
   class="mol_timeinput mol_validation"
   id="2-wrapper"
 >
+  <div
+    class="ReactCollapse--collapse"
+    style="height: auto; overflow: initial;"
+  >
+    <div
+      class="ReactCollapse--content"
+    >
+      <div
+        aria-live="assertive"
+        class="mol_validation__errortext"
+      />
+    </div>
+  </div>
   <fieldset>
     <div
       class="mol_timeinput__inputs"
@@ -54,6 +67,19 @@ exports[`TimeInput Renders legend 1`] = `
   class="mol_timeinput mol_validation"
   id="3-wrapper"
 >
+  <div
+    class="ReactCollapse--collapse"
+    style="height: auto; overflow: initial;"
+  >
+    <div
+      class="ReactCollapse--content"
+    >
+      <div
+        aria-live="assertive"
+        class="mol_validation__errortext"
+      />
+    </div>
+  </div>
   <fieldset>
     <legend>
       <span

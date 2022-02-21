@@ -191,13 +191,6 @@ export class YearMonthInput extends React.Component<YearMonthInputProps, YearMon
     });
   }
 
-  renderErrorMessage(): JSX.Element | null {
-    if (this.state.isValidated && !this.state.isValid) {
-      return <ValidationError isValid={this.state.isValid} error={this.state.errorMessage} testId={this.props.validationTestId} />;
-    }
-    return null;
-  }
-
   onChangeYear(_e: React.FormEvent<{}>, _id: string | undefined, formattedValue: string): void {
     const yearValue = parseInt(formattedValue) || 0;
     const newValue = { ...this.state.value, year: yearValue };
@@ -283,7 +276,7 @@ export class YearMonthInput extends React.Component<YearMonthInputProps, YearMon
 
     return (
       <div className={wrapperClasses} id={`${this.props.id}-wrapper`}>
-        {this.renderErrorMessage()}
+        <ValidationError isValid={this.state.isValid} error={this.state.errorMessage} testId={this.props.validationTestId} />
         <fieldset>
           {this.props.legend && this.renderLegend()}
           {this.props.helpElement ? this.props.helpElement : null}

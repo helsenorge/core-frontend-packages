@@ -1,13 +1,17 @@
 import * as React from 'react';
+
 import classNames from 'classnames';
 
-import { SvgIconProps } from '@helsenorge/toolkit/components/icons/SvgIcon';
-import ChevronUp from '@helsenorge/toolkit/components/icons/ChevronUp';
-import ChevronDown from '@helsenorge/toolkit/components/icons/ChevronDown';
-import ChevronRight from '@helsenorge/toolkit/components/icons/ChevronRight';
-import { Label } from '../label';
+import Icon from '@helsenorge/designsystem-react/components/Icons';
+import ChevronDown from '@helsenorge/designsystem-react/components/Icons/ChevronDown';
+import ChevronRight from '@helsenorge/designsystem-react/components/Icons/ChevronRight';
+import ChevronUp from '@helsenorge/designsystem-react/components/Icons/ChevronUp';
+
+import { theme } from '@helsenorge/designsystem-react';
+
 import { FormChild } from '../form';
 import ValidationError from '../form/validation-error';
+import { Label } from '../label';
 
 import './styles.scss';
 
@@ -126,11 +130,9 @@ export class Dropdown extends React.Component<DropdownProps, DropdownState> {
   // Check wether or not children are valid and sets state accordingly
   validateField = async (): Promise<void> => {
     if (this.props.childrenToValidate) {
-      const childrenValidityPromises: Array<Promise<boolean>> = this.props.childrenToValidate.map(
-        async (childRef): Promise<boolean> => {
-          return childRef.current ? this.getChildValidation(childRef.current) : false;
-        }
-      );
+      const childrenValidityPromises: Array<Promise<boolean>> = this.props.childrenToValidate.map(async (childRef): Promise<boolean> => {
+        return childRef.current ? this.getChildValidation(childRef.current) : false;
+      });
       const childrenValidity = await Promise.all(childrenValidityPromises);
       const isValid = childrenValidity.every(v => v === true);
       return new Promise<void>((resolve: () => void) => {
@@ -250,9 +252,6 @@ export class Dropdown extends React.Component<DropdownProps, DropdownState> {
     });
 
     const joinedName = this.props.name ? this.props.name.replace(' ', '_') : '';
-    const iconElement = (Component: JSX.Element, extraProps: SvgIconProps): JSX.Element => (
-      <Component.type {...Component.props} {...extraProps} />
-    );
 
     return (
       <div className={dropdownClasses} ref={this.dropdownRef}>
@@ -268,14 +267,26 @@ export class Dropdown extends React.Component<DropdownProps, DropdownState> {
           onFocus={this.onFocus}
           onBlur={this.onBlur}
         >
-          {icon && iconElement(icon, { className: 'mol_dropdown__button-icon', size: 'large' })}
+          {icon}
           <span className={'mol_dropdown__button-text'}>{this.renderLabel()}</span>
           {arrowRight ? (
-            <ChevronRight className={'mol_dropdown__button-arrow mol_dropdown__button-arrow--right'} />
+            <Icon
+              color={theme.palette.blueberry500}
+              svgIcon={ChevronRight}
+              className={'mol_dropdown__button-arrow mol_dropdown__button-arrow--right'}
+            />
           ) : open ? (
-            <ChevronUp className={'mol_dropdown__button-arrow mol_dropdown__button-arrow--up'} />
+            <Icon
+              color={theme.palette.blueberry500}
+              svgIcon={ChevronUp}
+              className={'mol_dropdown__button-arrow mol_dropdown__button-arrow--up'}
+            />
           ) : (
-            <ChevronDown className={'mol_dropdown__button-arrow mol_dropdown__button-arrow--down'} />
+            <Icon
+              color={theme.palette.blueberry500}
+              svgIcon={ChevronDown}
+              className={'mol_dropdown__button-arrow mol_dropdown__button-arrow--down'}
+            />
           )}
         </button>
         <div className={'mol_dropdown__container'} id={joinedName}>

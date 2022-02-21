@@ -1,15 +1,17 @@
 import * as React from 'react';
+
 import classNames from 'classnames';
 
-import FormSubmitButton from './form-buttons/form-submit-button';
+import Loader from '@helsenorge/designsystem-react/components/Loader';
+
 import FormCancelButton from './form-buttons/form-cancel-button';
-import FormPauseButton from './form-buttons/form-pause-button';
 import FormDraftButton from './form-buttons/form-draft-button';
-import { Spinner } from '@helsenorge/toolkit/components/spinner';
-import { ValidationSummaryPlacement } from './validationSummaryPlacement';
+import FormPauseButton from './form-buttons/form-pause-button';
+import FormSubmitButton from './form-buttons/form-submit-button';
 import { ValidationProps } from './validation';
-import ValidationSummary from './validation-summary';
 import ValidationError from './validation-error';
+import ValidationSummary from './validation-summary';
+import { ValidationSummaryPlacement } from './validationSummaryPlacement';
 
 import toolkitstyles from './styles.module.scss';
 import './styles.scss';
@@ -315,42 +317,44 @@ export default class Form extends React.Component<FormProps, FormState> {
         draftButtonTestId={this.props.draftButtonTestId}
       />
     );
+    const buttonSpanClass = toolkitstyles['form__buttonwrapper__button-span'];
+
     if (!submitButton && !cancelButton && !pauseButton && !draftButton) {
       return null;
     }
     if (this.props.cancelButtonLeft) {
       return (
-        <div>
+        <span className={buttonSpanClass}>
           {cancelButton}
           {submitButton}
           {draftButton}
           {pauseButton}
-        </div>
+        </span>
       );
     }
     if (this.props.cancelButtonRight) {
       return (
-        <div>
+        <span className={buttonSpanClass}>
           {submitButton}
           {draftButton}
           {pauseButton}
           {cancelButton}
-        </div>
+        </span>
       );
     }
     return (
-      <div>
+      <span className={buttonSpanClass}>
         {submitButton}
         {draftButton}
         {cancelButton}
         {pauseButton}
-      </div>
+      </span>
     );
   }
 
   renderSpinner = (): JSX.Element | void => {
     if (this.props.disabled) {
-      return <Spinner local />;
+      return <Loader size={'medium'} overlay={'parent'} />;
     }
   };
 
@@ -466,8 +470,8 @@ export default class Form extends React.Component<FormProps, FormState> {
         <div className={`${toolkitstyles.form__buttonwrapper} ${this.props.buttonClasses}`}>
           {this.renderErrorMessage()}
           {this.renderButtons()}
-          {this.renderSpinner()}
         </div>
+        {this.renderSpinner()}
       </form>
     );
   }

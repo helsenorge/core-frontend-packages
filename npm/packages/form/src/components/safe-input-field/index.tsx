@@ -420,14 +420,14 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
   }
 
   renderErrorMessage() {
-    if (this.props.isValidationHidden || !this.state.validated) {
+    if (this.props.isValidationHidden) {
       return null;
     }
     if (this.props.validationErrorRenderer && !this.state.isValid) {
       return this.props.validationErrorRenderer;
     }
 
-    let error: string | undefined;
+    let error: string | undefined = '';
     if (!this.state.isValid) {
       if (this.props.isRequired && !this.isValidIfRequired() && this.props.requiredErrorMessage) {
         error =
@@ -447,9 +447,6 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
       }
     }
 
-    if (!error) {
-      return null;
-    }
     return <ValidationError isValid={this.state.isValid} error={error} testId={this.props.validationTestId} />;
   }
 

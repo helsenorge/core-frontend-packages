@@ -6,12 +6,13 @@ import moment from 'moment';
 import Button from '@helsenorge/designsystem-react/components/Button';
 import Icon from '@helsenorge/designsystem-react/components/Icons';
 import History from '@helsenorge/designsystem-react/components/Icons/History';
+import Undo from '@helsenorge/designsystem-react/components/Icons/Undo';
 
 import { getHoursFromTimeString, getMinutesFromTimeString } from '@helsenorge/core-utils/date-utils';
 import { getDocumentActiveElement } from '@helsenorge/core-utils/focus-utils';
+import ValidationError from '@helsenorge/form/components/form/validation-error';
 import { Sublabel } from '@helsenorge/form/components/label/sublabel';
 import SafeInputField from '@helsenorge/form/components/safe-input-field';
-import ValidationError from '@helsenorge/form/components/form/validation-error';
 
 import {
   TIME_SEPARATOR,
@@ -488,8 +489,8 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     if (this.props.resetButton && this.props.resetButton.resetButtonText) {
       return (
         <div className="mol_timeinput__resetbutton" onBlur={this.onBlur}>
-          <Button onClick={this.resetFields} variant="borderless">
-            <Icon svgIcon={History} />
+          <Button intent={'danger'} variant={'borderless'} onClick={this.resetFields}>
+            <Icon svgIcon={Undo} />
             {this.props.resetButton.resetButtonText}
           </Button>
         </div>
@@ -520,7 +521,7 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     }
     return (
       <div className={`mol_timeinput ${wrapperClasses}`} id={`${id}-wrapper`}>
-        {!isValidationHidden && !valid && errorString && <ValidationError isValid={valid} error={errorString} />}
+        {!isValidationHidden && <ValidationError isValid={valid} error={errorString} />}
         <fieldset>
           {legend && this.renderLegend()}
           {this.renderHelp()}

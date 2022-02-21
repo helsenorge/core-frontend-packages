@@ -1,13 +1,17 @@
 import * as React from 'react';
+
 import { shallow, ShallowWrapper, mount } from 'enzyme';
-import Form, { FormProps } from '.';
+
+import Button from '@helsenorge/designsystem-react/components/Button';
+
+import { SaveButton } from '@helsenorge/toolkit/components/buttons/save-button';
+
 import SafeInputField from '../safe-input-field';
-import ActionButton from '@helsenorge/toolkit/components/buttons/action-button';
 import Validation from './validation';
 import ValidationError from './validation-error';
 import ValidationSummary from './validation-summary';
-import DisplayButton from '@helsenorge/toolkit/components/buttons/display-button';
-import { SaveButton } from '@helsenorge/toolkit/components/buttons/save-button';
+
+import Form, { FormProps } from '.';
 
 describe('Form', () => {
   let mounted: ShallowWrapper<{}, {}> | undefined;
@@ -50,12 +54,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(Validation)
-        .first()
-        .props().addFormComponent
-    ).toBeDefined();
+    expect(form.find(Validation).first().props().addFormComponent).toBeDefined();
   });
 
   it('adds onValidated function to children', () => {
@@ -66,12 +65,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(Validation)
-        .first()
-        .props().onValidated
-    ).toBeDefined();
+    expect(form.find(Validation).first().props().onValidated).toBeDefined();
   });
 
   it('adds requiredLabel to children', () => {
@@ -82,12 +76,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(SafeInputField)
-        .first()
-        .props().requiredLabel
-    ).toBe('required');
+    expect(form.find(SafeInputField).first().props().requiredLabel).toBe('required');
   });
 
   it('adds optionalLabel to children', () => {
@@ -98,12 +87,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(SafeInputField)
-        .first()
-        .props().optionalLabel
-    ).toBe('optional');
+    expect(form.find(SafeInputField).first().props().optionalLabel).toBe('optional');
   });
 
   it('never sets showrequiredlabel', () => {
@@ -120,12 +104,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(SafeInputField)
-        .first()
-        .props().showRequiredLabel
-    ).toBeFalsy();
+    expect(form.find(SafeInputField).first().props().showRequiredLabel).toBeFalsy();
   });
 
   it('always sets showoptionallabel', () => {
@@ -142,12 +121,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(SafeInputField)
-        .first()
-        .props().showOptionalLabel
-    ).toBeTruthy();
+    expect(form.find(SafeInputField).first().props().showOptionalLabel).toBeTruthy();
   });
 
   it('renders error message', () => {
@@ -158,16 +132,8 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    form
-      .find('button')
-      .first()
-      .simulate('click');
-    expect(
-      form
-        .find(ValidationError)
-        .first()
-        .props().isValid
-    ).toBeFalsy();
+    form.find('button').first().simulate('click');
+    expect(form.find(ValidationError).first().props().isValid).toBeFalsy();
   });
 
   it('renders validation summary', () => {
@@ -190,10 +156,7 @@ describe('Form', () => {
       </Form>
     );
     const spy = jest.spyOn(form.find(SafeInputField).instance() as SafeInputField, 'validateField');
-    form
-      .find('button')
-      .first()
-      .simulate('click');
+    form.find('button').first().simulate('click');
 
     expect(spy).toHaveBeenCalled();
   });
@@ -209,6 +172,7 @@ describe('Form', () => {
         buttonClasses="test__buttonClasses"
         cancelButtonRight
         cancelButtonText="text__cancelbutton"
+        cancelButtonTestId={'cancel-testid'}
         onCancel={jest.fn()}
       >
         <Validation>
@@ -216,12 +180,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find('.test__buttonClasses button')
-        .last()
-        .props().children
-    ).toBe('text__cancelbutton');
+    expect(form.find(Button).last().props().testId).toBe('cancel-testid');
   });
 
   it('renders pause button as secondary when isPauseButtonSecondaryButton and pauseButtonType is "action" ', () => {
@@ -241,12 +200,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(ActionButton)
-        .last()
-        .props().secondary
-    ).toBeTruthy();
+    expect(form.find(Button).last().props().variant).toBe('outline');
   });
 
   it('renders pause button as displayButton when pauseButtonType is "display" ', () => {
@@ -266,12 +220,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(DisplayButton)
-        .last()
-        .props().secondary
-    ).toBeTruthy();
+    expect(form.find(Button).last().props().variant).toBe('outline');
   });
 
   it('renders pause button disabled when pauseButtonDisabled is true ', () => {
@@ -291,12 +240,7 @@ describe('Form', () => {
         </Validation>
       </Form>
     );
-    expect(
-      form
-        .find(DisplayButton)
-        .last()
-        .props().disabled
-    ).toBeTruthy();
+    expect(form.find(Button).last().props().disabled).toBeTruthy();
   });
 
   it('renders SaveButton when all save props are set', () => {

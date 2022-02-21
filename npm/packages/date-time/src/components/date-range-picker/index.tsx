@@ -335,6 +335,7 @@ export class DateRangePicker extends React.Component<DateRangePickerProps, DateR
     const { isSingleDateValid, isRangeDateValid, errorString } = this.state;
     const { id, type, isRequired } = partialPropsForDesktop;
     const hasErrors = type === 'single' ? !isSingleDateValid : type === 'range' ? !isRangeDateValid : false;
+    const errorText = hasErrors ? (errorString ? errorString : 'Error') : '';
     const classes = getCSSClasses(
       toolkitstyles.datepicker,
       toolkitstyles['datepicker--haserror'],
@@ -348,7 +349,7 @@ export class DateRangePicker extends React.Component<DateRangePickerProps, DateR
       <div id={`${id}-wrapper`} className={classes}>
         <fieldset>
           {hasErrors && validationErrorRenderer}
-          {!isValidationHidden && hasErrors && <ValidationError isValid={!hasErrors} error={errorString ? errorString : 'Error'} />}
+          {!isValidationHidden && <ValidationError isValid={!hasErrors} error={errorText} />}
           {label && (
             <DateRangePickerLabel
               label={label}

@@ -5,12 +5,20 @@ exports[`Dropzone renders children 1`] = `
   className="dropzone mol_validation"
   id="id-wrapper"
 >
+  <ValidationError
+    error=""
+    isValid={true}
+  />
   <ForwardRef
     className="dropzone__uploadButton undefined"
     id="id"
     onClick={[Function]}
-    svgIcon={<LastOpp />}
-  />
+    variant="borderless"
+  >
+    <Icon
+      svgIcon={[Function]}
+    />
+  </ForwardRef>
   <Dropzone
     disabled={false}
     getFilesFromEvent={[Function]}
@@ -42,6 +50,10 @@ exports[`Dropzone renders uploaded files 1`] = `
   className="dropzone mol_validation"
   id="id-wrapper"
 >
+  <ValidationError
+    error=""
+    isValid={true}
+  />
   <ul
     className="dropzone__files"
   >
@@ -68,8 +80,12 @@ exports[`Dropzone renders uploaded files 1`] = `
     className="dropzone__uploadButton undefined"
     id="id"
     onClick={[Function]}
-    svgIcon={<LastOpp />}
-  />
+    variant="borderless"
+  >
+    <Icon
+      svgIcon={[Function]}
+    />
+  </ForwardRef>
   <Dropzone
     disabled={false}
     getFilesFromEvent={[Function]}

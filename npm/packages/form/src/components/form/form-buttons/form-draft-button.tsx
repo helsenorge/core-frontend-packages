@@ -1,4 +1,7 @@
 import * as React from 'react';
+
+import Button from '@helsenorge/designsystem-react/components/Button';
+
 import toolkitstyles from '../styles.module.scss';
 
 interface FromDraftButtonProps {
@@ -19,8 +22,8 @@ const FormDraftButton: React.FC<FromDraftButtonProps> = (props: FromDraftButtonP
     return null;
   }
   return (
-    <button
-      type="button"
+    <Button
+      variant={'outline'}
       formNoValidate
       className={`${toolkitstyles.form__buttonwrapper__button} ${
         props.draftButtonClasses ? props.draftButtonClasses : 'atom_actionbutton atom_actionbutton--secondary'
@@ -35,7 +38,7 @@ const FormDraftButton: React.FC<FromDraftButtonProps> = (props: FromDraftButtonP
       data-testid={props.draftButtonTestId}
     >
       {props.draftButtonText}
-    </button>
+    </Button>
   );
 };
 

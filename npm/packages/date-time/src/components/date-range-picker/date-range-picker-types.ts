@@ -1,4 +1,10 @@
-import { FocusedInputShape, SingleDatePickerPhrases, DateRangePickerPhrases } from 'react-dates';
+import {
+  FocusedInputShape,
+  SingleDatePickerPhrases,
+  DateRangePickerPhrases,
+  SingleDatePickerShape,
+  DateRangePickerShape,
+} from 'react-dates';
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
 
 export type DatePickerErrorPhrases = {
@@ -9,6 +15,12 @@ export type DatePickerErrorPhrases = {
   errorInvalidMinimumNights: string;
   errorAfterMaxDate: string;
   errorBeforeMinDate: string;
+};
+export type SingleDatePickerNode = React.ClassicComponent<SingleDatePickerShape, {}> & {
+  container?: HTMLElement;
+};
+export type DateRangePickerNode = React.ClassicComponent<DateRangePickerShape, {}> & {
+  container?: HTMLElement;
 };
 
 export interface DateRangePickerDefaultProps {

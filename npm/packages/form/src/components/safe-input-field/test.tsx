@@ -162,14 +162,20 @@ describe('SafeInputField', () => {
   });
 
   it('should validate isrequired', () => {
-    const renderedInstance = shallow(
+    const renderedInstance = mount(
       <SafeInputField id="test" value="" isRequired={true} onBlur={() => undefined} showLabel={true} label="test label" inputName="name" />
     );
-    expect(renderedInstance.find(ValidationError).length).toBe(0);
-    const instance = (renderedInstance.instance() as unknown) as FormChild;
+    let validationInstance = renderedInstance.find(ValidationError).first();
+    expect(validationInstance).toBeDefined();
+    expect(validationInstance.length).toBe(1);
+    expect(validationInstance.text()).toBe('');
+
+    const instance = renderedInstance.instance() as unknown as FormChild;
     instance.validateField();
     renderedInstance.update();
-    expect(renderedInstance.find(ValidationError).length).toBe(1);
+    validationInstance = renderedInstance.find(ValidationError).first();
+    expect(validationInstance.length).toBe(1);
+    expect(validationInstance.text()).not.toBe('');
   });
 
   it('should validate min text length', () => {

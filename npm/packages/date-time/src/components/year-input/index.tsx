@@ -145,13 +145,6 @@ export class YearInput extends React.Component<YearInputProps, YearInputState> {
     });
   }
 
-  renderErrorMessage(): JSX.Element | null {
-    if (this.state.isValidated && !this.state.isValid) {
-      return <ValidationError isValid={this.state.isValid} error={this.state.errorMessage} testId={this.props.validationTestId} />;
-    }
-    return null;
-  }
-
   onChange(_e: React.FormEvent<{}>, _id: string | undefined, formattedValue: string): void {
     const numberValue = parseInt(formattedValue) || 0;
     this.setState({
@@ -200,7 +193,7 @@ export class YearInput extends React.Component<YearInputProps, YearInputState> {
     );
     return (
       <div className={wrapperClasses} id={`${this.props.id}-wrapper`}>
-        {this.renderErrorMessage()}
+        <ValidationError isValid={this.state.isValid} error={this.state.errorMessage} testId={this.props.validationTestId} />
         <SafeInputField
           type="number"
           inputName={`${this.props.id}-input`}

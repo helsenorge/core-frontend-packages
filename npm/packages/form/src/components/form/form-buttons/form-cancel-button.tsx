@@ -1,6 +1,9 @@
 import * as React from 'react';
-import { ActionButton } from '@helsenorge/toolkit/components/buttons/action-button';
-import { DisplayButton } from '@helsenorge/toolkit/components/buttons/display-button';
+
+import Button from '@helsenorge/designsystem-react/components/Button';
+import Icon from '@helsenorge/designsystem-react/components/Icons';
+import ArrowLeft from '@helsenorge/designsystem-react/components/Icons/ArrowLeft';
+
 import toolkitstyles from '../styles.module.scss';
 
 interface FormCancelButtonProps {
@@ -31,34 +34,30 @@ const FormCancelButton: React.FC<FormCancelButtonProps> = (props: FormCancelButt
     return null;
   }
 
-  if (props.cancelButtonType === 'display') {
-    return (
-      <DisplayButton
-        tertiary
-        className={`${toolkitstyles.form__buttonwrapper__button} ${props.cancelButtonClasses ? props.cancelButtonClasses : ''}`}
-        onClick={props.onCancel}
-        leftIcon={props.cancelButtonLeftIcon}
-        rightIcon={props.cancelButtonRightIcon}
-        disabled={props.cancelButtonDisabled}
-        testId={props.cancelButtonTestId}
-      >
-        {props.cancelButtonText}
-      </DisplayButton>
-    );
-  } else if (props.cancelButtonType === 'action') {
-    return (
-      <ActionButton
-        tertiary
-        disabled={props.cancelButtonDisabled}
-        className={`${toolkitstyles.form__buttonwrapper__button} ${props.cancelButtonClasses ? props.cancelButtonClasses : ''}`}
-        onClick={props.onCancel}
-        testId={props.cancelButtonTestId}
-      >
-        {props.cancelButtonText}
-      </ActionButton>
-    );
-  }
-  return null;
+  /** Stopper browser validation fra å trigge  */
+  const onCancelHandler = (e?: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+    if (e) {
+      e.preventDefault();
+    }
+
+    if (props.onCancel) {
+      props.onCancel(e);
+    }
+  };
+
+  return (
+    <Button
+      variant={'borderless'}
+      className={`${toolkitstyles.form__buttonwrapper__button} ${props.cancelButtonClasses ? props.cancelButtonClasses : ''}`}
+      onClick={onCancelHandler}
+      disabled={props.cancelButtonDisabled}
+      testId={props.cancelButtonTestId}
+    >
+      {!!props.cancelButtonLeftIcon && <Icon svgIcon={ArrowLeft} />}
+      {props.cancelButtonText}
+      {!!props.cancelButtonRightIcon && <Icon svgIcon={ArrowLeft} />}
+    </Button>
+  );
 };
 
 export default FormCancelButton;

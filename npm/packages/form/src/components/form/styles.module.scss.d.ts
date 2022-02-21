@@ -4,6 +4,7 @@ declare namespace StylesModuleScssNamespace {
   export interface IStylesModuleScss {
     form__buttonwrapper: string;
     form__buttonwrapper__button: string;
+    'form__buttonwrapper__button-span': string;
   }
 }
 

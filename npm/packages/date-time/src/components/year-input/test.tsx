@@ -66,10 +66,7 @@ describe('Git at YearInput felt rendres', () => {
         </Form>
       );
 
-      wrapper
-        .find('button')
-        .first()
-        .simulate('click');
+      wrapper.find('button').first().simulate('click');
 
       wrapper.update();
       expect(wrapper.find('.mol_validation__errortext').text()).toBe('År er påkrevd');
@@ -91,7 +88,9 @@ describe('Git at YearInput felt rendres', () => {
       wrapper.find('input').simulate('blur');
       wrapper.find('input').simulate('change', { target: { value: '2013' } });
       wrapper.update();
-      expect(wrapper.find('.mol_validation__errortext').length).toBe(0);
+      const validation = wrapper.find('.mol_validation__errortext').first();
+      expect(validation.length).toBe(1);
+      expect(validation.text()).toEqual('');
     });
   });
 });

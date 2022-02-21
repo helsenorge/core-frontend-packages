@@ -178,7 +178,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
     describe('Når required er satt til true og dato er null', () => {
       const a = DateRangePickerValidation.validateSingleDate(
-        ({} as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        {} as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         null,
         'id',
         true,
@@ -195,7 +195,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
     describe('Når required er satt til true og dato er ugyldig', () => {
       const a = DateRangePickerValidation.validateSingleDate(
-        ({} as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        {} as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         moment('not a real date'),
         'id',
         true,
@@ -212,7 +212,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
     describe('Når required er satt til false og dato er null', () => {
       const a = DateRangePickerValidation.validateSingleDate(
-        ({} as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        {} as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         null,
         'id',
         false,
@@ -229,7 +229,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
     describe('Når required er satt til false og dato er ugyldig', () => {
       const a = DateRangePickerValidation.validateSingleDate(
-        ({} as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        {} as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         moment('not a real date'),
         'id',
         false,
@@ -246,7 +246,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
     describe('Når datoen er gyldig men er satt under minDato', () => {
       const a = DateRangePickerValidation.validateSingleDate(
-        ({} as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        {} as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         moment('20.05.2020', 'DD.MM.YYYY'),
         'id',
         false,
@@ -263,7 +263,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
     describe('Når datoen er gyldig men er satt over maxDato', () => {
       const a = DateRangePickerValidation.validateSingleDate(
-        ({} as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        {} as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         moment('20.05.2020', 'DD.MM.YYYY'),
         'id',
         false,
@@ -282,10 +282,10 @@ describe('DateRangePicker date-range-picker-validation', () => {
     describe('Når datoen er null men inputValue har en verdi', () => {
       mockedInput.value = '20.05.2020';
       mockedElement.appendChild(mockedInput);
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
 
       const a = DateRangePickerValidation.validateSingleDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         null,
         'id',
         false,
@@ -301,9 +301,9 @@ describe('DateRangePicker date-range-picker-validation', () => {
     });
 
     describe('Når datoen er null men inputValue har en verdi under MinDato', () => {
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
       const a = DateRangePickerValidation.validateSingleDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         null,
         'id',
         false,
@@ -319,9 +319,9 @@ describe('DateRangePicker date-range-picker-validation', () => {
     });
 
     describe('Når datoen er null men inputValue har en verdi over MaxDato', () => {
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
       const a = DateRangePickerValidation.validateSingleDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         null,
         'id',
         false,
@@ -340,7 +340,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
       dateValidatorMock.mockReturnValue(false);
       const dato = moment('20.05.2020', 'DD.MM.YYYY');
       const a = DateRangePickerValidation.validateSingleDate(
-        ({} as unknown) as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
+        {} as unknown as React.RefObject<React.ClassicComponent<SingleDatePickerShape, {}>>,
         dato,
         'id',
         true,
@@ -371,7 +371,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
     describe('Når required er satt til true og dato start og/eller end er null', () => {
       it('Så returnerer den isRangeDateValid false (begge er null) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           null,
           null,
           'id',
@@ -389,7 +389,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
       it('Så returnerer den isRangeDateValid false (start er null) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('20.05.2020', 'DD.MM.YYYY'),
           null,
           'id',
@@ -407,7 +407,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
       it('Så returnerer den isRangeDateValid false (end er null) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           null,
           moment('20.05.2020', 'DD.MM.YYYY'),
           'id',
@@ -427,7 +427,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
     describe('Når required er satt til true og dato start og/eller end er ugyldig', () => {
       it('Så returnerer den isRangeDateValid false (begge er ugyldige) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('not a real date'),
           moment('not a real date'),
           'id',
@@ -445,7 +445,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
       it('Så returnerer den isRangeDateValid false (start er ugyldig) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('not a real date'),
           moment('20.05.2020', 'DD.MM.YYYY'),
           'id',
@@ -462,7 +462,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
       });
       it('Så returnerer den isRangeDateValid false (end er ugyldig) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('20.05.2020', 'DD.MM.YYYY'),
           moment('not a real date'),
           'id',
@@ -482,7 +482,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
     describe('Når required er satt til false og dato start og/eller end er null', () => {
       it('Så returnerer den isRangeDateValid true (begge er null) uten errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           null,
           null,
           'id',
@@ -499,7 +499,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
       });
       it('Så returnerer den isRangeDateValid true (start er null) uten errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           null,
           moment('20.05.2020', 'DD.MM.YYYY'),
           'id',
@@ -516,7 +516,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
       });
       it('Så returnerer den isRangeDateValid true (end er null) uten errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('20.05.2020', 'DD.MM.YYYY'),
           null,
           'id',
@@ -535,7 +535,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
     describe('Når required er satt til false og dato start og/eller end er ugyldig', () => {
       it('Så returnerer den isRangeDateValid false (begge er ugyldige) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('not a real date'),
           moment('not a real date'),
           'id',
@@ -552,7 +552,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
       });
       it('Så returnerer den isRangeDateValid false (start er ugyldig) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('not a real date'),
           moment('20.05.2020', 'DD.MM.YYYY'),
           'id',
@@ -569,7 +569,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
       });
       it('Så returnerer den isRangeDateValid false (end er ugyldig) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('20.05.2020', 'DD.MM.YYYY'),
           moment('not a real date'),
           'id',
@@ -589,7 +589,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
     describe('Når datoen start og/eller end er gyldig men er satt under minDato', () => {
       it('Så returnerer den isRangeDateValid false (begge er under minDate) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('20.05.2020', 'DD.MM.YYYY'),
           moment('20.05.2020', 'DD.MM.YYYY'),
           'id',
@@ -607,7 +607,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
 
       it('Så returnerer den isRangeDateValid false (start er under minDate) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('20.05.2020', 'DD.MM.YYYY'),
           moment('21.10.2020', 'DD.MM.YYYY'),
           'id',
@@ -627,7 +627,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
     describe('Når datoen start og/eller end er gyldig men er satt over maxDato', () => {
       it('Så returnerer den isRangeDateValid false (begge er over maxDato) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('20.05.2020', 'DD.MM.YYYY'),
           moment('20.05.2020', 'DD.MM.YYYY'),
           'id',
@@ -644,7 +644,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
       });
       it('Så returnerer den isRangeDateValid false (end er over maxDato) med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('01.01.2020', 'DD.MM.YYYY'),
           moment('20.05.2020', 'DD.MM.YYYY'),
           'id',
@@ -664,7 +664,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
     describe('Når datoen start og/eller end utgjør en mindre periode enn tillatt', () => {
       it('Så returnerer den isRangeDateValid false med riktig errorString', () => {
         const a = DateRangePickerValidation.validateRangeDate(
-          ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+          {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
           moment('20.01.2020', 'DD.MM.YYYY'),
           moment('21.01.2020', 'DD.MM.YYYY'),
           'id',
@@ -686,10 +686,10 @@ describe('DateRangePicker date-range-picker-validation', () => {
       mockedInput2.value = '';
       mockedElement.appendChild(mockedInput1);
       mockedElement.appendChild(mockedInput2);
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
 
       const a = DateRangePickerValidation.validateRangeDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         null,
         null,
         'id',
@@ -707,9 +707,9 @@ describe('DateRangePicker date-range-picker-validation', () => {
     });
 
     describe('Når datoen er null men inputValue for start har en verdi under MinDato', () => {
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
       const a = DateRangePickerValidation.validateRangeDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         null,
         null,
         'id',
@@ -727,9 +727,9 @@ describe('DateRangePicker date-range-picker-validation', () => {
     });
 
     describe('Når datoen er null men inputValue for start har en verdi over MaxDato', () => {
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
       const a = DateRangePickerValidation.validateRangeDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         null,
         null,
         'id',
@@ -747,9 +747,9 @@ describe('DateRangePicker date-range-picker-validation', () => {
     });
 
     describe('Når datoen er null men inputValue for start har en verdi slik at perioden er under minPerioden', () => {
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
       const a = DateRangePickerValidation.validateRangeDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         null,
         moment('21.05.2020', 'DD.MM.YYYY'),
         'id',
@@ -773,10 +773,10 @@ describe('DateRangePicker date-range-picker-validation', () => {
       mockedInput2.value = '20.05.2020';
       mockedElement.appendChild(mockedInput1);
       mockedElement.appendChild(mockedInput2);
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
 
       const a = DateRangePickerValidation.validateRangeDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         null,
         null,
         'id',
@@ -794,9 +794,9 @@ describe('DateRangePicker date-range-picker-validation', () => {
     });
 
     describe('Når datoen er null men inputValue for end har en verdi under MinDato', () => {
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
       const a = DateRangePickerValidation.validateRangeDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         null,
         null,
         'id',
@@ -814,9 +814,9 @@ describe('DateRangePicker date-range-picker-validation', () => {
     });
 
     describe('Når datoen er null men inputValue for end har en verdi over MaxDato', () => {
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
       const a = DateRangePickerValidation.validateRangeDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         null,
         null,
         'id',
@@ -834,9 +834,9 @@ describe('DateRangePicker date-range-picker-validation', () => {
     });
 
     describe('Når datoen er null men inputValue for end har en verdi slik at perioden er under minPerioden', () => {
-      const mockedRef = { current: mockedElement };
+      const mockedRef = { current: { container: mockedElement } };
       const a = DateRangePickerValidation.validateRangeDate(
-        (mockedRef as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        mockedRef as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         moment('19.05.2020', 'DD.MM.YYYY'),
         null,
         'id',
@@ -858,7 +858,7 @@ describe('DateRangePicker date-range-picker-validation', () => {
       const dato1 = moment('20.05.2020', 'DD.MM.YYYY');
       const dato2 = moment('22.05.2020', 'DD.MM.YYYY');
       const a = DateRangePickerValidation.validateRangeDate(
-        ({} as unknown) as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
+        {} as unknown as React.RefObject<React.ClassicComponent<DateRangePickerShape, {}>>,
         dato1,
         dato2,
         'id',

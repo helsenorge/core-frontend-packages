@@ -19,7 +19,7 @@ describe('Gitt at YearMonthInput felt rendres', () => {
       wrapper.find('input').simulate('change', { target: { value: '201' } });
       wrapper.update();
       wrapper.find('input').simulate('blur');
-      expect(wrapper.find('.mol_validation__errortext').text()).toBe('Feil år');
+      expect(wrapper.find('.mol_validation__errortext').first().text()).toBe('Feil år');
     });
   });
 
@@ -35,7 +35,7 @@ describe('Gitt at YearMonthInput felt rendres', () => {
       wrapper.find('input').simulate('change', { target: { value: '2014' } });
       wrapper.find('select').simulate('change', { target: { value: '-1' } });
       wrapper.update();
-      expect(wrapper.find('.mol_validation__errortext').text()).toBe('Ugyldig verdi');
+      expect(wrapper.find('.mol_validation__errortext').first().text()).toBe('Ugyldig verdi');
     });
   });
 
@@ -50,7 +50,7 @@ describe('Gitt at YearMonthInput felt rendres', () => {
       );
       wrapper.find('select').simulate('change', { target: { value: '1' } });
       wrapper.update();
-      expect(wrapper.find('.mol_validation__errortext').text()).toBe('Ugyldig verdi');
+      expect(wrapper.find('.mol_validation__errortext').first().text()).toBe('Ugyldig verdi');
     });
   });
 
@@ -69,7 +69,7 @@ describe('Gitt at YearMonthInput felt rendres', () => {
       wrapper.update();
       wrapper.find('select').simulate('change', { target: { value: '3' } });
       wrapper.update();
-      expect(wrapper.find('.mol_validation__errortext').text()).toBe('Etter max dato: januar 2014');
+      expect(wrapper.find('.mol_validation__errortext').first().text()).toBe('Etter max dato: januar 2014');
     });
   });
 
@@ -88,7 +88,7 @@ describe('Gitt at YearMonthInput felt rendres', () => {
       wrapper.update();
       wrapper.find('select').simulate('change', { target: { value: '11' } });
       wrapper.update();
-      expect(wrapper.find('.mol_validation__errortext').text()).toBe('Før min dato: januar 2014');
+      expect(wrapper.find('.mol_validation__errortext').first().text()).toBe('Før min dato: januar 2014');
     });
   });
 
@@ -107,13 +107,10 @@ describe('Gitt at YearMonthInput felt rendres', () => {
         </Form>
       );
 
-      wrapper
-        .find('button')
-        .first()
-        .simulate('click');
+      wrapper.find('button').first().simulate('click');
 
       wrapper.update();
-      expect(wrapper.find('.mol_validation__errortext').text()).toBe('Feltet er påkrevd');
+      expect(wrapper.find('.mol_validation__errortext').first().text()).toBe('Feltet er påkrevd');
     });
   });
 
@@ -134,7 +131,9 @@ describe('Gitt at YearMonthInput felt rendres', () => {
       wrapper.update();
       wrapper.find('input').simulate('change', { target: { value: '2014' } });
       wrapper.update();
-      expect(wrapper.find('.mol_validation__errortext').length).toBe(0);
+      const validation = wrapper.find('.mol_validation__errortext').first();
+      expect(validation.length).toBe(1);
+      expect(validation.text()).toEqual('');
     });
   });
   describe('Når feltet har feilmelding og måned endres til gyldig verdi', () => {
@@ -154,7 +153,9 @@ describe('Gitt at YearMonthInput felt rendres', () => {
       wrapper.update();
       wrapper.find('select').simulate('change', { target: { value: '5' } });
       wrapper.update();
-      expect(wrapper.find('.mol_validation__errortext').length).toBe(0);
+      const validation = wrapper.find('.mol_validation__errortext').first();
+      expect(validation.length).toBe(1);
+      expect(validation.text()).toEqual('');
     });
   });
 

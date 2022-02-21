@@ -1,11 +1,12 @@
 import * as React from 'react';
 
-import TransportAnnet from '@helsenorge/toolkit/components//icons/TransportAnnet';
+import Icon, { IconSize } from '@helsenorge/designsystem-react/components/Icons';
+import Rocket from '@helsenorge/designsystem-react/components/Icons/Rocket';
 
 import CheckBoxGroup, { Option } from '../checkbox-group';
-import SafeInputField from '../safe-input-field';
 import Form, { FormChild } from '../form';
 import { Validation } from '../form/validation';
+import SafeInputField from '../safe-input-field';
 
 import { Dropdown } from '.';
 
@@ -123,7 +124,7 @@ export class DropdownExample extends React.Component<{}, DropdownExampleState> {
         <h3>{'Bruk isFullWidth +  ikon'}</h3>
         <Dropdown
           name="Dropdown 2"
-          icon={<TransportAnnet />}
+          icon={<Icon svgIcon={Rocket} size={IconSize.Small} />}
           toggleDropdown={this.toggleOpen}
           index={2}
           open={this.state.dropdown2}
@@ -132,10 +133,9 @@ export class DropdownExample extends React.Component<{}, DropdownExampleState> {
           {'Lorem ipsum dolor sit amet!'}
         </Dropdown>
         <h3>{'Bruk av lang label + ikon med custom height'}</h3>
-        <p>{'Du kan styre størrelsen på ikonet ved å endre height/width på .mol_dropdown__button-icon'}</p>
         <Dropdown
           name="Dropdown 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor, eros ut convallis commodo! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor, eros ut convallis commodo! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi porttitor, eros ut convallis commodo!"
-          icon={<TransportAnnet style={{ width: '5rem', height: '5rem' }} />}
+          icon={<Icon svgIcon={Rocket} size={128} />}
           toggleDropdown={this.toggleOpen}
           index={3}
           open={this.state.dropdown3}

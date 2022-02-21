@@ -144,12 +144,14 @@ describe('SafeTextarea', () => {
       <SafeTextarea id="test" value="" isRequired={true} onBlur={() => undefined} showLabel={true} label="test label" />
     );
     expect(renderedInstance.exists()).toEqual(true);
-    expect(renderedInstance.find(ValidationError).length).toBe(0);
+    expect(renderedInstance.find(ValidationError).length).toBe(1);
+    expect(renderedInstance.find(ValidationError).text()).toEqual('');
+
     const instance = renderedInstance.find(SafeTextarea).instance();
     expect(renderedInstance.find(SafeTextarea).length).toBe(1);
     (instance as SafeTextarea).validateField();
     renderedInstance.update();
-    expect(renderedInstance.find(ValidationError).length).toBe(1);
+    expect(renderedInstance.find(ValidationError).text()).not.toEqual('');
   });
 
   it('should render sublabel', () => {

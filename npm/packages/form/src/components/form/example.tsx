@@ -1,12 +1,14 @@
 import * as React from 'react';
 
+import moment, { Moment } from 'moment';
+
 import { log } from '@helsenorge/core-utils/logger';
 
 import { CheckBox } from '../checkbox';
 import { RadioGroup, Options } from '../radio-group';
 import SafeInputField from '../safe-input-field';
-import { SafeTextarea } from '../safe-textarea';
 import SafeSelect from '../safe-select';
+import { SafeTextarea } from '../safe-textarea';
 import WrappedComponent from './example/wrapped-component-example';
 import Validation from './validation';
 
@@ -21,6 +23,14 @@ interface ExampleState {
   inputFieldValue: string;
   textfieldValue: string;
   safeselect: string;
+  datetimeinputValue: Date | undefined;
+  datetimepickerDateValue: moment.Moment | undefined;
+  datetimepickerTimeValue: string | undefined;
+  datepickerValue: Date | undefined;
+  daterangepickerValue: Moment | undefined;
+  disabled: boolean;
+  startDateValue: Moment | undefined;
+  endDateValue: Moment | undefined;
   saving: boolean;
   saved: boolean;
   radioGroupValue: string;
@@ -45,6 +55,14 @@ export class FormExample extends React.Component<{}, ExampleState> {
       inputFieldValue: '',
       textfieldValue: '',
       safeselect: '',
+      datetimeinputValue: undefined,
+      datetimepickerDateValue: undefined,
+      datetimepickerTimeValue: undefined,
+      datepickerValue: undefined,
+      daterangepickerValue: undefined,
+      disabled: false,
+      startDateValue: moment('10.09.2020', 'DD.MM.YYYY'),
+      endDateValue: undefined,
       saving: false,
       saved: false,
       radioGroupValue: '',
@@ -180,6 +198,10 @@ export class FormExample extends React.Component<{}, ExampleState> {
     this.setState({ saveButton: !this.state.saveButton });
   };
 
+  handleDisableButtonChange = (): void => {
+    this.setState({ disabled: !this.state.disabled });
+  };
+
   onSubmit = (): void => {
     log('form has been submitted');
     this.setState({
@@ -248,6 +270,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
           }
         </p>
         <CheckBox label="Bruk lagreknapp" onChange={this.handleSaveButtonChange} id="savebuttoncheckbox" checked={this.state.saveButton} />
+        <CheckBox label="Disabled" onChange={this.handleDisableButtonChange} id="disabledcheckbox" checked={this.state.disabled} />
         <Form
           action="#"
           submitButtonText="Send"
@@ -259,6 +282,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
           draftButtonText="Lagre knapp (onDraft)"
           onDraft={this.onDraft}
           onPause={() => {}}
+          disabled={this.state.disabled}
           onCancel={this.onCancel}
           pauseButtonLevel="secondary"
           cancelButtonRight

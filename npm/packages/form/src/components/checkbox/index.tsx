@@ -1,5 +1,4 @@
 import * as React from 'react';
-import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 
 import CheckThick from '@helsenorge/toolkit/components/icons/CheckThick';
@@ -61,9 +60,11 @@ export interface CheckboxState {
 
 export class CheckBox extends React.Component<CheckboxProps, CheckboxState> {
   static hnFormComponent = true;
+  inputRef: React.RefObject<HTMLInputElement>;
 
   constructor(props: CheckboxProps) {
     super(props);
+    this.inputRef = React.createRef();
     this.state = {
       valid: true,
       validated: false,
@@ -83,8 +84,7 @@ export class CheckBox extends React.Component<CheckboxProps, CheckboxState> {
   }
 
   setChecked(): void {
-    const node = ReactDOM.findDOMNode(this);
-    const $checkbox = node instanceof Element ? node.querySelector('input[type="checkbox"]') : null;
+    const $checkbox = this.inputRef.current;
     if ($checkbox) {
       this.props.checked ? $checkbox.setAttribute('checked', 'checked') : $checkbox.removeAttribute('checked');
     }
@@ -188,6 +188,7 @@ export class CheckBox extends React.Component<CheckboxProps, CheckboxState> {
         />
         <div className="atom_checkbox__labelwrapper">
           <input
+            ref={this.inputRef}
             type="checkbox"
             checked={this.props.checked}
             aria-checked={this.props.checked}

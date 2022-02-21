@@ -1,8 +1,10 @@
 import * as React from 'react';
-import { FunctionButton } from '@helsenorge/toolkit/components/buttons/function-button';
-import { ActionButton } from '@helsenorge/toolkit/components/buttons/action-button';
-import { DisplayButton } from '@helsenorge/toolkit/components/buttons/display-button';
-import Pause from '@helsenorge/toolkit/components/icons/Pause';
+
+import Button from '@helsenorge/designsystem-react/components/Button';
+import { ButtonVariants } from '@helsenorge/designsystem-react/components/Button';
+import { Icon } from '@helsenorge/designsystem-react/components/Icons';
+import Pause from '@helsenorge/designsystem-react/components/Icons/Pause';
+
 import toolkitstyles from '../styles.module.scss';
 
 interface FormPauseButtonProps {
@@ -24,58 +26,42 @@ interface FormPauseButtonProps {
 }
 
 const FormPauseButton: React.FC<FormPauseButtonProps> = (props: FormPauseButtonProps): JSX.Element | null => {
+  const getButtonVariant = (): ButtonVariants => {
+    if (props.pauseButtonType === 'function' || props.pauseButtonLevel === 'tertiary') {
+      return 'borderless';
+    } else if (props.pauseButtonLevel === 'secondary') {
+      return 'outline';
+    }
+
+    return 'fill';
+  };
+
+  /** Stopper browser validation fra å trigge  */
+  const onPauseHandler = (e?: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+    if (e) {
+      e.preventDefault();
+    }
+
+    if (props.onPause) {
+      props.onPause();
+    }
+  };
+
   if (!props.pauseButtonText || !props.onPause) {
     return null;
   }
-  if (props.pauseButtonType === 'action') {
-    return (
-      <ActionButton
-        primary={props.pauseButtonLevel === 'primary'}
-        secondary={props.pauseButtonLevel === 'secondary'}
-        tertiary={props.pauseButtonLevel === 'tertiary'}
-        disabled={props.pauseButtonDisabled}
-        className={`${toolkitstyles.form__buttonwrapper__button} ${
-          props.pauseButtonClasses ? props.pauseButtonClasses : 'atom_actionbutton--pause'
-        }`}
-        onClick={props.onPause}
-        testId={props.pauseButtonTestId}
-      >
-        {props.pauseButtonText}
-      </ActionButton>
-    );
-  } else if (props.pauseButtonType === 'function') {
-    return (
-      <FunctionButton
-        svgIcon={<Pause />}
-        disabled={props.pauseButtonDisabled}
-        className={`${toolkitstyles.form__buttonwrapper__button} ${
-          props.pauseButtonClasses ? props.pauseButtonClasses : 'atom_functionbutton--pause'
-        }`}
-        onClick={props.onPause}
-        testId={props.pauseButtonTestId}
-      >
-        {props.pauseButtonText}
-      </FunctionButton>
-    );
-  } else if (props.pauseButtonType === 'display') {
-    return (
-      <DisplayButton
-        primary={props.pauseButtonLevel === 'primary'}
-        secondary={props.pauseButtonLevel === 'secondary'}
-        tertiary={props.pauseButtonLevel === 'tertiary'}
-        disabled={props.pauseButtonDisabled}
-        className={`${toolkitstyles.form__buttonwrapper__button} ${
-          props.pauseButtonClasses ? props.pauseButtonClasses : 'atom_actionbutton--pause'
-        }`}
-        onClick={props.onPause}
-        leftIcon={props.pauseButtonLeftIcon}
-        testId={props.pauseButtonTestId}
-      >
-        {props.pauseButtonText}
-      </DisplayButton>
-    );
-  }
-  return null;
+  return (
+    <Button
+      variant={getButtonVariant()}
+      disabled={props.pauseButtonDisabled}
+      className={toolkitstyles.form__buttonwrapper__button}
+      onClick={onPauseHandler}
+      testId={props.pauseButtonTestId}
+    >
+      {!!props.pauseButtonLeftIcon && <Icon svgIcon={Pause} />}
+      {props.pauseButtonText}
+    </Button>
+  );
 };
 
 export default FormPauseButton;

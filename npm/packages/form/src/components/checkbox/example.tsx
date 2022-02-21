@@ -1,7 +1,8 @@
 import * as React from 'react';
 
-import { ActionButton } from '@helsenorge/toolkit/components/buttons/action-button';
-import HelpTrigger from '@helsenorge/toolkit/components/icons/HelpTrigger';
+import Button from '@helsenorge/designsystem-react/components/Button';
+import { Icon } from '@helsenorge/designsystem-react/components/Icons';
+import HelpSign from '@helsenorge/designsystem-react/components/Icons/HelpSign';
 
 import { CheckBox } from '.';
 
@@ -118,9 +119,9 @@ export class CheckboxExample extends React.Component<{}, CheckboxExampleState> {
           checked={this.state.isHjelpetriggerChecked}
           comment="Dette er en kommentar"
           helpButton={
-            <ActionButton tertiary onClick={this.handleVisHjelp}>
-              <HelpTrigger />
-            </ActionButton>
+            <Button variant="borderless" onClick={this.handleVisHjelp}>
+              {<Icon color={'black'} svgIcon={HelpSign} />}
+            </Button>
           }
           helpElement={this.state.isHjelpVisible ? <div>{`Dette er en hjelpetekst`}</div> : undefined}
         />

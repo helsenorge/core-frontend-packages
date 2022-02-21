@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import ReactDOM from 'react-dom';
-
 export interface PrivateRadioGroupProps {
   defaultValue?: string;
   children?: JSX.Element | string;
@@ -15,9 +13,11 @@ export interface PrivateRadioGroupState {
 }
 
 export default class PrivateRadioGroup extends React.Component<PrivateRadioGroupProps, PrivateRadioGroupState> {
+  radioGroupRef: React.RefObject<HTMLDivElement>;
+
   constructor(props: PrivateRadioGroupProps) {
     super(props);
-
+    this.radioGroupRef = React.createRef();
     /* check the first block of comment in `setCheckedRadio`*/
     this.state = {
       defaultValue: this.props.defaultValue,
@@ -35,7 +35,11 @@ export default class PrivateRadioGroup extends React.Component<PrivateRadioGroup
   }
 
   render(): JSX.Element {
-    return <div className={this.props.classNameGroup}>{this.props.children}</div>;
+    return (
+      <div ref={this.radioGroupRef} className={this.props.classNameGroup}>
+        {this.props.children}
+      </div>
+    );
   }
 
   setRadioNames(): void {
@@ -50,7 +54,7 @@ export default class PrivateRadioGroup extends React.Component<PrivateRadioGroup
   }
 
   getRadios() {
-    const node = ReactDOM.findDOMNode(this);
+    const node = this.radioGroupRef.current;
     if (node instanceof Element) {
       return node.querySelectorAll('input[type="radio"]');
     }

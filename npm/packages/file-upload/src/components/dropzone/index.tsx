@@ -1,17 +1,19 @@
 import * as React from 'react';
-import classNames from 'classnames';
 
-import LastOpp from '@helsenorge/toolkit/components/icons/LastOpp';
-import { FunctionButton } from '@helsenorge/toolkit/components/buttons/function-button';
-import { Label } from '@helsenorge/form/components/label';
-import MessageBox from '@helsenorge/toolkit/components/message-box';
-import { Spinner } from '@helsenorge/toolkit/components/spinner';
+import classNames from 'classnames';
+import OriginalDropzone, { FileRejection, DropEvent } from 'react-dropzone';
+
+import Button from '@helsenorge/designsystem-react/components/Button';
+import Icon from '@helsenorge/designsystem-react/components/Icons';
+import Upload from '@helsenorge/designsystem-react/components/Icons/Upload';
+import Loader from '@helsenorge/designsystem-react/components/Loader';
+import NotificationPanel from '@helsenorge/designsystem-react/components/NotificationPanel';
+
 import ValidationError from '@helsenorge/form/components/form/validation-error';
+import { Label } from '@helsenorge/form/components/label';
 
 import FileElement, { Type } from './file';
 import { sizeIsValid, typeIsValid, mimeTypeIsValid } from './validation';
-
-import OriginalDropzone, { FileRejection, DropEvent } from 'react-dropzone';
 
 import styles from './toolkitstyles.module.scss';
 
@@ -303,22 +305,20 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
 
   renderValidationErrorMessage() {
     let error = '';
+
     if (this.props.errorMessage && this.state.rejectedFiles) {
       error = typeof this.props.errorMessage === 'string' ? this.props.errorMessage : this.props.errorMessage(this.state.rejectedFiles[0]);
-      return <ValidationError isValid={this.state.isValid} error={error} testId={this.props.validationTestId} />;
     }
+    return <ValidationError isValid={this.state.isValid} error={error} testId={this.props.validationTestId} />;
   }
 
   renderErrorMessage() {
     if (this.state.errormessage) {
       return (
         <div className={styles.dropzone__errormessage}>
-          <MessageBox
-            type="error"
-            title={this.state.errormessage.Title}
-            description={this.state.errormessage.Body}
-            testId={this.props.messageBoxTestId}
-          />
+          <NotificationPanel variant={'alert'} label={this.state.errormessage.Title} testId={this.props.messageBoxTestId}>
+            <p>{this.state.errormessage.Body}</p>
+          </NotificationPanel>
         </div>
       );
     }
@@ -373,16 +373,17 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
   renderUploadButton = () => {
     if (this.shouldRenderUploadButton()) {
       return (
-        <FunctionButton
+        <Button
+          variant="borderless"
           id={this.props.id}
-          svgIcon={<LastOpp />}
           disabled={this.props.disabled}
           onClick={this.onOpenClick}
           className={`${styles.dropzone__uploadButton} ${this.props.uploadButtonClassName}`}
           testId={this.props.functionButtonTestId}
         >
+          <Icon svgIcon={Upload} />
           {this.props.uploadButtonText}
-        </FunctionButton>
+        </Button>
       );
     }
   };
@@ -456,7 +457,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
 
   renderSpinner() {
     if (this.state.loading && !this.props.noSpinner) {
-      return <Spinner inline mini className={styles.dropzone__spinner} />;
+      return <Loader size={'tiny'} className={styles.dropzone__spinner} />;
     }
   }
 

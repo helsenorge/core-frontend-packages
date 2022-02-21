@@ -326,13 +326,9 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
 
   renderErrorMessage = (): JSX.Element | null => {
     const { isRequired, requiredErrorMessage, errorMessage } = this.props;
-    const { valid, validated, value } = this.state;
+    const { valid, value } = this.state;
 
-    if (!validated) {
-      return null;
-    }
-
-    let error: string | undefined;
+    let error: string | undefined = '';
     if (!valid) {
       if (isRequired && !this.isValidIfRequired(value) && requiredErrorMessage) {
         error = typeof requiredErrorMessage === 'string' ? requiredErrorMessage : requiredErrorMessage(value);
@@ -347,10 +343,6 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
           ? this.props.stringOverMaxLengthError
           : 'Du har skrevet for mange tegn. Gjør teksten kortere.';
       }
-    }
-
-    if (!error) {
-      return null;
     }
 
     return <ValidationError isValid={valid} error={error} />;

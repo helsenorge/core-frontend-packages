@@ -1,7 +1,11 @@
 import * as React from 'react';
+
+import Button from '@helsenorge/designsystem-react/components/Button';
+import Icon from '@helsenorge/designsystem-react/components/Icons';
+import ArrowRight from '@helsenorge/designsystem-react/components/Icons/ArrowRight';
+
 import { SaveButton } from '@helsenorge/toolkit/components/buttons/save-button';
-import { ActionButton } from '@helsenorge/toolkit/components/buttons/action-button';
-import { DisplayButton } from '@helsenorge/toolkit/components/buttons/display-button';
+
 import toolkitstyles from '../styles.module.scss';
 
 interface FormSubmitButtonProps {
@@ -59,6 +63,7 @@ const FormSubmitButton: React.FC<FormSubmitButtonProps> = (props: FormSubmitButt
 
   if (shouldUseSaveButton()) {
     return (
+      // TODO: Erstatte med nytt savebutton komponent i designsystem
       <SaveButton
         onClick={(): void => {
           props.onFormSubmit(() => {
@@ -80,15 +85,13 @@ const FormSubmitButton: React.FC<FormSubmitButtonProps> = (props: FormSubmitButt
   if (!props.submitButtonText || !props.onSubmit) {
     return null;
   }
-  if (props.submitButtonType === 'display') {
+  if (props.submitButtonType === 'display' || props.submitButtonType === 'action') {
     return (
-      <DisplayButton
+      <Button
+        variant={props.submitButtonType === 'display' ? 'fill' : 'outline'}
         className={`${toolkitstyles.form__buttonwrapper__button} ${props.submitButtonClasses ? props.submitButtonClasses : ''}`}
-        leftIcon={props.submitButtonLeftIcon}
-        rightIcon={props.submitButtonRightIcon}
         disabled={props.submitButtonDisabled}
         formNoValidate
-        primary
         onClick={(): void => {
           props.onFormSubmit(() => {
             if (props.onSubmit) {
@@ -98,27 +101,10 @@ const FormSubmitButton: React.FC<FormSubmitButtonProps> = (props: FormSubmitButt
         }}
         testId={props.submitButtonTestId}
       >
+        {!!props.submitButtonLeftIcon && <Icon svgIcon={ArrowRight} />}
         {props.submitButtonText}
-      </DisplayButton>
-    );
-  } else if (props.submitButtonType === 'action') {
-    return (
-      <ActionButton
-        className={`${toolkitstyles.form__buttonwrapper__button} ${props.submitButtonClasses ? props.submitButtonClasses : ''}`}
-        disabled={props.submitButtonDisabled}
-        formNoValidate
-        primary
-        onClick={(): void => {
-          props.onFormSubmit(() => {
-            if (props.onSubmit) {
-              props.onSubmit();
-            }
-          });
-        }}
-        testId={props.submitButtonTestId}
-      >
-        {props.submitButtonText}
-      </ActionButton>
+        {!!props.submitButtonRightIcon && <Icon svgIcon={ArrowRight} />}
+      </Button>
     );
   }
   return null;

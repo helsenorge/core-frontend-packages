@@ -7,6 +7,10 @@
     display: block;
     margin-top: getSpacer(m);
 
+    &__button-span {
+      display: flex;
+    }
+
     &__button {
       display: inline-block;
       margin-right: $spacer;

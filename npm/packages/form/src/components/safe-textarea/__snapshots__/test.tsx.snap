@@ -5,6 +5,19 @@ exports[`SafeTextarea SafeTextarea renders correctly 1`] = `
   class="mol_validation"
   id="test-wrapper"
 >
+  <div
+    class="ReactCollapse--collapse"
+    style="height: auto; overflow: initial;"
+  >
+    <div
+      class="ReactCollapse--content"
+    >
+      <div
+        aria-live="assertive"
+        class="mol_validation__errortext"
+      />
+    </div>
+  </div>
   <textarea
     aria-invalid="false"
     aria-required="false"

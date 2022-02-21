@@ -7,6 +7,19 @@ exports[`DateTimePicker Når den instansieres for første gang Så renderes den 
   <div
     class="mol_validation customclassname"
   >
+    <div
+      class="ReactCollapse--collapse"
+      style="height: auto; overflow: initial;"
+    >
+      <div
+        class="ReactCollapse--content"
+      >
+        <div
+          aria-live="assertive"
+          class="mol_validation__errortext"
+        />
+      </div>
+    </div>
     <legend>
       Når ble du behandlet?
     </legend>

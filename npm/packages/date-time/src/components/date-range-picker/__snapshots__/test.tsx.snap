@@ -29,6 +29,19 @@ exports[`DateRangePicker index Gitt at DateRangePicker skal rendres Når den har
 >
   <fieldset>
     <div
+      class="ReactCollapse--collapse"
+      style="height: auto; overflow: initial;"
+    >
+      <div
+        class="ReactCollapse--content"
+      >
+        <div
+          aria-live="assertive"
+          class="mol_validation__errortext"
+        />
+      </div>
+    </div>
+    <div
       class="SingleDatePicker SingleDatePicker_1"
     >
       <div>

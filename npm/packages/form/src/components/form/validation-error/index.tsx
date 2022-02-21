@@ -1,12 +1,13 @@
 import * as React from 'react';
 import { UnmountClosed } from 'react-collapse';
+import classNames from 'classnames';
 
 import './../styles.scss';
 export interface ValidationErrorProps {
   /** Om komponenten vises eller ikke */
   isValid: boolean;
   /** Error objektet som visning av feilmeldingen baserer seg på */
-  error: string | (() => string);
+  error?: string | (() => string);
   /** Ekstra CSS-class som legges på UnmountClosed component  */
   className?: string;
   /** Ekstra CSS-class som legges på mol_validation__errortext div'en */
@@ -26,10 +27,13 @@ export const ValidationError: React.FC<ValidationErrorProps> = ({
   if (error) {
     componentError = typeof error === 'string' ? error : error();
   }
+  const validationClassNames = classNames(textClassName ? textClassName : 'mol_validation__errortext', {
+    'mol_validation__errortext--invalid': !isValid,
+  });
   return (
-    <UnmountClosed isOpened={!isValid} className={className}>
-      <div className={textClassName ? textClassName : 'mol_validation__errortext'} data-testid={testId}>
-        {componentError}
+    <UnmountClosed isOpened={true} className={className}>
+      <div className={validationClassNames} data-testid={testId} aria-live="assertive">
+        {isValid ? '' : componentError}
       </div>
     </UnmountClosed>
   );

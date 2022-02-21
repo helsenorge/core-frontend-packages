@@ -232,7 +232,7 @@ export default class DateTime extends React.Component<DateTimePickerProps, DateT
     return (
       <fieldset id={`${id}-wrapper`}>
         <div ref={this.wrapperRef} className={classes}>
-          {!valid && errorString && <ValidationError isValid={valid} error={errorString} />}
+          <ValidationError isValid={valid} error={errorString} />
           <DateTimePickerLegend
             legend={legend}
             isRequired={isRequired}

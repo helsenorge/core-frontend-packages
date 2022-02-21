@@ -1,12 +1,11 @@
 import * as React from 'react';
 
 import moment from 'moment';
-import { SingleDatePickerShape, DateRangePickerShape } from 'react-dates';
-import * as ReactDOM from 'react-dom';
+import { DateRangePickerShape, SingleDatePickerShape } from 'react-dates';
 
 import { isInclusivelyBeforeDay, isInclusivelyAfterDay } from '@helsenorge/core-utils/moment-utils';
 
-import { DatePickerErrorPhrases } from './date-range-picker-types';
+import { DatePickerErrorPhrases, DateRangePickerNode, SingleDatePickerNode } from './date-range-picker-types';
 
 /**
  * @param date - den nåværende datoen vi står på
@@ -98,14 +97,13 @@ export const validateSingleDate = (
   let errorString: string | undefined;
   let inputValue: string | undefined;
 
-  /* eslint-disable-next-line react/no-find-dom-node */
-  const datepickerElement = ReactDOM.findDOMNode(airbnbSingleDatepickerRef.current);
+  // The DOM node from the react-dates ref is available in a container attribute instead of ref.current directly
+  const datepickerElement = (airbnbSingleDatepickerRef.current as SingleDatePickerNode)?.container;
 
   if (datepickerElement) {
     const dpInput = (datepickerElement as Element).getElementsByClassName('DateInput_input');
     inputValue = (dpInput[0] as HTMLInputElement).value;
   }
-
   // If the date is required
   if (required) {
     // the date has to be a not null valid moment date
@@ -194,7 +192,8 @@ export const validateRangeDate = (
   let inputValueStart: string | undefined;
   let inputValueEnd: string | undefined;
 
-  const dp = ReactDOM.findDOMNode(airbnbDateRangepickerRef.current);
+  // The DOM node from the react-dates ref is available in a container attribute instead of ref.current directly
+  const dp = (airbnbDateRangepickerRef.current as DateRangePickerNode)?.container;
   if (dp) {
     const dpInput = (dp as Element).getElementsByClassName('DateInput_input');
     inputValueStart = (dpInput[0] as HTMLInputElement).value;
