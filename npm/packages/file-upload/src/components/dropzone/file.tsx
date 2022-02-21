@@ -1,18 +1,23 @@
 import * as React from 'react';
+
 import classNames from 'classnames';
-import { FunctionButton } from '@helsenorge/toolkit/components/buttons/function-button';
+
+import Button from '@helsenorge/designsystem-react/components/Button';
+import Icon from '@helsenorge/designsystem-react/components/Icons';
+import ImgFile from '@helsenorge/designsystem-react/components/Icons/ImgFile';
+import JpgFile from '@helsenorge/designsystem-react/components/Icons/JpgFile';
+import PdfFile from '@helsenorge/designsystem-react/components/Icons/PdfFile';
+import PngFile from '@helsenorge/designsystem-react/components/Icons/PngFile';
+import RtfFile from '@helsenorge/designsystem-react/components/Icons/RtfFile';
+import TrashCan from '@helsenorge/designsystem-react/components/Icons/TrashCan';
+import WordDocument from '@helsenorge/designsystem-react/components/Icons/WordDocument';
+import XmlFile from '@helsenorge/designsystem-react/components/Icons/XmlFile';
+
 import { ConfirmBox } from '@helsenorge/toolkit/components/confirmbox';
-import Delete from '@helsenorge/toolkit/components/icons/Delete';
-import FormatJPG from '@helsenorge/toolkit/components/icons/FormatJPG';
-import FormatPNG from '@helsenorge/toolkit/components/icons/FormatPNG';
-import FormatPDF from '@helsenorge/toolkit/components/icons/FormatPDF';
-import FormatWORD from '@helsenorge/toolkit/components/icons/FormatWORD';
-import FormatRTF from '@helsenorge/toolkit/components/icons/FormatRTF';
-import FormatXML from '@helsenorge/toolkit/components/icons/FormatXML';
-import FormatAny from '@helsenorge/toolkit/components/icons/FormatAny';
+
+import { theme } from '@helsenorge/designsystem-react';
 
 import styles from './toolkitstyles.module.scss';
-import { SvgIconProps } from '@helsenorge/toolkit/components/icons/SvgIcon';
 
 export enum Type {
   verified = 'verified',
@@ -44,23 +49,22 @@ interface FileState {
 const fileType = (fileName: string, className?: string) => {
   if (fileName) {
     const filetype = fileName.split('.')[1];
-    const props = { className: className, size: 'large' } as SvgIconProps;
     switch (filetype) {
       case 'doc':
-        return <FormatWORD {...props} />;
+        return <Icon svgIcon={WordDocument} className={className} />;
       case 'jpg':
       case 'jpeg':
-        return <FormatJPG {...props} />;
+        return <Icon svgIcon={JpgFile} className={className} />;
       case 'pdf':
-        return <FormatPDF {...props} />;
+        return <Icon svgIcon={PdfFile} className={className} />;
       case 'png':
-        return <FormatPNG {...props} />;
+        return <Icon svgIcon={PngFile} className={className} />;
       case 'rtf':
-        return <FormatRTF {...props} />;
+        return <Icon svgIcon={RtfFile} className={className} />;
       case 'xml':
-        return <FormatXML {...props} />;
+        return <Icon svgIcon={XmlFile} className={className} />;
       default:
-        return <FormatAny {...props} />;
+        return <Icon svgIcon={ImgFile} className={className} />;
     }
   } else return '';
 };
@@ -120,18 +124,20 @@ export default class FileElement extends React.Component<FileProps, FileState> {
     const { shouldRenderDeleteButton, loading, dontShowHardcodedText, deleteText, confirmDelete } = this.props;
     if (shouldRenderDeleteButton && !loading) {
       return (
-        <FunctionButton
-          svgIcon={<Delete variant={'error'} />}
+        <Button
+          variant="borderless"
+          intent="danger"
           className={classNames(styles.dropzone__deleteButton, {
             [`${this.props.customClass}__button`]: this.props.customClass,
           })}
           onClick={confirmDelete ? this.setConfirmDelete : this.deleteFile}
         >
-          <React.Fragment>
+          <Icon color={theme.palette.cherry500} svgIcon={TrashCan} />
+          <>
             {deleteText}
             {!dontShowHardcodedText && 'Slett'}
-          </React.Fragment>
-        </FunctionButton>
+          </>
+        </Button>
       );
     }
   }

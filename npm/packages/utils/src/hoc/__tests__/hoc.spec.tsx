@@ -10,7 +10,10 @@ import RenderToBody from '../render-to-body';
 Noen av disse testene er ikke fullverdige fordi de tester ikke logikken inne i class komponenter som instansieres i HOC.
 Det testes bare at de mountes og at default state er riktig
 */
-
+interface TestvisiblehocProps {
+  innerRef?: React.RefObject<HTMLDivElement>;
+  visible?: boolean;
+}
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(() => ({

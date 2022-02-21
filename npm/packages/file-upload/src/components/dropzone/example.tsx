@@ -82,25 +82,6 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
   render(): JSX.Element {
     return (
       <>
-        <style>
-          {`   
-      .myclass{
-       padding:10px;
-      }
-      .myclass__link{
-        text-decoration:none;
-      }
-      .myclass__button{
-        padding:10px;
-      }
-      .myclass--verified{
-        background:green;
-      }
-       .myclass--rejected{
-        background:red;
-      }
-      `}
-        </style>
         <Dropzone
           id="drop"
           label={'Last opp ett bilde av sykdommen din'}

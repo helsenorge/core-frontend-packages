@@ -180,9 +180,9 @@ export default class Autosuggest extends React.Component<Props, State> {
 
   renderErrorMessage = () => {
     const { noValidation, errorMessage } = this.props;
-    const { isValid, validated } = this.state;
+    const { isValid } = this.state;
 
-    if (!noValidation && validated && errorMessage) {
+    if (!noValidation) {
       return <ValidationError isValid={isValid} error={errorMessage} />;
     }
   };
