@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@helsenorge/core-build": "^22.0.4",
-    "@helsenorge/designsystem-react": "1.0.0-beta108",
+    "@helsenorge/designsystem-react": "1.0.0-beta110",
     "@types/react-router-dom": "5.3.3",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
     "react-router-dom": "5.3.0"
