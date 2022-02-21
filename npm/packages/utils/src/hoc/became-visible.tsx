@@ -1,5 +1,4 @@
 import * as React from 'react';
-import ReactDOM from 'react-dom';
 
 /** becomeVisibleOnScrollPassed - for component to become visible when its position
  * is above the visible viewport of the browser, may happen when element has been scrolled past
@@ -29,12 +28,14 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
     rcvLock: Element | boolean;
     rcvTimeout: ReturnType<typeof setTimeout>;
     rcvSchedule: boolean;
+    innerRef: React.RefObject<React.ComponentClass<T>>;
 
     constructor(props: T) {
       super(props);
       this.state = {
         visible: false,
       };
+      this.innerRef = React.createRef();
     }
 
     componentDidMount(): void {
@@ -88,8 +89,7 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
       }
 
       if (!this.domNode) {
-        // eslint-disable-next-line react/no-find-dom-node
-        const node = ReactDOM.findDOMNode(this);
+        const node = this.innerRef?.current;
         if (node instanceof Element) {
           this.domNode = node;
         }
@@ -143,8 +143,8 @@ export default function BecameVisible<T extends HOCComponentProps = HOCComponent
       }
     };
 
-    public render() {
-      return <WrappedComponent {...(this.props as T)} visible={this.state.visible} />;
+    render() {
+      return <WrappedComponent innerRef={this.innerRef} {...(this.props as T)} visible={this.state.visible} />;
     }
   };
 }
