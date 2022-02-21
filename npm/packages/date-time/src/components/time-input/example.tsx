@@ -53,7 +53,6 @@ export class TimeInputExample extends React.Component<{}, TimeInputExampleState>
             minMinute={2}
             onTimeChange={this.handleTimeChange}
             onValidated={this.onValidated}
-            resetButton={{ resetButtonText: 'Nullstill' }}
             isRequired
             resetButton={{
               onReset: () => {},

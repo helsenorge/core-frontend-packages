@@ -6,6 +6,7 @@ exports[`TimeInput Renders correctly 1`] = `
   id="2-wrapper"
 >
   <div
+    aria-hidden="false"
     class="ReactCollapse--collapse"
     style="height: auto; overflow: initial;"
   >
@@ -68,6 +69,7 @@ exports[`TimeInput Renders legend 1`] = `
   id="3-wrapper"
 >
   <div
+    aria-hidden="false"
     class="ReactCollapse--collapse"
     style="height: auto; overflow: initial;"
   >

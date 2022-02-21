@@ -6,6 +6,7 @@ exports[`SafeTextarea SafeTextarea renders correctly 1`] = `
   id="test-wrapper"
 >
   <div
+    aria-hidden="false"
     class="ReactCollapse--collapse"
     style="height: auto; overflow: initial;"
   >
