@@ -41,11 +41,11 @@
     }
   },
   "peerDependencies": {
-    "@helsenorge/core-build": "^22.0.0",
-    "@helsenorge/core-utils": "^22.0.0",
+    "@helsenorge/core-build": "^23.0.0-alpha",
+    "@helsenorge/core-utils": "^23.0.0-alpha",
     "@helsenorge/designsystem-react": "^1.0.0-beta",
-    "@helsenorge/form": "^22.0.0",
-    "@helsenorge/toolkit": "^22.0.0"
+    "@helsenorge/form": "^23.0.0-alpha",
+    "@helsenorge/toolkit": "^23.0.0-alpha"
   },
   "devDependencies": {
     "@helsenorge/core-build": "^23.0.0-alpha.0",
