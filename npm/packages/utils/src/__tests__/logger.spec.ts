@@ -12,8 +12,6 @@ describe('Logger', () => {
   console.profile = () => {};
   console.profileEnd = () => {};
 
-  const logToServerMock = jest.spyOn(loggerUtils, 'logToServer');
-
   describe('Gitt at process.env.NODE_ENV er ulik prod', () => {
     describe('Når assert kalles', () => {
       it('Så logges det riktig', () => {
@@ -39,17 +37,6 @@ describe('Logger', () => {
       });
     });
 
-    describe('Når debug kalles', () => {
-      it('Så logges det riktig', () => {
-        const consoleMock = jest.spyOn(global.console, 'debug');
-
-        loggerUtils.debug('message', 'blabla');
-        expect(consoleMock.mock.calls[0][0]).toEqual('message');
-        expect(consoleMock.mock.calls[0][1]).toEqual(['blabla']);
-        expect(logToServerMock).toHaveBeenCalledWith(1, 'message', ['blabla']);
-      });
-    });
-
     describe('Når dir kalles', () => {
       it('Så logges det riktig', () => {
         const consoleMock = jest.spyOn(global.console, 'dir');
@@ -66,19 +53,6 @@ describe('Logger', () => {
 
         loggerUtils.dirxml('dirxml value');
         expect(consoleMock.mock.calls[0][0]).toEqual('dirxml value');
-      });
-    });
-
-    describe('Når error kalles', () => {
-      it('Så logges det riktig', () => {
-        const consoleMock = jest.spyOn(global.console, 'error');
-        try {
-          loggerUtils.error('error message', 'error blabla');
-        } catch (e) {
-          expect(consoleMock.mock.calls[0][0]).toEqual('error message');
-          expect(consoleMock.mock.calls[0][1]).toEqual(['error blabla']);
-          expect(logToServerMock.mock.calls[1][0]).toEqual(['error message']);
-        }
       });
     });
 
@@ -103,16 +77,6 @@ describe('Logger', () => {
         const consoleMock = jest.spyOn(global.console, 'groupEnd');
         loggerUtils.groupEnd();
         expect(consoleMock).toHaveBeenCalled();
-      });
-    });
-
-    describe('Når info kalles', () => {
-      it('Så logges det riktig', () => {
-        const consoleMock = jest.spyOn(global.console, 'info');
-        loggerUtils.info('info message', 'info blabla');
-        expect(consoleMock.mock.calls[0][0]).toEqual('info message');
-        expect(consoleMock.mock.calls[0][1]).toEqual(['info blabla']);
-        expect(logToServerMock.mock.calls[2][1]).toEqual('info message');
       });
     });
 
@@ -162,26 +126,6 @@ describe('Logger', () => {
         const consoleMock = jest.spyOn(global.console, 'timeEnd');
         loggerUtils.timeEnd('timername');
         expect(consoleMock.mock.calls[0]).toEqual(['timername']);
-      });
-    });
-
-    describe('Når trace kalles', () => {
-      it('Så logges det riktig', () => {
-        const consoleMock = jest.spyOn(global.console, 'trace');
-        loggerUtils.trace('trace message', 'trace blabla');
-        expect(consoleMock.mock.calls[0][0]).toEqual('trace message');
-        expect(consoleMock.mock.calls[0][1]).toEqual(['trace blabla']);
-        expect(logToServerMock.mock.calls[3][1]).toEqual('trace message');
-      });
-    });
-
-    describe('Når warn kalles', () => {
-      it('Så logges det riktig', () => {
-        const consoleMock = jest.spyOn(global.console, 'warn');
-        loggerUtils.warn('warn message', 'warn blabla');
-        expect(consoleMock.mock.calls[0][0]).toEqual('warn message');
-        expect(consoleMock.mock.calls[0][1]).toEqual(['warn blabla']);
-        expect(logToServerMock.mock.calls[4][1]).toEqual('warn message');
       });
     });
   });

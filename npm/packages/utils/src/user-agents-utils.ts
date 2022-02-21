@@ -1,3 +1,8 @@
+declare global {
+  interface Window {
+    opera?: unknown;
+  }
+}
 interface WindowWithOpera extends Window {
   opera: string;
 }

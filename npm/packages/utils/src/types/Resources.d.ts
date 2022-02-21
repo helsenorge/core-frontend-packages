@@ -254,10 +254,6 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   closeMenu: string;
   /** 
-  * Det finnes endringer som ikke er lagret
-  */
-  pendingChangesHeader: string;
-  /** 
   * Foreldre har begrenset tilgang til tjenester på vegne av barn mellom 12 og 16 år, og ingen tilgang etter fylte 16 år. <a href="https://helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no" target="_blank">Les mer om foreldrerepresentasjon</a>.
   */
   representasjonerBarn16Plus: string;
@@ -3353,6 +3349,10 @@ export type HNMinHelseCommonJS = {
   */
   pendingChangesDescription: string;
   /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  pendingChangesHeader: string;
+  /** 
   * Du har skrevet for mange tegn. Gjør teksten kortere.
   */
   stringOverMaxLengthError: string;
@@ -5826,9 +5826,13 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_personverninnstilling_lenke: string;
   /** 
-  * Det har skjedd en teknisk feil
+  * Det har skjedd en teknisk feil. Prøv igjen senere.
   */
   registereierskap_error_message: string;
+  /** 
+  * Teknisk feil
+  */
+  registereierskap_error_message_title: string;
   /** 
   * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
   */
