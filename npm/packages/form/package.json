@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/form",
-  "version": "23.0.0-alpha.0",
+  "version": "23.0.0-alpha.1",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -50,7 +50,7 @@
     "@helsenorge/core-build": "^23.0.0-alpha.0",
     "@helsenorge/core-utils": "^23.0.0-alpha.0",
     "@helsenorge/designsystem-react": "1.0.0-beta110",
-    "@helsenorge/toolkit": "^23.0.0-alpha.0"
+    "@helsenorge/toolkit": "^23.0.0-alpha.1"
   },
   "browserslist": [
     "> 0.2% in NO",
