@@ -1,16 +1,25 @@
 import React from 'react';
 
 import { mount } from 'enzyme';
+import * as History from 'history';
+import { act } from 'react-dom/test-utils';
+import { MemoryRouter as Router, Route } from 'react-router-dom';
 
+import * as adobeUtils from '../../adobe-analytics';
+import becameVisible from '../became-visible';
 import layoutChange from '../layout-change';
 import mountHOC from '../mount';
 import RenderToBody from '../render-to-body';
+import TrackRouteChange from '../track-route-change';
 
 /*
 Noen av disse testene er ikke fullverdige fordi de tester ikke logikken inne i class komponenter som instansieres i HOC.
 Det testes bare at de mountes og at default state er riktig
 */
-
+interface TestvisiblehocProps {
+  innerRef?: React.RefObject<HTMLDivElement>;
+  visible?: boolean;
+}
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest.fn().mockImplementation(() => ({
@@ -48,6 +57,27 @@ describe('HOC utils', () => {
         expect(wrapper.find(Testmounthoc)).toBeTruthy();
         expect(wrapper.name()).toEqual('Mount(Testmounthoc)');
         expect(mountMock).toHaveBeenCalled();
+      });
+    });
+  });
+
+  describe('Gitt at en komponent wrappes i became-visible HOC', () => {
+    class Testvisiblehoc extends React.Component<TestvisiblehocProps, {}> {
+      constructor(props) {
+        super(props);
+      }
+      render() {
+        return <div ref={this.props.innerRef}>{'test'}</div>;
+      }
+    }
+
+    const MyComp = becameVisible(Testvisiblehoc, true);
+    const wrapper = mount(<MyComp />);
+
+    describe('Når den instansieres', () => {
+      it('Så instansierer den VisibleComponent fra became-visible function og får default state', () => {
+        expect(wrapper.name()).toEqual('VisibleComponent');
+        expect(wrapper.instance().state['visible']).toBeTruthy();
       });
     });
   });
@@ -96,6 +126,54 @@ describe('HOC utils', () => {
         );
 
         expect(wrapper).toMatchSnapshot();
+      });
+    });
+  });
+
+  describe('Gitt at en komponent wrappes i track-route-change HOC', () => {
+    describe('Når den instansieres', () => {
+      it('Så kaller den ikke adobe-analytics og rendres riktig', () => {
+        const adobeMock = jest.spyOn(adobeUtils, 'trackPageview');
+
+        const wrapper = mount(
+          <Router>
+            <TrackRouteChange>
+              <section>{'Track routing section'}</section>
+            </TrackRouteChange>
+          </Router>
+        );
+
+        expect(wrapper.html()).toMatchSnapshot();
+        expect(adobeMock).not.toHaveBeenCalled();
+      });
+    });
+
+    describe('Når route endres', () => {
+      it('Så kaller den adobe-analytics', async () => {
+        const adobeMock = jest.spyOn(adobeUtils, 'trackPageview');
+        let testHistory: History.History<History.History.PoorMansUnknown>;
+
+        const wrapper = mount(
+          <Router>
+            <TrackRouteChange>
+              <Route
+                path="*"
+                render={({ history }) => {
+                  testHistory = history;
+                  return null;
+                }}
+              />
+            </TrackRouteChange>
+          </Router>
+        );
+
+        await act(async () => {
+          testHistory.push('/other');
+        });
+
+        wrapper.update();
+
+        expect(adobeMock).toHaveBeenCalled();
       });
     });
   });
