@@ -1,4 +1,14 @@
-import { setCookie, hasCookie, getCookieSuffix, getCustomCookieWithSuffix, deleteCookie, getCookieValue } from '../cookie';
+import {
+  setCookie,
+  hasCookie,
+  getCookieSuffix,
+  getCustomCookieWithSuffix,
+  deleteCookie,
+  getCookieValue,
+  getHostnameWithoutSubdomain,
+} from '../cookie';
+
+import '../__mocks__/mockWindow';
 
 describe('Cookie', () => {
   setCookie('test', 'cookie');
@@ -60,6 +70,41 @@ describe('Cookie', () => {
   describe('Gitt at MH_LoggedIn_st har value', () => {
     it('Så returnerer MH_LoggedIn_st test ', () => {
       expect(getCookieValue('MH_LoggedIn')).toBe('test');
+    });
+  });
+});
+
+describe('Gitt at getHostnameWithoutSubdomain kalles', () => {
+  const originalWindowLocation = window.location;
+
+  beforeEach(() => {
+    window.location = originalWindowLocation;
+  });
+
+  describe('Når hostname er localhost', () => {
+    it('Så returneres localhost', () => {
+      window.location.hostname = 'localhost';
+      const hostname = getHostnameWithoutSubdomain();
+
+      expect(hostname).toEqual('localhost');
+    });
+  });
+
+  describe('Når hostname er www.helsenorge.no', () => {
+    it('Så returneres helsenorge.no', () => {
+      window.location.hostname = 'www.helsenorge.no';
+      const hostname = getHostnameWithoutSubdomain();
+
+      expect(hostname).toEqual('helsenorge.no');
+    });
+  });
+
+  describe('Når hostname er tjenester.helsenorge.no', () => {
+    it('Så returneres helsenorge.no', () => {
+      window.location.hostname = 'tjenester.helsenorge.no';
+      const hostname = getHostnameWithoutSubdomain();
+
+      expect(hostname).toEqual('helsenorge.no');
     });
   });
 });

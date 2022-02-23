@@ -85,3 +85,9 @@ export const getCookieValue = (name: string): string | number | boolean | undefi
     .find(e => e.split('=')[0] === cookieName)
     ?.split('=')[1];
 };
+
+/**
+ * Returnerer domenenavnet uten subdomene, f.eks. "helsenorge.no" dersom domenet er "www.helsenorge.no" eller "tjenester.helsenorge.no"
+ * @returns domenenavn for bruk i cookie
+ */
+export const getHostnameWithoutSubdomain = (): string => window.location.hostname.substr(window.location.hostname.indexOf('.') + 1);
