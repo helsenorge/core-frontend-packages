@@ -1040,7 +1040,7 @@ export type HNDialogCommonJS = {
   */
   bookingSubHeaderVaccination: string;
   /** 
-  * Ingen ledige timer. Virksomheten kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer frem i tid. Virksomheten kan også ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
   /** 
@@ -1136,7 +1136,7 @@ export type HNDialogCommonJS = {
   */
   bookingEmptyText: string;
   /** 
-  * Ingen ledige timer. Behandleren kan ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer frem i tid. Behandleren kan også ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbud: string;
   /** 
