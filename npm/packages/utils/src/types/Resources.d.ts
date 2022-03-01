@@ -1132,11 +1132,11 @@ export type HNDialogCommonJS = {
   */
   bookingDisabledText: string;
   /** 
-  * Ingen ledige timer for valgt tidspunkt. Du kan velge en annen dag eller måned for å se om det finnes ledige. Legekontoret kan også ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Legekontoret kan også ha timer som ikke kan bestilles her.
   */
   bookingEmptyText: string;
   /** 
-  * Ingen ledige timer for valgt tidspunkt. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Behandleren kan også ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Behandleren kan også ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbud: string;
   /** 
