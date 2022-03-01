@@ -1040,7 +1040,7 @@ export type HNDialogCommonJS = {
   */
   bookingSubHeaderVaccination: string;
   /** 
-  * Ingen ledige timer for valgt tidspunkt. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Virksomheten kan også ha timer som ikke kan bestilles her.
+  * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Virksomheten kan også ha timer som ikke kan bestilles her.
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
   /** 
