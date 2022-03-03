@@ -19538,6 +19538,10 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_42: string;
   /** 
+  * Denne tjenesten er ikke tilgjengelig
+  */
+  clientOperation_updateKjKontaktperson_Error_Title: string;
+  /** 
   * Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon
   */
   page_Helseopplysninger_PLL_Selected_Log_ContentTilgangsbegrensningTitle: string;
