@@ -4887,6 +4887,7 @@
   "HNMinHelsePersonvernStrings": { 
     "samtykkeDefinisjonerIkkeFunnetBody": "Ingen samtykkedefinisjoner funnet.",
     "page_HendelsesLogg_42": "Oppgave",
+    "clientOperation_updateKjKontaktperson_Error_Title": "Denne tjenesten er ikke tilgjengelig",
     "page_Helseopplysninger_PLL_Selected_Log_ContentTilgangsbegrensningTitle": "Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon",
     "page_Helseopplysninger_PLL_Log_AllBlockTilgangsbegrensningTitle": "Blokker tilgang for alt helsepersonell (unntatt din fastlege) i din legemiddelinformasjon",
     "page_Helseopplysninger_PLL_Log_Blocked": "Sperret",
