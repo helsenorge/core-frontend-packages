@@ -4261,7 +4261,7 @@ Hvis du ikke møter vil du bli belastet for timen.
   */
   persistentMessage_UnsupportedService_Title: string;
   /** 
-  * <span>Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet. Du finner sendte og mottatte meldinger i innboksen.</span>
+  * Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet. Du finner sendte og mottatte meldinger i innboksen.
   */
   clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Body: string;
   /** 
