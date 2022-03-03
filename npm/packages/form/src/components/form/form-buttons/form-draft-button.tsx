@@ -18,6 +18,17 @@ interface FromDraftButtonProps {
 }
 
 const FormDraftButton: React.FC<FromDraftButtonProps> = (props: FromDraftButtonProps): JSX.Element | null => {
+  const onClickHandler = (event?: React.FormEvent<{}>): void => {
+    if (event) {
+      event.preventDefault();
+    }
+    props.onFormSubmit(() => {
+      if (props.onDraft) {
+        props.onDraft();
+      }
+    });
+  };
+
   if (!props.draftButtonText || !props.onDraft) {
     return null;
   }
@@ -28,13 +39,7 @@ const FormDraftButton: React.FC<FromDraftButtonProps> = (props: FromDraftButtonP
       className={`${toolkitstyles.form__buttonwrapper__button} ${
         props.draftButtonClasses ? props.draftButtonClasses : 'atom_actionbutton atom_actionbutton--secondary'
       }`}
-      onClick={(): void => {
-        props.onFormSubmit(() => {
-          if (props.onDraft) {
-            props.onDraft();
-          }
-        });
-      }}
+      onClick={onClickHandler}
       data-testid={props.draftButtonTestId}
     >
       {props.draftButtonText}

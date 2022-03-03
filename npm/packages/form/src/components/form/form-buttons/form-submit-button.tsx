@@ -42,6 +42,17 @@ interface FormSubmitButtonProps {
 }
 
 const FormSubmitButton: React.FC<FormSubmitButtonProps> = (props: FormSubmitButtonProps): JSX.Element | null => {
+  const onClickHandler = (event?: React.FormEvent<{}>): void => {
+    if (event) {
+      event.preventDefault();
+    }
+    props.onFormSubmit(() => {
+      if (props.onSubmit) {
+        props.onSubmit(event);
+      }
+    });
+  };
+
   const shouldUseSaveButton = (): boolean => {
     if (!props.saveButtonOnClick) {
       return false;
@@ -63,7 +74,7 @@ const FormSubmitButton: React.FC<FormSubmitButtonProps> = (props: FormSubmitButt
 
   if (shouldUseSaveButton()) {
     return (
-      // TODO: Erstatte med nytt savebutton komponent i designsystem
+      // TODO: Skal fjernes, blir breaking for noen vertikaler
       <SaveButton
         onClick={(): void => {
           props.onFormSubmit(() => {
@@ -92,13 +103,7 @@ const FormSubmitButton: React.FC<FormSubmitButtonProps> = (props: FormSubmitButt
         className={`${toolkitstyles.form__buttonwrapper__button} ${props.submitButtonClasses ? props.submitButtonClasses : ''}`}
         disabled={props.submitButtonDisabled}
         formNoValidate
-        onClick={(): void => {
-          props.onFormSubmit(() => {
-            if (props.onSubmit) {
-              props.onSubmit();
-            }
-          });
-        }}
+        onClick={onClickHandler}
         testId={props.submitButtonTestId}
       >
         {!!props.submitButtonLeftIcon && <Icon svgIcon={ArrowRight} />}
