@@ -19542,6 +19542,14 @@ export type HNMinHelsePersonvernStrings = {
   */
   clientOperation_updateKjKontaktperson_Error_Title: string;
   /** 
+  * Du har ikke tilgang til å gjøre endringer på kontaktperson.
+  */
+  clientOperation_updateKjKontaktperson_Error_Tekst: string;
+  /** 
+  * Du har ikke tilgang til å slette kontaktperson.
+  */
+  clientOperation_deleteKjKontaktperson_Error_Tekst: string;
+  /** 
   * Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon
   */
   page_Helseopplysninger_PLL_Selected_Log_ContentTilgangsbegrensningTitle: string;

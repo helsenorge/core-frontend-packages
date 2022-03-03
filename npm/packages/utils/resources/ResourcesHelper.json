@@ -4888,6 +4888,8 @@
     "samtykkeDefinisjonerIkkeFunnetBody": "Ingen samtykkedefinisjoner funnet.",
     "page_HendelsesLogg_42": "Oppgave",
     "clientOperation_updateKjKontaktperson_Error_Title": "Denne tjenesten er ikke tilgjengelig",
+    "clientOperation_updateKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å gjøre endringer på kontaktperson.",
+    "clientOperation_deleteKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å slette kontaktperson.",
     "page_Helseopplysninger_PLL_Selected_Log_ContentTilgangsbegrensningTitle": "Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon",
     "page_Helseopplysninger_PLL_Log_AllBlockTilgangsbegrensningTitle": "Blokker tilgang for alt helsepersonell (unntatt din fastlege) i din legemiddelinformasjon",
     "page_Helseopplysninger_PLL_Log_Blocked": "Sperret",
