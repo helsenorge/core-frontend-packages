@@ -832,7 +832,7 @@ export type HNDialogCommonJS = {
   */
   fastlegeVideoEventsEmptyText: string;
   /** 
-  * Denne timen er forbeholdt hastesaker. Hvis du kan vente, velg heller et annet tidspunkt.
+  * Denne timen er forbeholdt hastesaker. Hvis du kan vente, bør du velge et annet tidspunkt. Hvis du er i tvil, ta kontakt med legekontoret på annen måte.
   */
   hastetimeEventAlertDescription: string;
   /** 
