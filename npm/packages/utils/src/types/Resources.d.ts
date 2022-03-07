@@ -2479,6 +2479,10 @@ export type HNMinHelseByttFastlegeJS = {
   */
   bfl_ResultPage_PartialErrorMessage_Title: string;
   /** 
+  * Vis resultat
+  */
+  visResultat: string;
+  /** 
   * Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.
   */
   ikke_tilgang_errormessage_title: string;
@@ -19530,14 +19534,6 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
-  * Ingen samtykkedefinisjoner funnet.
-  */
-  samtykkeDefinisjonerIkkeFunnetBody: string;
-  /** 
-  * Oppgave
-  */
-  page_HendelsesLogg_42: string;
-  /** 
   * Denne tjenesten er ikke tilgjengelig
   */
   clientOperation_updateKjKontaktperson_Error_Title: string;
@@ -19549,6 +19545,14 @@ export type HNMinHelsePersonvernStrings = {
   * Du har ikke tilgang til å slette kontaktperson.
   */
   clientOperation_deleteKjKontaktperson_Error_Tekst: string;
+  /** 
+  * Ingen samtykkedefinisjoner funnet.
+  */
+  samtykkeDefinisjonerIkkeFunnetBody: string;
+  /** 
+  * Oppgave
+  */
+  page_HendelsesLogg_42: string;
   /** 
   * Blokker tilgang for utvalgt helsepersonell i din legemiddelinformasjon
   */
