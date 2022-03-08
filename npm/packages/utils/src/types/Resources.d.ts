@@ -2481,7 +2481,7 @@ export type HNMinHelseByttFastlegeJS = {
   /** 
   * Vis resultat
   */
-  visResultat: string;
+  showResults: string;
   /** 
   * Antall resultater:
   */
@@ -2490,6 +2490,10 @@ export type HNMinHelseByttFastlegeJS = {
   * Vis filter
   */
   showFilter: string;
+  /** 
+  * Skjul filter
+  */
+  hideFilter: string;
   /** 
   * Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.
   */
