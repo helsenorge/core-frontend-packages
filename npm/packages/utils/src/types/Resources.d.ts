@@ -2487,6 +2487,10 @@ export type HNMinHelseByttFastlegeJS = {
   */
   numresults: string;
   /** 
+  * Vis filter
+  */
+  showFilter: string;
+  /** 
   * Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.
   */
   ikke_tilgang_errormessage_title: string;
