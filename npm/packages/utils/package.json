@@ -1,17 +1,18 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "23.0.0-alpha.0",
+  "version": "22.5.0",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
   },
   "scripts": {
-    "prebuild": "rimraf lib",
     "build": "node scripts/build.cjs",
-    "postbuild": "rimraf lib/__devonly__",
+    "postbuild": "rimraf lib/_devonly",
     "prepublishOnly": "npm run build",
+    "change-versions": "node scripts/change-versions.js",
+    "publish:beta": "cd lib && npm publish --tag=beta",
     "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
@@ -34,14 +35,17 @@
     "@helsenorge/designsystem-react": "^1.0.0-beta"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^23.0.0-alpha.0",
-    "@helsenorge/designsystem-react": "1.0.0-beta113",
-    "@types/react-router-dom": "5.3.3",
+    "@helsenorge/core-build": "^22.0.4",
+    "@helsenorge/designsystem-react": "1.0.0-beta116",
+    "@types/react-router-dom": "5.1.5",
     "@types/react-shadow-dom-retarget-events": "1.0.0",
-    "react-router-dom": "5.3.0"
+    "@types/redux": "^3.6.0",
+    "@types/redux-thunk": "^2.1.0",
+    "ical.js": "1.4.0",
+    "react-router-dom": "5.2.0"
   },
   "dependencies": {
-    "react-shadow-dom-retarget-events": "1.1.0"
+    "react-shadow-dom-retarget-events": "1.0.11"
   },
   "husky": {
     "hooks": {
