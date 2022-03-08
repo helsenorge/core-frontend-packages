@@ -626,6 +626,7 @@
     "bfl_ResultPage_PartialErrorMessage_Title": "Det har skjedd en teknisk feil",
     "visResultat": "Vis resultat",
     "numresults": "Antall resultater:",
+    "showFilter": "Vis filter",
     "ikke_tilgang_errormessage_title": "Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon."
   },
   "HNMinHelseByttFastlege": { 
