@@ -110,8 +110,6 @@ export interface Props {
   dontShowHardcodedText?: boolean;
   /** Ikke vis lastespinner */
   noSpinner?: boolean;
-  /** Eget Klassenavn for bekreftslette komponent */
-  confirmDeleteClassName?: string;
   /** Eget Hjelpeknapp */
   helpButton?: JSX.Element;
   /** Eget hjelpeelement */
@@ -485,7 +483,6 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
             cancelText={this.props.cancelText}
             confirmDelete={this.props.confirmDelete}
             dontShowHardcodedText={this.props.dontShowHardcodedText}
-            confirmDeleteClassName={this.props.confirmDeleteClassName}
             customClass={this.props.fileElementClassName}
           />
         );
@@ -511,7 +508,6 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
             cancelText={this.props.cancelText}
             confirmDelete={this.props.confirmDelete}
             dontShowHardcodedText={this.props.dontShowHardcodedText}
-            confirmDeleteClassName={this.props.confirmDeleteClassName}
             customClass={this.props.fileElementClassName}
           />
         );

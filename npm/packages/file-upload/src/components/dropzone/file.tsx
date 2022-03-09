@@ -12,8 +12,7 @@ import RtfFile from '@helsenorge/designsystem-react/components/Icons/RtfFile';
 import TrashCan from '@helsenorge/designsystem-react/components/Icons/TrashCan';
 import WordDocument from '@helsenorge/designsystem-react/components/Icons/WordDocument';
 import XmlFile from '@helsenorge/designsystem-react/components/Icons/XmlFile';
-
-import { ConfirmBox } from '@helsenorge/toolkit/components/confirmbox';
+import Modal from '@helsenorge/designsystem-react/components/Modal';
 
 import { theme } from '@helsenorge/designsystem-react';
 
@@ -39,7 +38,6 @@ interface FileProps {
   cancelText?: string;
   confirmDelete?: boolean;
   dontShowHardcodedText?: boolean;
-  confirmDeleteClassName?: string;
 }
 
 interface FileState {
@@ -104,18 +102,15 @@ export default class FileElement extends React.Component<FileProps, FileState> {
 
   renderConfirmDelete = () => {
     return (
-      this.state.showDeleteLightbox && (
-        <ConfirmBox
-          wrapperClassName={this.props.confirmDeleteClassName}
+      this.state.showDeleteLightbox &&
+      this.props.verifyDeleteText && (
+        <Modal
+          title={this.props.verifyDeleteText}
+          secondaryButtonText={this.props.cancelText}
+          primaryButtonText={this.props.confirmText}
+          onSuccess={this.deleteFile}
           onClose={this.onDeleteLightboxClose}
-          noCloseButton={false}
-          closeText={this.props.cancelText}
-          confirmText={this.props.confirmText}
-          onConfirm={this.deleteFile}
-          onCancel={this.onDeleteLightboxClose}
-        >
-          <h4>{this.props.verifyDeleteText}</h4>
-        </ConfirmBox>
+        />
       )
     );
   };
