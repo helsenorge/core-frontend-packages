@@ -832,7 +832,7 @@ export type HNDialogCommonJS = {
   */
   fastlegeVideoEventsEmptyText: string;
   /** 
-  * Denne timen er forbeholdt hastesaker. Hvis du kan vente, bør du velge et annet tidspunkt. Hvis du er i tvil, ta kontakt med legekontoret på annen måte.
+  * Du har valgt en hastetime. Denne timeavtalen er kun forbeholdt akutte saker som ikke kan vente mer enn 1-2 døgn. For andre problemstillinger, må du velge en ordinær time. Ring oss hvis du er i tvil eller har vansker med å finne ledig time
   */
   hastetimeEventAlertDescription: string;
   /** 
