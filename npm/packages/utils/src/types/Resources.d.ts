@@ -1040,7 +1040,7 @@ export type HNDialogCommonJS = {
   */
   bookingSubHeaderVaccination: string;
   /** 
-  * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Hvis du ikke finner ledige timer på nett, ta kontakt med virksomheten på annen måte.
+  * Det er ingen ledige timer, vennligst velg en annen dag eller måned. Hvis du ikke finner ledige timer her, ta kontakt med virksomheten på annen måte.
   */
   bookingEmptyTextHelsetilbudVirksomhet: string;
   /** 
@@ -1136,7 +1136,7 @@ export type HNDialogCommonJS = {
   */
   bookingEmptyText: string;
   /** 
-  * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Hvis du ikke finner ledige timer på nett, ta kontakt med behandler på annen måte.
+  * Det er ingen ledige timer, vennligst velg en annen dag eller måned. Hvis du ikke finner ledige timer her, ta kontakt med behandler på annen måte.
   */
   bookingEmptyTextHelsetilbud: string;
   /** 
