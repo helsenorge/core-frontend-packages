@@ -211,7 +211,7 @@
     "emptyHourFieldRequired": "Du må velge en dag som har ledige timer",
     "fastlegeOrdinaryEventsHeading": "Timer på legekontoret, om ønskelig på video/telefon",
     "fastlegeVideoEventsEmptyText": "Ingen ordinære videotimer er tilgjengelig. Du kan bestille en vanlig time og spørre om den kan gjennomføres på video eller telefon i stedet. Bruk Hva gjelder timen-feltet nedenfor, men møt opp som vanlig hvis du ikke får annen beskjed.",
-    "hastetimeEventAlertDescription": "Du har valgt en hastetime. Denne timeavtalen er kun forbeholdt akutte saker som ikke kan vente mer enn 1-2 døgn. For andre problemstillinger, må du velge en ordinær time. Ring oss hvis du er i tvil eller har vansker med å finne ledig time",
+    "hastetimeEventAlertDescription": "Du har valgt en hastetime. Denne timeavtalen er kun forbeholdt akutte saker som ikke kan vente mer enn 1-2 døgn. For andre problemstillinger, må du velge en ordinær time. Ring oss hvis du er i tvil eller ikke finner ledig time.",
     "hastetimeEventAlertTitle": "Du har valgt en hastetime",
     "hjelpetrigger_behandlingsfrister": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Behandlingsfrister\",\"seksjonstekst_brodtekst\":\"<p>Når henvisningen din vurderes settes det en frist for når behandlingen senest må starte. Du kan ikke selv velge en time etter denne fristen, men du kan kontakte behandlingsstedet og be om en senere time i samråd med dem.</p>\\n<p>Dersom du trenger mer informasjon om hva en endring av timen vil si for deg, bør du kontakte behandlingsstedet.</p>\"}",
     "hourFieldLabel": "Velg time",
