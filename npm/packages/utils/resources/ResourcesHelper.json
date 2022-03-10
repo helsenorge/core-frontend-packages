@@ -286,7 +286,7 @@
     "bookingAbort": "Avbryt",
     "bookingCalendarTab": "Kalender",
     "bookingDisabledText": "Behandlingsstedet har ennå ikke tilgjengeliggjort time for denne tidsperioden",
-    "bookingEmptyText": "Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Hvis du ikke finner ledige timer på nett, ta kontakt med legekontoret på annen måte.",
+    "bookingEmptyText": "Det er ingen ledige timer, vennligst velg en annen dag eller måned. Hvis du ikke finner ledige timer her, ta kontakt med legekontoret på annen måte.",
     "bookingEmptyTextHelsetilbud": "Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Hvis du ikke finner ledige timer på nett, ta kontakt med behandler på annen måte.",
     "bookingHeader": "Bestill time ved",
     "bookingHeaderVaccination": "Bestill time ved Vaksinasjon",
