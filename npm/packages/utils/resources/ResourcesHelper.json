@@ -1089,7 +1089,7 @@
     "messageAttachment_UnsupportedFormat_Title": "Formatet er ikke støttet",
     "persistentMessage_UnsupportedService_Body": "Tjenesten du prøver å utføre er ikke støttet av motparten. Dersom dette er en tjeneste som tidligere har fungert, så kan dette skje dersom motparten har gjort endringer i tjenestetilbudet som er registrert i adresseregisteret. ",
     "persistentMessage_UnsupportedService_Title": "Tjenesten er ikke støttet av motpart",
-    "clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Body": "Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet. Du finner sendte og mottatte meldinger i innboksen. TEST",
+    "clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Body": "Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet. Du finner sendte og mottatte meldinger i innboksen.",
     "clientOperation_NewOnlineAppointment_SaveError_Body": "Prøv på nytt senere, eller kontakt behandlingsstedet.",
     "clientOperation_NewOnlineAppointment_SaveError_Title": "Timebestillingen ble ikke utført",
     "clientOperation_NewOnlineAppointment_SendError_Body": "Timebestillingen ble ikke utført. Prøv igjen senere.",
