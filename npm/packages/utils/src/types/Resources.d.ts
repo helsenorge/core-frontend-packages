@@ -831,9 +831,9 @@ export type HNDialogCommonJS = {
    * Ingen ordinære videotimer er tilgjengelig. Du kan bestille en vanlig time og spørre om den kan gjennomføres på video eller telefon i stedet. Bruk Hva gjelder timen-feltet nedenfor, men møt opp som vanlig hvis du ikke får annen beskjed.
    */
   fastlegeVideoEventsEmptyText: string;
-  /**
-   * Denne timen er forbeholdt hastesaker. Hvis du kan vente, bør du velge et annet tidspunkt. Hvis du er i tvil, ta kontakt med legekontoret på annen måte.
-   */
+  /** 
+  * Du har valgt en hastetime. Denne timeavtalen er kun forbeholdt akutte saker som ikke kan vente mer enn 1-2 døgn. For andre problemstillinger, må du velge en ordinær time. Ring oss hvis du er i tvil eller ikke finner ledig time.
+  */
   hastetimeEventAlertDescription: string;
   /**
    * Du har valgt en hastetime
@@ -1039,9 +1039,9 @@ export type HNDialogCommonJS = {
    * Timebestillingen vil sendes til Vaksinasjon
    */
   bookingSubHeaderVaccination: string;
-  /**
-   * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Hvis du ikke finner ledige timer på nett, ta kontakt med virksomheten på annen måte.
-   */
+  /** 
+  * Det er ingen ledige timer, vennligst velg en annen dag eller måned. Hvis du ikke finner ledige timer her, ta kontakt med virksomheten på annen måte.
+  */
   bookingEmptyTextHelsetilbudVirksomhet: string;
   /**
    * Fastlegen din tilbyr videokonsultasjon. Det kan være en avtalt videotime eller drop in til bestemte tider. Du kan gå til venterommet her.
@@ -1131,13 +1131,13 @@ export type HNDialogCommonJS = {
    * Behandlingsstedet har ennå ikke tilgjengeliggjort time for denne tidsperioden
    */
   bookingDisabledText: string;
-  /**
-   * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Hvis du ikke finner ledige timer på nett, ta kontakt med legekontoret på annen måte.
-   */
+  /** 
+  * Det er ingen ledige timer, vennligst velg en annen dag eller måned. Hvis du ikke finner ledige timer her, ta kontakt med legekontoret på annen måte.
+  */
   bookingEmptyText: string;
-  /**
-   * Ingen ledige timer. Du kan velge en annen dag eller måned for å se om det finnes ledige timer. Hvis du ikke finner ledige timer på nett, ta kontakt med behandler på annen måte.
-   */
+  /** 
+  * Det er ingen ledige timer, vennligst velg en annen dag eller måned. Hvis du ikke finner ledige timer her, ta kontakt med behandler på annen måte.
+  */
   bookingEmptyTextHelsetilbud: string;
   /**
    * Bestill time ved
@@ -2478,25 +2478,73 @@ export type HNMinHelseByttFastlegeJS = {
    * Det har skjedd en teknisk feil
    */
   bfl_ResultPage_PartialErrorMessage_Title: string;
-  /**
-   * Vis resultat
-   */
+  /** 
+  * Vis resultat
+  */
   showResults: string;
-  /**
-   * Antall resultater:
-   */
+  /** 
+  * Antall resultater:
+  */
   numresults: string;
-  /**
-   * Vis filter
-   */
+  /** 
+  * Vis filter
+  */
   showFilter: string;
-  /**
-   * Skjul filter
-   */
+  /** 
+  * Skjul filter
+  */
   hideFilter: string;
-  /**
-   * Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.
-   */
+  /** 
+  * Januar
+  */
+  monthNameJanuary: string;
+  /** 
+  * Februar
+  */
+  monthNameFebruary: string;
+  /** 
+  * Mars
+  */
+  monthNameMarch: string;
+  /** 
+  * April
+  */
+  monthNameApril: string;
+  /** 
+  * Mai
+  */
+  monthNameMay: string;
+  /** 
+  * Juni
+  */
+  monthNameJune: string;
+  /** 
+  * Juli
+  */
+  monthNameJuly: string;
+  /** 
+  * August
+  */
+  monthNameAugust: string;
+  /** 
+  * September
+  */
+  monthNameSeptember: string;
+  /** 
+  * November
+  */
+  monthNameNovember: string;
+  /** 
+  * Desember
+  */
+  monthNameDecember: string;
+  /** 
+  * Oktober
+  */
+  monthNameOctober: string;
+  /** 
+  * Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.
+  */
   ikke_tilgang_errormessage_title: string;
 };
 
@@ -4276,9 +4324,9 @@ Hvis du ikke møter vil du bli belastet for timen.
    * Tjenesten er ikke støttet av motpart
    */
   persistentMessage_UnsupportedService_Title: string;
-  /**
-   * Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet. Du finner sendte og mottatte meldinger i innboksen.
-   */
+  /** 
+  * Meldingen er lagret som utkast. Prøv på nytt senere, eller kontakt behandlingsstedet. Du finner sendte og mottatte meldinger i innboksen.
+  */
   clientOperation_NewOfflineAppointment_SendError_Service_Unavailable_Body: string;
   /**
    * Prøv på nytt senere, eller kontakt behandlingsstedet.
@@ -10414,9 +10462,9 @@ export type HNMinHelseNavigation = {
    * Meld fra om alvorlige hendelser i helsetjenesten.
    */
   tile_MeldeHendelse_Description: string;
-  /**
-   * <p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p><br /><a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\">Skjema for voksne</a> <br /><a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\">Skjema for barn under 16 år</a>
-   */
+  /** 
+  * <p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p><br /><a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\">Skjema for voksne</a> <br /><a href="https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\">Skjema for barn under 16 år</a>
+  */
   userControl_Start_ReservationMessage: string;
   /**
    * Systemfeil
@@ -19544,22 +19592,22 @@ export type HNMinHelsePasientReiserStrings = {
   invalid_maxTegn: string;
 };
 
-export type HNMinHelsePersonvernStrings = {
-  /**
-   * Denne tjenesten er ikke tilgjengelig
-   */
+export type HNMinHelsePersonvernStrings = { 
+  /** 
+  * Denne tjenesten er ikke tilgjengelig
+  */
   clientOperation_updateKjKontaktperson_Error_Title: string;
-  /**
-   * Du har ikke tilgang til å gjøre endringer på kontaktperson.
-   */
+  /** 
+  * Du har ikke tilgang til å gjøre endringer på kontaktperson.
+  */
   clientOperation_updateKjKontaktperson_Error_Tekst: string;
-  /**
-   * Du har ikke tilgang til å slette kontaktperson.
-   */
+  /** 
+  * Du har ikke tilgang til å slette kontaktperson.
+  */
   clientOperation_deleteKjKontaktperson_Error_Tekst: string;
-  /**
-   * Ingen samtykkedefinisjoner funnet.
-   */
+  /** 
+  * Ingen samtykkedefinisjoner funnet.
+  */
   samtykkeDefinisjonerIkkeFunnetBody: string;
   /**
    * Oppgave
