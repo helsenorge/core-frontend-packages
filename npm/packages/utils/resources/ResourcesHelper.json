@@ -628,6 +628,8 @@
     "numresults": "Antall resultater:",
     "showFilter": "Vis filter",
     "hideFilter": "Skjul filter",
+    "monthNameJanuary": "Januar",
+    "monthNameFebruary": "Februar",
     "ikke_tilgang_errormessage_title": "Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon."
   },
   "HNMinHelseByttFastlege": { 
