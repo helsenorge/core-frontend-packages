@@ -2503,6 +2503,46 @@ export type HNMinHelseByttFastlegeJS = {
   */
   monthNameFebruary: string;
   /** 
+  * Mars
+  */
+  monthNameMarch: string;
+  /** 
+  * April
+  */
+  monthNameApril: string;
+  /** 
+  * Mai
+  */
+  monthNameMay: string;
+  /** 
+  * Juni
+  */
+  monthNameJune: string;
+  /** 
+  * Juli
+  */
+  monthNameJuly: string;
+  /** 
+  * August
+  */
+  monthNameAugust: string;
+  /** 
+  * September
+  */
+  monthNameSeptember: string;
+  /** 
+  * November
+  */
+  monthNameNovember: string;
+  /** 
+  * Desember
+  */
+  monthNameDecember: string;
+  /** 
+  * Oktober
+  */
+  monthNameOctober: string;
+  /** 
   * Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon.
   */
   ikke_tilgang_errormessage_title: string;
