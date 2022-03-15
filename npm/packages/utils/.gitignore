@@ -1,8 +1,6 @@
-dist/
-dist_dev/
 .env
 .jest-cache
 node_modules
 test-report.xml
 lib
-lib_OLD
+package-lock.json

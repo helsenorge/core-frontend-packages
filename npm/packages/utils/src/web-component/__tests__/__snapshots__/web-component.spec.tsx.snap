@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Gitt at web component skal consumeres Når WebCompConsumer instansieres Så fetcher den ressurser fra riktig url og instansierer komponent 1`] = `
-<hn-component
-  id="testdiv"
-/>
-`;
