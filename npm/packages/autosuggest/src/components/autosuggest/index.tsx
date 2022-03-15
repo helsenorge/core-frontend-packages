@@ -14,7 +14,6 @@ import { Label } from '@helsenorge/form/components/label';
 
 import autosuggesttheme from './theme.module.scss';
 
-
 export interface Suggestion {
   label: string;
   optionalLabel?: string;

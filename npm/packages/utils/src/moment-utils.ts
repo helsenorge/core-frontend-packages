@@ -381,8 +381,6 @@ export const isDotNetMinDate = (a: MomentInput): boolean => {
  * @param a MomentInput som skal sammenlignes
  */
 export const toLocalISOStringUsingDateTimezoneOffset = (a: MomentInput): string => {
-  const isoDate = moment(a)
-    .add('minutes', moment(a).utcOffset())
-    .toISOString();
+  const isoDate = moment(a).add('minutes', moment(a).utcOffset()).toISOString();
   return isoDate.substring(0, isoDate.lastIndexOf('.'));
 };

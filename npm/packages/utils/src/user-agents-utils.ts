@@ -11,7 +11,7 @@ interface WindowWithOpera extends Window {
  */
 export const isMobileUA = (): boolean => {
   let check = false;
-  (function(a: string): void {
+  (function (a: string): void {
     const regexString =
       '(android|bbd+|meego).+mobile|avantgo|bada/|blackberry\
         |blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|\
