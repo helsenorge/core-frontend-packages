@@ -5,6 +5,7 @@ import {
   SingleDatePickerShape,
   DateRangePickerShape,
 } from 'react-dates';
+
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
 
 export type DatePickerErrorPhrases = {

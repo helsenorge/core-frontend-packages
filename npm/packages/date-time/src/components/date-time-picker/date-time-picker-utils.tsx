@@ -1,4 +1,7 @@
 import moment from 'moment';
+
+import { isAfterMaxDate, isBeforeMinDate } from '@helsenorge/core-utils/moment-utils';
+
 import {
   ERROR_INVALID_TIME,
   ERROR_REQUIRED_DATE,
@@ -6,11 +9,9 @@ import {
   ERROR_TIME_BEFORE_MIN,
   ERROR_TIME_AFTER_MAX,
 } from '../../constants/datetime';
-
-import { isAfterMaxDate, isBeforeMinDate } from '@helsenorge/core-utils/moment-utils';
 import { DateRangePicker } from '../date-range-picker';
-import { DateTimePickerResources } from './date-time-picker-types';
 import TimeInput from '../time-input';
+import { DateTimePickerResources } from './date-time-picker-types';
 
 /**
  * Setter klokkeslett på en dato og returnerer en moment date

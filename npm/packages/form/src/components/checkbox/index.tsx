@@ -1,7 +1,9 @@
 import * as React from 'react';
+
 import classNames from 'classnames';
 
 import CheckThick from '@helsenorge/toolkit/components/icons/CheckThick';
+
 import ValidationError from '../form/validation-error';
 
 import './styles.scss';

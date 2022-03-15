@@ -1,4 +1,5 @@
 import { Location } from 'history';
+
 import { navigate, navigateAdd, goBackOrUp } from '../navigation-utils';
 
 describe('Navigation-utils', () => {

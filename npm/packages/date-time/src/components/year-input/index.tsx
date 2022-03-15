@@ -2,14 +2,15 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
+import ValidationError from '@helsenorge/form/components/form/validation-error';
+import SafeInputField from '@helsenorge/form/components/safe-input-field';
+
 import {
   ERROR_INVALID_YEAR,
   ERROR_REQUIRED_YEAR,
   ERROR_YEAR_AFTER_MAX_DATE,
   ERROR_YEAR_BEFORE_MIN_DATE,
 } from '../../constants/datetime';
-import SafeInputField from '@helsenorge/form/components/safe-input-field';
-import ValidationError from '@helsenorge/form/components/form/validation-error';
 
 interface YearInputProps {
   /** Unik ID */

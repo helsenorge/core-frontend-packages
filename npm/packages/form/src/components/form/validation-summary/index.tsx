@@ -1,7 +1,10 @@
 import * as React from 'react';
+
 import * as ReactDOMServer from 'react-dom/server';
-import { FormChild } from '..';
+
 import { log } from '@helsenorge/core-utils/logger';
+
+import { FormChild } from '..';
 
 import './styles.scss';
 

@@ -6,8 +6,8 @@ import { FocusedInputShape, SingleDatePickerShape, DateRangePickerShape } from '
 
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
 import { isMobileUA } from '@helsenorge/core-utils/user-agents-utils';
-
 import ValidationError from '@helsenorge/form/components/form/validation-error';
+
 import {
   DEFAULT_DATE_PLACEHOLDER_NB,
   DEFAULT_DATE_PLACEHOLDER_EN,

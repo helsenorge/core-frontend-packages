@@ -1,6 +1,8 @@
 import * as React from 'react';
-import moment from 'moment';
+
 import classNames from 'classnames';
+import moment from 'moment';
+
 import toolkitstyles from './styles.module.scss';
 
 interface Props {

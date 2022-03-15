@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
-import { Label } from '../label';
 import ValidationError from '../form/validation-error';
+import { Label } from '../label';
 
 import './styles.scss';
 

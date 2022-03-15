@@ -1,9 +1,11 @@
 import * as React from 'react';
+
 import classNames from 'classnames';
 
-import { Label } from '../label';
 import { Spinner } from '@helsenorge/toolkit/components/spinner';
+
 import ValidationError from '../form/validation-error';
+import { Label } from '../label';
 
 import toolkitstyles from './styles.module.scss';
 

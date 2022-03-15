@@ -1,6 +1,7 @@
 import * as React from 'react';
-import moment from 'moment';
 
+import classNames from 'classnames';
+import moment from 'moment';
 import {
   DateRangePicker as AirbnbDateRangePicker,
   SingleDatePicker as AirbnbSingleDatePicker,
@@ -10,7 +11,6 @@ import {
 } from 'react-dates';
 
 import { SCREEN_READER_INPUT } from '../../constants/datetime';
-
 import ArrowIcon from './custom-icons/arrow-icon';
 import { PartialPropsForDesktop, DateRangePickerState } from './date-range-picker-types';
 import {
@@ -23,11 +23,9 @@ import {
   renderMonthHeaderSimplified,
   renderMonthHeader,
 } from './date-range-picker-utils';
-
 import { isOutsideRange } from './date-range-picker-validation';
 
 import toolkitstyles from './styles.module.scss';
-import classNames from 'classnames';
 
 export const renderDesktopDatePicker = (
   partialProps: PartialPropsForDesktop,

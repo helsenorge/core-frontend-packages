@@ -4,8 +4,8 @@ import classNames from 'classnames';
 
 import { Spinner } from '@helsenorge/toolkit/components/spinner/';
 
-import { Label } from '../label';
 import ValidationError from '../form/validation-error';
+import { Label } from '../label';
 
 import './styles.scss';
 

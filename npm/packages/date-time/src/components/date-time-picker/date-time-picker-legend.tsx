@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { Sublabel } from '@helsenorge/form/components/label/sublabel';
 
 interface Props {

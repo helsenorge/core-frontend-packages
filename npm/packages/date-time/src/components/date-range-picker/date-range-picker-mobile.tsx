@@ -1,8 +1,10 @@
 import * as React from 'react';
+
 import moment from 'moment';
-import { DateRangePickerProps, DateRangePickerState } from './date-range-picker-types';
 
 import DateNativeInput from './date-native-input';
+import { DateRangePickerProps, DateRangePickerState } from './date-range-picker-types';
+
 
 export const renderMobileDatePicker = (
   props: DateRangePickerProps,

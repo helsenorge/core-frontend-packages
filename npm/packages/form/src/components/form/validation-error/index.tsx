@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { UnmountClosed } from 'react-collapse';
+
 import classNames from 'classnames';
+import { UnmountClosed } from 'react-collapse';
 
 import './../styles.scss';
 export interface ValidationErrorProps {

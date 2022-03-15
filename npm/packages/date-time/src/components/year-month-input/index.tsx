@@ -4,6 +4,10 @@ import classNames from 'classnames';
 import moment from 'moment';
 
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
+import ValidationError from '@helsenorge/form/components/form/validation-error';
+import { Sublabel } from '@helsenorge/form/components/label/sublabel';
+import SafeInputField from '@helsenorge/form/components/safe-input-field';
+import SafeSelectField from '@helsenorge/form/components/safe-select';
 
 import {
   ERROR_INVALID_YEAR_MONTH,
@@ -14,10 +18,6 @@ import {
   YEAR_PLACEHOLDER,
   ERROR_INVALID_YEAR_MONTH_YEAR,
 } from '../../constants/datetime';
-import { Sublabel } from '@helsenorge/form/components/label/sublabel';
-import SafeInputField from '@helsenorge/form/components/safe-input-field';
-import SafeSelectField from '@helsenorge/form/components/safe-select';
-import ValidationError from '@helsenorge/form/components/form/validation-error';
 
 import toolkitstyles from './styles.module.scss';
 

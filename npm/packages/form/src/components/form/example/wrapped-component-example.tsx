@@ -1,6 +1,7 @@
 import * as React from 'react';
-import Validation, { ValidationProps } from '../validation';
+
 import SafeInputField from '../../safe-input-field';
+import Validation, { ValidationProps } from '../validation';
 
 interface State {
   value: string;

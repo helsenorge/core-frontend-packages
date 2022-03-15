@@ -6,8 +6,9 @@
  Please check both files into TFS */
 
 import * as React from 'react';
-import ValidationError from './validation-error';
+
 import { ValidationProps } from './validation';
+import ValidationError from './validation-error';
 
 interface FieldsetProps {
   className?: string;

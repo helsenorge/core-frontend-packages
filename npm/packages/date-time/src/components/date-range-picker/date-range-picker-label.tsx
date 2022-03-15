@@ -1,10 +1,12 @@
 import * as React from 'react';
 
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
-import { DEFAULT_FORMAT_INDICATION_NB, DEFAULT_FORMAT_INDICATION_EN, DEFAULT_FORMAT_INDICATION_SE } from '../../constants/datetime';
-import toolkitstyles from './styles.module.scss';
-import { Props as DateRangePickerProps } from './date-range-picker-types';
 import { Sublabel } from '@helsenorge/form/components/label/sublabel';
+
+import { DEFAULT_FORMAT_INDICATION_NB, DEFAULT_FORMAT_INDICATION_EN, DEFAULT_FORMAT_INDICATION_SE } from '../../constants/datetime';
+import { Props as DateRangePickerProps } from './date-range-picker-types';
+
+import toolkitstyles from './styles.module.scss';
 
 interface Props {
   label: string | JSX.Element;
