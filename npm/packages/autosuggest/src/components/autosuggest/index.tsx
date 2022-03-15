@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import classNames from 'classnames';
 import ReactAutosuggest, {
   ChangeEvent,
@@ -7,11 +8,11 @@ import ReactAutosuggest, {
   OnSuggestionsClearRequested,
 } from 'react-autosuggest';
 
-import { Label } from '@helsenorge/form/components/label';
-import ValidationError from '@helsenorge/form/components/form/validation-error';
-import autosuggesttheme from './theme.module.scss';
-
 import { isEmpty, hasInvalidCharacters } from '@helsenorge/core-utils/string-utils';
+import ValidationError from '@helsenorge/form/components/form/validation-error';
+import { Label } from '@helsenorge/form/components/label';
+
+import autosuggesttheme from './theme.module.scss';
 
 export interface Suggestion {
   label: string;

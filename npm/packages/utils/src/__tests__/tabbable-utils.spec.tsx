@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { mount } from 'enzyme';
+
 import { setTabIndex, resetTabIndex, TabbableContentWithTabIndexes } from '../tabbable-utils';
 
 // This is a test-helper just to create a container with two tabbable elements
