@@ -1,0 +1,7 @@
+src/types/*
+**/__tests__/*
+**/__mocks__/*
+*.module.scss.d.ts
+src/**/*.test.tsx
+src/**/test.tsx
+src/**/example.tsx
