@@ -12024,13 +12024,13 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
    * ${FirstName}, du har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
    */
   helseregisterNyInnsynsrapport_EmailMessage_Body_Self: string;
-  /**
-   * Varsel om ny innsynsrapport på helsenorge.no
-   */
+  /** 
+  * Varsel om ny innsynsrapport på Helsenorge
+  */
   helseregisterNyInnsynsrapport_EmailMessage_Subject_Representation: string;
-  /**
-   * Varsel om ny innsynsrapport på helsenorge.no
-   */
+  /** 
+  * Varsel om ny innsynsrapport på Helsenorge
+  */
   helseregisterNyInnsynsrapport_EmailMessage_Subject_Self: string;
   /**
    * ${FirstName} har mottatt en innsynsrapport. Logg inn på Helsenorge og gå til Dokumenter.
