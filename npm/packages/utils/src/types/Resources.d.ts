@@ -12025,11 +12025,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   helseregisterNyInnsynsrapport_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny innsynsrapport på helsenorge.no
+  * Varsel om ny innsynsrapport på Helsenorge
   */
   helseregisterNyInnsynsrapport_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny innsynsrapport på helsenorge.no
+  * Varsel om ny innsynsrapport på Helsenorge
   */
   helseregisterNyInnsynsrapport_EmailMessage_Subject_Self: string;
   /** 
