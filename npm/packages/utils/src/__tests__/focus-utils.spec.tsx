@@ -1,5 +1,7 @@
 import * as React from 'react';
+
 import { mount } from 'enzyme';
+
 import * as focusUtils from '../focus-utils';
 
 describe('Focus-utils', () => {

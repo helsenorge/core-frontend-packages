@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { render } from 'react-dom';
 
 const anchor: Element | null = document.getElementById('main-content-wrapper');

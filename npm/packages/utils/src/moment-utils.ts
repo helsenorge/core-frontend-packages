@@ -1,4 +1,5 @@
 import moment, { Moment, MomentInput } from 'moment';
+
 import { capitalize } from './string-utils';
 
 /**
