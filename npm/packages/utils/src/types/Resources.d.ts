@@ -269,6 +269,10 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   * Lettlest
   */
   headerMenuBasicLettlestTitle: string;
+  /** 
+  * /lettlest
+  */
+  headerMenuBasicLettlestUrl: string;
 };
 
 export type HNCoreFrontendNPMPackagesCMS = { 
