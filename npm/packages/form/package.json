@@ -41,10 +41,10 @@
     }
   },
   "peerDependencies": {
-    "@helsenorge/core-build": "^23.0.0-alpha",
-    "@helsenorge/core-utils": "^23.0.0-alpha",
+    "@helsenorge/core-build": "^23.0.0",
+    "@helsenorge/core-utils": "^23.0.0",
     "@helsenorge/designsystem-react": "^1.0.0-beta",
-    "@helsenorge/toolkit": "^23.0.0-alpha"
+    "@helsenorge/toolkit": "^23.0.0"
   },
   "devDependencies": {
     "@helsenorge/core-build": "^23.0.0-alpha.5",
