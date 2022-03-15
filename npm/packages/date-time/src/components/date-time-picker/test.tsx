@@ -38,26 +38,10 @@ describe('DateTimePicker', () => {
   describe('Når den instansieres for første gang', () => {
     wrapper = mount(<DateTimePicker {...DateTimeWrapperProps} />);
     it('Så renderes den riktig', () => {
-      expect(
-        wrapper
-          .find(DateTimePicker)
-          .state('date')
-          .format('DD.MM.YYYY')
-      ).toEqual('18.07.2020');
+      expect(wrapper.find(DateTimePicker).state('date').format('DD.MM.YYYY')).toEqual('18.07.2020');
 
-      expect(
-        wrapper
-          .find('fieldset')
-          .first()
-          .prop('id')
-      ).toEqual('datetime1-wrapper');
-      expect(
-        wrapper
-          .find('fieldset')
-          .find('div')
-          .first()
-          .prop('className')
-      ).toEqual('mol_validation customclassname');
+      expect(wrapper.find('fieldset').first().prop('id')).toEqual('datetime1-wrapper');
+      expect(wrapper.find('fieldset').find('div').first().prop('className')).toEqual('mol_validation customclassname');
       expect(wrapper.find(DateTimePickerLegend).length).toEqual(1);
       expect(wrapper.find(DateRangePicker).length).toEqual(1);
       expect(wrapper.find(TimeInput).length).toEqual(1);
@@ -77,23 +61,13 @@ describe('DateTimePicker', () => {
   describe('Når value i props oppdateres underveis', () => {
     wrapper = mount(<DateTimePicker {...DateTimeWrapperProps} />);
     it('Så renderes den riktig', () => {
-      expect(
-        wrapper
-          .find(DateTimePicker)
-          .state('date')
-          .format('DD.MM.YYYY')
-      ).toEqual('18.07.2020');
+      expect(wrapper.find(DateTimePicker).state('date').format('DD.MM.YYYY')).toEqual('18.07.2020');
       expect(wrapper.find(DateTimePicker).state('time')).toEqual('12:10');
     });
 
     it('Så oppdateres den iht incomingProps', () => {
       wrapper.setProps({ dateValue: moment('20.07.2020', 'DD.MM.YYYY'), timeValue: '15:30' });
-      expect(
-        wrapper
-          .find(DateTimePicker)
-          .state('date')
-          .format('DD.MM.YYYY')
-      ).toEqual('20.07.2020');
+      expect(wrapper.find(DateTimePicker).state('date').format('DD.MM.YYYY')).toEqual('20.07.2020');
       expect(wrapper.find(DateTimePicker).state('time')).toEqual('15:30');
     });
   });
@@ -105,13 +79,9 @@ describe('DateTimePicker', () => {
         wrapper.setState({ validated: false, valid: false, errorString: 'errorString' });
         (wrapper.instance() as DateTimePicker).onChildDateValidated();
       });
-      expect(
-        wrapper
-          .find('fieldset')
-          .find('div')
-          .first()
-          .prop('className')
-      ).toEqual('mol_validation customclassname mol_validation--active');
+      expect(wrapper.find('fieldset').find('div').first().prop('className')).toEqual(
+        'mol_validation customclassname mol_validation--active'
+      );
       expect(wrapper.find(ValidationError).length).toEqual(1);
       expect(wrapper.find(ValidationError).prop('isValid')).toEqual(false);
       expect(wrapper.find(ValidationError).prop('error')).toEqual('errorString');

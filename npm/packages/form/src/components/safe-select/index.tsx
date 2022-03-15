@@ -299,7 +299,7 @@ export default class SafeSelectField extends React.Component<SafeSelectProps, Sa
     }
 
     if (this.props.options) {
-      this.props.options.forEach(function(item: HTMLOptionElement, index: number) {
+      this.props.options.forEach(function (item: HTMLOptionElement, index: number) {
         options.push(
           <option key={index} value={item.value} selected={selectedValue === item.value} aria-selected={selectedValue === item.value}>
             {item.text}

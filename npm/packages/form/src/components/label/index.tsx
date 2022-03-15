@@ -25,23 +25,22 @@ interface Props {
   testId?: string;
 }
 
-export const Label = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Props>>((
-  { labelText, isNotBold, htmlFor, sublabelText, helpButton, className, children, testId },
-  ref: React.RefObject<HTMLDivElement>
-) => {
-  const labelRef = React.useRef<HTMLDivElement>(null);
+export const Label = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Props>>(
+  ({ labelText, isNotBold, htmlFor, sublabelText, helpButton, className, children, testId }, ref: React.RefObject<HTMLDivElement>) => {
+    const labelRef = React.useRef<HTMLDivElement>(null);
 
-  const labelClasses = classNames(toolkitstyles['label'], { [toolkitstyles['label--isnotbold']]: isNotBold });
-  return (
-    <div ref={ref ? ref : labelRef} className={className ? className : ''}>
-      <label className={labelClasses} htmlFor={htmlFor} data-testid={testId}>
-        {labelText}
-        {helpButton}
-        {sublabelText && <Sublabel sublabelText={sublabelText} />}
-      </label>
-      {children}
-    </div>
-  );
-});
+    const labelClasses = classNames(toolkitstyles['label'], { [toolkitstyles['label--isnotbold']]: isNotBold });
+    return (
+      <div ref={ref ? ref : labelRef} className={className ? className : ''}>
+        <label className={labelClasses} htmlFor={htmlFor} data-testid={testId}>
+          {labelText}
+          {helpButton}
+          {sublabelText && <Sublabel sublabelText={sublabelText} />}
+        </label>
+        {children}
+      </div>
+    );
+  }
+);
 
 export default Label;

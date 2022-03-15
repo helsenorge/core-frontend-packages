@@ -119,18 +119,8 @@ describe('DateRangePicker index', () => {
     describe('Når den har id og custom className', () => {
       const wrapper = mount(<DateRangePicker id="single-1" type={'single'} className={'testclassname'} />);
       it('Så rendres den med riktig id og className', () => {
-        expect(
-          wrapper
-            .find('div')
-            .first()
-            .prop('id')
-        ).toEqual('single-1-wrapper');
-        expect(
-          wrapper
-            .find('div')
-            .first()
-            .prop('className')
-        ).toEqual('datepicker mol_validation testclassname');
+        expect(wrapper.find('div').first().prop('id')).toEqual('single-1-wrapper');
+        expect(wrapper.find('div').first().prop('className')).toEqual('datepicker mol_validation testclassname');
       });
     });
 
@@ -165,18 +155,8 @@ describe('DateRangePicker index', () => {
       );
 
       it('Så bruker den default placeholder', () => {
-        expect(
-          wrapper
-            .find('input')
-            .first()
-            .prop('placeholder')
-        ).toEqual('Startdato');
-        expect(
-          wrapper
-            .find('input')
-            .last()
-            .prop('placeholder')
-        ).toEqual('Sluttdato');
+        expect(wrapper.find('input').first().prop('placeholder')).toEqual('Startdato');
+        expect(wrapper.find('input').last().prop('placeholder')).toEqual('Sluttdato');
       });
       it('Så er startDate og endDate satt som default date i state', () => {
         expect((wrapper.state('startDate') as DateRangePickerState).toString()).toEqual(moment('10.09.2019', 'DD.MM.YYYY').toString());
@@ -196,19 +176,9 @@ describe('DateRangePicker index', () => {
         <DateRangePicker type={'range'} minimumDate={moment('05.09.2019', 'DD.MM.YYYY')} maximumDate={moment('15.09.2019', 'DD.MM.YYYY')} />
       );
       it('Så sendes de videre til AirbnbSingleDatePicker ', () => {
-        expect(
-          wrapper
-            .find(AirbnbDateRangePicker)
-            .props()
-            .minDate.toString()
-        ).toEqual(moment('05.09.2019', 'DD.MM.YYYY').toString());
+        expect(wrapper.find(AirbnbDateRangePicker).props().minDate.toString()).toEqual(moment('05.09.2019', 'DD.MM.YYYY').toString());
 
-        expect(
-          wrapper
-            .find(AirbnbDateRangePicker)
-            .props()
-            .maxDate.toString()
-        ).toEqual(moment('15.09.2019', 'DD.MM.YYYY').toString());
+        expect(wrapper.find(AirbnbDateRangePicker).props().maxDate.toString()).toEqual(moment('15.09.2019', 'DD.MM.YYYY').toString());
       });
     });
     describe('Når den har type single', () => {
@@ -830,7 +800,7 @@ describe('DateRangePicker index', () => {
         const validateFieldSpy = jest.spyOn(wrapper.instance() as DateRangePicker, 'validateField');
         wrapper.setState({ focusedInput: null });
         expect(wrapper.state('focusedInput')).toEqual(null);
-        (wrapper.instance() as DateRangePicker).onRangeDatesFocusChange((null as unknown) as FocusedInputShape); // cannot be null, has to be startDate / endDate - has to be truthy just for testing
+        (wrapper.instance() as DateRangePicker).onRangeDatesFocusChange(null as unknown as FocusedInputShape); // cannot be null, has to be startDate / endDate - has to be truthy just for testing
         jest.runAllTimers();
         expect(validateFieldSpy).toHaveBeenCalledTimes(1);
       });
@@ -959,10 +929,7 @@ describe('DateRangePicker index', () => {
         wrapper.setState({ isMobile: true });
 
         const e = { target: { value: 'some value' } };
-        wrapper
-          .find('input')
-          .first()
-          .simulate('blur', e);
+        wrapper.find('input').first().simulate('blur', e);
         jest.runAllTimers();
         wrapper.update();
 
@@ -978,10 +945,7 @@ describe('DateRangePicker index', () => {
         wrapper.setState({ isMobile: true });
 
         const e = { target: { value: 'some value' } };
-        wrapper
-          .find('input')
-          .first()
-          .simulate('blur', e);
+        wrapper.find('input').first().simulate('blur', e);
         jest.runAllTimers();
         wrapper.update();
 
@@ -996,10 +960,7 @@ describe('DateRangePicker index', () => {
       );
 
       it('Så deaktiveres navPrev og navNext riktig', () => {
-        wrapper
-          .find('button')
-          .first()
-          .simulate('click');
+        wrapper.find('button').first().simulate('click');
         jest.runAllTimers();
         wrapper.update();
 

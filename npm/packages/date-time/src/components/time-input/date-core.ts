@@ -15,9 +15,7 @@ export function buildNewDate(date: Date | undefined, timeString: string | undefi
     return;
   }
   try {
-    const momentDate = moment(date)
-      .hours(parseInt(hours, 10))
-      .minutes(parseInt(minutes, 10));
+    const momentDate = moment(date).hours(parseInt(hours, 10)).minutes(parseInt(minutes, 10));
     return momentDate.toDate();
   } catch (e) {
     return undefined;

@@ -144,7 +144,7 @@ export const renderDesktopDatePicker = (
   // This makes sure the focus is set back to null and the calendar closes
   const onRangeBlur = (e: React.FocusEvent<HTMLDivElement>): void => {
     if (e.target.nodeName === 'BUTTON' && focusedInput === 'endDate') {
-      onRangeDatesFocusChange((null as unknown) as FocusedInputShape);
+      onRangeDatesFocusChange(null as unknown as FocusedInputShape);
     }
   };
 

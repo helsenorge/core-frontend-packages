@@ -9,7 +9,7 @@
 export function debounce(func: Function, wait: number, immediate?: boolean): () => void {
   let timeout: ReturnType<typeof setTimeout> | null;
 
-  return function(): void {
+  return function (): void {
     const context: Function = this,
       args: IArguments = arguments,
       later: () => void = (): void => {
