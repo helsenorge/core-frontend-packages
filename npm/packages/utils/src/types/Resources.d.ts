@@ -10733,11 +10733,11 @@ export type HNMinHelseNotificationStrings = {
   */
   oppgavePaminnelse_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et skjema. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgave_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgave_EmailMessage_Body_Self: string;
   /** 
@@ -10749,11 +10749,11 @@ export type HNMinHelseNotificationStrings = {
   */
   oppgave_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått et skjema. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgave_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgave_TextMessage_Body_Self: string;
   /** 
@@ -11289,7 +11289,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingIkkeMottTime: string;
   /** 
-  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding på Helsenorge. Logg inn på helsenorge.no for å lese den.
   */
   default_EmailMessage_Body_Representation_FunksjonellMotpart: string;
   /** 
@@ -11305,7 +11305,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_EmailMessage_Subject_Self_FunksjonellMotpart: string;
   /** 
-  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding på Helsenorge. Logg inn på helsenorge.no for å lese den.
   */
   default_TextMessage_Body_Representation_FunksjonellMotpart: string;
   /** 
@@ -11769,15 +11769,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   pasientreiserInnsendingFeilet_EmailMessage_Body_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   paminnelseFormidling_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveBesvarelse_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveBesvarelse_EmailMessage_Body_Self: string;
   /** 
@@ -11789,11 +11789,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveBesvarelse_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveBesvarelse_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveBesvarelse_TextMessage_Body_Self: string;
   /** 
@@ -11805,11 +11805,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInvitasjon_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgaveInvitasjon_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgaveInvitasjon_EmailMessage_Subject_Self: string;
   /** 
@@ -11829,11 +11829,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInnhenting_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgaveInnhenting_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgaveInnhenting_EmailMessage_Subject_Self: string;
   /** 
@@ -11845,7 +11845,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInnhenting_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et skjema med informasjon fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema med informasjon fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInformasjon_EmailMessage_Body_Representation: string;
   /** 
@@ -11853,11 +11853,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInformasjon_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgaveInformasjon_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgaveInformasjon_EmailMessage_Subject_Self: string;
   /** 
@@ -12145,27 +12145,27 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   videreformidling_TextMessage_Body_Self_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName}, du har fått et brev. Logg inn på Helsenorge for å lese det.
   */
   videreformidling_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName} har fått et brev. Logg inn på Helsenorge for å lese det.
   */
   videreformidling_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et brev. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName}, du har fått et brev. Logg inn på Helsenorge for å lese det.
   */
   videreformidling_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et brev. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName} har fått et brev. Logg inn på Helsenorge for å lese det.
   */
   videreformidling_EmailMessage_Body_Representation: string;
   /** 
-  * Varsel om nytt brev på helsenorge.no
+  * Varsel om nytt brev på Helsenorge
   */
   videreformidling_EmailMessage_Subject_Self: string;
   /** 
-  * Varsel om nytt brev på helsenorge.no
+  * Varsel om nytt brev på Helsenorge
   */
   videreformidling_EmailMessage_Subject_Representation: string;
 };
