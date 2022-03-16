@@ -10697,7 +10697,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserVedtak_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har mottatt et vedtak fra Pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.
+  * ${FirstName}, du har mottatt et vedtak fra Pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.
   */
   pasientreiserVedtak_TextMessage_Body_Self: string;
   /** 
@@ -10705,7 +10705,7 @@ export type HNMinHelseNotificationStrings = {
   */
   prescription_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding om resept fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding om resept fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   prescription_EmailMessage_Body_Self: string;
   /** 
@@ -10721,7 +10721,7 @@ export type HNMinHelseNotificationStrings = {
   */
   prescription_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding om resept fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding om resept fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   prescription_TextMessage_Body_Self: string;
   /** 
@@ -10777,7 +10777,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserBrev_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har mottatt et brev fra Pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.
+  * ${FirstName}, du har mottatt et brev fra Pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.
   */
   pasientreiserBrev_TextMessage_Body_Self: string;
   /** 
@@ -10785,7 +10785,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserUlestVedtak_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har uleste dokumenter fra Pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese dem.
+  * ${FirstName}, du har uleste dokumenter fra Pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese dem.
   */
   pasientreiserUlestVedtak_EmailMessage_Body_Self: string;
   /** 
@@ -10917,7 +10917,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserUlestVedtak_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har uleste dokumenter fra Pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese dem.
+  * ${FirstName}, du har uleste dokumenter fra Pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese dem.
   */
   pasientreiserUlestVedtak_TextMessage_Body_Self: string;
   /** 
@@ -10925,7 +10925,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserVedtak_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har mottatt et vedtak fra pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.
+  * ${FirstName}, du har mottatt et vedtak fra pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.
   */
   pasientreiserVedtak_EmailMessage_Body_Self: string;
   /** 
@@ -11417,7 +11417,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   samtykkeForesporsel_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName}, du har en samtykkeforespørsel som snart utløper. Logg inn på helsenorge.no for å se den.
+  * ${FirstName}, du har en samtykkeforespørsel som snart utløper. Logg inn på Helsenorge for å se den.
   */
   samtykkeForesporsel_EmailMessage_Body_Self: string;
   /** 
@@ -11429,7 +11429,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   samtykkeForesporsel_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har en samtykkeforespørsel som snart utløper. Logg inn på helsenorge.no for å se den.
+  * ${FirstName}, du har en samtykkeforespørsel som snart utløper. Logg inn på Helsenorge for å se den.
   */
   samtykkeForesporsel_TextMessage_Body_Self: string;
   /** 
@@ -11745,7 +11745,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   manglendeAppRec_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName}, innsending av din søknad til Pasientreiser feilet. Logg inn på helsenorge.no for å søke på nytt.
+  * ${FirstName}, innsending av din søknad til Pasientreiser feilet. Logg inn på Helsenorge for å søke på nytt.
   */
   pasientreiserInnsendingFeilet_EmailMessage_Body_Self: string;
   /** 
@@ -11761,7 +11761,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   pasientreiserInnsendingFeilet_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, innsending av din søknad til Pasientreiser feilet. Logg inn på helsenorge.no for å søke på nytt.
+  * ${FirstName}, innsending av din søknad til Pasientreiser feilet. Logg inn på Helsenorge for å søke på nytt.
   */
   pasientreiserInnsendingFeilet_TextMessage_Body_Self: string;
   /** 
