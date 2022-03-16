@@ -3692,11 +3692,11 @@ export type HNMinHelseContent = {
   */
   page_Okonomi_Desc: string;
   /** 
-  * Forskning i forbindelse med kliniske studier har som formål å undersøke effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.<br/>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden.
+  * Her vises en oversikt over nasjonale screening-program du har fått tilbud om, og kliniske studier eller helseundersøkelser du deltar i. Nasjonale screening-program har som mål å avdekke alvorlig sykdom hos grupper av befolkningen. Forskning i forbindelse med kliniske studier og helseundersøkelser undersøker effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.
   */
   page_Forskning_Desc: string;
   /** 
-  * Forskning
+  * Forskning og screening
   */
   page_Forskning_Title: string;
   /** 
