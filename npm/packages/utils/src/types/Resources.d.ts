@@ -10741,11 +10741,11 @@ export type HNMinHelseNotificationStrings = {
   */
   oppgave_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgave_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgave_EmailMessage_Subject_Self: string;
   /** 
@@ -10773,7 +10773,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserBrev_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har mottatt et brev fra pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.
+  * ${FirstName} har mottatt et brev fra pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.
   */
   pasientreiserBrev_TextMessage_Body_Representation: string;
   /** 
@@ -10781,7 +10781,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserBrev_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har uleste dokumenter fra Pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese dem.
+  * ${FirstName} har uleste dokumenter fra Pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese dem.
   */
   pasientreiserUlestVedtak_EmailMessage_Body_Representation: string;
   /** 
@@ -10913,7 +10913,7 @@ export type HNMinHelseNotificationStrings = {
   */
   oppgavePaminnelse_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har uleste dokumenter fra Pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese dem.
+  * ${FirstName} har uleste dokumenter fra Pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese dem.
   */
   pasientreiserUlestVedtak_TextMessage_Body_Representation: string;
   /** 
@@ -11361,11 +11361,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om innkallingsbrev på helsenorge.no
+  * Varsel om innkallingsbrev på Helsenorge
   */
   spesialistInnkallingsbrev_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om innkallingsbrev på helsenorge.no
+  * Varsel om innkallingsbrev på Helsenorge
   */
   spesialistInnkallingsbrev_EmailMessage_Subject_Self: string;
   /** 
@@ -11385,7 +11385,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   timeUtfort_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName} kan nå se timer hos ${ActorName} på helsenorge.no. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} kan nå se timer hos ${ActorName} på Helsenorge. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingFlereTimer_EmailMessage_Body_Representation: string;
   /** 
@@ -11393,15 +11393,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingFlereTimer_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om timer på helsenorge.no
+  * Varsel om timer på Helsenorge
   */
   nasjonalBreddingFlereTimer_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om timer på helsenorge.no
+  * Varsel om timer på Helsenorge
   */
   nasjonalBreddingFlereTimer_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} kan nå se timer hos ${ActorName} på helsenorge.no. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} kan nå se timer hos ${ActorName} på Helsenorge. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingFlereTimer_TextMessage_Body_Representation: string;
   /** 
@@ -11409,11 +11409,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingFlereTimer_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har en forespørsel som snart utløper. Logg inn på helsenorge.no for å se den.
+  * ${FirstName} har en forespørsel som snart utløper. Logg inn på Helsenorge for å se den.
   */
   samtykkeForesporsel_TextMessage_Body_Representation: string;
   /** 
-  * SamtykkeForespørsel utløper på helsenorge.no
+  * SamtykkeForespørsel utløper på Helsenorge
   */
   samtykkeForesporsel_EmailMessage_Subject_Self: string;
   /** 
@@ -11421,11 +11421,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   samtykkeForesporsel_EmailMessage_Body_Self: string;
   /** 
-  * SamtykkeForespørsel utløper på helsenorge.no
+  * SamtykkeForespørsel utløper på Helsenorge
   */
   samtykkeForesporsel_EmailMessage_Subject_Representation: string;
   /** 
-  * ${FirstName} har en samtykkeforespørsel som snart utløper. Logg inn på helsenorge.no for å se den.
+  * ${FirstName} har en samtykkeforespørsel som snart utløper. Logg inn på Helsenorge for å se den.
   */
   samtykkeForesporsel_EmailMessage_Body_Representation: string;
   /** 
@@ -11541,7 +11541,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avbestillingKommuneavtaleBekreftet_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} sin(e) avtale(r) med ${ActorName} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin(e) avtale(r) med ${ActorName} er avlyst. Logg inn på Helsenorge for å se mer.
   */
   avbestillingKommuneavtaleBekreftet_EmailMessage_Body_Representation: string;
   /** 
@@ -11549,7 +11549,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avbestillingKommuneavtaleBekreftet_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin(e) avtale(r) med ${ActorName} kunne ikke avlyses. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin(e) avtale(r) med ${ActorName} kunne ikke avlyses. Logg inn på Helsenorge for å se mer.
   */
   avbestillingKommuneavtaleAvvist_EmailMessage_Body_Representation: string;
   /** 
@@ -11565,7 +11565,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avbestillingKommuneavtaleAvvist_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} sin(e) avtale(r) med ${ActorName} kunne ikke avlyses. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin(e) avtale(r) med ${ActorName} kunne ikke avlyses. Logg inn på Helsenorge for å se mer.
   */
   avbestillingKommuneavtaleAvvist_TextMessage_Body_Representation: string;
   /** 
@@ -11573,7 +11573,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avbestillingKommuneavtaleAvvist_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin(e) avtale(r) med ${ActorName} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin(e) avtale(r) med ${ActorName} er avlyst. Logg inn på Helsenorge for å se mer.
   */
   avbestillingKommuneavtaleBekreftet_TextMessage_Body_Representation: string;
   /** 
@@ -11757,7 +11757,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   pasientreiserInnsendingFeilet_EmailMessage_Subject_Self: string;
   /** 
-  * Innsending av søknaden for ${FirstName} til Pasientreiser feilet. Logg inn på helsenorge.no for å søke på nytt.
+  * Innsending av søknaden for ${FirstName} til Pasientreiser feilet. Logg inn på Helsenorge for å søke på nytt.
   */
   pasientreiserInnsendingFeilet_TextMessage_Body_Representation: string;
   /** 
@@ -11765,7 +11765,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   pasientreiserInnsendingFeilet_TextMessage_Body_Self: string;
   /** 
-  * Innsending av søknaden for ${FirstName} til Pasientreiser feilet. Logg inn på helsenorge.no for å søke på nytt.
+  * Innsending av søknaden for ${FirstName} til Pasientreiser feilet. Logg inn på Helsenorge for å søke på nytt.
   */
   pasientreiserInnsendingFeilet_EmailMessage_Body_Representation: string;
   /** 
