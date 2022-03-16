@@ -10693,7 +10693,7 @@ export type HNMinHelseNHNStrings = {
 
 export type HNMinHelseNotificationStrings = { 
   /** 
-  * ${FirstName} har mottatt et vedtak fra pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.
+  * ${FirstName} har mottatt et vedtak fra pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.
   */
   pasientreiserVedtak_TextMessage_Body_Representation: string;
   /** 
@@ -10757,7 +10757,7 @@ export type HNMinHelseNotificationStrings = {
   */
   oppgave_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har mottatt et brev fra pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.
+  * ${FirstName} har mottatt et brev fra pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.
   */
   pasientreiserBrev_EmailMessage_Body_Representation: string;
   /** 
@@ -10921,7 +10921,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserUlestVedtak_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har mottatt et vedtak fra pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.
+  * ${FirstName} har mottatt et vedtak fra pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.
   */
   pasientreiserVedtak_EmailMessage_Body_Representation: string;
   /** 
@@ -11043,7 +11043,7 @@ export type HNMinHelseNotificationStrings = {
   /** 
   * <br/>
 <br/>
-Du kan se din kontaktinformasjon og endre ditt varseloppsett på helsenorge.no.
+Du kan se din kontaktinformasjon og endre ditt varseloppsett på Helsenorge.
 <br/>
 <br/>
 Helsenorge vil aldri be om at du oppgir opplysninger om helsetilstand, passord, brukernavn eller lignende i e-post, SMS eller på telefon.
@@ -11069,15 +11069,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingGjennomfortTime: string;
   /** 
-  * Varsel om endret time på helsenorge.no
+  * Varsel om endret time på Helsenorge
   */
   nasjonalBreddingEndretTime_EmailMessage_Subject_Self: string;
   /** 
-  * Varsel om avlyst time på helsenorge.no
+  * Varsel om avlyst time på Helsenorge
   */
   nasjonalBreddingAvlystTime_EmailMessage_Subject_Self: string;
   /** 
-  * Varsel om oppdatert time på helsenorge.no
+  * Varsel om oppdatert time på Helsenorge
   */
   nasjonalBreddingOppdatertTime_EmailMessage_Subject_Self: string;
   /** 
@@ -11089,11 +11089,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingAnnetTime_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om avlyst time på helsenorge.no
+  * Varsel om avlyst time på Helsenorge
   */
   nasjonalBreddingAvlystTime_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om endret time på helsenorge.no
+  * Varsel om endret time på Helsenorge
   */
   nasjonalBreddingEndretTime_EmailMessage_Subject_Representation: string;
   /** 
@@ -11101,7 +11101,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingNyTime_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om oppdatert time på helsenorge.no
+  * Varsel om oppdatert time på Helsenorge
   */
   nasjonalBreddingOppdatertTime_EmailMessage_Subject_Representation: string;
   /** 
@@ -11237,11 +11237,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingEndretTime_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingAvlystTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} sin timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingAvlystTime_EmailMessage_Body_Representation: string;
   /** 
@@ -11345,7 +11345,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   helsefagligKontakt_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   helsefagligKontakt_TextMessage_Body_Representation: string;
   /** 
