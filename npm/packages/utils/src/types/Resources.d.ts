@@ -10997,7 +10997,7 @@ export type HNMinHelseNotificationStrings = {
   */
   coordinator_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   coordinator_EmailMessage_Body_Self: string;
   /** 
@@ -11013,7 +11013,7 @@ export type HNMinHelseNotificationStrings = {
   */
   coordinator_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   coordinator_TextMessage_Body_Self: string;
   /** 
@@ -11021,7 +11021,7 @@ export type HNMinHelseNotificationStrings = {
   */
   default_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding på helsenorge.no. Logg inn på Helsenorge for å lese den.
   */
   default_EmailMessage_Body_Self: string;
   /** 
@@ -11037,7 +11037,7 @@ export type HNMinHelseNotificationStrings = {
   */
   default_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.
   */
   default_TextMessage_Body_Self: string;
   /** 
@@ -11061,7 +11061,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   newAppointment_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, en time du har hos ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har hos ${ActorName} er endret. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingAnnetTime_EmailMessage_Body_Self: string;
   /** 
@@ -11113,7 +11113,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingNyTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått time hos ${ActorName}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått time hos ${ActorName}. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingNyTime_TextMessage_Body_Self: string;
   /** 
@@ -11229,11 +11229,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingEndretTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, en time du har hos ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har hos ${ActorName} er endret. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingEndretTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName}, en time du har hos ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har hos ${ActorName} er endret. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingEndretTime_EmailMessage_Body_Self: string;
   /** 
@@ -11245,11 +11245,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingAvlystTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingAvlystTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din timeavtale hos ${ActorName} ${DateTime} er avlyst. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingAvlystTime_EmailMessage_Body_Self: string;
   /** 
@@ -11265,7 +11265,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingOppdatertTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName}, en time du har hos ${ActorName} har endret status. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har hos ${ActorName} har endret status. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingOppdatertTime_EmailMessage_Body_Self: string;
   /** 
@@ -11277,11 +11277,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingAnnetTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, en time du har hos ${ActorName} er endret. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har hos ${ActorName} er endret. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingAnnetTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName}, du har fått time hos ${ActorName}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått time hos ${ActorName}. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingNyTime_EmailMessage_Body_Self: string;
   /** 
@@ -11293,7 +11293,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_EmailMessage_Body_Representation_FunksjonellMotpart: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på Helsenorge for å lese den.
   */
   default_EmailMessage_Body_Self_FunksjonellMotpart: string;
   /** 
@@ -11309,7 +11309,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_TextMessage_Body_Representation_FunksjonellMotpart: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på Helsenorge for å lese den.
   */
   default_TextMessage_Body_Self_FunksjonellMotpart: string;
   /** 
@@ -11341,7 +11341,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   helsefagligKontakt_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   helsefagligKontakt_EmailMessage_Body_Self: string;
   /** 
@@ -11349,7 +11349,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   helsefagligKontakt_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   helsefagligKontakt_TextMessage_Body_Self: string;
   /** 
@@ -11389,7 +11389,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingFlereTimer_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du kan nå se timer hos ${ActorName} på helsenorge.no. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du kan nå se timer hos ${ActorName} på Helsenorge. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingFlereTimer_EmailMessage_Body_Self: string;
   /** 
@@ -11405,7 +11405,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingFlereTimer_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du kan nå se timer hos ${ActorName} på helsenorge.no. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du kan nå se timer hos ${ActorName} på Helsenorge. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingFlereTimer_TextMessage_Body_Self: string;
   /** 
