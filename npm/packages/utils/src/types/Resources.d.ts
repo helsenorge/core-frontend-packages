@@ -11501,7 +11501,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   actor_GeneralPractitioner: string;
   /** 
-  * ${FirstName} har fått en melding knyttet til en time hos ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding knyttet til en time hos ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   appointmentDialog_EmailMessage_Body_Representation: string;
   /** 
