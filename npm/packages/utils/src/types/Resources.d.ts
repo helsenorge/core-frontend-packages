@@ -10761,7 +10761,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserBrev_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har mottatt et brev fra pasientreiser. Logg inn på helsenorge.no og gå til Pasientreiser for å lese det.
+  * ${FirstName}, du har mottatt et brev fra pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.
   */
   pasientreiserBrev_EmailMessage_Body_Self: string;
   /** 
@@ -11261,7 +11261,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingOppdatertTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, en time du har hos ${ActorName} har endret status. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, en time du har hos ${ActorName} har endret status. Logg inn på Helsenorge for å se mer.
   */
   nasjonalBreddingOppdatertTime_TextMessage_Body_Self: string;
   /** 
@@ -11677,7 +11677,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeVideoTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk videotimen hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, husk videotimen hos ${ActorName} ${DateTime}. Logg inn på Helsenorge for å se mer.
   */
   paminnelseFastlegeVideoTime_TextMessage_Body_Self: string;
   /** 
@@ -11701,7 +11701,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyttDigitaltVerktoy_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har mottatt et digitalt verktøy fra ${ActorName}. Logg inn på helsenorge.no for å lese mer.
+  * ${FirstName}, du har mottatt et digitalt verktøy fra ${ActorName}. Logg inn på Helsenorge for å lese mer.
   */
   nyttDigitaltVerktoy_EmailMessage_Body_Self: string;
   /** 
@@ -11717,7 +11717,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nyttDigitaltVerktoy_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har mottatt et digitalt verktøy fra ${ActorName}. Logg inn på helsenorge.no for å lese mer.
+  * ${FirstName}, du har mottatt et digitalt verktøy fra ${ActorName}. Logg inn på Helsenorge for å lese mer.
   */
   nyttDigitaltVerktoy_TextMessage_Body_Self: string;
   /** 
@@ -11985,7 +11985,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelsePrimarhelsetjenesteVideoTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk videotimen hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, husk videotimen hos ${ActorName} ${DateTime}. Logg inn på Helsenorge for å se mer.
   */
   paminnelsePrimarhelsetjenesteVideoTime_EmailMessage_Body_Self: string;
   /** 
@@ -12001,7 +12001,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelsePrimarhelsetjenesteVideoTime_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk videotimen hos ${ActorName} ${DateTime}. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, husk videotimen hos ${ActorName} ${DateTime}. Logg inn på Helsenorge for å se mer.
   */
   paminnelsePrimarhelsetjenesteVideoTime_TextMessage_Body_Self: string;
   /** 
