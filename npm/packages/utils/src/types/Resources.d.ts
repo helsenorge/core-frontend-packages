@@ -11781,11 +11781,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveBesvarelse_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgaveBesvarelse_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   oppgaveBesvarelse_EmailMessage_Subject_Self: string;
   /** 
