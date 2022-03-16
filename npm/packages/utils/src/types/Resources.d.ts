@@ -10897,11 +10897,11 @@ export type HNMinHelseNotificationStrings = {
   */
   notifikasjon_Innkallingsbrev_Sletting: string;
   /** 
-  * ${FirstName} har et skjema der fristen snart går ut. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har et skjema der fristen snart går ut. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgavePaminnelse_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et skjema der fristen snart går ut. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har et skjema der fristen snart går ut. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgavePaminnelse_EmailMessage_Body_Self: string;
   /** 
@@ -11797,11 +11797,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveBesvarelse_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et skjema med invitasjon til deltakelse i spørreundersøkelse fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema med invitasjon til deltakelse i spørreundersøkelse fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInvitasjon_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema med invitasjon til deltakelse i spørreundersøkelse fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema med invitasjon til deltakelse i spørreundersøkelse fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInvitasjon_EmailMessage_Body_Self: string;
   /** 
@@ -11813,19 +11813,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInvitasjon_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått et skjema med invitasjon til deltakelse i spørreundersøkelse fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema med invitasjon til deltakelse i spørreundersøkelse fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInvitasjon_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema med invitasjon til deltakelse i spørreundersøkelse fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema med invitasjon til deltakelse i spørreundersøkelse fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInvitasjon_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått et skjema  med innhenting av samtykke for bruk av allerede innsamlede data fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema  med innhenting av samtykke for bruk av allerede innsamlede data fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInnhenting_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema  med innhenting av samtykke for bruk av allerede innsamlede data fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema  med innhenting av samtykke for bruk av allerede innsamlede data fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInnhenting_EmailMessage_Body_Self: string;
   /** 
@@ -11837,11 +11837,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInnhenting_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått et skjema  med innhenting av samtykke for bruk av allerede innsamlede data fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema  med innhenting av samtykke for bruk av allerede innsamlede data fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInnhenting_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema  med innhenting av samtykke for bruk av allerede innsamlede data fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema  med innhenting av samtykke for bruk av allerede innsamlede data fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInnhenting_TextMessage_Body_Self: string;
   /** 
@@ -11849,7 +11849,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInformasjon_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema  med informasjon fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema  med informasjon fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInformasjon_EmailMessage_Body_Self: string;
   /** 
@@ -11861,11 +11861,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   oppgaveInformasjon_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått et skjema  med informasjon fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har fått et skjema  med informasjon fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInformasjon_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått et skjema  med informasjon fra ${ActorName}. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har fått et skjema  med informasjon fra ${ActorName}. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgaveInformasjon_TextMessage_Body_Self: string;
   /** 
