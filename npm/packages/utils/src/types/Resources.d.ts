@@ -10813,11 +10813,11 @@ export type HNMinHelseNotificationStrings = {
   */
   timeIkkeEndret_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   timeIkkeEndret_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   timeIkkeEndret_EmailMessage_Subject_Self: string;
   /** 
@@ -10829,7 +10829,7 @@ export type HNMinHelseNotificationStrings = {
   */
   timeIkkeEndret_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   consultation_EmailMessage_Body_Representation: string;
   /** 
@@ -10837,15 +10837,15 @@ export type HNMinHelseNotificationStrings = {
   */
   consultation_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   consultation_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   consultation_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   consultation_TextMessage_Body_Representation: string;
   /** 
@@ -10853,7 +10853,7 @@ export type HNMinHelseNotificationStrings = {
   */
   consultation_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   contact_EmailMessage_Body_Representation: string;
   /** 
@@ -10977,11 +10977,11 @@ export type HNMinHelseNotificationStrings = {
   */
   timeIkkeTilgjengelig_EmailMessage_Body_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   contact_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   contact_EmailMessage_Subject_Self: string;
   /** 
