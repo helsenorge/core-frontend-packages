@@ -11509,15 +11509,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   appointmentDialog_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   appointmentDialog_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   appointmentDialog_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding knyttet til en time hos ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding knyttet til en time hos ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   appointmentDialog_TextMessage_Body_Representation: string;
   /** 
