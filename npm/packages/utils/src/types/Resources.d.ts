@@ -10861,7 +10861,7 @@ export type HNMinHelseNotificationStrings = {
   */
   contact_EmailMessage_Body_Self: string;
   /** 
-  * ${FirstName}, du har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, du har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på Helsenorge for å se mer.
   */
   newAppointment_EmailMessage_Body_Self: string;
   /** 
@@ -11017,11 +11017,11 @@ export type HNMinHelseNotificationStrings = {
   */
   coordinator_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på Helsenorge for å lese den.
+  * ${FirstName} har fått en melding på Helsenorge. Logg inn for å lese den.
   */
   default_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding på helsenorge.no. Logg inn på Helsenorge for å lese den.
+  * ${FirstName}, du har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.
   */
   default_EmailMessage_Body_Self: string;
   /** 
@@ -11033,7 +11033,7 @@ export type HNMinHelseNotificationStrings = {
   */
   default_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på Helsenorge for å lese den.
+  * ${FirstName} har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.
   */
   default_TextMessage_Body_Representation: string;
   /** 
@@ -11057,7 +11057,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   footer_TextMessage: string;
   /** 
-  * ${FirstName} har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på helsenorge.no for å se mer.
+  * ${FirstName} har fått time${AvtaleType} hos ${ActorName} ${DateTime}. ${Lokasjon}Logg inn på Helsenorge for å se mer.
   */
   newAppointment_EmailMessage_Body_Representation: string;
   /** 
@@ -11289,7 +11289,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingIkkeMottTime: string;
   /** 
-  * ${FirstName} har fått en melding på Helsenorge. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.
   */
   default_EmailMessage_Body_Representation_FunksjonellMotpart: string;
   /** 
@@ -11305,7 +11305,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_EmailMessage_Subject_Self_FunksjonellMotpart: string;
   /** 
-  * ${FirstName} har fått en melding på Helsenorge. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.
   */
   default_TextMessage_Body_Representation_FunksjonellMotpart: string;
   /** 
@@ -11945,11 +11945,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   tjenesteOversikt_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} sin time${AvtaleType} hos ${ActorName} ble ikke reservert. Gå til helsenorge.no for å bestille ny time eller kontakt behandlingsstedet.
+  * ${FirstName} sin time${AvtaleType} hos ${ActorName} ble ikke reservert. Gå til Helsenorge for å bestille ny time eller kontakt behandlingsstedet.
   */
   primarhelsetjenesteTimeIkkeTilgjengelig_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din time${AvtaleType} hos ${ActorName} ble ikke reservert. Gå til helsenorge.no for å bestille ny time eller kontakt behandlingsstedet.
+  * ${FirstName}, din time${AvtaleType} hos ${ActorName} ble ikke reservert. Gå til Helsenorge for å bestille ny time eller kontakt behandlingsstedet.
   */
   primarhelsetjenesteTimeIkkeTilgjengelig_EmailMessage_Body_Self: string;
   /** 
@@ -12097,27 +12097,27 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   videreformidling_TextMessage_Body_Self_FunksjonellMotpart: string;
   /** 
-  * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName} har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Representation_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName}, du har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName}, du har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Self_IkkeSensitivAvsender: string;
   /** 
-  * Varsel om innkallingsbrev på helsenorge.no
+  * Varsel om innkallingsbrev på Helsenorge
   */
   spesialistInnkallingsbrev_EmailMessage_Subject_Representation_IkkeSensitivAvsender: string;
   /** 
-  * Varsel om innkallingsbrev på helsenorge.no
+  * Varsel om innkallingsbrev på Helsenorge
   */
   spesialistInnkallingsbrev_EmailMessage_Subject_Self_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName} har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Representation_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName}, du har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName}, du har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Self_IkkeSensitivAvsender: string;
   /** 
