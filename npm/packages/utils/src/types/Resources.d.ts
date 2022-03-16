@@ -10499,7 +10499,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Donorkort_Description: string;
   /** 
-  * Forskning
+  * Forskning og screening
   */
   tile_Forskning_Title: string;
   /** 
