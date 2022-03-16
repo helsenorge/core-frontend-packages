@@ -11521,7 +11521,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   appointmentDialog_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding knyttet til en time hos ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding knyttet til en time hos ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   appointmentDialog_TextMessage_Body_Self: string;
   /** 
@@ -11545,7 +11545,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avbestillingKommuneavtaleBekreftet_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din(e) avtale(r) med ${ActorName} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din(e) avtale(r) med ${ActorName} er avlyst. Logg inn på Helsenorge for å se mer.
   */
   avbestillingKommuneavtaleBekreftet_EmailMessage_Body_Self: string;
   /** 
@@ -11553,7 +11553,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avbestillingKommuneavtaleAvvist_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din(e) avtale(r) med ${ActorName} kunne ikke avlyses. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din(e) avtale(r) med ${ActorName} kunne ikke avlyses. Logg inn på Helsenorge for å se mer.
   */
   avbestillingKommuneavtaleAvvist_EmailMessage_Body_Self: string;
   /** 
@@ -11569,7 +11569,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avbestillingKommuneavtaleAvvist_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din(e) avtale(r) med ${ActorName} kunne ikke avlyses. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din(e) avtale(r) med ${ActorName} kunne ikke avlyses. Logg inn på Helsenorge for å se mer.
   */
   avbestillingKommuneavtaleAvvist_TextMessage_Body_Self: string;
   /** 
@@ -11577,7 +11577,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   avbestillingKommuneavtaleBekreftet_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, din(e) avtale(r) med ${ActorName} er avlyst. Logg inn på helsenorge.no for å se mer.
+  * ${FirstName}, din(e) avtale(r) med ${ActorName} er avlyst. Logg inn på Helsenorge for å se mer.
   */
   avbestillingKommuneavtaleBekreftet_TextMessage_Body_Self: string;
   /** 
@@ -11937,11 +11937,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   tjenesteOversikt_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no og gå til Helsekontakter for å se mer.
+  * ${FirstName} har fått ny helsekontakt. Logg inn på Helsenorge og gå til Helsekontakter.
   */
   tjenesteOversikt_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått ny helsekontakt på Helsenorge. Logg inn på helsenorge.no og gå til Helsekontakter for å se mer.
+  * ${FirstName}, du har fått ny helsekontakt. Logg inn på Helsenorge og gå til Helsekontakter.
   */
   tjenesteOversikt_TextMessage_Body_Self: string;
   /** 
