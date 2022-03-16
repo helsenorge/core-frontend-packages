@@ -10701,7 +10701,7 @@ export type HNMinHelseNotificationStrings = {
   */
   pasientreiserVedtak_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding om resept fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding om resept fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   prescription_EmailMessage_Body_Representation: string;
   /** 
@@ -10709,15 +10709,15 @@ export type HNMinHelseNotificationStrings = {
   */
   prescription_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   prescription_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   prescription_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding om resept fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding om resept fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   prescription_TextMessage_Body_Representation: string;
   /** 
@@ -10985,7 +10985,7 @@ export type HNMinHelseNotificationStrings = {
   */
   contact_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   contact_TextMessage_Body_Representation: string;
   /** 
@@ -10993,7 +10993,7 @@ export type HNMinHelseNotificationStrings = {
   */
   contact_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   coordinator_EmailMessage_Body_Representation: string;
   /** 
@@ -11001,15 +11001,15 @@ export type HNMinHelseNotificationStrings = {
   */
   coordinator_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   coordinator_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   coordinator_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   coordinator_TextMessage_Body_Representation: string;
   /** 
@@ -11017,7 +11017,7 @@ export type HNMinHelseNotificationStrings = {
   */
   coordinator_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på Helsenorge for å lese den.
   */
   default_EmailMessage_Body_Representation: string;
   /** 
@@ -11025,15 +11025,15 @@ export type HNMinHelseNotificationStrings = {
   */
   default_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   default_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   default_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på Helsenorge for å lese den.
   */
   default_TextMessage_Body_Representation: string;
   /** 
@@ -11297,11 +11297,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   default_EmailMessage_Body_Self_FunksjonellMotpart: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   default_EmailMessage_Subject_Representation_FunksjonellMotpart: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   default_EmailMessage_Subject_Self_FunksjonellMotpart: string;
   /** 
@@ -11329,15 +11329,15 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   timeUtfort_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   helsefagligKontakt_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   helsefagligKontakt_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   helsefagligKontakt_EmailMessage_Body_Representation: string;
   /** 
