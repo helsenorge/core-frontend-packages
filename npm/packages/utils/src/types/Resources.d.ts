@@ -10833,7 +10833,7 @@ export type HNMinHelseNotificationStrings = {
   */
   consultation_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   consultation_EmailMessage_Body_Self: string;
   /** 
@@ -10849,7 +10849,7 @@ export type HNMinHelseNotificationStrings = {
   */
   consultation_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   consultation_TextMessage_Body_Self: string;
   /** 
@@ -10857,7 +10857,7 @@ export type HNMinHelseNotificationStrings = {
   */
   contact_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   contact_EmailMessage_Body_Self: string;
   /** 
@@ -10989,7 +10989,7 @@ export type HNMinHelseNotificationStrings = {
   */
   contact_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.
   */
   contact_TextMessage_Body_Self: string;
   /** 
