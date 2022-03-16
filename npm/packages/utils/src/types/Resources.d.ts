@@ -11465,11 +11465,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   timeIkkeTilgjengelig_EmailMessage_Body_Self: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   timeIkkeTilgjengelig_EmailMessage_Subject_Representation: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   timeIkkeTilgjengelig_EmailMessage_Subject_Self: string;
   /** 
