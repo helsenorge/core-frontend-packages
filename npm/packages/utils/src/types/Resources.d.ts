@@ -10725,11 +10725,11 @@ export type HNMinHelseNotificationStrings = {
   */
   prescription_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har et skjema der fristen snart går ut. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName} har et skjema der fristen snart går ut. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgavePaminnelse_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et skjema der fristen snart går ut. Logg inn på helsenorge.no og gå til Innboks for å fylle det ut.
+  * ${FirstName}, du har et skjema der fristen snart går ut. Logg inn på Helsenorge og gå til Innboks for å fylle det ut.
   */
   oppgavePaminnelse_TextMessage_Body_Self: string;
   /** 
@@ -11117,11 +11117,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   nasjonalBreddingNyTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
+  * ${FirstName} har et ulest innkallingsbrev på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
+  * ${FirstName}, du har et ulest innkallingsbrev på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_EmailMessage_Body_Self: string;
   /** 
@@ -11133,19 +11133,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseInnkallingsbrev_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
+  * ${FirstName} har et ulest innkallingsbrev på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et ulest innkallingsbrev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
+  * ${FirstName}, du har et ulest innkallingsbrev på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
+  * ${FirstName} har et ulest brev på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseFormidling_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
+  * ${FirstName}, du har et ulest brev på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseFormidling_EmailMessage_Body_Self: string;
   /** 
@@ -11153,11 +11153,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFormidling_EmailMessage_Subject_Representation: string;
   /** 
-  * ${FirstName} har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
+  * ${FirstName} har et ulest brev på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseFormidling_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har et ulest brev på Helsenorge. Logg inn på helsenorge.no og gå til Innboks for å lese det.
+  * ${FirstName}, du har et ulest brev på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseFormidling_TextMessage_Body_Self: string;
   /** 
@@ -11353,11 +11353,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   helsefagligKontakt_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName} har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName}, du har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Self: string;
   /** 
@@ -11369,11 +11369,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   spesialistInnkallingsbrev_EmailMessage_Subject_Self: string;
   /** 
-  * ${FirstName} har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName} har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, du har fått en melding med et innkallingsbrev på helsenorge.no. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName}, du har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Self: string;
   /** 
@@ -12073,19 +12073,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   kanIkkeAvbestillePrimarhelsetjenesteTime_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding på helsenorge.no. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName} har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.
   */
   videreformidling_EmailMessage_Body_Representation_FunksjonellMotpart: string;
   /** 
-  * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på helsenorge.no for å lese den.
+  * ${FirstName}, du har fått en melding fra ${FunksjonellMotpart}. Logg inn på Helsenorge for å lese den.
   */
   videreformidling_EmailMessage_Body_Self_FunksjonellMotpart: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   videreformidling_EmailMessage_Subject_Representation_FunksjonellMotpart: string;
   /** 
-  * Varsel om ny melding på helsenorge.no
+  * Varsel om ny melding på Helsenorge
   */
   videreformidling_EmailMessage_Subject_Self_FunksjonellMotpart: string;
   /** 
@@ -12121,27 +12121,27 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Self_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på Helsenorge for å lese det.
   */
   videreformidling_EmailMessage_Body_Representation_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på Helsenorge for å lese det.
   */
   videreformidling_EmailMessage_Body_Self_IkkeSensitivAvsender: string;
   /** 
-  * Varsel om nytt brev på helsenorge.no
+  * Varsel om nytt brev på Helsenorge
   */
   videreformidling_EmailMessage_Subject_Representation_IkkeSensitivAvsender: string;
   /** 
-  * Varsel om nytt brev på helsenorge.no
+  * Varsel om nytt brev på Helsenorge
   */
   videreformidling_EmailMessage_Subject_Self_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName} har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på Helsenorge for å lese det.
   */
   videreformidling_TextMessage_Body_Representation_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på helsenorge.no for å lese det.
+  * ${FirstName}, du har fått et brev fra ${IkkeSensitivAvsender}. Logg inn på Helsenorge for å lese det.
   */
   videreformidling_TextMessage_Body_Self_IkkeSensitivAvsender: string;
   /** 
