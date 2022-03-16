@@ -2875,7 +2875,7 @@
     "timeIkkeAvbestilt_EmailMessage_Subject_Representation": "Varsel om ny melding på helsenorge.no",
     "timeIkkeAvbestilt_EmailMessage_Subject_Self": "Varsel om ny melding på helsenorge.no",
     "actor_GeneralPractitioner": "${ActorName}",
-    "appointmentDialog_EmailMessage_Body_Representation": "${FirstName} har fått en melding knyttet til en time hos ${ActorName}. Logg inn på helsenorge.no for å lese den.",
+    "appointmentDialog_EmailMessage_Body_Representation": "${FirstName} har fått en melding knyttet til en time hos ${ActorName}. Logg inn på Helsenorge for å lese den.",
     "appointmentDialog_EmailMessage_Body_Self": "${FirstName}, du har fått en melding knyttet til en time hos ${ActorName}. Logg inn på helsenorge.no for å lese den.",
     "appointmentDialog_EmailMessage_Subject_Representation": "Varsel om ny melding på helsenorge.no",
     "appointmentDialog_EmailMessage_Subject_Self": "Varsel om ny melding på helsenorge.no",
