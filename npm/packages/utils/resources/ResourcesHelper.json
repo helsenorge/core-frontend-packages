@@ -1302,7 +1302,7 @@
     "innsyn_ingress": "Her ser du hvilke opplysninger som er registrert om deg i {0}, til og med datoen som vises øverst på siden. Ønsker du å se hvilke opplysninger som har blitt registrert etter den datoen, må du bestille en ny innsynsrapport.",
     "bestillInnsynsRapport": "Bestill innsynsrapport",
     "bestillingPaaVentMessage": "Du har bestilt følgende innsynsrapport(er) og venter fremdeles på svar. Behandlingstid er normalt ikke mer enn 30 dager. Innsynsrapporten vil inneholde opplysninger registrert til og med dagen din forespørsel behandles.",
-    "bestillInnsynKvitteringsTekst": "Du vil få et varsel på helsenorge.no når rapporten er klar. Rapporten lagres automatisk i <strong>Dokumenter</strong>. Behandlingstid er normalt ikke mer enn 30 dager.",
+    "bestillInnsynKvitteringsTekst": "Du vil få et varsel på Helsenorge når rapporten er klar. Rapporten lagres automatisk i <strong>Dokumenter</strong>. Behandlingstid er normalt ikke mer enn 30 dager.",
     "bestillInnsynKvitteringsHeader": "Innsynsrapport er bestilt",
     "clientOperation_GetRegisterInnsyn_Error_Title": "Teknisk feil",
     "clientOperation_GetRegisterInnsyn_Error_Body": "Det har oppstått en teknisk feil ved uthenting av innsynsrapporten. Vennligst prøv igjen senere.",
