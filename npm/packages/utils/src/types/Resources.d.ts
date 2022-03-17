@@ -8947,10 +8947,6 @@ Opplysningene hentes fra <a href='/reseptformidleren'>reseptformidleren</a> og d
   */
   legemidler_innsyn_tab_loggoverbruk: string;
   /** 
-  * <a href="{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter">Informasjon om hvordan du får innsyn i Logg over bruk når du representerer andre finner du her</a>.
-  */
-  legemidlerInnsynErrorForbiddenBody: string;
-  /** 
   * Du har ikke tilgang til Logg over bruk i reseptformidleren når du representerer andre.
   */
   legemidlerInnsynErrorForbiddenTitle: string;
