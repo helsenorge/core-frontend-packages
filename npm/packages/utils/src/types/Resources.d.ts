@@ -3556,7 +3556,7 @@ export type HNMinHelseDialogVPJS = {
   */
   close: string;
   /** 
-  * Den ansatte har i den valgte perioden ikke åpnet noen av dine journaldokumenter som er tilgjengelige på helsenorge.no. Den ansatte kan imidlertid ha åpnet andre dokumenter som ikke vises i tjenesten, som for eksempel eldre dokumenter eller dokumenter som ikke vises på nett.
+  * Den ansatte har i den valgte perioden ikke åpnet noen av dine journaldokumenter som er tilgjengelige på Helsenorge. Den ansatte kan imidlertid ha åpnet andre dokumenter som ikke vises i tjenesten, som for eksempel eldre dokumenter eller dokumenter som ikke vises på nett.
   */
   emptyDocuments: string;
   /** 
@@ -5234,7 +5234,7 @@ opplysninger jeg mener skal korrigeres:
   */
   registerSistOppdatert: string;
   /** 
-  * Registre som tilbyr innsyn på helsenorge.no
+  * Registre som tilbyr innsyn på Helsenorge
   */
   filterDigitaltInnsyn: string;
   /** 
