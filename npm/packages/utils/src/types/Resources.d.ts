@@ -5166,7 +5166,7 @@ opplysninger jeg mener skal korrigeres:
   */
   bestillingPaaVentMessage: string;
   /** 
-  * Du vil få et varsel på helsenorge.no når rapporten er klar. Rapporten lagres automatisk i <strong>Dokumenter</strong>. Behandlingstid er normalt ikke mer enn 30 dager.
+  * Du vil få et varsel på Helsenorge når rapporten er klar. Rapporten lagres automatisk i <strong>Dokumenter</strong>. Behandlingstid er normalt ikke mer enn 30 dager.
   */
   bestillInnsynKvitteringsTekst: string;
   /** 
