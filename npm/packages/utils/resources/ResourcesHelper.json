@@ -2756,7 +2756,7 @@
     "coordinator_EmailMessage_Subject_Self": "Varsel om ny melding på Helsenorge",
     "coordinator_TextMessage_Body_Representation": "${FirstName} har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.",
     "coordinator_TextMessage_Body_Self": "${FirstName}, du har fått en melding fra ${ActorName}. Logg inn på Helsenorge for å lese den.",
-    "default_EmailMessage_Body_Representation": "${FirstName} har fått en melding på Helsenorge. Logg inn for å lese den.",
+    "default_EmailMessage_Body_Representation": "${FirstName} har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.",
     "default_EmailMessage_Body_Self": "${FirstName}, du har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.",
     "default_EmailMessage_Subject_Representation": "Varsel om ny melding på Helsenorge",
     "default_EmailMessage_Subject_Self": "Varsel om ny melding på Helsenorge",

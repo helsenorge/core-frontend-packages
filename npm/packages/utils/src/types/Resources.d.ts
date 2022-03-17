@@ -11017,7 +11017,7 @@ export type HNMinHelseNotificationStrings = {
   */
   coordinator_TextMessage_Body_Self: string;
   /** 
-  * ${FirstName} har fått en melding på Helsenorge. Logg inn for å lese den.
+  * ${FirstName} har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.
   */
   default_EmailMessage_Body_Representation: string;
   /** 
