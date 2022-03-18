@@ -295,7 +295,7 @@
     "bookingHeader": "Bestill time ved",
     "bookingHeaderVaccination": "Bestill time ved Vaksinasjon",
     "bookingManualTab": "Foreslå tidspunkt",
-    "bookingMarkAppointmentWith": "Hva gjelder timen?",
+    "bookingMarkAppointmentWith": "Hva gjelder timen?  (inntil 50 tegn)",
     "bookingMarkAppointmentWithPhone": "Oppgi telefonnummer for kontakt",
     "bookingMarkAppointmentWithRequired": "Du må skrive hva timen gjelder",
     "bookingMarkAppointmentWithRequiredPhone": "Du må oppgi telefonnummer",

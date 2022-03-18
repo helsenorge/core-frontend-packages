@@ -1168,7 +1168,7 @@ export type HNDialogCommonJS = {
   */
   bookingManualTab: string;
   /** 
-  * Hva gjelder timen?
+  * Hva gjelder timen?  (inntil 50 tegn)
   */
   bookingMarkAppointmentWith: string;
   /** 
