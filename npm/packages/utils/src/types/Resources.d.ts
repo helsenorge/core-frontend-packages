@@ -18515,7 +18515,7 @@ export type HNMinHelsePersonvernStrings = {
   */
   page_HendelsesLogg_23: string;
   /** 
-  * Forskning
+  * Forskning og screening
   */
   page_HendelsesLogg_26: string;
   /** 
