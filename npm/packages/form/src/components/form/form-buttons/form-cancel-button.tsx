@@ -27,6 +27,8 @@ interface FormCancelButtonProps {
   onCancel?: (event?: React.FormEvent<{}>) => void;
   /** Id som benyttes for å hente ut CancelButton i automatiske tester */
   cancelButtonTestId?: string;
+  /** Setter outline variant på CancelButton */
+  cancelButtonOutline?: boolean;
 }
 
 const FormCancelButton: React.FC<FormCancelButtonProps> = (props: FormCancelButtonProps): JSX.Element | null => {
@@ -47,7 +49,7 @@ const FormCancelButton: React.FC<FormCancelButtonProps> = (props: FormCancelButt
 
   return (
     <Button
-      variant={'borderless'}
+      variant={props.cancelButtonOutline ? 'outline' : 'borderless'}
       className={`${toolkitstyles.form__buttonwrapper__button} ${props.cancelButtonClasses ? props.cancelButtonClasses : ''}`}
       onClick={onCancelHandler}
       disabled={props.cancelButtonDisabled}

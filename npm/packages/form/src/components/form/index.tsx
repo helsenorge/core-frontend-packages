@@ -60,6 +60,8 @@ export interface FormProps {
   cancelButtonRightIcon?: JSX.Element;
   /** If the cancel button is disabled  */
   cancelButtonDisabled?: boolean;
+  /** Setter outline variant på CancelButton */
+  cancelButtonOutline?: boolean;
 
   /** Teksten som vises på lagre knappen */
   draftButtonText?: string;
@@ -294,6 +296,7 @@ export default class Form extends React.Component<FormProps, FormState> {
         cancelButtonDisabled={this.props.cancelButtonDisabled}
         onCancel={this.props.onCancel}
         cancelButtonTestId={this.props.cancelButtonTestId}
+        cancelButtonOutline={this.props.cancelButtonOutline}
       />
     );
     const pauseButton = (

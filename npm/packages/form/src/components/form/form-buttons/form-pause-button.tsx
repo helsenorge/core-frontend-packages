@@ -54,7 +54,9 @@ const FormPauseButton: React.FC<FormPauseButtonProps> = (props: FormPauseButtonP
     <Button
       variant={getButtonVariant()}
       disabled={props.pauseButtonDisabled}
-      className={toolkitstyles.form__buttonwrapper__button}
+      className={`${toolkitstyles.form__buttonwrapper__button} ${
+        props.pauseButtonClasses ? props.pauseButtonClasses : 'atom_actionbutton--pause'
+      }`}
       onClick={onPauseHandler}
       testId={props.pauseButtonTestId}
     >

@@ -30,15 +30,11 @@ export function Validation({
 }: ValidationProps): JSX.Element {
   const componentRef = React.useRef<FormChild | null>(null);
 
-  /* replaces componentDidMount */
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     if (addFormComponent && componentRef.current) {
       addFormComponent(componentRef.current);
     }
-  }, []);
 
-  /* replaces componentWillUnmount */
-  React.useEffect(() => {
     return (): void => {
       if (removeFormComponent && componentRef.current) {
         removeFormComponent(componentRef.current);
