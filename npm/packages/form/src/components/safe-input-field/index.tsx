@@ -241,10 +241,6 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
       // Input har endret seg. Dirtyinput = ikke validert
       this.setState({ value: formattedValue, dirtyInput: true });
 
-      if (this.inputFieldRef.current) {
-        this.inputFieldRef.current.value = formattedValue;
-      }
-
       if (!this.validate(formattedValue)) {
         this.setState({ isValid: false });
       } else if (this.props.onChangeValidator && this.state.validated) {
