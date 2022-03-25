@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/form",
-  "version": "23.0.3",
+  "version": "23.0.4",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
