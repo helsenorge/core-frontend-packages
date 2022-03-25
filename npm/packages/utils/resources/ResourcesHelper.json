@@ -1207,7 +1207,7 @@
     "donorkort_paarorende_remove_kj_delete": "Jeg vil også slette den pårørende fra kjernejournalen min.",
     "donorkort_paarorende_sms_expander": "Vil du informere din pårørende via SMS?",
     "donorkort_paarorende_sms_info": "Hvis du ønsker kan Helsenorge sende følgende SMS til din pårørende og informere om at du har opprettet donorkort:",
-    "donorkort_paarorende_sms_melding": "I dag har {0} fylt ut et digitalt donorkort og oppført deg {1} som pårørende. Les mer om din rolle som pårørende på nettsidene for Stiftelsen Organdonasjon.",
+    "donorkort_paarorende_sms_melding": "I dag har { 0} fylt ut et digitalt donorkort og oppført deg {1} som pårørende. Les mer om din rolle som pårørende på nettsidene for Stiftelsen Organdonasjon.",
     "donorkort_paarorende_sms_radiobutton_send": "Jeg vil sende SMS til min pårørende",
     "donorkort_paarorende_sms_radiobutton_ikke_send": "Ikke send SMS",
     "donorkort_paarorende_add_phone_validation": "Du må legge inn et norsk mobilnummer for å kunne sende SMS",
