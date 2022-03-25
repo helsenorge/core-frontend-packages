@@ -4798,7 +4798,7 @@ export type HNMinHelseDonorkort = {
   */
   donorkort_paarorende_sms_info: string;
   /** 
-  * I dag har { 0} fylt ut et digitalt donorkort og oppført deg {1} som pårørende. Les mer om din rolle som pårørende på nettsidene for Stiftelsen Organdonasjon.
+  * I dag har {0} fylt ut et digitalt donorkort og oppført deg {1} som pårørende. Les mer om din rolle som pårørende på nettsidene for Stiftelsen Organdonasjon.
   */
   donorkort_paarorende_sms_melding: string;
   /** 
