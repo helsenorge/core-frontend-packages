@@ -35,14 +35,10 @@
   },
   "devDependencies": {
     "@helsenorge/core-build": "^23.0.2",
-    "@helsenorge/designsystem-react": "1.0.0-beta116",
-    "@types/react-router-dom": "5.3.3",
-    "@types/react-shadow-dom-retarget-events": "1.0.0",
-    "react-router-dom": "5.3.0"
+    "@helsenorge/designsystem-react": "1.0.0-beta116"
   },
   "dependencies": {
-    "moment": "^2.29.1",
-    "react-shadow-dom-retarget-events": "1.1.0"
+    "moment": "^2.29.1"
   },
   "husky": {
     "hooks": {
