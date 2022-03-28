@@ -2758,7 +2758,7 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
   */
   page_Dokumenter_Desc: string;
   /** 
-  * Her vises en oversikt over nasjonale screening-program du har fått tilbud om, og kliniske studier eller helseundersøkelser du deltar i. Nasjonale screening-program har som mål å avdekke alvorlig sykdom hos grupper av befolkningen. Forskning i forbindelse med kliniske studier og helseundersøkelser undersøker effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.
+  * Her vises en oversikt over nasjonale screeningprogram du har fått tilbud om, og kliniske studier eller helseundersøkelser du deltar i. Nasjonale screening-program har som mål å avdekke alvorlig sykdom hos grupper av befolkningen. Forskning i forbindelse med kliniske studier og helseundersøkelser undersøker effekt og sikkerhet ved behandlingsmetoder, for å sikre best mulig behandling av pasienter.
   */
   page_Forskning_Desc: string;
   /** 
