@@ -2949,7 +2949,7 @@ export type HNMinHelseDialog = {
   */
   journalAccess_Sporsmal: string;
   /** 
-  * For mer informasjon om avtalen, logg inn på helsenorge.no.
+  * For mer informasjon om avtalen, logg inn på Helsenorge.
   */
   downloadCalendar_HnTimeavtaleAppointment_Description: string;
   /** 
