@@ -50,7 +50,7 @@
   "devDependencies": {
     "@helsenorge/core-build": "^23.0.5",
     "@helsenorge/core-utils": "^23.0.5",
-    "@helsenorge/designsystem-react": "1.0.0-beta116",
+    "@helsenorge/designsystem-react": "1.0.0-beta120",
     "@helsenorge/form": "^23.0.5",
     "@helsenorge/toolkit": "^23.0.5"
   },
