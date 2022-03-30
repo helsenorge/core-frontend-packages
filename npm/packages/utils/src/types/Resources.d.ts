@@ -2929,7 +2929,7 @@ export type HNMinHelseDialog = {
   */
   downloadCalendar_PrimarhelsetjenesteVideoAppointment_Summary: string;
   /** 
-  * For mer informasjon om avtalen, logg inn på helsenorge.no.
+  * For mer informasjon om avtalen, logg inn på Helsenorge.
   */
   downloadCalendar_PrimarhelsetjenesteAppointment_Description: string;
   /** 
@@ -3125,8 +3125,8 @@ export type HNMinHelseDialog = {
   */
   downloadCalendar_GPVideoAppointment_Summary: string;
   /** 
-  * For mer informasjon om avtalen, logg inn på helsenorge.no.
-Hvis avtalen ikke passer, husk å gi beskjed i god tid. Du kan gjøre dette på helsenorge.no.
+  * For mer informasjon om avtalen, logg inn på Helsenorge.
+Hvis avtalen ikke passer, husk å gi beskjed i god tid. Du kan gjøre dette på Helsenorge.
   */
   downloadCalendar_KommuneAppointment_Description: string;
   /** 
