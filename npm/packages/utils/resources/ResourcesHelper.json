@@ -744,7 +744,7 @@
     "downloadCalendar_PrimarhelsetjenesteAppointment_Summary": "Time hos {0} for {1}",
     "journalAccess_EmneSporsmal": "Kopi av pasientjournal",
     "journalAccess_Sporsmal": "Jeg ønsker en digital kopi av min pasientjournal",
-    "downloadCalendar_HnTimeavtaleAppointment_Description": "For mer informasjon om avtalen, logg inn på helsenorge.no.",
+    "downloadCalendar_HnTimeavtaleAppointment_Description": "For mer informasjon om avtalen, logg inn på Helsenorge.",
     "downloadCalendar_HnTimeavtaleAppointment_Summary": "Time hos {0} for {1}",
     "downloadCalendar_HnTimeavtaleVideoAppointment_Summary": "Videotime hos {0} for {1}",
     "varselMeny_PrimarhelsetjenesteTimeavtale_IkkeMott_Emne": "Din time hos {0} {1} er registrert som ikke møtt",
