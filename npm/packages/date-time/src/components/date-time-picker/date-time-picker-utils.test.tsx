@@ -1,8 +1,8 @@
 import moment from 'moment';
 
-import { DatePickerErrorPhrases } from './../date-range-picker/date-range-picker-types';
 import { DateRangePicker } from '../date-range-picker';
 import TimeInput from '../time-input';
+import { DatePickerErrorPhrases } from './../date-range-picker/date-range-picker-types';
 import * as DateTimePickerUtils from './date-time-picker-utils';
 
 describe('DateTimePicker date-time-picker-utils', () => {
@@ -115,7 +115,7 @@ describe('DateTimePicker date-time-picker-utils', () => {
       });
     });
 
-    describe('Når den kalles med isOtherFieldChecked false, mens feltene er required', () => {
+    describe('Når den kalles med isOtherFieldValidated false, mens feltene er required', () => {
       const d = moment('01.01.2020', 'DD.MM.YYYY');
       const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:00', true, undefined, undefined, false);
       it('Så verifiserer den begge feltene på nytt og returnerer isValid = true', () => {
@@ -123,11 +123,150 @@ describe('DateTimePicker date-time-picker-utils', () => {
       });
     });
 
-    describe('Når den kalles med isOtherFieldChecked false, mens feltene ikke er required', () => {
+    describe('Når den kalles med isOtherFieldValidated false, mens feltene ikke er required', () => {
       const d = moment('01.01.2020', 'DD.MM.YYYY');
       const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:00', false, undefined, undefined, false);
       it('Så er den systematisk isValid = false', () => {
         expect(a).toBeFalsy();
+      });
+    });
+
+    describe('Når isOtherFieldValidated er false', () => {
+      describe('Når den er required', () => {
+        describe('Når den kalles med 60 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:60', true, undefined, undefined, false);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 111 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:111', true, undefined, undefined, false);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 555 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:555', true, undefined, undefined, false);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 666 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:666', true, undefined, undefined, false);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+      });
+
+      describe('Når den ikke er required ', () => {
+        describe('Når den kalles med 60 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:60', false, undefined, undefined, false);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 111 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:111', false, undefined, undefined, false);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 555 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:555', false, undefined, undefined, false);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 666 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:666', false, undefined, undefined, false);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+      });
+    });
+    describe('Når isOtherFieldValidated er true', () => {
+      describe('Når den er required', () => {
+        describe('Når den kalles med 60 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:60', true, undefined, undefined, true);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 111 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:111', true, undefined, undefined, true);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 555 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:555', true, undefined, undefined, true);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 666 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:666', true, undefined, undefined, true);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+      });
+
+      describe('Når den ikke er required ', () => {
+        describe('Når den kalles med 60 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:60', false, undefined, undefined, true);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 111 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:111', false, undefined, undefined, true);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 555 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:555', false, undefined, undefined, true);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
+
+        describe('Når den kalles med 666 minutter', () => {
+          const d = moment('01.01.2020', 'DD.MM.YYYY');
+          const a = DateTimePickerUtils.isFullDateTimeValid(d, '12:666', false, undefined, undefined, true);
+          it('Så er den false', () => {
+            expect(a).toBeFalsy();
+          });
+        });
       });
     });
   });

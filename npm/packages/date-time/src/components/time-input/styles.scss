@@ -1,7 +1,6 @@
 @import '~@helsenorge/designsystem-react/scss/_spacers.scss';
 @import '~@helsenorge/designsystem-react/scss/_breakpoints.scss';
 @import '~@helsenorge/designsystem-react/scss/_palette.scss';
-@import '~@helsenorge/toolkit/utils/variables';
 
 .mol_timeinput {
   &__legend {
@@ -69,7 +68,7 @@
 
     &--active {
       input[type='number'] {
-        border: 2px solid $color-functional-3;
+        border: 2px solid $cherry600;
       }
     }
   }

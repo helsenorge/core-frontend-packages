@@ -41,7 +41,7 @@ export const getFullMomentDate = (date: moment.Moment | undefined, timeString: s
  * @param isRequired - om dato og tid er påkrevde felter
  * @param minimumDateTime - minimum dato den skal sjekkes mot
  * @param maximumDateTime - maximum dato den skal sjekkes mot
- * @param isOtherFieldChecked - om nabofeltet er validert ok
+ * @param isOtherFieldValidated - om nabofeltet er validert ok
  */
 export const isFullDateTimeValid = (
   date: moment.Moment | undefined,
@@ -49,18 +49,23 @@ export const isFullDateTimeValid = (
   isRequired: boolean | undefined,
   minimumDateTime: moment.Moment | undefined,
   maximumDateTime: moment.Moment | undefined,
-  isOtherFieldChecked: boolean
+  isOtherFieldValidated: boolean
 ): boolean => {
-  let isValid = isOtherFieldChecked;
+  let isValid = isOtherFieldValidated;
   const currentDate = getFullMomentDate(date, timeString);
+  const time = !!timeString && moment(timeString, 'HH:mm', true);
 
   if (isRequired) {
-    isValid = !!date && date.isValid() && !!timeString && moment(timeString, 'HH:mm').isValid();
+    isValid = !!date && date.isValid() && !!time && time.isValid();
   }
 
   if (isValid && currentDate) {
     if (isAfterMaxDate(currentDate, maximumDateTime)) isValid = false;
     if (isBeforeMinDate(currentDate, minimumDateTime)) isValid = false;
+  }
+
+  if (isValid && time) {
+    isValid = time.isValid();
   }
 
   return isValid;
