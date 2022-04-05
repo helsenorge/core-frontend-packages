@@ -92,9 +92,11 @@ export class YearInput extends React.Component<YearInputProps, YearInputState> {
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: YearInputProps): void {
-    if (nextProps.value && nextProps.value !== this.props.value) {
-      this.setState({ value: nextProps.value });
+  static getDerivedStateFromProps(nextProps: YearInputProps, prevState: YearInputState): { value: number | undefined } | null {
+    if (nextProps.value && nextProps.value !== prevState.value) {
+      return { value: nextProps.value };
+    } else {
+      return null;
     }
   }
 

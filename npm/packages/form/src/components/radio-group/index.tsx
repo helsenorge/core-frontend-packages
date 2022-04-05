@@ -88,6 +88,7 @@ export interface RadioGroupState {
   lastFocusedValue?: string;
   valid: boolean;
   validated?: boolean;
+  shouldValidate?: boolean;
 }
 
 export class RadioGroup extends React.Component<RadioGroupProps, RadioGroupState> {
@@ -108,17 +109,25 @@ export class RadioGroup extends React.Component<RadioGroupProps, RadioGroupState
     };
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: RadioGroupProps): void {
-    if (this.props.validateOnExternalUpdate && nextProps.selected !== this.props.selected && nextProps.selected) {
-      this.changeSelectedValue(nextProps.selected);
+  static getDerivedStateFromProps(nextProps: RadioGroupProps, prevState: RadioGroupState): RadioGroupState {
+    const updatedState = { ...prevState };
+    if (nextProps.validateOnExternalUpdate && nextProps.selected && nextProps.selected !== prevState.lastFocusedValue) {
+      updatedState.lastFocusedValue = nextProps.selected;
+      updatedState.shouldValidate = true;
     } else {
-      this.setState({
-        lastFocusedValue: nextProps.selected,
-      });
+      updatedState.lastFocusedValue = nextProps.selected;
     }
+
+    return updatedState;
   }
 
-  componentDidUpdate(_prevProps: RadioGroupProps, prevState: RadioGroupState) {
+  componentDidUpdate(_prevProps: RadioGroupProps, prevState: RadioGroupState): void {
+    if (this.state.shouldValidate) {
+      this.validate(this.state.lastFocusedValue);
+
+      this.setState({ shouldValidate: false });
+    }
+
     if (prevState.valid !== this.state.valid) {
       this.notifyValidated();
     }

@@ -117,9 +117,14 @@ export class YearMonthInput extends React.Component<YearMonthInputProps, YearMon
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: YearMonthInputProps): void {
-    if (nextProps.value && (nextProps.value.year !== this.props.value?.year || nextProps.value.month !== this.props.value?.month)) {
-      this.setState({ value: nextProps.value });
+  static getDerivedStateFromProps(
+    nextProps: YearMonthInputProps,
+    prevState: YearMonthInputState
+  ): { value: YearMonthValue | undefined } | null {
+    if (nextProps.value && (nextProps.value.year !== prevState.value?.year || nextProps.value.month !== prevState.value?.month)) {
+      return { value: nextProps.value };
+    } else {
+      return null;
     }
   }
 

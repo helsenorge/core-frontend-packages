@@ -111,6 +111,13 @@ export interface TimeInputState {
   errorString?: string;
 }
 
+const getValue = (props: TimeInputProps): string | undefined => {
+  const { value }: TimeInputProps = props;
+  if (value) {
+    return value;
+  }
+};
+
 export default class TimeInput extends React.Component<TimeInputProps, TimeInputState> {
   static defaultProps: Partial<TimeInputProps> = {
     renderFieldset: true,
@@ -125,7 +132,7 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     this.state = {
       valid: true,
       validated: false,
-      timeString: this.getValue(props),
+      timeString: getValue(props),
     };
 
     this.wrapperRef = React.createRef();
@@ -133,16 +140,14 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     this.minutesInputRef = React.createRef();
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: TimeInputProps): void {
-    this.setState({
-      timeString: this.getValue(nextProps),
-    });
-  }
-
-  getValue(props: TimeInputProps): string | undefined {
-    const { value }: TimeInputProps = props;
-    if (value) {
-      return value;
+  static getDerivedStateFromProps(
+    nextProps: TimeInputProps,
+    prevState: TimeInputState
+  ): { value: string | undefined; timeString: string | undefined } | null {
+    if (nextProps.value !== prevState.value) {
+      return { value: nextProps.value, timeString: getValue(nextProps) };
+    } else {
+      return null;
     }
   }
 

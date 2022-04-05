@@ -133,6 +133,7 @@ export interface SafeInputFieldState {
   loading: boolean;
   dirtyInput: boolean;
   onBlurValidationPromise?: Promise<boolean>;
+  handleValidation?: boolean;
 }
 
 interface EventTargetWithValue extends EventTarget {
@@ -168,12 +169,14 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
       validated: false,
       loading: false,
       dirtyInput: false,
+      handleValidation: false,
     };
 
     this.inputFieldRef = React.createRef();
 
     this.onChange = this.onChange.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleValidation = this.handleValidation.bind(this);
     this.notifyChanged = this.notifyChanged.bind(this);
     this.notifyValidated = this.notifyValidated.bind(this);
     this.onMouseDown = this.onMouseDown.bind(this);
@@ -211,19 +214,39 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
     });
   }
 
-  componentDidUpdate(_prevProps: SafeInputFieldProps, prevState: SafeInputFieldState) {
-    if (prevState.isValid !== this.state.isValid) {
-      this.notifyValidated();
+  static getDerivedStateFromProps(nextProps: SafeInputFieldProps, prevState: SafeInputFieldState): SafeInputFieldState | null {
+    const updatedState = { ...prevState };
+    if (nextProps.validateOnExternalUpdate && prevState.value !== nextProps.value) {
+      const valueString = nextProps.value as string;
+      let formattedValue = valueString;
+      if (nextProps.onChangeFormatter) {
+        formattedValue = nextProps.onChangeFormatter(formattedValue);
+      }
+      if (formattedValue !== prevState.value) {
+        // Input har endret seg. Dirtyinput = ikke validert
+        updatedState.value = formattedValue;
+        updatedState.dirtyInput = true;
+        updatedState.handleValidation = true;
+      }
+
+      return updatedState;
+    } else if (!prevState.focused && nextProps.value && nextProps.value !== prevState.value) {
+      updatedState.value = nextProps.value;
+      return updatedState;
+    } else {
+      return null;
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: SafeInputFieldProps): void {
-    if (this.props.validateOnExternalUpdate && this.state.value !== nextProps.value) {
-      this.handleChange(nextProps.value as string);
-    } else {
-      if (!this.state.focused) {
-        this.setState({ value: nextProps.value });
-      }
+  componentDidUpdate(_prevProps: SafeInputFieldProps, prevState: SafeInputFieldState) {
+    if (this.state.handleValidation) {
+      const valueString = this.state.value as string;
+      this.handleValidation(valueString, valueString);
+      this.setState({ handleValidation: false });
+    }
+
+    if (prevState.isValid !== this.state.isValid) {
+      this.notifyValidated();
     }
   }
 
@@ -241,23 +264,27 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
       // Input har endret seg. Dirtyinput = ikke validert
       this.setState({ value: formattedValue, dirtyInput: true });
 
-      if (!this.validate(formattedValue)) {
-        this.setState({ isValid: false });
-      } else if (this.props.onChangeValidator && this.state.validated) {
-        this.setState({ isValid: this.props.onChangeValidator(value) });
-      } else {
-        this.setState({ isValid: true });
-      }
+      this.handleValidation(value, formattedValue, notify);
+    }
+  }
 
-      if (notify) {
-        notify(formattedValue);
-      }
+  handleValidation(value: string, formattedValue: string, notify?: (formattedValue: string) => void) {
+    if (!this.validate(formattedValue)) {
+      this.setState({ isValid: false });
+    } else if (this.props.onChangeValidator && this.state.validated) {
+      this.setState({ isValid: this.props.onChangeValidator(value) });
+    } else {
+      this.setState({ isValid: true });
+    }
 
-      if (!formattedValue || this.isValueOverMaxLength(formattedValue)) {
-        this.setState({
-          validated: !formattedValue ? false : true,
-        });
-      }
+    if (notify) {
+      notify(formattedValue);
+    }
+
+    if (!formattedValue || this.isValueOverMaxLength(formattedValue)) {
+      this.setState({
+        validated: !formattedValue ? false : true,
+      });
     }
   }
 

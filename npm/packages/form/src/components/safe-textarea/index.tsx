@@ -27,11 +27,14 @@ interface Window {
 }
 export interface SafeTextareaState {
   value?: string;
+  defaultValue?: string;
   focused?: boolean;
   blurred?: boolean;
   valid: boolean;
   validated?: boolean;
   size?: sizes;
+  maxlength?: number;
+  triggerHandleOnChange: boolean;
 }
 
 export interface SafeTextareaProps {
@@ -111,6 +114,24 @@ export interface SafeTextareaProps {
   testId?: string;
 }
 
+const getSize = (props: SafeTextareaProps): sizes => {
+  const { size, maxlength } = props;
+
+  if (size) {
+    return size;
+  } else if (maxlength) {
+    if (maxlength < 250) {
+      return 'small';
+    } else if (maxlength < 500) {
+      return 'medium';
+    } else {
+      return 'large';
+    }
+  } else {
+    return 'medium';
+  }
+};
+
 export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextareaState> {
   static hnFormComponent = true;
 
@@ -123,19 +144,17 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
     this.state = {
       focused: false,
       value: undefined,
+      defaultValue: props.value,
       blurred: false,
       valid: true,
       validated: false,
+      triggerHandleOnChange: false,
     };
-  }
-
-  UNSAFE_componentWillMount(): void {
-    this.setSize(this.props);
   }
 
   componentDidMount(): void {
     const { value } = this.props;
-    this.setState({ value }, () => {
+    this.setState({ size: getSize(this.props), value }, () => {
       if (value === '' || value === null || value === undefined) {
         return;
       } else {
@@ -151,42 +170,37 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: SafeTextareaProps): void {
-    if (!this.state.focused) {
-      this.setState({ value: nextProps.value });
+  static getDerivedStateFromProps(nextProps: SafeTextareaProps, prevState: SafeTextareaState): SafeTextareaState | null {
+    const updatedState = { ...prevState };
+    if (nextProps.value && nextProps.value !== prevState.defaultValue && !prevState.focused) {
+      updatedState.defaultValue = nextProps.value;
+      updatedState.value = nextProps.value;
     }
-    if (this.props.size !== nextProps.size || this.props.maxlength !== nextProps.maxlength) {
-      this.setSize(nextProps);
+    if (prevState.size !== nextProps.size || prevState.maxlength !== nextProps.maxlength) {
+      updatedState.maxlength = nextProps.maxlength;
+      updatedState.size = getSize(nextProps);
+    }
+    if (nextProps.validateOnExternalUpdate && nextProps.value !== prevState.value) {
+      updatedState.triggerHandleOnChange = true;
     }
 
-    if (this.props.validateOnExternalUpdate && nextProps.value !== this.props.value) {
-      this.handleOnChange(nextProps.value ?? '');
+    if (updatedState !== prevState) {
+      return updatedState;
+    } else {
+      return null;
     }
   }
 
   componentDidUpdate(_prevProps: SafeTextareaProps, prevState: SafeTextareaState): void {
+    if (this.state.triggerHandleOnChange) {
+      this.handleOnChange(this.props.value ?? '');
+      this.setState({ triggerHandleOnChange: false });
+    }
+
     if (prevState.valid !== this.state.valid) {
       this.notifyValidated();
     }
   }
-
-  setSize = (props: SafeTextareaProps): void => {
-    const { size, maxlength } = props;
-
-    if (size) {
-      this.setState({ size });
-    } else if (maxlength) {
-      if (maxlength < 250) {
-        this.setState({ size: 'small' });
-      } else if (maxlength < 500) {
-        this.setState({ size: 'medium' });
-      } else {
-        this.setState({ size: 'large' });
-      }
-    } else {
-      this.setState({ size: 'medium' });
-    }
-  };
 
   validator = (value: string | undefined): boolean => {
     const overMaxlength = this.isValueOverMaxLength(value);

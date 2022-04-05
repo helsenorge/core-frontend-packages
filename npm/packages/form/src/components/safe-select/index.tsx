@@ -113,7 +113,7 @@ export default class SafeSelectField extends React.Component<SafeSelectProps, Sa
     };
   }
 
-  UNSAFE_componentWillMount(): void {
+  componentDidMount(): void {
     const { selected, value }: SafeSelectProps = this.props;
 
     //value kom ikke inn som prop på et bruk av nedtrekksliste, men selected gjør. Legger opp til bruk av begge.
@@ -125,10 +125,7 @@ export default class SafeSelectField extends React.Component<SafeSelectProps, Sa
     if (this.props.onChangeValidator) {
       this.setState({ isValid: this.props.onChangeValidator(compatibleValue) });
     }
-  }
 
-  componentDidMount(): void {
-    const { value }: SafeSelectProps = this.props;
     if (value) {
       this.setState({ value }, () => {
         if (value === '' || value === null || value === undefined) {
@@ -140,9 +137,13 @@ export default class SafeSelectField extends React.Component<SafeSelectProps, Sa
     }
   }
 
-  UNSAFE_componentWillReceiveProps(nextProps: SafeSelectProps): void {
-    if (nextProps.value !== this.props.value) {
-      this.setState({ value: nextProps.value });
+  static getDerivedStateFromProps(nextProps: SafeSelectProps, prevState: SafeSelectState): SafeSelectState | null {
+    const updatedState = { ...prevState };
+    if (nextProps.value && nextProps.value !== prevState.value) {
+      updatedState.value = nextProps.value;
+      return updatedState;
+    } else {
+      return null;
     }
   }
 

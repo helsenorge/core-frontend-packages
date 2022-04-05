@@ -3,7 +3,8 @@ import '@helsenorge/core-build/lib/polyfills';
 import React from 'react';
 
 import { render } from 'react-dom';
-import { FormExample } from '../examples';
+
+import { FormExample, RadioGroupExample, SafeInputFieldExample, SafeSelectExample, SafeTextareaExample } from '../examples';
 
 const anchor: Element | null = document.getElementById('main-content-wrapper');
 
@@ -16,6 +17,14 @@ const TestSide: React.FC = () => {
             <h1>{'Form Testside'}</h1>
             <p>{'Her kan du legge inn komponenter og teste dem med "npm run start".'}</p>
             <FormExample />
+            <h2>{'Radio-group'}</h2>
+            <RadioGroupExample />
+            <h2>{'Safe-Input-Field'}</h2>
+            <SafeInputFieldExample />
+            <h2>{'Safe-Select'}</h2>
+            <SafeSelectExample />
+            <h2>{'Safe-Textarea'}</h2>
+            <SafeTextareaExample />
           </div>
         </div>
       </div>
