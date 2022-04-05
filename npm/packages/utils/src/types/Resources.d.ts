@@ -2285,9 +2285,13 @@ export type HNMinHelseCommonJS = {
 
 export type HNMinHelseContent = { 
   /** 
-  * Velg behandlings­sted
+  * Velg behandlingssted
   */
   page_VelgBehandlingssted_NavigateBackLinkTitle: string;
+  /** 
+  * Behandlinger
+  */
+  page_Behandlinger_NavigateBackLinkTitle: string;
   /** 
   * Fullmakter
   */
