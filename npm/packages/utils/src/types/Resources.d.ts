@@ -2285,6 +2285,10 @@ export type HNMinHelseCommonJS = {
 
 export type HNMinHelseContent = { 
   /** 
+  * Velg behandlings­sted
+  */
+  page_VelgBehandlingssted_NavigateBackLinkTitle: string;
+  /** 
   * Fullmakter
   */
   page_Fullmakt_Title: string;
@@ -18351,10 +18355,6 @@ export type HNMinHelsePasientReiserStrings = {
 
 export type HNMinHelsePersonvernStrings = { 
   /** 
-  * Oppgave
-  */
-  page_HendelsesLogg_42: string;
-  /** 
   * Denne tjenesten er ikke tilgjengelig
   */
   clientOperation_updateKjKontaktperson_Error_Title: string;
@@ -18366,6 +18366,10 @@ export type HNMinHelsePersonvernStrings = {
   * Du har ikke tilgang til å slette kontaktperson.
   */
   clientOperation_deleteKjKontaktperson_Error_Tekst: string;
+  /** 
+  * Oppgave
+  */
+  page_HendelsesLogg_42: string;
   /** 
   * Ved fullmakt
   */
