@@ -38,7 +38,10 @@
     "@helsenorge/designsystem-react": "1.0.0-beta120"
   },
   "dependencies": {
-    "moment": "^2.29.2"
+    "@types/classnames": "2.3.1",
+    "classnames": "2.3.1",
+    "moment": "^2.29.2",
+    "tabbable": "5.2.1"
   },
   "husky": {
     "hooks": {
