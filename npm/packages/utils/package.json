@@ -12,7 +12,6 @@
     "build": "node scripts/build.cjs",
     "postbuild": "rimraf lib/__devonly__",
     "prepublishOnly": "npm run build",
-    "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
@@ -42,11 +41,6 @@
     "classnames": "2.3.1",
     "moment": "^2.29.2",
     "tabbable": "5.2.1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "bash node_modules/@helsenorge/core-build/precommit.sh"
-    }
   },
   "browserslist": [
     "> 0.2% in NO",

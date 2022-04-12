@@ -32,13 +32,7 @@
     "pretest": "crlf --set=LF \"src/**/*.{tsx,snap}\"",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
-    "prepublishOnly": "npm run build",
-    "precommit-script": "pretty-quick --staged"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "bash node_modules/@helsenorge/core-build/precommit.sh"
-    }
+    "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@helsenorge/core-build": "^24.0.0-beta",
