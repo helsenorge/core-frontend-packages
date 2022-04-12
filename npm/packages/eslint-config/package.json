@@ -10,11 +10,6 @@
   ],
   "author": "helsenorge",
   "license": "UNLICENSED",
-  "husky": {
-    "hooks": {
-      "pre-commit": "bash precommit.sh"
-    }
-  },
   "devDependencies": {
     "copyfiles": "2.4.1",
     "typescript": "~4.6.3"
