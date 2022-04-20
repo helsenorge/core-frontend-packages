@@ -7,8 +7,8 @@ import moment, { Moment } from 'moment';
 import { SingleDatePicker as AirbnbSingleDatePicker, DateRangePicker as AirbnbDateRangePicker, FocusedInputShape } from 'react-dates';
 
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
-
 import ValidationError from '@helsenorge/form/components/form/validation-error';
+
 import DateNativeInput from './date-native-input';
 import DateRangePickerLabel from './date-range-picker-label';
 import { DateRangePickerState } from './date-range-picker-types';
@@ -438,7 +438,7 @@ describe('DateRangePicker index', () => {
             onDateChange={mockDateChange}
             singleDateValue={moment('01.06.2021', 'DD.MM.YYYY')}
             initialDate={moment('01.06.2021', 'DD.MM.YYYY')}
-            minimumDate={moment().subtract(1, 'year')}
+            minimumDate={moment('01.06.2021', 'DD.MM.YYYY').subtract(1, 'year')}
             maximumDate={moment('01.06.2021', 'DD.MM.YYYY')}
           />
         );
