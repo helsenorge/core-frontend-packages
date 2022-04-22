@@ -37,7 +37,6 @@ interface ExampleState {
   formValidated: boolean;
   inputFieldRequiredValue: string;
   inputFieldNameValue: string;
-  saveButton: boolean;
   inputFieldDecimalValue: string;
   inputFieldNumberValue: string;
 }
@@ -70,7 +69,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
       inputFieldRequiredValue: '',
       inputFieldNameValue: '',
       inputFieldDecimalValue: '',
-      saveButton: false,
       inputFieldNumberValue: '',
     };
   }
@@ -194,10 +192,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
     this.setState({ radioGroupValue: radioKnapp });
   };
 
-  handleSaveButtonChange = (): void => {
-    this.setState({ saveButton: !this.state.saveButton });
-  };
-
   handleDisableButtonChange = (): void => {
     this.setState({ disabled: !this.state.disabled });
   };
@@ -214,18 +208,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
     this.setState({
       formSubmitted: true,
     });
-  };
-
-  saveButtonOnClick = (): void => {
-    if (!this.state.saved) {
-      this.setState({
-        formSubmitted: true,
-        saving: true,
-      });
-      setTimeout(() => {
-        // this.setState({ saving: false, saved: true });
-      }, 3000);
-    }
   };
 
   onCancel = (): void => {
@@ -269,7 +251,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
             '(!) Form validering fungerer slik at imnput-komponenter wrappes i en <Validation>. De clones ved bruk av ref og berikes av valideringsmetoder. En class ref kan ikke sendes videre til en FunctionComponent. Det er derfor kun Class Components som kan wrappes i <Validation> (ikke FunctionComponent)'
           }
         </p>
-        <CheckBox label="Bruk lagreknapp" onChange={this.handleSaveButtonChange} id="savebuttoncheckbox" checked={this.state.saveButton} />
         <CheckBox label="Disabled" onChange={this.handleDisableButtonChange} id="disabledcheckbox" checked={this.state.disabled} />
         <Form
           action="#"
@@ -287,16 +268,10 @@ export class FormExample extends React.Component<{}, ExampleState> {
           pauseButtonLevel="secondary"
           cancelButtonRight
           onSubmit={this.onSubmit}
-          saveButtonOnClick={this.saveButtonOnClick}
-          saving={this.state.saving}
-          saved={this.state.saved}
-          saveText={this.state.saveButton ? 'Lagre endringer' : undefined}
-          savedText={'Lagret'}
           validationSummary={{
             enable: true,
             header: 'Sjekk at alt er riktig utfylt',
           }}
-          saveButtonTestId="form-savebutton"
           draftButtonTestId="form-draftbutton"
           submitButtonTestId="form-submitbutton"
           cancelButtonTestId="form-cancelbutton"

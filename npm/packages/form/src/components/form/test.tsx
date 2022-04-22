@@ -4,8 +4,6 @@ import { shallow, ShallowWrapper, mount } from 'enzyme';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
 
-import { SaveButton } from '@helsenorge/toolkit/components/buttons/save-button';
-
 import SafeInputField from '../safe-input-field';
 import Validation from './validation';
 import ValidationError from './validation-error';
@@ -241,16 +239,5 @@ describe('Form', () => {
       </Form>
     );
     expect(form.find(Button).last().props().disabled).toBeTruthy();
-  });
-
-  it('renders SaveButton when all save props are set', () => {
-    const form = mount(
-      <Form action="" saving={false} saved={false} saveText="Lagre" savedText="Lagret" saveButtonOnClick={jest.fn()}>
-        <Validation>
-          <SafeInputField id="id" value="value" />
-        </Validation>
-      </Form>
-    );
-    expect(form.find(SaveButton).length).toBe(1);
   });
 });

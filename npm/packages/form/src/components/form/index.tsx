@@ -93,16 +93,6 @@ export interface FormProps {
   onCancel?: (event?: React.FormEvent<{}>) => void;
   /** Function som kalles ved pause */
   onPause?: () => void;
-  /** Function som kalles som callback etter onSubmit når det brukes <SaveButton> component */
-  saveButtonOnClick?: () => void;
-  /** Om Formen holder på med å lagre */
-  saving?: boolean;
-  /** Om Formen er lagret */
-  saved?: boolean;
-  /** Tekst som vises når formen er lagret (brukes videre på <SaveButton>) */
-  savedText?: string;
-  /** Tekst som vises når formen holder på med å lagre (brukes videre på <SaveButton>) */
-  saveText?: string;
   /** Gjør det mulig å overskrive optionalLabel, requiredLabel, showOptionalLabel og showRequired Label + bruke custom notifyValidated på komponent'en i en form */
   allowChildPropOverride?: boolean;
   /** Teksten til required label */
@@ -121,8 +111,6 @@ export interface FormProps {
   validationSummaryPlacement?: ValidationSummaryPlacement;
   /** Innhold som vises i formen */
   children?: React.ReactNode;
-  /** Id som benyttes for å hente ut SaveButton i automatiske tester */
-  saveButtonTestId?: string;
   /** Id som benyttes for å hente ut DraftButton i automatiske tester */
   draftButtonTestId?: string;
   /** Id som benyttes for å hente ut SubmitButton i automatiske tester */
@@ -273,14 +261,8 @@ export default class Form extends React.Component<FormProps, FormState> {
         submitButtonRightIcon={this.props.submitButtonRightIcon}
         submitButtonType={this.props.submitButtonType}
         submitButtonDisabled={this.props.submitButtonDisabled}
-        saving={this.props.saving}
-        saved={this.props.saved}
-        saveText={this.props.saveText}
-        savedText={this.props.savedText}
-        saveButtonOnClick={this.props.saveButtonOnClick}
         onFormSubmit={this.onFormSubmit}
         onSubmit={this.props.onSubmit}
-        saveButtonTestId={this.props.saveButtonTestId}
         submitButtonTestId={this.props.submitButtonTestId}
       />
     );
