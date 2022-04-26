@@ -2333,7 +2333,9 @@ export type HNMinHelseContent = {
   */
   page_feilmelding_description: string;
   /** 
-  * Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
+  * Les om <a class="Page_NotAccessToService_Link_Text" href="/ungdom/">Helsenorge for ungdom</a>
+
+Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">forandre på samtykket ditt.</a>
   */
   page_NotAccessToService_Link_Text: string;
   /** 
