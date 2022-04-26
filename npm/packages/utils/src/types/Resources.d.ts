@@ -2501,7 +2501,7 @@ Les om <a class="Page_NotAccessToService_Link_Text" href="/ungdom/">Helsenorge f
   */
   page_NotAccessToService_Desc: string;
   /** 
-  * Du har ikke tilgang til denne tjenesten
+  * Du har dessverre ikke tilgang til denne tjenesten
   */
   page_NotAccessToService_Title: string;
   /** 
