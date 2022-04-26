@@ -2496,8 +2496,6 @@ export type HNMinHelseContent = {
   * Du har forsøkt å bruke en tjeneste som ikke er tilgjengelig for deg eller den du representerer. Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tillater at du bruker denne tjenesten eller at du som forelder ikke har lov til å bruke tjenesten for barnet ditt.
 
 Har du logget inn med Feide, har du heller ikke tilgang til noen helsetjenester på Helsenorge. Da kan du kun bruke tilgjengelige tjenester i Helsenorge-appen.
-
-Les om <a class="Page_NotAccessToService_Link_Text" href="/ungdom/">Helsenorge for ungdom</a>
   */
   page_NotAccessToService_Desc: string;
   /** 
