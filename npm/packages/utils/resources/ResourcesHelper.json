@@ -590,7 +590,7 @@
     "page_Kontaktinformasjon_Description": "Denne siden inneholder informasjon om deg som brukes av Helsenorge og aktører i helsesektoren.",
     "page_feilmelding_title": "Noe gikk dessverre galt",
     "page_feilmelding_description": "Hvis du prøver å logge inn kan du gjøre et nytt forsøk senere.",
-    "page_NotAccessToService_Link_Text": "Dersom du ønsker, kan du <a class=\"Page_NotAccessToService_Link_Text\" href=\"/personverninnstillinger/samtykker/velg\">forandre på samtykket ditt.</a>",
+    "page_NotAccessToService_Link_Text": "Les om <a class=\"Page_NotAccessToService_Link_Text\" href=\"/ungdom/\">Helsenorge for ungdom</a>\n\nDersom du ønsker, kan du <a class=\"Page_NotAccessToService_Link_Text\" href=\"/personverninnstillinger/samtykker/velg\">forandre på samtykket ditt.</a>",
     "page_AskForAccessToService_Link_Text": "<a class=\"Page_AskForAccessToService_Link_Text\" href=\"https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no\">Mer informasjon om hvordan representere andre på Helsenorge</a>",
     "page_feilmelding_link_text": "Gå til forsiden",
     "page_Samtykkeoppgave_Title": "Samtykkeoppgave",
