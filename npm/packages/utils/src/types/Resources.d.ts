@@ -2495,9 +2495,9 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   */
   page_AskForAccessToService_Title: string;
   /** 
-  * Du har forsøkt å bruke en tjeneste som ikke er tilgjengelig for deg eller den du representerer. Dette kan skyldes at du ikke har gitt nødvendig samtykke, fullmakten ikke tillater at du bruker denne tjenesten eller at du som forelder ikke har lov til å bruke tjenesten for barnet ditt.
-
-Har du logget inn med Feide, har du heller ikke tilgang til noen helsetjenester på Helsenorge. Da kan du kun bruke tilgjengelige tjenester i Helsenorge-appen.
+  * <p>Tjenesten er ikke tilgjengelig for deg eller den du representerer. Det kan være fordi du ikke har nødvendig samtykke eller fullmakt til bruk av tjenesten, eller at du som forelder ikke har lov å bruke tjenesten på vegne av barnet ditt. <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">Du kan endre samtykket ditt her.</a></p>
+<p>Har du logget inn med Feide, har du heller ikke tilgang til noen helsetjenester på Helsenorge. Da kan du kun bruke tilgjengelige tjenester i Helsenorge-appen.</p>
+Les om <a class="Page_NotAccessToService_Link_Text" href="/ungdom/">Helsenorge for ungdom</a>
   */
   page_NotAccessToService_Desc: string;
   /** 
