@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/form",
-  "version": "23.3.0",
+  "version": "23.3.1",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -49,7 +49,7 @@
   "devDependencies": {
     "@helsenorge/core-build": "^23.0.5",
     "@helsenorge/core-utils": "^23.2.0",
-    "@helsenorge/designsystem-react": "1.0.0-beta127",
+    "@helsenorge/designsystem-react": "1.0.0-beta120",
     "@helsenorge/toolkit": "^23.2.0"
   },
   "browserslist": [
