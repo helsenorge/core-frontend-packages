@@ -4,7 +4,7 @@ import { isValid } from '@helsenorge/core-utils/string-utils';
 
 import SafeInputField from './index';
 
-export const SafeInputFieldExample = () => {
+export const SafeInputFieldExample: React.FC = () => {
   const [inputValue, setInputValue] = React.useState<string | number>('');
   const onBlur = (): void => {
     const info: Console = console;
