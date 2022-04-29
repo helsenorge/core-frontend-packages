@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
-import { Spinner } from '@helsenorge/toolkit/components/spinner';
-
 import ValidationError from '../form/validation-error';
 import { Label } from '../label';
 
@@ -66,8 +64,6 @@ export interface SafeTextareaProps {
   counter?: boolean;
   /** Om lengden på label skal vises eller ikke*/
   hideLengthLabel?: boolean;
-  /** Viser en spinner ved loading */
-  loading?: boolean;
   /** Function som kalles når fokus går bort fra feltet */
   onBlur?: (event: React.FocusEvent<{}>) => void;
   /** Function som kalles når fokus er på feltet */
@@ -367,7 +363,6 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
   render(): JSX.Element {
     const {
       maxlength,
-      loading,
       isRequired,
       minlength,
       id,
@@ -428,11 +423,6 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
       );
     }
 
-    let spinner: JSX.Element | null = null;
-    if (loading) {
-      spinner = <Spinner inline mini />;
-    }
-
     let required = false;
     if (isRequired) {
       required = isRequired;
@@ -482,7 +472,6 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
         />
         <div className={toolkitstyles['safetextarea__printable-textarea-content']}>{value}</div>
 
-        {spinner}
         {counter}
         {children}
       </div>

@@ -64,22 +64,6 @@ input[type='date'] {
       font-style: italic;
     }
 
-    // Gjør plass til en spinner på venstre side
-    &--loading {
-      left: 40px;
-      width: calc(99% - 40px);
-
-      + .atom_input__spinner {
-        position: absolute;
-        bottom: 8px;
-        left: 0;
-        opacity: 0;
-        animation: fadein ease-in 0.1s;
-        animation-fill-mode: forwards;
-        animation-delay: 0.2s;
-      }
-    }
-
     &:hover:not(.atom_input--disabled) {
       background-color: $neutral50;
       border-color: $neutral400;
@@ -99,25 +83,6 @@ input[type='date'] {
       max-width: calc((0.8rem * #{$i}) + (#{$paddingX} * 2) + #{$extraWidth});
     }
   }
-
-  &.atom_input--spinnerright.atom_input--loading {
-    left: inherit;
-    width: 99%;
-
-    + .atom_input__spinner {
-      display: inline-block;
-      margin-left: 1rem;
-      position: static;
-      opacity: 0;
-      animation: fadein ease-in 0.1s;
-      animation-fill-mode: forwards;
-      animation-delay: 0.2s;
-    }
-  }
-}
-
-.mol_validation.mol_validation--active .atom_input--loading + .atom_input__spinner {
-  bottom: 24px;
 }
 
 //Maks lengde på input felt nummer trenger ekstra plass for piler på Chrome
@@ -147,4 +112,8 @@ input[type='tel'] {
   to {
     opacity: 1;
   }
+}
+.atom_input__loader {
+  top: 1.65rem;
+  left: 1rem;
 }
