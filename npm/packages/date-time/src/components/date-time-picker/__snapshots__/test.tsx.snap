@@ -134,17 +134,19 @@ exports[`DateTimePicker Når den instansieres for første gang Så renderes den 
                 class="safeInputField"
                 id="datetime1-time_hours-wrapper"
               >
-                <input
-                  aria-label="Timer"
-                  aria-required="true"
-                  autocomplete="off"
-                  class="hn-safe-input atom_input atom_input--medium atom_input--2"
-                  max="23"
-                  min="0"
-                  required=""
-                  type="number"
-                  value="12"
-                />
+                <span>
+                  <input
+                    aria-label="Timer"
+                    aria-required="true"
+                    autocomplete="off"
+                    class="hn-safe-input atom_input atom_input--medium atom_input--2"
+                    max="23"
+                    min="0"
+                    required=""
+                    type="number"
+                    value="12"
+                  />
+                </span>
               </div>
               <span
                 class="mol_timeinput__separator"
@@ -155,17 +157,19 @@ exports[`DateTimePicker Når den instansieres for første gang Så renderes den 
                 class="safeInputField"
                 id="datetime1-time_minutes-wrapper"
               >
-                <input
-                  aria-label="Minutter"
-                  aria-required="true"
-                  autocomplete="off"
-                  class="hn-safe-input atom_input atom_input--medium atom_input--2"
-                  max="59"
-                  min="0"
-                  required=""
-                  type="number"
-                  value="10"
-                />
+                <span>
+                  <input
+                    aria-label="Minutter"
+                    aria-required="true"
+                    autocomplete="off"
+                    class="hn-safe-input atom_input atom_input--medium atom_input--2"
+                    max="59"
+                    min="0"
+                    required=""
+                    type="number"
+                    value="10"
+                  />
+                </span>
               </div>
             </div>
           </fieldset>
