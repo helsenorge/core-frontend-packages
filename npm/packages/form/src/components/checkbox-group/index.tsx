@@ -13,8 +13,6 @@ export interface Option {
   label: string;
   /** Om checkbox'en er checked som default */
   checked?: boolean;
-  /** legger en suffix etter labelteksten på checkbox'en */
-  labelSuffixDangerousHtml?: string;
   /* Sendes videre til Checkbox i helpButton property */
   hjelpetrigger?: JSX.Element;
   /** Om checkbox'en er disabled */
@@ -166,7 +164,6 @@ export default class CheckBoxGroup extends React.Component<Props, State> {
       return (
         <CheckBox
           label={el.label}
-          labelSuffixDangerousHtml={el.labelSuffixDangerousHtml}
           key={el.id}
           id={`${this.props.id}-${el.id}`}
           checked={el.checked}
