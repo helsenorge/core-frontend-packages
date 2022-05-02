@@ -6,11 +6,6 @@ import ValidationError from '../form/validation-error';
 import CheckThick from './CheckThick';
 
 import './styles.scss';
-
-interface DangerousInnerHtml {
-  __html: string;
-}
-
 export interface CheckboxProps {
   /** Unik Id for Input */
   id: string;
@@ -30,8 +25,6 @@ export interface CheckboxProps {
   labelClassName?: string;
   /** Om checkbox'en er disabled */
   disabled?: boolean;
-  /** legger en suffix etter labelteksten på checkbox'en */
-  labelSuffixDangerousHtml?: string;
   /** legger en kommentar etter labelteksten og suffix'en på checkbox'en */
   comment?: string;
   /** Om det er påkrevd å huke av boksen */
@@ -127,14 +120,6 @@ export class CheckBox extends React.Component<CheckboxProps, CheckboxState> {
     }
   };
 
-  createDangerousHtmlLabelSuffix() {
-    if (!this.props.labelSuffixDangerousHtml) {
-      return null;
-    }
-    const dangerourHtml: DangerousInnerHtml = { __html: this.props.labelSuffixDangerousHtml };
-    return <span dangerouslySetInnerHTML={dangerourHtml} />;
-  }
-
   notifyValidated(): void {
     if (this.props.onValidated) {
       this.props.onValidated(this.state.valid);
@@ -202,7 +187,7 @@ export class CheckBox extends React.Component<CheckboxProps, CheckboxState> {
           <label htmlFor={this.props.id} className={`atom_checkbox__label ${labelClasses}`} data-testid={labelTestId}>
             <CheckThick size="small" tabIndex={-1} className={`atom_checkbox__checkicon ${checkiconClasses}`} />
             <span className={`atom_checkbox__text ${textClasses}`}>{this.props.label}</span>
-            {this.createDangerousHtmlLabelSuffix()} {comment}
+            {comment}
           </label>
           {this.props.helpButton ? <span className="atom_helptrigger-container">{this.props.helpButton}</span> : null}
         </div>
