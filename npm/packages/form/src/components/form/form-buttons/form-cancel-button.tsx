@@ -1,8 +1,7 @@
 import * as React from 'react';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
-import Icon from '@helsenorge/designsystem-react/components/Icons';
-import ArrowLeft from '@helsenorge/designsystem-react/components/Icons/ArrowLeft';
+import Icon, { SvgIcon } from '@helsenorge/designsystem-react/components/Icons';
 
 import toolkitstyles from '../styles.module.scss';
 
@@ -18,9 +17,9 @@ interface FormCancelButtonProps {
   /** Cancel button type. Default is 'action' */
   cancelButtonType?: 'action' | 'display';
   /** If the cancel button has an icon to be shown on the left - only possible if cancelButtonType is 'display' */
-  cancelButtonLeftIcon?: JSX.Element;
+  cancelButtonLeftIcon?: SvgIcon;
   /** If the cancel button has an icon to be shown on the right - only possible if cancelButtonType is 'display' */
-  cancelButtonRightIcon?: JSX.Element;
+  cancelButtonRightIcon?: SvgIcon;
   /** If the cancel button is disabled  */
   cancelButtonDisabled?: boolean;
   /** Function som kalles ved klikk på Avrbyt */
@@ -55,9 +54,9 @@ const FormCancelButton: React.FC<FormCancelButtonProps> = (props: FormCancelButt
       disabled={props.cancelButtonDisabled}
       testId={props.cancelButtonTestId}
     >
-      {!!props.cancelButtonLeftIcon && <Icon svgIcon={ArrowLeft} />}
+      {!!props.cancelButtonLeftIcon && <Icon svgIcon={props.cancelButtonLeftIcon} />}
       {props.cancelButtonText}
-      {!!props.cancelButtonRightIcon && <Icon svgIcon={ArrowLeft} />}
+      {!!props.cancelButtonRightIcon && <Icon svgIcon={props.cancelButtonRightIcon} />}
     </Button>
   );
 };

@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
+import { SvgIcon } from '@helsenorge/designsystem-react/components/Icons';
 import Loader from '@helsenorge/designsystem-react/components/Loader';
 
 import FormCancelButton from './form-buttons/form-cancel-button';
@@ -55,20 +56,18 @@ export interface FormProps {
   /** Cancel button type. Default is 'action' */
   cancelButtonType?: 'action' | 'display';
   /** If the cancel button has an icon to be shown on the left - only possible if cancelButtonType is 'display' */
-  cancelButtonLeftIcon?: JSX.Element;
+  cancelButtonLeftIcon?: SvgIcon;
   /** If the cancel button has an icon to be shown on the right - only possible if cancelButtonType is 'display' */
-  cancelButtonRightIcon?: JSX.Element;
+  cancelButtonRightIcon?: SvgIcon;
   /** If the cancel button is disabled  */
   cancelButtonDisabled?: boolean;
   /** Setter outline variant på CancelButton */
   cancelButtonOutline?: boolean;
-
   /** Teksten som vises på lagre knappen */
   draftButtonText?: string;
   /** Ekstra CSS-class som legges på lagre knappen */
   draftButtonClasses?: string;
   /** Teksten som vises på pause knappen */
-
   pauseButtonText?: string;
   /** Ekstra CSS-class som legges på pause knappen */
   pauseButtonClasses?: string;
@@ -77,7 +76,7 @@ export interface FormProps {
   /** If the pause button is a primary, secondary or tertiary button */
   pauseButtonLevel?: 'primary' | 'secondary' | 'tertiary';
   /** If the pause button has an icon to be shown on the left - only possible if submitButtonType is 'display'  */
-  pauseButtonLeftIcon?: JSX.Element;
+  pauseButtonLeftIcon?: SvgIcon;
   /** If the pause button is disabled  */
   pauseButtonDisabled?: boolean;
 

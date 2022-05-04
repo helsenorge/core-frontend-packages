@@ -2,8 +2,7 @@ import * as React from 'react';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
 import { ButtonVariants } from '@helsenorge/designsystem-react/components/Button';
-import { Icon } from '@helsenorge/designsystem-react/components/Icons';
-import Pause from '@helsenorge/designsystem-react/components/Icons/Pause';
+import { Icon, SvgIcon } from '@helsenorge/designsystem-react/components/Icons';
 
 import toolkitstyles from '../styles.module.scss';
 
@@ -16,7 +15,7 @@ interface FormPauseButtonProps {
   /** If the pause button is a primary, secondary or tertiary button */
   pauseButtonLevel?: 'primary' | 'secondary' | 'tertiary';
   /** If the pause button has an icon to be shown on the left - only possible if submitButtonType is 'display'  */
-  pauseButtonLeftIcon?: JSX.Element;
+  pauseButtonLeftIcon?: SvgIcon;
   /** If the pause button is disabled  */
   pauseButtonDisabled?: boolean;
   /** Function som kalles ved pause */
@@ -58,7 +57,7 @@ const FormPauseButton: React.FC<FormPauseButtonProps> = (props: FormPauseButtonP
       onClick={onPauseHandler}
       testId={props.pauseButtonTestId}
     >
-      {!!props.pauseButtonLeftIcon && <Icon svgIcon={Pause} />}
+      {!!props.pauseButtonLeftIcon && <Icon svgIcon={props.pauseButtonLeftIcon} />}
       {props.pauseButtonText}
     </Button>
   );
