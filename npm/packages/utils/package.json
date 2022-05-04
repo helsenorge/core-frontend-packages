@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "24.0.0-beta.7",
+  "version": "23.5.0",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -12,6 +12,7 @@
     "build": "node scripts/build.cjs",
     "postbuild": "rimraf lib/__devonly__",
     "prepublishOnly": "npm run build",
+    "precommit-script": "pretty-quick --staged",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
@@ -33,14 +34,16 @@
     "@helsenorge/designsystem-react": "^1.0.0-beta"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^24.0.0-beta.7",
-    "@helsenorge/designsystem-react": "1.0.0-beta128"
+    "@helsenorge/core-build": "^23.5.0",
+    "@helsenorge/designsystem-react": "1.0.0-beta127"
   },
   "dependencies": {
-    "@types/classnames": "2.3.1",
-    "classnames": "2.3.1",
-    "moment": "^2.29.2",
-    "tabbable": "5.2.1"
+    "moment": "^2.29.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "bash node_modules/@helsenorge/core-build/precommit.sh"
+    }
   },
   "browserslist": [
     "> 0.2% in NO",
