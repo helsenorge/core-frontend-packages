@@ -230,7 +230,7 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
       }
 
       return updatedState;
-    } else if (!prevState.focused && nextProps.value && nextProps.value !== prevState.value) {
+    } else if (!prevState.focused && nextProps.value !== null && nextProps.value !== undefined && nextProps.value !== prevState.value) {
       updatedState.value = nextProps.value;
       return updatedState;
     } else {
