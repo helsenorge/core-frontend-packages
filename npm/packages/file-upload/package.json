@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "23.5.0",
+  "version": "23.6.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -51,7 +51,7 @@
     "@helsenorge/core-build": "^23.5.0",
     "@helsenorge/core-utils": "^23.5.0",
     "@helsenorge/designsystem-react": "1.0.0-beta127",
-    "@helsenorge/form": "^23.5.0",
+    "@helsenorge/form": "^23.6.0",
     "@helsenorge/toolkit": "^23.5.0"
   },
   "dependencies": {
