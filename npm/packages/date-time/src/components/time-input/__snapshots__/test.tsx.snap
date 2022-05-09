@@ -27,16 +27,18 @@ exports[`TimeInput Renders correctly 1`] = `
         class="safeInputField"
         id="2_hours-wrapper"
       >
-        <input
-          aria-label="Timer"
-          aria-required="false"
-          autocomplete="off"
-          class="hn-safe-input atom_input atom_input--medium atom_input--2"
-          max="23"
-          min="0"
-          type="number"
-          value=""
-        />
+        <span>
+          <input
+            aria-label="Timer"
+            aria-required="false"
+            autocomplete="off"
+            class="hn-safe-input atom_input atom_input--medium atom_input--2"
+            max="23"
+            min="0"
+            type="number"
+            value=""
+          />
+        </span>
       </div>
       <span
         class="mol_timeinput__separator"
@@ -47,16 +49,18 @@ exports[`TimeInput Renders correctly 1`] = `
         class="safeInputField"
         id="2_minutes-wrapper"
       >
-        <input
-          aria-label="Minutter"
-          aria-required="false"
-          autocomplete="off"
-          class="hn-safe-input atom_input atom_input--medium atom_input--2"
-          max="59"
-          min="0"
-          type="number"
-          value=""
-        />
+        <span>
+          <input
+            aria-label="Minutter"
+            aria-required="false"
+            autocomplete="off"
+            class="hn-safe-input atom_input atom_input--medium atom_input--2"
+            max="59"
+            min="0"
+            type="number"
+            value=""
+          />
+        </span>
       </div>
     </div>
   </fieldset>
@@ -101,16 +105,18 @@ exports[`TimeInput Renders legend 1`] = `
         class="safeInputField"
         id="3_hours-wrapper"
       >
-        <input
-          aria-label="Timer"
-          aria-required="false"
-          autocomplete="off"
-          class="hn-safe-input atom_input atom_input--medium atom_input--2"
-          max="23"
-          min="0"
-          type="number"
-          value=""
-        />
+        <span>
+          <input
+            aria-label="Timer"
+            aria-required="false"
+            autocomplete="off"
+            class="hn-safe-input atom_input atom_input--medium atom_input--2"
+            max="23"
+            min="0"
+            type="number"
+            value=""
+          />
+        </span>
       </div>
       <span
         class="mol_timeinput__separator"
@@ -121,16 +127,18 @@ exports[`TimeInput Renders legend 1`] = `
         class="safeInputField"
         id="3_minutes-wrapper"
       >
-        <input
-          aria-label="Minutter"
-          aria-required="false"
-          autocomplete="off"
-          class="hn-safe-input atom_input atom_input--medium atom_input--2"
-          max="59"
-          min="0"
-          type="number"
-          value=""
-        />
+        <span>
+          <input
+            aria-label="Minutter"
+            aria-required="false"
+            autocomplete="off"
+            class="hn-safe-input atom_input atom_input--medium atom_input--2"
+            max="59"
+            min="0"
+            type="number"
+            value=""
+          />
+        </span>
       </div>
     </div>
   </fieldset>
