@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/form",
-  "version": "23.6.0",
+  "version": "24.0.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -45,8 +45,8 @@
     "react-collapse": "5.1.1"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^23.5.0",
-    "@helsenorge/core-utils": "^23.5.0",
+    "@helsenorge/core-build": "^24.0.0",
+    "@helsenorge/core-utils": "^24.0.0",
     "@helsenorge/designsystem-react": "1.0.0-beta129"
   },
   "browserslist": [
