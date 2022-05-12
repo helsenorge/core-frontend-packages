@@ -60,6 +60,8 @@ export interface SafeTextareaProps {
   maxlength?: number;
   /** Størrelse på feltet */
   size?: sizes;
+  /** Innhold som vises i komponentet */
+  children?: React.ReactNode;
   /** Om en counter for max antall tegn skal vises */
   counter?: boolean;
   /** Om lengden på label skal vises eller ikke*/

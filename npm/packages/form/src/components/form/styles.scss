@@ -1,6 +1,6 @@
-@import '~@helsenorge/toolkit/utils/variables';
+@import '~@helsenorge/designsystem-react/scss/_palette.scss';
 
-$bgcolor: $color-error-fill;
+$bgcolor: $cherry100;
 $background: linear-gradient(0deg, transparent, transparent 50%, $bgcolor 50%, $bgcolor 50%);
 $background-transition: background-position 0.3s ease-out;
 
@@ -47,7 +47,7 @@ $background-transition: background-position 0.3s ease-out;
     transform: scaleY(0);
     transform-origin: top;
 
-    border-left: 4px solid $color-functional-3;
+    border-left: 4px solid $cherry600;
   }
 
   &--active {
@@ -71,7 +71,7 @@ $background-transition: background-position 0.3s ease-out;
     font-size: 1.125rem;
     line-height: 1.2rem;
     font-weight: 600;
-    color: $color-functional-3;
+    color: $cherry600;
 
     &--invalid {
       padding-top: 1rem;
@@ -80,7 +80,7 @@ $background-transition: background-position 0.3s ease-out;
   }
 
   &__formerrortext {
-    color: $color-functional-3;
+    color: $cherry600;
     font-weight: 600;
     padding: 1rem 0;
   }

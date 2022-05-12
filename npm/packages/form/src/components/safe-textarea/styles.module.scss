@@ -2,7 +2,6 @@
 @import '~@helsenorge/designsystem-react/scss/_breakpoints.scss';
 @import '~@helsenorge/designsystem-react/scss/_palette.scss';
 @import '~bootstrap/scss/mixins/_screen-reader.scss';
-@import '~@helsenorge/toolkit/utils/variables';
 
 /*** RESET ***/
 textarea:required {
@@ -28,7 +27,7 @@ textarea:required {
     resize: vertical;
 
     &--state_validationerror {
-      border: 2px solid $color-functional-3;
+      border: 2px solid $cherry600;
     }
 
     &--small {
@@ -78,10 +77,10 @@ textarea:required {
     width: 99%;
 
     &__length {
-      color: $color-functional-1;
+      color: $kiwi900;
 
       &--invalid {
-        color: $color-functional-3;
+        color: $cherry600;
       }
     }
 
@@ -96,7 +95,7 @@ textarea:required {
     padding: 0.5rem;
     outline: none;
     width: 99%;
-    border: 1px solid $color-base-4-5;
+    border: 1px solid $neutral200;
     display: none;
 
     @media print {

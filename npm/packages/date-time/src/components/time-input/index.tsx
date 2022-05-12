@@ -72,6 +72,8 @@ export interface TimeInputProps {
   onValidated?: (valid: boolean | undefined) => void;
   /** Om det skal legges <fieldset> eller ikke */
   renderFieldset?: boolean;
+  /** Innhold som vises i komponentet */
+  children?: React.ReactNode;
   /** Ekstra CSS-class som legges på wrapperen */
   className?: string;
   /** Ekstra CSS-class som legges på input feltene */

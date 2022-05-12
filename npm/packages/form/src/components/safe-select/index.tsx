@@ -24,6 +24,8 @@ export interface SafeSelectProps {
   disabled?: boolean;
   /** Tekst placeholder som vises i feltet når det ikke er satt value */
   placeholder?: HTMLOptionElement;
+  /** Innhold som vises i komponentet */
+  children?: React.ReactNode;
   /** Ekstra CSS-class som legges på feltet */
   className?: string;
   /** Ekstra CSS-class som legges på wrapper'en */

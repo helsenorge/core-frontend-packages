@@ -33,6 +33,8 @@ export interface SafeInputFieldProps {
   disabled?: boolean;
   /** Ekstra CSS-class som legges på wrapperen */
   wrapperClasses?: string;
+  /** Innhold som vises i komponentet */
+  children?: React.ReactNode;
   /** Ekstra CSS-class som legges på feltet */
   className?: string;
   /* Minimum integer verdi godkjent til validering. Må være av type=number */

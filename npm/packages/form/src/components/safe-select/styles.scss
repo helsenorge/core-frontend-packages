@@ -1,5 +1,4 @@
 @import '~@helsenorge/designsystem-react/scss/_palette.scss';
-@import '~@helsenorge/toolkit/utils/variables';
 
 .atom_select {
   position: relative;
@@ -19,7 +18,7 @@
   }
 
   &__select {
-    background-color: $color-base-0;
+    background-color: $white;
     padding: 0.75rem 1.125rem;
     font-weight: 400;
     font-size: 1.125rem;
@@ -44,7 +43,7 @@
     }
 
     &--state_validationerror {
-      border: 2px solid $color-functional-3;
+      border: 2px solid $cherry600;
     }
 
     &--haslabelleft {

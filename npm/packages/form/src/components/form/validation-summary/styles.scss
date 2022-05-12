@@ -1,10 +1,10 @@
 @import '~@helsenorge/designsystem-react/scss/_spacers.scss';
 @import '~@helsenorge/designsystem-react/scss/_breakpoints.scss';
-@import '~@helsenorge/toolkit/utils/variables';
+@import '~@helsenorge/designsystem-react/scss/_palette.scss';
 
 .mol_validation-summary {
-  background-color: $color-error-fill;
-  border-left: 4px solid $color-functional-3;
+  background-color: $cherry100;
+  border-left: 4px solid $cherry600;
   padding: 1rem;
 
   @media (min-width: map-get($grid-breakpoints, md)) {
@@ -30,7 +30,7 @@
   }
 
   .mol_validation-summary__link {
-    color: $color-functional-3;
+    color: $cherry600;
     font-size: 1.125rem;
     font-weight: 400;
   }

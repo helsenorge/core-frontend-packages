@@ -13,6 +13,8 @@ export interface CheckboxProps {
   label: string | JSX.Element;
   /** Om checkbox'en er checked som default */
   checked?: boolean;
+  /** Innhold som vises i komponentet */
+  children?: React.ReactNode;
   /** Function som kalles onChange */
   onChange: (event?: React.FormEvent<{}>) => void;
   /** Viser blå Checkbox istedenfor default lilla stil */

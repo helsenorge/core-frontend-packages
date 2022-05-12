@@ -38,6 +38,8 @@ export interface DropdownProps {
   arrowRight?: boolean;
   /** Ekstra CSS-class som legges på div'en */
   className?: string;
+  /** Innhold som vises i komponentet */
+  children?: React.ReactNode;
   /** An array of refs to the children to validate */
   childrenToValidate?: Array<React.RefObject<FormChild>>;
   /** Teksten til required label */
