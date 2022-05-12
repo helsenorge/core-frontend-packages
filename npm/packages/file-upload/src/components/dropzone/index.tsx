@@ -100,6 +100,8 @@ export interface Props {
   deleteText?: string;
   /**  Egen bekreft sletting tekst */
   verifyDeleteText?: string;
+  /** Innhold som vises i komponentet */
+  children?: React.ReactNode;
   /**  Egen bekreft tekst */
   confirmText?: string;
   /**  Egen Avbryt tekst */
