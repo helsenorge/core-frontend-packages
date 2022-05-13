@@ -3,4 +3,5 @@
 node_modules
 test-report.xml
 lib
+lib_npm/
 package-lock.json
