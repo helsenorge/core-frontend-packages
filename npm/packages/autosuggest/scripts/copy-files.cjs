@@ -2,6 +2,7 @@ process.env.BUILD_SOURCESDIRECTORY = process.env.BUILD_SOURCESDIRECTORY ? proces
 const { resolve } = require('path');
 
 const copyfiles = require('copyfiles');
+const rimraf = require('rimraf');
 
 const { createPackageJsonFile } = require('@helsenorge/core-build/lib/files');
 
@@ -16,11 +17,15 @@ const rootFiles = ['.npmrc'];
 const additionalFiles = ['src/**/*.{scss,scss.d.ts}'];
 // Files to copy to lib/utils
 const utilsFiles = [];
+// Files to delete
+const deleteFiles = 'lib/__devonly__';
 
 Promise.all([
   copyfiles([...rootFiles, outputDirectory], { up: true }, console.error),
   copyfiles([...additionalFiles, outputDirectory], { up: 1 }, console.error),
   copyfiles([...utilsFiles, `${outputDirectory}/utils`], { up: true }, console.error),
-]).then(() =>
-  createPackageJsonFile(packageName, resolve(__dirname, '../package.json'), resolve(__dirname, `../${outputDirectory}/package.json`))
-);
+])
+  .then(() => rimraf(deleteFiles, () => Promise.resolve()))
+  .then(() =>
+    createPackageJsonFile(packageName, resolve(__dirname, '../package.json'), resolve(__dirname, `../${outputDirectory}/package.json`))
+  );
