@@ -12,9 +12,9 @@ const {
 } = require('../package.json');
 
 //Files to copy to root directory
-const rootFiles = ['.npmrc'];
+const rootFiles = [];
 // Files to copy from src to lib, replacing "src" with "lib"
-const additionalFiles = ['src/**/*.{scss,scss.d.ts}'];
+const additionalFiles = ['src/types/dev.d.ts'];
 // Files to copy to lib/utils
 const utilsFiles = [];
 // Files to delete

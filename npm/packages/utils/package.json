@@ -9,8 +9,8 @@
   },
   "scripts": {
     "prebuild": "rimraf lib",
-    "build": "node scripts/build.cjs",
-    "postbuild": "rimraf lib/__devonly__",
+    "build": "tsc --p config/tsconfig.package.json",
+    "postbuild": "node scripts/copy-files.cjs",
     "prepublishOnly": "npm run build",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
