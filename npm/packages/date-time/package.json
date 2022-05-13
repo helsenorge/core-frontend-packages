@@ -9,7 +9,7 @@
   "maintainers": [
     "ROX"
   ],
-  "license": "UNLICENSED",
+  "license": "ISC",
   "repository": {
     "type": "tfs",
     "url": "https://dev.azure.com/nhnfelles/Helsenorge/_git/HN-Core-Frontend?path=%2Fnpm%2Fpackages%2Fdate-time"
@@ -22,6 +22,7 @@
     "start": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
     "prebuild": "rimraf lib",
     "build": "tsc --p config/tsconfig.package.json",
+    "copy:libnpmjs": "node scripts/createNpmrc.cjs && copyfiles -u 1 \"./lib/**/*\" \"./lib_npm\" -E",
     "postbuild": "node scripts/copy-files.cjs",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
