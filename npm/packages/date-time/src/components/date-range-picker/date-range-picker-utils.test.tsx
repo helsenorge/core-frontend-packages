@@ -16,7 +16,7 @@ describe('DateRangePicker date-range-picker-utils', () => {
       });
       it('Så består hver entry av en option med riktig value og text', () => {
         expect(JSON.stringify(a[0])).toEqual(
-          '{"type":"option","key":null,"ref":null,"props":{"value":2010,"children":2010},"_owner":null,"_store":{}}'
+          '{"type":"option","key":"2010","ref":null,"props":{"value":2010,"children":2010},"_owner":null,"_store":{}}'
         );
       });
     });

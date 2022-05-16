@@ -1,8 +1,13 @@
 import * as React from 'react';
+
 import { mount, ReactWrapper } from 'enzyme';
-import { YearErrorResources, YearInput } from '.';
+
+import '@helsenorge/designsystem-react/__mocks__/matchMedia';
+
 import Form from '@helsenorge/form/components/form';
 import Validation from '@helsenorge/form/components/form/validation';
+
+import { YearErrorResources, YearInput } from '.';
 
 describe('Git at YearInput felt rendres', () => {
   let wrapper: ReactWrapper<{}, {}>;

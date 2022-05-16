@@ -12,7 +12,7 @@ import {
 
 import { SCREEN_READER_INPUT } from '../../constants/datetime';
 import ArrowIcon from './custom-icons/arrow-icon';
-import { PartialPropsForDesktop, DateRangePickerState } from './date-range-picker-types';
+import { PartialPropsForDesktop, DateRangePickerState, IntersectingTypes } from './date-range-picker-types';
 import {
   HORIZONTAL_ORIENTATION,
   ANCHOR_LEFT,
@@ -64,19 +64,19 @@ export const renderDesktopDatePicker = (
     minimumPeriod,
     hasFullWidth,
     resources,
-    errorResources,
     isRequired,
     isDisabled,
-    ...propsToAirbnbDateRangePicker
+    showDefaultInputIcon,
+    numberOfMonths,
   } = partialProps;
 
   /* common props to be sent down to noth AirbnbSingleDatePicker and AirbnbDateRangePicker */
-  const commonProps = {
-    ...propsToAirbnbDateRangePicker,
+  const commonProps: Omit<Partial<IntersectingTypes<SingleDatePickerShape, DateRangePickerShape>>, 'renderMonthText' | 'onClose'> = {
+    showDefaultInputIcon,
+    numberOfMonths,
     required: isRequired,
     disabled: isDisabled,
     phrases: resources,
-    errorPhrases: errorResources,
     screenReaderInputMessage: SCREEN_READER_INPUT,
     inputIconPosition: ICON_AFTER_POSITION,
     orientation: HORIZONTAL_ORIENTATION,
@@ -126,20 +126,6 @@ export const renderDesktopDatePicker = (
     },
   };
 
-  /* single specific props to be sent down to AirbnbSingleDatePicker */
-  const singleDatePickerSpecificProps = {
-    id,
-    placeholder,
-  };
-
-  /* range specific props to be sent down to AirbnbDateRangePicker */
-  const rangeDatePickerSpecificProps = {
-    startDateId,
-    startDatePlaceholderText,
-    endDateId,
-    endDatePlaceholderText,
-  };
-
   // This is a bugfix because onFocusChange is not called properly when the user tabs outside of the endDate field
   // This makes sure the focus is set back to null and the calendar closes
   const onRangeBlur = (e: React.FocusEvent<HTMLDivElement>): void => {
@@ -151,7 +137,8 @@ export const renderDesktopDatePicker = (
   return type === 'single' ? (
     <AirbnbSingleDatePicker
       {...commonProps}
-      {...singleDatePickerSpecificProps}
+      id={id}
+      placeholder={placeholder}
       ref={airbnbSingleDatepickerRef}
       date={singleDate}
       focused={!!isSingleDateFocused}
@@ -165,7 +152,10 @@ export const renderDesktopDatePicker = (
     <div onBlur={onRangeBlur}>
       <AirbnbDateRangePicker
         {...commonProps}
-        {...rangeDatePickerSpecificProps}
+        startDateId={startDateId}
+        startDatePlaceholderText={startDatePlaceholderText}
+        endDateId={endDateId}
+        endDatePlaceholderText={endDatePlaceholderText}
         ref={airbnbDateRangepickerRef}
         showClearDates={false}
         reopenPickerOnClearDates={false}

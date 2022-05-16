@@ -1,10 +1,12 @@
 import * as React from 'react';
-import { mount } from 'enzyme';
+
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { mount } from 'enzyme';
+
+import ValidationError from '../form/validation-error';
 
 import { SafeTextarea } from '.';
-import ValidationError from '../form/validation-error';
 
 describe('SafeTextarea', () => {
   it('SafeTextarea renders correctly', () => {
@@ -49,7 +51,7 @@ describe('SafeTextarea', () => {
       const textarea = screen.getByRole('textbox');
       expect(textarea).toBeVisible();
 
-      userEvent.type(textarea, '123');
+      await userEvent.type(textarea, '123');
 
       const error = screen.queryByText('Du har skrevet for mange tegn. Gjør teksten kortere.');
       expect(error).not.toBeInTheDocument();
@@ -63,7 +65,7 @@ describe('SafeTextarea', () => {
       const textarea = screen.getByRole('textbox');
       expect(textarea).toBeVisible();
 
-      userEvent.type(textarea, '1234');
+      await userEvent.type(textarea, '1234');
 
       expect((textarea as HTMLTextAreaElement).value).toBe('1234');
 
@@ -79,7 +81,7 @@ describe('SafeTextarea', () => {
       const textarea = screen.getByRole('textbox');
       expect(textarea).toBeVisible();
 
-      userEvent.type(textarea, '1234');
+      await userEvent.type(textarea, '1234');
 
       const error = await screen.findByText('Fatt dem i korthet!');
       expect(error).toBeVisible();

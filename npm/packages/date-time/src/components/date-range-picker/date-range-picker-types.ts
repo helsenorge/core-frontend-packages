@@ -121,6 +121,11 @@ export type PartialPropsForDesktop = Omit<
   | 'helpElement'
 >;
 
+/** Returnerer nytt interface som består av alt som er felles for T og U */
+export type IntersectingTypes<T, U> = {
+  [K in Extract<keyof T, keyof U>]: T[K];
+};
+
 export interface DateRangePickerState {
   isMobile: boolean;
   momentLocale: moment.Locale;

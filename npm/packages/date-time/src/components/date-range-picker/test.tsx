@@ -95,7 +95,7 @@ describe('DateRangePicker index', () => {
         expect(input).toBeVisible();
 
         const button = screen.getByLabelText('Velg dato');
-        userEvent.click(button);
+        await userEvent.click(button);
 
         const monthSelect = within(getVisibleMonthContainer()).getByRole('combobox', {
           name: 'Vállje mánu',
@@ -230,13 +230,13 @@ describe('DateRangePicker index', () => {
         const yearSelect = within(getVisibleMonthContainer()).getByRole('combobox', {
           name: 'Velg år',
         });
-        userEvent.selectOptions(yearSelect, '2049');
+        await userEvent.selectOptions(yearSelect, '2049');
 
         const monthSelect = within(getVisibleMonthContainer()).getByRole('combobox', {
           name: 'Velg måned',
         });
         // Måned starter på 0, så 11 er desember
-        userEvent.selectOptions(monthSelect, '11');
+        await userEvent.selectOptions(monthSelect, '11');
 
         const dateButton = within(getVisibleMonthContainer()).getByRole('button', {
           name: '24.12.2049',
@@ -272,13 +272,13 @@ describe('DateRangePicker index', () => {
         const yearSelect = within(getVisibleMonthContainer()).getByRole('combobox', {
           name: 'Velg år',
         });
-        userEvent.selectOptions(yearSelect, '2020');
+        await userEvent.selectOptions(yearSelect, '2020');
 
         const monthSelect = within(getVisibleMonthContainer()).getByRole('combobox', {
           name: 'Velg måned',
         });
         // Måned starter på 0, så 11 er desember
-        userEvent.selectOptions(monthSelect, '11');
+        await userEvent.selectOptions(monthSelect, '11');
 
         const dateButton = within(getVisibleMonthContainer()).getByRole('button', {
           name: '24.12.2020',
@@ -352,12 +352,12 @@ describe('DateRangePicker index', () => {
         const yearSelect = within(getVisibleMonthContainer()).getByRole('combobox', {
           name: 'Velg år',
         });
-        userEvent.selectOptions(yearSelect, '2030');
+        await userEvent.selectOptions(yearSelect, '2030');
 
         const monthSelect = within(getVisibleMonthContainer()).getByRole('combobox', {
           name: 'Velg måned',
         });
-        userEvent.selectOptions(monthSelect, '5');
+        await userEvent.selectOptions(monthSelect, '5');
 
         const dateButton = within(getVisibleMonthContainer()).getByRole('button', {
           name: '10.06.2030',

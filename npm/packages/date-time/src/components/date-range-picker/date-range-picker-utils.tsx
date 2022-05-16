@@ -171,7 +171,11 @@ export const renderYearsOptions = (min: number, max: number): JSX.Element[] => {
   const options = [];
 
   for (let i = min; i <= max; i++) {
-    options.push(<option value={i}>{i}</option>);
+    options.push(
+      <option value={i} key={i}>
+        {i}
+      </option>
+    );
   }
 
   return options;

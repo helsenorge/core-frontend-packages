@@ -2,6 +2,7 @@ import * as React from 'react';
 
 import { shallow, ShallowWrapper, mount } from 'enzyme';
 
+import '@helsenorge/designsystem-react/__mocks__/matchMedia';
 import Button from '@helsenorge/designsystem-react/components/Button';
 
 import SafeInputField from '../safe-input-field';

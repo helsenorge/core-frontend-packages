@@ -14,14 +14,7 @@ interface TestvisiblehocProps {
   innerRef?: React.RefObject<HTMLDivElement>;
   visible?: boolean;
 }
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: jest.fn().mockImplementation(() => ({
-    matches: true,
-    addEventListener: jest.fn(),
-    removeEventListener: jest.fn(),
-  })),
-});
+import '@helsenorge/designsystem-react/__mocks__/matchMedia';
 
 Object.defineProperty(window, 'getComputedStyle', {
   writable: true,

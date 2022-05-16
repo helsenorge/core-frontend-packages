@@ -1,12 +1,14 @@
 import * as React from 'react';
-import { shallow, mount } from 'enzyme';
+
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { shallow, mount } from 'enzyme';
+
+import { FormChild } from '../form';
+import ValidationError from '../form/validation-error';
+import Label from './../label';
 
 import SafeInputField from './index';
-import Label from './../label';
-import ValidationError from '../form/validation-error';
-import { FormChild } from '../form';
 
 describe('SafeInputField', () => {
   it('SafeInputField renders without crashing', () => {
@@ -44,7 +46,7 @@ describe('SafeInputField', () => {
       const input = screen.getByRole('textbox');
       expect(input).toBeVisible();
 
-      userEvent.type(input, '123');
+      await userEvent.type(input, '123');
 
       const error = screen.queryByText('Du har skrevet for mange tegn. Gjør teksten kortere.');
       expect(error).not.toBeInTheDocument();
@@ -58,7 +60,7 @@ describe('SafeInputField', () => {
       const input = screen.getByRole('textbox');
       expect(input).toBeVisible();
 
-      userEvent.type(input, '1234');
+      await userEvent.type(input, '1234');
 
       expect((input as HTMLInputElement).value).toBe('1234');
 
@@ -74,7 +76,7 @@ describe('SafeInputField', () => {
       const input = screen.getByRole('textbox');
       expect(input).toBeVisible();
 
-      userEvent.type(input, '1234');
+      await userEvent.type(input, '1234');
 
       const error = await screen.findByText('Fatt dem i korthet!');
       expect(error).toBeVisible();

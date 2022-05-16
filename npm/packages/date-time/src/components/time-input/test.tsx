@@ -1,9 +1,12 @@
 import * as React from 'react';
-import moment from 'moment';
-import { shallow, mount, ReactWrapper } from 'enzyme';
+
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { shallow, mount, ReactWrapper } from 'enzyme';
+import moment from 'moment';
+
 import { parseDate, buildNewDate } from './date-core';
+
 import TimeInput from '.';
 
 describe('TimeInput', () => {
@@ -35,13 +38,13 @@ describe('TimeInput', () => {
 
       const hour = screen.getByLabelText('Timer');
       expect(hour).toBeVisible();
-      userEvent.type(hour, '23');
+      await userEvent.type(hour, '23');
 
       expect((hour as HTMLInputElement).value).toBe('23');
 
       const minutes = screen.getByLabelText('Minutter');
       expect(minutes).toBeVisible();
-      userEvent.type(minutes, '59');
+      await userEvent.type(minutes, '59');
 
       expect((minutes as HTMLInputElement).value).toBe('59');
 

@@ -1,12 +1,14 @@
 import * as React from 'react';
+
 import { mount, ReactWrapper } from 'enzyme';
 
+import '@helsenorge/designsystem-react/__mocks__/matchMedia';
 import LanguageLocales from '@helsenorge/core-utils/constants/languages';
-
-import { YearMonthResources, YearMonthInput } from '.';
 import Form from '@helsenorge/form/components/form';
 import Validation from '@helsenorge/form/components/form/validation';
 import SafeSelectField from '@helsenorge/form/components/safe-select';
+
+import { YearMonthResources, YearMonthInput } from '.';
 
 describe('Gitt at YearMonthInput felt rendres', () => {
   let wrapper: ReactWrapper<{}, {}>;

@@ -30,7 +30,7 @@
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
-    "pretest": "crlf --set=LF \"src/**/*.{tsx,snap}\"",
+    "pretest": "crlf --set=LF \"src/**/*.snap\"",
     "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
     "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
     "prepublishOnly": "npm run build"
@@ -45,7 +45,7 @@
   "devDependencies": {
     "@helsenorge/core-build": "^24.0.0",
     "@helsenorge/core-utils": "^24.0.0",
-    "@helsenorge/designsystem-react": "1.0.0-beta129",
+    "@helsenorge/designsystem-react": "1.0.0-beta131",
     "@helsenorge/form": "^24.0.0",
     "@helsenorge/toolkit": "^24.0.0"
   },
