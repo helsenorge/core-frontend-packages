@@ -33,6 +33,7 @@ export interface SafeTextareaState {
   size?: sizes;
   maxlength?: number;
   triggerHandleOnChange: boolean;
+  propValue?: string;
 }
 
 export interface SafeTextareaProps {
@@ -147,6 +148,7 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
       valid: true,
       validated: false,
       triggerHandleOnChange: false,
+      propValue: props.value, // Kopi av prop.value som brukes til å sammenlikne value-endringer
     };
   }
 
@@ -170,15 +172,18 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
 
   static getDerivedStateFromProps(nextProps: SafeTextareaProps, prevState: SafeTextareaState): SafeTextareaState | null {
     const updatedState = { ...prevState };
-    if (nextProps.value && nextProps.value !== prevState.defaultValue && !prevState.focused) {
-      updatedState.defaultValue = nextProps.value;
-      updatedState.value = nextProps.value;
+    if (nextProps.value !== prevState.propValue) {
+      updatedState.propValue = nextProps.value;
+    }
+    if (updatedState.propValue && updatedState.propValue !== prevState.defaultValue && !prevState.focused) {
+      updatedState.defaultValue = updatedState.propValue;
+      updatedState.value = updatedState.propValue;
     }
     if (prevState.size !== nextProps.size || prevState.maxlength !== nextProps.maxlength) {
       updatedState.maxlength = nextProps.maxlength;
       updatedState.size = getSize(nextProps);
     }
-    if (nextProps.validateOnExternalUpdate && nextProps.value !== prevState.value) {
+    if (nextProps.validateOnExternalUpdate && nextProps.value !== prevState.propValue) {
       updatedState.triggerHandleOnChange = true;
     }
 

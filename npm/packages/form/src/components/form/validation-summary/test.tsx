@@ -1,22 +1,22 @@
 import * as React from 'react';
-import { shallow, mount, ShallowWrapper } from 'enzyme';
+import { mount, ReactWrapper } from 'enzyme';
 import ValidationSummary, { Props } from '../validation-summary';
 import SafeInputField from '../../safe-input-field';
 import { FormChild } from '..';
 
 describe('ValidationSummary', () => {
   let props: Props;
-  let mountedValidationSummary: ShallowWrapper<{}, {}> | undefined;
+  let mountedValidationSummary: ReactWrapper<{}, {}> | undefined;
 
   const validationSummary = () => {
     if (!mountedValidationSummary) {
-      mountedValidationSummary = shallow(<ValidationSummary {...props} />);
+      mountedValidationSummary = mount(<ValidationSummary {...props} />);
     }
     return mountedValidationSummary;
   };
 
   beforeEach(() => {
-    const safeInputField = shallow(<SafeInputField id="id" value="value" />) as {} as FormChild;
+    const safeInputField = mount(<SafeInputField id="id" value="value" />) as {} as FormChild;
     props = {
       components: [safeInputField],
       submitted: undefined,

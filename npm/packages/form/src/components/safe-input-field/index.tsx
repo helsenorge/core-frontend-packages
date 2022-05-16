@@ -136,6 +136,7 @@ export interface SafeInputFieldState {
   dirtyInput: boolean;
   onBlurValidationPromise?: Promise<boolean>;
   handleValidation?: boolean;
+  propValue?: string | number;
 }
 
 interface EventTargetWithValue extends EventTarget {
@@ -172,6 +173,7 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
       loading: false,
       dirtyInput: false,
       handleValidation: false,
+      propValue: undefined, // Kopi av prop.value som brukes til å sammenlikne value-endringer
     };
 
     this.inputFieldRef = React.createRef();
@@ -198,7 +200,7 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
 
   componentDidMount(): void {
     const { value }: SafeInputFieldProps = this.props;
-    this.setState({ value }, () => {
+    this.setState({ value, propValue: value }, () => {
       if (value === '' || value === null || value === undefined) {
         return;
       } else {
@@ -218,26 +220,33 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
 
   static getDerivedStateFromProps(nextProps: SafeInputFieldProps, prevState: SafeInputFieldState): SafeInputFieldState | null {
     const updatedState = { ...prevState };
-    if (nextProps.validateOnExternalUpdate && prevState.value !== nextProps.value) {
-      const valueString = nextProps.value as string;
+    const hasPropChanged = nextProps.value !== prevState.propValue;
+    if (hasPropChanged) updatedState.propValue = nextProps.value;
+
+    if (nextProps.validateOnExternalUpdate && prevState.propValue !== prevState.value) {
+      const valueString = updatedState.propValue as string;
+      const compareValueString = prevState.propValue as string;
       let formattedValue = valueString;
+      let compareFormattedValue = compareValueString;
       if (nextProps.onChangeFormatter) {
         formattedValue = nextProps.onChangeFormatter(formattedValue);
+        compareFormattedValue = nextProps.onChangeFormatter(compareFormattedValue);
       }
-      if (formattedValue !== prevState.value) {
+      if (compareFormattedValue !== prevState.value && hasPropChanged) {
         // Input har endret seg. Dirtyinput = ikke validert
         updatedState.value = formattedValue;
         updatedState.dirtyInput = true;
         updatedState.handleValidation = true;
       }
 
-      return updatedState;
-    } else if (!prevState.focused && nextProps.value !== null && nextProps.value !== undefined && nextProps.value !== prevState.value) {
-      updatedState.value = nextProps.value;
-      return updatedState;
-    } else {
-      return null;
+      return updatedState === prevState ? null : updatedState;
     }
+    if (hasPropChanged && updatedState.propValue !== prevState.value) {
+      updatedState.value = updatedState.propValue;
+      updatedState.dirtyInput = true;
+      updatedState.handleValidation = true;
+    }
+    return updatedState === prevState ? null : updatedState;
   }
 
   componentDidUpdate(_prevProps: SafeInputFieldProps, prevState: SafeInputFieldState) {

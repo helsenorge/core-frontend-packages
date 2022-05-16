@@ -1,14 +1,26 @@
 import * as React from 'react';
 
 import { isValid } from '@helsenorge/core-utils/string-utils';
+import { debounce } from '@helsenorge/core-utils/debounce';
 
 import SafeInputField from './index';
-
+interface IAnswer {
+  valueQuantity: IValQ;
+}
+interface IValQ {
+  value: number | undefined;
+}
 export const SafeInputFieldExample: React.FC = () => {
   const [inputValue, setInputValue] = React.useState<string | number>('');
+  const [answer, setAnswer] = React.useState<IAnswer>({ valueQuantity: { value: undefined } });
   const onBlur = (): void => {
     const info: Console = console;
     info.log('Input feltet har mistet fokus');
+  };
+  const getValue = (): number | undefined => {
+    if (answer && answer.valueQuantity !== undefined && answer.valueQuantity !== null) {
+      return answer.valueQuantity.value;
+    }
   };
 
   const onBlurValidator = (value: string | number): Promise<boolean> => {
@@ -38,8 +50,14 @@ export const SafeInputFieldExample: React.FC = () => {
   const handleChange = (event: React.FormEvent<{}>): void => {
     const info: Console = console;
     info.log('Feltet har ny verdi', event);
+    const target: HTMLInputElement = event.target as HTMLInputElement;
+    setAnswer({ valueQuantity: { value: Number(target.value) } });
+  };
+  const debouncedHandleChange = (event: React.FormEvent<{}>) => {
+    debounce(() => handleChange(event), 250, false);
   };
 
+  const valQuantity = getValue();
   return (
     <div>
       {'Størrelse på input feltet settes enten ved prop xsmall - xlarge, eller ved å sette en maks lengde på input'}
@@ -101,6 +119,50 @@ export const SafeInputFieldExample: React.FC = () => {
         <button onClick={() => setInputValue('TEST')}>Sett inn 'TEST'</button>
         <button onClick={() => setInputValue('')}>Sett inn tom string</button>
       </div>
+      <SafeInputField
+        size="xSmall"
+        type="number"
+        id={'test-id'}
+        inputName={'test-id'}
+        value={valQuantity !== undefined ? valQuantity + '' : ''}
+        showLabel={true}
+        label={'Label'}
+        subLabel={'SubLAbel'}
+        isRequired={true}
+        placeholder={'quantity'}
+        max={650}
+        min={1}
+        onBlur={handleChange}
+        errorMessage={'Obs: error'}
+        pattern={'^[+-]?[0-9]+$'}
+        className="page_skjemautfyller__quantity"
+        validateOnExternalUpdate={true}
+      ></SafeInputField>
+      <button onClick={() => setAnswer({ valueQuantity: { value: 33 } })}>Sett inn '33'</button>
+      <button onClick={() => setAnswer({ valueQuantity: { value: 0 } })}>Sett inn '0'</button>
+      <button onClick={() => setAnswer({ valueQuantity: { value: undefined } })}>Sett inn 'undefined'</button>
+      <button onClick={() => setAnswer({ valueQuantity: { value: 44444 } })}>Sett inn '44444'</button>
+      <SafeInputField
+        type="text"
+        id={'input-field-id'}
+        inputName={'nput-field-id'}
+        value={valQuantity}
+        showLabel={true}
+        label={'Debounce input'}
+        subLabel={'sublabel'}
+        isRequired={true}
+        placeholder={'debounce'}
+        minLength={1}
+        maxLength={60}
+        onChange={(event: React.FormEvent<{}>): void => {
+          event.persist();
+          debouncedHandleChange(event);
+        }}
+        errorMessage={'feil'}
+        className="page_skjemautfyller__input"
+        validateOnExternalUpdate={true}
+        stringOverMaxLengthError={'for mye tekst'}
+      />
     </div>
   );
 };

@@ -1,8 +1,7 @@
 import * as React from 'react';
-
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
 import { FormChild } from '../form';
 import ValidationError from '../form/validation-error';
@@ -12,11 +11,11 @@ import SafeInputField from './index';
 
 describe('SafeInputField', () => {
   it('SafeInputField renders without crashing', () => {
-    shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} />);
+    mount(<SafeInputField id="test" value="test" onBlur={() => undefined} />);
   });
 
   it('Should be readonly', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} readOnly />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} readOnly />);
     const props = instance.find('input').props();
     if (props && props.readOnly !== undefined) {
       expect(props.readOnly).toEqual(true);
@@ -24,7 +23,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have minLength', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} minLength={2} />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} minLength={2} />);
     const props = instance.find('input').props();
     if (props && props.minLength !== undefined) {
       expect(props.minLength).toEqual(2);
@@ -33,7 +32,7 @@ describe('SafeInputField', () => {
 
   describe('Når man har definert en verdi for maxLength', () => {
     it('Så skal ikke inputfeltet ha maxLength for det', () => {
-      const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} maxLength={2} />);
+      const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} maxLength={2} />);
       const props = instance.find('input').props();
       expect(props.maxLength).toEqual(undefined);
     });
@@ -84,7 +83,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have max', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} max={2} />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} max={2} />);
     const props = instance.find('input').props();
     if (props && props.max !== undefined) {
       expect(props.max).toEqual(2);
@@ -92,7 +91,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have min', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} min={2} />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} min={2} />);
     const props = instance.find('input').props();
     if (props && props.min !== undefined) {
       expect(props.min).toEqual(2);
@@ -100,7 +99,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have placeholder', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} placeholder="test" />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} placeholder="test" />);
     const props = instance.find('input').props();
     if (props && props.placeholder !== undefined) {
       expect(props.placeholder).toEqual('test');
@@ -108,7 +107,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have user defined classname', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} className="test" />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} className="test" />);
     const props = instance.find('input').props();
     if (props && props.className !== undefined) {
       expect(props.className).toContain('test');
@@ -116,7 +115,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have classnames for xsmall', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} size="xSmall" />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} size="xSmall" />);
     const props = instance.find('input').props();
     if (props && props.className !== undefined) {
       expect(props.className).toContain('atom_input--xsmall');
@@ -124,7 +123,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have classnames for small', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} size="small" />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} size="small" />);
     const props = instance.find('input').props();
     if (props && props.className !== undefined) {
       expect(props.className).toContain('atom_input--small');
@@ -132,7 +131,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have classnames for medium', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} size="medium" />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} size="medium" />);
     const props = instance.find('input').props();
     if (props && props.className !== undefined) {
       expect(props.className).toContain('atom_input--medium');
@@ -140,7 +139,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have classnames for large', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} size="large" />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} size="large" />);
     const props = instance.find('input').props();
     if (props && props.className !== undefined) {
       expect(props.className).toContain('atom_input--large');
@@ -148,7 +147,7 @@ describe('SafeInputField', () => {
   });
 
   it('Should have classnames for xlarge', () => {
-    const instance = shallow(<SafeInputField id="test" value="test" onBlur={() => undefined} size="xLarge" />);
+    const instance = mount(<SafeInputField id="test" value="test" onBlur={() => undefined} size="xLarge" />);
     const props = instance.find('input').props();
     if (props && props.className !== undefined) {
       expect(props.className).toContain('atom_input--xlarge');
@@ -181,29 +180,29 @@ describe('SafeInputField', () => {
   });
 
   it('should validate min text length', () => {
-    const wrapper = shallow(<SafeInputField id="test" minLength={2} value="" inputName="name" />);
+    const wrapper = mount(<SafeInputField id="test" minLength={2} value="" inputName="name" />);
     wrapper.setState({ isValid: false });
     const instance = wrapper.instance() as SafeInputField;
     expect(instance.validate('a')).toMatchSnapshot();
   });
 
   it('should validate max text length', () => {
-    const instance = shallow(<SafeInputField id="test" maxLength={2} value="" inputName="name" />).instance() as SafeInputField;
+    const instance = mount(<SafeInputField id="test" maxLength={2} value="" inputName="name" />).instance() as SafeInputField;
     expect(instance.validate('aaa')).toMatchSnapshot();
   });
 
   it('should validate max number', () => {
-    const instance = shallow(<SafeInputField id="test" type="number" max={1} value="" inputName="name" />).instance() as SafeInputField;
+    const instance = mount(<SafeInputField id="test" type="number" max={1} value="" inputName="name" />).instance() as SafeInputField;
     expect(instance.validate(2)).toMatchSnapshot();
   });
 
   it('should validate min number', () => {
-    const instance = shallow(<SafeInputField id="test" type="number" min={3} value="" inputName="name" />).instance() as SafeInputField;
+    const instance = mount(<SafeInputField id="test" type="number" min={3} value="" inputName="name" />).instance() as SafeInputField;
     expect(instance.validate(2)).toMatchSnapshot();
   });
 
   it('should validate regex', () => {
-    const instance = shallow(<SafeInputField id="test" pattern="^[0-9]$" value="" inputName="name" />).instance() as SafeInputField;
+    const instance = mount(<SafeInputField id="test" pattern="^[0-9]$" value="" inputName="name" />).instance() as SafeInputField;
     expect(instance.validate('a')).toMatchSnapshot();
   });
 });
