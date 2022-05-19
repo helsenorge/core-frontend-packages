@@ -135,9 +135,14 @@ export default class DateTime extends React.Component<DateTimePickerProps, DateT
 
   // Calls this.props.onBlur if given
   // Runs full validation and calls notify
-  onTimeBlur = (): void => {
-    const { date, time, validated } = this.state;
+  onTimeBlur = (formattedTime: string): void => {
     const { onBlur } = this.props;
+
+    this.setState({
+      time: formattedTime,
+    });
+
+    const { date, time, validated } = this.state;
 
     if (validated) this.validate(this.notifyValidated);
     const currentDateAndTime = getFullMomentDate(date, time);

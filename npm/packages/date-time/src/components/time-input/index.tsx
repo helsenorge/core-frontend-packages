@@ -347,7 +347,7 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
 
         if (!wrapperNode.contains(focusedElement)) {
           this.validate();
-          if (this.props.onBlur) this.props.onBlur(this.state.timeString);
+          if (this.props.onBlur) this.props.onBlur(newValue);
         }
       }, 0);
     }
