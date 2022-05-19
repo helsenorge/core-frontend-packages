@@ -49,9 +49,9 @@ describe('TimeInput', () => {
       expect((minutes as HTMLInputElement).value).toBe('59');
 
       expect(handleTimeChange).toHaveBeenCalledTimes(4);
-      expect(handleTimeChange).toHaveBeenNthCalledWith(1, '02:');
+      expect(handleTimeChange).toHaveBeenNthCalledWith(1, '2:');
       expect(handleTimeChange).toHaveBeenNthCalledWith(2, '23:');
-      expect(handleTimeChange).toHaveBeenNthCalledWith(3, '23:05');
+      expect(handleTimeChange).toHaveBeenNthCalledWith(3, '23:5');
       expect(handleTimeChange).toHaveBeenNthCalledWith(4, '23:59');
     });
   });

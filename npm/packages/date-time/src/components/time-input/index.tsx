@@ -288,7 +288,7 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
   }
 
   handleHoursChange = (event: React.FormEvent<{}>): void => {
-    const value = this.padNumber((event.target as HTMLInputElement).value);
+    const value = (event.target as HTMLInputElement).value;
     const minutes = getMinutesFromTimeString(String(this.state.timeString), TIME_SEPARATOR);
     const newValue = `${value}${TIME_SEPARATOR}${minutes}`;
 
@@ -311,7 +311,7 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
   };
 
   handleMinutesChange = (event: React.FormEvent<{}>): void => {
-    const value = this.padNumber((event.target as HTMLInputElement).value);
+    const value = (event.target as HTMLInputElement).value;
     const hours = getHoursFromTimeString(String(this.state.timeString), TIME_SEPARATOR);
     const newValue = `${hours}${TIME_SEPARATOR}${value}`;
     this.setState(
@@ -335,6 +335,12 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
   onBlur = (): void => {
     // This is to check whereas the focus is still within the component (should wait) or if the user has gone further (should then validate)
     if (this.wrapperRef && this.wrapperRef.current) {
+      const hours = this.padNumber(getHoursFromTimeString(String(this.state.timeString), TIME_SEPARATOR));
+      const minutes = this.padNumber(getMinutesFromTimeString(String(this.state.timeString), TIME_SEPARATOR));
+      const newValue = `${hours}${TIME_SEPARATOR}${minutes}`;
+
+      this.setState({ timeString: newValue });
+
       const wrapperNode = this.wrapperRef.current;
       setTimeout(() => {
         const focusedElement = getDocumentActiveElement(wrapperNode, this.props.logCallback);
@@ -410,8 +416,8 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     const ariaInvalid = {};
     if (validated) ariaInvalid['aria-invalid'] = !this.isValid();
 
-    const hours = this.padNumber(getHoursFromTimeString(String(timeString), TIME_SEPARATOR));
-    const minutes = this.padNumber(getMinutesFromTimeString(String(timeString), TIME_SEPARATOR));
+    const hours = getHoursFromTimeString(String(timeString), TIME_SEPARATOR);
+    const minutes = getMinutesFromTimeString(String(timeString), TIME_SEPARATOR);
     return (
       <div ref={this.wrapperRef} className="mol_timeinput__inputs">
         <SafeInputField
