@@ -397,7 +397,9 @@
     "bFL_RestService_Primarhelseteam_Title": "Primærhelseteam kan ikke vises for øyeblikket",
     "bFL_RestService_TryAgain": "Prøv igjen senere.",
     "bFL_FloKode_Ukjent": "Ukjent årsak",
-    "showFilter": "Vis filter"
+    "showFilter": "Vis filter",
+    "showResults": "Vis resultat",
+    "hideFilter": "Skjul filter"
   },
   "HNMinHelseCommonJS": { 
     "pendingChangesClose": "Forkast endringer",
