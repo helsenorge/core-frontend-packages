@@ -1574,6 +1574,14 @@ export type HNMinHelseByttFastlege = {
   * Vis filter
   */
   showFilter: string;
+  /** 
+  * Vis resultat
+  */
+  showResults: string;
+  /** 
+  * Skjul filter
+  */
+  hideFilter: string;
 };
 
 export type HNMinHelseCommonJS = { 
