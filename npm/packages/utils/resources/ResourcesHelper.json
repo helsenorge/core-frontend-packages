@@ -398,8 +398,7 @@
     "bFL_RestService_TryAgain": "Prøv igjen senere.",
     "bFL_FloKode_Ukjent": "Ukjent årsak",
     "showFilter": "Vis filter",
-    "showResults": "Vis resultat",
-    "hideFilter": "Skjul filter"
+    "showResults": "Vis resultat"
   },
   "HNMinHelseCommonJS": { 
     "pendingChangesClose": "Forkast endringer",
