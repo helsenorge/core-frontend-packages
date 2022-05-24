@@ -1570,73 +1570,9 @@ export type HNMinHelseByttFastlege = {
   * Ukjent årsak
   */
   bFL_FloKode_Ukjent: string;
-  /** 
-  * Vis filter
-  */
-  showFilter: string;
-  /** 
-  * Vis resultat
-  */
-  showResults: string;
 };
 
 export type HNMinHelseCommonJS = { 
-  /** 
-  * Forkast endringer
-  */
-  pendingChangesClose: string;
-  /** 
-  * Fortsett redigering
-  */
-  pendingChangesConfirm: string;
-  /** 
-  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
-  */
-  pendingChangesDescription: string;
-  /** 
-  * Det finnes endringer som ikke er lagret
-  */
-  pendingChangesHeader: string;
-  /** 
-  * Bildet kan ikke vises
-  */
-  innsyn_image_error: string;
-  /** 
-  * Hjelp om
-  */
-  helpDrawerHelpIconLabel: string;
-  /** 
-  * Innboks
-  */
-  backbar_meldinger: string;
-  /** 
-  * Se alle tjenester
-  */
-  seAlleTjenester: string;
-  /** 
-  * Vis færre tjenester
-  */
-  visFarreTjenester: string;
-  /** 
-  * Tjenester utenfor Helsenorge
-  */
-  tjenesterUtenforHelsenorge: string;
-  /** 
-  * Forside
-  */
-  breadCrumb_Forsiden: string;
-  /** 
-  * Denne siden er visst ikke helt frisk
-  */
-  pageNotFoundHeader: string;
-  /** 
-  * Se etter en skrivefeil i URL-adressen, eller gå til forsiden.
-  */
-  pageNotFoundDescription: string;
-  /** 
-  * Gå til forside
-  */
-  pageNotFoundToStart: string;
   /** 
   * nye meldinger
   */
@@ -2289,6 +2225,62 @@ export type HNMinHelseCommonJS = {
   * Ingen treff på
   */
   noResults: string;
+  /** 
+  * Bildet kan ikke vises
+  */
+  innsyn_image_error: string;
+  /** 
+  * Hjelp om
+  */
+  helpDrawerHelpIconLabel: string;
+  /** 
+  * Innboks
+  */
+  backbar_meldinger: string;
+  /** 
+  * Se alle tjenester
+  */
+  seAlleTjenester: string;
+  /** 
+  * Vis færre tjenester
+  */
+  visFarreTjenester: string;
+  /** 
+  * Tjenester utenfor Helsenorge
+  */
+  tjenesterUtenforHelsenorge: string;
+  /** 
+  * Forside
+  */
+  breadCrumb_Forsiden: string;
+  /** 
+  * Denne siden er visst ikke helt frisk
+  */
+  pageNotFoundHeader: string;
+  /** 
+  * Se etter en skrivefeil i URL-adressen, eller gå til forsiden.
+  */
+  pageNotFoundDescription: string;
+  /** 
+  * Gå til forside
+  */
+  pageNotFoundToStart: string;
+  /** 
+  * Forkast endringer
+  */
+  pendingChangesClose: string;
+  /** 
+  * Fortsett redigering
+  */
+  pendingChangesConfirm: string;
+  /** 
+  * Hvis du forlater siden, vil du miste alle endringer du har gjort.
+  */
+  pendingChangesDescription: string;
+  /** 
+  * Det finnes endringer som ikke er lagret
+  */
+  pendingChangesHeader: string;
 };
 
 export type HNMinHelseContent = { 
