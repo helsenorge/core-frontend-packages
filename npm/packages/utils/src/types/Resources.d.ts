@@ -1578,10 +1578,6 @@ export type HNMinHelseByttFastlege = {
   * Vis resultat
   */
   showResults: string;
-  /** 
-  * Skjul filter
-  */
-  hideFilter: string;
 };
 
 export type HNMinHelseCommonJS = { 
