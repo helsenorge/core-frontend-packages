@@ -22,6 +22,7 @@ interface ExampleState {
   checkbox1Checked?: boolean;
   checkbox2Checked?: boolean;
   checkbox3Checked?: boolean;
+  checkbox4Checked?: boolean;
   fieldsetValid?: boolean;
   formSubmitted?: boolean;
   inputFieldValue: string;
@@ -53,6 +54,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
       checkbox1Checked: false,
       checkbox2Checked: false,
       checkbox3Checked: false,
+      checkbox4Checked: false,
       fieldsetValid: true,
       formSubmitted: false,
       inputFieldValue: '',
@@ -207,6 +209,12 @@ export class FormExample extends React.Component<{}, ExampleState> {
     });
   };
 
+  toggleCheckbox4 = (): void => {
+    this.setState({
+      checkbox4Checked: !this.state.checkbox4Checked,
+    });
+  };
+
   onDraft = (): void => {
     log('form has been saved as draft');
     this.setState({
@@ -250,6 +258,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
 
     return (
       <div>
+        <h3>{'Ulike form-komponenter'}</h3>
         <p>
           {
             '(!) Form validering fungerer slik at imnput-komponenter wrappes i en <Validation>. De clones ved bruk av ref og berikes av valideringsmetoder. En class ref kan ikke sendes videre til en FunctionComponent. Det er derfor kun Class Components som kan wrappes i <Validation> (ikke FunctionComponent)'
@@ -400,6 +409,26 @@ export class FormExample extends React.Component<{}, ExampleState> {
               validator={this.validateRadioGroup}
               getErrorMessage={this.getRadioGroupErrorMessage}
               isRequired={true}
+            />
+          </Validation>
+        </Form>
+        <h3>{'Form med checkbox og validering'}</h3>
+        <Form
+          submitButtonType="display"
+          action="#"
+          submitButtonText={'Opprett digitalt donorkort'}
+          errorMessage={''}
+          onSubmit={() => log('sendte inn skjema')}
+        >
+          <Validation>
+            <CheckBox
+              label={'Jeg ønsker å gi bort mine organer og vev for transplantasjon ved min bortgang'}
+              onChange={this.toggleCheckbox4}
+              id="savebuttoncheckbox"
+              checked={this.state.checkbox4Checked}
+              isRequired
+              isStyleBlue
+              errorMessage={'Du må krysse av for å gå videre'}
             />
           </Validation>
         </Form>
