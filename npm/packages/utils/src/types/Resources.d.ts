@@ -4671,6 +4671,10 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_error_message: string;
   /** 
+  * Vis utskriftvennlig side
+  */
+  innsyn_btnPrint: string;
+  /** 
   * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
   */
   sysvak_innsyn_footer_content: string;
