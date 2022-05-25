@@ -2281,6 +2281,10 @@ export type HNMinHelseCommonJS = {
   * Det finnes endringer som ikke er lagret
   */
   pendingChangesHeader: string;
+  /** 
+  * Vis utskriftvennlig side
+  */
+  innsyn_btnPrint: string;
 };
 
 export type HNMinHelseContent = { 

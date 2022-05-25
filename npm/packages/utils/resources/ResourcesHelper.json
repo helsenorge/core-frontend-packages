@@ -575,7 +575,8 @@
     "pendingChangesClose": "Forkast endringer",
     "pendingChangesConfirm": "Fortsett redigering",
     "pendingChangesDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort.",
-    "pendingChangesHeader": "Det finnes endringer som ikke er lagret"
+    "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
+    "innsyn_btnPrint": "Vis utskriftvennlig side"
   },
   "HNMinHelseContent": { 
     "page_VelgBehandlingssted_NavigateBackLinkTitle": "Velg behandlingssted",
