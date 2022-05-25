@@ -1174,7 +1174,6 @@
     "registereierskap_om_registeret_lenke": "<a target=\"_blank\" href=\"{InformasjonLenke}\">Om {Navn} ({Forkortelse})</a>",
     "registereierskap_personverninnstilling_lenke": "Se <a href=\"/personverninnstillinger/forskning-screening-og-helseregistre?partKode={0}\">personverninnstillinger</a> for dette registeret",
     "registereierskap_error_message": "Det har skjedd en teknisk feil. Prøv igjen senere.",
-    "innsyn_btnPrint": "Vis utskriftvennlig side",
     "sysvak_innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
     "sysvak_innsyn_innhold_content": "Her ser du en oversikt over dine vaksinasjoner.",
     "sysvak_innsyn_loggoverbruk_content": "Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret.",
