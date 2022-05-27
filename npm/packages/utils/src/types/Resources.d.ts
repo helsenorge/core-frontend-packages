@@ -18363,6 +18363,10 @@ export type HNMinHelsePasientReiserStrings = {
   * Funksjon ikke støttet
   */
   error_FeatureNotSupported_Title: string;
+  /** 
+  * {"synlig":"True","sporsmalstekst":"","bobletekst":"Tester litt her og tester litt der. Testing er jo det som er gøy.","seksjonstekst_overskrift":"Seksjonstekst testing og","seksjonstekst_brodtekst":"Seksjonstekst brødtekst testing"}
+  */
+  hjelpetrigger_tester: string;
 };
 
 export type HNMinHelsePersonvernStrings = { 
