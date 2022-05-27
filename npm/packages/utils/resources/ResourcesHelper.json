@@ -4589,7 +4589,8 @@
     "error_UtvidetSoknadTurnedOff_Body": "Søknad med tilleggsutgifter må aktiveres i features filen",
     "error_UtvidetSoknadTurnedOff_Title": "Søknad med tilleggsutgifter er skrudd av",
     "error_FeatureNotSupported_Body": "Denne funksjonen er ikke støttet",
-    "error_FeatureNotSupported_Title": "Funksjon ikke støttet"
+    "error_FeatureNotSupported_Title": "Funksjon ikke støttet",
+    "hjelpetrigger_tester": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"Tester litt her og tester litt der. Testing er jo det som er gøy.\",\"seksjonstekst_overskrift\":\"Seksjonstekst testing og\",\"seksjonstekst_brodtekst\":\"Seksjonstekst brødtekst testing\"}"
   },
   "HNMinHelsePersonvernStrings": { 
     "clientOperation_updateKjKontaktperson_Error_Title": "Denne tjenesten er ikke tilgjengelig",
