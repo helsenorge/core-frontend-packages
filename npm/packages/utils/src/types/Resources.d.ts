@@ -18040,7 +18040,7 @@ export type HNMinHelsePasientReiserStrings = {
   */
   pr_skuff_default: string;
   /** 
-  * {"synlig":"True","sporsmalstekst":"","bobletekst":"<p>Finn navn på behandlingssted ved å skrive inn minst tre bokstaver i feltet. Hvis du ikke finner rett avdeling, men en annen avdeling med samme gateadresse, kan du velge denne.</p>","seksjonstekst_overskrift":"","seksjonstekst_brodtekst":""}
+  * {"synlig":"True","sporsmalstekst":"","bobletekst":"Finn navn på behandlingssted ved å skrive inn minst tre bokstaver i feltet. Hvis du ikke finner rett avdeling, men en annen avdeling med samme gateadresse, kan du velge denne.","seksjonstekst_overskrift":"","seksjonstekst_brodtekst":""}
   */
   hjelpetrigger_behandlingsStedHjelp: string;
   /** 
