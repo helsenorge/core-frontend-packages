@@ -1309,6 +1309,121 @@ export type HNDialogCommonJS = {
   healthcareProfessionalHelsesykepleier: string;
 };
 
+export type HNGeneriskinnsynJS = { 
+  /** 
+  * Om innsynsrett i
+  */
+  innsynsrettLenkePrefix: string;
+  /** 
+  * Om
+  */
+  informasjonLenkePrefix: string;
+  /** 
+  * Teknisk feil
+  */
+  registereierskap_error_message_title: string;
+  /** 
+  * Dataansvarlig
+  */
+  registereierskap_dataansvarlig: string;
+  /** 
+  * Opplysningene nedenfor er hentet fra {0} {1}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
+  */
+  registereierskap_innledning_asynkron: string;
+  /** 
+  * Opplysningene nedenfor er hentet fra {0}. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
+  */
+  registereierskap_innledning_synkron: string;
+  /** 
+  * Les mer
+  */
+  registereierskap_lesmer: string;
+  /** 
+  * <a target="_blank" href="{InnsynsrettLenke}">Om innsynsrett i {Navn} ({Forkortelse})</a>
+  */
+  registereierskap_om_innsynsrett: string;
+  /** 
+  * Om registeret
+  */
+  registereierskap_om_registeret: string;
+  /** 
+  * <a target="_blank" href="{InformasjonLenke}">Om {Navn} ({Forkortelse})</a>
+  */
+  registereierskap_om_registeret_lenke: string;
+  /** 
+  * Se <a href="/personverninnstillinger/forskning-screening-og-helseregistre?partKode={0}">personverninnstillinger</a> for dette registeret
+  */
+  registereierskap_personverninnstilling_lenke: string;
+  /** 
+  * Det har skjedd en teknisk feil. Prøv igjen senere.
+  */
+  registereierskap_error_message: string;
+  /** 
+  * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
+  */
+  sysvak_innsyn_footer_content: string;
+  /** 
+  * Her ser du en oversikt over dine vaksinasjoner.
+  */
+  sysvak_innsyn_innhold_content: string;
+  /** 
+  * Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret.
+  */
+  sysvak_innsyn_loggoverbruk_content: string;
+  /** 
+  * Denne tjenesten er ikke tilgjengelig
+  */
+  sysvak_innsyn_not_available: string;
+  /** 
+  * Innhold
+  */
+  sysvak_innsyn_tab_innhold: string;
+  /** 
+  * Logg over bruk
+  */
+  sysvak_innsyn_tab_loggoverbruk: string;
+  /** 
+  * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
+  */
+  sysvak_Page_Desc: string;
+  /** 
+  * Nasjonalt vaksinasjonsregister SYSVAK
+  */
+  sysvak_Page_Title: string;
+  /** 
+  * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
+  */
+  mfr_innsyn_footer_content: string;
+  /** 
+  * Her ser du et utvalg av opplysninger i registeret.
+  */
+  mfr_innsyn_innhold_content: string;
+  /** 
+  * Her ser du en oversikt over hvem som har sett på data som er registrert om deg i registeret.
+  */
+  mfr_innsyn_loggoverbruk_content: string;
+  /** 
+  * Denne tjenesten er ikke tilgjengelig
+  */
+  mfr_innsyn_not_available: string;
+  /** 
+  * Innhold
+  */
+  mfr_innsyn_tab_innhold: string;
+  /** 
+  * Logg over bruk
+  */
+  mfr_innsyn_tab_loggoverbruk: string;
+  /** 
+  * Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.
+  */
+  mfr_Page_Desc: string;
+  /** 
+  * Medisinsk fødselsregister (MFR)
+  */
+  mfr_Page_Title: string;
+};
+
 export type HNMinHelseByttFastlege = { 
   /** 
   * Følgende personer står sammen på ventelisten og vil bytte fastlege samtidig:
@@ -4623,121 +4738,6 @@ export type HNMinHelseDinFastlegeJS = {
   * E-konsultasjon med {0}
   */
   dfl_DigitaleTjenester_EKonsultasjon_long: string;
-};
-
-export type HNMinHelseDirekteinnsynJS = { 
-  /** 
-  * Om innsynsrett i
-  */
-  innsynsrettLenkePrefix: string;
-  /** 
-  * Om
-  */
-  informasjonLenkePrefix: string;
-  /** 
-  * Teknisk feil
-  */
-  registereierskap_error_message_title: string;
-  /** 
-  * Dataansvarlig
-  */
-  registereierskap_dataansvarlig: string;
-  /** 
-  * Opplysningene nedenfor er hentet fra {0} {1}. Ønsker du se hvilke opplysninger som er registrert etter denne datoen må du bestille ny innsynsrapport. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
-  */
-  registereierskap_innledning_asynkron: string;
-  /** 
-  * Opplysningene nedenfor er hentet fra {0}. Registeret er ansvarlig for innholdet. Oppdager du feil eller har andre spørsmål må du henvende deg til dataansvarlig for registeret.
-  */
-  registereierskap_innledning_synkron: string;
-  /** 
-  * Les mer
-  */
-  registereierskap_lesmer: string;
-  /** 
-  * <a target="_blank" href="{InnsynsrettLenke}">Om innsynsrett i {Navn} ({Forkortelse})</a>
-  */
-  registereierskap_om_innsynsrett: string;
-  /** 
-  * Om registeret
-  */
-  registereierskap_om_registeret: string;
-  /** 
-  * <a target="_blank" href="{InformasjonLenke}">Om {Navn} ({Forkortelse})</a>
-  */
-  registereierskap_om_registeret_lenke: string;
-  /** 
-  * Se <a href="/personverninnstillinger/forskning-screening-og-helseregistre?partKode={0}">personverninnstillinger</a> for dette registeret
-  */
-  registereierskap_personverninnstilling_lenke: string;
-  /** 
-  * Det har skjedd en teknisk feil. Prøv igjen senere.
-  */
-  registereierskap_error_message: string;
-  /** 
-  * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
-  */
-  sysvak_innsyn_footer_content: string;
-  /** 
-  * Her ser du en oversikt over dine vaksinasjoner.
-  */
-  sysvak_innsyn_innhold_content: string;
-  /** 
-  * Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret.
-  */
-  sysvak_innsyn_loggoverbruk_content: string;
-  /** 
-  * Denne tjenesten er ikke tilgjengelig
-  */
-  sysvak_innsyn_not_available: string;
-  /** 
-  * Innhold
-  */
-  sysvak_innsyn_tab_innhold: string;
-  /** 
-  * Logg over bruk
-  */
-  sysvak_innsyn_tab_loggoverbruk: string;
-  /** 
-  * Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus.
-  */
-  sysvak_Page_Desc: string;
-  /** 
-  * Nasjonalt vaksinasjonsregister SYSVAK
-  */
-  sysvak_Page_Title: string;
-  /** 
-  * Innhold er levert av <a href="https://www.fhi.no/" target="_blank" class="external">Folkehelseinstituttet</a>
-  */
-  mfr_innsyn_footer_content: string;
-  /** 
-  * Her ser du et utvalg av opplysninger i registeret.
-  */
-  mfr_innsyn_innhold_content: string;
-  /** 
-  * Her ser du en oversikt over hvem som har sett på data som er registrert om deg i registeret.
-  */
-  mfr_innsyn_loggoverbruk_content: string;
-  /** 
-  * Denne tjenesten er ikke tilgjengelig
-  */
-  mfr_innsyn_not_available: string;
-  /** 
-  * Innhold
-  */
-  mfr_innsyn_tab_innhold: string;
-  /** 
-  * Logg over bruk
-  */
-  mfr_innsyn_tab_loggoverbruk: string;
-  /** 
-  * Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge.
-  */
-  mfr_Page_Desc: string;
-  /** 
-  * Medisinsk fødselsregister (MFR)
-  */
-  mfr_Page_Title: string;
 };
 
 export type HNMinHelseDonorkort = { 
