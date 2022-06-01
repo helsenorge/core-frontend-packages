@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/date-time",
-  "version": "24.2.1",
+  "version": "24.3.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -43,10 +43,10 @@
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^24.1.0",
-    "@helsenorge/core-utils": "^24.1.0",
+    "@helsenorge/core-build": "^24.3.0",
+    "@helsenorge/core-utils": "^24.3.0",
     "@helsenorge/designsystem-react": "1.0.0-beta134",
-    "@helsenorge/form": "^24.2.1"
+    "@helsenorge/form": "^24.3.0"
   },
   "dependencies": {
     "@types/react-dates": "^21.8.3",
