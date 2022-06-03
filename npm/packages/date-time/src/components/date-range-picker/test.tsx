@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { render, screen, fireEvent, within, act } from '@testing-library/react';
+import { render, screen, fireEvent, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { mount } from 'enzyme';
 import moment, { Moment } from 'moment';
@@ -31,6 +31,7 @@ const getVisibleMonthContainer = (): HTMLDivElement => {
 describe('DateRangePicker index', () => {
   afterEach(() => {
     jest.clearAllMocks();
+    jest.useRealTimers();
   });
 
   describe('Gitt at DateRangePicker skal rendres', () => {
