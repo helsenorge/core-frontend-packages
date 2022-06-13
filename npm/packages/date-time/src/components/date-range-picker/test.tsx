@@ -923,6 +923,7 @@ describe('DateRangePicker index', () => {
       });
 
       it('Så reagerer native single datepickeren til onBlur og kaller validering videre', () => {
+        jest.useFakeTimers();
         const wrapper = mount(<DateRangePicker id={'id'} type={'single'} onDateChange={onChangeMock} />);
         const onBlurHandlerSpy = jest.spyOn(wrapper.instance() as DateRangePicker, 'onBlurHandler');
         const validateFieldSpy = jest.spyOn(wrapper.instance() as DateRangePicker, 'validateField');
@@ -939,6 +940,7 @@ describe('DateRangePicker index', () => {
       });
 
       it('Så reagerer native range datepickeren til onBlur og kaller validering videre', () => {
+        jest.useFakeTimers();
         const wrapper = mount(<DateRangePicker id={'id'} type={'range'} onDateChange={onChangeMock} />);
         const onBlurHandlerSpy = jest.spyOn(wrapper.instance() as DateRangePicker, 'onBlurHandler');
         const validateFieldSpy = jest.spyOn(wrapper.instance() as DateRangePicker, 'validateField');
@@ -961,6 +963,7 @@ describe('DateRangePicker index', () => {
       );
 
       it('Så deaktiveres navPrev og navNext riktig', () => {
+        jest.useFakeTimers();
         wrapper.find('button').first().simulate('click');
         jest.runAllTimers();
         wrapper.update();
