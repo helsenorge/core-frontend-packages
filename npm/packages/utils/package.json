@@ -32,11 +32,11 @@
   "license": "ISC",
   "type": "module",
   "peerDependencies": {
-    "@helsenorge/designsystem-react": "^1.0.0-beta"
+    "@helsenorge/designsystem-react": "^1.0.0-alphawhite"
   },
   "devDependencies": {
     "@helsenorge/core-build": "^25.0.0-beta.0",
-    "@helsenorge/designsystem-react": "1.0.0-beta131"
+    "@helsenorge/designsystem-react": "1.0.0-alphawhite.0"
   },
   "dependencies": {
     "@types/classnames": "2.3.1",
