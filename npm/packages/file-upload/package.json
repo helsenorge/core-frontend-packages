@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "25.0.0-beta.4",
+  "version": "25.0.0-beta.5",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -43,11 +43,11 @@
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^25.0.0-beta.4",
-    "@helsenorge/core-utils": "^25.0.0-beta.4",
+    "@helsenorge/core-build": "^25.0.0-beta.5",
+    "@helsenorge/core-utils": "^25.0.0-beta.5",
     "@helsenorge/designsystem-react": "1.0.0-alphawhite.0",
-    "@helsenorge/form": "^25.0.0-beta.4",
-    "@helsenorge/toolkit": "^25.0.0-beta.4"
+    "@helsenorge/form": "^25.0.0-beta.5",
+    "@helsenorge/toolkit": "^25.0.0-beta.5"
   },
   "dependencies": {
     "react-dropzone": "12.0.5"
