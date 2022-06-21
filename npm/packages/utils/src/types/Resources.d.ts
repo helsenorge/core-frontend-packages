@@ -1132,7 +1132,7 @@ export type HNDialogCommonJS = {
   */
   bestillTimeVelgerVeiviserBeskrivelse: string;
   /** 
-  * /veileder?Query=Questionnaire%2F303
+  * /skjemautfyller/NHN-Veileder-Legetime
   */
   bestillTimeVelgerVeiviserUrl: string;
   /** 

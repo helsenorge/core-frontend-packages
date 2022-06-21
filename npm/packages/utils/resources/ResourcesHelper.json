@@ -286,7 +286,7 @@
     "bestillTimeVelgerTittel": "Hva slags time trenger du?",
     "bestillTimeVelgerVeiviser": "Få veiledning før timebestilling",
     "bestillTimeVelgerVeiviserBeskrivelse": "Se hvordan du kan hjelpe deg selv og andre å unngå smitte.",
-    "bestillTimeVelgerVeiviserUrl": "/veileder?Query=Questionnaire%2F303",
+    "bestillTimeVelgerVeiviserUrl": "/skjemautfyller/NHN-Veileder-Legetime",
     "bookingAbort": "Avbryt",
     "bookingCalendarTab": "Kalender",
     "bookingDisabledText": "Behandlingsstedet har ennå ikke tilgjengeliggjort time for denne tidsperioden",
