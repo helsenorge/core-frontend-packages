@@ -824,7 +824,7 @@ export type HNDialogCommonJS = {
   */
   ekonsultasjonVelgerVeiviserBeskrivelse: string;
   /** 
-  * /veileder?Query=Questionnaire%2F304
+  * /skjemautfyller/NHN-Veileder-ekonsult
   */
   ekonsultasjonVelgerVeiviserUrl: string;
   /** 
@@ -1004,11 +1004,11 @@ export type HNDialogCommonJS = {
   */
   triageringsvedleggErrorText: string;
   /** 
-  * /veileder?Query=Questionnaire%2F310
+  * /skjemautfyller/NHN-Veileder-TimeKorona
   */
   koronatestVeiviserUrl: string;
   /** 
-  * /veileder?Query=Questionnaire%2F314
+  * /skjemautfyller/NHN-Koronavaksine-Timebestilling
   */
   koronavaksineVeiviserUrl: string;
   /** 
