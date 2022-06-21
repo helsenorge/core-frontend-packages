@@ -5702,7 +5702,7 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
   */
   page_KJ_besokshistorikk_Title: string;
   /** 
-  * Opplysningene i besøkshistorikk i kjernejournal er hentet fra Norsk Pasientregister, som er en del av Helsedirektoratets pasient- og brukerregistre. Opplysningene vises slik de ble rapportert inn av behandlingsstedet. Vanligvis er det ikke mulig å endre opplysningene. Du kan lese mer om dette i <a href="/veileder/KJ_BESOKSHISTORIKK">veileder for besøkshistorikk</a>.
+  * Opplysningene i besøkshistorikk i kjernejournal er hentet fra Norsk Pasientregister, som er en del av Helsedirektoratets pasient- og brukerregistre. Opplysningene vises slik de ble rapportert inn av behandlingsstedet. Vanligvis er det ikke mulig å endre opplysningene. Du kan lese mer om dette i <a href="/skjemautfyller/KJ_BESOKSHISTORIKK">veileder for besøkshistorikk</a>.
   */
   page_KJ_besokshistorikk_Desc1: string;
   /** 
