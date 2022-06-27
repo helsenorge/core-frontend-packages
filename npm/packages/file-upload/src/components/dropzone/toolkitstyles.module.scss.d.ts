@@ -8,7 +8,7 @@ declare namespace ToolkitstylesModuleScssNamespace {
     dropzone__errormessage: string;
     dropzone__files: string;
     dropzone__files__file: string;
-    dropzone__spinner: string;
+    dropzone__loader: string;
     dropzone__uploadButton: string;
     'dropzone__visual-dropzone': string;
     'dropzone__visual-dropzone--dragover': string;
