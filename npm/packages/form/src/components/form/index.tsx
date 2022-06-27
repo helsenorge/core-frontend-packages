@@ -336,7 +336,7 @@ export default class Form extends React.Component<FormProps, FormState> {
     );
   }
 
-  renderSpinner = (): JSX.Element | void => {
+  renderLoader = (): JSX.Element | void => {
     if (this.props.disabled) {
       return <Loader size={'medium'} overlay={'parent'} />;
     }
@@ -455,7 +455,7 @@ export default class Form extends React.Component<FormProps, FormState> {
           {this.renderErrorMessage()}
           {this.renderButtons()}
         </div>
-        {this.renderSpinner()}
+        {this.renderLoader()}
       </form>
     );
   }

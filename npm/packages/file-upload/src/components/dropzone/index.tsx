@@ -457,7 +457,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
 
   renderSpinner() {
     if (this.state.loading && !this.props.noSpinner) {
-      return <Loader size={'tiny'} className={styles.dropzone__spinner} />;
+      return <Loader size={'tiny'} className={styles.dropzone__loader} />;
     }
   }
 
