@@ -576,6 +576,7 @@
     "pendingChangesConfirm": "Fortsett redigering",
     "pendingChangesDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort.",
     "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
+    "generisk_innsyn_vedlegg": "Vedlegg",
     "innsyn_btnPrint": "Vis utskriftvennlig side"
   },
   "HNMinHelseContent": { 

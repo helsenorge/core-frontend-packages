@@ -2282,6 +2282,10 @@ export type HNMinHelseCommonJS = {
   */
   pendingChangesHeader: string;
   /** 
+  * Vedlegg
+  */
+  generisk_innsyn_vedlegg: string;
+  /** 
   * Vis utskriftvennlig side
   */
   innsyn_btnPrint: string;
