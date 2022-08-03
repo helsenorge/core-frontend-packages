@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "25.0.0-beta.10",
+  "version": "24.6.1",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -32,11 +32,11 @@
   "license": "ISC",
   "type": "module",
   "peerDependencies": {
-    "@helsenorge/designsystem-react": "^1.0.0-alphawhite"
+    "@helsenorge/designsystem-react": "^1.0.0-beta"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^25.0.0-beta.10",
-    "@helsenorge/designsystem-react": "1.0.0-alphawhite.1"
+    "@helsenorge/core-build": "^24.3.0",
+    "@helsenorge/designsystem-react": "1.0.0-beta139"
   },
   "dependencies": {
     "@types/classnames": "2.3.1",
