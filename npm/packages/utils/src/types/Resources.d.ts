@@ -2301,6 +2301,10 @@ export type HNMinHelseContent = {
   */
   page_Behandlinger_NavigateBackLinkTitle: string;
   /** 
+  * Behandlingsplan
+  */
+  page_Behandlingsplan_Title: string;
+  /** 
   * Fullmakter
   */
   page_Fullmakt_Title: string;
