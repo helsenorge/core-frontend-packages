@@ -2314,6 +2314,8 @@
     "userControl_Start_ReservationMessage": "<p>Du har sperret din tilgang til innloggede tjenester på Helsenorge. For å oppheve sperren må du sende inn skjema for å gjenåpne tilgangen.</p><br /><a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge.pdf\\\">Skjema for voksne</a> <br /><a href=\"https://www.helsenorge.no/globalassets/skjema/tilgangssperre/tilgangssperre-gjenaapne-helsenorge-barn.pdf\\\">Skjema for barn under 16 år</a>",
     "userControl_Start_SystemError": "Systemfeil",
     "userControl_Start_SystemErrorDescription": "På grunn av tekniske problemer på helsenorge.no er ikke alle tjenester tilgjengelige nå. Prøv igjen litt senere.",
+    "tile_Behandlingsplan_Title": "Behandlingsplan",
+    "tile_Behandlingsplan_Description": "Mock",
     "tile_Legemidler_Title": "Legemidler",
     "tile_Legemidler_Description": "Resepter på medisiner og utstyr.",
     "tile_DokumentArkiv_Description": "Egne dokumenter lagret på Helsenorge.",
