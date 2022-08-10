@@ -9268,6 +9268,14 @@ export type HNMinHelseNavigation = {
   */
   userControl_Start_SystemErrorDescription: string;
   /** 
+  * Behandlingsplan
+  */
+  tile_Behandlingsplan_Title: string;
+  /** 
+  * Mock
+  */
+  tile_Behandlingsplan_Description: string;
+  /** 
   * Legemidler
   */
   tile_Legemidler_Title: string;
