@@ -824,7 +824,7 @@ export type HNDialogCommonJS = {
    */
   ekonsultasjonVelgerVeiviserBeskrivelse: string;
   /**
-   * /veileder?Query=Questionnaire%2F304
+   * /skjemautfyller/NHN-Veileder-ekonsult
    */
   ekonsultasjonVelgerVeiviserUrl: string;
   /**
@@ -1004,11 +1004,11 @@ export type HNDialogCommonJS = {
    */
   triageringsvedleggErrorText: string;
   /**
-   * /veileder?Query=Questionnaire%2F310
+   * /skjemautfyller/NHN-Veileder-TimeKorona
    */
   koronatestVeiviserUrl: string;
   /**
-   * /veileder?Query=Questionnaire%2F314
+   * /skjemautfyller/NHN-Koronavaksine-Timebestilling
    */
   koronavaksineVeiviserUrl: string;
   /**
@@ -1132,7 +1132,7 @@ export type HNDialogCommonJS = {
    */
   bestillTimeVelgerVeiviserBeskrivelse: string;
   /**
-   * /veileder?Query=Questionnaire%2F303
+   * /skjemautfyller/NHN-Veileder-Legetime
    */
   bestillTimeVelgerVeiviserUrl: string;
   /**
@@ -2282,6 +2282,10 @@ export type HNMinHelseCommonJS = {
    */
   pendingChangesHeader: string;
   /**
+   * Vedlegg
+   */
+  generisk_innsyn_vedlegg: string;
+  /**
    * Vis utskriftvennlig side
    */
   innsyn_btnPrint: string;
@@ -2296,6 +2300,10 @@ export type HNMinHelseContent = {
    * Behandlinger
    */
   page_Behandlinger_NavigateBackLinkTitle: string;
+  /**
+   * Behandlingsplan
+   */
+  page_Behandlingsplan_Title: string;
   /**
    * Fullmakter
    */
@@ -5702,7 +5710,7 @@ Finner du feil i opplysninger registrert i folkeregisteret kan du ta kontakt med
    */
   page_KJ_besokshistorikk_Title: string;
   /**
-   * Opplysningene i besøkshistorikk i kjernejournal er hentet fra Norsk Pasientregister, som er en del av Helsedirektoratets pasient- og brukerregistre. Opplysningene vises slik de ble rapportert inn av behandlingsstedet. Vanligvis er det ikke mulig å endre opplysningene. Du kan lese mer om dette i <a href="/veileder/KJ_BESOKSHISTORIKK">veileder for besøkshistorikk</a>.
+   * Opplysningene i besøkshistorikk i kjernejournal er hentet fra Norsk Pasientregister, som er en del av Helsedirektoratets pasient- og brukerregistre. Opplysningene vises slik de ble rapportert inn av behandlingsstedet. Vanligvis er det ikke mulig å endre opplysningene. Du kan lese mer om dette i <a href="/skjemautfyller/KJ_BESOKSHISTORIKK">veileder for besøkshistorikk</a>.
    */
   page_KJ_besokshistorikk_Desc1: string;
   /**
@@ -9259,6 +9267,14 @@ export type HNMinHelseNavigation = {
    * På grunn av tekniske problemer på helsenorge.no er ikke alle tjenester tilgjengelige nå. Prøv igjen litt senere.
    */
   userControl_Start_SystemErrorDescription: string;
+  /**
+   * Behandlingsplan
+   */
+  tile_Behandlingsplan_Title: string;
+  /**
+   * Mock
+   */
+  tile_Behandlingsplan_Description: string;
   /**
    * Legemidler
    */
