@@ -2282,16 +2282,20 @@ export type HNMinHelseCommonJS = {
   */
   pendingChangesHeader: string;
   /** 
-  * Vedlegg
-  */
-  generisk_innsyn_vedlegg: string;
-  /** 
   * Vis utskriftvennlig side
   */
   innsyn_btnPrint: string;
+  /** 
+  * Vedlegg
+  */
+  generisk_innsyn_vedlegg: string;
 };
 
 export type HNMinHelseContent = { 
+  /** 
+  * Behandlingsplan
+  */
+  page_Behandlingsplan_Title: string;
   /** 
   * Velg behandlingssted
   */
@@ -2301,9 +2305,9 @@ export type HNMinHelseContent = {
   */
   page_Behandlinger_NavigateBackLinkTitle: string;
   /** 
-  * Behandlingsplan
+  * ""
   */
-  page_Behandlingsplan_Title: string;
+  page_Behandlingsplan_Description: string;
   /** 
   * Fullmakter
   */
@@ -2509,7 +2513,7 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   /** 
   * <p>Tjenesten er ikke tilgjengelig for deg eller den du representerer. Det kan være fordi du ikke har nødvendig samtykke eller fullmakt til bruk av tjenesten, eller at du som forelder ikke har lov å bruke tjenesten på vegne av barnet ditt. <a class="Page_NotAccessToService_Link_Text" href="/personverninnstillinger/samtykker/velg">Du kan endre samtykket ditt her.</a></p>
 <p>Har du logget inn med Feide, har du heller ikke tilgang til noen helsetjenester på Helsenorge. Da kan du kun bruke tilgjengelige tjenester i Helsenorge-appen.</p>
-Les om <a class="Page_NotAccessToService_Link_Text" href="/ungdom/">Helsenorge for ungdom</a>
+Les om <a class="Page_NotAccessToService_Link_Text" href="https://www.helsenorge.no/ungdom/">Helsenorge for ungdom</a>
   */
   page_NotAccessToService_Desc: string;
   /** 
@@ -9240,6 +9244,14 @@ export type HNMinHelseNavigation = {
   */
   tile_Korona_Description: string;
   /** 
+  * Behandlingsplan
+  */
+  tile_Behandlingsplan_Title: string;
+  /** 
+  * Mock
+  */
+  tile_Behandlingsplan_Description: string;
+  /** 
   * Si fra om bivirkninger på legemidler og vaksiner
   */
   tile_EksterneTjenester_Bivirkninger_Description: string;
@@ -9267,14 +9279,6 @@ export type HNMinHelseNavigation = {
   * På grunn av tekniske problemer på helsenorge.no er ikke alle tjenester tilgjengelige nå. Prøv igjen litt senere.
   */
   userControl_Start_SystemErrorDescription: string;
-  /** 
-  * Behandlingsplan
-  */
-  tile_Behandlingsplan_Title: string;
-  /** 
-  * Mock
-  */
-  tile_Behandlingsplan_Description: string;
   /** 
   * Legemidler
   */
