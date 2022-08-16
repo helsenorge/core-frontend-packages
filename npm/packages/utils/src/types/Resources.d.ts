@@ -2305,7 +2305,7 @@ export type HNMinHelseContent = {
   */
   page_Behandlinger_NavigateBackLinkTitle: string;
   /** 
-  * ""
+  * 
   */
   page_Behandlingsplan_Description: string;
   /** 
