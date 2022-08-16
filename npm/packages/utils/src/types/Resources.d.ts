@@ -9244,11 +9244,11 @@ export type HNMinHelseNavigation = {
   */
   tile_Korona_Description: string;
   /** 
-  * Behandlingsplan
+  * Behandlingsplaner
   */
   tile_Behandlingsplan_Title: string;
   /** 
-  * Mock
+  * Mål og tiltak avtalt med dine behandlere.
   */
   tile_Behandlingsplan_Description: string;
   /** 
