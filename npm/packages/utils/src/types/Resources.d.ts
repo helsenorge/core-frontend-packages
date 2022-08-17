@@ -9248,7 +9248,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Behandlingsplan_Title: string;
   /** 
-  * Mål og tiltak avtalt med dine behandlere.
+  * Egenbehandling og anbefalt oppfølging.
   */
   tile_Behandlingsplan_Description: string;
   /** 
