@@ -9244,7 +9244,7 @@ export type HNMinHelseNavigation = {
   */
   tile_Korona_Description: string;
   /** 
-  * Behandlingsplaner
+  * Behandlingsplan
   */
   tile_Behandlingsplan_Title: string;
   /** 
