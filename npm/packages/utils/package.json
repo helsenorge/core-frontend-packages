@@ -22,8 +22,7 @@
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
-    "test:watch": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --watch",
-    "helsenorge-notify": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js notify"
+    "test:watch": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --watch"
   },
   "author": "Helsenorge",
   "maintainers": [
