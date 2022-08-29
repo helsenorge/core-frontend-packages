@@ -284,10 +284,10 @@ describe('Date-utils', () => {
     });
   });
 
-  describe('Når earlierToday blir kalt med dagens dato et par timer tilbake i tid', () => {
+  describe('Når earlierToday blir kalt med dagens dato et par minutter tilbake i tid', () => {
     it('Så returnerer den true', () => {
       const d = new Date();
-      d.setHours(d.getHours() - 2);
+      d.setMinutes(d.getMinutes() - 2);
       const date = dateUtilsFunctions.earlierToday(d);
       expect(date).toBeTruthy();
     });
