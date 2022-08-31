@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "25.1.2",
+  "version": "25.2.2",
   "description": "samling av verktøy for hele helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -34,7 +34,7 @@
     "@helsenorge/designsystem-react": "^1.0.0"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^25.1.2",
+    "@helsenorge/core-build": "^25.2.2",
     "@helsenorge/designsystem-react": "1.2.2"
   },
   "dependencies": {
