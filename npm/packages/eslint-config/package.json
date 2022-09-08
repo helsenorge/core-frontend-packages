@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "25.3.0-chunks-bedre-caching",
+  "version": "25.3.0-chunks-bedre-caching.0",
   "main": "./index.js",
   "maintainers": [
     "ROX"
