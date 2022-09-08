@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/date-time",
-  "version": "25.3.0-chunks-bedre-caching.0",
+  "version": "25.3.0-chunks-bedre-caching.1",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -43,10 +43,10 @@
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^25.3.0-chunks-bedre-caching.0",
-    "@helsenorge/core-utils": "^25.3.0-chunks-bedre-caching.0",
+    "@helsenorge/core-build": "^25.3.0-chunks-bedre-caching.1",
+    "@helsenorge/core-utils": "^25.3.0-chunks-bedre-caching.1",
     "@helsenorge/designsystem-react": "1.3.1",
-    "@helsenorge/form": "^25.3.0-chunks-bedre-caching.0"
+    "@helsenorge/form": "^25.3.0-chunks-bedre-caching.1"
   },
   "dependencies": {
     "@types/react-dates": "^21.8.3",
