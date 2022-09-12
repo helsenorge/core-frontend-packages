@@ -8,9 +8,9 @@
  *
  * Example:
  * <article>
- *   <header>
+ *   <div>
  *     <h1>Page title</h1>
- *   </header>
+ *   </div>
  *   <div role="dialog" id="modal">
  *
  *   </div>
