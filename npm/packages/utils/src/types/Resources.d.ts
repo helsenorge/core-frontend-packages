@@ -2897,6 +2897,14 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   * Du kan logge deg inn for å se hva som er registrert om deg i registrene.
   */
   page_Helseregistre_MetaDesc: string;
+  /** 
+  * Se ventetider og informasjon om behandlingssteder.
+  */
+  page_VelgBehandlingssted_MetaDesc: string;
+  /** 
+  * Her finner du trygge, kvalitetssikrede helseverktøy som kan motivere og hjelpe deg.
+  */
+  page_Verktoy_MetaDesc: string;
 };
 
 export type HNMinHelseDialog = { 

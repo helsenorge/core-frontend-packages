@@ -728,7 +728,9 @@
     "page_Behandlinger_NavigateBackLinkTitle": "Behandlinger",
     "page_Behandlingsplan_Title": "Behandlingsplan",
     "page_Behandlingsplan_Description": "",
-    "page_Helseregistre_MetaDesc": "Du kan logge deg inn for å se hva som er registrert om deg i registrene."
+    "page_Helseregistre_MetaDesc": "Du kan logge deg inn for å se hva som er registrert om deg i registrene.",
+    "page_VelgBehandlingssted_MetaDesc": "Se ventetider og informasjon om behandlingssteder.",
+    "page_Verktoy_MetaDesc": "Her finner du trygge, kvalitetssikrede helseverktøy som kan motivere og hjelpe deg."
   },
   "HNMinHelseDialog": { 
     "clientOperation_NewOnlineAppointment_SendError_Service_Unavailable_Title": "Timebestillingen ble ikke utført",
