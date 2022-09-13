@@ -2905,6 +2905,10 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   * Her finner du trygge, kvalitetssikrede helseverktøy som kan motivere og hjelpe deg.
   */
   page_Verktoy_MetaDesc: string;
+  /** 
+  * Du har rett til å ta del i valg om egen behandling. Dette kalles samvalg, og gjøres sammen med helsepersonell. Samvalgsverktøy kan være til stor hjelp i denne valgprosessen.
+  */
+  page_Samvalg_MetaDesc: string;
 };
 
 export type HNMinHelseDialog = { 
