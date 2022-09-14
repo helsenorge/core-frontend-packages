@@ -24,6 +24,7 @@ const HeaderNavIcon: React.FC<{
   };
 
   return (
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
     <span
       onKeyDown={handlePropagation}
       onClick={handlePropagation}

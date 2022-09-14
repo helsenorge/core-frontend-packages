@@ -310,7 +310,7 @@ export class RadioGroup extends React.Component<RadioGroupProps, RadioGroupState
             className={`atom_radio__input ${inputClasses}`}
             {...ariaInvalid}
           />
-          <label htmlFor={inputId} onClick={this.onChange} className={`atom_radio__label ${labelClasses}`}>
+          <label htmlFor={inputId} className={`atom_radio__label ${labelClasses}`}>
             <span tabIndex={-1} className={`atom_radio__checkicon ${checkiconClasses}`}>
               <span tabIndex={-1} className={`atom_radio__checkicon_innercicrcle`} />
             </span>

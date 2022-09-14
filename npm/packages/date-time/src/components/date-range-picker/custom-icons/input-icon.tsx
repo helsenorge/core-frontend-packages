@@ -12,6 +12,7 @@ const InputIcon: React.FC<{
   const { hoverRef, isHovered } = useHover<HTMLSpanElement>(undefined);
 
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-static-element-interactions
     <span ref={hoverRef} onClick={onClick}>
       <Icon className={className} size={36} color="black" svgIcon={Calendar} isHovered={isHovered} />
     </span>

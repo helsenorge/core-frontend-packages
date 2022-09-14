@@ -20,6 +20,7 @@ exports[`Dropzone renders children 1`] = `
     />
   </ForwardRef>
   <Dropzone
+    autoFocus={false}
     disabled={false}
     getFilesFromEvent={[Function]}
     maxFiles={0}
@@ -87,6 +88,7 @@ exports[`Dropzone renders uploaded files 1`] = `
     />
   </ForwardRef>
   <Dropzone
+    autoFocus={false}
     disabled={false}
     getFilesFromEvent={[Function]}
     maxFiles={0}

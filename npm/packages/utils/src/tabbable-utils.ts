@@ -1,7 +1,7 @@
-import { tabbable } from 'tabbable';
+import { FocusableElement, tabbable } from 'tabbable';
 
 export interface TabbableContentWithTabIndexes {
-  tabbableElements: Array<TabbableElement>;
+  tabbableElements: FocusableElement[];
   previousTabIndexes: Array<number | null>;
 }
 
@@ -11,7 +11,7 @@ export interface TabbableContentWithTabIndexes {
  */
 export const setTabIndex = (element: HTMLElement): TabbableContentWithTabIndexes => {
   const newPrevTabIndexes: Array<number | null> = [];
-  const updatedTabbableElements: Array<TabbableElement> = tabbable(element);
+  const updatedTabbableElements: FocusableElement[] = tabbable(element);
   updatedTabbableElements.forEach(el => {
     if (el.hasAttribute('tabindex')) {
       newPrevTabIndexes.push(el.tabIndex);
@@ -31,11 +31,8 @@ export const setTabIndex = (element: HTMLElement): TabbableContentWithTabIndexes
  * @param tabbableElements: The array of tabbable Elements to reset
  * @param previousTabIndexes: The previous tabindex values to set back
  */
-export const resetTabIndex = (
-  tabbableElements: Array<TabbableElement>,
-  previousTabIndexes: Array<number | null>
-): Array<TabbableElement> => {
-  const updatedTabbableElements: Array<TabbableElement> = tabbableElements;
+export const resetTabIndex = (tabbableElements: FocusableElement[], previousTabIndexes: Array<number | null>): FocusableElement[] => {
+  const updatedTabbableElements: FocusableElement[] = tabbableElements;
   if (!tabbableElements || tabbableElements.length < 1) {
     return [];
   }

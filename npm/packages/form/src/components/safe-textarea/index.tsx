@@ -468,6 +468,7 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
           onChange={this.onChange}
           onBlur={this.onBlur}
           onFocus={this.onFocus}
+          // eslint-disable-next-line jsx-a11y/no-autofocus
           autoFocus={autoFocus}
           disabled={disabled}
           required={required}
