@@ -731,7 +731,7 @@
     "page_Helseregistre_MetaDesc": "Du kan logge deg inn for å se hva som er registrert om deg i registrene.",
     "page_VelgBehandlingssted_MetaDesc": "Se ventetider og informasjon om behandlingssteder.",
     "page_Verktoy_MetaDesc": "Her finner du trygge, kvalitetssikrede helseverktøy som kan motivere og hjelpe deg.",
-    "page_Samvalg_MetaDesc": "Du har rett til å ta del i valg om egen behandling. Dette kalles samvalg, og gjøres sammen med helsepersonell. Samvalgsverktøy kan være til stor hjelp i denne valgprosessen."
+    "page_Samvalg_MetaDesc": "Du har rett til å ta del i valg om egen behandling. Finn samvalgsverktøy for din diagnose."
   },
   "HNMinHelseDialog": { 
     "clientOperation_NewOnlineAppointment_SendError_Service_Unavailable_Title": "Timebestillingen ble ikke utført",

@@ -2906,7 +2906,7 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   */
   page_Verktoy_MetaDesc: string;
   /** 
-  * Du har rett til å ta del i valg om egen behandling. Dette kalles samvalg, og gjøres sammen med helsepersonell. Samvalgsverktøy kan være til stor hjelp i denne valgprosessen.
+  * Du har rett til å ta del i valg om egen behandling. Finn samvalgsverktøy for din diagnose.
   */
   page_Samvalg_MetaDesc: string;
 };
