@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom';
 
 interface RenderToBodyProps {
   printable?: boolean;
+  children: React.ReactNode;
 }
 
 /**

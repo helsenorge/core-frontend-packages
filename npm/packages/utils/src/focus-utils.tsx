@@ -10,10 +10,9 @@ export const getDocumentActiveElement = (
   logCallback?: (message?: string, ...optionalParams: unknown[]) => void
 ): Element | null => {
   try {
-    const domNode: TabbableElement =
-      typeof element === 'string' ? (document.querySelector(element) as TabbableElement) : (element as TabbableElement);
-    const root = domNode.getRootNode() as HTMLDocument;
-    return root.activeElement;
+    const domNode = typeof element === 'string' ? document.querySelector(element) : element;
+    const root = domNode?.getRootNode() as Document;
+    return root?.activeElement;
   } catch (e) {
     const logger = logCallback || log;
 

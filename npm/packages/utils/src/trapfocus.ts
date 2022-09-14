@@ -1,8 +1,10 @@
-import { tabbable } from 'tabbable';
+import { FocusableElement, tabbable } from 'tabbable';
 
 import keyCode from './constants/key-code';
 import { getEventTarget } from './events';
 import { getDocumentActiveElement } from './focus-utils';
+
+type TabbableElement = FocusableElement & HTMLInputElement;
 
 /* Class som ved init låser fokuset inne i én DOMElement. Bruksområder er f.eks Modalvinduer.
 Tar imot en DomNode (HTMLElement eller string) som fokuset skal låses i. */

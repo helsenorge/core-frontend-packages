@@ -50,7 +50,7 @@
     "@helsenorge/toolkit": "^25.3.0-chunks-bedre-caching-beta"
   },
   "dependencies": {
-    "react-dropzone": "12.0.5"
+    "react-dropzone": "14.2.2"
   },
   "browserslist": [
     "> 0.2% in NO",
