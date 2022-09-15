@@ -731,7 +731,9 @@
     "page_Helseregistre_MetaDesc": "Du kan logge deg inn for å se hva som er registrert om deg i registrene.",
     "page_VelgBehandlingssted_MetaDesc": "Se ventetider og informasjon om behandlingssteder.",
     "page_Verktoy_MetaDesc": "Her finner du trygge, kvalitetssikrede helseverktøy som kan motivere og hjelpe deg.",
-    "page_Samvalg_MetaDesc": "Du har rett til å ta del i valg om egen behandling. Finn samvalgsverktøy for din diagnose."
+    "page_Samvalg_MetaDesc": "Du har rett til å ta del i valg om egen behandling. Finn samvalgsverktøy for din diagnose.",
+    "page_Skjemautfyller_HELFO_EHIC_MetaDesc": "Kortet dokumenterer rett til dekning av nødvendig helsehjelp i et annet EØS-land.",
+    "page_Skjemautfyller_HELFO_EHIC_Title": "Bestill Europeisk helsetrygdkort"
   },
   "HNMinHelseDialog": { 
     "clientOperation_NewOnlineAppointment_SendError_Service_Unavailable_Title": "Timebestillingen ble ikke utført",

@@ -2909,6 +2909,14 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   * Du har rett til å ta del i valg om egen behandling. Finn samvalgsverktøy for din diagnose.
   */
   page_Samvalg_MetaDesc: string;
+  /** 
+  * Kortet dokumenterer rett til dekning av nødvendig helsehjelp i et annet EØS-land.
+  */
+  page_Skjemautfyller_HELFO_EHIC_MetaDesc: string;
+  /** 
+  * Bestill Europeisk helsetrygdkort
+  */
+  page_Skjemautfyller_HELFO_EHIC_Title: string;
 };
 
 export type HNMinHelseDialog = { 
