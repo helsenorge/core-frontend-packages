@@ -734,7 +734,10 @@
     "page_Samvalg_MetaDesc": "Du har rett til å ta del i valg om egen behandling. Finn samvalgsverktøy for din diagnose.",
     "page_Skjemautfyller_HELFO_EHIC_MetaDesc": "Kortet dokumenterer rett til dekning av nødvendig helsehjelp i et annet EØS-land.",
     "page_Skjemautfyller_HELFO_EHIC_Title": "Bestill Europeisk helsetrygdkort",
-    "page_Skjemautfyller_MeldeHendelse_MetaDesc": "Meld fra om alvorlige hendelser i helsetjenesten."
+    "page_Skjemautfyller_MeldeHendelse_MetaDesc": "Meld fra om alvorlige hendelser i helsetjenesten.",
+    "page_Skjemautfyller_MeldeHendelse_Title": "Varsle om alvorlig hendelse",
+    "page_Skjemautfyller_SLV_PasRapp_2020_MetaDesc": "Si fra om bivirkninger på legemidler og vaksiner.",
+    "page_Skjemautfyller_SLV_PasRapp_2020_Title": "Meld bivirkninger"
   },
   "HNMinHelseDialog": { 
     "clientOperation_NewOnlineAppointment_SendError_Service_Unavailable_Title": "Timebestillingen ble ikke utført",

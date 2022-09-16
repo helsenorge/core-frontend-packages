@@ -2921,6 +2921,18 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   * Meld fra om alvorlige hendelser i helsetjenesten.
   */
   page_Skjemautfyller_MeldeHendelse_MetaDesc: string;
+  /** 
+  * Varsle om alvorlig hendelse
+  */
+  page_Skjemautfyller_MeldeHendelse_Title: string;
+  /** 
+  * Si fra om bivirkninger på legemidler og vaksiner.
+  */
+  page_Skjemautfyller_SLV_PasRapp_2020_MetaDesc: string;
+  /** 
+  * Meld bivirkninger
+  */
+  page_Skjemautfyller_SLV_PasRapp_2020_Title: string;
 };
 
 export type HNMinHelseDialog = { 
