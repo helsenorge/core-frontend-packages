@@ -2917,6 +2917,10 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   * Bestill Europeisk helsetrygdkort
   */
   page_Skjemautfyller_HELFO_EHIC_Title: string;
+  /** 
+  * Meld fra om alvorlige hendelser i helsetjenesten.
+  */
+  page_Skjemautfyller_MeldeHendelse_MetaDesc: string;
 };
 
 export type HNMinHelseDialog = { 
