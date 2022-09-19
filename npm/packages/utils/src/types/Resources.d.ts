@@ -2933,6 +2933,10 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   * Meld bivirkninger
   */
   page_Skjemautfyller_SLV_PasRapp_2020_Title: string;
+  /** 
+  * 
+  */
+  page_Skjemautfyller_MetaDesc: string;
 };
 
 export type HNMinHelseDialog = { 
