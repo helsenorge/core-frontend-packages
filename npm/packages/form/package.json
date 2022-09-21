@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/form",
-  "version": "26.0.0-beta.5",
+  "version": "25.2.5",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -36,7 +36,7 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^26.0.0-beta.5",
+    "@helsenorge/core-utils": "^25.0.0",
     "@helsenorge/designsystem-react": "^1.0.0",
     "react": ">=17.0.2",
     "react-dom": ">=17.0.2"
@@ -46,9 +46,9 @@
     "react-collapse": "5.1.1"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^26.0.0-beta.5",
-    "@helsenorge/core-utils": "^26.0.0-beta.5",
-    "@helsenorge/designsystem-react": "1.3.1"
+    "@helsenorge/core-build": "^25.2.2",
+    "@helsenorge/core-utils": "^25.2.5",
+    "@helsenorge/designsystem-react": "1.5.1"
   },
   "browserslist": [
     "> 0.2% in NO",
