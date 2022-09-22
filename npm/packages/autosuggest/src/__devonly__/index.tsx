@@ -4,13 +4,20 @@ import React from 'react';
 
 import { render } from 'react-dom';
 
+import { AutosuggestExample } from '../examples';
+
 const anchor: Element | null = document.getElementById('main-content-wrapper');
 
 const TestSide: React.FC = () => {
   return (
     <>
-      <h1>{'Testside'}</h1>
-      <p>{'Her kan du legge inn komponenter og teste dem med "npm run start".'}</p>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <AutosuggestExample />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
