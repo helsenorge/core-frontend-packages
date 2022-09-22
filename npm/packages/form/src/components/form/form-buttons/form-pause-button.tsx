@@ -1,7 +1,6 @@
 import * as React from 'react';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
-import { ButtonVariants } from '@helsenorge/designsystem-react/components/Button';
 import { Icon, SvgIcon } from '@helsenorge/designsystem-react/components/Icons';
 
 import toolkitstyles from '../styles.module.scss';
@@ -25,7 +24,7 @@ interface FormPauseButtonProps {
 }
 
 const FormPauseButton: React.FC<FormPauseButtonProps> = (props: FormPauseButtonProps): JSX.Element | null => {
-  const getButtonVariant = (): ButtonVariants => {
+  const getButtonVariant = () => {
     if (props.pauseButtonType === 'function' || props.pauseButtonLevel === 'tertiary') {
       return 'borderless';
     } else if (props.pauseButtonLevel === 'secondary') {
@@ -53,7 +52,7 @@ const FormPauseButton: React.FC<FormPauseButtonProps> = (props: FormPauseButtonP
     <Button
       variant={getButtonVariant()}
       disabled={props.pauseButtonDisabled}
-      className={`${toolkitstyles.form__buttonwrapper__button} ${props.pauseButtonClasses}`}
+      wrapperClassName={`${toolkitstyles.form__buttonwrapper__button} ${props.pauseButtonClasses}`}
       onClick={onPauseHandler}
       testId={props.pauseButtonTestId}
     >

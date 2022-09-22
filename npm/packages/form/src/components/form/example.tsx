@@ -3,7 +3,6 @@ import * as React from 'react';
 import moment, { Moment } from 'moment';
 
 import ArrowLeft from '@helsenorge/designsystem-react/components/Icons/ArrowLeft';
-import ArrowRight from '@helsenorge/designsystem-react/components/Icons/ArrowRight';
 import Pause from '@helsenorge/designsystem-react/components/Icons/Pause';
 
 import { log } from '@helsenorge/core-utils/logger';
@@ -280,8 +279,8 @@ export class FormExample extends React.Component<{}, ExampleState> {
           onCancel={this.onCancel}
           pauseButtonLevel="secondary"
           pauseButtonLeftIcon={Pause}
+          cancelButtonOutline
           cancelButtonRight
-          cancelButtonRightIcon={ArrowRight}
           cancelButtonLeftIcon={ArrowLeft}
           onSubmit={this.onSubmit}
           validationSummary={{

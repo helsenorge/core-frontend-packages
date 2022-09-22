@@ -501,7 +501,7 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     if (this.props.resetButton && this.props.resetButton.resetButtonText) {
       return (
         <div className="mol_timeinput__resetbutton" onBlur={this.onBlur}>
-          <Button intent={'danger'} variant={'borderless'} onClick={this.resetFields}>
+          <Button concept={'destructive'} variant={'borderless'} onClick={this.resetFields}>
             <Icon svgIcon={Undo} />
             {this.props.resetButton.resetButtonText}
           </Button>

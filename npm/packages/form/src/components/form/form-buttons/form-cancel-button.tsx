@@ -18,8 +18,6 @@ interface FormCancelButtonProps {
   cancelButtonType?: 'action' | 'display';
   /** If the cancel button has an icon to be shown on the left - only possible if cancelButtonType is 'display' */
   cancelButtonLeftIcon?: SvgIcon;
-  /** If the cancel button has an icon to be shown on the right - only possible if cancelButtonType is 'display' */
-  cancelButtonRightIcon?: SvgIcon;
   /** If the cancel button is disabled  */
   cancelButtonDisabled?: boolean;
   /** Function som kalles ved klikk på Avrbyt */
@@ -49,14 +47,13 @@ const FormCancelButton: React.FC<FormCancelButtonProps> = (props: FormCancelButt
   return (
     <Button
       variant={props.cancelButtonOutline ? 'outline' : 'borderless'}
-      className={`${toolkitstyles.form__buttonwrapper__button} ${props.cancelButtonClasses ? props.cancelButtonClasses : ''}`}
+      wrapperClassName={`${toolkitstyles.form__buttonwrapper__button} ${props.cancelButtonClasses ? props.cancelButtonClasses : ''}`}
       onClick={onCancelHandler}
       disabled={props.cancelButtonDisabled}
       testId={props.cancelButtonTestId}
     >
       {!!props.cancelButtonLeftIcon && <Icon svgIcon={props.cancelButtonLeftIcon} />}
       {props.cancelButtonText}
-      {!!props.cancelButtonRightIcon && <Icon svgIcon={props.cancelButtonRightIcon} />}
     </Button>
   );
 };

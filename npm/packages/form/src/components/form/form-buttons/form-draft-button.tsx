@@ -36,7 +36,7 @@ const FormDraftButton: React.FC<FromDraftButtonProps> = (props: FromDraftButtonP
     <Button
       variant={'outline'}
       formNoValidate
-      className={`${toolkitstyles.form__buttonwrapper__button} ${props.draftButtonClasses}`}
+      wrapperClassName={`${toolkitstyles.form__buttonwrapper__button} ${props.draftButtonClasses}`}
       onClick={onClickHandler}
       data-testid={props.draftButtonTestId}
     >

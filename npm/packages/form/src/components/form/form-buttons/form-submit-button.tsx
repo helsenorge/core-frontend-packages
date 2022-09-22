@@ -12,9 +12,9 @@ interface FormSubmitButtonProps {
   /** Ekstra CSS-class som legges på submit knappen */
   submitButtonClasses?: string;
   /** If the submit button has an icon to be shown on the left - only possible if submitButtonType is 'display' */
-  submitButtonLeftIcon?: JSX.Element;
+  submitButtonLeftIcon?: boolean;
   /** If the submit button has an icon to be shown on the right - only possible if submitButtonType is 'display'  */
-  submitButtonRightIcon?: JSX.Element;
+  submitButtonRightIcon?: boolean;
   /** Submit button type. Default is 'action' */
   submitButtonType?: 'action' | 'display';
   /** If the submit button is disabled  */
@@ -46,15 +46,15 @@ const FormSubmitButton: React.FC<FormSubmitButtonProps> = (props: FormSubmitButt
     return (
       <Button
         variant={props.submitButtonType === 'display' ? 'fill' : 'outline'}
-        className={`${toolkitstyles.form__buttonwrapper__button} ${props.submitButtonClasses ? props.submitButtonClasses : ''}`}
+        wrapperClassName={`${toolkitstyles.form__buttonwrapper__button} ${props.submitButtonClasses ? props.submitButtonClasses : ''}`}
         disabled={props.submitButtonDisabled}
         formNoValidate
         onClick={onClickHandler}
         testId={props.submitButtonTestId}
+        arrow={props.submitButtonRightIcon}
       >
-        {!!props.submitButtonLeftIcon && <Icon svgIcon={ArrowRight} />}
+        {props.submitButtonLeftIcon && <Icon svgIcon={ArrowRight} />}
         {props.submitButtonText}
-        {!!props.submitButtonRightIcon && <Icon svgIcon={ArrowRight} />}
       </Button>
     );
   }

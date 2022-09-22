@@ -39,9 +39,9 @@ export interface FormProps {
   /** Submit button type. Default is 'action' */
   submitButtonType?: 'action' | 'display';
   /** If the submit button has an icon to be shown on the left - only possible if submitButtonType is 'display' */
-  submitButtonLeftIcon?: JSX.Element;
+  submitButtonLeftIcon?: boolean;
   /** If the submit button has an icon to be shown on the right - only possible if submitButtonType is 'display'  */
-  submitButtonRightIcon?: JSX.Element;
+  submitButtonRightIcon?: boolean;
   /** If the submit button is disabled  */
   submitButtonDisabled?: boolean;
 
@@ -57,8 +57,6 @@ export interface FormProps {
   cancelButtonType?: 'action' | 'display';
   /** If the cancel button has an icon to be shown on the left - only possible if cancelButtonType is 'display' */
   cancelButtonLeftIcon?: SvgIcon;
-  /** If the cancel button has an icon to be shown on the right - only possible if cancelButtonType is 'display' */
-  cancelButtonRightIcon?: SvgIcon;
   /** If the cancel button is disabled  */
   cancelButtonDisabled?: boolean;
   /** Setter outline variant på CancelButton */
@@ -273,7 +271,6 @@ export default class Form extends React.Component<FormProps, FormState> {
         cancelButtonRight={this.props.cancelButtonRight}
         cancelButtonType={this.props.cancelButtonType}
         cancelButtonLeftIcon={this.props.cancelButtonLeftIcon}
-        cancelButtonRightIcon={this.props.cancelButtonRightIcon}
         cancelButtonDisabled={this.props.cancelButtonDisabled}
         onCancel={this.props.onCancel}
         cancelButtonTestId={this.props.cancelButtonTestId}
