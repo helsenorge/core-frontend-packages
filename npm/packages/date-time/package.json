@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/date-time",
-  "version": "25.2.5",
+  "version": "25.3.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -44,9 +44,9 @@
   },
   "devDependencies": {
     "@helsenorge/core-build": "^25.2.2",
-    "@helsenorge/core-utils": "^25.2.5",
+    "@helsenorge/core-utils": "^25.3.0",
     "@helsenorge/designsystem-react": "1.6.0",
-    "@helsenorge/form": "^25.2.5"
+    "@helsenorge/form": "^25.3.0"
   },
   "dependencies": {
     "@types/react-dates": "^21.8.3",
