@@ -2939,7 +2939,11 @@
     "xDS_LokasjonFeil_OUSHF_U1": "Oslo universitetssykehus HF (U1)",
     "xDS_LokasjonFeil_OUSHF_PP": "Oslo universitetssykehus HF (PP)",
     "pasientjournal_stempel_kontekst": "pasientjournal",
-    "xDS_LokasjonFeil_HV": "Sykehus i Helse Vest"
+    "xDS_LokasjonFeil_HV": "Sykehus i Helse Vest",
+    "xDS_LokasjonFeil_HN_Kilde": "Helse Nord RHF",
+    "xDS_LokasjonFeil_HV_Kilde": "Helse Vest RHF",
+    "xDS_LokasjonFeil_HSO_Kilde": "Helse Sør-Øst RHF",
+    "xDS_LokasjonFeil_LDS_Kilde": "Lovisenberg Diakonale Sykehus AS"
   },
   "HNMinHelsePasientreiserJS": { 
     "klager_klageSkjema_cancel": "Avbryt",

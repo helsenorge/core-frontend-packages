@@ -11766,6 +11766,22 @@ export type HNMinHelsePasientjournal = {
   * Sykehus i Helse Vest
   */
   xDS_LokasjonFeil_HV: string;
+  /** 
+  * Helse Nord RHF
+  */
+  xDS_LokasjonFeil_HN_Kilde: string;
+  /** 
+  * Helse Vest RHF
+  */
+  xDS_LokasjonFeil_HV_Kilde: string;
+  /** 
+  * Helse Sør-Øst RHF
+  */
+  xDS_LokasjonFeil_HSO_Kilde: string;
+  /** 
+  * Lovisenberg Diakonale Sykehus AS
+  */
+  xDS_LokasjonFeil_LDS_Kilde: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
