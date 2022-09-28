@@ -2938,7 +2938,8 @@
     "tilgangslogg_GenerellDetaljerFeil_Body": "Kunne ikke hente alle innsyn. Vennligst prøv igjen senere.",
     "xDS_LokasjonFeil_OUSHF_U1": "Oslo universitetssykehus HF (U1)",
     "xDS_LokasjonFeil_OUSHF_PP": "Oslo universitetssykehus HF (PP)",
-    "pasientjournal_stempel_kontekst": "pasientjournal"
+    "pasientjournal_stempel_kontekst": "pasientjournal",
+    "xDS_LokasjonFeil_HV": "Sykehus i Helse Vest"
   },
   "HNMinHelsePasientreiserJS": { 
     "klager_klageSkjema_cancel": "Avbryt",
