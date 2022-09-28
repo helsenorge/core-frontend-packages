@@ -11762,6 +11762,10 @@ export type HNMinHelsePasientjournal = {
   * pasientjournal
   */
   pasientjournal_stempel_kontekst: string;
+  /** 
+  * Sykehus i Helse Vest
+  */
+  xDS_LokasjonFeil_HV: string;
 };
 
 export type HNMinHelsePasientreiserJS = { 
