@@ -18132,6 +18132,10 @@ export type HNMinHelsePasientreiserJS = {
   * klage
   */
   generisk_klage: string;
+  /** 
+  * Denne søknadskladden er utgått på dato på grunn av tekniske oppgraderinger. For å redigere eller sende inn søknaden må du lage ny søknad. Last ned eventuelle vedlegg fra gammel søknadskladd. Om du ikke har behov for søknadskladden eller vedlegg, ber vi deg slette dette.
+  */
+  soknadsseksjoner_varselOmVedleggVedKladd: string;
 };
 
 export type HNMinHelsePasientReiserStrings = { 
