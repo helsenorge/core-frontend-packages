@@ -18132,6 +18132,10 @@ export type HNMinHelsePasientreiserJS = {
   * klage
   */
   generisk_klage: string;
+  /** 
+  * tester her ja
+  */
+  frederic_tester: string;
 };
 
 export type HNMinHelsePasientReiserStrings = { 

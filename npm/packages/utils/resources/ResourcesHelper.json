@@ -4530,7 +4530,8 @@
     "distanse_ugyldig": "Distanse må være mellom 0 og 3000km.",
     "reiselengder_max_error": "Reiselengden kan ikke være over 3000 km",
     "generisk_brev": "brev",
-    "generisk_klage": "klage"
+    "generisk_klage": "klage",
+    "frederic_tester": "tester her ja"
   },
   "HNMinHelsePasientReiserStrings": { 
     "hjelpetrigger_behandlingsDatoHjelp": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"<p> Søknaden må sendes inn senest seks måneder etter at du var til behandling. Unntaket fra denne regelen er hvis du ikke var i stand til å sende inn søknaden før, eller et helseforetak ga deg feil opplysninger om når du skulle sende inn søknaden.  </p>\",\"seksjonstekst_overskrift\":\"Hvilken dag var du til behandling?\",\"seksjonstekst_brodtekst\":\"\"}",
