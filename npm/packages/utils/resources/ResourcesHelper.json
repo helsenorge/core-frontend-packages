@@ -5033,7 +5033,8 @@
     "pdfCompatibilityCancel": "Avbryt",
     "pdfCompatibilityConfirm": "Last ned",
     "pdfCompatibilityClose": "Lukk",
-    "pdfDownloadComplete": "Dokument ble lastet ned til din enhet"
+    "pdfDownloadComplete": "Dokument ble lastet ned til din enhet",
+    "tester_her": "frederic tester"
   },
   "HNVidereformidling": { 
     "videreformidling_Sms_Varsel": "Du har fått et brev fra {aktørnavn}",
