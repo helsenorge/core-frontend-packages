@@ -20133,10 +20133,6 @@ export type HNPortal = {
   * Dokument ble lastet ned til din enhet
   */
   pdfDownloadComplete: string;
-  /** 
-  * frederic tester
-  */
-  tester_her: string;
 };
 
 export type HNVidereformidling = { 
