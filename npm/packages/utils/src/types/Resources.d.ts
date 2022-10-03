@@ -19454,6 +19454,10 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * Du har ikke tilgang til å slette kontaktperson.
   */
   clientOperation_deleteKjKontaktperson_Error_Tekst: string;
+  /** 
+  * Behandlingsplan
+  */
+  page_HendelsesLogg_67: string;
 };
 
 export type HNMinHelseResepter = { 
