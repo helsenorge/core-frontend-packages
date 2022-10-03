@@ -36,17 +36,17 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^26.0.0-beta.7",
+    "@helsenorge/core-utils": "^26.0.0-beta.8",
     "@helsenorge/designsystem-react": "^2.0.0-beta.6",
-    "@helsenorge/form": "^26.0.0-beta.7",
+    "@helsenorge/form": "^26.0.0-beta.8",
     "react": ">=17.0.2",
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^26.0.0-beta.7",
-    "@helsenorge/core-utils": "^26.0.0-beta.7",
+    "@helsenorge/core-build": "^26.0.0-beta.8",
+    "@helsenorge/core-utils": "^26.0.0-beta.8",
     "@helsenorge/designsystem-react": "2.0.0-beta.6",
-    "@helsenorge/form": "^26.0.0-beta.7"
+    "@helsenorge/form": "^26.0.0-beta.8"
   },
   "dependencies": {
     "@types/react-dates": "^21.8.3",
