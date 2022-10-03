@@ -1,5 +1,5 @@
 {
-  "HNCoreFrontendMicrowebHeaderFooter": { 
+  "HNCoreFrontendMicrowebHeaderFooter": {
     "headerButtonMeny": "meny",
     "headerButtonSok": "søk",
     "headerButtonLogin": "Logg inn",
@@ -68,12 +68,12 @@
     "headerMenuBasicLettlestTitle": "Lettlest",
     "headerMenuBasicLettlestUrl": "/lettlest"
   },
-  "HNCoreFrontendNPMPackagesCMS": { 
+  "HNCoreFrontendNPMPackagesCMS": {
     "searchPlaceholder": "Søk",
     "searchSubmitLabel": "Søk",
     "searchErrorSuggestionFetch": "Feil. Vi klarer ikke å hente søkeforslag. Vennligst prøv igjen senere."
   },
-  "HNCoreFrontendNPMPackagesFramework": { 
+  "HNCoreFrontendNPMPackagesFramework": {
     "pendingChangesConfirm": "Fortsett redigering",
     "pendingChangesClose": "Forkast endringer",
     "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
@@ -87,7 +87,7 @@
     "personvelgerHeader": "Hvem sine helseopplysninger vil du se?",
     "representasjonerManglendeForeldreansvar": "Foreldre som ikke er registrert med foreldreansvar i folkeregisteret kan ikke representere barnet sitt på Helsenorge.  <a href=\"https://www.helsenorge.no/fullmakt/om/slik-representerer-du-andre-paa-helsenorge-no/#foreldreansvar\" target=\"_blank\">Les mer om foreldrerepresentasjon</a>."
   },
-  "HNCoreFrontendWebForside": { 
+  "HNCoreFrontendWebForside": {
     "searchContainerTitle": "Søk i kvalitetssikret helseinformasjon",
     "searchContainerPlaceholder": "Hva leter du etter?",
     "searchContainerAnchor": "Gå til Innhold A til Å",
@@ -120,7 +120,7 @@
     "signedOut_SignedOut_Explanation": "Du er nå logget ut",
     "innloggetMedFeideNotificationText": "<p>Du har dessverre ikke tilgang til helsetjenester på helsenorge.no fordi du er logget inn med Feide. Bruk tjenester i Helsenorge-appen.<br /><br /></p>\n<p>Er du over 16 år og har BankID eller lignende, kan du logge deg inn på nytt for å få tilgang til dine helsetjenester.<br /><br /></p>\n<p>Les om <a className=\"https://www.helsenorge.no/ungdom/\">Helsenorge for ungdom</a></p>"
   },
-  "HNDialogCommonJS": { 
+  "HNDialogCommonJS": {
     "afterDeadlineBubbleText": "Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.",
     "afterDeadlineLegendText": "Dato kan ikke velges",
     "afterDeadlineMoreHelpText": "Les mer om behandlingsfrister",
@@ -331,7 +331,7 @@
     "triageringsvedleggErrorTitle": "En feil oppsto ved henting av vedlegg med dine besvarelser",
     "triageringsvedleggErrorText": "Du kan likevel sende meldingen uten denne informasjonen."
   },
-  "HNMinHelseByttFastlege": { 
+  "HNMinHelseByttFastlege": {
     "bFL_Gateway_DoctorMessage_Message": "Du kan begynne å bruke fastlege {0} fra {1}. Har du spørsmål om byttet, kontakt brukerstøtte {2} ({3}).",
     "bFL_Gateway_DoctorMessage_Message_Old": "Du kan begynne å bruke fastlege {0} fra {1}. Dette byttet ble registrert {2}. Har du spørsmål om byttet, kontakt brukerstøtte {3} ({4}).",
     "bFL_Gateway_DoctorMessage_Title": "Byttet til fastlege {0} er registrert",
@@ -398,7 +398,7 @@
     "bFL_RestService_TryAgain": "Prøv igjen senere.",
     "bFL_FloKode_Ukjent": "Ukjent årsak"
   },
-  "HNMinHelseCommonJS": { 
+  "HNMinHelseCommonJS": {
     "innholdsfortegnelse": "Innholdsfortegnelse",
     "helpDrawerCloseHelpButton": "Lukk hjelpesenteret",
     "helpDrawerTitle": "Hjelp",
@@ -579,7 +579,7 @@
     "innsyn_btnPrint": "Vis utskriftvennlig side",
     "generisk_innsyn_vedlegg": "Vedlegg"
   },
-  "HNMinHelseContent": { 
+  "HNMinHelseContent": {
     "page_Pasientreisersoknad_Desc": "Pasientreiser",
     "page_Pasientreisersoknad_Title": "Pasientreiser",
     "page_Pasientreiser_Desc": "",
@@ -740,7 +740,7 @@
     "page_Skjemautfyller_SLV_PasRapp_2020_Title": "Meld bivirkninger",
     "page_Skjemautfyller_MetaDesc": ""
   },
-  "HNMinHelseDialog": { 
+  "HNMinHelseDialog": {
     "clientOperation_NewOnlineAppointment_SendError_Service_Unavailable_Title": "Timebestillingen ble ikke utført",
     "clientOpertion_GetGeneralPractitioner_Error_Body": "",
     "clientOpertion_GetGeneralPractitioner_Error_Title": "Det oppstod en feil under henting av fastlegeinformasjonen.",
@@ -894,7 +894,7 @@
     "conversationItemInnkallingsbrevErGjenopprettet": "Innkallingsbrevet er gyldig igjen. Kontakt behandlingsstedet hvis du har spørsmål.",
     "conversationItemInnkallingsbrevErErstattet": "Du har fått en ny versjon av innkallingsbrevet. Les brevet for å se om du må gjøre forberedelser i forkant av timen."
   },
-  "HNMinHelseDialogVPJS": { 
+  "HNMinHelseDialogVPJS": {
     "summaryInfix": " av ",
     "summaryPrefix": "Viser ",
     "tilgangsloggKolonneSisteInnsyn": "Siste tilgang",
@@ -969,7 +969,7 @@
     "tilgangsloggTabellSortShow": "Vis resultat",
     "tableFetchMoreResults": "Hent flere"
   },
-  "HNMinHelseDialogVP": { 
+  "HNMinHelseDialogVP": {
     "userControl_Audit_ShowDetails": "Vis detaljer",
     "userControl_Records_Colon": ": ",
     "webPart_DocumentDetails_Dictionary": "Ordforklaringer",
@@ -1083,7 +1083,7 @@
     "webPart_DocumentDetails_Print": "Skriv ut",
     "userControl_Timeline_StatusValue_Viderehenvist": "Videresendt"
   },
-  "HNMinHelseDinFastlegeJS": { 
+  "HNMinHelseDinFastlegeJS": {
     "dfl_DigitaleTjenester_Kontakt_TilbysIkkeText": "Fastlegen tilbyr ikke kontakt legekontoret.",
     "dfl_OmFastlegen_Prosent": "prosent",
     "dfl_OmFastlegen_Vikar_HarVikar": "har for tiden vikar.",
@@ -1175,7 +1175,7 @@
     "dfl_DinFastlegeBanner_Digitaletjenester": "Digitale tjenester på Helsenorge",
     "ikke_tilgang_errormessage_title": "Du har ikke tilgang til denne tjenesten. Kontakt Veiledning for helsenorge.no på telefon 23 32 70 00 for mer informasjon."
   },
-  "HNMinHelseDirekteinnsynJS": { 
+  "HNMinHelseDirekteinnsynJS": {
     "sysvak_innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
     "sysvak_innsyn_innhold_content": "Her ser du en oversikt over dine vaksinasjoner.",
     "sysvak_innsyn_loggoverbruk_content": "Her ser du en oversikt over hvem som har sett på eller fått utlevert data som er registrert om deg i registeret.",
@@ -1209,7 +1209,7 @@
     "utskrift_fodselsnummer": "Fødselsnummer:",
     "utskrift_utstedelsesdato": "Utstedelsesdato:"
   },
-  "HNMinHelseDonorkort": { 
+  "HNMinHelseDonorkort": {
     "donorkort_paarorende_sms_melding_header": "SMS som sendes fra Helsenorge",
     "donorkort_paarorende_remove_button_remove": "Fjern",
     "donorkort_paarorende_add_phone_change": "Oppdater telefonnummer for denne pårørende i din kjernejournal",
@@ -1270,7 +1270,7 @@
     "donorkort_nummer_validering_tittel": "Bekreft nummeret",
     "donorkort_kontaktpersoner_table_caption": "Tabell over kontaktpersoner"
   },
-  "HNMinHelseForskningJS": { 
+  "HNMinHelseForskningJS": {
     "kliniskeStudierLinkText": "Her kan du lese mer om",
     "kliniskeStudierLinkText2": "kliniske studier.",
     "emptyList": "Du er foreløpig ikke registrert som deltager i noen forskningsprosjekter som vises i tjenesten.",
@@ -1280,10 +1280,10 @@
     "expandButtonText": "Les mer",
     "hjelpekontekst_forskning": "{\"defaulttekst_overskrift\":\"Om Forskning\",\"defaulttekst_brodtekst\":\"<p>Dersom du er med i en eller flere kliniske studier eller helseundersøkelser kan du se informasjon om dem på denne siden. </p>\\n<p>For øyeblikket er det kun Helseundersøkelsen i Nord-Trøndelag (HUNT) som er med i denne tjenesten på helsenorge.no. Flere helseundersøkelser vil bli lagt til etter hvert. Er du ikke med i noen av helseundersøkelsene som er omfattet av tjenesten, vil siden vises uten innhold. </p>\\n\\n<p>Du har rett til innsyn i opplysningene som er lagret om deg. Under hver oppføring finner du informasjon om hvor du kan henvende deg for å få slikt innsyn. </p>\\n<p>De som behandler opplysningene har taushetsplikt, og opplysninger som kan kobles til identifiserbare personer er strengt regulert. </p>\\n\\n<p><a href=\\\"https://www.helsenorge.no/forskning-og-screening/om/\\\">Her kan du lese mer om forskning og screening</a>.</p>\"}"
   },
-  "HNMinHelseHealthArchiveStrings": { 
+  "HNMinHelseHealthArchiveStrings": {
     "conversation_CoordinatorCounterparty_Prefix": "Forløpskoordinator kreft"
   },
-  "HNMinHelseHelseregistreJS": { 
+  "HNMinHelseHelseregistreJS": {
     "messageSubmitHeading": "Skriv melding til",
     "messageSubmitMessageLabel": "Beskrivelse",
     "messageSubmitSaksbehandler": "Saksbehandler",
@@ -1361,7 +1361,7 @@
     "arkivert_med_stor_a": "Arkivert",
     "clientOperation_GetRegisteroppforingPortal_not_available": "Denne tjenesten er ikke tilgjengelig"
   },
-  "HNMinHelseKJStringsJS": { 
+  "HNMinHelseKJStringsJS": {
     "page_KI_validFrom": "Gyldig fra:",
     "page_KI_validthrough": "Gyldig til:",
     "page_KI_verifiedmessage": "Ingen kjente opplysninger. Verifisert {0} av {1}, {2}.",
@@ -1605,7 +1605,7 @@
     "page_Besokshistorikk_Table_Caption": "Tabell som viser besøkshistorikk",
     "page_logg_tableCaption": "Logg over bruk"
   },
-  "HNMinHelseKJStrings": { 
+  "HNMinHelseKJStrings": {
     "mho_criticalinfo_status": "Sannsynlighet:",
     "mho_criticalinfo_title": "Kritisk Info",
     "mho_criticalinfo_treatments_desc": "Her listes behandling du får som er viktig for helsepersonell å vite om når du kommer til undersøkelse eller behandling. Listen kan inneholde dialyse-, smerte- eller kreftbehandling, gjenstander som er operert inn i kroppen, transplanterte organer eller annet.",
@@ -2148,7 +2148,7 @@
     "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Title": "Årstallet er ikke gyldig",
     "page_SykdomOgKritiskInfo_Ugyldig_Arstall_Message": "Årstallet for sykdom eller helsetilstand kan ikke være mindre enn fødselsår."
   },
-  "HNMinHelseLegemidlerJS": { 
+  "HNMinHelseLegemidlerJS": {
     "mho_prescriptions_antall_utleveringer": "Antall utleveringer:",
     "mho_prescriptions_status_print": "Reseptstatus:",
     "mho_prescriptions_areaofuse": "Bruksområde:",
@@ -2279,7 +2279,7 @@
     "legemidler_default_hjelpekontekst": "{\"defaulttekst_overskrift\":\"Om legemidler\",\"defaulttekst_brodtekst\":\"<p>Her vises dine resepter og informasjon om utleverte legemidler, næringsmidler og medisinsk forbruksmateriell. I <strong>Legemidler</strong>-fanen vises aktive resepter og resepter med utleveringer de siste 12 månedene. I <strong>Resepthistorikk</strong>-fanen vises alle resepter og utleveringer tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller bandasjisten. Reseptene er merket med kilden.</p>\\n\\n<p>På siden om <a href=\\\"/reseptformidleren\\\">reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href=\\\"/kjernejournal-innsyn\\\">kjernejournal</a>.</p>\\n<p><a href=\\\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\\\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>\"}",
     "hjelpekontekst_lib_hjelpeskuff": "{\"defaulttekst_overskrift\":\"Om legemiddellisten\",\"defaulttekst_brodtekst\":\"<p> Her vises din legemiddelliste, samt dine resepter og informasjon om utleverte legemidler, næringsmidler og forbruksmateriell .<br>\\nLegemiddellisten gir deg og helsepersonell en oppdatert oversikt over hvilke legemidler du skal bruke. </p>\\n<p>I fanen «Legemiddelliste» vises din legemiddelliste, i tillegg til  aktive resepter og resepter med utleveringer de siste 12 månedene.  I fanen «Resepthistorikk» vises alle resepter  og utleveringer  tre år tilbake i tid. De aktive reseptene hentes fra reseptformidleren. De historiske reseptene dine hentes fra kjernejournal. Papir- og telefonresepter vises etter at varene er utlevert på apoteket eller hos bandasjisten. Reseptene er merket med kilden.</p>\\n<p> På siden om <a href='/reseptformidleren'>reseptformidleren</a> kan du se en oversikt over de som har sett på eller behandlet dine e-resepter. Helsepersonell kan også se informasjon om dine resepter i <a href='/kjernejournal-innsyn'>kjernejournal</a>.</p>\\n<p><a href=\\\"{HelsenorgeUrl}/legemidler/e-resept-og-mine-resepter/personvern-og-sikkerhet-for-e-resepter\\\">Mer informasjon om personvern og sikkerhet for resepter finner du her</a>.</p>\"}"
   },
-  "HNMinHelseLegemidler": { 
+  "HNMinHelseLegemidler": {
     "apnetReseptliste": "Åpnet reseptliste",
     "ingenUtlevering": "Ingen utlevering",
     "kanselleringAnnenArsak": "Annen årsak",
@@ -2300,7 +2300,7 @@
     "utlevering": "Utlevering",
     "lobTabellVisningSeperator": "ved"
   },
-  "HNMinHelseMfr": { 
+  "HNMinHelseMfr": {
     "innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
     "innsyn_innhold_content": "Her ser du et utvalg av opplysninger i registeret.",
     "innsyn_loggoverbruk_content": "Her ser du en oversikt over hvem som har sett på data som er registrert om deg i registeret.",
@@ -2310,7 +2310,7 @@
     "page_Title": "Medisinsk fødselsregister (MFR)",
     "page_Desc": "Medisinsk fødselsregister (MFR) er et landsomfattende helseregister som inneholder informasjon om fødsler i Norge."
   },
-  "HNMinHelseNavigation": { 
+  "HNMinHelseNavigation": {
     "tile_Resepter_Description": "Resepter på legemidler og andre varer med informasjon om utleveringer og riktig bruk",
     "tile_Resepter_Title": "Resepter",
     "tile_Timeavtaler_Description": "Timer og avtaler med helsetjenesten.",
@@ -2377,13 +2377,13 @@
     "tile_Behandlingsplan_Title": "Behandlingsplan",
     "tile_Behandlingsplan_Description": "Egenbehandling og anbefalt oppfølging."
   },
-  "HNMinHelseNHNStrings": { 
+  "HNMinHelseNHNStrings": {
     "serviceApplicationName": "NHN Service Application",
     "serviceName": "NHN Service",
     "error_HprPersonNotFound_Title": "Ugyldig nummer",
     "error_HprPersonNotFound_Body": "Ugyldig nummer. Sjekk at HPR-nummeret er korrekt. Trenger du hjelp kan du ringe Veiledning helsenorge.no på telefon 23 32 70 00."
   },
-  "HNMinHelseNotificationStrings": { 
+  "HNMinHelseNotificationStrings": {
     "pasientreiserVedtak_TextMessage_Body_Representation": "${FirstName} har mottatt et vedtak fra pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.",
     "pasientreiserVedtak_TextMessage_Body_Self": "${FirstName}, du har mottatt et vedtak fra Pasientreiser. Logg inn på Helsenorge og gå til Pasientreiser for å lese det.",
     "prescription_EmailMessage_Body_Representation": "${FirstName} har fått en melding om resept fra ${ActorName}. Logg inn på Helsenorge for å lese den.",
@@ -2752,7 +2752,7 @@
     "spesialistInnkallingsbrev_TextMessage_Body_Representation_IkkeSensitivAvsender": "${FirstName} har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.",
     "spesialistInnkallingsbrev_TextMessage_Body_Self_IkkeSensitivAvsender": "${FirstName}, du har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen."
   },
-  "HNMinHelsePasientjournal": { 
+  "HNMinHelsePasientjournal": {
     "positionFilterPrefix": "i rollen \"",
     "sortDocumentsNotLoadedMsg": "Sorterer alle dokumentene i pasientjournalen",
     "summaryPrefix": "Viser ",
@@ -2945,7 +2945,7 @@
     "xDS_LokasjonFeil_HSO_Kilde": "Helse Sør-Øst RHF",
     "xDS_LokasjonFeil_LDS_Kilde": "Lovisenberg Diakonale Sykehus AS"
   },
-  "HNMinHelsePasientreiserJS": { 
+  "HNMinHelsePasientreiserJS": {
     "klager_klageSkjema_cancel": "Avbryt",
     "klager_klageSkjema_kvittering_title": "Klagen er sendt",
     "klager_klageSkjema_kvittering_content": "Du vil få beskjed når klagen er ferdigbehandlet.",
@@ -4533,7 +4533,7 @@
     "generisk_klage": "klage",
     "soknadsseksjoner_varselOmVedleggVedKladd": "Denne søknadskladden er utgått på dato på grunn av tekniske oppgraderinger. For å redigere eller sende inn søknaden må du lage ny søknad. Last ned eventuelle vedlegg fra gammel søknadskladd. Om du ikke har behov for søknadskladden eller vedlegg, ber vi deg slette dette."
   },
-  "HNMinHelsePasientReiserStrings": { 
+  "HNMinHelsePasientReiserStrings": {
     "hjelpetrigger_behandlingsDatoHjelp": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"<p> Søknaden må sendes inn senest seks måneder etter at du var til behandling. Unntaket fra denne regelen er hvis du ikke var i stand til å sende inn søknaden før, eller et helseforetak ga deg feil opplysninger om når du skulle sende inn søknaden.  </p>\",\"seksjonstekst_overskrift\":\"Hvilken dag var du til behandling?\",\"seksjonstekst_brodtekst\":\"\"}",
     "hjelpetrigger_behandlingsstedHeader": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Hvor ble du behandlet?\",\"seksjonstekst_brodtekst\":\"<p>Merk at du endrer fylket ved å klikke i feltet og velge fra listen. \\n\\n<p>Søk etter behandlingsstedet ditt, og velg fra listen med treff. Du må skrive minst tre bokstaver. Hvis du ikke får opp behandlingsstedet ditt, skriver du inn besøksadressen i feltene som kommer frem. </p>\\n\\n<p>Du velger selv hvor du ønsker å motta behandling, men f​or reiser til behandlere innenfor primærhelsetjenesten (for eksempel fastlege), får du som hovedregel bare dekket utgifter tilsvarende reise til det nærmeste stedet helsetjenesten​​​ kan gis.​ ​I hovedsak gjelder prinsippet om at nærmeste sted for fastlege er innenfor din bostedskommune. </p>\\n\\n<p>For reiser til behandling innen spesialisthelsetjenesten (for eksempel sykehus), regnes nærmeste sted for behandling innenfor din helseregion. Dersom behandleren du har kortest reisevei til er utenfor din kommune eller helseregion, kan du likevel få dekket reiseutgiftene dit. </p>\\n\\n<p><a href=\\\"https://helsenorge.no/rettigheter/pasientreiser/rettigheter/dekkes-reisen-min\\\" target=\\\"_blank\\\">Les mer om hvilke behandlingssteder det dekkes reiser til. </a></p>\"}",
     "hjelpetrigger_behandlingsTidVarsel": "{\"synlig\":\"true\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Behandlingstid og varsel\",\"seksjonstekst_brodtekst\":\"<p> I oversikten over dine søknader kan du følge med på status på søknaden(e) din(e). De fleste søknadene blir behandlet automatisk, men noen må ses på av en saksbehandler. Det betyr at søknaden plasseres i en behandlingskø, og at du får svar når en saksbehandler har vurdert søknaden. </p>\"}",
@@ -4618,7 +4618,7 @@
     "hjelpetrigger_ledsager_tapt_arbeidsfortjeneste": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"\",\"seksjonstekst_overskrift\":\"Dekning av utgifter for reiseledsager\",\"seksjonstekst_brodtekst\":\"<p>Hvis du skal søke om å få dekket tapt arbeidsfortjeneste for reiseledsager, må dette gjøres på papir, og sendes per post til Pasientreiser. Du må legge ved dokumentasjon som viser antall timer reiseledsager er trukket i lønn/har betalt for leiet hjelp, samt beløpet som er trukket/betalt. Dette dekkes etter faste satser. Husk at dokumentasjon du legger ved må være fra arbeidsgiver/regnskapsfører. Søknad om dette sendes til Pasientreiser HF, Postboks 2533 Kjørbekk, 3702 Skien.</p>\"}",
     "hjelpetrigger_tester": "{\"synlig\":\"True\",\"sporsmalstekst\":\"\",\"bobletekst\":\"Tester litt her og tester litt der. Testing er jo det som er gøy.\",\"seksjonstekst_overskrift\":\"Seksjonstekst testing og\",\"seksjonstekst_brodtekst\":\"Seksjonstekst brødtekst testing\"}"
   },
-  "HNMinHelsePersonvernStrings": { 
+  "HNMinHelsePersonvernStrings": {
     "shared_Saksbehandler": "Saksbehandling",
     "shared_SaksbehandlerFullmakt": "Saksbehandling",
     "page_Helseopplysninger_KJ_HelsepersonellText": "{hprName} ( HPR: {hprNumber} )",
@@ -4863,7 +4863,7 @@
     "clientOperation_deleteKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å slette kontaktperson.",
     "page_HendelsesLogg_67": "Behandlingsplan"
   },
-  "HNMinHelseResepter": { 
+  "HNMinHelseResepter": {
     "kanselleringReseptLastTilAnnetApotek": "Resept låst til annet apotek",
     "kanselleringTekniskSvikt": "Teknisk svikt",
     "kanselleringUavhentetVare": "Uavhentet vare",
@@ -4884,7 +4884,7 @@
     "clientOperation_GetRFInnhold_EndpointError_Title": "For øyeblikket kan det være at reseptinformasjonen ikke vises fullstendig.",
     "clientOperation_GetRFInnhold_EndpointError_Body": ""
   },
-  "HNMinHelseSkjemautfyller": { 
+  "HNMinHelseSkjemautfyller": {
     "varselmeny_Skjemaoppgave_Paaminnelse_Emne": "Du har et skjema der fristen snart går ut.",
     "varselmeny_Skjemaoppgave_Paaminnelse_Tekst": "Frist for utfylling",
     "minutePlaceholder": "mm",
@@ -5018,7 +5018,7 @@
     "sidebar_printLink": "Utskriftsversjon",
     "sidebarSectionHeader_Veileder": "Om veilederen"
   },
-  "HNMinHelseSysvak": { 
+  "HNMinHelseSysvak": {
     "innsyn_footer_content": "Innhold er levert av <a href=\"https://www.fhi.no/\" target=\"_blank\" class=\"external\">Folkehelseinstituttet</a>",
     "innsyn_innhold_content": "Her ser du en oversikt over dine vaksinasjoner.",
     "innsyn_tab_innhold": "Innhold",
@@ -5028,7 +5028,7 @@
     "page_Title": "Nasjonalt vaksinasjonsregister SYSVAK",
     "page_Desc": "Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus."
   },
-  "HNPortal": { 
+  "HNPortal": {
     "pdfCompatibilityBodyPreview": "Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?",
     "pdfCompatibilityPreview": "Se forhåndsvisning",
     "pdfCompatibilityTitle": "Last ned dokumentet?",
@@ -5037,7 +5037,7 @@
     "pdfCompatibilityClose": "Lukk",
     "pdfDownloadComplete": "Dokument ble lastet ned til din enhet"
   },
-  "HNVidereformidling": { 
+  "HNVidereformidling": {
     "videreformidling_Sms_Varsel": "Du har fått et brev fra {aktørnavn}",
     "videreformidling_Epost_Varsel": "Du har fått et brev fra {aktørnavn}",
     "videreformidling_Post_Ved_Foresatte": "v/Foresatte",
