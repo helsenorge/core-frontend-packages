@@ -1,6 +1,5 @@
+/* eslint-disable no-console */
 import * as React from 'react';
-
-import { log } from '@helsenorge/core-utils/logger';
 
 import Dropzone, { UploadedFile, TextMessage } from '.';
 
@@ -19,7 +18,7 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
   }
 
   onDrop1 = (files: Array<File>, cb: (success: boolean, errormessage: TextMessage | null, uploadedFile?: UploadedFile) => void): void => {
-    log('file dropped', ...files);
+    console.log('file dropped', ...files);
 
     const newState = [...this.state.uploadedFiles1];
     for (const f of files) {
@@ -31,7 +30,7 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
     this.setState({ uploadedFiles1: newState });
   };
   onDrop2 = (files: Array<File>, cb: (success: boolean, errormessage: TextMessage | null, uploadedFile?: UploadedFile) => void): void => {
-    log('file dropped', ...files);
+    console.log('file dropped', ...files);
 
     const newState = [...this.state.uploadedFiles2];
 
@@ -49,12 +48,12 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
       cb(true, null, uploadedFile);
     }
 
-    log('newState: ', newState);
+    console.log('newState: ', newState);
     this.setState({ uploadedFiles2: newState });
   };
 
   onDelete1 = (fileId: string, cb: (success: boolean, errormessage: TextMessage | null) => void) => {
-    log('file deleted', fileId);
+    console.log('file deleted', fileId);
 
     const newState = this.state.uploadedFiles1.filter(f => f.id !== fileId);
     this.setState({ uploadedFiles1: newState });
@@ -62,7 +61,7 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
     cb(true, null);
   };
   onDelete2 = (fileId: string, cb: (success: boolean, errormessage: TextMessage | null) => void) => {
-    log('file deleted', fileId);
+    console.log('file deleted', fileId);
 
     const newState = this.state.uploadedFiles2.filter(f => f.id !== fileId);
     this.setState({ uploadedFiles2: newState });
@@ -71,12 +70,12 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
   };
 
   onRequestLink(fileId: string): string {
-    log('link was requested for ' + fileId);
+    console.log('link was requested for ' + fileId);
     return 'file:///' + fileId;
   }
 
   onOpenFile(fileId: string): void {
-    log('file ' + fileId + ' was opened');
+    console.log('file ' + fileId + ' was opened');
   }
 
   render(): JSX.Element {
