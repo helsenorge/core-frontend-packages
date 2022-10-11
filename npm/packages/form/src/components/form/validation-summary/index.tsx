@@ -2,8 +2,6 @@ import * as React from 'react';
 
 import * as ReactDOMServer from 'react-dom/server';
 
-import { log } from '@helsenorge/core-utils/logger';
-
 import { FormChild } from '..';
 
 import './styles.scss';
@@ -73,10 +71,7 @@ function sortComponentsWithErrorsByApperanceInDOM(components: Array<FormChild>) 
   return components.sort((a, b) => {
     const el1 = document.getElementById(`${a.props.id}-wrapper`);
     const el2 = document.getElementById(`${b.props.id}-wrapper`);
-    if (!el1 || !el2) {
-      const missingElement = !el1 ? `${a.props.id}-wrapper` : `${b.props.id}-wrapper`;
-      log(`Validation-summary: could not find element with id ${missingElement}`);
-    }
+
     if (el1 && el2) {
       const compare = el1.compareDocumentPosition(el2);
       if (compare === 2) {

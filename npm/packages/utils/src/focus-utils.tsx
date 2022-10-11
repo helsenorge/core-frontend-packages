@@ -1,4 +1,10 @@
-import { log } from './logger';
+const allowConsoleOutput = (): boolean => !['production', 'test'].includes(process.env.NODE_ENV ?? '');
+
+const log = (message?: string, ...optionalParams: unknown[]): void => {
+  if (!allowConsoleOutput()) return;
+  // eslint-disable-next-line no-console
+  console.log(message, optionalParams);
+};
 
 /**
  * Returnerer document.activeElement (element in focus), uavhengig av om den er i document-dom rllrt shadow-dom
@@ -14,9 +20,10 @@ export const getDocumentActiveElement = (
     const root = domNode?.getRootNode() as Document;
     return root?.activeElement;
   } catch (e) {
-    const logger = logCallback || log;
+    const logger = logCallback ?? log;
 
     logger('Feil ved å ta tak i active element basert på angitt node: ', element, e);
+
     return null;
   }
 };

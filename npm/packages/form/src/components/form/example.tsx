@@ -1,11 +1,10 @@
+/* eslint-disable no-console */
 import * as React from 'react';
 
 import moment, { Moment } from 'moment';
 
 import ArrowLeft from '@helsenorge/designsystem-react/components/Icons/ArrowLeft';
 import Pause from '@helsenorge/designsystem-react/components/Icons/Pause';
-
-import { log } from '@helsenorge/core-utils/logger';
 
 import { CheckBox } from '../checkbox';
 import { RadioGroup, Options } from '../radio-group';
@@ -202,7 +201,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
   };
 
   onSubmit = (): void => {
-    log('form has been submitted');
+    console.log('form has been submitted');
     this.setState({
       formSubmitted: true,
     });
@@ -215,14 +214,14 @@ export class FormExample extends React.Component<{}, ExampleState> {
   };
 
   onDraft = (): void => {
-    log('form has been saved as draft');
+    console.log('form has been saved as draft');
     this.setState({
       formSubmitted: true,
     });
   };
 
   onCancel = (): void => {
-    log('form has been canceled');
+    console.log('form has been canceled');
   };
 
   validateRadioGroup = (value: string): boolean => {
@@ -417,7 +416,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
           action="#"
           submitButtonText={'Opprett digitalt donorkort'}
           errorMessage={''}
-          onSubmit={() => log('sendte inn skjema')}
+          onSubmit={() => console.log('sendte inn skjema')}
         >
           <Validation>
             <CheckBox

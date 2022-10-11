@@ -3,7 +3,6 @@ import * as React from 'react';
 import moment from 'moment';
 
 import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
-import { log } from '@helsenorge/core-utils/logger';
 import { Validation } from '@helsenorge/form/components/form/validation';
 
 import { Phrases } from './../date-range-picker/date-range-picker-utils';
@@ -23,7 +22,8 @@ export class DateTimePickerExample extends React.Component<{}, {}> {
   }
 
   onChange = (date: moment.Moment): void => {
-    log('onChange full date is: ', date);
+    // eslint-disable-next-line no-console
+    console.log('onChange full date is: ', date);
   };
 
   render(): JSX.Element {
