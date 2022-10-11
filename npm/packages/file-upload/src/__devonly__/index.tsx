@@ -5,6 +5,7 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import Dropzone from '../components/dropzone';
+import { DropzoneExample } from '../examples';
 
 const anchor: Element | null = document.getElementById('main-content-wrapper');
 
@@ -19,8 +20,7 @@ const TestSide: React.FC = () => {
   };
   return (
     <>
-      <h1>{'Testside'}</h1>
-      <p>{'Her kan du legge inn komponenter og teste dem med "npm run start".'}</p>
+      <DropzoneExample />
 
       <Dropzone
         id="test"

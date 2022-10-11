@@ -5,7 +5,7 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: ['react', 'import', 'testing-library'],
+  plugins: ['react', 'import', 'testing-library', 'jsx-a11y'],
   rules: {
     '@typescript-eslint/ban-types': 'warn',
     '@typescript-eslint/explicit-function-return-type': 'warn',
@@ -121,9 +121,15 @@ module.exports = {
   },
   overrides: [
     {
-      // 3) Now we enable eslint-plugin-testing-library rules or preset only for matching files!
+      // Skru på testing-library/react sine regler, men bare i tester.
       files: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
       extends: ['plugin:testing-library/react'],
+    },
+    // Skru på jsx-a11y sine regler, men ikke i tester.
+    {
+      files: ['*.[jt]s?(x)'],
+      excludedFiles: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:jsx-a11y/recommended'],
     },
   ],
 };

@@ -6,6 +6,7 @@ export interface CustomTagProps {
   tagName: string;
   className?: string;
   focus?: boolean;
+  children: React.ReactNode;
 }
 
 export default class CustomTag extends React.Component<CustomTagProps, {}> {
