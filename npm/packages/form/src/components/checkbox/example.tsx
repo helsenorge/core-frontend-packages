@@ -119,7 +119,7 @@ export class CheckboxExample extends React.Component<{}, CheckboxExampleState> {
           checked={this.state.isHjelpetriggerChecked}
           comment="Dette er en kommentar"
           helpButton={
-            <Button variant="borderless" onClick={this.handleVisHjelp}>
+            <Button ariaLabel={'Vis hjelp eksempel'} variant="borderless" onClick={this.handleVisHjelp}>
               {<Icon color={'black'} svgIcon={HelpSign} />}
             </Button>
           }
