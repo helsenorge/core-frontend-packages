@@ -9994,7 +9994,7 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   paminnelseFastlegeTime_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk timeavtalen${AvtaleType} med ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først.
+  * ${FirstName}, husk timeavtalen${AvtaleType} med ${ActorName} ${DateTime}.
   */
   paminnelseFastlegeTime_TextMessage_Body_Self: string;
   /** 
@@ -10530,19 +10530,19 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   endrePrimarhelsetjenesteTime_EmailMessage_Body_Self: string;
   /** 
-  * Husk at ${FirstName} har en timeavtale${AvtaleType} hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
+  * Husk at ${FirstName} har en timeavtale${AvtaleType} hos ${ActorName} ${DateTime}. Oppmøte: ${OppmoteSted}.
   */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk timeavtalen${AvtaleType} hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
+  * ${FirstName}, husk timeavtalen${AvtaleType} hos ${ActorName} ${DateTime}. Oppmøte: ${OppmoteSted}.
   */
   paminnelseFastlegeTimeOppmoteSted_EmailMessage_Body_Self: string;
   /** 
-  * Husk at ${FirstName} har en timeavtale${AvtaleType} hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
+  * Husk at ${FirstName} har en timeavtale${AvtaleType} hos ${ActorName} ${DateTime}. Oppmøte: ${OppmoteSted}.
   */
   paminnelseFastlegeTimeOppmoteSted_TextMessage_Body_Representation: string;
   /** 
-  * ${FirstName}, husk timeavtalen${AvtaleType} hos ${ActorName} ${DateTime}. Ved mistanke om koronasmitte, ta kontakt på telefon først. Oppmøte: ${OppmoteSted}.
+  * ${FirstName}, husk timeavtalen${AvtaleType} hos ${ActorName} ${DateTime}. Oppmøte: ${OppmoteSted}.
   */
   paminnelseFastlegeTimeOppmoteSted_TextMessage_Body_Self: string;
   /** 
