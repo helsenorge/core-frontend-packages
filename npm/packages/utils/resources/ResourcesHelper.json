@@ -4862,7 +4862,8 @@
     "clientOperation_updateKjKontaktperson_Error_Title": "Denne tjenesten er ikke tilgjengelig",
     "clientOperation_updateKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å gjøre endringer på kontaktperson.",
     "clientOperation_deleteKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å slette kontaktperson.",
-    "page_HendelsesLogg_67": "Behandlingsplan"
+    "page_HendelsesLogg_67": "Behandlingsplan",
+    "donorkort_paarorende_sms_expander": "Vil du informere din pårørende via SMS?"
   },
   "HNMinHelseResepter": { 
     "kanselleringReseptLastTilAnnetApotek": "Resept låst til annet apotek",

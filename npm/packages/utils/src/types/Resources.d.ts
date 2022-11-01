@@ -19462,6 +19462,10 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * Behandlingsplan
   */
   page_HendelsesLogg_67: string;
+  /** 
+  * Vil du informere din pårørende via SMS?
+  */
+  donorkort_paarorende_sms_expander: string;
 };
 
 export type HNMinHelseResepter = { 
