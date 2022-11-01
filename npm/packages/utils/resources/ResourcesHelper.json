@@ -4863,7 +4863,10 @@
     "clientOperation_updateKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å gjøre endringer på kontaktperson.",
     "clientOperation_deleteKjKontaktperson_Error_Tekst": "Du har ikke tilgang til å slette kontaktperson.",
     "page_HendelsesLogg_67": "Behandlingsplan",
-    "donorkort_paarorende_sms_expander": "Vil du informere din pårørende via SMS?"
+    "donorkort_paarorende_sms_expander": "Vil du informere din pårørende via SMS?",
+    "donorkort_paarorende_sms_melding_header": "SMS som sendes fra Helsenorge",
+    "donorkort_paarorende_sms_melding": "I dag har {0} fylt ut et digitalt donorkort og oppført deg, {1}, som pårørende. Les mer om din rolle som pårørende på nettsidene for Stiftelsen Organdonasjon. Du kan ikke svare på denne SMSen.",
+    "donorkort_paarorende_sms_radiobutton_send": "Jeg vil sende SMS til min pårørende"
   },
   "HNMinHelseResepter": { 
     "kanselleringReseptLastTilAnnetApotek": "Resept låst til annet apotek",

@@ -19466,6 +19466,18 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * Vil du informere din pårørende via SMS?
   */
   donorkort_paarorende_sms_expander: string;
+  /** 
+  * SMS som sendes fra Helsenorge
+  */
+  donorkort_paarorende_sms_melding_header: string;
+  /** 
+  * I dag har {0} fylt ut et digitalt donorkort og oppført deg, {1}, som pårørende. Les mer om din rolle som pårørende på nettsidene for Stiftelsen Organdonasjon. Du kan ikke svare på denne SMSen.
+  */
+  donorkort_paarorende_sms_melding: string;
+  /** 
+  * Jeg vil sende SMS til min pårørende
+  */
+  donorkort_paarorende_sms_radiobutton_send: string;
 };
 
 export type HNMinHelseResepter = { 
