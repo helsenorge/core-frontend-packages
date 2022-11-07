@@ -19478,6 +19478,10 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * Jeg vil sende SMS til min pårørende
   */
   donorkort_paarorende_sms_radiobutton_send: string;
+  /** 
+  * Du må legge inn et norsk mobilnummer for å kunne sende SMS
+  */
+  paarorende_add_phone_validation: string;
 };
 
 export type HNMinHelseResepter = { 
