@@ -3564,6 +3564,10 @@ Hvis avtalen ikke passer, husk å gi beskjed i god tid. Du kan gjøre dette på 
   * For øyeblikket vises ikke henvisningene hos Lovisenberg Diakonale Sykehus
   */
   getReferral_WarningLovisenberg: string;
+  /** 
+  * For øyeblikket kan det hende at ikke alle henvisningene hos Lovisenberg Diakonale Sykehus.
+  */
+  getReferral_WarningLovisenbergSourceSystem: string;
 };
 
 export type HNMinHelseDialogVPJS = { 
