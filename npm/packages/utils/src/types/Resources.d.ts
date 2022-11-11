@@ -3560,6 +3560,10 @@ Hvis avtalen ikke passer, husk å gi beskjed i god tid. Du kan gjøre dette på 
   * Ugyldig HerId angitt
   */
   persistentMessage_ValidationHerId_Error_Body: string;
+  /** 
+  * For øyeblikket vises ikke henvisningene hos Lovisenberg Diakonale Sykehus
+  */
+  getReferral_WarningLovisenberg: string;
 };
 
 export type HNMinHelseDialogVPJS = { 
