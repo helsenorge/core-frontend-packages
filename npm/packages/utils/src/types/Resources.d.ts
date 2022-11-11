@@ -3561,11 +3561,11 @@ Hvis avtalen ikke passer, husk å gi beskjed i god tid. Du kan gjøre dette på 
   */
   persistentMessage_ValidationHerId_Error_Body: string;
   /** 
-  * For øyeblikket vises ikke henvisningene hos Lovisenberg Diakonale Sykehus
+  * For øyeblikket vises ikke henvisningene hos Lovisenberg Diakonale Sykehus.
   */
   getReferral_WarningLovisenberg: string;
   /** 
-  * For øyeblikket kan det hende at ikke alle henvisningene hos Lovisenberg Diakonale Sykehus.
+  * For øyeblikket kan det hende at ikke alle henvisningene hos Lovisenberg Diakonale Sykehus vises.
   */
   getReferral_WarningLovisenbergSourceSystem: string;
 };
