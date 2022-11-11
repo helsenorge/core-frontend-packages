@@ -894,8 +894,8 @@
     "conversationItemInnkallingsbrevErGjenopprettet": "Innkallingsbrevet er gyldig igjen. Kontakt behandlingsstedet hvis du har spørsmål.",
     "conversationItemInnkallingsbrevErErstattet": "Du har fått en ny versjon av innkallingsbrevet. Les brevet for å se om du må gjøre forberedelser i forkant av timen.",
     "persistentMessage_ValidationHerId_Error_Body": "Ugyldig HerId angitt",
-    "getReferral_WarningLovisenberg": "For øyeblikket vises ikke henvisningene hos Lovisenberg Diakonale Sykehus",
-    "getReferral_WarningLovisenbergSourceSystem": "For øyeblikket kan det hende at ikke alle henvisningene hos Lovisenberg Diakonale Sykehus."
+    "getReferral_WarningLovisenberg": "For øyeblikket vises ikke henvisningene hos Lovisenberg Diakonale Sykehus.",
+    "getReferral_WarningLovisenbergSourceSystem": "For øyeblikket kan det hende at ikke alle henvisningene hos Lovisenberg Diakonale Sykehus vises."
   },
   "HNMinHelseDialogVPJS": { 
     "summaryInfix": " av ",
