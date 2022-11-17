@@ -48,7 +48,7 @@
   "devDependencies": {
     "@helsenorge/core-build": "^26.2.1",
     "@helsenorge/core-utils": "^26.3.0",
-    "@helsenorge/designsystem-react": "2.6.0"
+    "@helsenorge/designsystem-react": "2.6.2"
   },
   "browserslist": [
     "> 0.2% in NO",
