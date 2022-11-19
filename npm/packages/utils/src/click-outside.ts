@@ -12,7 +12,7 @@ export default function clickOutside(
   addFocusListener?: boolean
 ): void {
   const handleClickOrFocusOutside = (event: MouseEvent): void => {
-    if (ref.current && !ref.current.contains(event.target as Node)) {
+    if (ref.current && !event.composedPath().includes(ref.current)) {
       onClickOutside();
     }
   };
