@@ -57,5 +57,14 @@
     "not dead",
     "not op_mini all",
     "not ie > 0"
-  ]
+  ],
+  "nx": {
+    "targets": {
+      "test": {
+        "dependsOn": [
+          "^test"
+        ]
+      }
+    }
+  }
 }
