@@ -11635,7 +11635,7 @@ export type HNMinHelsePasientjournal = {
   */
   xDS_RepresentasjonFeil_Title: string;
   /** 
-  * Dokumenter fra {0} er foreløpig ikke tilgjengelige på vegne av barn.
+  * Pasientjournal fra {0} for barn i denne alderen er ikke tilgjengelig.
   */
   xDS_RepresentasjonFeil_Body: string;
   /** 

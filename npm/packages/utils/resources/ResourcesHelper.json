@@ -2907,7 +2907,7 @@
     "xDS_LokasjonFeil_HSO": "Sykehus i Helse Sør-Øst",
     "xDS_LokasjonFeil_Uidentifisert": "Uidentifisert helseregion eller sykehus",
     "xDS_RepresentasjonFeil_Title": "Listen kan ikke vises",
-    "xDS_RepresentasjonFeil_Body": "Dokumenter fra {0} er foreløpig ikke tilgjengelige på vegne av barn.",
+    "xDS_RepresentasjonFeil_Body": "Pasientjournal fra {0} for barn i denne alderen er ikke tilgjengelig.",
     "warning_DocumentList_Over500_LastYearOnly_Title": "Viser kun dokumenter fra siste 12 måneder",
     "warning_DocumentList_Over500_LastYearOnly_Body": "Du har flere dokumenter enn vi kan vise samtidig, derfor vises kun dokumenter fra de siste 12 månedene. Du kan velge andre datoer dersom du leter etter eldre dokumenter.",
     "warning_DocumentList_Over500_Title": "For mange dokumenter",
