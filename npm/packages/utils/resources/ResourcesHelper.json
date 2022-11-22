@@ -2887,7 +2887,7 @@
     "cannotOpen_Body": "For å åpne tjenesten for elektronisk innsyn i pasientjournalen din for første gang, må du gå til <a href=\"/\">forsiden på Min helse</a> og starte Pasientjournal derfra. Da får du informasjon om hva tjenesten innebærer og kan bekrefte at du vil ta den i bruk.",
     "tilgangslogg_GenerellFeil_Body": "Logg fra noen behandlingssteder er for øyeblikket ikke tilgjengelig",
     "tilgangslogg_GenrellFeil_Melding_Bunntekst": "Dersom du har logg hos noen av disse stedene vil de ikke vises i listen",
-    "tilgangslogg_RepresentasjonFeil_Body": "{0} har ikke tilgjengeliggjort logg for dokumentinnsyn på vegne av barn.",
+    "tilgangslogg_RepresentasjonFeil_Body": "Tilgangslogg fra {0} for barn i denne alderen er ikke tilgjengelig.",
     "tilgangslogg_RateLimitExceededFeil_Body": "{0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.",
     "xDS_BusyFeil_Body": "{0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.",
     "xDS_BusyFeil_Title": "Listen kan ikke vises",

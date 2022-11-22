@@ -11555,7 +11555,7 @@ export type HNMinHelsePasientjournal = {
   */
   tilgangslogg_GenrellFeil_Melding_Bunntekst: string;
   /** 
-  * {0} har ikke tilgjengeliggjort logg for dokumentinnsyn på vegne av barn.
+  * Tilgangslogg fra {0} for barn i denne alderen er ikke tilgjengelig.
   */
   tilgangslogg_RepresentasjonFeil_Body: string;
   /** 
