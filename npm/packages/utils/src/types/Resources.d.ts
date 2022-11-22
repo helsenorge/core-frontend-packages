@@ -106,7 +106,7 @@ export type HNCoreFrontendMicrowebHeaderFooter = {
   */
   headerMenuBasicInnholdAAATitle: string;
   /** 
-  * /innholdsoversikt
+  * /innholdsoversikt/
   */
   headerMenuBasicInnholdAAAUrl: string;
   /** 
