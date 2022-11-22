@@ -25,7 +25,7 @@
     "headerButtonLogoutUrl": "/auth/signout",
     "headerMenuProfileVarslingerIngen": "ingen",
     "headerMenuBasicInnholdAAATitle": "Innhold A-Å",
-    "headerMenuBasicInnholdAAAUrl": "/innholdsoversikt",
+    "headerMenuBasicInnholdAAAUrl": "/innholdsoversikt/",
     "headerMenuBasicEngelskTitle": "English",
     "headerMenuBasicEngelskUrl": "/en/information-in-english/",
     "hoppTilInnholdet": "Hopp til innholdet",
