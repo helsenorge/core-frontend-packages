@@ -577,7 +577,8 @@
     "pendingChangesDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort.",
     "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
     "innsyn_btnPrint": "Vis utskriftvennlig side",
-    "generisk_innsyn_vedlegg": "Vedlegg"
+    "generisk_innsyn_vedlegg": "Vedlegg",
+    "testregisterinnsyn_dokumentasjon_heading": "Dokumentasjon"
   },
   "HNMinHelseContent": { 
     "page_Pasientreisersoknad_Desc": "Pasientreiser",
