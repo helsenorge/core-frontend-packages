@@ -2289,6 +2289,10 @@ export type HNMinHelseCommonJS = {
   * Vedlegg
   */
   generisk_innsyn_vedlegg: string;
+  /** 
+  * Dokumentasjon
+  */
+  testregisterinnsyn_dokumentasjon_heading: string;
 };
 
 export type HNMinHelseContent = { 
