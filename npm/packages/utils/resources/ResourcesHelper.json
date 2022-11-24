@@ -5016,28 +5016,6 @@
     "page_Title": "Nasjonalt vaksinasjonsregister SYSVAK",
     "page_Desc": "Det nasjonale vaksinasjonsregisteret SYSVAK holder oversikt over din vaksinasjonsstatus."
   },
-  "HNPasientjournalBE": { 
-    "tilgangslogg_GenrellFeil_Melding_Bunntekst": "Dersom du har logg hos noen av disse stedene vil de ikke vises i listen",
-    "tilgangslogg_RepresentasjonFeil_Body": "Tilgangslogg fra {0} for barn i denne alderen er ikke tilgjengelig.",
-    "tilgangslogg_RateLimitExceededFeil_Body": "{0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.",
-    "xDS_LokasjonFeil_Uidentifisert": "Uidentifisert helseregion eller sykehus",
-    "getJournalDocument_FeilPnr_Title": "En teknisk feil har oppstått",
-    "getJournalDocument_FeilPnr_Body": "Dette kan skyldes at du har flere nettleserfaner med helsenorge.no åpne samtidig. Du kan bare representere én person av gangen, selv om de er i hver sin fane.",
-    "xDS_LokasjonFeil_LokasjonOpptatt": "{0} kan dessverre ikke svare på grunn av stor pågang. Vennligst prøv igjen på et senere tidspunkt.",
-    "xDS_LokasjonFeil_Representasjon": "{0} har ikke tilgjengeliggjort dokumentinnsyn på vegne av barn.",
-    "xDS_LokasjonFeil_Bunntekst": "Hvis du har dokumenter fra disse stedene, vil de ikke vises i listen.",
-    "xDS_LokasjonFeil_Varsel_Title": "Listen er muligens ikke komplett",
-    "xDS_LokasjonFeil_Varsel_Body": "Dokumenter fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelig. Dette kan skyldes at en feil har oppstått, eller at perioden du har angitt er for lang. Forsøk på nytt med en kortere periode.",
-    "xDS_LokasjonFeil_Tillegg_Body": "Dokumenter fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelige",
-    "xDS_Varsel_OverTerskel_Init_Title": "For mange dokumenter",
-    "xDS_Varsel_OverTerskel_Init_Body": "Du har for mange dokumenter fra de siste {0} månedene til at de kan vises samtidig. Derfor vises dokumenter fra en kortere periode. Velg andre datoer eller begrens type dokumenter for å se andre dokumenter.",
-    "xDS_Varsel_OverTerskel_Manuell_Title": "Filtreringen du har valgt omfatter for mange dokumenter",
-    "xDS_Varsel_OverTerskel_Manuell_Body": "For mange dokumenter omfattes av filtreringen du har valgt. Velg andre datoer eller dokumenttyper for å begrense utvalget ytterligere.",
-    "tilgangslogg_LokasjonFeil_Varsel_Title": "Listen er muligens ikke komplett",
-    "tilgangslogg_LokasjonFeil_Varsel_Body": "Logg fra noen av behandlingsstedene er for øyeblikket ikke tilgjengelig.",
-    "tilgangslogg_GenerellDetaljerFeil_Body": "Kunne ikke hente alle innsyn. Vennligst prøv igjen senere.",
-    "pasientjournal_stempel_kontekst": "pasientjournal"
-  },
   "HNPortal": { 
     "pdfCompatibilityBodyPreview": "Vil du laste ned dokumentet og åpne det selv i et annet program, eller vil du se en forhåndsvisning?",
     "pdfCompatibilityPreview": "Se forhåndsvisning",
