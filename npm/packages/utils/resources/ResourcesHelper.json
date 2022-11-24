@@ -738,7 +738,8 @@
     "page_Skjemautfyller_MeldeHendelse_Title": "Varsle om alvorlig hendelse",
     "page_Skjemautfyller_SLV_PasRapp_2020_MetaDesc": "Si fra om bivirkninger på legemidler og vaksiner.",
     "page_Skjemautfyller_SLV_PasRapp_2020_Title": "Meld bivirkninger",
-    "page_Skjemautfyller_MetaDesc": ""
+    "page_Skjemautfyller_MetaDesc": "",
+    "page_TriageringInformasjon_Title": "Du blir nå sendt videre til kartlegging"
   },
   "HNMinHelseDialog": { 
     "clientOperation_NewOnlineAppointment_SendError_Service_Unavailable_Title": "Timebestillingen ble ikke utført",
