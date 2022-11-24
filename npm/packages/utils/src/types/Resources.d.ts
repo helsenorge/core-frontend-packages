@@ -2937,6 +2937,10 @@ Dersom du ønsker, kan du <a class="Page_NotAccessToService_Link_Text" href="/pe
   * 
   */
   page_Skjemautfyller_MetaDesc: string;
+  /** 
+  * Du blir nå sendt videre til kartlegging
+  */
+  page_TriageringInformasjon_Title: string;
 };
 
 export type HNMinHelseDialog = { 
