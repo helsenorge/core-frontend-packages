@@ -4795,7 +4795,7 @@ export type HNMinHelseDirekteinnsynJS = {
   */
   registereierskap_om_registeret_lenke: string;
   /** 
-  * Se <a href="/personverninnstillinger/forskning-screening-og-helseregistre?partKode={0}">personverninnstillinger</a> for dette registeret
+  * Se <a href="{0}">personverninnstillinger</a> for dette registeret
   */
   registereierskap_personverninnstilling_lenke: string;
   /** 
