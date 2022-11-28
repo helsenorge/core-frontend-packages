@@ -2297,10 +2297,6 @@ export type HNMinHelseCommonJS = {
   * innsyn
   */
   testregisterinnsyn_dokumentasjon_registerinnsyn: string;
-  /** 
-  * logg
-  */
-  testregisterinnsyn_dokumentasjon_logginnsyn: string;
 };
 
 export type HNMinHelseContent = { 
@@ -5421,6 +5417,10 @@ opplysninger jeg mener skal korrigeres:
   * Denne tjenesten er ikke tilgjengelig
   */
   clientOperation_GetRegisteroppforingPortal_not_available: string;
+  /** 
+  * logg
+  */
+  testregisterinnsyn_dokumentasjon_logginnsyn: string;
 };
 
 export type HNMinHelseKJStringsJS = { 
