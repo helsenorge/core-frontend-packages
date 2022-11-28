@@ -2294,11 +2294,11 @@ export type HNMinHelseCommonJS = {
   */
   testregisterinnsyn_dokumentasjon_heading: string;
   /** 
-  * Registerinnsyn
+  * innsyn
   */
   testregisterinnsyn_dokumentasjon_registerinnsyn: string;
   /** 
-  * Logginnsyn
+  * logg
   */
   testregisterinnsyn_dokumentasjon_logginnsyn: string;
 };
