@@ -579,8 +579,8 @@
     "innsyn_btnPrint": "Vis utskriftvennlig side",
     "generisk_innsyn_vedlegg": "Vedlegg",
     "testregisterinnsyn_dokumentasjon_heading": "Dokumentasjon",
-    "testregisterinnsyn_dokumentasjon_registerinnsyn": "Registerinnsyn",
-    "testregisterinnsyn_dokumentasjon_logginnsyn": "Logginnsyn"
+    "testregisterinnsyn_dokumentasjon_registerinnsyn": "innsyn",
+    "testregisterinnsyn_dokumentasjon_logginnsyn": "logg"
   },
   "HNMinHelseContent": { 
     "page_Pasientreisersoknad_Desc": "Pasientreiser",
