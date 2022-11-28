@@ -579,8 +579,7 @@
     "innsyn_btnPrint": "Vis utskriftvennlig side",
     "generisk_innsyn_vedlegg": "Vedlegg",
     "testregisterinnsyn_dokumentasjon_heading": "Dokumentasjon",
-    "testregisterinnsyn_dokumentasjon_registerinnsyn": "innsyn",
-    "testregisterinnsyn_dokumentasjon_logginnsyn": "logg"
+    "testregisterinnsyn_dokumentasjon_registerinnsyn": "innsyn"
   },
   "HNMinHelseContent": { 
     "page_Pasientreisersoknad_Desc": "Pasientreiser",
@@ -1364,7 +1363,8 @@
     "label_emneord": "Emneord",
     "arkivert": "arkivert",
     "arkivert_med_stor_a": "Arkivert",
-    "clientOperation_GetRegisteroppforingPortal_not_available": "Denne tjenesten er ikke tilgjengelig"
+    "clientOperation_GetRegisteroppforingPortal_not_available": "Denne tjenesten er ikke tilgjengelig",
+    "testregisterinnsyn_dokumentasjon_logginnsyn": "logg"
   },
   "HNMinHelseKJStringsJS": { 
     "page_KI_validFrom": "Gyldig fra:",
