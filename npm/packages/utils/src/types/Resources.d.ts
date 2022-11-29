@@ -1902,46 +1902,6 @@ export type HNMinHelseCommonJS = {
   */
   filterSortUseSort: string;
   /** 
-  * Dokumentasjon av XML-struktur
-  */
-  testregisterinnsyn_xml_documentation_link: string;
-  /** 
-  * XML-eksempel
-  */
-  testregisterinnsyn_xml_example_link: string;
-  /** 
-  * XML-skjema
-  */
-  testregisterinnsyn_xml_schema_link: string;
-  /** 
-  * Det har skjedd en feil
-  */
-  testregisterinnsyn_error_title: string;
-  /** 
-  * Ugyldig format
-  */
-  testregisterinnsyn_error_description: string;
-  /** 
-  * Last opp xml-fil
-  */
-  testregisterinnsyn_xml_file: string;
-  /** 
-  * Legg inn xml
-  */
-  testregisterinnsyn_xml_text: string;
-  /** 
-  * Se resultat
-  */
-  testregisterinnsyn_xml_upload_button: string;
-  /** 
-  * Tøm skjema
-  */
-  testregisterinnsyn_xml_reset_button: string;
-  /** 
-  * Resultat
-  */
-  testregisterinnsyn_result_heading: string;
-  /** 
   * For å kunne være innlogget på Helsenorge må først en av foreldrene dine samtykke til bruk av Helsenorge på dine vegne. Før de har samtykket kan du ikke være logget inn.
   */
   samtykkeInfoPopupMellom12Og16Innhold: string;
@@ -2013,18 +1973,6 @@ export type HNMinHelseCommonJS = {
   * Hent flere
   */
   hendelserFetchMore: string;
-  /** 
-  * Fjern opprinnelig fil og last opp en fil med xml-format.
-  */
-  testregisterinnsyn_error_xmlformat_description: string;
-  /** 
-  * Benyttet XML feiler ved validering mot XSD-skjemaet!
-  */
-  testregisterinnsyn_error_xmlvalidation_title: string;
-  /** 
-  * Fjern eller korriger benyttet XML og prøv på nytt.
-  */
-  testregisterinnsyn_error_xmlvalidation_description: string;
   /** 
   * Velg dato
   */
@@ -2277,10 +2225,6 @@ export type HNMinHelseCommonJS = {
   * Vedlegg
   */
   generisk_innsyn_vedlegg: string;
-  /** 
-  * Dokumentasjon
-  */
-  testregisterinnsyn_dokumentasjon_heading: string;
 };
 
 export type HNMinHelseContent = { 
@@ -2937,6 +2881,10 @@ Er det ord eller uttrykk du lurer på? Søk i ordlisten til Norsk helseinformati
 
 export type HNMinHelseDialog = { 
   /** 
+  * Ugyldig HerId angitt
+  */
+  persistentMessage_ValidationHerId_Error_Body: string;
+  /** 
   * For øyeblikket vises ikke henvisningene hos Lovisenberg Diakonale Sykehus.
   */
   getReferral_WarningLovisenberg: string;
@@ -2944,10 +2892,6 @@ export type HNMinHelseDialog = {
   * For øyeblikket kan det hende at ikke alle henvisningene hos Lovisenberg Diakonale Sykehus vises.
   */
   getReferral_WarningLovisenbergSourceSystem: string;
-  /** 
-  * Ugyldig HerId angitt
-  */
-  persistentMessage_ValidationHerId_Error_Body: string;
   /** 
   * Vedlagt finner du en digital kopi av din pasientjournal.
   */

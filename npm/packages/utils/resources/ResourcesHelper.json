@@ -481,16 +481,6 @@
     "filterSortHeading": "Sorter",
     "filterSortLegend": "Sorter på",
     "filterSortUseSort": "Vis resultat",
-    "testregisterinnsyn_xml_documentation_link": "Dokumentasjon av XML-struktur",
-    "testregisterinnsyn_xml_example_link": "XML-eksempel",
-    "testregisterinnsyn_xml_schema_link": "XML-skjema",
-    "testregisterinnsyn_error_title": "Det har skjedd en feil",
-    "testregisterinnsyn_error_description": "Ugyldig format",
-    "testregisterinnsyn_xml_file": "Last opp xml-fil",
-    "testregisterinnsyn_xml_text": "Legg inn xml",
-    "testregisterinnsyn_xml_upload_button": "Se resultat",
-    "testregisterinnsyn_xml_reset_button": "Tøm skjema",
-    "testregisterinnsyn_result_heading": "Resultat",
     "samtykkeInfoPopupMellom12Og16Innhold": "For å kunne være innlogget på Helsenorge må først en av foreldrene dine samtykke til bruk av Helsenorge på dine vegne. Før de har samtykket kan du ikke være logget inn.",
     "samtykkeInfoPopupMellom12Og16Overskrift": "Samtykke til bruk av Helsenorge",
     "barnInfoMessage_popup_ok_button": "OK",
@@ -509,9 +499,6 @@
     "hendelserOpenHendelsesvarsel": "Åpne hendelse",
     "hendelserDelete": "Slett hendelsesvisning",
     "hendelserFetchMore": "Hent flere",
-    "testregisterinnsyn_error_xmlformat_description": "Fjern opprinnelig fil og last opp en fil med xml-format.",
-    "testregisterinnsyn_error_xmlvalidation_title": "Benyttet XML feiler ved validering mot XSD-skjemaet!",
-    "testregisterinnsyn_error_xmlvalidation_description": "Fjern eller korriger benyttet XML og prøv på nytt.",
     "filterDateCalendarButton": "Velg dato",
     "filterDateNavigateBackward": "Tilbake",
     "filterDateNavigateForward": "Fram",
@@ -574,8 +561,7 @@
     "pendingChangesDescription": "Hvis du forlater siden, vil du miste alle endringer du har gjort.",
     "pendingChangesHeader": "Det finnes endringer som ikke er lagret",
     "innsyn_btnPrint": "Vis utskriftvennlig side",
-    "generisk_innsyn_vedlegg": "Vedlegg",
-    "testregisterinnsyn_dokumentasjon_heading": "Dokumentasjon"
+    "generisk_innsyn_vedlegg": "Vedlegg"
   },
   "HNMinHelseContent": { 
     "page_TriageringInformasjon_Title": "Du blir nå sendt videre til kartlegging",
@@ -740,9 +726,9 @@
     "page_SykdomOgKritiskInfo_Desc": "Her vises helseopplysninger som helsepersonell skal kjenne til ved undersøkelser og behandling."
   },
   "HNMinHelseDialog": { 
+    "persistentMessage_ValidationHerId_Error_Body": "Ugyldig HerId angitt",
     "getReferral_WarningLovisenberg": "For øyeblikket vises ikke henvisningene hos Lovisenberg Diakonale Sykehus.",
     "getReferral_WarningLovisenbergSourceSystem": "For øyeblikket kan det hende at ikke alle henvisningene hos Lovisenberg Diakonale Sykehus vises.",
-    "persistentMessage_ValidationHerId_Error_Body": "Ugyldig HerId angitt",
     "journalAccess_RequestGranted": "Vedlagt finner du en digital kopi av din pasientjournal.",
     "journalAccess_RequestDenied": "Beklager, det er ikke mulig å sende over din journal.",
     "journalAccess_EmneSporsmal": "Kopi av pasientjournal",
