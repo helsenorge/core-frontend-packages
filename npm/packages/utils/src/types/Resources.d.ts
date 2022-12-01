@@ -10678,11 +10678,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   videreformidling_TextMessage_Body_Self_FunksjonellMotpart: string;
   /** 
-  * ${FirstName} har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName} har fått en melding med et innkallingsbrev fra ${IkkeSensitivAvsender} på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Representation_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName}, du har fått en melding med et innkallingsbrev fra ${Aktornavn} på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName}, du har fått en melding med et innkallingsbrev fra ${IkkeSensitivAvsender} på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_EmailMessage_Body_Self_IkkeSensitivAvsender: string;
   /** 
@@ -10694,11 +10694,11 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   spesialistInnkallingsbrev_EmailMessage_Subject_Self_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName} har fått en melding med et innkallingsbrev på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName} har fått en melding med et innkallingsbrev fra ${IkkeSensitivAvsender} på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Representation_IkkeSensitivAvsender: string;
   /** 
-  * ${FirstName}, du har fått en melding med et innkallingsbrev fra ${Aktornavn} på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
+  * ${FirstName}, du har fått en melding med et innkallingsbrev fra ${IkkeSensitivAvsender} på Helsenorge. Logg inn for å se om det må gjøres forberedelser til timen.
   */
   spesialistInnkallingsbrev_TextMessage_Body_Self_IkkeSensitivAvsender: string;
   /** 
