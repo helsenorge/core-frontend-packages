@@ -10654,13 +10654,29 @@ MERK: Svar til denne e-postadressen blir ikke behandlet.
   */
   cancelAppointment_EmailMessage_Subject_Representation: string;
   /** 
-  * 
+  * ${FirstName} har et ulest innkallingsbrev fra ${IkkeSensitivAvsender} på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_EmailMessage_Body_Representation_IkkeSensitivAvsender: string;
   /** 
-  * 
+  * ${FirstName}, du har et ulest innkallingsbrev fra ${IkkeSensitivAvsender} på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
   */
   paminnelseInnkallingsbrev_EmailMessage_Body_Self_IkkeSensitivAvsender: string;
+  /** 
+  * ${FirstName} har et ulest innkallingsbrev fra ${IkkeSensitivAvsender} på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
+  */
+  paminnelseInnkallingsbrev_TextMessage_Body_Representation_IkkeSensitivAvsender: string;
+  /** 
+  * ${FirstName}, du har et ulest innkallingsbrev fra ${IkkeSensitivAvsender} på Helsenorge. Logg inn på Helsenorge og gå til Innboks for å lese det.
+  */
+  paminnelseInnkallingsbrev_TextMessage_Body_Self_IkkeSensitivAvsender: string;
+  /** 
+  * Varsel om ny melding på Helsenorge
+  */
+  paminnelseInnkallingsbrev_EmailMessage_Subject_Representation_IkkeSensitivAvsender: string;
+  /** 
+  * Varsel om ny melding på Helsenorge
+  */
+  paminnelseInnkallingsbrev_EmailMessage_Subject_Self_IkkeSensitivAvsender: string;
   /** 
   * ${FirstName} har fått en melding på Helsenorge. Logg inn på Helsenorge for å lese den.
   */
