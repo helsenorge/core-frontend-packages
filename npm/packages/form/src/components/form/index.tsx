@@ -196,10 +196,10 @@ export default class Form extends React.Component<FormProps, FormState> {
     for (let i = 0; i < this.state.formComponents.length; i++) {
       const child: FormChild = this.state.formComponents[i];
       const childToValidate = child && child.getWrappedInstance ? child.getWrappedInstance() : child;
-      if (childToValidate && childToValidate.props && childToValidate.props.isValid && !childToValidate.props.isValid()) {
-        this.props.onFieldsNotCorrectlyFilledOut && this.props.onFieldsNotCorrectlyFilledOut();
-        return false;
-      } else if (childToValidate && childToValidate.isValid && !childToValidate.isValid()) {
+      const childToValidateIsValid: boolean = childToValidate && childToValidate.isValid && !childToValidate.isValid() ? true : false;
+      const childToValidatePropsIsValid: boolean =
+        childToValidate && childToValidate.props && childToValidate.props.isValid && !childToValidate.props.isValid() ? true : false;
+      if (childToValidateIsValid || childToValidatePropsIsValid) {
         this.props.onFieldsNotCorrectlyFilledOut && this.props.onFieldsNotCorrectlyFilledOut();
         return false;
       }
