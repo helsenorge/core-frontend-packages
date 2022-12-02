@@ -118,6 +118,8 @@ export interface FormProps {
   pauseButtonTestId?: string;
   /** Id som benyttes for å hente ut ValidationError i automatiske tester */
   validationTestId?: string;
+  /** Funksjon som kalles om noen av feltene ikke er fylt ut eller ikke er fylt ut riktig */
+  onFieldsNotCorrectlyFilledOut?: () => void;
 }
 
 export interface FormState {
@@ -195,8 +197,10 @@ export default class Form extends React.Component<FormProps, FormState> {
       const child: FormChild = this.state.formComponents[i];
       const childToValidate = child && child.getWrappedInstance ? child.getWrappedInstance() : child;
       if (childToValidate && childToValidate.props && childToValidate.props.isValid && !childToValidate.props.isValid()) {
+        this.props.onFieldsNotCorrectlyFilledOut && this.props.onFieldsNotCorrectlyFilledOut();
         return false;
       } else if (childToValidate && childToValidate.isValid && !childToValidate.isValid()) {
+        this.props.onFieldsNotCorrectlyFilledOut && this.props.onFieldsNotCorrectlyFilledOut();
         return false;
       }
     }
