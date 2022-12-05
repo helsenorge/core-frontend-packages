@@ -241,4 +241,18 @@ describe('Form', () => {
     );
     expect(form.find(Button).last().props().disabled).toBeTruthy();
   });
+
+  it('calls onFieldsNotCorrectlyFilledOut if a field is not correctly filled out', async () => {
+    const onFieldsNotCorrectlyFilledOut = jest.fn();
+    const form = mount(
+      <Form action="" submitButtonText="button" onSubmit={jest.fn()} onFieldsNotCorrectlyFilledOut={onFieldsNotCorrectlyFilledOut}>
+        <Validation>
+          <SafeInputField id="id" value="" isRequired />
+        </Validation>
+      </Form>
+    );
+
+    form.find('button').first().simulate('click');
+    expect(onFieldsNotCorrectlyFilledOut).toHaveBeenCalled();
+  });
 });
