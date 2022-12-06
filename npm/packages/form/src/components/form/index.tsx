@@ -193,8 +193,7 @@ export default class Form extends React.Component<FormProps, FormState> {
   }
 
   areAllFieldsValid = (): boolean => {
-    for (let i = 0; i < this.state.formComponents.length; i++) {
-      const child: FormChild = this.state.formComponents[i];
+    for (const child of this.state.formComponents) {
       const childToValidate = child && child.getWrappedInstance ? child.getWrappedInstance() : child;
       const childToValidateIsValid: boolean = childToValidate && childToValidate.isValid && !childToValidate.isValid() ? true : false;
       const childToValidatePropsIsValid: boolean =
