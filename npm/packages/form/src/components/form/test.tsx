@@ -242,7 +242,7 @@ describe('Form', () => {
     expect(form.find(Button).last().props().disabled).toBeTruthy();
   });
 
-  it('calls onFieldsNotCorrectlyFilledOut if a field is not correctly filled out', async () => {
+  it('calls onFieldsNotCorrectlyFilledOut if a field is not correctly filled out', () => {
     const onFieldsNotCorrectlyFilledOut = jest.fn();
     const form = mount(
       <Form action="" submitButtonText="button" onSubmit={jest.fn()} onFieldsNotCorrectlyFilledOut={onFieldsNotCorrectlyFilledOut}>
