@@ -468,6 +468,10 @@ export type HNCoreFrontendWebForside = {
 <p>Les om <a className="https://www.helsenorge.no/ungdom/">Helsenorge for ungdom</a></p>
   */
   innloggetMedFeideNotificationText: string;
+  /** 
+  * test
+  */
+  test12: string;
 };
 
 export type HNDialogCommonJS = { 
