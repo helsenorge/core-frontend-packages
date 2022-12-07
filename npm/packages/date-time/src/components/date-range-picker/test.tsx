@@ -247,7 +247,7 @@ describe('DateRangePicker index', () => {
         expect(mockDateChange).toHaveBeenCalledTimes(1);
         expect((mockDateChange.mock.calls[0][0] as Moment).format('DD.MM.YYYY')).toEqual('24.12.2049');
         expect((input as HTMLInputElement).value).toBe('24.12.2049');
-      });
+      }, 10000);
     });
     describe('Når den har type single og initialDate/minimumDate/maximumDate satt', () => {
       it('Så kan man velge år/måned fra dropdown og velge en ny dato', async () => {
@@ -289,7 +289,7 @@ describe('DateRangePicker index', () => {
         expect(mockDateChange).toHaveBeenCalledTimes(1);
         expect((mockDateChange.mock.calls[0][0] as Moment).format('DD.MM.YYYY')).toEqual('24.12.2020');
         expect((input as HTMLInputElement).value).toBe('24.12.2020');
-      });
+      }, 10000);
     });
     describe('Når den har type single og minimumDate/maximumDate satt til samme år/måned', () => {
       it('Så er det ikke dropdowns for år eller måned', async () => {
@@ -368,7 +368,7 @@ describe('DateRangePicker index', () => {
         expect(mockDateChange).toHaveBeenCalledTimes(1);
         expect((mockDateChange.mock.calls[0][0] as Moment).format('DD.MM.YYYY')).toEqual('10.06.2030');
         expect((input as HTMLInputElement).value).toBe('10.06.2030');
-      });
+      }, 10000);
     });
     describe('Når den har type single og minimumDate satt', () => {
       it('Så kan man ikke velge dato før minimumDate', async () => {
