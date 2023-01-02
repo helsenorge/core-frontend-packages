@@ -19378,6 +19378,10 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * Du må legge inn et norsk mobilnummer for å kunne sende SMS
   */
   paarorende_add_phone_validation: string;
+  /** 
+  * Du må legge inn et norsk mobilnummer for å kunne sende SMS
+  */
+  sms_phone_validation: string;
 };
 
 export type HNMinHelseResepter = { 
