@@ -471,7 +471,7 @@ export type HNCoreFrontendWebForside = {
   /** 
   * test
   */
-  test12: string;
+  test123: string;
 };
 
 export type HNDialogCommonJS = { 

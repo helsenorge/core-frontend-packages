@@ -119,7 +119,7 @@
     "signedOut_SignedOut_Title": "Du er logget ut",
     "signedOut_SignedOut_Explanation": "Du er nå logget ut",
     "innloggetMedFeideNotificationText": "<p>Du har dessverre ikke tilgang til helsetjenester på helsenorge.no fordi du er logget inn med Feide. Bruk tjenester i Helsenorge-appen.<br /><br /></p>\n<p>Er du over 16 år og har BankID eller lignende, kan du logge deg inn på nytt for å få tilgang til dine helsetjenester.<br /><br /></p>\n<p>Les om <a className=\"https://www.helsenorge.no/ungdom/\">Helsenorge for ungdom</a></p>",
-    "test12": "test"
+    "test123": "test"
   },
   "HNDialogCommonJS": { 
     "afterDeadlineBubbleText": "Ledige timer som er etter frist for start helsehjelp vises ikke i kalenderen. Ønsker du en time etter frist for start helsehjelp ({0}) kan du foreslå tidspunkt selv.",
