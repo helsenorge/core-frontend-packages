@@ -19386,6 +19386,14 @@ Området vil i fremtiden også inkludere blant annet helseopplysninger, helseove
   * er ikke tillatt
   */
   not_allowed: string;
+  /** 
+  * Du kan maksimalt registrere 10 kontakter
+  */
+  add_max_error: string;
+  /** 
+  * Du må slette noen før du kan registrere nye.
+  */
+  add_max_error_description: string;
 };
 
 export type HNMinHelseResepter = { 
