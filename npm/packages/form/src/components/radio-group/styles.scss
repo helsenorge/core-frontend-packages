@@ -2,31 +2,30 @@
 
 $color-primary-1: #a61e7b;
 
-/******** RESET *********/
-input[type='radio'] {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-
-  & + label {
-    cursor: pointer;
-    display: block;
-    font-size: 18px;
-    font-weight: 400;
-    margin: 0;
-    word-break: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
-    hyphens: auto;
-  }
-}
-
 .atom_radio {
+  /******** RESET *********/
+  input[type='radio'] {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    & + label {
+      cursor: pointer;
+      display: block;
+      font-size: 18px;
+      font-weight: 400;
+      margin: 0;
+      word-break: break-word;
+      -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+      hyphens: auto;
+    }
+  }
   /******** INPUT *********/
   &__input {
     &:hover,
