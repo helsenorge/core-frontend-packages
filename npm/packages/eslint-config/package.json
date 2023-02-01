@@ -8,7 +8,8 @@
   "files": [
     "index.js"
   ],
-  "author": "helsenorge",
+  "author": "Norsk helsenett SF",
+  "description": "Helsenorges eslint-regler",
   "license": "UNLICENSED",
   "devDependencies": {
     "copyfiles": "2.4.1",

@@ -1,10 +1,8 @@
 {
-  "extends": "./node_modules/@helsenorge/core-build/config/tsconfig.global.json",
+  "extends": "./node_modules/@helsenorge/library-build/config/tsconfig.global.json",
   "compilerOptions": {
-    "baseUrl": ".",
-    "outDir": "./lib",
-    "typeRoots": ["../../../node_modules/@types", "node_modules/@types", "src/types"]
+    "outDir": "lib"
   },
-  "exclude": ["./node_modules", "styles.scss.d.ts", "./src/**/*/*test.tsx"],
-  "include": ["./src"]
+  "include": ["src"],
+  "exclude": ["src/**/*test*", "src/**/*spec*", "src/__devonly__"]
 }
