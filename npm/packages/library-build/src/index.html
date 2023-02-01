@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Helsenorge</title>
+    <!-- IMPORT TEMPLATE FOR WEBCOMP-->
+
+    <template id="hn-webcomp-header-footer-template">
+      <link href="https://static-hn-mas-01.int-hn.nhn.no/core/static/css/helsenorge/helsenorge.css" rel="stylesheet" />
+      <link
+        type="text/css"
+        rel="stylesheet"
+        href="https://static-hn-mas-01.int-hn.nhn.no/header-footer/static/css/header-footer/header-footer.css"
+      />
+      <link type="text/css" rel="stylesheet" href="index.css" />
+    </template>
+
+    <!-- ADDING RESET CSS -->
+    <link href="https://static-hn-mas-01.int-hn.nhn.no/core/static/css/helsenorge/helsenorge.css" rel="stylesheet" />
+  </head>
+
+  <body id="helsenorge">
+    <hn-webcomp-header></hn-webcomp-header>
+    <div id="main-content-wrapper"></div>
+    <!-- IMPORT React and react-dom from CDN -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/17.0.2/umd/react.development.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/17.0.2/umd/react-dom.development.js"></script>
+
+    <!-- IMPORT Moment from CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/en-gb.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/se.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/nb.min.js"></script>
+
+    <!-- IMPORT header-footer script -->
+    <script
+      type="text/javascript"
+      src="https://static-hn-mas-01.int-hn.nhn.no/header-footer/static/js/header-footer/header-footer.js"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>

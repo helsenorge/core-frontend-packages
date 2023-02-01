@@ -2,7 +2,6 @@ import React from 'react';
 
 import moment from 'moment';
 import { render } from 'react-dom';
-import '@helsenorge/core-build/lib/polyfills';
 
 import DateTimePicker from '../components/date-time-picker';
 import { DateRangePickerExample, DateTimePickerExample, TimeInputExample, YearInputExample, YearMonthInputExample } from '../examples';

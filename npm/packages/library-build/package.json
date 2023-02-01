@@ -1,0 +1,75 @@
+{
+  "name": "@helsenorge/library-build",
+  "version": "26.6.0",
+  "publishConfig": {
+    "directory": "lib"
+  },
+  "author": "Norsk helsenett SF",
+  "maintainers": [
+    "ROX"
+  ],
+  "description": "Bygg og test av komponentbibliotek",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "tfs",
+    "url": "https://dev.azure.com/nhnfelles/Helsenorge/_git/HN-Core-Frontend?path=%2Fnpm%2Fpublic%2Flibrary-build"
+  },
+  "bin": {
+    "library-scripts": "./library-scripts.js"
+  },
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "postbuild": "node lib/library-scripts.js copy --root=README.md --root=config/**/* --include=src/*.html",
+    "watch": "tsc --watch",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
+    "prettier:fix": "npm run prettier -- --write",
+    "pretypecheck": "tsc -v",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm-run-all --npm-path npm build prepublish:crlf",
+    "prepublish:crlf": "crlf --set=LF lib/*"
+  },
+  "peerDependencies": {
+    "core-js": ">=3.26.1"
+  },
+  "devDependencies": {
+    "@types/isomorphic-fetch": "0.0.36"
+  },
+  "dependencies": {
+    "@babel/core": "^7.20.5",
+    "@helsenorge/eslint-config": "^26.4.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/copyfiles": "^2.4.1",
+    "@types/enzyme-to-json": "^1.5.4",
+    "@types/enzyme": "^3.10.12",
+    "@types/react-dom": "^17.0.18",
+    "@types/react": "^17.0.52",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
+    "babel-jest": "^27.5.1",
+    "core-js": ">=3.26.1",
+    "cross-spawn": "7.0.3",
+    "enzyme-to-json": "^3.6.2",
+    "enzyme": "^3.11.0",
+    "esbuild-sass-plugin": "^2.4.5",
+    "esbuild": "^0.17.4",
+    "identity-obj-proxy": "^3.0.0",
+    "isomorphic-fetch": "^3.0.0",
+    "jest-environment-jsdom": "^27.5.1",
+    "jest-junit-reporter": "^1.1.0",
+    "postcss-modules": "^6.0.0",
+    "postcss": "^8.4.21",
+    "react-dom": "17.0.2",
+    "react": "17.0.2",
+    "rimraf": "^3.0.2",
+    "typescript": "~4.9.3"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": "^16.11.0",
+    "npm": "^8.3.0"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "jsx": "react",
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "newLine": "LF",
+    "allowUnreachableCode": false,
+    "skipLibCheck": true,
+    "lib": ["es5", "es2015.core", "es2015.promise", "es6", "dom", "scripthost"],
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    "noEmit": false,
+    "importHelpers": true,
+    "declaration": true,
+    "declarationMap": true,
+    "removeComments": false,
+    "resolveJsonModule": true
+  }
+}

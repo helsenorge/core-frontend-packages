@@ -1,16 +1,21 @@
-import * as React from 'react';
-import { act } from 'react-dom/test-utils';
-import { render, screen } from '@testing-library/react';
-import moment from 'moment';
-import { mount, ReactWrapper } from 'enzyme';
+import { setImmediate } from 'timers';
 
-import * as DateTimePickerUtils from './date-time-picker-utils';
+import * as React from 'react';
+
+import { render, screen } from '@testing-library/react';
+import { mount, ReactWrapper } from 'enzyme';
+import moment from 'moment';
+import { act } from 'react-dom/test-utils';
+
+import LanguageLocales from '@helsenorge/core-utils/constants/languages';
 import ValidationError from '@helsenorge/form/components/form/validation-error';
-import DateTimePicker from '.';
+
 import { DateRangePicker } from '../date-range-picker';
 import TimeInput from '../time-input';
 import { DateTimePickerLegend } from './date-time-picker-legend';
-import LanguageLocales from '@helsenorge/core-utils/constants/languages';
+import * as DateTimePickerUtils from './date-time-picker-utils';
+
+import DateTimePicker from '.';
 
 describe('DateTimePicker', () => {
   afterEach(() => {

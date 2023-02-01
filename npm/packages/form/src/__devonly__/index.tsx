@@ -1,5 +1,3 @@
-import '@helsenorge/core-build/lib/polyfills';
-
 import React from 'react';
 
 import { render } from 'react-dom';

@@ -1,14 +1,8 @@
 {
-  "extends": "./node_modules/@helsenorge/core-build/config/tsconfig.global.json",
+  "extends": "./node_modules/@helsenorge/library-build/config/tsconfig.global.json",
   "compilerOptions": {
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictNullChecks": true,
-    "allowSyntheticDefaultImports": true,
-    "resolveJsonModule": true,
-    "baseUrl": ".",
-    "typeRoots": ["../../../node_modules/@types", "node_modules/@types", "src/types"]
+    "outDir": "lib"
   },
-  "exclude": ["./node_modules", "**/__devonly__/**", "**/__tests__/*"],
-  "include": ["src/**/*.ts", "src/**/*.tsx", "development/index.tsx"]
+  "include": ["src"],
+  "exclude": ["src/**/*test*", "src/**/*spec*", "src/__devonly__"]
 }

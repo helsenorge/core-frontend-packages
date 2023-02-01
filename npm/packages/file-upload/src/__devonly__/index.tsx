@@ -1,5 +1,3 @@
-import '@helsenorge/core-build/lib/polyfills';
-
 import React from 'react';
 
 import { render } from 'react-dom';
@@ -20,19 +18,25 @@ const TestSide: React.FC = () => {
   };
   return (
     <>
-      <DropzoneExample />
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <DropzoneExample />
 
-      <Dropzone
-        id="test"
-        onDrop={handleDrop}
-        uploadedFiles={[{ id: 'asd', name: 'string' }]}
-        confirmDelete
-        onDelete={handleDelete}
-        deleteText="deleteText"
-        verifyDeleteText="verifyDeleteText"
-        confirmText="confirmText"
-        cancelText="cancelText"
-      />
+            <Dropzone
+              id="test"
+              onDrop={handleDrop}
+              uploadedFiles={[{ id: 'asd', name: 'string' }]}
+              confirmDelete
+              onDelete={handleDelete}
+              deleteText="deleteText"
+              verifyDeleteText="verifyDeleteText"
+              confirmText="confirmText"
+              cancelText="cancelText"
+            />
+          </div>
+        </div>
+      </div>
     </>
   );
 };
