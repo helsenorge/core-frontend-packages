@@ -79,8 +79,6 @@ export interface SafeInputFieldProps {
   subLabel?: string | JSX.Element;
   /** Teksten til required label */
   requiredLabel?: string;
-  /** HTML til required label */
-  requiredLabelHtml?: string;
   /** Teksten til optional label */
   optionalLabel?: string;
   /** HTML aria-required */
@@ -494,11 +492,7 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
         <React.Fragment>
           {this.props.label}
           {this.props.isRequired && this.props.requiredLabel && this.props.showRequiredLabel ? <em> {this.props.requiredLabel}</em> : ''}
-          {this.props.isRequired && this.props.requiredLabelHtml && this.props.showRequiredLabel ? (
-            <span dangerouslySetInnerHTML={this.createMarkup(this.props.requiredLabelHtml)} />
-          ) : (
-            ''
-          )}
+
           {!this.props.isRequired && this.props.optionalLabel && this.props.showOptionalLabel ? <em> {this.props.optionalLabel}</em> : ''}
         </React.Fragment>
       );
