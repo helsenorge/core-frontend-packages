@@ -133,6 +133,27 @@ describe('SafeTextarea', () => {
     expect(label.render().text()).toEqual('test label');
   });
 
+  it('Should allow HTML in label', () => {
+    render(
+      <SafeTextarea
+        id="test"
+        value="test"
+        onBlur={() => null}
+        showLabel={true}
+        label={
+          <>
+            <span>{'main label'}</span>
+            <span>{'sub label'}</span>
+          </>
+        }
+      />
+    );
+
+    const textarea = screen.getByRole('textbox', { name: 'main label sub label' });
+
+    expect(textarea).toBeVisible();
+  });
+
   it('Should include maxlength in label when maxlength is specified', () => {
     const instance = mount(<SafeTextarea id="test" value="test" onBlur={() => null} showLabel={true} label="test label" maxlength={50} />);
 

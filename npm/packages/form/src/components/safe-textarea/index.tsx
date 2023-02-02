@@ -15,10 +15,6 @@ import toolkitstyles from './styles.module.scss';
 
 type sizes = 'xSmall' | 'small' | 'medium' | 'large' | 'xLarge';
 
-interface HTMLMarkup {
-  __html: string;
-}
-
 interface Window {
   HTMLElement?: unknown;
   chrome?: unknown;
@@ -86,7 +82,7 @@ export interface SafeTextareaProps {
   /** Om label skal vises eller ikke */
   showLabel?: boolean;
   /** Teksten til label */
-  label?: string;
+  label?: React.ReactNode;
   /** Teksten til sub label, brukes som enkel hjelpetekst. Sublabel legges som et eget blokk-element nederst i <label> til dette feltet. Dersom feltet har sublabel, brukes ikke prop maxLengthText */
   subLabel?: string | JSX.Element;
   /** Teksten til required label */
@@ -298,15 +294,6 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
     }
   };
 
-  createMarkupForFancyDescription = (html?: string): HTMLMarkup => {
-    let content = '';
-
-    if (html !== null && html !== undefined) {
-      content = html;
-    }
-    return { __html: content };
-  };
-
   renderSubLabel = (): string | JSX.Element | undefined => {
     if (this.props.subLabel) {
       return this.props.subLabel;
@@ -328,7 +315,7 @@ export class SafeTextarea extends React.Component<SafeTextareaProps, SafeTextare
 
     const labelText = (
       <React.Fragment>
-        <span dangerouslySetInnerHTML={this.createMarkupForFancyDescription(label)} />
+        <span>{label}</span>
         {reqLabel}
         {optLabel}
       </React.Fragment>
