@@ -1,4 +1,4 @@
-const rules = require('./rules');
+const rules = require('./rules.cjs');
 
 module.exports = {
   extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'plugin:react/recommended', 'prettier'],
