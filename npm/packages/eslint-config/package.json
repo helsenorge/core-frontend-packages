@@ -6,7 +6,8 @@
     "ROX"
   ],
   "files": [
-    "index.js"
+    "index.js",
+    "rules.js"
   ],
   "author": "Norsk helsenett SF",
   "description": "Helsenorges eslint-regler",
@@ -16,17 +17,17 @@
     "typescript": "~4.9.3"
   },
   "dependencies": {
-    "@types/prettier": "2.7.1",
-    "@typescript-eslint/eslint-plugin": "5.45.0",
-    "@typescript-eslint/parser": "5.45.0",
-    "eslint": "8.29.0",
-    "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-import": "2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
+    "@types/prettier": "2.7.2",
+    "@typescript-eslint/eslint-plugin": "5.50.0",
+    "@typescript-eslint/parser": "5.50.0",
+    "eslint": "8.33.0",
+    "eslint-config-prettier": "8.6.0",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-prettier": "4.2.1",
-    "eslint-plugin-react": "7.31.11",
-    "eslint-plugin-testing-library": "5.9.1",
-    "prettier": "2.8.0",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-testing-library": "5.10.0",
+    "prettier": "2.8.3",
     "pretty-quick": "3.1.3"
   }
 }
