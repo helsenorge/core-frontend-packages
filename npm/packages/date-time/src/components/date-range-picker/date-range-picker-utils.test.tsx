@@ -65,7 +65,7 @@ describe('DateRangePicker date-range-picker-utils', () => {
     });
 
     describe('Når locale er satt til engelsk', () => {
-      moment.locale('en-gb');
+      moment.locale('en-GB');
       const a = DateRangePickerUtils.renderMonthsPicker(
         moment('20.10.2020', 'DD.MM.YYYY'),
         fnMock,
@@ -139,7 +139,7 @@ describe('DateRangePicker date-range-picker-utils', () => {
     });
 
     describe('Når locale er satt til engelsk', () => {
-      moment.locale('en-gb');
+      moment.locale('en-GB');
       const a = DateRangePickerUtils.renderYearsPicker(
         moment('20.10.2015', 'DD.MM.YYYY'),
         fnMock,

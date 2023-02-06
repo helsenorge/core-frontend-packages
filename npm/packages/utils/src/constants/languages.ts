@@ -1,6 +1,6 @@
 export enum LanguageLocales {
-  NORWEGIAN = 'nb-no',
-  NORWEGIAN_NYNORSK = 'nn-no',
+  NORWEGIAN = 'nb-NO',
+  NORWEGIAN_NYNORSK = 'nn-NO',
   ENGLISH = 'en-GB',
   LITHUANIAN = 'lt-LT',
   POLISH = 'pl-PL',

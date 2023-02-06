@@ -54,7 +54,7 @@ export interface DateRangePickerDefaultProps {
 export interface Props {
   /** Definerer om det skal velges én dato eller en periode  */
   type: 'single' | 'range';
-  /** Definerer hvilken locale moment bruker - default en 'nb-no'  */
+  /** Definerer hvilken locale moment bruker - default en 'nb-NO'  */
   locale?: LanguageLocales.NORWEGIAN | LanguageLocales.ENGLISH | LanguageLocales.SAMI_NORTHERN;
   /** Optional label som settes over datepickeren */
   label?: string | JSX.Element;

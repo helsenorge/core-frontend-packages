@@ -17,7 +17,7 @@ export interface DateTimePickerProps {
   dateValue?: moment.Moment;
   /** Tidspunkt som er valgt når man åpner DateTimeInput */
   timeValue?: string;
-  /** Definerer hvilken locale moment bruker - default en 'nb-no'  */
+  /** Definerer hvilken locale moment bruker - default en 'nb-NO'  */
   locale?: DateRangePickerProps['locale'];
   /** Strings som skal brukes i DatePickeren og Timefeltet */
   resources?: DateTimePickerResources;

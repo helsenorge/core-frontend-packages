@@ -31,7 +31,7 @@ export interface YearMonthValue {
 interface YearMonthInputProps {
   /** Unik ID */
   id: string;
-  /** Definerer hvilken locale moment bruker - default en 'nb-no'  */
+  /** Definerer hvilken locale moment bruker - default en 'nb-NO'  */
   locale?: LanguageLocales.NORWEGIAN | LanguageLocales.ENGLISH;
   /** Teksten til label */
   legend?: JSX.Element | string;
