@@ -69,6 +69,8 @@ export interface FormProps {
   pauseButtonText?: string;
   /** Ekstra CSS-class som legges på pause knappen */
   pauseButtonClasses?: string;
+  /** Whether the pause button should be displayed to the left */
+  pauseButtonLeft?: boolean;
   /** Pause button type. Default is 'action' */
   pauseButtonType?: 'action' | 'display' | 'function';
   /** If the pause button is a primary, secondary or tertiary button */
@@ -316,12 +318,32 @@ export default class Form extends React.Component<FormProps, FormState> {
         </span>
       );
     }
-    if (this.props.cancelButtonRight) {
+    if (this.props.cancelButtonRight && !this.props.pauseButtonLeft) {
       return (
         <span className={buttonSpanClass}>
           {submitButton}
           {draftButton}
           {pauseButton}
+          {cancelButton}
+        </span>
+      );
+    }
+    if (this.props.cancelButtonRight && this.props.pauseButtonLeft) {
+      return (
+        <span className={buttonSpanClass}>
+          {pauseButton}
+          {submitButton}
+          {draftButton}
+          {cancelButton}
+        </span>
+      );
+    }
+    if (this.props.pauseButtonLeft) {
+      return (
+        <span className={buttonSpanClass}>
+          {pauseButton}
+          {submitButton}
+          {draftButton}
           {cancelButton}
         </span>
       );
