@@ -328,7 +328,7 @@ export default class Form extends React.Component<FormProps, FormState> {
         </span>
       );
     }
-    if (this.props.cancelButtonRight || this.props.pauseButtonLeft) {
+    if (this.props.pauseButtonLeft) {
       return (
         <span className={buttonSpanClass}>
           {pauseButton}
