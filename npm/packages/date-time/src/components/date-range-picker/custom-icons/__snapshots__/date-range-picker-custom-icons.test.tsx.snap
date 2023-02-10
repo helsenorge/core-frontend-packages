@@ -15,7 +15,7 @@ exports[`DateRangePicker icons Gitt at ArrowIcon skal rendres Når det brukes op
     width="36"
   >
     <path
-      d="M27.075 5.929l-1.443 1.739 12.53 15.103H5.929v2.46h32.233L25.632 40.33l1.443 1.741 14.996-18.07z"
+      d="m27.075 9.718-1.443 1.739L35.636 22.77H8.456v2.46h27.18L25.632 36.539l1.443 1.742 12.47-14.28-12.47-14.283Z"
     />
   </svg>
 </span>

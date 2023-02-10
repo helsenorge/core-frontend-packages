@@ -1,15 +1,14 @@
 {
   "name": "@helsenorge/form",
-  "version": "26.6.0",
+  "version": "26.7.1",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
   },
-  "author": "Norsk helsenett SF",
+  "author": "Helsenorge",
   "maintainers": [
     "ROX"
   ],
-  "description": "Skjema-komponenter",
   "license": "ISC",
   "repository": {
     "type": "tfs",
@@ -20,12 +19,11 @@
   ],
   "type": "module",
   "scripts": {
-    "prestart": "rimraf dist",
-    "start": "node node_modules/@helsenorge/library-build/library-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
+    "start": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
     "prebuild": "rimraf lib",
-    "build": "tsc",
-    "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/img/**/* --include=src/**/*.{scss,scss.d.ts}",
-    "watch": "tsc --watch",
+    "build": "tsc --p config/tsconfig.package.json",
+    "copy:libnpmjs": "node scripts/createNpmrc.cjs && copyfiles -u 1 \"./lib/**/*\" \"./lib_npm\" -E",
+    "postbuild": "node scripts/copy-files.cjs",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
@@ -33,8 +31,8 @@
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
     "pretest": "crlf --set=LF \"src/**/*.snap\"",
-    "test": "node node_modules/@helsenorge/library-build/library-scripts.js test",
-    "test:update": "node node_modules/@helsenorge/library-build/library-scripts.js test --u",
+    "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
+    "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
@@ -48,9 +46,9 @@
     "react-collapse": "5.1.1"
   },
   "devDependencies": {
-    "@helsenorge/library-build": "^26.6.0",
-    "@helsenorge/core-utils": "^26.6.0",
-    "@helsenorge/designsystem-react": "2.13.0"
+    "@helsenorge/core-build": "^26.6.0",
+    "@helsenorge/core-utils": "^26.7.1",
+    "@helsenorge/designsystem-react": "2.15.0"
   },
   "browserslist": [
     "> 0.2% in NO",
