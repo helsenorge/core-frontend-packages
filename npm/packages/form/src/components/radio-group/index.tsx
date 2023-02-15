@@ -256,13 +256,12 @@ export class RadioGroup extends React.Component<RadioGroupProps, RadioGroupState
     } = this.props;
     const { lastFocusedValue, valid, validated } = this.state;
 
-    let i = 0;
     const inputClasses: string = classNames({
       'atom_radio__input--boxed': !isStyleBoxed,
     });
 
-    const inputFields: Array<JSX.Element> = options.map(e => {
-      const inputId: string = id + '-hn-' + i++;
+    const inputFields: Array<JSX.Element> = options.map((e: Options, i: number) => {
+      const inputId: string = id + '-hn-' + i;
       let label: string = e.label;
 
       const labelClasses: string = classNames(
@@ -306,7 +305,7 @@ export class RadioGroup extends React.Component<RadioGroupProps, RadioGroupState
             aria-checked={lastFocusedValue === e.type}
             aria-label={e.ariaLabel}
             disabled={e.disabled ? e.disabled : false}
-            required={isRequired}
+            required={i === 0 && isRequired}
             className={`atom_radio__input ${inputClasses}`}
             {...ariaInvalid}
           />
