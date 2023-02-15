@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "26.9.0",
+  "version": "26.10.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -44,10 +44,10 @@
   },
   "devDependencies": {
     "@helsenorge/core-build": "^26.6.0",
-    "@helsenorge/core-utils": "^26.9.0",
+    "@helsenorge/core-utils": "^26.10.0",
     "@helsenorge/designsystem-react": "2.16.0",
-    "@helsenorge/form": "^26.9.0",
-    "@helsenorge/toolkit": "^26.9.0"
+    "@helsenorge/form": "^26.10.0",
+    "@helsenorge/toolkit": "^26.10.0"
   },
   "dependencies": {
     "react-dropzone": "14.2.3"
