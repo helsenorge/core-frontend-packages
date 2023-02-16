@@ -10,10 +10,6 @@ interface FormCancelButtonProps {
   cancelButtonText?: string;
   /** The CSS classes to be added to the cancelbutton */
   cancelButtonClasses?: string;
-  /** Om Avbryt knappen vises til venstre */
-  cancelButtonLeft?: boolean;
-  /** Om Avbryt knappen vises til høyre */
-  cancelButtonRight?: boolean;
   /** Cancel button type. Default is 'action' */
   cancelButtonType?: 'action' | 'display';
   /** If the cancel button has an icon to be shown on the left - only possible if cancelButtonType is 'display' */

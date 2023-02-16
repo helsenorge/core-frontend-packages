@@ -21,6 +21,18 @@ interface ValidationSummary {
   enable: boolean;
   header: string;
 }
+export enum ButtonType {
+  submitButton = 'submitButton',
+  draftButton = 'draftButton',
+  cancelButton = 'cancelButton',
+  pauseButton = 'pauseButton',
+}
+interface ButtonOrder {
+  1: ButtonType;
+  2: ButtonType;
+  3: ButtonType;
+  4: ButtonType;
+}
 export interface FormProps {
   action: string;
   /** Ekstra CSS-class som legges på form'en */
@@ -31,7 +43,6 @@ export interface FormProps {
   contentClasses?: string;
   /** Ekstra CSS-class som brukes på button-wrapper'en */
   buttonClasses?: string;
-
   /** Teksten som vises på submit knappen */
   submitButtonText?: string;
   /** Ekstra CSS-class som legges på submit knappen */
@@ -44,15 +55,12 @@ export interface FormProps {
   submitButtonRightIcon?: boolean;
   /** If the submit button is disabled  */
   submitButtonDisabled?: boolean;
-
   /** The text to be shown on the cancel button */
   cancelButtonText?: string;
   /** The CSS classes to be added to the cancelbutton */
   cancelButtonClasses?: string;
-  /** Om Avbryt knappen vises til venstre */
-  cancelButtonLeft?: boolean;
-  /** Om Avbryt knappen vises til høyre */
-  cancelButtonRight?: boolean;
+  /** Option to give order of how the buttons should be placed */
+  buttonOrder?: ButtonOrder;
   /** Cancel button type. Default is 'action' */
   cancelButtonType?: 'action' | 'display';
   /** If the cancel button has an icon to be shown on the left - only possible if cancelButtonType is 'display' */
@@ -69,8 +77,6 @@ export interface FormProps {
   pauseButtonText?: string;
   /** Ekstra CSS-class som legges på pause knappen */
   pauseButtonClasses?: string;
-  /** Whether the pause button should be displayed to the left */
-  pauseButtonLeft?: boolean;
   /** Pause button type. Default is 'action' */
   pauseButtonType?: 'action' | 'display' | 'function';
   /** If the pause button is a primary, secondary or tertiary button */
@@ -79,7 +85,6 @@ export interface FormProps {
   pauseButtonLeftIcon?: SvgIcon;
   /** If the pause button is disabled  */
   pauseButtonDisabled?: boolean;
-
   /** Feilmeldingen som vises ved Error */
   errorMessage?: string;
   /** Custom validator function which will be called before submit function*/
@@ -163,6 +168,7 @@ export default class Form extends React.Component<FormProps, FormState> {
     cancelButtonType: 'action',
     pauseButtonType: 'action',
     pauseButtonLevel: 'tertiary',
+    buttonOrder: { 1: ButtonType.submitButton, 2: ButtonType.draftButton, 3: ButtonType.cancelButton, 4: ButtonType.pauseButton },
   };
 
   validationSummaryRef: React.RefObject<HTMLDivElement>;
@@ -272,8 +278,6 @@ export default class Form extends React.Component<FormProps, FormState> {
       <FormCancelButton
         cancelButtonText={this.props.cancelButtonText}
         cancelButtonClasses={this.props.cancelButtonClasses}
-        cancelButtonLeft={this.props.cancelButtonLeft}
-        cancelButtonRight={this.props.cancelButtonRight}
         cancelButtonType={this.props.cancelButtonType}
         cancelButtonLeftIcon={this.props.cancelButtonLeftIcon}
         cancelButtonDisabled={this.props.cancelButtonDisabled}
@@ -308,42 +312,23 @@ export default class Form extends React.Component<FormProps, FormState> {
     if (!submitButton && !cancelButton && !pauseButton && !draftButton) {
       return null;
     }
-    if (this.props.cancelButtonLeft) {
-      return (
-        <span className={buttonSpanClass}>
-          {cancelButton}
-          {submitButton}
-          {draftButton}
-          {pauseButton}
-        </span>
-      );
-    }
-    if (this.props.cancelButtonRight && !this.props.pauseButtonLeft) {
-      return (
-        <span className={buttonSpanClass}>
-          {submitButton}
-          {draftButton}
-          {pauseButton}
-          {cancelButton}
-        </span>
-      );
-    }
-    if (this.props.pauseButtonLeft) {
-      return (
-        <span className={buttonSpanClass}>
-          {pauseButton}
-          {submitButton}
-          {draftButton}
-          {cancelButton}
-        </span>
-      );
-    }
+    const buttonSelector = (buttonType: ButtonType): JSX.Element => {
+      switch (buttonType) {
+        case ButtonType.cancelButton:
+          return cancelButton;
+        case ButtonType.draftButton:
+          return draftButton;
+        case ButtonType.pauseButton:
+          return pauseButton;
+        case ButtonType.submitButton:
+          return submitButton;
+        default:
+          return submitButton;
+      }
+    };
     return (
       <span className={buttonSpanClass}>
-        {submitButton}
-        {draftButton}
-        {cancelButton}
-        {pauseButton}
+        {this.props.buttonOrder && Object.values(this.props.buttonOrder).map(button => buttonSelector(button))}
       </span>
     );
   }

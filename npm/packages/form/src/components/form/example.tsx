@@ -14,7 +14,7 @@ import { SafeTextarea } from '../safe-textarea';
 import WrappedComponent from './example/wrapped-component-example';
 import Validation from './validation';
 
-import Form from '.';
+import Form, { ButtonType } from '.';
 
 interface ExampleState {
   checkbox1Checked?: boolean;
@@ -279,7 +279,6 @@ export class FormExample extends React.Component<{}, ExampleState> {
           pauseButtonLevel="secondary"
           pauseButtonLeftIcon={Pause}
           cancelButtonOutline
-          cancelButtonRight
           cancelButtonLeftIcon={ArrowLeft}
           onSubmit={this.onSubmit}
           validationSummary={{
@@ -294,6 +293,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
           pauseButtonType="display"
           submitButtonType="display"
           cancelButtonType="display"
+          buttonOrder={{ 1: ButtonType.pauseButton, 2: ButtonType.draftButton, 3: ButtonType.cancelButton, 4: ButtonType.submitButton }}
         >
           <WrappedComponent />
           <SafeInputField id="disabledField" inputName="disabledField" value={''} showLabel={true} label="disabled field" disabled />

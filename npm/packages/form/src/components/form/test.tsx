@@ -10,7 +10,7 @@ import Validation from './validation';
 import ValidationError from './validation-error';
 import ValidationSummary from './validation-summary';
 
-import Form, { FormProps } from '.';
+import Form, { ButtonType, FormProps } from '.';
 
 describe('Form', () => {
   let mounted: ShallowWrapper<{}, {}> | undefined;
@@ -160,7 +160,7 @@ describe('Form', () => {
     expect(spy).toHaveBeenCalled();
   });
 
-  it('renders cancel button last when cancelButtonRight is true', () => {
+  it('renders cancel button last when buttonorder sets cancelButton as 4', () => {
     const form = mount(
       <Form
         action=""
@@ -169,7 +169,7 @@ describe('Form', () => {
         pauseButtonText="text__pause"
         onPause={jest.fn()}
         buttonClasses="test__buttonClasses"
-        cancelButtonRight
+        buttonOrder={{ 1: ButtonType.pauseButton, 2: ButtonType.draftButton, 3: ButtonType.submitButton, 4: ButtonType.cancelButton }}
         cancelButtonText="text__cancelbutton"
         cancelButtonTestId={'cancel-testid'}
         onCancel={jest.fn()}
@@ -180,6 +180,29 @@ describe('Form', () => {
       </Form>
     );
     expect(form.find(Button).last().props().testId).toBe('cancel-testid');
+  });
+
+  it('renders cancel button last when buttonorder sets pauseButtonRight as 4', () => {
+    const form = mount(
+      <Form
+        action=""
+        optionalLabel="optional"
+        submitButtonText="text__submit"
+        pauseButtonText="text__pause"
+        onPause={jest.fn()}
+        buttonClasses="test__buttonClasses"
+        buttonOrder={{ 1: ButtonType.cancelButton, 2: ButtonType.draftButton, 3: ButtonType.submitButton, 4: ButtonType.pauseButton }}
+        cancelButtonText="text__cancelbutton"
+        cancelButtonTestId={'cancel-testid'}
+        pauseButtonTestId={'pause-testid'}
+        onCancel={jest.fn()}
+      >
+        <Validation>
+          <SafeInputField id="id" value="value" />
+        </Validation>
+      </Form>
+    );
+    expect(form.find(Button).last().props().testId).toBe('pause-testid');
   });
 
   it('renders pause button as secondary when isPauseButtonSecondaryButton and pauseButtonType is "action" ', () => {
