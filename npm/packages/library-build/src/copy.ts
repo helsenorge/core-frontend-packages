@@ -38,5 +38,5 @@ Promise.all([
   copyfiles([...include, outputPath], { up: 1 }, console.error),
   copyfiles([...utils, resolve(outputPath, 'utils')], { up: true }, console.error),
 ])
-  .then(() => rm && rimraf(rm, () => Promise.resolve()))
+  .then(() => (rm ? rimraf(rm) : Promise.resolve()))
   .then(() => createPackageJsonFile(packageName, originalPackageJson, newPackageJson));

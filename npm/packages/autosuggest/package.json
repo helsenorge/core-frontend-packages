@@ -51,7 +51,7 @@
     "@helsenorge/form": "^26.6.0"
   },
   "dependencies": {
-    "@types/react-autosuggest": "10.1.5",
+    "@types/react-autosuggest": "10.1.6",
     "react-autosuggest": "10.1.0"
   },
   "browserslist": [
