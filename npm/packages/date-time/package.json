@@ -1,14 +1,15 @@
 {
   "name": "@helsenorge/date-time",
-  "version": "26.10.0",
+  "version": "26.6.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
   },
-  "author": "Helsenorge",
+  "author": "Norsk helsenett SF",
   "maintainers": [
     "ROX"
   ],
+  "description": "Input-komponenter for dato og tid",
   "license": "ISC",
   "repository": {
     "type": "tfs",
@@ -19,11 +20,12 @@
   ],
   "type": "module",
   "scripts": {
-    "start": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
+    "prestart": "rimraf dist",
+    "start": "node node_modules/@helsenorge/library-build/library-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
     "prebuild": "rimraf lib",
-    "build": "tsc --p config/tsconfig.package.json",
-    "copy:libnpmjs": "node scripts/createNpmrc.cjs && copyfiles -u 1 \"./lib/**/*\" \"./lib_npm\" -E",
-    "postbuild": "node scripts/copy-files.cjs",
+    "build": "tsc",
+    "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/**/*.{scss,scss.d.ts}",
+    "watch": "tsc --watch",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
@@ -31,22 +33,22 @@
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
     "pretest": "crlf --set=LF \"src/**/*.snap\"",
-    "test": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test",
-    "test:update": "node node_modules/@helsenorge/core-build/lib/helsenorge-scripts.js test --u",
+    "test": "node node_modules/@helsenorge/library-build/library-scripts.js test",
+    "test:update": "node node_modules/@helsenorge/library-build/library-scripts.js test --u",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
     "@helsenorge/core-utils": "^26.0.0",
-    "@helsenorge/designsystem-react": "^2.0.0",
+    "@helsenorge/designsystem-react": "^3.0.0",
     "@helsenorge/form": "^26.0.0",
     "react": ">=17.0.2",
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-build": "^26.6.0",
-    "@helsenorge/core-utils": "^26.10.0",
-    "@helsenorge/designsystem-react": "2.16.0",
-    "@helsenorge/form": "^26.10.0"
+    "@helsenorge/library-build": "^26.6.0",
+    "@helsenorge/core-utils": "^26.6.0",
+    "@helsenorge/designsystem-react": "3.0.0-beta.0",
+    "@helsenorge/form": "^26.6.0"
   },
   "dependencies": {
     "@types/react-dates": "^21.8.3",
