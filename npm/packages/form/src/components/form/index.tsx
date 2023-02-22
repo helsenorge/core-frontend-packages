@@ -77,6 +77,8 @@ export interface FormProps {
   pauseButtonText?: string;
   /** Ekstra CSS-class som legges på pause knappen */
   pauseButtonClasses?: string;
+  /** Whether the pause button should be displayed to the left */
+  pauseButtonLeft?: boolean;
   /** Pause button type. Default is 'action' */
   pauseButtonType?: 'action' | 'display' | 'function';
   /** If the pause button is a primary, secondary or tertiary button */
