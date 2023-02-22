@@ -31,7 +31,7 @@
   "license": "ISC",
   "type": "module",
   "peerDependencies": {
-    "@helsenorge/designsystem-react": "^3.0.0"
+    "@helsenorge/designsystem-react": "^3.0.0-beta"
   },
   "devDependencies": {
     "@helsenorge/designsystem-react": "3.0.0-beta.0",
