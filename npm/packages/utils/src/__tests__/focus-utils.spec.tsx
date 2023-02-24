@@ -1,68 +1,43 @@
-import * as React from 'react';
+import React from 'react';
 
-import { mount } from 'enzyme';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 import * as focusUtils from '../focus-utils';
 
 describe('Focus-utils', () => {
-  // This is a trick to be able to set activeElement property to document
-  Object.defineProperty(global.document, 'activeElement', {
-    writable: true,
-    value: {},
-  });
-  afterAll(() => {
-    jest.clearAllMocks();
-  });
-
   describe('Gitt at getDocumentActiveElement kalles', () => {
-    const wrapperContent = (
-      <section id="wrapper">
-        <div id="firstElement-test1">{'Hello'}</div>
-        <button id="secondElement-test1" />
-      </section>
-    );
-    const wrapper = mount(wrapperContent, { attachTo: document.body });
-
     describe('Når den mottar en wrapper med en knapp som er i focus', () => {
-      it('Så finner den Document som rootNode og returnerer Button som activeElement', () => {
-        const original = global.document['body'];
+      it('Så finner den Document som rootNode og returnerer Button som activeElement', async () => {
+        const { container } = render(
+          <section id="wrapper">
+            <div id="firstElement-test1">{'Hello'}</div>
+            <button id="secondElement-test1">{'Test'}</button>
+          </section>
+        );
 
-        const node = document.getElementById('wrapper');
-        const rootNode = node.getRootNode();
+        const button = screen.getByRole('button');
+        await userEvent.click(button);
 
-        // Verify that its find its way to the parent rootNode which is Document
-        expect(rootNode.constructor.name).toEqual('Document');
-        const btn = wrapper.find('button');
-        btn.simulate('focus');
-        global.document['activeElement'] = btn;
-        wrapper.update();
-
-        const element = focusUtils.getDocumentActiveElement(node as HTMLElement);
-        expect(element).toEqual(btn);
-        global.document['body'] = original;
+        const activeElement = focusUtils.getDocumentActiveElement(container);
+        expect(activeElement).toEqual(button);
       });
     });
 
     describe('Når den mottar en string som param', () => {
-      it('Så finner den Document som rootNode og returnerer Button som activeElement', () => {
-        const original = global.document['body'];
+      it('Så finner den elementet som rootNode og returnerer Button som activeElement', async () => {
+        render(
+          <section id="wrapper">
+            <div id="firstElement-test1">{'Hello'}</div>
+            <button id="secondElement-test1">{'Test'}</button>
+          </section>
+        );
 
-        const btn = wrapper.find('button');
-        btn.simulate('focus');
-        global.document['activeElement'] = btn;
-        wrapper.update();
+        const button = screen.getByRole('button');
+        await userEvent.click(button);
 
-        // Verify that its find its way to the section through querySelector
-        const domNode = document.querySelector('section');
-        expect(domNode.nodeName).toEqual('SECTION');
-
-        // Verify that its find its way to the parent rootNode which is Document
-        const rootNode = domNode.getRootNode();
-        expect(rootNode.constructor.name).toEqual('Document');
-
-        const element = focusUtils.getDocumentActiveElement('section');
-        expect(element).toEqual(btn);
-        global.document['body'] = original;
+        const activeElement = focusUtils.getDocumentActiveElement('section');
+        expect(activeElement).toEqual(button);
       });
     });
   });
