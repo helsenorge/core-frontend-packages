@@ -1,44 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HOC utils Gitt at en komponent wrappes i render-to-body HOC Når printable er false Så renderes det en portal 1`] = `
-<RenderToBody>
-  <Portal
-    containerInfo={
-      <div>
-        <section>
-          My first section rendered to document
-        </section>
-      </div>
-    }
-  >
+exports[`HOC utils Gitt at en komponent wrappes i render-to-body HOC Når printable er false Så rendres det en portal 1`] = `
+<body>
+  <div />
+  <div>
     <section>
       My first section rendered to document
     </section>
-  </Portal>
-</RenderToBody>
+  </div>
+</body>
 `;
 
-exports[`HOC utils Gitt at en komponent wrappes i render-to-body HOC Når printable er true Så renderes det en portal med body tag 1`] = `
-<RenderToBody
-  printable={true}
->
-  <Portal
-    containerInfo={
-      <body>
-        <div>
-          <section>
-            My first section rendered to document
-          </section>
-        </div>
-        <section>
-          My second section rendered to body (printable)
-        </section>
-      </body>
-    }
-  >
-    <section>
-      My second section rendered to body (printable)
-    </section>
-  </Portal>
-</RenderToBody>
+exports[`HOC utils Gitt at en komponent wrappes i render-to-body HOC Når printable er true Så rendres det en portal med body tag 1`] = `
+<body>
+  <div />
+  <section>
+    My second section rendered to body (printable)
+  </section>
+</body>
 `;
