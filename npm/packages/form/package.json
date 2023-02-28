@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/form",
-  "version": "27.0.0-beta.1",
+  "version": "27.0.0-beta.2",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib"
@@ -48,9 +48,9 @@
     "react-collapse": "5.1.1"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^27.0.0-beta.1",
+    "@helsenorge/core-utils": "^27.0.0-beta.2",
     "@helsenorge/designsystem-react": "3.0.0-beta.0",
-    "@helsenorge/library-build": "^27.0.0-beta.1"
+    "@helsenorge/library-build": "^27.0.0-beta.2"
   },
   "browserslist": [
     "> 0.2% in NO",
