@@ -5,25 +5,20 @@ import { sassPlugin, postcssModules } from 'esbuild-sass-plugin';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-const { entry, outDir } = yargs(hideBin(process.argv))
-  .options({
-    entry: { type: 'string', default: 'src/__devonly__/index.tsx' },
-    outDir: { type: 'string', default: 'dist' },
-  })
-  .parseSync();
+(async (): Promise<void> => {
+  const { entry, outDir } = yargs(hideBin(process.argv))
+    .options({
+      entry: { type: 'string', default: 'src/__devonly__/index.tsx' },
+      outDir: { type: 'string', default: 'dist' },
+    })
+    .parseSync();
 
-if (!existsSync(outDir)) {
-  mkdirSync(outDir);
-}
-copyFileSync(__dirname + '/index.html', outDir + '/index.html');
+  if (!existsSync(outDir)) {
+    mkdirSync(outDir);
+  }
+  copyFileSync(__dirname + '/index.html', outDir + '/index.html');
 
-esbuild.serve(
-  {
-    port: 3000,
-    host: 'localhost',
-    servedir: outDir,
-  },
-  {
+  const context = await esbuild.context({
     logLevel: 'debug',
     entryPoints: [entry],
     outdir: outDir,
@@ -47,5 +42,13 @@ esbuild.serve(
         type: 'style',
       }) as unknown as Plugin,
     ],
-  }
-);
+  });
+
+  await context.watch();
+
+  await context.serve({
+    port: 3000,
+    host: 'localhost',
+    servedir: outDir,
+  });
+})();
