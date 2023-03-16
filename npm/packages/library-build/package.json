@@ -2,7 +2,8 @@
   "name": "@helsenorge/library-build",
   "version": "27.1.0",
   "publishConfig": {
-    "directory": "lib"
+    "directory": "lib",
+    "access": "public"
   },
   "author": "Norsk helsenett SF",
   "maintainers": [
