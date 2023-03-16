@@ -2,6 +2,9 @@
   "name": "@helsenorge/eslint-config",
   "version": "27.1.0",
   "main": "./index.js",
+  "publishConfig": {
+    "access": "public"
+  },
   "maintainers": [
     "ROX"
   ],

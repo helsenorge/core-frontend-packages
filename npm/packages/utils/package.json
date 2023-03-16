@@ -5,7 +5,8 @@
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
   "main": "index.js",
   "publishConfig": {
-    "directory": "lib"
+    "directory": "lib",
+    "access": "public"
   },
   "scripts": {
     "prebuild": "rimraf lib",

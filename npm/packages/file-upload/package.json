@@ -3,7 +3,8 @@
   "version": "27.1.0",
   "main": "index.js",
   "publishConfig": {
-    "directory": "lib"
+    "directory": "lib",
+    "access": "public"
   },
   "author": "Norsk helsenett SF",
   "maintainers": [
