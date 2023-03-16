@@ -1,4 +1,4 @@
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
+@import '@helsenorge/designsystem-react/scss/palette';
 
 $color-primary-1: #a61e7b;
 
@@ -20,8 +20,8 @@ input[type='checkbox'] {
     font-weight: 400;
     margin: 0;
     word-break: break-word;
-    -webkit-hyphens: auto;
-    -ms-hyphens: auto;
+    hyphens: auto;
+    hyphens: auto;
     hyphens: auto;
   }
 }
@@ -38,6 +38,7 @@ input[type='checkbox'] {
         &.atom_checkbox__checkicon--blue {
           border-color: $blueberry700;
         }
+
         &.atom_checkbox__checkicon--lilla {
           border-color: $color-primary-1;
         }
@@ -56,6 +57,7 @@ input[type='checkbox'] {
     margin-top: 0.2rem;
     width: 1.5rem;
     height: 1.5rem;
+
     &:focus {
       outline: none;
     }
@@ -67,6 +69,7 @@ input[type='checkbox'] {
       color: $blueberry700;
     }
   }
+
   &__checkicon--lilla:not(.atom_checkbox__checkicon--disabled) {
     &.atom_checkbox__checkicon--checked {
       border-color: $color-primary-1;
@@ -76,6 +79,7 @@ input[type='checkbox'] {
 
   &__checkicon--disabled {
     background-color: $neutral200;
+
     &.atom_checkbox__checkicon--checked {
       color: $neutral500;
     }
@@ -94,6 +98,7 @@ input[type='checkbox'] {
     color: $black;
     line-height: 1.5rem;
     padding: 0.625rem 1rem 0.625rem 0;
+
     &:hover {
       .atom_checkbox__checkicon:not(.atom_checkbox__checkicon--disabled) {
         background-color: $neutral400;
@@ -108,13 +113,16 @@ input[type='checkbox'] {
     min-height: 3.125rem;
     background-color: $white;
     box-shadow: 0 0 0 2px $neutral200;
+
     &:hover,
     &:focus {
       box-shadow: 0 0 0 4px $neutral400;
     }
+
     &.atom_checkbox__label--checked {
       box-shadow: 0 0 0 2px $blueberry700;
       background-color: $blueberry50;
+
       &:hover,
       &:focus {
         box-shadow: 0 0 0 4px $blueberry700;

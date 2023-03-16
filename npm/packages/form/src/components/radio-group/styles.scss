@@ -1,4 +1,4 @@
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
+@import '@helsenorge/designsystem-react/scss/palette';
 
 $color-primary-1: #a61e7b;
 
@@ -21,11 +21,12 @@ $color-primary-1: #a61e7b;
       font-weight: 400;
       margin: 0;
       word-break: break-word;
-      -webkit-hyphens: auto;
-      -ms-hyphens: auto;
+      hyphens: auto;
+      hyphens: auto;
       hyphens: auto;
     }
   }
+
   /******** INPUT *********/
   &__input {
     &:hover,
@@ -39,6 +40,7 @@ $color-primary-1: #a61e7b;
             border-color: $blueberry700;
           }
         }
+
         &.atom_radio__checkicon--lilla:not(.atom_radio__checkicon--disabled) {
           &.atom_checkbox__checkicon--checked {
             border-color: $color-primary-1;
@@ -55,13 +57,14 @@ $color-primary-1: #a61e7b;
     vertical-align: middle;
     border: 2px solid $neutral500;
     margin-right: 0.75rem;
-
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
+
     &:focus {
       outline: none;
     }
+
     .atom_radio__checkicon_innercicrcle {
       background-color: transparent;
     }
@@ -78,12 +81,15 @@ $color-primary-1: #a61e7b;
   &__checkicon--checked:not(.atom_radio__checkicon--disabled) {
     &.atom_radio__checkicon--blue {
       border-color: $blueberry700;
+
       .atom_radio__checkicon_innercicrcle {
         background-color: $blueberry700;
       }
     }
+
     &.atom_radio__checkicon--lilla {
       border-color: $color-primary-1;
+
       .atom_radio__checkicon_innercicrcle {
         background-color: $color-primary-1;
       }
@@ -92,6 +98,7 @@ $color-primary-1: #a61e7b;
 
   &__checkicon--disabled {
     background-color: $neutral200;
+
     &.atom_radio__checkicon--checked {
       .atom_radio__checkicon_innercicrcle {
         background-color: $neutral500;
@@ -116,6 +123,7 @@ $color-primary-1: #a61e7b;
     color: $black;
     line-height: 1.5rem;
     padding: 0.625rem 1rem 0.625rem 0;
+
     &:hover {
       .atom_radio__checkicon:not(.atom_radio__checkicon--disabled) {
         background-color: $neutral400;
@@ -135,9 +143,11 @@ $color-primary-1: #a61e7b;
     min-height: 3.125rem;
     background-color: $white;
     box-shadow: 0 0 0 2px $neutral200;
+
     &.atom_radio__label--checked {
       box-shadow: 0 0 0 2px $blueberry700;
       background-color: $blueberry50;
+
       &:hover,
       &:focus {
         box-shadow: 0 0 0 4px $blueberry700;

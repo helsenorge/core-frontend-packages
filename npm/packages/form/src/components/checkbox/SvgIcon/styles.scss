@@ -1,7 +1,7 @@
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
+@import '@helsenorge/designsystem-react/scss/palette';
 
 $className: svgicon;
-$fontSize: --fontSize-;
+$fontSize: --fontsize-;
 $state: --state-;
 $stroked: --stroked;
 
@@ -10,7 +10,7 @@ $stroked: --stroked;
   width: 1em;
   height: 1em;
   display: inline-block;
-  fill: currentColor;
+  fill: currentcolor;
   flex-shrink: 0;
   font-size: 24px;
 
@@ -20,16 +20,18 @@ $stroked: --stroked;
 
   &--stroked {
     fill: none;
-    stroke: currentColor;
+    stroke: currentcolor;
   }
 
   &#{$fontSize} {
     &inherit {
       font-size: inherit;
     }
+
     &small {
       font-size: 20px;
     }
+
     &large {
       font-size: 36px;
     }
@@ -47,6 +49,7 @@ $stroked: --stroked;
     &success {
       color: $kiwi900;
     }
+
     &disabled {
       color: $neutral400;
     }

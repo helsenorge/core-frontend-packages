@@ -1,5 +1,5 @@
-@import '@helsenorge/designsystem-react/scss/_spacers.scss';
-@import '@helsenorge/designsystem-react/scss/_breakpoints.scss';
+@import '@helsenorge/designsystem-react/scss/spacers';
+@import '@helsenorge/designsystem-react/scss/breakpoints';
 
 .datetimepicker {
   display: flex;
@@ -13,6 +13,7 @@
 
   &__time {
     margin-bottom: 1rem;
+
     &__timeinput {
       padding-left: 0;
     }

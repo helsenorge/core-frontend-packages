@@ -1,4 +1,4 @@
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
+@import '@helsenorge/designsystem-react/scss/palette';
 
 $bgcolor: $cherry100;
 $background: linear-gradient(0deg, transparent, transparent 50%, $bgcolor 50%, $bgcolor 50%);
@@ -23,7 +23,7 @@ $background-transition: background-position 0.3s ease-out;
     min-width: inherit;
   }
 
-  &:before {
+  &::before {
     content: '';
     position: absolute;
     top: 0;
@@ -34,10 +34,11 @@ $background-transition: background-position 0.3s ease-out;
     transition: $background-transition;
     background-size: 0;
     background-position: 0 100%;
+
     //Box shadow må ligge over :before / :after bakgrunnen
   }
 
-  &:after {
+  &::after {
     content: '';
     position: absolute;
     top: 0;
@@ -46,7 +47,6 @@ $background-transition: background-position 0.3s ease-out;
     transition: transform 0.3s ease-out 0s;
     transform: scaleY(0);
     transform-origin: top;
-
     border-left: 4px solid $cherry600;
   }
 
@@ -55,12 +55,12 @@ $background-transition: background-position 0.3s ease-out;
     padding: 0 1rem 1rem 0;
     background-position: 0 0;
 
-    &:before {
+    &::before {
       background-size: 100% 200%;
       background-position: 0 0;
     }
 
-    &:after {
+    &::after {
       transform: scaleY(1);
     }
   }

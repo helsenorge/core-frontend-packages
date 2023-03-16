@@ -1,7 +1,7 @@
-@import '@helsenorge/designsystem-react/scss/_spacers.scss';
-@import '@helsenorge/designsystem-react/scss/_breakpoints.scss';
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
-@import '@helsenorge/designsystem-react/scss/_screen-reader.scss';
+@import '@helsenorge/designsystem-react/scss/spacers';
+@import '@helsenorge/designsystem-react/scss/breakpoints';
+@import '@helsenorge/designsystem-react/scss/palette';
+@import '@helsenorge/designsystem-react/scss/screen-reader';
 
 /*** RESET ***/
 textarea:required {
@@ -85,7 +85,7 @@ textarea:required {
     }
 
     &__hidden-text {
-      @include sr-only();
+      @include sr-only;
     }
   }
 

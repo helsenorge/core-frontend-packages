@@ -1,6 +1,6 @@
-@import '@helsenorge/designsystem-react/scss/_spacers.scss';
-@import '@helsenorge/designsystem-react/scss/_breakpoints.scss';
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
+@import '@helsenorge/designsystem-react/scss/spacers';
+@import '@helsenorge/designsystem-react/scss/breakpoints';
+@import '@helsenorge/designsystem-react/scss/palette';
 
 .form {
   &__buttonwrapper {
@@ -13,8 +13,7 @@
       align-items: flex-start;
 
       @media (min-width: map-get($grid-breakpoints, lg)) {
-        flex-wrap: wrap;
-        flex-direction: row;
+        flex-flow: row wrap;
       }
     }
 

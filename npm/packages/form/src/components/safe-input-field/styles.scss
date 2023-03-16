@@ -1,6 +1,6 @@
-@import '@helsenorge/designsystem-react/scss/_spacers.scss';
-@import '@helsenorge/designsystem-react/scss/_breakpoints.scss';
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
+@import '@helsenorge/designsystem-react/scss/spacers';
+@import '@helsenorge/designsystem-react/scss/breakpoints';
+@import '@helsenorge/designsystem-react/scss/palette';
 
 $paddingX: 1.125rem;
 $extraWidth: 0.75rem;
@@ -112,6 +112,7 @@ input[type='tel'] {
     opacity: 1;
   }
 }
+
 .atom_input__loader {
   top: 1.65rem;
   left: 1rem;

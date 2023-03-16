@@ -1,11 +1,11 @@
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
+@import '@helsenorge/designsystem-react/scss/palette';
 
 .atom_select {
   position: relative;
   display: inline-block;
   vertical-align: middle;
 
-  &:after {
+  &::after {
     content: '';
     height: 1rem;
     width: 1rem;
