@@ -1,6 +1,6 @@
-@import '@helsenorge/designsystem-react/scss/_spacers.scss';
-@import '@helsenorge/designsystem-react/scss/_breakpoints.scss';
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
+@import '@helsenorge/designsystem-react/scss/spacers';
+@import '@helsenorge/designsystem-react/scss/breakpoints';
+@import '@helsenorge/designsystem-react/scss/palette';
 
 .dropzone {
   display: inline-block;
@@ -13,6 +13,7 @@
 
     &__label {
       display: none;
+
       &--visible {
         display: block;
       }
@@ -26,6 +27,7 @@
         display: block;
       }
     }
+
     &--visible {
       display: flex;
       visibility: visible;
@@ -35,6 +37,7 @@
       border: 3px dashed $neutral200;
       border-radius: 0.5rem;
       margin-top: getSpacer(m);
+
       @media (min-width: map-get($grid-breakpoints, md)) {
         padding: 0.7rem 1rem;
       }
@@ -52,6 +55,7 @@
     padding: 0;
     margin: 0;
     list-style-type: none;
+
     &__file {
       display: flex;
       padding: 0.1rem;
@@ -67,7 +71,7 @@
     margin: getSpacer(3xs);
   }
 
-  &__uploadButton:after {
+  &__uploadButton::after {
     z-index: 1;
   }
 

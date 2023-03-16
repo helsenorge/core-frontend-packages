@@ -1,6 +1,6 @@
-@import '@helsenorge/designsystem-react/scss/_palette.scss';
-@import '@helsenorge/designsystem-react/scss/_spacers.scss';
-@import '@helsenorge/designsystem-react/scss/_breakpoints.scss';
+@import '@helsenorge/designsystem-react/scss/palette';
+@import '@helsenorge/designsystem-react/scss/spacers';
+@import '@helsenorge/designsystem-react/scss/breakpoints';
 
 .container {
   margin: 0;
@@ -12,6 +12,7 @@
   @media only screen and (min-width: map-get($grid-breakpoints, lg)) {
     max-width: 23rem;
   }
+
   /* Dette er for at validation ikke settes over box-shadow ved hover */
   &:hover {
     z-index: 1;
@@ -73,7 +74,7 @@
   overflow-x: auto;
   max-height: 15.625rem;
   border: 0.25rem solid $neutral800;
-  box-shadow: 0 2px 0.25rem 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 0.25rem 1px rgb(0 0 0 / 25%);
   margin-top: 0.5rem;
   position: absolute;
   top: getSpacer(xl);
