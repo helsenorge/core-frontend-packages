@@ -9,6 +9,7 @@ type PackageData = {
   license: string;
   dependencies: string;
   scripts?: Record<string, string>;
+  bin?: Record<string, string>;
 };
 
 /**
@@ -26,13 +27,14 @@ export function createPackageJsonFile(packageName: string, inputPath: string, ou
   })
     .then((data: string) => JSON.parse(data))
     .then((packageData: PackageData) => {
-      const { author, version, peerDependencies, license, dependencies } = packageData;
+      const { author, version, bin, peerDependencies, license, dependencies } = packageData;
 
       const minimalPackage: PackageData = {
         name: packageName,
         author,
         version,
         main: './index.js',
+        bin,
         license,
         peerDependencies,
         dependencies,
