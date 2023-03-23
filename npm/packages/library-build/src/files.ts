@@ -10,6 +10,7 @@ type PackageData = {
   dependencies: string;
   scripts?: Record<string, string>;
   bin?: Record<string, string>;
+  publishConfig?: Record<string, string>;
 };
 
 /**
@@ -27,7 +28,7 @@ export function createPackageJsonFile(packageName: string, inputPath: string, ou
   })
     .then((data: string) => JSON.parse(data))
     .then((packageData: PackageData) => {
-      const { author, version, bin, peerDependencies, license, dependencies } = packageData;
+      const { author, version, bin, peerDependencies, license, dependencies, publishConfig } = packageData;
 
       const minimalPackage: PackageData = {
         name: packageName,
@@ -39,6 +40,12 @@ export function createPackageJsonFile(packageName: string, inputPath: string, ou
         peerDependencies,
         dependencies,
       };
+
+      if (publishConfig?.access) {
+        minimalPackage.publishConfig = {
+          access: publishConfig.access,
+        };
+      }
 
       return new Promise(resolve => {
         const data = JSON.stringify(minimalPackage, null, 2);
