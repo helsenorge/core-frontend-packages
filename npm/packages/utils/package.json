@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "27.1.4",
+  "version": "27.2.1",
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
   "main": "index.js",
   "publishConfig": {
@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "@helsenorge/designsystem-react": "^3.1.1",
-    "@helsenorge/library-build": "^27.1.4"
+    "@helsenorge/library-build": "^27.2.1"
   },
   "dependencies": {
     "@types/classnames": "2.3.1",
