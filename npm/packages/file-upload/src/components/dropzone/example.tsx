@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 import * as React from 'react';
 
-import Dropzone, { UploadedFile, TextMessage } from '.';
+import Dropzone, { UploadedFile, OnDropHandler, OnDeleteHandler } from '.';
 
 interface DropzoneExampleState {
   uploadedFiles1: UploadedFile[];
@@ -17,25 +17,25 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
     };
   }
 
-  onDrop1 = (files: Array<File>, cb: (success: boolean, errormessage: TextMessage | null, uploadedFile?: UploadedFile) => void): void => {
+  onDrop1: OnDropHandler = (files, cb): void => {
     console.log('file dropped', ...files);
 
     const newState = [...this.state.uploadedFiles1];
     for (const f of files) {
-      const uploadedFile = { id: f.name, name: f.name } as UploadedFile;
+      const uploadedFile = { id: f.name, name: f.name, size: f.size } as UploadedFile;
       newState.push(uploadedFile);
-      cb(true, null, uploadedFile);
+      cb && cb(true, null, uploadedFile);
     }
 
     this.setState({ uploadedFiles1: newState });
   };
-  onDrop2 = (files: Array<File>, cb: (success: boolean, errormessage: TextMessage | null, uploadedFile?: UploadedFile) => void): void => {
+  onDrop2: OnDropHandler = (files, cb): void => {
     console.log('file dropped', ...files);
 
     const newState = [...this.state.uploadedFiles2];
 
     for (const f of files) {
-      const uploadedFile = { id: f.name, name: f.name } as UploadedFile;
+      const uploadedFile = { id: f.name, name: f.name, size: f.size } as UploadedFile;
       if (newState.length > 0) {
         const sameFile = newState.find(e => e.name === f.name);
         if (!sameFile) {
@@ -45,14 +45,14 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
         newState.push(uploadedFile);
       }
 
-      cb(true, null, uploadedFile);
+      cb && cb(true, null, uploadedFile);
     }
 
     console.log('newState: ', newState);
     this.setState({ uploadedFiles2: newState });
   };
 
-  onDelete1 = (fileId: string, cb: (success: boolean, errormessage: TextMessage | null) => void) => {
+  onDelete1: OnDeleteHandler = (fileId, cb) => {
     console.log('file deleted', fileId);
 
     const newState = this.state.uploadedFiles1.filter(f => f.id !== fileId);
@@ -60,7 +60,7 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
 
     cb(true, null);
   };
-  onDelete2 = (fileId: string, cb: (success: boolean, errormessage: TextMessage | null) => void) => {
+  onDelete2: OnDeleteHandler = (fileId, cb) => {
     console.log('file deleted', fileId);
 
     const newState = this.state.uploadedFiles2.filter(f => f.id !== fileId);
@@ -88,9 +88,9 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
           onDelete={this.onDelete1}
           onRequestLink={this.onRequestLink}
           onOpenFile={this.onOpenFile}
-          maxFileSize={100000}
+          maxFileSize={1024 * 1024 * 0.1}
           fileElementClassName="myclass"
-          errorMessage="Maks filstørrelse er 1 000 000 byte og formatet må være jpeg, png eller pdf"
+          errorMessage="Maks filstørrelse er 1 MB og formatet må være jpeg, png eller pdf"
           uploadButtonText="Last opp"
           supportedFileFormatsText={'Gyldige filformater er jpeg, png og pdf'}
           validFileTypes={['image/jpeg', 'image/png', 'application/pdf']}
@@ -99,15 +99,16 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
         />
         <Dropzone
           id="drop"
-          label={'Last opp flere bilde av sykdommen din'}
+          label={'Last opp flere bilder av sykdommen din'}
           onDrop={this.onDrop2}
           onDelete={this.onDelete2}
           onRequestLink={this.onRequestLink}
           onOpenFile={this.onOpenFile}
-          maxFileSize={100000}
+          maxFileSize={1024 * 1024 * 1}
+          totalMaxFileSize={1024 * 1024 * 1}
           visualDropZone
           dropzoneStatusText={'Dra flere filer hit'}
-          errorMessage="Maks filstørrelse er 1 000 000 byte og formatet må være jpeg, png eller pdf"
+          errorMessage="Maks filstørrelse er 1 MB og formatet må være jpeg, png eller pdf"
           uploadButtonText="Last opp"
           supportedFileFormatsText={'Gyldige filformater er jpeg, png og pdf'}
           validFileTypes={['image/jpeg', 'image/png', 'application/pdf']}

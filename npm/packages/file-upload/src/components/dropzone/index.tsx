@@ -13,7 +13,7 @@ import ValidationError from '@helsenorge/form/components/form/validation-error';
 import { Label } from '@helsenorge/form/components/label';
 
 import FileElement, { Type } from './file';
-import { sizeIsValid, typeIsValid, mimeTypeIsValid } from './validation';
+import { sizeIsValid, typeIsValid, mimeTypeIsValid, totalSizeIsValid } from './validation';
 
 import styles from './toolkitstyles.module.scss';
 
@@ -24,6 +24,7 @@ export interface TextMessage {
 
 export interface UploadedFile {
   id?: string;
+  size?: number;
   name: string;
 }
 
@@ -45,13 +46,20 @@ export type MimeTypes =
   | 'image/bmp'
   | 'image/tif';
 
+export type OnDropHandler = (
+  file: Array<File>,
+  cb?: (success: boolean, errormessage: TextMessage | null, uploadedFile?: UploadedFile) => void
+) => void;
+
+export type OnDeleteHandler = (fileId: string, cb: (success: boolean, errormessage: TextMessage | null, url?: string) => void) => void;
+
 export interface Props {
   /** Unik Id for Dropzone */
   id: string;
   /**  event som trigges hvis man legger til en fil */
-  onDrop: (file: Array<File>, cb?: (success: boolean, errormessage: TextMessage | null, uploadedFile?: UploadedFile) => void) => void;
+  onDrop: OnDropHandler;
   /**  event som trigges hvis man tar bort en fil */
-  onDelete?: (fileId: string, cb: (success: boolean, errormessage: TextMessage | null, url?: string) => void) => void;
+  onDelete?: OnDeleteHandler;
   /** event som returerer lenke til fil */
   onRequestLink?: (fileId: string) => string;
   /**  event som trigges hvis man trykker på en fil */
@@ -80,6 +88,8 @@ export interface Props {
   supportedFileFormatsText?: string;
   /**  Max størrelse på fil */
   maxFileSize?: number;
+  /**  Max samlet størrelse på filer */
+  totalMaxFileSize?: number;
   /**  setter om filopplastingen er nødvendig for å fortsette */
   isRequired?: boolean;
   /** Setter label tekst for nødvendig  */
@@ -300,6 +310,9 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     if (this.props.validMimeTypes) {
       valid = valid && mimeTypeIsValid(file, this.props.validMimeTypes);
     }
+    if (this.props.totalMaxFileSize) {
+      valid = valid && totalSizeIsValid(file, this.props.totalMaxFileSize, this.props.uploadedFiles);
+    }
     return valid;
   };
 
@@ -442,13 +455,14 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
               {this.props.chooseFilesText || 'Velg filer'}
             </button>
             <label
+              htmlFor={`${this.props.id}-files`}
               className={classNames(styles['dropzone__visual-dropzone__label'], {
                 [styles['dropzone__visual-dropzone__label--visible']]: !!this.props.visualDropZone,
               })}
             >
               {this.props.dropzoneStatusText || 'Last opp fil'}{' '}
             </label>
-            <input {...getInputProps()} />
+            <input id={`${this.props.id}-files`} {...getInputProps()} />
           </div>
         )}
       </OriginalDropzone>
