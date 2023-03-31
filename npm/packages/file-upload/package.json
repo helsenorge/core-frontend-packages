@@ -33,7 +33,6 @@
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
-    "pretest": "crlf --set=LF \"src/**/*.snap\"",
     "test": "node node_modules/@helsenorge/library-build/library-scripts.js test",
     "test:update": "node node_modules/@helsenorge/library-build/library-scripts.js test --u",
     "prepublishOnly": "npm run build"
