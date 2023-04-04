@@ -2,9 +2,9 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
+import PrivateRadioGroup from './private-radio-group';
 import ValidationError from '../form/validation-error';
 import { Sublabel } from '../label/sublabel';
-import PrivateRadioGroup from './private-radio-group';
 
 import './styles.scss';
 
@@ -254,7 +254,7 @@ export class RadioGroup extends React.Component<RadioGroupProps, RadioGroupState
       labelStringFetcher,
       children,
     } = this.props;
-    const { lastFocusedValue, valid, validated } = this.state;
+    const { valid, validated } = this.state;
 
     const inputClasses: string = classNames({
       'atom_radio__input--boxed': !isStyleBoxed,
@@ -302,7 +302,6 @@ export class RadioGroup extends React.Component<RadioGroupProps, RadioGroupState
             type="radio"
             checked={e.type === selected}
             value={e.type}
-            aria-checked={lastFocusedValue === e.type}
             aria-label={e.ariaLabel}
             disabled={e.disabled ? e.disabled : false}
             required={i === 0 && isRequired}

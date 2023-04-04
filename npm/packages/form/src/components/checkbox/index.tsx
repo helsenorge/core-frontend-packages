@@ -2,8 +2,8 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
-import ValidationError from '../form/validation-error';
 import CheckThick from './CheckThick';
+import ValidationError from '../form/validation-error';
 
 import './styles.scss';
 export interface CheckboxProps {
@@ -179,7 +179,6 @@ export class CheckBox extends React.Component<CheckboxProps, CheckboxState> {
             ref={this.inputRef}
             type="checkbox"
             checked={this.props.checked}
-            aria-checked={this.props.checked}
             id={this.props.id}
             onChange={this.onChange}
             disabled={this.props.disabled}

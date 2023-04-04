@@ -274,6 +274,7 @@ export default class Form extends React.Component<FormProps, FormState> {
         onFormSubmit={this.onFormSubmit}
         onSubmit={this.props.onSubmit}
         submitButtonTestId={this.props.submitButtonTestId}
+        key="submit-button"
       />
     );
     const cancelButton = (
@@ -286,6 +287,7 @@ export default class Form extends React.Component<FormProps, FormState> {
         onCancel={this.props.onCancel}
         cancelButtonTestId={this.props.cancelButtonTestId}
         cancelButtonOutline={this.props.cancelButtonOutline}
+        key="cancel-button"
       />
     );
     const pauseButton = (
@@ -298,6 +300,7 @@ export default class Form extends React.Component<FormProps, FormState> {
         pauseButtonDisabled={this.props.pauseButtonDisabled}
         onPause={this.props.onPause}
         pauseButtonTestId={this.props.pauseButtonTestId}
+        key="pause-button"
       />
     );
     const draftButton = (
@@ -307,6 +310,7 @@ export default class Form extends React.Component<FormProps, FormState> {
         onFormSubmit={this.onFormSubmit}
         onDraft={this.props.onDraft}
         draftButtonTestId={this.props.draftButtonTestId}
+        key="draft-button"
       />
     );
     const buttonSpanClass = toolkitstyles['form__buttonwrapper__button-span'];
