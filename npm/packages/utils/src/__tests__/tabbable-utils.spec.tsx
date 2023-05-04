@@ -11,10 +11,7 @@ const TabbableTestHelper: React.FC = () => (
     <button tabIndex={2}></button>
   </div>
 );
-//TODO: fikse testene og se om det er noe feil her.
-//https://norskhelsenett.slack.com/archives/CSA36LVDZ/p1682671709388579
-//BUG: https://dev.azure.com/nhnfelles/Helsenorge/_workitems/edit/301954
-describe.skip('Tabbable-utils', () => {
+describe('Tabbable-utils', () => {
   describe('Gitt at det finnes en container med flere knapper', () => {
     describe('Når det brukes setTabIndex', () => {
       it('Så settes det tabIndex -1 på alle tabbable children', () => {

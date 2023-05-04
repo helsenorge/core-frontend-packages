@@ -44,7 +44,7 @@
     "@types/classnames": "2.3.1",
     "classnames": "2.3.2",
     "moment": "^2.29.4",
-    "tabbable": "6.1.1"
+    "tabbable": "6.1.2"
   },
   "browserslist": [
     "> 0.2% in NO",
