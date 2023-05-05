@@ -21,7 +21,7 @@ const argv = process.argv.slice(2);
 argv.push('--coverage');
 argv.push('--verbose');
 argv.push('--no-cache');
-argv.push('--config=node_modules/@helsenorge/library-build/config/jest/jest.config.js');
+argv.push('--config=node_modules/@helsenorge/library-build/jest.config.js');
 
 console.log('Du kjører jest med følgende arguments: ', argv);
 

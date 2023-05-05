@@ -1,7 +1,7 @@
 import { resolve } from 'path';
 
 import copyfiles from 'copyfiles';
-import rimraf from 'rimraf';
+import { rimraf } from 'rimraf';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
@@ -21,7 +21,7 @@ const { root, include, utils, rm } = yargs(hideBin(process.argv))
     utils: { describe: 'Files to copy to lib/utils', type: 'array', default: [] },
     rm: { describe: 'Files to delete', type: 'string', default: '' },
   })
-  .parseSync() as Arguments;
+  .parse() as Arguments;
 
 const originalPackageJson = resolve(process.cwd(), 'package.json');
 
