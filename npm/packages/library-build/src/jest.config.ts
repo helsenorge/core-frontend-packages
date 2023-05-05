@@ -1,15 +1,19 @@
+import type { Config } from 'jest';
+
 /* Legger til babel-jest + esm og babel-jest igjen uner 'transform' for å kunne håndtere esm import/exports */
 /* Viktig å ha @helsenorge pakker under transformIgnorePatterns fordi de eksporteres i rå esm */
 
 const rootDir = process.cwd();
 
-module.exports = {
+const config: Config = {
   rootDir,
   verbose: true,
   setupFilesAfterEnv: ['<rootDir>/node_modules/@helsenorge/library-build/setupTests.js'],
   coverageProvider: 'v8',
   testEnvironment: 'jest-environment-jsdom',
-  testURL: 'http://tjenester.helsenorge.utvikling',
+  testEnvironmentOptions: {
+    url: 'http://tjenester.helsenorge.utvikling',
+  },
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
@@ -40,3 +44,5 @@ module.exports = {
   snapshotSerializers: ['enzyme-to-json/serializer'],
   cacheDirectory: '<rootDir>/.jest-cache',
 };
+
+export default config;

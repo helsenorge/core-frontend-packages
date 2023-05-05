@@ -407,10 +407,10 @@ export default class SafeInputField extends React.Component<SafeInputFieldProps,
     if (!value) {
       return true;
     }
-    if (min !== null && min !== undefined && value < min) {
+    if (min !== null && min !== undefined && (value as number) < min) {
       return false;
     }
-    if (max !== null && max !== undefined && value > max) {
+    if (max !== null && max !== undefined && (value as number) > max) {
       return false;
     }
     return true;

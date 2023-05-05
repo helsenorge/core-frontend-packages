@@ -357,7 +357,7 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     if (time === '') {
       return true;
     }
-    if (time > this.getMaxHour() || time < this.getMinHour()) {
+    if ((time as number) > this.getMaxHour() || (time as number) < this.getMinHour()) {
       return false;
     }
     return true;
@@ -367,7 +367,7 @@ export default class TimeInput extends React.Component<TimeInputProps, TimeInput
     if (minute === '') {
       return true;
     }
-    if (minute > this.getMaxMinute() || minute < this.getMinMinute()) {
+    if ((minute as number) > this.getMaxMinute() || (minute as number) < this.getMinMinute()) {
       return false;
     }
     return true;
