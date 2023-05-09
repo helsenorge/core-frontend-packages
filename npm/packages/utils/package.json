@@ -1,7 +1,7 @@
 {
   "name": "@helsenorge/core-utils",
   "sideEffects": false,
-  "version": "27.7.0",
+  "version": "27.8.0",
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
   "main": "index.js",
   "publishConfig": {
