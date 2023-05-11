@@ -11,7 +11,7 @@ import { hideBin } from 'yargs/helpers';
       entry: { type: 'string', default: 'src/__devonly__/index.tsx' },
       outDir: { type: 'string', default: 'dist' },
     })
-    .parse();
+    .parseSync();
 
   if (!existsSync(outDir)) {
     mkdirSync(outDir);

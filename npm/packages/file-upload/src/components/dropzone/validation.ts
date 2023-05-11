@@ -7,12 +7,25 @@ export const sizeIsValid = (file: File, size: number) => {
   return true;
 };
 
-const getTotalFileSize = (total: number, file: UploadedFile): number => total + (file.size ?? 0);
+export const totalSizeIsValid = (maxSize: number, acceptedFiles?: File[], existingFiles?: UploadedFile[]): boolean => {
+  let totalFileSize = 0;
 
-export const totalSizeIsValid = (file: File, size: number, existing?: UploadedFile[]): boolean => {
-  const totalFileSize = existing?.reduce(getTotalFileSize, 0) ?? 0;
+  const newAcceptedFiles = acceptedFiles?.filter(function (acceptedFile) {
+    const isNewFile = !existingFiles?.some(existingFile => {
+      return acceptedFile.name == existingFile.name;
+    });
+    return isNewFile;
+  });
 
-  if (file.size + totalFileSize > size) {
+  existingFiles?.forEach(function (file) {
+    totalFileSize += file.size ?? 0;
+  });
+
+  newAcceptedFiles?.forEach(function (file) {
+    totalFileSize += file.size ?? 0;
+  });
+
+  if (totalFileSize > maxSize) {
     return false;
   }
 
