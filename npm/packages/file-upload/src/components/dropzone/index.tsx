@@ -54,13 +54,13 @@ export type OnDropHandler = (
 export type OnDeleteHandler = (fileId: string, cb: (success: boolean, errormessage: TextMessage | null, url?: string) => void) => void;
 
 export interface Props {
-  /** Unik Id for Dropzone */
+  /**  Unik Id for Dropzone */
   id: string;
   /**  event som trigges hvis man legger til en fil */
   onDrop: OnDropHandler;
   /**  event som trigges hvis man tar bort en fil */
   onDelete?: OnDeleteHandler;
-  /** event som returerer lenke til fil */
+  /**  event som returerer lenke til fil */
   onRequestLink?: (fileId: string) => string;
   /**  event som trigges hvis man trykker på en fil */
   onOpenFile?: (fileId: string) => void;
@@ -193,9 +193,18 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
       event.preventDefault();
     }
 
+    const existingFiles = this.props.uploadedFiles;
+    const newAcceptedFiles = acceptedFiles?.filter(function (acceptedFile) {
+      const isNewFile = !existingFiles?.some(existingFile => {
+        return acceptedFile.name == existingFile.name;
+      });
+      return isNewFile;
+    });
+
     const rejected: File[] = [];
     const uploaded: File[] = [];
-    for (const f of acceptedFiles) {
+
+    for (const f of newAcceptedFiles) {
       if (this.validateFile(f)) {
         uploaded.push(f);
       } else {
@@ -207,7 +216,9 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
       this.setState({ loading: true });
       this.props.onDrop(uploaded, (success, errormessage) => {
         if (success) {
-          this.setState({ loading: false, rejectedFiles: rejected }, this.validateOnDrop);
+          this.setState({ loading: false, rejectedFiles: rejected }, () => {
+            this.validateOnDrop(newAcceptedFiles);
+          });
         } else {
           this.setState({
             loading: false,
@@ -217,7 +228,9 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
         }
       });
     } else {
-      this.setState({ rejectedFiles: rejected }, this.validateOnDrop);
+      this.setState({ rejectedFiles: rejected }, () => {
+        this.validateOnDrop(newAcceptedFiles);
+      });
     }
   };
 
@@ -226,7 +239,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
       this.setState({ loading: true });
       this.props.onDelete(fileId, success => {
         if (success) {
-          this.setState({ loading: false });
+          this.setState({ loading: false }, this.validateOnDelete);
         } else {
           this.setState({ loading: false });
         }
@@ -262,11 +275,19 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return this.updateValid(validRejected && validRequired && validMin && validMax);
   };
 
-  validateOnDrop = () => {
+  validateOnDrop = (acceptedFiles?: File[]) => {
     const validRejected = this.validateRejectedFiles();
     const validMax = this.validateMax();
 
-    return this.updateValid(validRejected && validMax);
+    const validMaxTotalSize = this.validateMaxTotalSize(acceptedFiles);
+
+    return this.updateValid(validRejected && validMax && validMaxTotalSize);
+  };
+
+  validateOnDelete = () => {
+    const validMaxTotalSize = this.validateMaxTotalSize();
+
+    return this.updateValid(validMaxTotalSize);
   };
 
   validateRejectedFiles = () => {
@@ -281,6 +302,14 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
       return this.props.uploadedFiles.length === 1;
     }
     return this.props.uploadedFiles.length > 0;
+  };
+
+  validateMaxTotalSize = (acceptedFiles?: File[]) => {
+    let valid = true;
+    if (this.props.totalMaxFileSize) {
+      valid = totalSizeIsValid(this.props.totalMaxFileSize, acceptedFiles, this.props.uploadedFiles);
+    }
+    return valid;
   };
 
   validateMin = () => {
@@ -310,9 +339,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     if (this.props.validMimeTypes) {
       valid = valid && mimeTypeIsValid(file, this.props.validMimeTypes);
     }
-    if (this.props.totalMaxFileSize) {
-      valid = valid && totalSizeIsValid(file, this.props.totalMaxFileSize, this.props.uploadedFiles);
-    }
+
     return valid;
   };
 

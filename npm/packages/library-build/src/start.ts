@@ -36,6 +36,7 @@ import { hideBin } from 'yargs/helpers';
         transform: postcssModules({
           // ...put here the options for postcss-modules: https://github.com/madyankin/postcss-modules
         }),
+        importMapper: path => (path.endsWith('styles.module') ? path + '.scss' : path),
       }) as unknown as Plugin,
       sassPlugin({
         filter: /.(s[ac]ss|css)$/,
