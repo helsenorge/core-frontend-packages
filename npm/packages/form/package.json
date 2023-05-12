@@ -22,7 +22,7 @@
   "type": "module",
   "scripts": {
     "prestart": "rimraf dist",
-    "start": "node node_modules/@helsenorge/library-build/library-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
+    "start": "node node_modules/@helsenorge/library-build/library-scripts.js start --entry ./src/__devonly__/index.tsx --name testpage",
     "prebuild": "rimraf lib",
     "build": "tsc",
     "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/img/**/* --include=src/**/*.{scss,scss.d.ts}",
