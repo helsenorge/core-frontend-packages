@@ -1,0 +1,15 @@
+{
+  "version": "27.8.3",
+  "npmClient": "npm",
+  "command": {
+    "version": {
+      "allowBranch": ["master"],
+      "ignoreChanges": ["ResourcesHelper.json", "Resources.d.ts", "CHANGELOG.md"]
+    },
+    "publish": {
+      "registry": "https://pkgs.dev.azure.com/nhnfelles/_packaging/Helsenorge/npm/registry/"
+    }
+  },
+  "useWorkspaces": true,
+  "useNx": true
+}
