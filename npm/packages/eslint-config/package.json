@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "27.2.1",
+  "version": "28.0.0",
   "main": "./index.js",
   "publishConfig": {
     "directory": "lib",
