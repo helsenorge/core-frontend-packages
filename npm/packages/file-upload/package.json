@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "28.0.0",
+  "version": "27.8.2",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -22,7 +22,7 @@
   "type": "module",
   "scripts": {
     "prestart": "rimraf dist",
-    "start": "node node_modules/@helsenorge/library-build/library-scripts.js start --env.entry ./src/__devonly__/index.tsx --env.name testpage",
+    "start": "node node_modules/@helsenorge/library-build/library-scripts.js start --entry ./src/__devonly__/index.tsx --name testpage",
     "prebuild": "rimraf lib",
     "build": "tsc",
     "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/**/*.{scss,scss.d.ts}",
@@ -47,11 +47,11 @@
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^28.0.0",
+    "@helsenorge/core-utils": "^27.8.1",
     "@helsenorge/designsystem-react": "^4.0.0",
-    "@helsenorge/form": "^28.0.0",
-    "@helsenorge/library-build": "^28.0.0",
-    "@helsenorge/toolkit": "^28.0.0"
+    "@helsenorge/form": "^27.8.2",
+    "@helsenorge/library-build": "^27.8.1",
+    "@helsenorge/toolkit": "^27.8.2"
   },
   "dependencies": {
     "react-dropzone": "14.2.3"

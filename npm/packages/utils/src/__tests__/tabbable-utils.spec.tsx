@@ -11,7 +11,6 @@ const TabbableTestHelper: React.FC = () => (
     <button tabIndex={2}></button>
   </div>
 );
-
 describe('Tabbable-utils', () => {
   describe('Gitt at det finnes en container med flere knapper', () => {
     describe('Når det brukes setTabIndex', () => {

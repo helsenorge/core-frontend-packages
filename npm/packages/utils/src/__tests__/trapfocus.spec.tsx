@@ -26,7 +26,6 @@ Object.defineProperty(window.HTMLElement.prototype, 'offsetParent', {
   writable: true,
   value: {},
 });
-
 describe('Trapfocus', () => {
   beforeAll(() => {
     jest.clearAllMocks();
