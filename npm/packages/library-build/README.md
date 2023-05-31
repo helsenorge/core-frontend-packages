@@ -1,5 +1,3 @@
 # @helsenorge/library-build
 
-Bygg og test av komponentbibliotek %
-
-# Ny test
+Bygg og test av komponentbibliotek
