@@ -234,7 +234,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     }
   };
 
-  onDelete = (fileId: string) => {
+  onDelete = (fileId: string): void => {
     if (this.props.onDelete) {
       this.setState({ loading: true });
       this.props.onDelete(fileId, success => {
@@ -247,14 +247,14 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     }
   };
 
-  deleteRejected = (fileId: string) => {
+  deleteRejected = (fileId: string): void => {
     if (this.state.rejectedFiles) {
       const newRejectedFiles = this.state.rejectedFiles.filter(f => f.name !== fileId);
       this.setState({ rejectedFiles: newRejectedFiles }, this.validateOnDrop);
     }
   };
 
-  updateValid = (valid: boolean) => {
+  updateValid = (valid: boolean): Promise<void> => {
     return new Promise<void>((resolve: () => void) => {
       this.setState({ isValid: valid }, () => {
         if (this.props.onValidated) {
@@ -266,16 +266,17 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
   };
 
   // Blir kalt på submit i form
-  validateField = () => {
+  validateField = (): Promise<void> => {
     const validRejected = this.validateRejectedFiles();
     const validRequired = this.validateRequired();
     const validMin = this.validateMin();
     const validMax = this.validateMax();
+    const validTotalMaxSize = this.validateMaxTotalSize();
 
-    return this.updateValid(validRejected && validRequired && validMin && validMax);
+    return this.updateValid(validRejected && validRequired && validMin && validMax && validTotalMaxSize);
   };
 
-  validateOnDrop = (acceptedFiles?: File[]) => {
+  validateOnDrop = (acceptedFiles?: File[]): Promise<void> => {
     const validRejected = this.validateRejectedFiles();
     const validMax = this.validateMax();
 
@@ -284,18 +285,18 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return this.updateValid(validRejected && validMax && validMaxTotalSize);
   };
 
-  validateOnDelete = () => {
+  validateOnDelete = (): Promise<void> => {
     const validMaxTotalSize = this.validateMaxTotalSize();
 
     return this.updateValid(validMaxTotalSize);
   };
 
-  validateRejectedFiles = () => {
+  validateRejectedFiles = (): boolean => {
     if (this.state.rejectedFiles && this.state.rejectedFiles.length > 0) return false;
     return true;
   };
 
-  validateRequired = () => {
+  validateRequired = (): boolean => {
     if (!this.props.isRequired) return true;
     if (!this.props.uploadedFiles) return false;
     if (!this.props.shouldUploadMultiple) {
@@ -304,7 +305,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return this.props.uploadedFiles.length > 0;
   };
 
-  validateMaxTotalSize = (acceptedFiles?: File[]) => {
+  validateMaxTotalSize = (acceptedFiles?: File[]): boolean => {
     let valid = true;
     if (this.props.totalMaxFileSize) {
       valid = totalSizeIsValid(this.props.totalMaxFileSize, acceptedFiles, this.props.uploadedFiles);
@@ -312,7 +313,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return valid;
   };
 
-  validateMin = () => {
+  validateMin = (): boolean => {
     if (
       this.props.minFiles &&
       this.props.uploadedFiles &&
@@ -323,12 +324,12 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return true;
   };
 
-  validateMax = () => {
+  validateMax = (): boolean => {
     if (this.props.maxFiles && this.props.uploadedFiles && this.props.uploadedFiles.length > this.props.maxFiles) return false;
     return true;
   };
 
-  validateFile = (file: File) => {
+  validateFile = (file: File): boolean => {
     let valid = true;
     if (this.props.maxFileSize) {
       valid = valid && sizeIsValid(file, this.props.maxFileSize);
@@ -343,7 +344,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return valid;
   };
 
-  renderValidationErrorMessage() {
+  renderValidationErrorMessage(): React.JSX.Element {
     let error = '';
 
     if (this.props.errorMessage && this.state.rejectedFiles) {
@@ -352,7 +353,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return <ValidationError isValid={this.state.isValid} error={error} testId={this.props.validationTestId} />;
   }
 
-  renderErrorMessage() {
+  renderErrorMessage(): React.JSX.Element | undefined {
     if (this.state.errormessage) {
       return (
         <div className={styles.dropzone__errormessage}>
@@ -364,15 +365,15 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     }
   }
 
-  isValid() {
+  isValid(): boolean {
     return this.state.isValid;
   }
 
-  onOpenClick = () => {
+  onOpenClick = (): void => {
     if (this.ctrls.dropzone) this.ctrls.dropzone.open();
   };
 
-  renderLabel = () => {
+  renderLabel = (): React.JSX.Element | null => {
     if (this.props.label !== undefined) {
       const labelText = (
         <React.Fragment>
@@ -395,7 +396,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return null;
   };
 
-  renderHelp = () => {
+  renderHelp = (): JSX.Element | null => {
     if (this.props.helpElement) {
       return this.props.helpElement;
     }
@@ -403,14 +404,14 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return null;
   };
 
-  renderSupportedFormats = () => {
+  renderSupportedFormats = (): React.JSX.Element | null => {
     if (this.props.supportedFileFormatsText) {
       return <div className={styles.dropzone__acceptedFormats}>{this.props.supportedFileFormatsText}</div>;
     }
     return null;
   };
 
-  renderUploadButton = () => {
+  renderUploadButton = (): React.JSX.Element | undefined => {
     if (this.shouldRenderUploadButton()) {
       return (
         <Button
@@ -449,16 +450,16 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     return this.props.uploadedFiles && this.props.uploadedFiles.length > 0 ? true : false;
   };
 
-  renderDropzone = () => {
+  renderDropzone = (): React.JSX.Element => {
     return (
       <OriginalDropzone
-        ref={(control: DropzoneCtrl) => (this.ctrls.dropzone = control)}
+        ref={(control: DropzoneCtrl): DropzoneCtrl => (this.ctrls.dropzone = control)}
         onDrop={this.onDrop}
-        onDragOver={() => this.setState({ dragover: true })}
-        onDragLeave={() => this.setState({ dragover: false })}
+        onDragOver={(): void => this.setState({ dragover: true })}
+        onDragLeave={(): void => this.setState({ dragover: false })}
         multiple={!!this.props?.shouldUploadMultiple}
       >
-        {({ getRootProps, getInputProps }) => (
+        {({ getRootProps, getInputProps }): React.JSX.Element => (
           <div
             className={classNames(
               styles['dropzone__visual-dropzone'],
@@ -477,6 +478,7 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
                 [styles['dropzone__visual-dropzone__button--visible']]: !!this.props.visualDropZone,
               })}
               type="button"
+              // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
               onClick={() => open}
             >
               {this.props.chooseFilesText || 'Velg filer'}
@@ -496,13 +498,13 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     );
   };
 
-  renderSpinner() {
+  renderSpinner(): React.JSX.Element | undefined {
     if (this.state.loading && !this.props.noSpinner) {
       return <Loader size={'tiny'} className={styles.dropzone__loader} />;
     }
   }
 
-  renderFiles() {
+  renderFiles(): React.JSX.Element | undefined {
     const rejectedFiles = [];
     const uploadedFiles = [];
 
