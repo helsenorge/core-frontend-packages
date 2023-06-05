@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^28.0.1",
-    "@helsenorge/designsystem-react": "^4.0.0",
+    "@helsenorge/designsystem-react": "^4.1.0",
     "@helsenorge/library-build": "^28.0.1"
   },
   "browserslist": [
