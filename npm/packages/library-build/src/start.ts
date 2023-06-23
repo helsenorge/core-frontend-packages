@@ -1,6 +1,7 @@
 import { existsSync, mkdirSync, copyFileSync } from 'fs';
+import path from 'path';
 
-import esbuild, { Plugin } from 'esbuild';
+import esbuild from 'esbuild';
 import { sassPlugin, postcssModules } from 'esbuild-sass-plugin';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
@@ -28,6 +29,8 @@ import { hideBin } from 'yargs/helpers';
     },
     loader: {
       '.svg': 'dataurl',
+      '.woff': 'dataurl',
+      '.woff2': 'dataurl',
     },
     plugins: [
       sassPlugin({
@@ -37,11 +40,23 @@ import { hideBin } from 'yargs/helpers';
           // ...put here the options for postcss-modules: https://github.com/madyankin/postcss-modules
         }),
         importMapper: path => (path.endsWith('styles.module') ? path + '.scss' : path),
-      }) as unknown as Plugin,
+        precompile(source, pathname) {
+          const basedir = path.dirname(pathname);
+          return source.replace(/(url\(['"]?)(\.\.?\/)([^'")]+['"]?\))/g, `$1${basedir}/$2$3`);
+        },
+      }),
       sassPlugin({
         filter: /.(s[ac]ss|css)$/,
         type: 'style',
-      }) as unknown as Plugin,
+      }),
+      {
+        name: 'resolve-fonts',
+        setup(build): void {
+          build.onResolve({ filter: /\.woff2?$/ }, ({ path }) => {
+            return { path };
+          });
+        },
+      },
     ],
   });
 
