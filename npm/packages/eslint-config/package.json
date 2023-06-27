@@ -11,7 +11,7 @@
   ],
   "author": "Norsk helsenett SF",
   "description": "Helsenorges eslint-regler",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "copyfiles configs/* index.js rules.cjs stylelint.config.js package.json lib"

@@ -10,7 +10,7 @@
   "maintainers": [
     "ROX"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "description": "Komponent for opplasting av filer",
   "repository": {
     "type": "tfs",
@@ -50,8 +50,7 @@
     "@helsenorge/core-utils": "^28.1.1",
     "@helsenorge/designsystem-react": "^4.1.0",
     "@helsenorge/form": "^28.1.1",
-    "@helsenorge/library-build": "^28.1.1",
-    "@helsenorge/toolkit": "^28.1.1"
+    "@helsenorge/library-build": "^28.1.1"
   },
   "dependencies": {
     "react-dropzone": "14.2.3"

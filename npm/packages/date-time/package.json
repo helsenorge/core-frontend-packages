@@ -11,7 +11,7 @@
     "ROX"
   ],
   "description": "Input-komponenter for dato og tid",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "tfs",
     "url": "https://dev.azure.com/nhnfelles/Helsenorge/_git/HN-Core-Frontend?path=%2Fnpm%2Fpackages%2Fdate-time"
@@ -56,6 +56,12 @@
   "dependencies": {
     "@types/react-dates": "^21.8.3",
     "react-dates": "21.8.0"
+  },
+  "overrides": {
+    "react-dates": {
+      "react": ">=17.0.0",
+      "react-dom": ">=17.0.0"
+    }
   },
   "browserslist": [
     "> 0.2% in NO",
