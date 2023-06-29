@@ -11,6 +11,10 @@
   ],
   "author": "Norsk helsenett SF",
   "description": "Helsenorges eslint-regler",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helsenorge/core-frontend-packages"
+  },
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf lib",

@@ -13,8 +13,8 @@
   "description": "Skjema-komponenter",
   "license": "MIT",
   "repository": {
-    "type": "tfs",
-    "url": "https://dev.azure.com/nhnfelles/Helsenorge/_git/HN-Core-Frontend?path=%2Fnpm%2Fpackages%2Fform"
+    "type": "git",
+    "url": "https://github.com/helsenorge/core-frontend-packages"
   },
   "files": [
     "lib"
