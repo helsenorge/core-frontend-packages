@@ -5,6 +5,7 @@ type PackageData = {
   author: string;
   version: string;
   main: string;
+  repository?: Record<string, string>;
   peerDependencies: string;
   license: string;
   dependencies: string;
@@ -28,13 +29,14 @@ export function createPackageJsonFile(packageName: string, inputPath: string, ou
   })
     .then((data: string) => JSON.parse(data))
     .then((packageData: PackageData) => {
-      const { author, version, bin, peerDependencies, license, dependencies, publishConfig } = packageData;
+      const { author, version, repository, bin, peerDependencies, license, dependencies, publishConfig } = packageData;
 
       const minimalPackage: PackageData = {
         name: packageName,
         author,
         version,
         main: './index.js',
+        repository,
         bin,
         license,
         peerDependencies,
