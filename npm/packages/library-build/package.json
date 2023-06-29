@@ -12,8 +12,8 @@
   "description": "Bygg og test av komponentbibliotek",
   "license": "MIT",
   "repository": {
-    "type": "tfs",
-    "url": "https://dev.azure.com/nhnfelles/Helsenorge/_git/HN-Core-Frontend?path=%2Fnpm%2Fpublic%2Flibrary-build"
+    "type": "git",
+    "url": "https://github.com/helsenorge/core-frontend-packages"
   },
   "bin": {
     "library-scripts": "./library-scripts.js"

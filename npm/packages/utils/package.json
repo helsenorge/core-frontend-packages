@@ -3,6 +3,10 @@
   "sideEffects": false,
   "version": "28.2.0",
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helsenorge/core-frontend-packages"
+  },
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
