@@ -1,0 +1,66 @@
+{
+  "name": "@helsenorge/autosuggest",
+  "version": "28.2.1",
+  "main": "index.js",
+  "publishConfig": {
+    "directory": "lib",
+    "access": "public"
+  },
+  "author": "Norsk helsenett SF",
+  "maintainers": [
+    "ROX"
+  ],
+  "description": "Autosuggest-komponent for å vise forslag i forbindelse med inputfelt",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/helsenorge/core-frontend-packages"
+  },
+  "files": [
+    "lib"
+  ],
+  "type": "module",
+  "scripts": {
+    "prestart": "rimraf dist",
+    "start": "node node_modules/@helsenorge/library-build/library-scripts.js start",
+    "prebuild": "rimraf lib",
+    "build": "tsc",
+    "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/**/*.{scss,scss.d.ts}",
+    "watch": "tsc --watch",
+    "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
+    "eslint:fix": "npm run lint -- --fix",
+    "stylelint": "stylelint src/**/*.{css,scss}",
+    "stylelint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
+    "prettier:fix": "npm run prettier -- --write",
+    "pretypecheck": "tsc -v",
+    "typecheck": "tsc --noEmit",
+    "pretest": "crlf --set=LF \"src/**/*.snap\"",
+    "test": "node node_modules/@helsenorge/library-build/library-scripts.js test",
+    "test:update": "node node_modules/@helsenorge/library-build/library-scripts.js test --u",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "@helsenorge/core-utils": "^28.0.0",
+    "@helsenorge/designsystem-react": "^4.0.0",
+    "@helsenorge/form": "^28.0.0",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
+  },
+  "devDependencies": {
+    "@helsenorge/core-utils": "^28.2.1",
+    "@helsenorge/designsystem-react": "^4.1.0",
+    "@helsenorge/form": "^28.2.1",
+    "@helsenorge/library-build": "^28.2.1"
+  },
+  "dependencies": {
+    "@types/react-autosuggest": "10.1.6",
+    "react-autosuggest": "10.1.0"
+  },
+  "browserslist": [
+    "> 0.2% in NO",
+    "not dead",
+    "not op_mini all",
+    "not ie > 0"
+  ]
+}

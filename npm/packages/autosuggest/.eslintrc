@@ -1,0 +1,3 @@
+{
+  "extends": ["@helsenorge/eslint-config"]
+}

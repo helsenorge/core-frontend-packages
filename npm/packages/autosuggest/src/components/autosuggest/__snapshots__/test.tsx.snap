@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Autosuggest Gitt at Autosuggest er initialisert Når den mountes med labels og noValidation Så rendres det Label og sublabel + autosuggest component 1`] = `
+<div
+  class=""
+  id="id1-wrapper"
+>
+  <div
+    class=""
+  >
+    <label
+      class="label"
+      for="id1"
+    >
+      This is an autosuggest (input search) field with label
+      <span
+        class="label__sublabel"
+      >
+        and its sublabel
+      </span>
+    </label>
+  </div>
+  <div
+    aria-expanded="false"
+    aria-haspopup="listbox"
+    aria-owns="react-autowhatever-1"
+    role="combobox"
+  >
+    <input
+      aria-autocomplete="list"
+      aria-controls="react-autowhatever-1"
+      autocomplete="off"
+      id="id1"
+      placeholder="Placeholder text"
+      type="search"
+      value="default value"
+    />
+    <div
+      id="react-autowhatever-1"
+      role="listbox"
+    />
+  </div>
+</div>
+`;
+
+exports[`Autosuggest Gitt at Autosuggest er initialisert Når det rendres suggestions Så rendres det riktig markup med og uten optionalLabel 1`] = `
+<span>
+  First suggestion
+</span>
+`;
+
+exports[`Autosuggest Gitt at Autosuggest er initialisert Når det rendres suggestions Så rendres det riktig markup med og uten optionalLabel 2`] = `
+<span>
+  Second suggestion
+  <em>
+     
+    optionalLabel
+  </em>
+</span>
+`;
