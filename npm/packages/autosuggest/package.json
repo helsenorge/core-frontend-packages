@@ -11,10 +11,10 @@
     "ROX"
   ],
   "description": "Autosuggest-komponent for å vise forslag i forbindelse med inputfelt",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
-    "type": "tfs",
-    "url": "https://dev.azure.com/nhnfelles/Helsenorge/_git/HN-Core-Frontend?path=%2Fnpm%2Fpackages%2Fautosuggest"
+    "type": "git",
+    "url": "https://github.com/helsenorge/core-frontend-packages"
   },
   "files": [
     "lib"
