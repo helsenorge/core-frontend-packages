@@ -3,15 +3,17 @@
 $color-primary-1: #a61e7b;
 
 /******** RESET *********/
-input[type='checkbox'] {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+input[type='checkbox'].atom_checkbox {
+  &__input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
 
   & + label {
     cursor: pointer;
@@ -20,8 +22,6 @@ input[type='checkbox'] {
     font-weight: 400;
     margin: 0;
     word-break: break-word;
-    hyphens: auto;
-    hyphens: auto;
     hyphens: auto;
   }
 }
