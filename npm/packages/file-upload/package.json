@@ -48,7 +48,7 @@
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^28.2.1",
-    "@helsenorge/designsystem-react": "^4.1.0",
+    "@helsenorge/designsystem-react": "^4.2.3",
     "@helsenorge/form": "^28.3.0",
     "@helsenorge/library-build": "^28.2.1"
   },
