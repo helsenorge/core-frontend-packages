@@ -22,7 +22,6 @@
     "declaration": true,
     "declarationMap": true,
     "removeComments": false,
-    "resolveJsonModule": true,
-    "ignoreDeprecations": "5.0"
+    "resolveJsonModule": true
   }
 }
