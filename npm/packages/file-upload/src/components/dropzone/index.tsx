@@ -17,7 +17,7 @@ import { sizeIsValid, typeIsValid, mimeTypeIsValid, totalSizeIsValid } from './v
 
 import styles from './toolkitstyles.module.scss';
 
-export interface TextMessage {
+export interface ErrorMessage {
   Title: string;
   Body: string;
 }
@@ -33,7 +33,7 @@ export interface DropzoneState {
   isValid: boolean;
   loading: boolean;
   dragover: boolean;
-  errormessage?: TextMessage | null;
+  errormessage?: ErrorMessage | null;
 }
 
 export type MimeTypes =
@@ -48,10 +48,10 @@ export type MimeTypes =
 
 export type OnDropHandler = (
   file: Array<File>,
-  cb?: (success: boolean, errormessage: TextMessage | null, uploadedFile?: UploadedFile) => void
+  cb?: (success: boolean, errormessage: ErrorMessage | null, uploadedFile?: UploadedFile) => void
 ) => void;
 
-export type OnDeleteHandler = (fileId: string, cb: (success: boolean, errormessage: TextMessage | null, url?: string) => void) => void;
+export type OnDeleteHandler = (fileId: string, cb: (success: boolean, errormessage: ErrorMessage | null, url?: string) => void) => void;
 
 export interface Props {
   /**  Unik Id for Dropzone */
@@ -444,10 +444,6 @@ export default class Dropzone extends React.Component<Props, DropzoneState> {
     }
 
     return true;
-  };
-
-  hasUploadedFiles = (): boolean => {
-    return this.props.uploadedFiles && this.props.uploadedFiles.length > 0 ? true : false;
   };
 
   renderDropzone = (): React.JSX.Element => {

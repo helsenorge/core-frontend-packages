@@ -46,11 +46,15 @@
     "react": ">=17.0.2",
     "react-dom": ">=17.0.2"
   },
+  "optionalDependencies": {
+    "react-hook-form": "^7.0.0"
+  },
   "devDependencies": {
     "@helsenorge/core-utils": "^28.5.1",
     "@helsenorge/designsystem-react": "^4.2.3",
     "@helsenorge/form": "^28.5.1",
-    "@helsenorge/library-build": "^28.5.1"
+    "@helsenorge/library-build": "^28.5.1",
+    "react-hook-form": "^7.43.7"
   },
   "dependencies": {
     "react-dropzone": "14.2.3"
