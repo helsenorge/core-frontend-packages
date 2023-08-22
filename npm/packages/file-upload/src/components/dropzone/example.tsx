@@ -1,7 +1,9 @@
 /* eslint-disable no-console */
 import * as React from 'react';
 
-import Dropzone, { UploadedFile, OnDropHandler, OnDeleteHandler } from '.';
+import Title from '@helsenorge/designsystem-react/components/Title';
+
+import Dropzone, { OnDropHandler, OnDeleteHandler, UploadedFile } from './index';
 
 interface DropzoneExampleState {
   uploadedFiles1: UploadedFile[];
@@ -81,8 +83,15 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
   render(): JSX.Element {
     return (
       <>
+        <Title htmlMarkup={'h2'} appearance={'title2'}>
+          {'(Intern validering):'}
+        </Title>
+        <br />
+        <Title htmlMarkup={'h3'} appearance={'title3'}>
+          {'Uten dropzone:'}
+        </Title>
         <Dropzone
-          id="drop"
+          id="drop1"
           label={'Last opp ett bilde av sykdommen din'}
           onDrop={this.onDrop1}
           onDelete={this.onDelete1}
@@ -97,8 +106,12 @@ export class DropzoneExample extends React.Component<{}, DropzoneExampleState> {
           uploadedFiles={this.state.uploadedFiles1}
           wrapperTestId="Dropzone"
         />
+        <br />
+        <Title htmlMarkup={'h3'} appearance={'title3'}>
+          {'Med Dropzone:'}
+        </Title>
         <Dropzone
-          id="drop"
+          id="drop2"
           label={'Last opp flere bilder av sykdommen din'}
           onDrop={this.onDrop2}
           onDelete={this.onDelete2}

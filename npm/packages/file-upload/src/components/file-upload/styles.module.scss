@@ -1,0 +1,80 @@
+@import '@helsenorge/designsystem-react/scss/spacers';
+@import '@helsenorge/designsystem-react/scss/breakpoints';
+@import '@helsenorge/designsystem-react/scss/palette';
+
+.dropzone {
+  display: inline-block;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__visual-dropzone {
+    visibility: hidden;
+
+    &__label {
+      display: none;
+
+      &--visible {
+        display: block;
+      }
+    }
+
+    &__input {
+      display: none;
+    }
+
+    &--visible {
+      display: flex;
+      align-items: center;
+      visibility: visible;
+      position: relative;
+      padding: 0.4rem;
+      border: 3px dashed $neutral200;
+      border-radius: 0.5rem;
+      margin-top: getSpacer(m);
+
+      @media (min-width: map-get($grid-breakpoints, md)) {
+        padding: 0.7rem 1rem;
+      }
+
+      &--error {
+        border-color: $cherry400;
+      }
+    }
+
+    &:hover,
+    &:focus,
+    &--dragover {
+      border-style: solid;
+      outline: none;
+    }
+  }
+
+  &__files {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    &__file {
+      display: flex;
+      padding: 0.1rem;
+      align-items: center;
+    }
+  }
+
+  &__loader {
+    line-height: 2.5rem;
+  }
+
+  &__uploadButton {
+    margin: getSpacer(3xs) getSpacer(m) getSpacer(3xs) getSpacer(3xs);
+  }
+
+  &__uploadButton::after {
+    z-index: 1;
+  }
+
+  &__deleteButton {
+    margin-left: 1rem;
+  }
+}

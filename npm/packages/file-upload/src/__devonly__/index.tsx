@@ -2,8 +2,10 @@ import React from 'react';
 
 import { render } from 'react-dom';
 
+import Title from '@helsenorge/designsystem-react/components/Title';
+
 import Dropzone from '../components/dropzone';
-import { DropzoneExample } from '../examples';
+import { DropzoneExample, FileUploadExample } from '../examples';
 
 const anchor: Element | null = document.getElementById('main-content-wrapper');
 
@@ -21,19 +23,13 @@ const TestSide: React.FC = () => {
       <div className="container">
         <div className="row">
           <div className="col-12">
+            <Title>{'FileUpload'}</Title>
+            <br />
+            <FileUploadExample />
+            <br />
+            <Title>{'Dropzone'}</Title>
+            <br />
             <DropzoneExample />
-
-            <Dropzone
-              id="test"
-              onDrop={handleDrop}
-              uploadedFiles={[{ id: 'asd', name: 'string' }]}
-              confirmDelete
-              onDelete={handleDelete}
-              deleteText="deleteText"
-              verifyDeleteText="verifyDeleteText"
-              confirmText="confirmText"
-              cancelText="cancelText"
-            />
           </div>
         </div>
       </div>
