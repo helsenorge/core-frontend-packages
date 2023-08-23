@@ -42,7 +42,7 @@ import { hideBin } from 'yargs/helpers';
         importMapper: path => (path.endsWith('styles.module') ? path + '.scss' : path),
         precompile(source, pathname) {
           const basedir = path.dirname(pathname);
-          return source.replace(/(url\(['"]?)(\.\.?\/)([^'")]+['"]?\))/g, `$1${basedir}/$2$3`);
+          return source.replace(/(url\(['"]?)(\.\.?\/)([^'")]+['"]?\))/g, '$1'.concat(basedir.replace(/\\/g, '\\\\'), '/$2$3'));
         },
       }),
       sassPlugin({
