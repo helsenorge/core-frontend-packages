@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "28.5.1",
+  "version": "28.6.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
