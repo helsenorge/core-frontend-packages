@@ -122,7 +122,7 @@ export default class FileElement extends React.Component<FileProps, FileState> {
         <Button
           variant="borderless"
           concept={'destructive'}
-          className={classNames(styles.dropzone__deleteButton, {
+          wrapperClassName={classNames(styles.dropzone__deleteButton, {
             [`${this.props.customClass}__button`]: this.props.customClass,
           })}
           onClick={confirmDelete ? this.setConfirmDelete : this.deleteFile}
