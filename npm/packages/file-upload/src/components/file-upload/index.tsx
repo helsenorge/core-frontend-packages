@@ -52,6 +52,8 @@ export interface Props
   onOpenFile?: (fileId: string) => void;
   /**  className som plasseres på uploadButton */
   uploadButtonClassName?: string;
+  /** Filer som er lagt til ved oppstart */
+  defaultFiles?: File[];
   /**  Disabler opplasting */
   disabled?: boolean;
   /**  viser label for opplastningsknapp */
@@ -103,6 +105,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     chooseFilesText,
     confirmDelete,
     confirmText,
+    defaultFiles,
     deleteText,
     disabled,
     dropzoneStatusText,
@@ -129,7 +132,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   } = props;
 
   const [dragover, setDragover] = React.useState(false);
-  const [internalFilesState, setInternalFilesState] = React.useState<File[] | null>(null);
+  const [calledFakeOnChange, setCalledFakeOnChange] = React.useState(false);
   const { refObject } = usePseudoClasses<HTMLInputElement>(isMutableRefObject(ref) ? ref : null);
   const mergedRefs = mergeRefs([ref, refObject]);
   const inputButtonId = inputId + '-button';
@@ -140,8 +143,15 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   }
 
   React.useEffect(() => {
-    internalFilesState && triggerOnChangeEvent();
-  }, [internalFilesState]);
+    if (typeof defaultFiles !== 'undefined' && defaultFiles.length > 0) {
+      setInputFiles(defaultFiles);
+      setCalledFakeOnChange(true);
+    }
+  }, [defaultFiles]);
+
+  React.useEffect(() => {
+    calledFakeOnChange && triggerOnChangeEvent();
+  }, [calledFakeOnChange]);
 
   /** Setter validFileTypes array til string format som <input/> forventer */
   const validFileTypesToString = (): string => {
@@ -183,12 +193,12 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
 
   /** Oppdaterer <input/> filer med onChange event sine filer eller internalFilesState hvis det er satt */
   const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
-    if (refObject && refObject.current && refObject.current.files) {
+    if (!calledFakeOnChange && refObject && refObject.current && refObject.current.files) {
       const filteredNewFiles = getNewFiles([...refObject.current.files]);
-      const isRealOnChange = internalFilesState === null;
-      setInputFiles(!isRealOnChange ? internalFilesState : [...acceptedFiles, ...rejectedFiles, ...filteredNewFiles]);
-      setInternalFilesState(null);
-      isRealOnChange && onChangeFile && onChangeFile(filteredNewFiles);
+      setInputFiles([...acceptedFiles, ...rejectedFiles, ...filteredNewFiles]);
+      onChangeFile && onChangeFile(filteredNewFiles);
+    } else {
+      setCalledFakeOnChange(false);
     }
 
     props.onChange && props.onChange(event);
@@ -196,7 +206,8 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
 
   const onDropHandler = (e: DragFileEvent): void => {
     const filteredNewFiles = getNewFiles([...e.dataTransfer.files]);
-    setInternalFilesState([...acceptedFiles, ...rejectedFiles, ...filteredNewFiles]);
+    setInputFiles([...acceptedFiles, ...rejectedFiles, ...filteredNewFiles]);
+    setCalledFakeOnChange(true);
     onChangeFile && onChangeFile(filteredNewFiles);
   };
 
@@ -207,7 +218,8 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   const onDeleteHandler = (fileId: string): void => {
     const newAcceptedFiles = acceptedFiles.filter(f => f.name !== fileId);
     const newRejectedFiles = rejectedFiles.filter(f => f.name !== fileId);
-    setInternalFilesState([...newAcceptedFiles, ...newRejectedFiles]);
+    setInputFiles([...newAcceptedFiles, ...newRejectedFiles]);
+    setCalledFakeOnChange(true);
     onDeleteFile && onDeleteFile(fileId);
   };
 

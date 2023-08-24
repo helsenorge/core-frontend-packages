@@ -15,6 +15,7 @@ import { validateNumberOfFiles, validateFileSize, validateFileType, validateTota
 import FileUpload, { MimeTypes, OnDeleteHandler, OnChangeHandler } from '.';
 
 export const FileUploadExample: React.FC<{}> = () => {
+  const [defaultFiles] = React.useState<File[]>([new File([], 'hello2.jpeg', { type: 'image/jpeg' })]);
   const [acceptedFiles1, setAcceptedFiles1] = React.useState<File[]>([]);
   const [disableButton, setDisableButton] = React.useState(false);
   const [disableButton2, setDisableButton2] = React.useState(false);
@@ -149,6 +150,7 @@ export const FileUploadExample: React.FC<{}> = () => {
         <FormGroup error={useFormReturn.formState.errors.fileupload?.message as string}>
           <FileUpload
             aria-describedby={sublabelId}
+            defaultFiles={defaultFiles}
             disabled={disableButton}
             dropzoneStatusText={dropzoneText}
             error={!!useFormReturn.formState.errors.fileupload}
