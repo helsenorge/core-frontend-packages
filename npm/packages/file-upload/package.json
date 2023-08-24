@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "28.6.0",
+  "version": "28.7.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -50,10 +50,10 @@
     "react-hook-form": "^7.0.0"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^28.5.1",
+    "@helsenorge/core-utils": "^28.7.0",
     "@helsenorge/designsystem-react": "^4.2.3",
-    "@helsenorge/form": "^28.5.1",
-    "@helsenorge/library-build": "^28.5.1",
+    "@helsenorge/form": "^28.7.0",
+    "@helsenorge/library-build": "^28.7.0",
     "react-hook-form": "^7.43.7"
   },
   "dependencies": {
