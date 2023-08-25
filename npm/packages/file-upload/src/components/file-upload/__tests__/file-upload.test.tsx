@@ -11,7 +11,7 @@ import Button from '@helsenorge/designsystem-react/components/Button';
 import Label, { Sublabel } from '@helsenorge/designsystem-react/components/Label';
 import Validation from '@helsenorge/designsystem-react/components/Validation';
 
-import FileUpload, { MimeTypes, OnDeleteHandler, Props } from '../index';
+import FileUpload, { UploadFile, MimeTypes, OnDeleteHandler, Props } from '../index';
 import { useFileUpload } from '../useFileUpload';
 import { validateFileSize, validateFileType, validateNumberOfFiles, validateTotalFileSize } from '../validate-utils';
 
@@ -59,6 +59,7 @@ const FileUploadExample = React.forwardRef((props: Props) => {
 
   // eslint-disable-next-line
   const onSubmit = (data: FieldValues): any => {
+    // eslint-disable-next-line no-console
     console.log('onSubmit data:', data);
   };
 
@@ -92,13 +93,13 @@ const FileUploadExample = React.forwardRef((props: Props) => {
 FileUploadExample.displayName = 'FileUploadExample';
 
 const FileUploadExample2: React.FC = () => {
-  const testFile = [new File([], 'file1.pdf', { type: 'application/pdf' })];
-  const testFile2 = [new File([], 'file2.jpeg', { type: 'application/jpeg' })];
-  const [acceptedFiles1, setAcceptedFiles1] = React.useState<File[]>(testFile);
-  const [rejectedFiles1, setRejectedFiles1] = React.useState<File[]>(testFile2);
+  const testFile = [new UploadFile([], 'file1.pdf', undefined, { type: 'application/pdf' })];
+  const testFile2 = [new UploadFile([], 'file2.jpeg', undefined, { type: 'application/jpeg' })];
+  const [acceptedFiles1, setAcceptedFiles1] = React.useState<UploadFile[]>(testFile);
+  const [rejectedFiles1, setRejectedFiles1] = React.useState<UploadFile[]>(testFile2);
   const onDelete1: OnDeleteHandler = fileId => {
-    setAcceptedFiles1(acceptedFiles1.filter(af => af.name !== fileId));
-    setRejectedFiles1(rejectedFiles1.filter(af => af.name !== fileId));
+    setAcceptedFiles1(acceptedFiles1.filter(af => af.id !== fileId));
+    setRejectedFiles1(rejectedFiles1.filter(af => af.id !== fileId));
   };
 
   return <FileUpload inputId={'input01'} acceptedFiles={acceptedFiles1} rejectedFiles={rejectedFiles1} onDeleteFile={onDelete1} />;
@@ -181,8 +182,8 @@ describe('FileUpload', () => {
   describe('Gitt at FileUpload har acceptedFiles og rejectedFiles satt', () => {
     describe('Når komponenten vises', () => {
       it('Så er acceptedFiles og rejectedFiles synlig', () => {
-        const testFile = new File([], 'file1.pdf', { type: 'application/pdf' });
-        const testFile2 = new File([], 'file2.jpeg', { type: 'application/jpeg' });
+        const testFile = new UploadFile([], 'file1.pdf', undefined, { type: 'application/pdf' });
+        const testFile2 = new UploadFile([], 'file2.jpeg', undefined, { type: 'application/jpeg' });
         render(<FileUpload inputId="id" acceptedFiles={[testFile]} rejectedFiles={[testFile2]} />);
 
         const acceptedFile = screen.getByText('file1.pdf');

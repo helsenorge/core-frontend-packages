@@ -12,11 +12,11 @@ import Validation from '@helsenorge/designsystem-react/components/Validation';
 import { useFileUpload } from './useFileUpload';
 import { validateNumberOfFiles, validateFileSize, validateFileType, validateTotalFileSize } from './validate-utils';
 
-import FileUpload, { MimeTypes, OnDeleteHandler, OnChangeHandler } from '.';
+import FileUpload, { MimeTypes, OnDeleteHandler, OnChangeHandler, UploadFile } from '.';
 
 export const FileUploadExample: React.FC<{}> = () => {
-  const [defaultFiles] = React.useState<File[]>([new File([], 'hello2.jpeg', { type: 'image/jpeg' })]);
-  const [acceptedFiles1, setAcceptedFiles1] = React.useState<File[]>([]);
+  const [defaultFiles] = React.useState<UploadFile[]>([new UploadFile([], 'hello2.jpeg', 'id123', { type: 'image/jpeg' })]);
+  const [acceptedFiles1, setAcceptedFiles1] = React.useState<UploadFile[]>([]);
   const [disableButton, setDisableButton] = React.useState(false);
   const [disableButton2, setDisableButton2] = React.useState(false);
   const useFormReturn = useForm({ mode: 'all' });
@@ -28,14 +28,14 @@ export const FileUploadExample: React.FC<{}> = () => {
   const maxFiles = 2;
   const dropzoneText = !disableButton ? 'Eller dra filer hit' : 'Du har lagt til maksimalt antall filer';
 
-  const onChange1: OnChangeHandler = (newFiles: File[]): void => {
+  const onChange1: OnChangeHandler = (newFiles: UploadFile[]): void => {
     console.log('files added', newFiles);
     setAcceptedFiles1([...acceptedFiles1, ...newFiles]);
   };
 
   const onDelete1: OnDeleteHandler = fileId => {
     console.log('file deleted', fileId);
-    setAcceptedFiles1(acceptedFiles1.filter((af: File) => af.name !== fileId));
+    setAcceptedFiles1(acceptedFiles1.filter((af: UploadFile) => af.id !== fileId));
   };
 
   const useFileUpload1 = useFileUpload(
@@ -61,7 +61,7 @@ export const FileUploadExample: React.FC<{}> = () => {
     setDisableButton2(useFileUpload2.acceptedFiles.length + useFileUpload2.rejectedFiles.length >= 1);
   }, [useFileUpload2.acceptedFiles, useFileUpload2.rejectedFiles]);
 
-  const onChange2: OnChangeHandler = (newFiles: File[]): void => {
+  const onChange2: OnChangeHandler = (newFiles: UploadFile[]): void => {
     console.log('files added', newFiles);
   };
 
@@ -79,7 +79,7 @@ export const FileUploadExample: React.FC<{}> = () => {
   };
 
   // eslint-disable-next-line
-  const onSubmit = (data: FileList): any => {
+  const onSubmit = (data: UploadFile[]): any => {
     console.log('onSubmit data:', data);
   };
 

@@ -17,6 +17,15 @@ import FileElement, { Type } from '../dropzone/file';
 
 import styles from './styles.module.scss';
 
+export class UploadFile extends File {
+  id: string;
+
+  constructor(fileBits: BlobPart[], fileName: string, id?: string, options?: FilePropertyBag) {
+    super(fileBits, fileName, options);
+    this.id = id || fileName;
+  }
+}
+
 export type MimeTypes =
   | 'image/jpeg'
   | 'image/jpg'
@@ -27,7 +36,7 @@ export type MimeTypes =
   | 'image/bmp'
   | 'image/tif';
 
-export type OnChangeHandler = (file: Array<File>) => void;
+export type OnChangeHandler = (files: UploadFile[]) => void;
 
 export type OnDeleteHandler = (fileId: string) => void;
 
@@ -35,9 +44,9 @@ export interface Props
   extends React.PropsWithChildren<{}>,
     Pick<React.InputHTMLAttributes<HTMLInputElement>, 'accept' | 'aria-describedby' | 'onChange'> {
   /** Filer som har gått gjennom validering */
-  acceptedFiles?: File[];
+  acceptedFiles?: UploadFile[];
   /** Filer som har feilet validering */
-  rejectedFiles?: File[];
+  rejectedFiles?: UploadFile[];
   /**  Unik Id for input elementet */
   inputId: string;
   /** Hides the delete button next to the files added */
@@ -53,7 +62,7 @@ export interface Props
   /**  className som plasseres på uploadButton */
   uploadButtonClassName?: string;
   /** Filer som er lagt til ved oppstart */
-  defaultFiles?: File[];
+  defaultFiles?: UploadFile[];
   /**  Disabler opplasting */
   disabled?: boolean;
   /**  viser label for opplastningsknapp */
@@ -144,7 +153,8 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
 
   React.useEffect(() => {
     if (typeof defaultFiles !== 'undefined' && defaultFiles.length > 0) {
-      setInputFiles(defaultFiles);
+      const filteredDefaultFiles = getNewFiles(defaultFiles);
+      setInputFiles(filteredDefaultFiles);
       setCalledFakeOnChange(true);
     }
   }, [defaultFiles]);
@@ -169,15 +179,18 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   };
 
   /** Filtrerer files og returnerer de vi ikke har fra før */
-  const getNewFiles = (files: File[]): File[] => {
-    const filteredNewFiles = acceptedFiles?.length ? files.filter(file => acceptedFiles.every(af => file.name !== af.name)) : files;
-    return rejectedFiles?.length ? filteredNewFiles.filter(file => rejectedFiles.every(rf => file.name !== rf.name)) : filteredNewFiles;
+  const getNewFiles = (files: UploadFile[]): UploadFile[] => {
+    files.forEach(f => typeof f.id === 'undefined' && (f.id = f.name));
+    const filteredNewFiles = acceptedFiles?.length ? files.filter(file => acceptedFiles.every(af => file.id !== af.id)) : files;
+    return rejectedFiles?.length ? filteredNewFiles.filter(file => rejectedFiles.every(rf => file.id !== rf.id)) : filteredNewFiles;
   };
 
   /** Fyller inn <input/> med de nye filene */
-  const setInputFiles = (files: File[]): void => {
+  const setInputFiles = (files: UploadFile[]): void => {
     const dataTransfer = new DataTransfer();
-    files.forEach(file => dataTransfer.items.add(file));
+    files.forEach(file => {
+      dataTransfer.items.add(file);
+    });
     if (refObject.current) {
       refObject.current.files = dataTransfer.files;
     }
@@ -194,7 +207,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   /** Oppdaterer <input/> filer med onChange event sine filer eller internalFilesState hvis det er satt */
   const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>): void => {
     if (!calledFakeOnChange && refObject && refObject.current && refObject.current.files) {
-      const filteredNewFiles = getNewFiles([...refObject.current.files]);
+      const filteredNewFiles = getNewFiles([...refObject.current.files] as UploadFile[]);
       setInputFiles([...acceptedFiles, ...rejectedFiles, ...filteredNewFiles]);
       onChangeFile && onChangeFile(filteredNewFiles);
     } else {
@@ -205,7 +218,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   };
 
   const onDropHandler = (e: DragFileEvent): void => {
-    const filteredNewFiles = getNewFiles([...e.dataTransfer.files]);
+    const filteredNewFiles = getNewFiles([...e.dataTransfer.files] as UploadFile[]);
     setInputFiles([...acceptedFiles, ...rejectedFiles, ...filteredNewFiles]);
     setCalledFakeOnChange(true);
     onChangeFile && onChangeFile(filteredNewFiles);
@@ -216,8 +229,8 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   };
 
   const onDeleteHandler = (fileId: string): void => {
-    const newAcceptedFiles = acceptedFiles.filter(f => f.name !== fileId);
-    const newRejectedFiles = rejectedFiles.filter(f => f.name !== fileId);
+    const newAcceptedFiles = acceptedFiles.filter(f => f.id !== fileId);
+    const newRejectedFiles = rejectedFiles.filter(f => f.id !== fileId);
     setInputFiles([...newAcceptedFiles, ...newRejectedFiles]);
     setCalledFakeOnChange(true);
     onDeleteFile && onDeleteFile(fileId);
@@ -297,7 +310,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
           rejectedFiles.map((rf, i) => (
             <FileElement
               key={rf.name + i}
-              fileId={rf.name}
+              fileId={rf.id}
               type={Type.rejected}
               fileName={rf.name}
               loading={!!loading}
@@ -318,7 +331,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
           acceptedFiles.map((af, i) => (
             <FileElement
               key={`${af.name}${i}`}
-              fileId={af.name}
+              fileId={af.id}
               type={Type.verified}
               fileName={af.name}
               loading={!!loading}
