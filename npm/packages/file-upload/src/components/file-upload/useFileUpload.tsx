@@ -4,13 +4,15 @@ import { FieldValues, RegisterOptions, UseFormRegister, UseFormRegisterReturn, V
 
 import { AllFilesValidation, SingleFileValidation } from './validate-utils';
 
+import { UploadFile } from '.';
+
 type UseFileUploadReturn<T extends FieldValues> = {
   // eslint-disable-next-line
   register: UseFormRegister<T>;
-  acceptedFiles: File[];
-  setAcceptedFiles: React.Dispatch<React.SetStateAction<File[]>>;
-  rejectedFiles: File[];
-  setRejectedFiles: React.Dispatch<React.SetStateAction<File[]>>;
+  acceptedFiles: UploadFile[];
+  setAcceptedFiles: React.Dispatch<React.SetStateAction<UploadFile[]>>;
+  rejectedFiles: UploadFile[];
+  setRejectedFiles: React.Dispatch<React.SetStateAction<UploadFile[]>>;
 };
 
 /**
@@ -23,12 +25,12 @@ export const useFileUpload = <T extends FieldValues>(
   validationSingleFileRulesList?: SingleFileValidation[],
   validationAllFilesRulesList?: AllFilesValidation[]
 ): UseFileUploadReturn<T> => {
-  const [acceptedFiles, setAcceptedFiles] = React.useState<File[]>([]);
-  const [rejectedFiles, setRejectedFiles] = React.useState<File[]>([]);
+  const [acceptedFiles, setAcceptedFiles] = React.useState<UploadFile[]>([]);
+  const [rejectedFiles, setRejectedFiles] = React.useState<UploadFile[]>([]);
 
-  const validateFiles = (data: FileList): true | string => {
-    const newAcceptedFiles: File[] = [];
-    const newRejectedFiles: File[] = [];
+  const validateFiles = (data: UploadFile[]): true | string => {
+    const newAcceptedFiles: UploadFile[] = [];
+    const newRejectedFiles: UploadFile[] = [];
     let validateResponse: true | string = true;
 
     // validationSingleFileRulesList kjøres per fil, og beholder første feilmelding i listen
@@ -69,7 +71,7 @@ export const useFileUpload = <T extends FieldValues>(
     const originalValidate = rules?.validate;
 
     if (originalValidate && typeof originalValidate === 'function') {
-      rules.validate = async (value: FileList): Promise<ValidateResult> => {
+      rules.validate = async (value: UploadFile[]): Promise<ValidateResult> => {
         return validateFiles(value);
       };
     }

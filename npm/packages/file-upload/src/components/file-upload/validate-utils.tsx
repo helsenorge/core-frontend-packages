@@ -1,11 +1,11 @@
-import { MimeTypes } from '.';
+import { UploadFile, MimeTypes } from '.';
 
-export type SingleFileValidation = (firstParam: File, ...args: unknown[]) => true | string;
-export type AllFilesValidation = (firstParam: FileList, ...args: unknown[]) => true | string;
+export type SingleFileValidation = (firstParam: UploadFile, ...args: unknown[]) => true | string;
+export type AllFilesValidation = (firstParam: UploadFile[], ...args: unknown[]) => true | string;
 
 /** react-hook-form filtype validering - trengs bare ved bruk av visuell dropzone - med dialog knapp holder det å bruke prop til FileUpload */
-export const validateFileType = (validFileTypes: MimeTypes[], errorMessage: string): ((file: File) => string | true) => {
-  return (file: File): string | true => {
+export const validateFileType = (validFileTypes: MimeTypes[], errorMessage: string): ((file: UploadFile) => string | true) => {
+  return (file: UploadFile): string | true => {
     const filetype = file.type;
     if (validFileTypes.find(ft => ft === filetype)) {
       return true;
@@ -16,8 +16,8 @@ export const validateFileType = (validFileTypes: MimeTypes[], errorMessage: stri
 };
 
 /** react-hook-form filstørrelse validering */
-export const validateFileSize = (minByteSize: number, maxByteSize: number, errorMessage: string): ((file: File) => true | string) => {
-  return (file: File) => {
+export const validateFileSize = (minByteSize: number, maxByteSize: number, errorMessage: string): ((file: UploadFile) => true | string) => {
+  return (file: UploadFile) => {
     const fileSize = file.size;
     if (fileSize < minByteSize || fileSize > maxByteSize) {
       return errorMessage;
@@ -32,8 +32,8 @@ export const validateTotalFileSize = (
   minByteSize: number,
   maxByteSize: number,
   errorMessage: string
-): ((data: FileList) => true | string) => {
-  return (data: FileList) => {
+): ((data: UploadFile[]) => true | string) => {
+  return (data: UploadFile[]) => {
     let totalSize = 0;
 
     if (typeof data !== 'undefined' && data.length > 0) {
@@ -47,8 +47,12 @@ export const validateTotalFileSize = (
 };
 
 /** react-hook-form antall filer validering */
-export const validateNumberOfFiles = (minFiles: number, maxFiles: number, errorMessage: string): ((data: FileList) => true | string) => {
-  return (data: FileList) => {
+export const validateNumberOfFiles = (
+  minFiles: number,
+  maxFiles: number,
+  errorMessage: string
+): ((data: UploadFile[]) => true | string) => {
+  return (data: UploadFile[]) => {
     if (typeof data !== 'undefined' && data.length >= minFiles && data.length <= maxFiles) {
       return true;
     } else {
