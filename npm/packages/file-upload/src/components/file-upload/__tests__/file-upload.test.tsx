@@ -93,8 +93,8 @@ const FileUploadExample = React.forwardRef((props: Props) => {
 FileUploadExample.displayName = 'FileUploadExample';
 
 const FileUploadExample2: React.FC = () => {
-  const testFile = [new UploadFile([], 'file1.pdf', undefined, { type: 'application/pdf' })];
-  const testFile2 = [new UploadFile([], 'file2.jpeg', undefined, { type: 'application/jpeg' })];
+  const testFile = [new UploadFile([], 'file1.pdf', undefined, undefined, { type: 'application/pdf' })];
+  const testFile2 = [new UploadFile([], 'file2.jpeg', undefined, undefined, { type: 'application/jpeg' })];
   const [acceptedFiles1, setAcceptedFiles1] = React.useState<UploadFile[]>(testFile);
   const [rejectedFiles1, setRejectedFiles1] = React.useState<UploadFile[]>(testFile2);
   const onDelete1: OnDeleteHandler = fileId => {
@@ -182,8 +182,8 @@ describe('FileUpload', () => {
   describe('Gitt at FileUpload har acceptedFiles og rejectedFiles satt', () => {
     describe('Når komponenten vises', () => {
       it('Så er acceptedFiles og rejectedFiles synlig', () => {
-        const testFile = new UploadFile([], 'file1.pdf', undefined, { type: 'application/pdf' });
-        const testFile2 = new UploadFile([], 'file2.jpeg', undefined, { type: 'application/jpeg' });
+        const testFile = new UploadFile([], 'file1.pdf', undefined, undefined, { type: 'application/pdf' });
+        const testFile2 = new UploadFile([], 'file2.jpeg', undefined, undefined, { type: 'application/jpeg' });
         render(<FileUpload inputId="id" acceptedFiles={[testFile]} rejectedFiles={[testFile2]} />);
 
         const acceptedFile = screen.getByText('file1.pdf');

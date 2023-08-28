@@ -19,10 +19,12 @@ import styles from './styles.module.scss';
 
 export class UploadFile extends File {
   id: string;
+  fileSize: number;
 
-  constructor(fileBits: BlobPart[], fileName: string, id?: string, options?: FilePropertyBag) {
+  constructor(fileBits: BlobPart[], fileName: string, id?: string, fileSize?: number, options?: FilePropertyBag) {
     super(fileBits, fileName, options);
     this.id = id || fileName;
+    this.fileSize = fileSize || this.size;
   }
 }
 
@@ -181,6 +183,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   /** Filtrerer files og returnerer de vi ikke har fra før */
   const getNewFiles = (files: UploadFile[]): UploadFile[] => {
     files.forEach(f => typeof f.id === 'undefined' && (f.id = f.name));
+    files.forEach(f => typeof f.fileSize === 'undefined' && (f.fileSize = f.size));
     const filteredNewFiles = acceptedFiles?.length ? files.filter(file => acceptedFiles.every(af => file.id !== af.id)) : files;
     return rejectedFiles?.length ? filteredNewFiles.filter(file => rejectedFiles.every(rf => file.id !== rf.id)) : filteredNewFiles;
   };
