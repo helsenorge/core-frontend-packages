@@ -18,7 +18,7 @@ export const validateFileType = (validFileTypes: MimeTypes[], errorMessage: stri
 /** react-hook-form filstørrelse validering */
 export const validateFileSize = (minByteSize: number, maxByteSize: number, errorMessage: string): ((file: UploadFile) => true | string) => {
   return (file: UploadFile) => {
-    const fileSize = file.size;
+    const fileSize = file.fileSize;
     if (fileSize < minByteSize || fileSize > maxByteSize) {
       return errorMessage;
     }
@@ -38,7 +38,7 @@ export const validateTotalFileSize = (
 
     if (typeof data !== 'undefined' && data.length > 0) {
       for (const file of data) {
-        totalSize += file.size;
+        totalSize += file.fileSize;
       }
     }
 

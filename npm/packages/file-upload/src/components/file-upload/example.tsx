@@ -15,7 +15,7 @@ import { validateNumberOfFiles, validateFileSize, validateFileType, validateTota
 import FileUpload, { MimeTypes, OnDeleteHandler, OnChangeHandler, UploadFile } from '.';
 
 export const FileUploadExample: React.FC<{}> = () => {
-  const [defaultFiles] = React.useState<UploadFile[]>([new UploadFile([], 'hello2.jpeg', 'id123', { type: 'image/jpeg' })]);
+  const [defaultFiles] = React.useState<UploadFile[]>([new UploadFile([], 'hello2.jpeg', 'id123', 200000, { type: 'image/jpeg' })]);
   const [acceptedFiles1, setAcceptedFiles1] = React.useState<UploadFile[]>([]);
   const [disableButton, setDisableButton] = React.useState(false);
   const [disableButton2, setDisableButton2] = React.useState(false);
