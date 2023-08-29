@@ -1,9 +1,11 @@
 import * as React from 'react';
 
+import { render, screen } from '@testing-library/react';
 import { mount } from 'enzyme';
 
-import Autosuggest, { Suggestion } from '.';
 import { Label } from '@helsenorge/form/components/label';
+
+import Autosuggest, { Suggestion } from '.';
 
 describe('Autosuggest', () => {
   const suggestions: Array<Suggestion> = [
@@ -21,12 +23,33 @@ describe('Autosuggest', () => {
     const onSuggestionsSelectedMock = jest.fn();
     const onSubmitValidatorMock = jest.fn();
 
+    describe('Når Autosuggest vises', () => {
+      it('Så finnes det et søkefelt med label', () => {
+        render(
+          <Autosuggest
+            id={'id1'}
+            type="search"
+            label={'Søk'}
+            value={'default value'}
+            suggestions={[]}
+            onChange={onChangeMock}
+            onSuggestionsFetchRequested={onSuggestionsFetchRequestedMock}
+            onSuggestionsClearRequested={onSuggestionsClearRequestedMock}
+            onSuggestionSelected={onSuggestionsSelectedMock}
+            noValidation
+          />
+        );
+
+        const input = screen.getByLabelText('Søk');
+        expect(input).toBeVisible();
+      });
+    });
+
     describe('Når den mountes med labels og noValidation', () => {
       const wrapper = mount(
         <Autosuggest
           id={'id1'}
           type="search"
-          placeholder={'Placeholder text'}
           label={'This is an autosuggest (input search) field with label'}
           subLabel={'and its sublabel'}
           value={'default value'}
@@ -60,7 +83,6 @@ describe('Autosuggest', () => {
         <Autosuggest
           id={'id1'}
           type="search"
-          placeholder={'Placeholder text'}
           label={'This is an autosuggest (input search) field with label'}
           subLabel={'and its sublabel'}
           value={'default value'}
@@ -101,7 +123,6 @@ describe('Autosuggest', () => {
         <Autosuggest
           id={'id2'}
           type="search"
-          placeholder={'Placeholder text'}
           value={'default value'}
           suggestions={[]}
           onChange={onChangeMock}
@@ -131,7 +152,6 @@ describe('Autosuggest', () => {
         <Autosuggest
           id={'id3'}
           type="search"
-          placeholder={'Placeholder text'}
           value={'default value'}
           suggestions={[]}
           onBlur={onBlurMock}
@@ -166,7 +186,6 @@ describe('Autosuggest', () => {
         <Autosuggest
           id={'id3'}
           type="search"
-          placeholder={'Placeholder text'}
           value={'default value'}
           suggestions={[]}
           onChange={onChangeMock}
@@ -199,7 +218,6 @@ describe('Autosuggest', () => {
         <Autosuggest
           id={'id4'}
           type="search"
-          placeholder={'Placeholder text'}
           value={'default value'}
           suggestions={suggestions}
           onBlur={onBlurMock}
@@ -226,7 +244,6 @@ describe('Autosuggest', () => {
         <Autosuggest
           id={'id5'}
           type="search"
-          placeholder={'Placeholder text'}
           label={'This is an autosuggest (input search) field with label'}
           subLabel={'and its sublabel'}
           value={'default value'}

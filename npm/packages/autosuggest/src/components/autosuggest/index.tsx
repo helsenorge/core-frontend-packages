@@ -35,8 +35,6 @@ interface Props {
   ariaLabel?: string;
   /** Teksten til sub label, brukes som enkel hjelpetekst. Sublabel legges som et eget blokk-element nederst i <label> til dette feltet */
   subLabel?: string | JSX.Element;
-  /** Placeholder som sendes ned til ReactAutosuggest */
-  placeholder?: string;
   /** Type som sendes ned til ReactAutosuggest */
   type?: string;
   /** Funksjon som blir kalt når suggestions blir krevd - sendes til react-autosuggest */
@@ -196,7 +194,6 @@ export default class Autosuggest extends React.Component<Props, State> {
       className,
       label,
       subLabel,
-      placeholder,
       type,
       noValidation,
       isRequired,
@@ -215,7 +212,6 @@ export default class Autosuggest extends React.Component<Props, State> {
     const inputProps = {
       id,
       value,
-      placeholder,
       type: type,
       'aria-label': ariaLabel,
       required: isRequired,

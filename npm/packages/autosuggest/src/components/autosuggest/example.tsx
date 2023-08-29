@@ -59,7 +59,6 @@ export class AutosuggestExample extends React.Component<{}, { suggestions: Array
         <Autosuggest
           id={'id1'}
           type="search"
-          placeholder={'Placeholder text'}
           label={'This is an autosuggest (input search) field with label'}
           subLabel={'and its sublabel'}
           ariaLabel={'this is my ariaLabel'}
