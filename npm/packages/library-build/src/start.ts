@@ -66,5 +66,6 @@ import { hideBin } from 'yargs/helpers';
     port: 3000,
     host: 'localhost',
     servedir: outDir,
+    fallback: outDir + '/index.html',
   });
 })();
