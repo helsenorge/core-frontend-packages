@@ -9,3 +9,11 @@ import { configure } from 'enzyme';
 
 // configuring enzyme adapter
 configure({ adapter: new Adapter() });
+
+declare global {
+  interface Window {
+    HN: Record<string, unknown>;
+  }
+}
+
+window.HN = {};
