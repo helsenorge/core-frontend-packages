@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "28.7.0",
+  "version": "28.7.3",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -48,10 +48,10 @@
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^28.7.0",
+    "@helsenorge/core-utils": "^28.7.3",
     "@helsenorge/designsystem-react": "^4.2.3",
-    "@helsenorge/form": "^28.7.0",
-    "@helsenorge/library-build": "^28.7.0"
+    "@helsenorge/form": "^28.7.3",
+    "@helsenorge/library-build": "^28.7.3"
   },
   "dependencies": {
     "@types/react-autosuggest": "10.1.6",
