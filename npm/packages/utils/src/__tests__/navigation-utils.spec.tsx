@@ -1,12 +1,14 @@
-import { Location } from 'history';
+import { Location } from 'react-router-dom';
 
 import { navigate, navigateAdd, goBackOrUp } from '../navigation-utils';
 
 describe('Navigation-utils', () => {
   let globalNavigationTrail = [];
-  const mockHistory = {};
-  mockHistory.go = jest.fn();
-  mockHistory.replace = jest.fn();
+  const mockedNavigate = jest.fn();
+  jest.mock('react-router-dom', () => ({
+    ...jest.requireActual('react-router-dom'),
+    useNavigate: () => mockedNavigate,
+  }));
 
   afterAll(() => {
     jest.clearAllMocks();
@@ -15,8 +17,8 @@ describe('Navigation-utils', () => {
   describe('Gitt at navigationTrail har noe location lagret', () => {
     describe('Når goBackOrUp kalles for den aller første gang', () => {
       it('Så navigerer den tilbake til path /', () => {
-        goBackOrUp(mockHistory);
-        expect(mockHistory.replace).toHaveBeenCalled();
+        goBackOrUp(mockedNavigate);
+        expect(mockedNavigate).toHaveBeenCalledWith('/', { replace: true });
       });
     });
   });
@@ -89,8 +91,8 @@ describe('Navigation-utils', () => {
   describe('Gitt at navigationTrail har noe location lagret ', () => {
     describe('Når goBackOrUp kalles igjen mot slutten', () => {
       it('Så navigerer den tilbake', () => {
-        goBackOrUp(mockHistory);
-        expect(mockHistory.go).toHaveBeenCalledWith(-1);
+        goBackOrUp(mockedNavigate);
+        expect(mockedNavigate).toHaveBeenCalledWith(-1);
       });
     });
   });
