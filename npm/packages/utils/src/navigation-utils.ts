@@ -1,4 +1,4 @@
-import { History, Location, Action } from 'history';
+import { Location, NavigationType, NavigateFunction } from 'react-router-dom';
 
 interface Navigation {
   location: Location | undefined;
@@ -31,11 +31,11 @@ const navigateBack = (location: Location, focus: (targets: HTMLElement[]) => voi
 /**
  * Legger til HTMLElement i navigationTrail
  * @param location - Location objekt som legges til i navigationTrail
- * @param action - 'PUSH' 'POP' eller 'REPLACE'
+ * @param navigationType - 'PUSH' 'POP' eller 'REPLACE'
  * @param focus - callback function med HTMLElement (target) som argument
  */
-export const navigate = (location: Location, action: Action, focus: (targets: HTMLElement[]) => void): Navigation[] => {
-  switch (action) {
+export const navigate = (location: Location, navigationType: NavigationType, focus: (targets: HTMLElement[]) => void): Navigation[] => {
+  switch (navigationType) {
     case 'PUSH':
       navigationTrail.push({
         location,
@@ -74,10 +74,10 @@ export const navigateAdd = (target: HTMLElement): Navigation[] | void => {
 /**
  * Oppdaterer history objektet
  */
-export const goBackOrUp = (history: History, length = 1): void => {
+export const goBackOrUp = (navigate: NavigateFunction, length = 1): void => {
   if (navigationTrail.length > 0) {
-    history.go(-length);
+    navigate(-length);
   } else {
-    history.replace('/');
+    navigate('/', { replace: true });
   }
 };
