@@ -3,7 +3,13 @@ import type { Config } from 'jest';
 /* Legger til babel-jest + esm og babel-jest igjen uner 'transform' for å kunne håndtere esm import/exports */
 /* Viktig å ha @helsenorge pakker under transformIgnorePatterns fordi de eksporteres i rå esm */
 
+let individualConfig;
 const rootDir = process.cwd();
+try {
+  individualConfig = require(rootDir + '/jest.config.cjs');
+} catch (ex) {
+  console.log('Benytter delt jest.config.js-fil');
+}
 
 const config: Config = {
   rootDir,
@@ -43,6 +49,7 @@ const config: Config = {
   testResultsProcessor: 'jest-junit-reporter',
   snapshotSerializers: ['enzyme-to-json/serializer'],
   cacheDirectory: '<rootDir>/.jest-cache',
+  ...individualConfig,
 };
 
 export default config;
