@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/library-build",
-  "version": "28.7.3",
+  "version": "28.8.0",
   "publishConfig": {
     "directory": "lib",
     "access": "public"
