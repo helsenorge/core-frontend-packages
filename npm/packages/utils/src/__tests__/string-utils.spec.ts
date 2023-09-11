@@ -137,6 +137,20 @@ describe('String-utils', () => {
         expect(s).toBeFalsy();
       });
     });
+    describe('Når det sendes en streng med html tags som named character entities', () => {
+      it('Så returnerer den false', () => {
+        const s = stringFunctions.isValid('xxx&lt; img src=x onerror=alert(1)&gt;');
+        expect(s).toBeFalsy();
+      });
+    });
+    describe('Når det sendes en streng med html tags som hex entities', () => {
+      it('Så returnerer den false', () => {
+        const s = stringFunctions.isValid(
+          '&#x78;&#x78;&#x78;&#x78;&#x26;&#x6c;&#x74;&#x3b;&#x20;&#x49;&#x4d;&#x47;&#x20;&#x53;&#x52;&#x43;&#x3d;&#x78;&#x20;&#x6f;&#x6e;&#x65;&#x72;&#x72;&#x6f;&#x72;&#x3d;&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;&#x20;&#x26;&#x67;&#x74;&#x3b;'
+        );
+        expect(s).toBeFalsy();
+      });
+    });
     describe('Når det sendes en streng med emoticons', () => {
       it('Så returnerer den false', () => {
         const s = stringFunctions.isValid('This is a smiley \u2700');
