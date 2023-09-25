@@ -38,7 +38,7 @@
   "license": "MIT",
   "type": "module",
   "peerDependencies": {
-    "@helsenorge/designsystem-react": "^4.0.0"
+    "@helsenorge/designsystem-react": "^5.0.0"
   },
   "devDependencies": {
     "@helsenorge/designsystem-react": "^5.0.0",
