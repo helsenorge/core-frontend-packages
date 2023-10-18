@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
 import ErrorWrapper from '@helsenorge/designsystem-react/components/ErrorWrapper';
-import Icon from '@helsenorge/designsystem-react/components/Icons';
+import Icon from '@helsenorge/designsystem-react/components/Icon';
 import Upload from '@helsenorge/designsystem-react/components/Icons/Upload';
 import { renderLabel } from '@helsenorge/designsystem-react/components/Label';
 import Loader from '@helsenorge/designsystem-react/components/Loader';
