@@ -56,11 +56,5 @@
   "dependencies": {
     "@types/react-autosuggest": "10.1.6",
     "react-autosuggest": "10.1.0"
-  },
-  "browserslist": [
-    "> 0.2% in NO",
-    "not dead",
-    "not op_mini all",
-    "not ie > 0"
-  ]
+  }
 }

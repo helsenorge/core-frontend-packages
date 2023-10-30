@@ -58,11 +58,5 @@
   },
   "dependencies": {
     "react-dropzone": "14.2.3"
-  },
-  "browserslist": [
-    "> 0.2% in NO",
-    "not dead",
-    "not op_mini all",
-    "not ie > 0"
-  ]
+  }
 }
