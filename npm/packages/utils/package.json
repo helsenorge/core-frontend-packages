@@ -50,11 +50,5 @@
     "moment": "^2.29.4",
     "react-router-dom": "6.15.0",
     "tabbable": "6.2.0"
-  },
-  "browserslist": [
-    "> 0.2% in NO",
-    "not dead",
-    "not op_mini all",
-    "not ie > 0"
-  ]
+  }
 }

@@ -54,11 +54,5 @@
     "@helsenorge/core-utils": "^29.0.0",
     "@helsenorge/designsystem-react": "^5.0.0",
     "@helsenorge/library-build": "^29.0.0"
-  },
-  "browserslist": [
-    "> 0.2% in NO",
-    "not dead",
-    "not op_mini all",
-    "not ie > 0"
-  ]
+  }
 }

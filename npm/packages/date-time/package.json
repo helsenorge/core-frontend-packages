@@ -62,11 +62,5 @@
       "react": ">=17.0.0",
       "react-dom": ">=17.0.0"
     }
-  },
-  "browserslist": [
-    "> 0.2% in NO",
-    "not dead",
-    "not op_mini all",
-    "not ie > 0"
-  ]
+  }
 }
