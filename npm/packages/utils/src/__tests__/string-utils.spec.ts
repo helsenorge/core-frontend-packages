@@ -121,11 +121,40 @@ describe('String-utils', () => {
     describe('Når det sendes en streng med html tags', () => {
       it('Så returnerer den alle tagsene', () => {
         const s = stringFunctions.invalidNodes('This is a <strong>test</strong> with html <span>tags</span>');
-        expect(s.length).toEqual(4);
+        expect(s).toHaveLength(4);
         expect(s[0]).toEqual('<strong>');
         expect(s[1]).toEqual('</strong>');
         expect(s[2]).toEqual('<span>');
         expect(s[3]).toEqual('</span>');
+      });
+    });
+
+    describe('Når det sendes en streng med html tags som named character entities', () => {
+      it('Så returnerer den alle tagsene', () => {
+        const s = stringFunctions.invalidNodes('This is a &lt;strong&gt;test&lt;/strong&gt; with html &lt;span&gt;tags&lt;/span&gt;');
+        expect(s).toHaveLength(4);
+        expect(s[0]).toEqual('<strong>');
+        expect(s[1]).toEqual('</strong>');
+        expect(s[2]).toEqual('<span>');
+        expect(s[3]).toEqual('</span>');
+      });
+    });
+
+    describe('Når det sendes en streng med html tags som named character entities', () => {
+      it('Så returnerer den alle tagsene', () => {
+        const s = stringFunctions.invalidNodes('xxx&lt; img src=x onerror=alert(1)&gt;');
+        expect(s).toHaveLength(1);
+        expect(s[0]).toEqual('< img src=x onerror=alert(1)>');
+      });
+    });
+
+    describe('Når det sendes en streng med html tags som hex entities', () => {
+      it('Så returnerer den alle tagsene', () => {
+        const s = stringFunctions.invalidNodes(
+          '&#x78;&#x78;&#x78;&#x78;&#x26;&#x6c;&#x74;&#x3b;&#x20;&#x49;&#x4d;&#x47;&#x20;&#x53;&#x52;&#x43;&#x3d;&#x78;&#x20;&#x6f;&#x6e;&#x65;&#x72;&#x72;&#x6f;&#x72;&#x3d;&#x61;&#x6c;&#x65;&#x72;&#x74;&#x28;&#x31;&#x29;&#x20;&#x26;&#x67;&#x74;&#x3b;'
+        );
+        expect(s).toHaveLength(1);
+        expect(s[0]).toEqual('< IMG SRC=x onerror=alert(1) >');
       });
     });
   });
