@@ -69,7 +69,7 @@ const regexEmoticonsRule =
  * @param s - string som skal sjekkes
  */
 export const invalidNodes = (s: string): string[] => {
-  const tagsMatches = s.match(/<.*?>/g);
+  const tagsMatches = unescapeHtmlEntities(unescapeHexEntities(s)).match(/<.*?>/g);
   const tags = tagsMatches ? tagsMatches.map(i => i.toString()) : [];
 
   const emoticonsMatches = s.match(regexEmoticonsRule);
