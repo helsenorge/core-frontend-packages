@@ -8,13 +8,6 @@ import { LanguageLocales } from '@helsenorge/core-utils/constants/languages';
 import { isMobileUA } from '@helsenorge/core-utils/user-agents-utils';
 import ValidationError from '@helsenorge/form/components/form/validation-error';
 
-import {
-  DEFAULT_DATE_PLACEHOLDER_NB,
-  DEFAULT_DATE_PLACEHOLDER_EN,
-  DEFAULT_STARTDATE_PLACEHOLDER,
-  DEFAULT_ENDDATE_PLACEHOLDER,
-  DEFAULT_DATE_PLACEHOLDER_SE,
-} from '../../constants/datetime';
 import { renderDesktopDatePicker } from './date-range-picker-desktop';
 import { DateRangePickerLabel } from './date-range-picker-label';
 import { renderMobileDatePicker } from './date-range-picker-mobile';
@@ -30,6 +23,13 @@ import {
   getDefaultVisibleMonth,
 } from './date-range-picker-utils';
 import { validateSingleDate, validateRangeDate, isPrevMonthValid, isNextMonthValid } from './date-range-picker-validation';
+import {
+  DEFAULT_DATE_PLACEHOLDER_NB,
+  DEFAULT_DATE_PLACEHOLDER_EN,
+  DEFAULT_STARTDATE_PLACEHOLDER,
+  DEFAULT_ENDDATE_PLACEHOLDER,
+  DEFAULT_DATE_PLACEHOLDER_SE,
+} from '../../constants/datetime';
 
 import 'react-dates/lib/css/_datepicker.css';
 import toolkitstyles from './styles.module.scss';
@@ -58,13 +58,10 @@ export class DateRangePicker extends React.Component<DateRangePickerProps, DateR
 
     const momentLocale = moment();
     if (props.locale === LanguageLocales.ENGLISH) {
-      require('moment/locale/en-gb');
       momentLocale.locale('en-gb');
     } else if (props.locale === LanguageLocales.SAMI_NORTHERN) {
-      require('moment/locale/se');
       momentLocale.locale('se');
     } else {
-      require('moment/locale/nb');
       momentLocale.locale('nb');
     }
 
