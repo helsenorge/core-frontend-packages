@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import OriginalDropzone, { FileRejection, DropEvent } from 'react-dropzone';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
-import Icon from '@helsenorge/designsystem-react/components/Icons';
+import Icon from '@helsenorge/designsystem-react/components/Icon';
 import Upload from '@helsenorge/designsystem-react/components/Icons/Upload';
 import Loader from '@helsenorge/designsystem-react/components/Loader';
 import NotificationPanel from '@helsenorge/designsystem-react/components/NotificationPanel';

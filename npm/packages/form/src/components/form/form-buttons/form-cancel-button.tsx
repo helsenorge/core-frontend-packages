@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
-import Icon, { SvgIcon } from '@helsenorge/designsystem-react/components/Icons';
+import Icon, { SvgIcon } from '@helsenorge/designsystem-react/components/Icon';
 
 import toolkitstyles from '../styles.module.scss';
 

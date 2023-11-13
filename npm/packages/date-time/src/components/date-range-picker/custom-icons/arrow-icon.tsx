@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Icon from '@helsenorge/designsystem-react/components/Icons';
+import Icon from '@helsenorge/designsystem-react/components/Icon';
 import ArrowRight from '@helsenorge/designsystem-react/components/Icons/ArrowRight';
 
 const ArrowIcon: React.FC<{

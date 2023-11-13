@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Icon, { IconSize } from '@helsenorge/designsystem-react/components/Icons';
+import Icon, { IconSize } from '@helsenorge/designsystem-react/components/Icon';
 import Rocket from '@helsenorge/designsystem-react/components/Icons/Rocket';
 
 import CheckBoxGroup, { Option } from '../checkbox-group';

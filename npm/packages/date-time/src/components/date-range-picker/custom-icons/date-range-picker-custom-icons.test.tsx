@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
-import Icon from '@helsenorge/designsystem-react/components/Icons';
+import Icon from '@helsenorge/designsystem-react/components/Icon';
 import ChevronLeft from '@helsenorge/designsystem-react/components/Icons/ChevronLeft';
 import ChevronRight from '@helsenorge/designsystem-react/components/Icons/ChevronRight';
 import ArrowIcon from './arrow-icon';

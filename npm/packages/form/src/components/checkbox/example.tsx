@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
-import { Icon } from '@helsenorge/designsystem-react/components/Icons';
+import { Icon } from '@helsenorge/designsystem-react/components/Icon';
 import HelpSign from '@helsenorge/designsystem-react/components/Icons/HelpSign';
 
 import { CheckBox } from '.';

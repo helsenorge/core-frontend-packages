@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
-import Icon from '@helsenorge/designsystem-react/components/Icons';
+import Icon from '@helsenorge/designsystem-react/components/Icon';
 import ChevronDown from '@helsenorge/designsystem-react/components/Icons/ChevronDown';
 import ChevronRight from '@helsenorge/designsystem-react/components/Icons/ChevronRight';
 import ChevronUp from '@helsenorge/designsystem-react/components/Icons/ChevronUp';

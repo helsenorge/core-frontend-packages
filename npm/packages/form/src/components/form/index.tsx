@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
-import { SvgIcon } from '@helsenorge/designsystem-react/components/Icons';
+import { SvgIcon } from '@helsenorge/designsystem-react/components/Icon';
 import Loader from '@helsenorge/designsystem-react/components/Loader';
 
 import FormCancelButton from './form-buttons/form-cancel-button';

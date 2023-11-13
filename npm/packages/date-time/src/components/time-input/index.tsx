@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import moment from 'moment';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
-import Icon from '@helsenorge/designsystem-react/components/Icons';
+import Icon from '@helsenorge/designsystem-react/components/Icon';
 import Undo from '@helsenorge/designsystem-react/components/Icons/Undo';
 
 import { getHoursFromTimeString, getMinutesFromTimeString } from '@helsenorge/core-utils/date-utils';
