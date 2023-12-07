@@ -33,7 +33,7 @@ export const ValidationError: React.FC<ValidationErrorProps> = ({
   });
   return (
     <UnmountClosed isOpened={true} className={className}>
-      <div className={validationClassNames} data-testid={testId} aria-live="assertive">
+      <div className={validationClassNames} data-testid={testId} aria-live="assertive" aria-atomic="true">
         {isValid ? '' : componentError}
       </div>
     </UnmountClosed>

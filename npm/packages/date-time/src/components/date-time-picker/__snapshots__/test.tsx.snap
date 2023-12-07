@@ -16,6 +16,7 @@ exports[`DateTimePicker Når den instansieres for første gang Så renderes den 
         class="ReactCollapse--content"
       >
         <div
+          aria-atomic="true"
           aria-live="assertive"
           class="mol_validation__errortext"
         />

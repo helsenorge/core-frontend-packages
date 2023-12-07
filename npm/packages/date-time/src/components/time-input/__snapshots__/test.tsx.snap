@@ -14,6 +14,7 @@ exports[`TimeInput Renders correctly 1`] = `
       class="ReactCollapse--content"
     >
       <div
+        aria-atomic="true"
         aria-live="assertive"
         class="mol_validation__errortext"
       />
@@ -81,6 +82,7 @@ exports[`TimeInput Renders legend 1`] = `
       class="ReactCollapse--content"
     >
       <div
+        aria-atomic="true"
         aria-live="assertive"
         class="mol_validation__errortext"
       />

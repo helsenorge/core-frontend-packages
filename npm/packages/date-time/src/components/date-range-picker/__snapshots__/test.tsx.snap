@@ -37,6 +37,7 @@ exports[`DateRangePicker index Gitt at DateRangePicker skal rendres Når den har
         class="ReactCollapse--content"
       >
         <div
+          aria-atomic="true"
           aria-live="assertive"
           class="mol_validation__errortext"
         />
