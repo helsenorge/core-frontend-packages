@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/date-time",
-  "version": "30.0.0-beta.8",
+  "version": "29.5.4",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -41,17 +41,17 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^30.0.0-beta",
-    "@helsenorge/designsystem-react": "^6.0.0-beta",
-    "@helsenorge/form": "^30.0.0-beta",
+    "@helsenorge/core-utils": "^29.0.0",
+    "@helsenorge/designsystem-react": "^5.0.0",
+    "@helsenorge/form": "^29.0.0",
     "react": ">=17.0.2",
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^30.0.0-beta.8",
-    "@helsenorge/designsystem-react": "^6.0.0-beta.10",
-    "@helsenorge/form": "^30.0.0-beta.8",
-    "@helsenorge/library-build": "^30.0.0-beta.8"
+    "@helsenorge/core-utils": "^29.5.4",
+    "@helsenorge/designsystem-react": "^5.4.0",
+    "@helsenorge/form": "^29.5.4",
+    "@helsenorge/library-build": "^29.5.4"
   },
   "dependencies": {
     "@types/react-dates": "^21.8.3",
