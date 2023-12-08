@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^29.5.4",
-    "@helsenorge/designsystem-react": "^5.4.0",
+    "@helsenorge/designsystem-react": "^5.8.0",
     "@helsenorge/form": "^29.5.4",
     "@helsenorge/library-build": "^29.5.4",
     "react-hook-form": "^7.46.1"
