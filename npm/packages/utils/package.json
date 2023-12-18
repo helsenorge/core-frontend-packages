@@ -41,7 +41,7 @@
     "@helsenorge/designsystem-react": "^5.0.0"
   },
   "devDependencies": {
-    "@helsenorge/designsystem-react": "^5.8.0",
+    "@helsenorge/designsystem-react": "^5.11.0",
     "@helsenorge/library-build": "^29.5.4"
   },
   "dependencies": {
