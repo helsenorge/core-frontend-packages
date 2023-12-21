@@ -412,14 +412,14 @@ export default class Form extends React.Component<FormProps, FormState> {
             this.props.allowChildPropOverride && childPreviousProps && childPreviousProps.showOptionalLabel
               ? childPreviousProps.showOptionalLabel
               : this.props.showOptionalLabel
-              ? this.props.showOptionalLabel
-              : true,
+                ? this.props.showOptionalLabel
+                : true,
           showRequiredLabel:
             this.props.showRequiredLabel && childPreviousProps && childPreviousProps.showRequiredLabel
               ? childPreviousProps.showRequiredLabel
               : this.props.showRequiredLabel
-              ? this.props.showRequiredLabel
-              : false,
+                ? this.props.showRequiredLabel
+                : false,
         };
 
         // clones and adds ValidationProps only if the child is a FunctionComponent or ClassComponent, not if a DOM component

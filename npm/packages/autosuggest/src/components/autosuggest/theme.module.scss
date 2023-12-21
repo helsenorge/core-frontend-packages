@@ -35,7 +35,9 @@
   background-color: $white;
   border-radius: 0;
   appearance: none;
-  transition: left 0.5s, width 0.5s;
+  transition:
+    left 0.5s,
+    width 0.5s;
   left: 0;
   line-height: 100%;
 

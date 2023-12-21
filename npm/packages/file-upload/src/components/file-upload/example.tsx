@@ -14,12 +14,17 @@ import { validateNumberOfFiles, validateFileSize, validateFileType, validateTota
 
 import FileUpload, { MimeTypes, OnDeleteHandler, OnChangeHandler, UploadFile } from '.';
 
+interface FormData {
+  fileupload: UploadFile;
+  fileupload2: UploadFile;
+}
+
 export const FileUploadExample: React.FC<{}> = () => {
   const [defaultFiles] = React.useState<UploadFile[]>([new UploadFile([], 'hello2.jpeg', 'id123', 200000, { type: 'image/jpeg' })]);
   const [acceptedFiles1, setAcceptedFiles1] = React.useState<UploadFile[]>([]);
   const [disableButton, setDisableButton] = React.useState(false);
   const [disableButton2, setDisableButton2] = React.useState(false);
-  const useFormReturn = useForm({ mode: 'all' });
+  const useFormReturn = useForm<FormData>({ mode: 'all' });
   const fileupload = 'fileupload';
   const fileupload2 = 'fileupload2';
   const validFileTypes1: MimeTypes[] = ['image/jpeg', 'image/png', 'application/pdf'];
@@ -79,7 +84,7 @@ export const FileUploadExample: React.FC<{}> = () => {
   };
 
   // eslint-disable-next-line
-  const onSubmit = (data: UploadFile[]): any => {
+  const onSubmit = (data: FormData): any => {
     console.log('onSubmit data:', data);
   };
 

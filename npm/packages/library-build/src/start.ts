@@ -7,13 +7,12 @@ import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
 (async (): Promise<void> => {
-  const { entry, outDir } = yargs(hideBin(process.argv))
+  const { entry, outDir } = await yargs(hideBin(process.argv))
     .options({
       entry: { type: 'string', default: 'src/__devonly__/index.tsx' },
       outDir: { type: 'string', default: 'dist' },
     })
     .parse();
-
   if (!existsSync(outDir)) {
     mkdirSync(outDir);
   }

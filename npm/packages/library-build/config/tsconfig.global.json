@@ -5,7 +5,6 @@
     "moduleResolution": "node",
     "sourceMap": true,
     "jsx": "react",
-    "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
@@ -14,14 +13,19 @@
     "allowUnreachableCode": false,
     "skipLibCheck": true,
     "lib": ["es5", "es2015.core", "es2015.promise", "es6", "dom", "scripthost"],
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "strictNullChecks": true,
     "noEmit": false,
     "importHelpers": true,
     "declaration": true,
     "declarationMap": true,
     "removeComments": false,
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true, // noImplicitAny og strictNullChecks er skrudd på i tilfelle noen extender configen og setter strict til false
+    "strictNullChecks": true
   }
 }
