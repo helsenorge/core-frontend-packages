@@ -16,7 +16,7 @@ type PackageData = {
 
 /**
  * Function used to create the package.json file under /lib
- * @param packageName - the name field in package.json (for example: @helsenorge/toolkit')
+ * @param packageName - the name field in package.json (for example: @helsenorge/step')
  */
 export function createPackageJsonFile(packageName: string, inputPath: string, outputPath: string) {
   return new Promise((resolve: (value: string) => void) => {
