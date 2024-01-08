@@ -49,12 +49,12 @@
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^30.0.0-beta.8",
-    "@helsenorge/designsystem-react": "^6.0.0-beta.10",
+    "@helsenorge/designsystem-react": "^6.0.0-beta.13",
     "@helsenorge/form": "^30.0.0-beta.8",
     "@helsenorge/library-build": "^30.0.0-beta.8"
   },
   "dependencies": {
-    "@types/react-autosuggest": "10.1.10",
+    "@types/react-autosuggest": "10.1.11",
     "react-autosuggest": "10.1.0"
   }
 }
