@@ -24,7 +24,7 @@
     "postbuild": "node lib/library-scripts.js copy --root=README.md --root=config/**/* --include=src/*.html",
     "watch": "tsc --watch",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
-    "eslint:fix": "npm run lint -- --fix",
+    "eslint:fix": "npm run eslint -- --fix",
     "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
