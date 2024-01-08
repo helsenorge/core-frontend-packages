@@ -39,14 +39,14 @@
     "@helsenorge/designsystem-react": "^6.0.0-beta"
   },
   "devDependencies": {
-    "@helsenorge/designsystem-react": "^6.0.0-beta.10",
+    "@helsenorge/designsystem-react": "^6.0.0-beta.13",
     "@helsenorge/library-build": "^30.0.0-beta.8"
   },
   "dependencies": {
-    "classnames": "2.3.2",
+    "classnames": "2.5.1",
     "history": "5.3.0",
-    "moment": "^2.29.4",
-    "react-router-dom": "6.21.0",
+    "moment": "^2.30.1",
+    "react-router-dom": "6.21.1",
     "tabbable": "6.2.0"
   }
 }
