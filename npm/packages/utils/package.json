@@ -22,7 +22,7 @@
     "test": "node node_modules/@helsenorge/library-build/library-scripts.js test",
     "test:update": "node node_modules/@helsenorge/library-build/library-scripts.js test --u",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
-    "eslint:fix": "npm run lint -- --fix",
+    "eslint:fix": "npm run eslint -- --fix",
     "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
