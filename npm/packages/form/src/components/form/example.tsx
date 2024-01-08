@@ -1,18 +1,16 @@
 /* eslint-disable no-console */
 import * as React from 'react';
 
-import moment, { Moment } from 'moment';
-
 import ArrowLeft from '@helsenorge/designsystem-react/components/Icons/ArrowLeft';
 import Pause from '@helsenorge/designsystem-react/components/Icons/Pause';
 
+import WrappedComponent from './example/wrapped-component-example';
+import Validation from './validation';
 import { CheckBox } from '../checkbox';
 import { RadioGroup, Options } from '../radio-group';
 import SafeInputField from '../safe-input-field';
 import SafeSelect from '../safe-select';
 import { SafeTextarea } from '../safe-textarea';
-import WrappedComponent from './example/wrapped-component-example';
-import Validation from './validation';
 
 import Form, { ButtonType } from '.';
 
@@ -26,14 +24,7 @@ interface ExampleState {
   inputFieldValue: string;
   textfieldValue: string;
   safeselect: string;
-  datetimeinputValue: Date | undefined;
-  datetimepickerDateValue: moment.Moment | undefined;
-  datetimepickerTimeValue: string | undefined;
-  datepickerValue: Date | undefined;
-  daterangepickerValue: Moment | undefined;
   disabled: boolean;
-  startDateValue: Moment | undefined;
-  endDateValue: Moment | undefined;
   saving: boolean;
   saved: boolean;
   radioGroupValue: string;
@@ -58,14 +49,7 @@ export class FormExample extends React.Component<{}, ExampleState> {
       inputFieldValue: '',
       textfieldValue: '',
       safeselect: '',
-      datetimeinputValue: undefined,
-      datetimepickerDateValue: undefined,
-      datetimepickerTimeValue: undefined,
-      datepickerValue: undefined,
-      daterangepickerValue: undefined,
       disabled: false,
-      startDateValue: moment('10.09.2020', 'DD.MM.YYYY'),
-      endDateValue: undefined,
       saving: false,
       saved: false,
       radioGroupValue: '',
