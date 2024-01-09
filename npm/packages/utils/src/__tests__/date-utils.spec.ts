@@ -1,4 +1,3 @@
-import moment from 'moment';
 import * as dateUtilsFunctions from '../date-utils';
 import { isDaylightSavingTime } from '../date-utils';
 
@@ -7,9 +6,9 @@ describe('Date-utils', () => {
   const isDayLightSaving = isDaylightSavingTime(now);
 
   describe('Når todayDate blir kalt', () => {
-    const currentDateMoment = moment();
+    const today = new Date();
     it('Så returenerer den dagens dato i riktig format', () => {
-      expect(dateUtilsFunctions.todaysDate()).toBe(currentDateMoment.format('YYYY-M-D'));
+      expect(dateUtilsFunctions.todaysDate()).toBe(`${today.getFullYear()}-${today.getMonth() + 1}-${today.getDate()}`);
     });
   });
 
