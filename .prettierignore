@@ -1,4 +1,5 @@
 **/*.min.js
+**/AppMeasurement.js
 CHANGELOG.md
 mockServiceWorker.js
 README.md
