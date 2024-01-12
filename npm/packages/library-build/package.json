@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/library-build",
-  "version": "30.0.0-beta.10",
+  "version": "30.0.0-beta.11",
   "publishConfig": {
     "directory": "lib",
     "access": "public"
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.23.7",
-    "@helsenorge/eslint-config": "^30.0.0-beta.10",
+    "@helsenorge/eslint-config": "^30.0.0-beta.11",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^14.5.2",
