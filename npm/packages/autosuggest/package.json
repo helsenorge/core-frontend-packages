@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "30.0.0-beta.11",
+  "version": "30.0.0-beta.12",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -48,10 +48,10 @@
     "react-dom": ">=17.0.2"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^30.0.0-beta.11",
+    "@helsenorge/core-utils": "^30.0.0-beta.12",
     "@helsenorge/designsystem-react": "^6.0.0-beta.13",
-    "@helsenorge/form": "^30.0.0-beta.11",
-    "@helsenorge/library-build": "^30.0.0-beta.11"
+    "@helsenorge/form": "^30.0.0-beta.12",
+    "@helsenorge/library-build": "^30.0.0-beta.12"
   },
   "dependencies": {
     "@types/react-autosuggest": "10.1.11",
