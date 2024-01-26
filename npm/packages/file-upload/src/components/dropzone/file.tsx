@@ -3,7 +3,7 @@ import * as React from 'react';
 import classNames from 'classnames';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
-import Icon from '@helsenorge/designsystem-react/components/Icons';
+import Icon from '@helsenorge/designsystem-react/components/Icon';
 import ImgFile from '@helsenorge/designsystem-react/components/Icons/ImgFile';
 import JpgFile from '@helsenorge/designsystem-react/components/Icons/JpgFile';
 import PdfFile from '@helsenorge/designsystem-react/components/Icons/PdfFile';

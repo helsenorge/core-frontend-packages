@@ -1,4 +1,5 @@
 import moment from 'moment';
+
 import * as momentUtilsFunctions from '../moment-utils';
 
 describe('Moment-utils', () => {

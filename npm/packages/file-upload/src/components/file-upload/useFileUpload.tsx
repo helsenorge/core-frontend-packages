@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { FieldValues, RegisterOptions, UseFormRegister, UseFormRegisterReturn, ValidateResult } from 'react-hook-form';
+import { FieldValues, UseFormRegister, ValidateResult } from 'react-hook-form';
 
 import { AllFilesValidation, SingleFileValidation } from './validate-utils';
 
 import { UploadFile } from '.';
 
 type UseFileUploadReturn<T extends FieldValues> = {
-  // eslint-disable-next-line
   register: UseFormRegister<T>;
   acceptedFiles: UploadFile[];
   setAcceptedFiles: React.Dispatch<React.SetStateAction<UploadFile[]>>;
@@ -66,8 +65,7 @@ export const useFileUpload = <T extends FieldValues>(
     return validateResponse;
   };
 
-  // eslint-disable-next-line
-  const registerInterceptor = (ref: any, rules?: RegisterOptions): UseFormRegisterReturn<any> => {
+  const registerInterceptor: UseFormRegister<T> = (ref, rules) => {
     const originalValidate = rules?.validate;
 
     if (originalValidate && typeof originalValidate === 'function') {
