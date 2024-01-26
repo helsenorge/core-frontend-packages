@@ -5,7 +5,6 @@ import {
   isSameDay as isSameDayDF,
   isBefore as isBeforeDF,
   isAfter as isAfterDF,
-  differenceInWeeks as differenceInWeeksDF,
   startOfDay as startOfDayDF,
   isSameMonth as isSameMonthDF,
 } from 'date-fns';
@@ -56,8 +55,10 @@ export enum DateFormat {
 export const initialize = (): void => setDefaultOptions({ locale: nb });
 
 /**
- * Returnerer en lang dato format (Måned DD, YYYY) basert på en Date
- * @param a - Dato som skal konverteres
+ * Formatterer dato som:
+ * 22. mai 2020 eller 22. mai 2020 kl. 09:05
+ *
+ * @param a - Dato som skal formatteres
  */
 export const longDate = (date: Date): string => {
   const startOfDay = startOfDayDF(date);
@@ -66,49 +67,66 @@ export const longDate = (date: Date): string => {
 };
 
 /**
- * Returnerer en long dato format med klokken (Day DD. Måned YYYY klokken HH:mm) basert på en Date
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * fredag 22. mai 2020 kl. 09:05
+ *
+ * @param date Dato som skal formatteres
  */
 export const longDateNumbersClock = (date: Date): string => formatDF(date, DateFormat.LongDateWeekdayTime);
 
 /**
- * Returnerer en medium dato format (DD. Mån YYYY HH:mm) basert på en Date
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * 22. mai 2020 09:05
+ *
+ * @param date Dato som skal formatteres
  */
 export const mediumDate = (date: Date): string => formatDF(date, DateFormat.MediumDateTime);
 
 /**
- * Returnerer en medium dato format kun med tall (DD.MM.YYYY HH:mm)) basert på en Date
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * 22.05.2020 09:05
+ *
+ * @param date Dato som skal formatteres
  */
 export const mediumDateNumbers = (date: Date): string => formatDF(date, DateFormat.ShortDateTime);
 
 /**
- * Returnerer en medium dato format med kl. (DD.MM.YYYY kl. HH:mm) basert på en Date
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * 22.05.2020 09:05
+ *
+ * @param date Dato som skal formatteres
+ * @deprecated Bruk mediumDateNumbers
  */
-export const mediumDateNumbersClock = (date: Date): string => formatDF(date, DateFormat.ShortDateTime);
+export const mediumDateNumbersClock = (date: Date): string => mediumDateNumbers(date);
 
 /**
- * Returnerer en short dato format (DD. Mån YYYY) basert på en Date
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * 5. nov. 2020
+ *
+ * @param date Dato som skal formatteres
  */
 export const shortDate = (date: Date): string => formatDF(date, DateFormat.MediumDate);
 
 /**
- * Returnerer en short dato format med full måned (D. Måned YYYY) basert på en Date
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * 5. november 2020
+ *
+ * @param date Dato som skal formatteres
  */
 export const shortDateFullMonth = (date: Date): string => formatDF(date, DateFormat.LongDate);
 
 /**
- * Returnerer en short dato format (DD.MM.YYYY) basert på en Date
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * 05.11.2020
+ *
+ * @param date Dato som skal formatteres
  */
 export const shortDateNumbers = (date: Date): string => formatDF(date, DateFormat.ShortDate);
 
 /**
- * Returnerer dato med riktig AM/PM og prefix
+ * Formatterer tidspunkt som tom streng hvis tiden er midnatt, eller som:
+ * 09:08
+ *
  * @param date Dato som skal sjekkes
  * @param prefix - Tekst før formattert dato
  */
@@ -122,19 +140,25 @@ export const timeOfDay = (start: Date, prefix = ''): string => {
 };
 
 /**
- * Returnerer full måned med år (Måned YYYY)
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * November 2020
+ *
+ * @param date Dato som skal formatteres
  */
 export const monthYear = (date: Date): string => ucfirst(formatDF(date, DateFormat.MonthYear));
 
 /**
- * Returnerer kort måned med år (Mån YYYY)
- * @param date Dato som skal konverteres
+ * Formatterer dato som:
+ * Nov 2020
+ *
+ * @param date Dato som skal formatteres
  */
 export const shortMonthYear = (date: Date): string => ucfirst(formatDF(date, DateFormat.ShortMonthYear).replace('.', ''));
 
 /**
- * Returnerer range med full måned og år (Måned YYYY – Måned YYYY)
+ * Formatterer to datoer som:
+ * Mai 2020 – August 2020
+ *
  * @param start Startdato
  * @param end Sluttdato
  */
@@ -154,7 +178,8 @@ export const monthRange = (start: Date, end: Date): string => {
 };
 
 /**
- * Returnerer range mellom 2 klokkeslett (Måned DD, YYYY, mellom kl. H:mm AM og HH:mm PM)
+ * Formatterer to datoer som:
+ * 22. mai 2020, mellom kl. 08:32 og 12:54
  * Forutsetter at begge tidspunktene er på samme dag
  *
  * @param start Startdato
@@ -174,8 +199,10 @@ export const timeRangeBetween = (start: Date, end: Date, between = ', mellom kl.
 };
 
 /**
- * Returnerer range mellom 2 klokkeslett med bindestrekk (Måned DD, YYYY, H:mm AM - HH:mm PM)
+ * Formatterer to datoer som:
+ * 22. mai 2020 kl. 08:32 - 12:54
  * Forutsetter at begge tidspunktene er på samme dag
+ *
  * @param start Startdato
  * @param end Sluttdato
  */
@@ -191,8 +218,10 @@ export const timeRange = (start: Date, end: Date): string => {
 };
 
 /**
- * Returnerer range mellom 2 klokkeslett med full dag måned og år (Day DD. Måned YYYY, kl. HH:mm AM - HH:mm PM)
+ * Formatterer to datoer som:
+ * Fredag 22. mai 2020 kl. 08:32 - 12:54
  * Forutsetter at begge tidspunktene er på samme dag
+ *
  * @param start Startdato
  * @param end Sluttdato
  */
@@ -283,13 +312,6 @@ export const isEarlierToday = (date: Date): boolean => {
 
   return isSameDayDF(date, now) && isBeforeDF(date, now);
 };
-
-/**
- * Returnerer antall uker mellom to datoer
- * @param a - Date startdato (first week)
- * @param b - Date sluttdato (last week)
- */
-export const numberOfWeeksInMonth = (a: Date, b: Date): number => differenceInWeeksDF(b, a);
 
 /**
  * Returnerer true hvis input er lik 0001-01-01T00:00:00

@@ -1,16 +1,17 @@
 import { parse, subDays, addMinutes, subMinutes, format, setDefaultOptions } from 'date-fns';
-import { enUS } from 'date-fns/locale';
+import { enGB, nb } from 'date-fns/locale';
 
 import * as dateUtils from '../date-fns-utils';
 
 describe('date-fns-utils', () => {
   beforeEach(() => {
-    setDefaultOptions({ locale: enUS });
+    setDefaultOptions({ locale: nb });
   });
   describe('Når initialize har blitt kalt kalt', () => {
     it('Så formatteres datoer med norsk bokmål', () => {
       const date = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
 
+      setDefaultOptions({ locale: enGB });
       expect(format(date, 'EEEE')).toEqual('Friday');
 
       dateUtils.initialize();
@@ -21,62 +22,55 @@ describe('date-fns-utils', () => {
   describe('Når longDate blir kalt med dato uten tidspunkt', () => {
     it('Så returnerer den en lang dato format (Måned DD, YYYY)', () => {
       const a = parse('22.05.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.longDate(a)).toEqual('May 22nd, 2020');
+      expect(dateUtils.longDate(a)).toEqual('22. mai 2020');
     });
   });
   describe('Når longDate blir kalt med dato med tidspunkt', () => {
     it('Så returnerer den en lang dato format (Måned DD, YYYY)', () => {
       const a = parse('22.05.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
-      expect(dateUtils.longDate(a)).toEqual('May 22nd, 2020 at 9:05 AM');
+      expect(dateUtils.longDate(a)).toEqual('22. mai 2020 kl. 09:05');
     });
   });
 
   describe('Når longDateNumbersClock blir kalt', () => {
     it('Så returnerer den en long dato format med klokken (Day DD. Måned YYYY klokken HH:mm)', () => {
-      const a = parse('22.05.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.longDateNumbersClock(a)).toEqual('Friday, May 22nd, 2020 at 12:00 AM');
+      const a = parse('22.05.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
+      expect(dateUtils.longDateNumbersClock(a)).toEqual('fredag 22. mai 2020 kl. 09:05');
     });
   });
 
   describe('Når mediumDate blir kalt', () => {
     it('Så returnerer den en medium dato format  (DD. Mån YYYY HH:mm)', () => {
-      const a = parse('05.11.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.mediumDate(a)).toEqual('Nov 5, 2020, 12:00 AM');
+      const a = parse('22.05.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
+      expect(dateUtils.mediumDate(a)).toEqual('22. mai 2020 09:05');
     });
   });
 
   describe('Når mediumDateNumbers blir kalt', () => {
     it('Så returnerer den en medium dato kun med tall (dd.MM.yyyy HH:mm)', () => {
-      const a = parse('22.05.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.mediumDateNumbers(a)).toEqual('05/22/2020, 12:00 AM');
-    });
-  });
-
-  describe('Når mediumDateNumbersClock blir kalt', () => {
-    it('Så returnerer den en medium dato format med kl.  (dd.MM.yyyy kl. HH:mm)', () => {
-      const a = parse('22.05.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.mediumDateNumbersClock(a)).toEqual('05/22/2020, 12:00 AM');
+      const a = parse('22.05.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
+      expect(dateUtils.mediumDateNumbers(a)).toEqual('22.05.2020 09:05');
     });
   });
 
   describe('Når shortDate blir kalt', () => {
     it('Så returnerer den en short dato format (DD. Mån YYYY)', () => {
       const a = parse('05.11.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.shortDate(a)).toEqual('Nov 5, 2020');
+      expect(dateUtils.shortDate(a)).toEqual('5. nov. 2020');
     });
   });
 
   describe('Når shortDateFullMonth blir kalt', () => {
     it('Så returnerer den en short dato format med full måned (D. Måned YYYY)', () => {
       const a = parse('05.11.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.shortDateFullMonth(a)).toEqual('November 5th, 2020');
+      expect(dateUtils.shortDateFullMonth(a)).toEqual('5. november 2020');
     });
   });
 
   describe('Når shortDateNumbers blir kalt', () => {
     it('Så returnerer den en short dato format (dd.MM.yyyy)', () => {
       const a = parse('05.11.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.shortDateNumbers(a)).toEqual('11/05/2020');
+      expect(dateUtils.shortDateNumbers(a)).toEqual('05.11.2020');
     });
   });
 
@@ -90,7 +84,7 @@ describe('date-fns-utils', () => {
   describe('Når timeOfDay blir kalt med et tidspunkt senere på dagen', () => {
     it('Så returnerer den tidspunkt', () => {
       const a = parse('05.11.2020 09:08', 'dd.MM.yyyy HH:mm', new Date());
-      expect(dateUtils.timeOfDay(a)).toEqual('9:08 AM');
+      expect(dateUtils.timeOfDay(a)).toEqual('09:08');
     });
   });
 
@@ -113,7 +107,7 @@ describe('date-fns-utils', () => {
       const a = parse('22.05.2020', 'dd.MM.yyyy', new Date());
       const b = parse('23.08.2020', 'dd.MM.yyyy', new Date());
       expect(dateUtils.monthRange(a, b)).toEqual(
-        `May 2020${String.fromCharCode(160) + String.fromCharCode(8211) + String.fromCharCode(160)}August 2020`
+        `Mai 2020${String.fromCharCode(160) + String.fromCharCode(8211) + String.fromCharCode(160)}August 2020`
       );
     });
   });
@@ -122,7 +116,7 @@ describe('date-fns-utils', () => {
     it('Så returnerer den samme måned med full måned og år', () => {
       const a = parse('22.05.2020', 'dd.MM.yyyy', new Date());
       const b = parse('23.05.2020', 'dd.MM.yyyy', new Date());
-      expect(dateUtils.monthRange(a, b)).toEqual('May 2020');
+      expect(dateUtils.monthRange(a, b)).toEqual('Mai 2020');
     });
   });
 
@@ -130,7 +124,7 @@ describe('date-fns-utils', () => {
     it('Så returnerer den formattert dato', () => {
       const a = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
       const b = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
-      expect(dateUtils.timeRangeBetween(a, b)).toEqual(`May 22nd, 2020 at 8:32 AM`);
+      expect(dateUtils.timeRangeBetween(a, b)).toEqual(`22. mai 2020 kl. 08:32`);
     });
   });
 
@@ -138,7 +132,7 @@ describe('date-fns-utils', () => {
     it('Så returnerer den range med full dag og range', () => {
       const a = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
       const b = parse('22.05.2020 12:54', 'dd.MM.yyyy HH:mm', new Date());
-      expect(dateUtils.timeRangeBetween(a, b)).toEqual(`May 22, 2020, mellom kl. 8:32 AM og 12:54 PM`);
+      expect(dateUtils.timeRangeBetween(a, b)).toEqual(`22. mai 2020, mellom kl. 08:32 og 12:54`);
     });
   });
 
@@ -146,7 +140,7 @@ describe('date-fns-utils', () => {
     it('Så returnerer den formattert dato', () => {
       const a = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
       const b = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
-      expect(dateUtils.timeRange(a, b)).toEqual(`May 22nd, 2020 at 8:32 AM`);
+      expect(dateUtils.timeRange(a, b)).toEqual(`22. mai 2020 kl. 08:32`);
     });
   });
 
@@ -154,14 +148,14 @@ describe('date-fns-utils', () => {
     it('Så returnerer den range med full måned og år', () => {
       const a = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
       const b = parse('22.05.2020 12:54', 'dd.MM.yyyy HH:mm', new Date());
-      expect(dateUtils.timeRange(a, b)).toEqual(`May 22nd, 2020 at 8:32 AM - 12:54 PM`);
+      expect(dateUtils.timeRange(a, b)).toEqual(`22. mai 2020 kl. 08:32 - 12:54`);
     });
   });
 
   describe('Når longTimeRange blir kalt med bare ett tidspunkt', () => {
     it('Så returnerer den formattert dato', () => {
       const a = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
-      expect(dateUtils.longTimeRange(a)).toEqual(`Friday, May 22nd, 2020 at 8:32 AM`);
+      expect(dateUtils.longTimeRange(a)).toEqual(`Fredag 22. mai 2020 kl. 08:32`);
     });
   });
 
@@ -169,7 +163,7 @@ describe('date-fns-utils', () => {
     it('Så returnerer den range med full måned og år', () => {
       const a = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
       const b = parse('22.05.2020 12:54', 'dd.MM.yyyy HH:mm', new Date());
-      expect(dateUtils.longTimeRange(a, b)).toEqual(`Friday, May 22nd, 2020 at 8:32 AM - 12:54 PM`);
+      expect(dateUtils.longTimeRange(a, b)).toEqual(`Fredag 22. mai 2020 kl. 08:32 - 12:54`);
     });
   });
 
@@ -313,15 +307,6 @@ describe('date-fns-utils', () => {
       expect(dateUtils.isAfterMaxDate(a, b)).toBeFalsy();
       expect(dateUtils.isAfterMaxDate(a, c)).toBeFalsy();
       expect(dateUtils.isAfterMaxDate(c, a)).toBeTruthy();
-    });
-  });
-
-  describe('Når numberOfWeeksInMonth blir kalt', () => {
-    it('Så returnerer den riktig antall uker', () => {
-      const a = parse('01.05.2020', 'dd.MM.yyyy', new Date());
-      const b = parse('29.05.2020', 'dd.MM.yyyy', new Date());
-
-      expect(dateUtils.numberOfWeeksInMonth(a, b)).toEqual(4);
     });
   });
 
