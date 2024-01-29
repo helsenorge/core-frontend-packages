@@ -1,3 +1,0 @@
-# @helsenorge/form
-
-Skjema-komponenter

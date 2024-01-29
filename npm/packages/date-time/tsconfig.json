@@ -1,9 +1,0 @@
-{
-  "extends": "./node_modules/@helsenorge/library-build/config/tsconfig.global.json",
-  "compilerOptions": {
-    "strict": false,
-    "outDir": "lib"
-  },
-  "include": ["src"],
-  "exclude": ["src/**/*test*", "src/**/*spec*", "src/__devonly__"]
-}
