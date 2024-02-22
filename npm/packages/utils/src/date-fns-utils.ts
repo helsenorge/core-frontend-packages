@@ -3,10 +3,12 @@ import {
   format as formatDF,
   isEqual as isEqualDF,
   isSameDay as isSameDayDF,
+  parseJSON as parseJSONDF,
   isBefore as isBeforeDF,
   isAfter as isAfterDF,
   startOfDay as startOfDayDF,
   isSameMonth as isSameMonthDF,
+  FormatOptions,
 } from 'date-fns';
 import { nb } from 'date-fns/locale';
 
@@ -53,6 +55,91 @@ export enum DateFormat {
  * Initialiserer date-fns med norsk bokmål locale
  */
 export const initialize = (): void => setDefaultOptions({ locale: nb });
+
+/**
+ * Parser en dato-streng til en gyldig Date.
+ *
+ * @param date Dato som skal parses
+ * @returns En gyldig Date, eller undefined hvis dato ikke kan parses
+ */
+export const safeParseJSON = (date?: Date | string | null): Date | undefined => {
+  if (!date) {
+    return;
+  }
+
+  if (date instanceof Date && isNaN(date.getTime())) {
+    return;
+  }
+
+  if (date instanceof Date) {
+    return date;
+  }
+
+  const _date = parseJSONDF(date);
+
+  if (isNaN(_date.getTime())) {
+    return;
+  }
+
+  return _date;
+};
+
+/**
+ * Konverterer en Date til Central European Time (tidssonen i Norge).
+ * Merk at datoer i JS ikke inneholder informasjon om tidssone.
+ * Denne funksjonen endrer datoen slik at den vises som norsk tid selv
+ * om brukerens datamaskin er stilt inn på en annen tidssone.
+ *
+ * @param date Dato som skal konverteres til CET
+ * @returns Dato justert slik at den vises som norsk tid selv om brukerens
+ * datamaskin er stilt inn på en annen tidssone.
+ */
+export const toCentralEuropeanTime = (date: Date): Date => {
+  const cetDate = new Date(
+    date.toLocaleString('en-US', {
+      timeZone: 'CET',
+    })
+  );
+
+  return isNaN(cetDate.getTime()) ? date : cetDate;
+};
+
+/**
+ * Konverterer dato til CET og formatterer den
+ *
+ * @param date Dato
+ * @param formatStr Format
+ * @param options Innstillinger for formattering
+ * @returns Formattert dato
+ */
+export const formatCET = (date: Date, formatStr: string, options?: FormatOptions): string =>
+  formatDF(toCentralEuropeanTime(date), formatStr, options);
+
+/**
+ * Parser en dato med safeParseJSON og formatterer datoen dersom den er gyldig.
+ * Dersom datoen ikke er gyldig, returneres tom streng.
+ *
+ * @param date Dato som skal parses
+ * @param formatStr Datoformat
+ * @returns Formattert dato, eller tom streng
+ */
+export const safeFormatCET = (date: Date | string | null | undefined, formatStr: DateFormat | string): string => {
+  const _date = safeParseJSON(date);
+
+  if (!_date) {
+    return '';
+  }
+
+  return formatCET(_date, formatStr);
+};
+
+/**
+ * Formatterer dato som:
+ * 22. mai 2020 kl. 09:05
+ *
+ * @param a - Dato som skal formatteres
+ */
+export const longDateTime = (date: Date): string => formatDF(date, DateFormat.LongDateTime);
 
 /**
  * Formatterer dato som:

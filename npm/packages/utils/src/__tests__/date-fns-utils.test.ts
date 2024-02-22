@@ -7,7 +7,7 @@ describe('date-fns-utils', () => {
   beforeEach(() => {
     setDefaultOptions({ locale: nb });
   });
-  describe('Når initialize har blitt kalt kalt', () => {
+  describe('Når initialize har blitt kalt', () => {
     it('Så formatteres datoer med norsk bokmål', () => {
       const date = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
 
@@ -19,16 +19,188 @@ describe('date-fns-utils', () => {
     });
   });
 
+  describe('Når safeParseJSON blir kalt', () => {
+    describe('Når safeParseJSON blir kalt med en gyldig Date', () => {
+      it('Så returneres datoen som en Date', () => {
+        const result = dateUtils.safeParseJSON(new Date(Date.UTC(2000, 2, 15, 5, 20, 10, 123)));
+
+        expect(result).toBeInstanceOf(Date);
+        expect(result?.toISOString()).toEqual('2000-03-15T05:20:10.123Z');
+      });
+    });
+
+    describe('Når safeParseJSON blir kalt med en gyldig streng', () => {
+      it('Så returneres datoen som en Date', () => {
+        const result = dateUtils.safeParseJSON('2000-03-15T05:20:10.123Z');
+
+        expect(result).toBeInstanceOf(Date);
+        expect(result?.toISOString()).toEqual('2000-03-15T05:20:10.123Z');
+      });
+    });
+
+    describe('Når safeParseJSON blir kalt uten argument', () => {
+      it('Så returneres undefined', () => {
+        const result = dateUtils.safeParseJSON();
+
+        expect(result).toBeUndefined();
+      });
+    });
+
+    describe('Når safeParseJSON blir kalt med undefined', () => {
+      it('Så returneres undefined', () => {
+        const result = dateUtils.safeParseJSON(undefined);
+
+        expect(result).toBeUndefined();
+      });
+    });
+
+    describe('Når safeParseJSON blir kalt med null', () => {
+      it('Så returneres undefined', () => {
+        const result = dateUtils.safeParseJSON(null);
+
+        expect(result).toBeUndefined();
+      });
+    });
+
+    describe('Når safeParseJSON blir kalt med tom streng', () => {
+      it('Så returneres undefined', () => {
+        const result = dateUtils.safeParseJSON('');
+
+        expect(result).toBeUndefined();
+      });
+    });
+
+    describe('Når safeParseJSON blir kalt med ugyldig Date', () => {
+      it('Så returneres undefined', () => {
+        const result = dateUtils.safeParseJSON(new Date('x'));
+
+        expect(result).toBeUndefined();
+      });
+    });
+
+    describe('Når safeParseJSON blir kalt med en ugyldig streng', () => {
+      it('Så returneres undefined', () => {
+        const result = dateUtils.safeParseJSON('x');
+
+        expect(result).toBeUndefined();
+      });
+    });
+  });
+
+  describe('Når safeFormatCET blir kalt', () => {
+    describe('Når safeFormatCET blir kalt med en gyldig Date', () => {
+      it('Så returneres formattert dato', () => {
+        const result = dateUtils.safeFormatCET(new Date(Date.UTC(2000, 2, 15, 5, 20, 10, 123)), dateUtils.DateFormat.LongDateTime);
+
+        expect(result).toEqual('15. mars 2000 kl. 06:20');
+      });
+    });
+
+    describe('Når safeFormatCET blir kalt med en gyldig Date og custom format', () => {
+      it('Så returneres formattert dato', () => {
+        const result = dateUtils.safeFormatCET(new Date(Date.UTC(2000, 2, 15, 5, 20, 10, 123)), 'PP');
+
+        expect(result).toEqual('15. mars 2000');
+      });
+    });
+
+    describe('Når safeFormatCET blir kalt med en gyldig streng', () => {
+      it('Så returneres formattert dato', () => {
+        const result = dateUtils.safeFormatCET('2000-03-15T05:20:10.123Z', dateUtils.DateFormat.LongDateTime);
+
+        expect(result).toEqual('15. mars 2000 kl. 06:20');
+      });
+    });
+
+    describe('Når safeFormatCET blir kalt med undefined dato', () => {
+      it('Så returneres tom streng', () => {
+        const result = dateUtils.safeFormatCET(undefined, dateUtils.DateFormat.LongDateTime);
+
+        expect(result).toEqual('');
+      });
+    });
+
+    describe('Når safeFormatCET blir kalt med null', () => {
+      it('Så returneres tom streng', () => {
+        const result = dateUtils.safeFormatCET(null, dateUtils.DateFormat.LongDateTime);
+
+        expect(result).toEqual('');
+      });
+    });
+
+    describe('Når safeFormatCET blir kalt med tom streng', () => {
+      it('Så returneres tom streng', () => {
+        const result = dateUtils.safeFormatCET('', dateUtils.DateFormat.LongDateTime);
+
+        expect(result).toEqual('');
+      });
+    });
+
+    describe('Når safeFormatCET blir kalt med ugyldig Date', () => {
+      it('Så returneres tom streng', () => {
+        const result = dateUtils.safeFormatCET(new Date('x'), dateUtils.DateFormat.LongDateTime);
+
+        expect(result).toEqual('');
+      });
+    });
+
+    describe('Når safeFormatCET blir kalt med en ugyldig streng', () => {
+      it('Så returneres tom streng', () => {
+        const result = dateUtils.safeFormatCET('x', dateUtils.DateFormat.LongDateTime);
+
+        expect(result).toEqual('');
+      });
+    });
+  });
+
+  describe('Når toCentralEuropeanTime blir kalt med vintertid', () => {
+    it('Så returneres tidspunkt med én time forskjell', () => {
+      const date = parse('12.01.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
+
+      const result = dateUtils.toCentralEuropeanTime(date);
+
+      expect(result.toISOString()).toEqual('2020-01-12T08:05:00.000Z');
+    });
+  });
+
+  describe('Når toCentralEuropeanTime blir kalt med sommertid', () => {
+    it('Så returneres tidspunkt med to timer forskjell', () => {
+      const date = parse('12.07.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
+
+      const result = dateUtils.toCentralEuropeanTime(date);
+
+      expect(result.toISOString()).toEqual('2020-07-12T07:05:00.000Z');
+    });
+  });
+
+  describe('Når formatCET blir kalt ', () => {
+    it('Så returneres formattert dato', () => {
+      const date = parse('12.01.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
+
+      const result = dateUtils.formatCET(date, dateUtils.DateFormat.LongDateTime);
+
+      expect(result).toEqual('12. januar 2020 kl. 09:05');
+    });
+  });
+
   describe('Når longDate blir kalt med dato uten tidspunkt', () => {
     it('Så returnerer den en lang dato format (Måned DD, YYYY)', () => {
       const a = parse('22.05.2020', 'dd.MM.yyyy', new Date());
       expect(dateUtils.longDate(a)).toEqual('22. mai 2020');
     });
   });
+
   describe('Når longDate blir kalt med dato med tidspunkt', () => {
     it('Så returnerer den en lang dato format (Måned DD, YYYY)', () => {
       const a = parse('22.05.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
       expect(dateUtils.longDate(a)).toEqual('22. mai 2020 kl. 09:05');
+    });
+  });
+
+  describe('Når longDateTime blir kalt', () => {
+    it('Så returnerer den langt datoformat med klokkeslett', () => {
+      const a = parse('22.05.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
+      expect(dateUtils.longDateTime(a)).toEqual('22. mai 2020 kl. 09:05');
     });
   });
 
@@ -40,7 +212,7 @@ describe('date-fns-utils', () => {
   });
 
   describe('Når mediumDate blir kalt', () => {
-    it('Så returnerer den en medium dato format  (DD. Mån YYYY HH:mm)', () => {
+    it('Så returnerer den en medium dato format (DD. Mån YYYY HH:mm)', () => {
       const a = parse('22.05.2020 09:05', 'dd.MM.yyyy HH:mm', new Date());
       expect(dateUtils.mediumDate(a)).toEqual('22. mai 2020 09:05');
     });
