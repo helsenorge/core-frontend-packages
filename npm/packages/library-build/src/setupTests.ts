@@ -16,4 +16,10 @@ declare global {
   }
 }
 
-window.HN = {};
+window.HN = {
+  Page: {},
+  Rest: {},
+  User: {},
+  Commands: {},
+  PortalCommands: {},
+};
