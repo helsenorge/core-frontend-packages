@@ -92,15 +92,6 @@ export const mediumDateNumbers = (date: Date): string => formatDF(date, DateForm
 
 /**
  * Formatterer dato som:
- * 22.05.2020 09:05
- *
- * @param date Dato som skal formatteres
- * @deprecated Bruk mediumDateNumbers
- */
-export const mediumDateNumbersClock = (date: Date): string => mediumDateNumbers(date);
-
-/**
- * Formatterer dato som:
  * 5. nov. 2020
  *
  * @param date Dato som skal formatteres
