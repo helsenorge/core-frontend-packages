@@ -23,7 +23,7 @@ class MockDataTransfer {
 
 global.DataTransfer = MockDataTransfer;
 
-const FileUploadExample = React.forwardRef((props: Props) => {
+const FileUploadExample: React.FC = (props: Props) => {
   const { acceptedFiles, rejectedFiles } = props;
   const validFileTypes1: MimeTypes[] = ['image/jpeg', 'image/png', 'application/pdf'];
   const fileupload = 'fileupload';
@@ -88,7 +88,7 @@ const FileUploadExample = React.forwardRef((props: Props) => {
       <Button type="submit">{'Send inn'}</Button>
     </form>
   );
-});
+};
 
 FileUploadExample.displayName = 'FileUploadExample';
 

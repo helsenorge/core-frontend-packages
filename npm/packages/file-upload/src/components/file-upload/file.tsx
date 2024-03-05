@@ -16,7 +16,7 @@ import Modal from '@helsenorge/designsystem-react/components/Modal';
 
 import { theme } from '@helsenorge/designsystem-react';
 
-import styles from './toolkitstyles.module.scss';
+import styles from './styles.module.scss';
 
 export enum Type {
   verified = 'verified',

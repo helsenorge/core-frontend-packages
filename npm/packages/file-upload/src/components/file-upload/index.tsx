@@ -13,7 +13,7 @@ import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/ut
 
 import { FormMode } from '@helsenorge/designsystem-react';
 
-import FileElement, { Type } from '../dropzone/file';
+import FileElement, { Type } from './file';
 
 import styles from './styles.module.scss';
 
