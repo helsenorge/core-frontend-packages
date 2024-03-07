@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-import '@helsenorge/designsystem-react/__mocks__/matchMedia';
-
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { act } from 'react-dom/test-utils';

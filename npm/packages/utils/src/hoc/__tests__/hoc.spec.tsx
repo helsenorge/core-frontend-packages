@@ -5,7 +5,6 @@ import { render, screen } from '@testing-library/react';
 import layoutChange, { OriginalProps } from '../layout-change';
 import mountHOC from '../mount';
 import RenderToBody from '../render-to-body';
-import '@helsenorge/designsystem-react/__mocks__/matchMedia';
 
 describe('HOC utils', () => {
   describe('Gitt at en komponent wrappes i mount HOC', () => {

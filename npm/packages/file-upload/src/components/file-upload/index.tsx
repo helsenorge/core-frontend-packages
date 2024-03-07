@@ -360,7 +360,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   return (
     <ErrorWrapper errorText={errorMessage as string}>
       <div className={wrapperClasses} data-testid={wrapperTestId}>
-        {renderLabel(label, inputButtonId, FormMode.onwhite, disabled)}
+        {renderLabel(label, inputButtonId, FormMode.onwhite)}
         {helpElement}
         {loading && <Loader size={'tiny'} className={styles.dropzone__loader} />}
         {renderFiles()}
