@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "30.0.2",
+  "version": "30.2.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
