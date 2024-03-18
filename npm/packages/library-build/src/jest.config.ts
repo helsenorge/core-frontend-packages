@@ -23,10 +23,7 @@ const config: Config = {
   transform: {
     '^.+\\.(js|jsx|ts|tsx)$': 'babel-jest',
   },
-  transformIgnorePatterns: [
-    '[/\\\\]node_modules[/\\\\](?!(@helsenorge|moment[/\\\\]dist)[/\\\\])',
-    '^.+\\.module\\.(css|sass|scss|scss.d.ts)$',
-  ],
+  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\](?!(@helsenorge)[/\\\\])', '^.+\\.module\\.(css|sass|scss|scss.d.ts)$'],
   coverageReporters: ['cobertura', 'lcov', 'json'],
   collectCoverage: true,
   collectCoverageFrom: [
