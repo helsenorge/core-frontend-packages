@@ -1,0 +1,93 @@
+@use 'sass:map';
+@import '@helsenorge/designsystem-react/scss/palette';
+@import '@helsenorge/designsystem-react/scss/spacers';
+@import '@helsenorge/designsystem-react/scss/breakpoints';
+@import '@helsenorge/designsystem-react/scss/font-settings';
+
+// CSS-klassenavn er hentet fra https://github.com/moroshko/react-autosuggest?tab=readme-ov-file#theme-optional
+.container {
+  position: relative;
+}
+
+.input {
+  font-family: inherit;
+  font-size: $font-size-sm;
+  line-height: 1.5rem;
+  width: 100%;
+  border: 2px solid $neutral700;
+  background: $white;
+  padding: getSpacer(xs) getSpacer(s) getSpacer(xs) getSpacer(s);
+  outline: none;
+
+  @media (min-width: map.get($grid-breakpoints, md)) {
+    line-height: 1.625rem;
+    font-size: $font-size-md;
+  }
+
+  &:focus,
+  &:focus-within {
+    background: $white;
+    border-color: $neutral900;
+    box-shadow: 0 0 0 2px $neutral900;
+  }
+
+  &:hover {
+    background: $neutral50;
+    border-color: $neutral700;
+    box-shadow: 0 0 0 1px $neutral700;
+
+    &:focus-within {
+      border-color: $black;
+      box-shadow: 0 0 0 2px $black;
+    }
+  }
+}
+
+.suggestion {
+  cursor: pointer;
+  background: $white;
+  padding: getSpacer(s);
+  line-height: 1.5rem;
+
+  @media (min-width: map.get($grid-breakpoints, md)) {
+    line-height: 1.625rem;
+  }
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $neutral50;
+  }
+}
+
+.suggestionHighlighted {
+  background: $neutral200;
+}
+
+.suggestionsContainer {
+  display: none;
+  height: auto;
+  overflow-x: auto;
+  max-height: 15.625rem;
+  border: 2px solid $neutral800;
+  box-shadow: 0 0 0 2px $neutral800;
+  margin-top: 0.5rem;
+  position: absolute;
+  width: 100%;
+  z-index: 1001;
+  left: 0;
+  top: 3.25rem;
+
+  @media (min-width: map.get($grid-breakpoints, md)) {
+    top: 3.5rem;
+  }
+}
+
+.suggestionsList {
+  padding: 0;
+  margin: 0;
+}
+
+.containerOpen {
+  .suggestionsContainer {
+    display: block;
+  }
+}
