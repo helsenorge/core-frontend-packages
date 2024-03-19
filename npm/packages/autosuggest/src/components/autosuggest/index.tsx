@@ -50,19 +50,24 @@ const renderSuggestion = (suggestion: Suggestion): JSX.Element => (
 
 const getSuggestionValue = (suggestion: Suggestion): string => (suggestion.label ? suggestion.label : '');
 
-const Autosuggest = React.forwardRef<ReactAutosuggest, Props<Suggestion>>((props, ref) => {
+const Autosuggest: React.FC<Props<Suggestion>> = props => {
   const inputId = useUuid(props.inputProps.id);
 
-  // @todo inputProps må bruke aria-labeledby error-en slik som i PR i designsystemet
+  const inputProps: InputProps<Suggestion> = {
+    ...props.inputProps,
+    id: inputId,
+    'aria-invalid': props.error,
+    // @todo inputProps må bruke aria-labeledby error-en slik som i PR i designsystemet
+  };
+
   return (
     <ErrorWrapper errorText={props.errorText}>
       <div className={props.className}>
         {renderLabel(props.label, inputId, props.error ? FormMode.oninvalid : FormMode.onwhite)}
         <ReactAutosuggest
-          ref={ref}
           theme={styles}
           suggestions={props.suggestions}
-          inputProps={{ ...props.inputProps, id: inputId, 'aria-invalid': props.error }}
+          inputProps={inputProps}
           onSuggestionsFetchRequested={props.onSuggestionsFetchRequested}
           onSuggestionsClearRequested={props.onSuggestionsClearRequested}
           onSuggestionSelected={props.onSuggestionSelected}
@@ -73,8 +78,6 @@ const Autosuggest = React.forwardRef<ReactAutosuggest, Props<Suggestion>>((props
       </div>
     </ErrorWrapper>
   );
-});
-
-Autosuggest.displayName = 'Autosuggest';
+};
 
 export default Autosuggest;
