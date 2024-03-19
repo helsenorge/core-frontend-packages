@@ -7,14 +7,18 @@ import {
   OnSuggestionsClearRequested,
 } from 'react-autosuggest';
 
+import Button from '@helsenorge/designsystem-react/components/Button';
+import Spacer from '@helsenorge/designsystem-react/components/Spacer';
+
 import Autosuggest, { Suggestion } from '.';
 
-export class AutosuggestExample extends React.Component<{}, { suggestions: Array<Suggestion>; value: string }> {
+export class AutosuggestExample extends React.Component<{}, { suggestions: Array<Suggestion>; value: string; error: boolean }> {
   constructor(props: {}) {
     super(props);
     this.state = {
       suggestions: [],
       value: '',
+      error: false,
     };
   }
 
@@ -53,22 +57,30 @@ export class AutosuggestExample extends React.Component<{}, { suggestions: Array
     });
   };
 
+  toggleError = () =>
+    this.setState({
+      error: !this.state.error,
+    });
+
   render() {
     return (
       <>
+        <Button onClick={this.toggleError}>{'Feil på/av'}</Button>
+        <Spacer />
         <Autosuggest
-          id={'id1'}
-          type="search"
-          label={'This is an autosuggest (input search) field with label'}
-          subLabel={'and its sublabel'}
-          ariaLabel={'this is my ariaLabel'}
-          value={this.state.value}
+          inputProps={{
+            id: 'id1',
+            type: 'search',
+            value: this.state.value,
+            onChange: this.onChange,
+          }}
+          label={'Søk i behandlinger og undersøkelser'}
           suggestions={this.state.suggestions}
-          onChange={this.onChange}
           onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
           onSuggestionsClearRequested={this.onSuggestionsClearRequested}
           onSuggestionSelected={this.onSuggestionsSelected}
-          noValidation
+          error={this.state.error}
+          errorText={this.state.error ? 'Du må skrive minst 3 tegn' : undefined}
         />
       </>
     );
