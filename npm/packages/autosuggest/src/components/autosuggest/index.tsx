@@ -36,7 +36,7 @@ interface Props<T>
   renderSuggestion?: RenderSuggestion<T>;
 }
 
-const renderSuggestion = (suggestion: Suggestion): JSX.Element => (
+const renderSuggestion = (suggestion: Suggestion): React.JSX.Element => (
   <span>
     {suggestion.label}
     {suggestion.optionalLabel && (
