@@ -29,8 +29,7 @@
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm-run-all --npm-path npm build prepublish:crlf",
-    "prepublish:crlf": "crlf --set=LF lib/*"
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@types/isomorphic-fetch": "0.0.39"
