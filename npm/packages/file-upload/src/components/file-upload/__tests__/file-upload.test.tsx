@@ -7,7 +7,6 @@ import { FieldValues, useForm } from 'react-hook-form';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
 import Label, { Sublabel } from '@helsenorge/designsystem-react/components/Label';
-import Validation from '@helsenorge/designsystem-react/components/Validation';
 
 import FileUpload, { UploadFile, MimeTypes, OnDeleteHandler, Props } from '../index';
 import { useFileUpload } from '../useFileUpload';
@@ -21,12 +20,12 @@ class MockDataTransfer {
 
 global.DataTransfer = MockDataTransfer;
 
-const FileUploadExample: React.FC = (props: Props) => {
+const FileUploadExample: React.FC<Props> = props => {
   const { acceptedFiles, rejectedFiles } = props;
   const validFileTypes1: MimeTypes[] = ['image/jpeg', 'image/png', 'application/pdf'];
   const fileupload = 'fileupload';
   const sublabelId = 'sublabelId';
-  const useFormReturn = useForm({ mode: 'all' });
+  const useFormReturn = useForm<{ fileupload: string }>({ mode: 'all' });
 
   const useFileUpload1 = useFileUpload(
     useFormReturn.register,
@@ -63,26 +62,27 @@ const FileUploadExample: React.FC = (props: Props) => {
 
   return (
     <form onSubmit={useFormReturn.handleSubmit(onSubmit)}>
-      <Validation errorSummary={useFormReturn.formState.errors.fileupload ? 'Sjekk at alt er riktig utfylt' : undefined}>
-        <FileUpload
-          aria-describedby={sublabelId}
-          errorMessage={useFormReturn.formState.errors.fileupload?.message as string}
-          label={
-            <Label
-              labelTexts={[{ text: 'Last opp et bilde', type: 'semibold' }]}
-              sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb' }]} />}
-            />
-          }
-          acceptedFiles={useFileUpload1.acceptedFiles}
-          rejectedFiles={useFileUpload1.rejectedFiles}
-          onOpenFile={onOpenFile}
-          onRequestLink={onRequestLink}
-          validFileTypes={validFileTypes1}
-          {...useFileUpload1.register(fileupload, { validate: () => true })}
-          {...props}
-          inputId={fileupload}
-        />
-      </Validation>
+      <FileUpload
+        aria-describedby={sublabelId}
+        errorText={useFormReturn.formState.errors.fileupload?.message}
+        label={
+          <Label
+            labelTexts={[{ text: 'Last opp et bilde', type: 'semibold' }]}
+            sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb' }]} />}
+          />
+        }
+        acceptedFiles={useFileUpload1.acceptedFiles}
+        rejectedFiles={useFileUpload1.rejectedFiles}
+        onOpenFile={onOpenFile}
+        onRequestLink={onRequestLink}
+        validFileTypes={validFileTypes1}
+        {...useFileUpload1.register(fileupload, { validate: () => true })}
+        {...props}
+        inputId={fileupload}
+        dropzoneStatusText="Slipp filer her"
+        chooseFilesText={'Last opp'}
+        errorTextId="errorTextId"
+      />
       <Button type="submit">{'Send inn'}</Button>
     </form>
   );
@@ -212,29 +212,15 @@ describe('FileUpload', () => {
       it('Så vises feilmelding', async () => {
         render(<FileUploadExample inputId={'input01'} />);
 
-        const submitButton = screen.getAllByText('Send inn')[0];
+        const uploadButton = screen.getByRole('button', { name: 'Last opp et bilde' });
+        expect(uploadButton).toHaveAccessibleDescription('Slipp filer her Gyldige filformater er jpeg, png og pdf, maks 300kb');
+
+        const submitButton = screen.getByRole('button', { name: 'Send inn' });
         await act(async () => await userEvent.click(submitButton));
 
-        const errorMessage = screen.getByText('Sjekk at alt er riktig utfylt');
-        const errorMessage2 = screen.getByText('Det må lastes en til to bilder');
-        expect(errorMessage).toBeInTheDocument();
-        expect(errorMessage2).toBeInTheDocument();
-      });
-    });
-    describe('Når validering ikke er riktig', () => {
-      it('Så vises error styling', async () => {
-        render(<FileUploadExample inputId={'input01'} />);
-
-        const errorMessage1 = screen.queryByText('Det må lastes en til to bilder');
-        expect(errorMessage1).not.toBeInTheDocument();
-
-        const submitButton = screen.getAllByText('Send inn')[0];
-        await act(async () => await userEvent.click(submitButton));
-
-        const errorMessageTotal = screen.getByText('Sjekk at alt er riktig utfylt');
-        const errorMessage2 = screen.getByText('Det må lastes en til to bilder');
-        expect(errorMessageTotal).toBeInTheDocument();
-        expect(errorMessage2).toBeInTheDocument();
+        expect(uploadButton).toHaveAccessibleDescription(
+          'Slipp filer her Gyldige filformater er jpeg, png og pdf, maks 300kb Det må lastes en til to bilder'
+        );
       });
     });
   });
