@@ -34,3 +34,48 @@ Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: mockWindowMatchMedia,
 });
+
+class IntersectionObserver {
+  observe(): void {
+    // do nothing
+  }
+  unobserve(): void {
+    // do nothing
+  }
+  disconnect(): void {
+    // do nothing
+  }
+}
+
+Object.defineProperty(window, 'IntersectionObserver', {
+  value: IntersectionObserver,
+});
+
+class ResizeObserver {
+  observe() {
+    // do nothing
+  }
+  unobserve() {
+    // do nothing
+  }
+  disconnect() {
+    // do nothing
+  }
+}
+
+Object.defineProperty(window, 'ResizeObserver', {
+  value: ResizeObserver,
+});
+
+class MutationObserver {
+  observe(): void {
+    // do nothing
+  }
+  disconnect(): void {
+    // do nothing
+  }
+}
+
+Object.defineProperty(window, 'MutationObserver', {
+  value: MutationObserver,
+});
