@@ -48,6 +48,7 @@ class IntersectionObserver {
 }
 
 Object.defineProperty(window, 'IntersectionObserver', {
+  writable: true,
   value: IntersectionObserver,
 });
 
@@ -64,6 +65,7 @@ class ResizeObserver {
 }
 
 Object.defineProperty(window, 'ResizeObserver', {
+  writable: true,
   value: ResizeObserver,
 });
 
@@ -77,5 +79,6 @@ class MutationObserver {
 }
 
 Object.defineProperty(window, 'MutationObserver', {
+  writable: true,
   value: MutationObserver,
 });
