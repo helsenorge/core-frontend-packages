@@ -117,13 +117,7 @@ export const FileUploadExample: React.FC<{}> = () => {
       <Title htmlMarkup={'h2'} appearance={'title2'}>
         {'Med validering'}
       </Title>
-      <Validation
-        errorSummary={
-          useFormReturn.formState.errors.fileupload || useFormReturn.formState.errors.fileupload2
-            ? 'Sjekk at alt er riktig utfylt'
-            : undefined
-        }
-      >
+      <Validation errorTitle={!useFormReturn.formState.isValid ? 'Sjekk at alt er riktig utfylt' : undefined}>
         <Title htmlMarkup={'h3'} appearance={'title3'}>
           {'Uten dropzone'}
         </Title>
@@ -131,7 +125,7 @@ export const FileUploadExample: React.FC<{}> = () => {
         <FileUpload
           aria-describedby={sublabelId2}
           disabled={disableButton2}
-          errorMessage={useFormReturn.formState.errors.fileupload2?.message as string}
+          errorText={useFormReturn.formState.errors.fileupload2?.message}
           inputId="fileupload2"
           label={
             <Label
@@ -152,7 +146,7 @@ export const FileUploadExample: React.FC<{}> = () => {
           {'Med dropzone (Er også wrappet av FormGroup, dette trengs ikke, men støttes)'}
         </Title>
         <br />
-        <FormGroup error={useFormReturn.formState.errors.fileupload?.message as string}>
+        <FormGroup error={useFormReturn.formState.errors.fileupload?.message}>
           <FileUpload
             aria-describedby={sublabelId}
             defaultFiles={defaultFiles}

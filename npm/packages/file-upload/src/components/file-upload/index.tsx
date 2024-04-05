@@ -11,7 +11,7 @@ import Loader from '@helsenorge/designsystem-react/components/Loader';
 import { usePseudoClasses } from '@helsenorge/designsystem-react/hooks/usePseudoClasses';
 import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/utils/refs';
 
-import { FormMode } from '@helsenorge/designsystem-react';
+import { FormMode, useUuid } from '@helsenorge/designsystem-react';
 
 import FileElement, { Type } from './file';
 
@@ -74,7 +74,9 @@ export interface Props
   /**  Bestemmer om error styling vises */
   error?: boolean;
   /**  Error melding - kan brukes hvis FormGroup ikke wrapper */
-  errorMessage?: string | ((file?: File) => string);
+  errorText?: string;
+  /** errorText-id */
+  errorTextId?: string;
   /**  Legge til liste med tillatte filtyper */
   validFileTypes?: MimeTypes | Array<MimeTypes>;
   /**  Viser dropzone for dragndrop */
@@ -120,8 +122,9 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     deleteText,
     disabled,
     dropzoneStatusText,
-    errorMessage,
-    error = !!errorMessage,
+    error,
+    errorText,
+    errorTextId,
     fileElementClassName,
     helpElement,
     hideDeleteButton,
@@ -148,6 +151,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   const mergedRefs = mergeRefs([ref, refObject]);
   const inputButtonId = inputId + '-button';
   const dropzoneTextId = inputId + 'dropzonetext';
+  const errorTextUuid = useUuid(errorTextId);
 
   interface DragFileEvent extends React.DragEvent<HTMLInputElement> {
     target: EventTarget & { accept: string };
@@ -242,7 +246,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   const renderUploadButton = (): React.JSX.Element | undefined => {
     return (
       <Button
-        aria-describedby={dropzoneTextId + ' ' + props['aria-describedby']}
+        aria-describedby={[dropzoneTextId, props['aria-describedby'] || '', errorTextUuid].join(' ')}
         variant="borderless"
         concept={error ? 'destructive' : 'normal'}
         id={inputButtonId}
@@ -358,7 +362,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   const wrapperClasses = classNames(styles.dropzone, wrapperClassName);
 
   return (
-    <ErrorWrapper errorText={errorMessage as string}>
+    <ErrorWrapper errorText={errorText} errorTextId={errorTextUuid}>
       <div className={wrapperClasses} data-testid={wrapperTestId}>
         {renderLabel(label, inputButtonId, FormMode.onwhite)}
         {helpElement}
