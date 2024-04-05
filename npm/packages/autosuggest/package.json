@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "31.0.0-beta.5",
+  "version": "31.0.0-beta.6",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -49,9 +49,9 @@
     "react-hook-form": "^7.51.1"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^31.0.0-beta.5",
+    "@helsenorge/core-utils": "^31.0.0-beta.6",
     "@helsenorge/designsystem-react": "7.0.0-beta.7",
-    "@helsenorge/library-build": "^31.0.0-beta.5",
+    "@helsenorge/library-build": "^31.0.0-beta.6",
     "react-hook-form": "^7.51.1"
   },
   "dependencies": {
