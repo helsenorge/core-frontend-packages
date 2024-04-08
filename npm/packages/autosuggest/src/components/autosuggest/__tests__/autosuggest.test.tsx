@@ -55,4 +55,56 @@ describe('Gitt at Autosuggest skal vises', () => {
       expect(onChangeMock).toHaveBeenCalled();
     });
   });
+
+  describe('Når Autosuggest har en feilmelding', (): void => {
+    test('Så er feilmelding knyttet sammen med inputfeltet', (): void => {
+      render(
+        <Autosuggest
+          label={'Søk'}
+          suggestions={[]}
+          inputProps={{
+            value: '',
+            onChange: onChangeMock,
+          }}
+          onSuggestionsFetchRequested={onSuggestionsFetchRequestedMock}
+          onSuggestionsClearRequested={onSuggestionsClearRequestedMock}
+          onSuggestionSelected={onSuggestionsSelectedMock}
+          errorText="Du må skrive mer enn 3 tegn"
+          errorTextId="errorTextId"
+        />
+      );
+
+      const input = screen.getByLabelText('Søk');
+
+      expect(input).toHaveAccessibleDescription('Du må skrive mer enn 3 tegn');
+    });
+  });
+
+  describe('Når Autosuggest har en feilmelding og aria-describedby', (): void => {
+    test('Så har inputfeltet begge to som description', (): void => {
+      render(
+        <>
+          <div id="customDescription">{'Egen beskrivelse'}</div>
+          <Autosuggest
+            label={'Søk'}
+            suggestions={[]}
+            inputProps={{
+              value: '',
+              onChange: onChangeMock,
+              'aria-describedby': 'customDescription',
+            }}
+            onSuggestionsFetchRequested={onSuggestionsFetchRequestedMock}
+            onSuggestionsClearRequested={onSuggestionsClearRequestedMock}
+            onSuggestionSelected={onSuggestionsSelectedMock}
+            errorText="Du må skrive mer enn 3 tegn"
+            errorTextId="errorTextId"
+          />
+        </>
+      );
+
+      const input = screen.getByLabelText('Søk');
+
+      expect(input).toHaveAccessibleDescription('Egen beskrivelse Du må skrive mer enn 3 tegn');
+    });
+  });
 });

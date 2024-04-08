@@ -32,6 +32,8 @@ interface Props<T>
   error?: boolean;
   /** Error text to show above the component */
   errorText?: string;
+  /** Error text to show above the component */
+  errorTextId?: string;
   /** Tilpasset funksjon for å definere markup'en som rendres for en suggestion i suggestionslisten */
   renderSuggestion?: RenderSuggestion<T>;
 }
@@ -52,16 +54,17 @@ const getSuggestionValue = (suggestion: Suggestion): string => (suggestion.label
 
 const Autosuggest: React.FC<Props<Suggestion>> = props => {
   const inputId = useUuid(props.inputProps.id);
+  const errorTextUuid = useUuid(props.errorTextId);
 
   const inputProps: InputProps<Suggestion> = {
     ...props.inputProps,
     id: inputId,
     'aria-invalid': props.error,
-    // @todo inputProps må bruke aria-labeledby error-en slik som i PR i designsystemet
+    'aria-describedby': [props.inputProps['aria-describedby'], errorTextUuid].join(' '),
   };
 
   return (
-    <ErrorWrapper errorText={props.errorText}>
+    <ErrorWrapper errorText={props.errorText} errorTextId={errorTextUuid}>
       <div className={props.className}>
         {renderLabel(props.label, inputId, props.error ? FormMode.oninvalid : FormMode.onwhite)}
         <ReactAutosuggest
