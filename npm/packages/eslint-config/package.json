@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "31.0.0",
+  "version": "31.3.0",
   "main": "./index.js",
   "publishConfig": {
     "directory": "lib",
