@@ -246,7 +246,9 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   const renderUploadButton = (): React.JSX.Element | undefined => {
     return (
       <Button
-        aria-describedby={[dropzoneTextId, props['aria-describedby'] || '', errorTextUuid].join(' ')}
+        aria-describedby={[dropzoneTextId, props['aria-describedby'], (!!props.errorText || props.errorTextId) && errorTextUuid]
+          .filter(Boolean)
+          .join(' ')}
         variant="borderless"
         concept={error ? 'destructive' : 'normal'}
         id={inputButtonId}
