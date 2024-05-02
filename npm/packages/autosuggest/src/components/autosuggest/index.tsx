@@ -60,7 +60,9 @@ const Autosuggest: React.FC<Props<Suggestion>> = props => {
     ...props.inputProps,
     id: inputId,
     'aria-invalid': props.error,
-    'aria-describedby': [props.inputProps['aria-describedby'], errorTextUuid].join(' '),
+    'aria-describedby': [props.inputProps['aria-describedby'], (!!props.errorText || props.errorTextId) && errorTextUuid]
+      .filter(Boolean)
+      .join(' '),
   };
 
   return (
