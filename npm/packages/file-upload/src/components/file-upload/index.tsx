@@ -9,6 +9,7 @@ import Upload from '@helsenorge/designsystem-react/components/Icons/Upload';
 import { renderLabel } from '@helsenorge/designsystem-react/components/Label';
 import Loader from '@helsenorge/designsystem-react/components/Loader';
 import { usePseudoClasses } from '@helsenorge/designsystem-react/hooks/usePseudoClasses';
+import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/utils/refs';
 
 import { FormMode, useUuid } from '@helsenorge/designsystem-react';
@@ -246,9 +247,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   const renderUploadButton = (): React.JSX.Element | undefined => {
     return (
       <Button
-        aria-describedby={[dropzoneTextId, props['aria-describedby'], (!!props.errorText || props.errorTextId) && errorTextUuid]
-          .filter(Boolean)
-          .join(' ')}
+        aria-describedby={[dropzoneTextId, getAriaDescribedBy(props, errorTextUuid)].filter(Boolean).join(' ')}
         variant="borderless"
         concept={error ? 'destructive' : 'normal'}
         id={inputButtonId}

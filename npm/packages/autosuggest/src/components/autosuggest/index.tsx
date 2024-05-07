@@ -6,6 +6,7 @@ import ErrorWrapper from '@helsenorge/designsystem-react/components/ErrorWrapper
 import { renderLabel } from '@helsenorge/designsystem-react/components/Label';
 import { FormMode } from '@helsenorge/designsystem-react/constants';
 import { useUuid } from '@helsenorge/designsystem-react/hooks/useUuid';
+import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 
 import styles from './styles.module.scss';
 
@@ -60,9 +61,7 @@ const Autosuggest: React.FC<Props<Suggestion>> = props => {
     ...props.inputProps,
     id: inputId,
     'aria-invalid': props.error,
-    'aria-describedby': [props.inputProps['aria-describedby'], (!!props.errorText || props.errorTextId) && errorTextUuid]
-      .filter(Boolean)
-      .join(' '),
+    'aria-describedby': getAriaDescribedBy({ ...props.inputProps, ...props }, errorTextUuid),
   };
 
   return (
