@@ -13,3 +13,26 @@ Questions about the code or project can be askes at [ROX Slack channel](https://
 ## Internal documentation
 
 https://confluence.atlassian.nhn.no/display/HR2/@helsenorge+NPM+pakker
+
+
+## Setup
+
+For developing locally you should follow these steps:
+
+### First time
+
+1. Clone the repository
+2. Run ```npm i```in root folder
+3. Run ```npm run build``` in build folder
+    - To build what is needed for a specific package you can run ```npm run build -- --scope=@helsenorge/core-framework``` in root folder
+4. Run the specific package you are going to work on inside the package. Check the specific run scripts for each package.
+
+
+### Common errors
+
+- Missing packages when building/running a package:
+    - Run ```npm run build```in root folder to make sure that all the packages are existing
+
+- Other npm errors and troubles:
+    - Delete all node_modules and package-lock.json and try reinstalling all packages.
+        - ```npm i``` and ```npm run build``` in root
