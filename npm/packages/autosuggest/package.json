@@ -46,13 +46,13 @@
     "react-dom": ">=17.0.2"
   },
   "optionalDependencies": {
-    "react-hook-form": "^7.51.2"
+    "react-hook-form": "^7.51.5"
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^31.7.0",
     "@helsenorge/designsystem-react": "^7.8.1",
     "@helsenorge/library-build": "^31.3.0",
-    "react-hook-form": "^7.51.2"
+    "react-hook-form": "^7.51.5"
   },
   "dependencies": {
     "@types/react-autosuggest": "10.1.11",
