@@ -99,7 +99,7 @@ export const FileUploadExample: React.FC<{}> = () => {
       </Title>
       <br />
       <FileUpload
-        aria-describedby={sublabelId2}
+        aria-describedby={sublabelId}
         inputId="fileupload2"
         label={
           <Label
@@ -130,7 +130,7 @@ export const FileUploadExample: React.FC<{}> = () => {
           label={
             <Label
               labelTexts={[{ text: 'Last opp et bilde', type: 'semibold' }]}
-              sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb' }]} />}
+              sublabel={<Sublabel id={sublabelId2} sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb' }]} />}
             />
           }
           acceptedFiles={useFileUpload2.acceptedFiles}
