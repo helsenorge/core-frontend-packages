@@ -6,6 +6,7 @@ import { useForm } from 'react-hook-form';
 import Button from '@helsenorge/designsystem-react/components/Button';
 import FormGroup from '@helsenorge/designsystem-react/components/FormGroup';
 import Label, { Sublabel } from '@helsenorge/designsystem-react/components/Label';
+import Spacer from '@helsenorge/designsystem-react/components/Spacer';
 import Title from '@helsenorge/designsystem-react/components/Title';
 import Validation from '@helsenorge/designsystem-react/components/Validation';
 
@@ -24,7 +25,7 @@ export const FileUploadExample: React.FC<{}> = () => {
   const [acceptedFiles1, setAcceptedFiles1] = React.useState<UploadFile[]>([]);
   const [disableButton, setDisableButton] = React.useState(false);
   const [disableButton2, setDisableButton2] = React.useState(false);
-  const useFormReturn = useForm<FormData>({ mode: 'all' });
+  const useFormReturn = useForm<FormData>({ mode: 'onSubmit' });
   const fileupload = 'fileupload';
   const fileupload2 = 'fileupload2';
   const validFileTypes1: MimeTypes[] = ['image/jpeg', 'image/png', 'application/pdf'];
@@ -178,6 +179,7 @@ export const FileUploadExample: React.FC<{}> = () => {
           />
         </FormGroup>
       </Validation>
+      <Spacer />
       <Button type="submit">{'Send inn'}</Button>
     </form>
   );
