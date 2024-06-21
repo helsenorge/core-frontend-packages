@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { FieldValues, UseFormRegister, ValidateResult } from 'react-hook-form';
+import { FieldValues, UseFormRegister, ValidateResult, Path, RegisterOptions, UseFormRegisterReturn, PathValue } from 'react-hook-form';
 
 import { AllFilesValidation, SingleFileValidation } from './validate-utils';
 
@@ -65,16 +65,61 @@ export const useFileUpload = <T extends FieldValues>(
     return validateResponse;
   };
 
-  const registerInterceptor: UseFormRegister<T> = (ref, rules) => {
-    const originalValidate = rules?.validate;
+  const registerInterceptor: UseFormRegister<T> = <TFieldName extends Path<T>>(
+    name: TFieldName,
+    rules?: RegisterOptions<T, TFieldName>
+  ): UseFormRegisterReturn<TFieldName> => {
+    const registeredField = register(name, {
+      ...rules,
+      validate: async (value: UploadFile[], formValues: T): Promise<ValidateResult> => {
+        const validationResult = validateFiles(value);
 
-    if (originalValidate && typeof originalValidate === 'function') {
-      rules.validate = async (value: UploadFile[]): Promise<ValidateResult> => {
-        return validateFiles(value);
-      };
-    }
+        const originalValidate = rules?.validate;
+        if (originalValidate) {
+          if (typeof originalValidate === 'function') {
+            const originalResult = await originalValidate(value as PathValue<T, TFieldName>, formValues);
+            if (originalResult !== true) {
+              return originalResult;
+            }
+          } else if (typeof originalValidate === 'object') {
+            for (const key in originalValidate) {
+              if (Object.prototype.hasOwnProperty.call(originalValidate, key)) {
+                const result = await originalValidate[key](value as PathValue<T, TFieldName>, formValues);
+                if (result !== true) {
+                  return result;
+                }
+              }
+            }
+          }
+        }
 
-    return register(ref, rules);
+        return validationResult;
+      },
+    });
+
+    const { onChange, onBlur, ...rest } = registeredField;
+
+    // Vi validerer og kjører den originale onChange handleren
+    const handleChange: React.ChangeEventHandler<HTMLInputElement> = event => {
+      const files = Array.from(event.target.files || []) as UploadFile[];
+      validateFiles(files);
+      onChange(event);
+    };
+
+    // Vi validerer og kjører den originale onBlur handleren
+    const handleBlur: React.FocusEventHandler<HTMLInputElement> = event => {
+      const files = Array.from(event.target.files || []) as UploadFile[];
+      validateFiles(files);
+      onBlur(event); // Call the original onBlur handler
+    };
+
+    return {
+      ...rest,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      onChange: handleChange as any,
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      onBlur: handleBlur as any,
+    };
   };
 
   return {
