@@ -253,13 +253,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
         id={inputButtonId}
         disabled={disabled}
         onClick={onOpenClick}
-        wrapperClassName={classNames(
-          styles.dropzone__uploadButton,
-          {
-            [styles['dropzone__visual-dropzone__button--visible']]: !!visualDropZone,
-          },
-          uploadButtonClassName
-        )}
+        wrapperClassName={classNames(styles.dropzone__uploadButton, uploadButtonClassName)}
       >
         <Icon svgIcon={Upload} />
         {chooseFilesText || 'Last opp'}

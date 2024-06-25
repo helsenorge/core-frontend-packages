@@ -1,8 +1,10 @@
 {
   "extends": "./node_modules/@helsenorge/library-build/config/tsconfig.global.json",
   "compilerOptions": {
-    "strict": false,
-    "outDir": "lib"
+    "strict": false, // TODO: Egen oppgave på å rette opp
+    "outDir": "lib",
+    "suppressImplicitAnyIndexErrors": true,
+    "ignoreDeprecations": "5.0"
   },
   "include": ["src"],
   "exclude": ["src/**/*test*", "src/**/*spec*", "src/__devonly__"]

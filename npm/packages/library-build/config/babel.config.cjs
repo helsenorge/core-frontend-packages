@@ -1,7 +1,7 @@
 const parentBabelConfig = {
   presets: [
     ['@babel/preset-env', { targets: { node: 'current' } }],
-    ['@babel/preset-react', { typescript: true }],
+    ['@babel/preset-react', { typescript: true, runtime: 'automatic' }],
     ['@babel/preset-typescript', { allExtensions: true, isTSX: true }],
   ],
   plugins: [

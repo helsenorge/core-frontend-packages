@@ -1,3 +1,4 @@
+import { createRequire } from 'node:module';
 import path from 'path';
 
 import copyfiles from 'copyfiles';
@@ -5,7 +6,8 @@ import { rimraf } from 'rimraf';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-import { createPackageJsonFile } from './files';
+const require = createRequire(import.meta.url);
+import { createPackageJsonFile } from './files.js';
 
 interface Arguments {
   root: string[];

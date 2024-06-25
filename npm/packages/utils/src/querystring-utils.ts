@@ -19,20 +19,7 @@ const pairListToQueryString = (pairList: Array<{ key: string; value: string }>):
  * Returnerer en objekt med alle URL params basert på window.location.search
  */
 export const getQueryStrings = (): {} => {
-  let match: RegExpExecArray | null;
-  const pl = /\+/g; // Regex for replacing addition symbol with a space
-  const search = /([^&=]+)=?([^&]*)/g;
-  function decodeFunction(s: string): string {
-    return decodeURIComponent(s.replace(pl, ' '));
-  }
-  const query: string = window.location.search.substring(1);
-  const urlParams = {};
-  match = search.exec(query);
-  while (match) {
-    urlParams[decodeFunction(match[1])] = decodeFunction(match[2]);
-    match = search.exec(query);
-  }
-  return urlParams;
+  return Object.fromEntries(new URLSearchParams(window.location.search));
 };
 
 /**

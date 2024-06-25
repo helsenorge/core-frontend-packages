@@ -1,4 +1,4 @@
-const parentBabelConfig = require('./node_modules/@helsenorge/library-build/config/babel.config.js');
+const parentBabelConfig = require('./node_modules/@helsenorge/library-build/config/babel.config.cjs');
 
 module.exports = function (api) {
   api.cache(true);

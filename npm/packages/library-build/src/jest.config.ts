@@ -1,4 +1,7 @@
 import type { Config } from 'jest';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
 
 /* Legger til babel-jest + esm og babel-jest igjen uner 'transform' for å kunne håndtere esm import/exports */
 /* Viktig å ha @helsenorge pakker under transformIgnorePatterns fordi de eksporteres i rå esm */

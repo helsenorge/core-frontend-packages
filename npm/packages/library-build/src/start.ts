@@ -1,10 +1,14 @@
 import { existsSync, mkdirSync, copyFileSync } from 'fs';
 import path from 'path';
+import url from 'url';
 
 import esbuild from 'esbuild';
 import { sassPlugin, postcssModules } from 'esbuild-sass-plugin';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
+
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 (async (): Promise<void> => {
   const { entry, outDir } = await yargs(hideBin(process.argv))
