@@ -18,6 +18,7 @@
   "bin": {
     "library-scripts": "./library-scripts.js"
   },
+  "type": "module",
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "tsc",
@@ -30,9 +31,6 @@
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
-  },
-  "devDependencies": {
-    "@types/isomorphic-fetch": "^0.0.39"
   },
   "dependencies": {
     "@babel/core": "^7.24.7",
@@ -56,7 +54,6 @@
     "esbuild": "^0.21.5",
     "esbuild-sass-plugin": "^3.3.1",
     "identity-obj-proxy": "^3.0.0",
-    "isomorphic-fetch": "^3.0.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-junit-reporter": "^1.1.0",
@@ -67,11 +64,16 @@
     "react-dom": "^17.0.2",
     "rimraf": "^5.0.7",
     "tslib": "^2.6.3",
-    "typescript": "4.9.4"
+    "typed-scss-modules": "^8.0.1",
+    "typescript": "^5.5.2",
+    "whatwg-fetch": "^3.6.20"
   },
   "engineStrict": true,
   "engines": {
     "node": "^20.0.0",
     "npm": ">=10.0.0"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.6"
   }
 }

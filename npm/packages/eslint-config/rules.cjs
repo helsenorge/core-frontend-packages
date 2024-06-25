@@ -9,6 +9,8 @@ module.exports = {
   '@typescript-eslint/no-explicit-any': 'error',
   'react/jsx-no-literals': 'error',
   'react/display-name': 'warn',
+  'react/jsx-uses-react': 'off',
+  'react/react-in-jsx-scope': 'off',
   'no-console': 'error',
   'no-debugger': 'error',
   'import/order': [

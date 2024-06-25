@@ -8,8 +8,4 @@ export interface WebComponentEvent<T extends EventTarget> extends Event {
 }
 
 /* This is a util to get the event target, wether it comes from the lightDOM or shadowDOM - this requires the Shadow DOM to be of type 'open' */
-export const getEventTarget = (e: Event | MouseEvent | KeyboardEvent): EventTarget => {
-  const event = e as WebComponentEvent<EventTarget>;
-  const path = event.path || (event.composedPath && event.composedPath());
-  return path[0];
-};
+export const getEventTarget = (e: Event): EventTarget => e.composedPath()[0];

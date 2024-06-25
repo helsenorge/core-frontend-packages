@@ -1,7 +1,9 @@
 #! /usr/bin/env node
-import { spawnSync } from 'child_process';
+import { createRequire } from 'node:module';
 
-const sync: typeof spawnSync = require('cross-spawn').sync;
+const require = createRequire(import.meta.url);
+
+const sync = require('cross-spawn').sync;
 const args = process.argv.slice(2);
 
 const scriptIndex = args.findIndex(x => x === 'start' || x === 'test' || x === 'copy');
