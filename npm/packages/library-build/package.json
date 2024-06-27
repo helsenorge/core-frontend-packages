@@ -32,25 +32,29 @@
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "npm run build"
   },
+  "peerDependencies": {
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@types/cross-spawn": "^6.0.6",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "dependencies": {
     "@babel/core": "^7.24.7",
     "@helsenorge/eslint-config": "^31.3.0",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^12.1.5",
+    "@testing-library/jest-dom": "^6.4.6",
+    "@testing-library/react": "^16.0.0",
     "@testing-library/user-event": "^14.5.2",
     "@types/copyfiles": "^2.4.4",
-    "@types/enzyme": "^3.10.18",
-    "@types/enzyme-to-json": "^1.5.7",
-    "@types/react": "^17.0.80",
-    "@types/react-dom": "^17.0.25",
-    "@wojtekmaj/enzyme-adapter-react-17": "^0.8.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
     "babel-jest": "^29.7.0",
     "babel-preset-react-app": "^10.0.1",
     "copyfiles": "^2.4.1",
     "crlf": "^1.1.1",
     "cross-spawn": "^7.0.3",
-    "enzyme": "^3.11.0",
-    "enzyme-to-json": "^3.6.2",
     "esbuild": "^0.21.5",
     "esbuild-sass-plugin": "^3.3.1",
     "identity-obj-proxy": "^3.0.0",
@@ -60,8 +64,6 @@
     "jest-resolve": "^29.7.0",
     "postcss": "^8.4.38",
     "postcss-modules": "^6.0.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
     "rimraf": "^5.0.7",
     "tslib": "^2.6.3",
     "typed-scss-modules": "^8.0.1",
@@ -72,8 +74,5 @@
   "engines": {
     "node": "^20.0.0",
     "npm": ">=10.0.0"
-  },
-  "devDependencies": {
-    "@types/cross-spawn": "^6.0.6"
   }
 }
