@@ -50,7 +50,6 @@ const config: Config = {
   moduleFileExtensions: ['js', 'json', 'jsx', 'ts', 'tsx', 'node'],
   coveragePathIgnorePatterns: ['^.+\\.module\\.(css|sass|scss|scss.d.ts)$'],
   testResultsProcessor: 'jest-junit-reporter',
-  snapshotSerializers: ['enzyme-to-json/serializer'],
   cacheDirectory: '<rootDir>/.jest-cache',
   ...individualConfig,
 };

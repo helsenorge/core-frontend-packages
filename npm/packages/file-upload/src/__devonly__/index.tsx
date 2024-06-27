@@ -1,12 +1,10 @@
 import React from 'react';
 
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import Title from '@helsenorge/designsystem-react/components/Title';
 
 import { FileUploadExample } from '../examples';
-
-const anchor: Element | null = document.getElementById('main-content-wrapper');
 
 const TestSide: React.FC = () => (
   <div className="container">
@@ -20,4 +18,8 @@ const TestSide: React.FC = () => (
   </div>
 );
 
-render(<TestSide />, anchor);
+ReactDOM.createRoot(document.getElementById('main-content-wrapper')!).render(
+  <React.StrictMode>
+    <TestSide />
+  </React.StrictMode>
+);

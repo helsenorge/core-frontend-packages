@@ -1,10 +1,8 @@
 import React from 'react';
 
-import { render } from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import { AutosuggestExample } from '../examples';
-
-const anchor: Element | null = document.getElementById('main-content-wrapper');
 
 const TestSide: React.FC = () => {
   return (
@@ -20,4 +18,8 @@ const TestSide: React.FC = () => {
   );
 };
 
-render(<TestSide />, anchor);
+ReactDOM.createRoot(document.getElementById('main-content-wrapper')!).render(
+  <React.StrictMode>
+    <TestSide />
+  </React.StrictMode>
+);

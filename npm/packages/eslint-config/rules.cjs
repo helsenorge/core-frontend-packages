@@ -83,11 +83,6 @@ module.exports = {
           position: 'before',
         },
         {
-          pattern: '@helsenorge/toolkit/**',
-          group: 'internal',
-          position: 'before',
-        },
-        {
           pattern: '@helsenorge/**',
           group: 'internal',
           position: 'before',

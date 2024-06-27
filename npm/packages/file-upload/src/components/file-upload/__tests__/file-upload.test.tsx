@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { act } from 'react-dom/test-utils';
 import { FieldValues, useForm } from 'react-hook-form';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
@@ -200,7 +199,7 @@ describe('FileUpload', () => {
         expect(rejectedFile).toBeInTheDocument();
 
         const deleteButton = screen.getAllByText('Slett')[0];
-        await act(async () => await userEvent.click(deleteButton));
+        await userEvent.click(deleteButton);
 
         expect(acceptedFile).toBeInTheDocument();
         expect(rejectedFile).not.toBeInTheDocument();
@@ -216,7 +215,7 @@ describe('FileUpload', () => {
         expect(uploadButton).toHaveAccessibleDescription('Slipp filer her Gyldige filformater er jpeg, png og pdf, maks 300kb');
 
         const submitButton = screen.getByRole('button', { name: 'Send inn' });
-        await act(async () => await userEvent.click(submitButton));
+        await userEvent.click(submitButton);
 
         expect(uploadButton).toHaveAccessibleDescription(
           'Slipp filer her Gyldige filformater er jpeg, png og pdf, maks 300kb Det må lastes en til to bilder'

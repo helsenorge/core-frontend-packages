@@ -24,6 +24,6 @@
     "declaration": true,
     "declarationMap": true,
 
-    "esModuleInterop": true // TODO: Remove after enzyme is gone
+    "esModuleInterop": true
   }
 }
