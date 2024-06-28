@@ -31,15 +31,14 @@ export function createPackageJsonFile(packageName: string, inputPath: string, ou
   })
     .then((data: string) => JSON.parse(data))
     .then((packageData: PackageData) => {
-      const { author, version, main, type, sideEffects, repository, bin, peerDependencies, license, dependencies, publishConfig } =
-        packageData;
+      const { author, version, main, sideEffects, repository, bin, peerDependencies, license, dependencies, publishConfig } = packageData;
 
       const minimalPackage: PackageData = {
         name: packageName,
         author,
         version,
         main,
-        type,
+        type: ['@helsenorge/core-build', '@helsenorge/library-build'].includes(packageName) ? 'module' : undefined,
         sideEffects,
         repository,
         bin,
