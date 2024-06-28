@@ -19,6 +19,7 @@
     "library-scripts": "./library-scripts.js"
   },
   "type": "module",
+  "sideEffects": false,
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "tsc",
