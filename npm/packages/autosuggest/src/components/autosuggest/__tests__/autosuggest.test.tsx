@@ -2,13 +2,14 @@ import * as React from 'react';
 
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 
 import Autosuggest from '..';
 
-const onChangeMock = jest.fn();
-const onSuggestionsFetchRequestedMock = jest.fn();
-const onSuggestionsClearRequestedMock = jest.fn();
-const onSuggestionsSelectedMock = jest.fn();
+const onChangeMock = vi.fn();
+const onSuggestionsFetchRequestedMock = vi.fn();
+const onSuggestionsClearRequestedMock = vi.fn();
+const onSuggestionsSelectedMock = vi.fn();
 
 describe('Gitt at Autosuggest skal vises', () => {
   describe('Når Autosuggest vises', () => {
