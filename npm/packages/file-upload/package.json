@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "32.0.0-beta.0",
+  "version": "31.9.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -16,13 +16,14 @@
     "type": "git",
     "url": "https://github.com/helsenorge/core-frontend-packages"
   },
+  "files": [
+    "lib"
+  ],
   "type": "module",
   "scripts": {
     "prestart": "rimraf dist",
     "start": "node node_modules/@helsenorge/library-build/library-scripts.js start --entry ./src/__devonly__/index.tsx --name testpage",
-    "clean": "rimraf lib",
-    "typed-scss-modules": "typed-scss-modules \"src/**/*.module.scss\" --nameFormat none --exportType default --includePaths node_modules ../../../node_modules",
-    "prebuild": "npm-run-all clean typed-scss-modules",
+    "prebuild": "rimraf lib",
     "build": "tsc",
     "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/**/*.{scss,scss.d.ts}",
     "watch": "tsc --watch",
@@ -39,18 +40,18 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^32.0.0-beta",
-    "@helsenorge/designsystem-react": "^8.0.0-beta",
-    "react": "^17.0.0 || ^18.0.0",
-    "react-dom": "^17.0.0 || ^18.0.0"
+    "@helsenorge/core-utils": "^31.0.0",
+    "@helsenorge/designsystem-react": "^7.0.0",
+    "react": ">=17.0.2",
+    "react-dom": ">=17.0.2"
   },
   "optionalDependencies": {
-    "react-hook-form": "^7.52.0"
+    "react-hook-form": "^7.51.5"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^32.0.0-beta.0",
-    "@helsenorge/designsystem-react": "8.0.0-beta.2",
-    "@helsenorge/library-build": "^32.0.0-beta.0",
-    "react-hook-form": "^7.52.0"
+    "@helsenorge/core-utils": "^31.9.0",
+    "@helsenorge/designsystem-react": "^7.11.0",
+    "@helsenorge/library-build": "^31.9.0",
+    "react-hook-form": "^7.51.5"
   }
 }
