@@ -35,8 +35,7 @@
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
-    "test": "node node_modules/@helsenorge/library-build/library-scripts.js test",
-    "test:update": "node node_modules/@helsenorge/library-build/library-scripts.js test --u",
+    "test": "vitest",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
