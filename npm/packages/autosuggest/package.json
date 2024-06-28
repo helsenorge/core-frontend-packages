@@ -17,6 +17,7 @@
     "url": "https://github.com/helsenorge/core-frontend-packages"
   },
   "type": "module",
+  "sideEffects": false,
   "scripts": {
     "prestart": "rimraf dist",
     "start": "node node_modules/@helsenorge/library-build/library-scripts.js start",
