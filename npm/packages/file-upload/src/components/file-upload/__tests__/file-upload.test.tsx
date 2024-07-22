@@ -3,6 +3,7 @@ import * as React from 'react';
 import { screen, render } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { FieldValues, useForm } from 'react-hook-form';
+import { vi } from 'vitest';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
 import Label, { Sublabel } from '@helsenorge/designsystem-react/components/Label';
@@ -13,7 +14,7 @@ import { validateFileSize, validateFileType, validateNumberOfFiles, validateTota
 
 class MockDataTransfer {
   items = {
-    add: jest.fn(),
+    add: vi.fn(),
   };
 }
 
