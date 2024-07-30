@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "31.10.0",
+  "version": "32.0.0-beta.4",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -16,14 +16,14 @@
     "type": "git",
     "url": "https://github.com/helsenorge/core-frontend-packages"
   },
-  "files": [
-    "lib"
-  ],
   "type": "module",
+  "sideEffects": false,
   "scripts": {
     "prestart": "rimraf dist",
     "start": "node node_modules/@helsenorge/library-build/library-scripts.js start",
-    "prebuild": "rimraf lib",
+    "clean": "rimraf lib",
+    "typed-scss-modules": "typed-scss-modules \"src/**/*.module.scss\" --nameFormat none --exportType default --includePaths node_modules ../../../node_modules",
+    "prebuild": "npm-run-all clean typed-scss-modules",
     "build": "tsc",
     "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/**/*.{scss,scss.d.ts}",
     "watch": "tsc --watch",
@@ -35,27 +35,26 @@
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
-    "test": "node node_modules/@helsenorge/library-build/library-scripts.js test",
-    "test:update": "node node_modules/@helsenorge/library-build/library-scripts.js test --u",
+    "test": "vitest",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^31.0.0",
-    "@helsenorge/designsystem-react": "^7.0.0",
-    "react": ">=17.0.2",
-    "react-dom": ">=17.0.2"
+    "@helsenorge/core-utils": "^32.0.0-beta",
+    "@helsenorge/designsystem-react": "^8.0.0-beta",
+    "react": "^17.0.0 || ^18.0.0",
+    "react-dom": "^17.0.0 || ^18.0.0"
   },
   "optionalDependencies": {
-    "react-hook-form": "^7.51.5"
+    "react-hook-form": "^7.52.1"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^31.10.0",
-    "@helsenorge/designsystem-react": "^7.11.0",
-    "@helsenorge/library-build": "^31.9.0",
-    "react-hook-form": "^7.51.5"
+    "@helsenorge/core-utils": "^32.0.0-beta.4",
+    "@helsenorge/designsystem-react": "8.0.0-beta.2",
+    "@helsenorge/library-build": "^32.0.0-beta.4",
+    "react-hook-form": "^7.52.1"
   },
   "dependencies": {
-    "@types/react-autosuggest": "10.1.11",
-    "react-autosuggest": "10.1.0"
+    "@types/react-autosuggest": "^10.1.11",
+    "react-autosuggest": "^10.1.0"
   }
 }
