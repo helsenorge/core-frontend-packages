@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { render } from '@testing-library/react';
+import { vi } from 'vitest';
 
 import * as webcomputils from '../events';
 import TrapFocus from '../trapfocus';
@@ -21,17 +22,22 @@ const TrapFocusTestHelper: React.FC<{}> = () => {
   );
 };
 
-// This is a trick to be able to set offsetParent property to elements - this to make sure tabbable sees it
+// This is a trick to be able to set offsetParent and getClientRects property to elements - this to make sure tabbable sees it
 Object.defineProperty(window.HTMLElement.prototype, 'offsetParent', {
   writable: true,
   value: {},
 });
+Object.defineProperty(window.HTMLElement.prototype, 'getClientRects', {
+  writable: true,
+  value: () => [{ width: 100, height: 100 }],
+});
+
 describe('Trapfocus', () => {
   beforeAll(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
   afterAll(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('Gitt at TrapFocus initialiseres og at DOMen inneholder en container med to knapper', () => {
@@ -148,14 +154,14 @@ describe('Trapfocus', () => {
         const { container: node } = render(<TrapFocusTestHelper />);
         const trapfocus = new TrapFocus(node, false);
 
-        jest.spyOn(trapfocus, 'getItemIndex').mockImplementation(() => 0);
-        jest.spyOn(webcomputils, 'getEventTarget').mockImplementation(() => trapfocus.focusableItems[0]);
-        const prev = jest.spyOn(trapfocus, 'previousFocusableItem');
+        vi.spyOn(trapfocus, 'getItemIndex').mockImplementation(() => 0);
+        vi.spyOn(webcomputils, 'getEventTarget').mockImplementation(() => trapfocus.focusableItems[0]);
+        const prev = vi.spyOn(trapfocus, 'previousFocusableItem');
         const event = new KeyboardEvent('keydown', { keyCode: 9, shiftKey: 1 });
         const eventReturn = trapfocus.handleEvent(event);
 
         expect(prev).toHaveBeenCalled();
-        expect(eventReturn).toEqual(null);
+        expect(eventReturn).toBeNull();
       });
     });
 

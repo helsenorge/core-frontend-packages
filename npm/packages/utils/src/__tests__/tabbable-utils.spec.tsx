@@ -11,6 +11,12 @@ const TabbableTestHelper: React.FC = () => (
     <button tabIndex={2}></button>
   </div>
 );
+
+Object.defineProperty(window.HTMLElement.prototype, 'getClientRects', {
+  writable: true,
+  value: () => [{ width: 100, height: 100 }],
+});
+
 describe('Tabbable-utils', () => {
   describe('Gitt at det finnes en container med flere knapper', () => {
     describe('Når det brukes setTabIndex', () => {

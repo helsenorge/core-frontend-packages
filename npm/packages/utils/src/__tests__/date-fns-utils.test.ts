@@ -6,6 +6,9 @@ import * as dateUtils from '../date-fns-utils';
 describe('date-fns-utils', () => {
   beforeEach(() => {
     setDefaultOptions({ locale: nb });
+    process.env.TZ = 'Europe/Oslo';
+    // eslint-disable-next-line no-console
+    console.log('Current Timezone:', Intl.DateTimeFormat().resolvedOptions().timeZone);
   });
   describe('Når initialize har blitt kalt', () => {
     it('Så formatteres datoer med norsk bokmål', () => {

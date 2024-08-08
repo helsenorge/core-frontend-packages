@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { render, screen } from '@testing-library/react';
+import { vi } from 'vitest';
 
 import layoutChange, { OriginalProps } from '../layout-change';
 import mountHOC from '../mount';
@@ -11,7 +12,7 @@ describe('HOC utils', () => {
     describe('Når den instansieres', () => {
       it('Så mounter den komponenten og kaller mount prop', () => {
         const MountExample = mountHOC(() => <div>{'test'}</div>);
-        const mountMock = jest.fn();
+        const mountMock = vi.fn();
 
         render(<MountExample mount={mountMock} />);
 

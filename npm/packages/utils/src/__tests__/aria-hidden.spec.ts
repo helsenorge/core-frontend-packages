@@ -1,8 +1,10 @@
+import { vi } from 'vitest';
+
 import aria from '../aria-hidden';
 
 describe('Aria-hidden', () => {
   afterAll(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('Gitt at to HTMLelements er paa samme nivå på document objektet', () => {

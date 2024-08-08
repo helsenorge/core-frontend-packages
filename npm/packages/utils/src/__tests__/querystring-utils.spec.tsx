@@ -1,3 +1,5 @@
+import { vi } from 'vitest';
+
 import { getQueryStrings } from '../querystring-utils';
 
 describe('Querystrings-utils', () => {
@@ -12,7 +14,7 @@ describe('Querystrings-utils', () => {
         ...Object.getOwnPropertyDescriptors(oldWindowLocation),
         assign: {
           configurable: true,
-          value: jest.fn(),
+          value: vi.fn(),
         },
         search: {
           configurable: true,
@@ -24,7 +26,7 @@ describe('Querystrings-utils', () => {
 
   afterAll(() => {
     global.window.location = oldWindowLocation;
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('Gitt at window-location-search har url params', () => {
