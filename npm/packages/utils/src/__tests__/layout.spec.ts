@@ -1,7 +1,9 @@
+import { vi } from 'vitest';
+
 import layout from '../layout';
 
 const originalMatchMedia = window.matchMedia;
-const mockMatchMedia = jest.fn();
+const mockMatchMedia = vi.fn();
 
 describe('gitt at skjermbredden skal sjekkes', () => {
   beforeAll(() => {
@@ -16,7 +18,7 @@ describe('gitt at skjermbredden skal sjekkes', () => {
     });
   });
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
   describe('når isNullToXs kalles', () => {
     it('så sjekkes skjermstørrelsen med max-width: 360px', () => {

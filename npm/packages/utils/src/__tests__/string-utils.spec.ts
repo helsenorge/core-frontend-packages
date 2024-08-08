@@ -1,8 +1,10 @@
+import { vi } from 'vitest';
+
 import * as stringFunctions from '../string-utils';
 
 describe('String-utils', () => {
   afterAll(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
   describe('Gitt at isEmpty skal sjekkes', () => {
     describe('Når det sendes en tom string', () => {

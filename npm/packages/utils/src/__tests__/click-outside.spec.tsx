@@ -2,10 +2,11 @@ import * as React from 'react';
 
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { vi } from 'vitest';
 
 import clickOutside from '../click-outside';
 
-const onClick = jest.fn();
+const onClick = vi.fn();
 
 const BasicClickOutsideComponent: React.FC = () => {
   const wrapperRef = React.useRef<HTMLDivElement>(null);
@@ -24,7 +25,7 @@ const BasicClickOutsideComponent: React.FC = () => {
 
 describe('Click-outside', () => {
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('Gitt at clickOutside brukes i en komponent', () => {

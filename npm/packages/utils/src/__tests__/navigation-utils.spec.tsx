@@ -1,17 +1,18 @@
 import { Location } from 'react-router-dom';
+import { vi } from 'vitest';
 
 import { navigate, navigateAdd, goBackOrUp } from '../navigation-utils';
 
 describe('Navigation-utils', () => {
   let globalNavigationTrail = [];
-  const mockedNavigate = jest.fn();
-  jest.mock('react-router-dom', () => ({
-    ...jest.requireActual('react-router-dom'),
+  const mockedNavigate = vi.fn();
+  vi.mock('react-router-dom', () => ({
+    ...vi.requireActual('react-router-dom'),
     useNavigate: () => mockedNavigate,
   }));
 
   afterAll(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('Gitt at navigationTrail har noe location lagret', () => {
@@ -33,7 +34,7 @@ describe('Navigation-utils', () => {
           hash: 'abc',
           key: '1',
         };
-        const focusFn = jest.fn();
+        const focusFn = vi.fn();
 
         const navigationTrail = navigate(locationTest, 'PUSH', focusFn);
         expect(navigationTrail[0].location).toEqual(locationTest);
@@ -50,7 +51,7 @@ describe('Navigation-utils', () => {
           hash: 'abc',
           key: '1',
         };
-        const focusFn = jest.fn();
+        const focusFn = vi.fn();
 
         const navigationTrail = navigate(newLocationTest, 'REPLACE', focusFn);
         expect(navigationTrail[0].location).toEqual(newLocationTest);
@@ -67,7 +68,7 @@ describe('Navigation-utils', () => {
           hash: 'abcdef',
           key: '2',
         };
-        const focusFn = jest.fn();
+        const focusFn = vi.fn();
 
         const navigationTrail = navigate(newLocationTest, 'POP', focusFn);
         expect(navigationTrail[0].location).toEqual(newLocationTest);
@@ -80,7 +81,7 @@ describe('Navigation-utils', () => {
     describe('Når det sendes en HTML section som target', () => {
       it('Så legges section til i targets Array på navigationTrail', () => {
         const mockElement = document.createElement('section');
-        mockElement.focus = jest.fn();
+        mockElement.focus = vi.fn();
         const a = navigateAdd(mockElement);
 
         expect(a[0].targets[0].nodeName).toEqual('SECTION');

@@ -1,3 +1,5 @@
+import { vi } from 'vitest';
+
 import { isMobileUA, handleIOSSafariUA } from '../user-agents-utils';
 
 describe('User-agents-utils', () => {
@@ -18,7 +20,7 @@ describe('User-agents-utils', () => {
   });
 
   afterAll(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('Gitt at window.navigator er uendret', () => {

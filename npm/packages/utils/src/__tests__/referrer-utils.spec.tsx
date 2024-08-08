@@ -1,3 +1,5 @@
+import { vi } from 'vitest';
+
 import { isReferrer } from '../referrer-utils';
 
 describe('referrer-utils', () => {
@@ -11,7 +13,7 @@ describe('referrer-utils', () => {
         ...Object.getOwnPropertyDescriptors(oldWindowLocation),
         assign: {
           configurable: true,
-          value: jest.fn(),
+          value: vi.fn(),
         },
         search: {
           configurable: true,
@@ -22,7 +24,7 @@ describe('referrer-utils', () => {
   };
   afterAll(() => {
     global.window.location = oldWindowLocation;
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
   describe('Gitt at det er referrer i urlen', () => {
     describe('Når referrer er lik som etterspurt referrer', () => {

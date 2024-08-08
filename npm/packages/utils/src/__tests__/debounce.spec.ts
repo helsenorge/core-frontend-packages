@@ -1,17 +1,18 @@
+import { vi } from 'vitest';
+
 import { debounce } from '../debounce';
 
-jest.useFakeTimers();
+vi.useFakeTimers();
 
 describe('Debounce', () => {
-  let func: jest.Mock;
+  const func = vi.fn();
   let debouncedFunc: Function;
 
   beforeEach(() => {
-    func = jest.fn();
     debouncedFunc = debounce(func, 1000);
   });
   afterAll(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
   });
 
   describe('Gitt at debounce function brukes', () => {
@@ -21,8 +22,8 @@ describe('Debounce', () => {
           debouncedFunc();
         }
 
-        jest.runAllTimers();
-        expect(func).toBeCalledTimes(1);
+        vi.runAllTimers();
+        expect(func).toHaveBeenCalledTimes(1);
       });
     });
   });
