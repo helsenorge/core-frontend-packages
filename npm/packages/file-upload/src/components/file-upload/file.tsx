@@ -159,7 +159,7 @@ export default class FileElement extends React.Component<FileProps, FileState> {
     }
   }
 
-  render(): JSX.Element | null {
+  render(): React.JSX.Element | null {
     return (
       <React.Fragment>
         <li

@@ -72,7 +72,7 @@ export default function layoutChange<T extends React.Component, OriginalProps>(
       });
     };
 
-    render(): JSX.Element {
+    render(): React.JSX.Element {
       const { forwardedRef, ...originalProps } = this.props;
 
       return (
