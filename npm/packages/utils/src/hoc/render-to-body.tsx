@@ -31,7 +31,7 @@ class RenderToBody extends React.PureComponent<RenderToBodyProps, {}> {
     }
   }
 
-  render(): JSX.Element {
+  render(): React.JSX.Element {
     return ReactDOM.createPortal(this.props.children, this.props.printable ? document.body : this.overlayTarget);
   }
 }

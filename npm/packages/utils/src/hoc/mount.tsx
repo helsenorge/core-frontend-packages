@@ -16,7 +16,7 @@ export default function mount<T>(WrappedComponent: ComponentClass<T & Props> | R
       }
     }
 
-    render(): JSX.Element {
+    render(): React.JSX.Element {
       return <WrappedComponent {...this.props} />;
     }
   }
