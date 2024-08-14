@@ -1,5 +1,6 @@
-import type { Config } from 'jest';
 import { createRequire } from 'node:module';
+
+import type { Config } from 'jest';
 
 const require = createRequire(import.meta.url);
 
