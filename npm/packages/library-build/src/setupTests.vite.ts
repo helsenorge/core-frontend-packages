@@ -16,61 +16,33 @@ window.HN = {
   PortalCommands: {},
 };
 
-const mockWindowMatchMedia = vi.fn().mockImplementation(() => ({
+const MatchMediaMock = vi.fn(() => ({
   matches: true,
   addEventListener: vi.fn(),
   removeEventListener: vi.fn(),
 }));
 
-Object.defineProperty(window, 'matchMedia', {
-  writable: true,
-  value: mockWindowMatchMedia,
-});
+vi.stubGlobal('matchMedia', MatchMediaMock);
 
-class IntersectionObserver {
-  observe(): void {
-    // do nothing
-  }
-  unobserve(): void {
-    // do nothing
-  }
-  disconnect(): void {
-    // do nothing
-  }
-}
+const IntersectionObserverMock = vi.fn(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
+}));
 
-Object.defineProperty(window, 'IntersectionObserver', {
-  writable: true,
-  value: IntersectionObserver,
-});
+vi.stubGlobal('IntersectionObserver', IntersectionObserverMock);
 
-class ResizeObserver {
-  observe() {
-    // do nothing
-  }
-  unobserve() {
-    // do nothing
-  }
-  disconnect() {
-    // do nothing
-  }
-}
+const ResizeObserverMock = vi.fn(() => ({
+  observe: vi.fn(),
+  unobserve: vi.fn(),
+  disconnect: vi.fn(),
+}));
 
-Object.defineProperty(window, 'ResizeObserver', {
-  writable: true,
-  value: ResizeObserver,
-});
+vi.stubGlobal('ResizeObserver', ResizeObserverMock);
 
-class MutationObserver {
-  observe(): void {
-    // do nothing
-  }
-  disconnect(): void {
-    // do nothing
-  }
-}
+const MutationObserverMock = vi.fn(() => ({
+  observe: vi.fn(),
+  disconnect: vi.fn(),
+}));
 
-Object.defineProperty(window, 'MutationObserver', {
-  writable: true,
-  value: MutationObserver,
-});
+vi.stubGlobal('MutationObserver', MutationObserverMock);
