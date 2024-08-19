@@ -23,6 +23,7 @@ const __dirname = path.dirname(__filename);
   copyFileSync(__dirname + '/index.html', outDir + '/index.html');
 
   const context = await esbuild.context({
+    format: 'esm',
     logLevel: 'debug',
     entryPoints: [entry],
     outdir: outDir,
