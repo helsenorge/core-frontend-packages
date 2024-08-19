@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite';
+import { defineConfig } from 'vitest/config';
 
 import { getConfig } from '@helsenorge/library-build/vitest.config';
 
