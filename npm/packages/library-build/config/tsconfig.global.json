@@ -23,7 +23,7 @@
     /* library-build specific options */
     "declaration": true,
     "declarationMap": true,
-
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["vitest/globals", "@testing-library/jest-dom"]
   }
 }
