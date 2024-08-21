@@ -77,3 +77,5 @@ Object.defineProperty(window, 'MutationObserver', {
   writable: true,
   value: MutationObserver,
 });
+
+window.HTMLElement.prototype.scrollIntoView = jest.fn();
