@@ -27,7 +27,7 @@ export const getConfig: UserConfigFn = () => {
       },
       server: {
         deps: {
-          inline: ['@helsenorge/designsystem-react', '@portabletext/react'],
+          inline: ['@helsenorge/designsystem-react', '@helsenorge/datepicker', '@helsenorge/lightbox', '@portabletext/react'],
         },
       },
     },
