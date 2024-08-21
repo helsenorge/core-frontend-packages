@@ -46,3 +46,5 @@ const MutationObserverMock = vi.fn(() => ({
 }));
 
 vi.stubGlobal('MutationObserver', MutationObserverMock);
+
+window.HTMLElement.prototype.scrollIntoView = vi.fn();
