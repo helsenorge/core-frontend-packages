@@ -1,4 +1,5 @@
 **/*.min.js
+**/*.min.js.map
 **/AppMeasurement.js
 CHANGELOG.md
 mockServiceWorker.js
