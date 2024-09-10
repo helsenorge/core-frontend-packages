@@ -17,14 +17,13 @@
     "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/types/dev.d.ts",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "test": "vitest run",
+    "test": "vitest",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
-    "typecheck": "tsc --noEmit",
-    "test:watch": "node node_modules/@helsenorge/library-build/library-scripts.js test --watch"
+    "typecheck": "tsc --noEmit"
   },
   "author": "Norsk helsenett SF",
   "maintainers": [

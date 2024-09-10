@@ -6,10 +6,14 @@ import { navigate, navigateAdd, goBackOrUp } from '../navigation-utils';
 describe('Navigation-utils', () => {
   let globalNavigationTrail = [];
   const mockedNavigate = vi.fn();
-  vi.mock('react-router-dom', () => ({
-    ...vi.requireActual('react-router-dom'),
-    useNavigate: () => mockedNavigate,
-  }));
+  vi.mock('react-router-dom', async importOriginal => {
+    const actual = await importOriginal();
+
+    return {
+      ...actual,
+      useNavigate: () => mockedNavigate,
+    };
+  });
 
   afterAll(() => {
     vi.clearAllMocks();

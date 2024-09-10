@@ -7,7 +7,6 @@ yarn-error.log*
 dist
 dist_dev
 dist_OLD
-.jest-cache
 # Runtime data
 pids
 *.pid
@@ -19,11 +18,8 @@ lib-cov
 
 # Coverage directory used by tools like istanbul
 coverage
-.jest-cache/
 
 # Jets generated files
-.jest-cache
-
 test-report.xml
 
 # nyc test coverage

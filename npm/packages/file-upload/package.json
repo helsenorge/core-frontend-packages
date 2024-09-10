@@ -35,7 +35,7 @@
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
+    "test": "vitest",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
