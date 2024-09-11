@@ -35,6 +35,8 @@ interface Props<T>
   errorText?: string;
   /** Error text to show above the component */
   errorTextId?: string;
+  /** Class name to pass to ErrorWrapper */
+  errorWrapperClassName?: string;
   /** Tilpasset funksjon for å definere markup'en som rendres for en suggestion i suggestionslisten */
   renderSuggestion?: RenderSuggestion<T>;
 }
@@ -65,7 +67,7 @@ const Autosuggest: React.FC<Props<Suggestion>> = props => {
   };
 
   return (
-    <ErrorWrapper errorText={props.errorText} errorTextId={errorTextUuid}>
+    <ErrorWrapper errorText={props.errorText} errorTextId={errorTextUuid} className={props.errorWrapperClassName}>
       <div className={props.className}>
         {renderLabel(props.label, inputId, props.error ? FormMode.oninvalid : FormMode.onwhite)}
         <ReactAutosuggest
