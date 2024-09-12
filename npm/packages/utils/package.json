@@ -14,7 +14,7 @@
   "scripts": {
     "prebuild": "rimraf lib",
     "build": "tsc",
-    "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/types/dev.d.ts",
+    "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
     "test": "vitest",

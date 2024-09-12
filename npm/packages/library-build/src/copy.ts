@@ -36,10 +36,16 @@ const outputPath = path.resolve(process.cwd(), outputDirectory);
 const newPackageJson = path.resolve(outputPath, 'package.json');
 
 Promise.all([
-  new Promise<void>((resolve, reject) => copyfiles([...root, outputPath], e => (e ? reject(e) : resolve()))),
-  new Promise<void>((resolve, reject) => copyfiles([...include, outputPath], { up: 1 }, e => (e ? reject(e) : resolve()))),
   new Promise<void>((resolve, reject) =>
-    copyfiles([...utils, path.resolve(outputPath, 'utils')], { up: true }, e => (e ? reject(e) : resolve()))
+    root.length > 0 ? copyfiles([...root, outputPath], { error: true }, e => (e ? reject(e) : resolve())) : Promise.resolve()
+  ),
+  new Promise<void>((resolve, reject) =>
+    include.length > 0 ? copyfiles([...include, outputPath], { up: 1, error: true }, e => (e ? reject(e) : resolve())) : Promise.resolve()
+  ),
+  new Promise<void>((resolve, reject) =>
+    utils.length > 0
+      ? copyfiles([...utils, path.resolve(outputPath, 'utils')], { up: true, error: true }, e => (e ? reject(e) : resolve()))
+      : Promise.resolve()
   ),
 ])
   .then(() => (rm ? rimraf(rm) : Promise.resolve(true)))
