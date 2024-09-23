@@ -18,6 +18,7 @@ window.HN = {
 
 const MatchMediaMock = vi.fn(() => ({
   matches: true,
+  addListener: vi.fn(),
   addEventListener: vi.fn(),
   removeEventListener: vi.fn(),
 }));
