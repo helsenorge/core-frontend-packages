@@ -48,5 +48,5 @@ Promise.all([
       : resolve()
   ),
 ])
-  .then(() => (rm ? rimraf(rm) : Promise.resolve(true)))
+  .then(() => (rm ? rimraf(rm, { glob: true }) : Promise.resolve(true)))
   .then(() => createPackageJsonFile(packageName, originalPackageJson, newPackageJson));
