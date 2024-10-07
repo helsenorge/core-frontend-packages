@@ -30,6 +30,7 @@ const __dirname = path.dirname(__filename);
     bundle: true,
     define: {
       global: 'window',
+      'import.meta.env': '{}',
     },
     loader: {
       '.svg': 'dataurl',
