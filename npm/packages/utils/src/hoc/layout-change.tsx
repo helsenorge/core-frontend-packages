@@ -91,5 +91,5 @@ export default function layoutChange<T extends React.Component, OriginalProps>(
 
   const RefForwardingFactory = (props: OriginalProps, ref: React.RefObject<T>) => <LayoutChangeComponent {...props} forwardedRef={ref} />;
 
-  return React.forwardRef(RefForwardingFactory);
+  return React.forwardRef(RefForwardingFactory as React.ForwardRefRenderFunction<T, React.PropsWithoutRef<OriginalProps>>);
 }
