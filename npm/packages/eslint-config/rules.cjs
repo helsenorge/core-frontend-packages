@@ -3,7 +3,6 @@ module.exports = {
   'prettier/prettier': 'error',
   'arrow-body-style': 'off',
   'prefer-arrow-callback': 'off',
-  '@typescript-eslint/ban-types': 'warn',
   '@typescript-eslint/explicit-function-return-type': 'warn',
   '@typescript-eslint/no-empty-interface': 'warn',
   '@typescript-eslint/no-explicit-any': 'error',
