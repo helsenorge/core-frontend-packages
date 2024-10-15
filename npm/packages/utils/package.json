@@ -36,14 +36,14 @@
     "@helsenorge/designsystem-react": "^8.0.0"
   },
   "devDependencies": {
-    "@helsenorge/designsystem-react": "^8.5.1",
+    "@helsenorge/designsystem-react": "^8.6.0",
     "@helsenorge/library-build": "^32.3.2"
   },
   "dependencies": {
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
     "history": "^5.3.0",
-    "react-router-dom": "^6.26.0",
+    "react-router-dom": "^6.27.0",
     "tabbable": "^6.2.0"
   }
 }
