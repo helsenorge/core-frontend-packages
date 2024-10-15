@@ -21,6 +21,9 @@ export interface OriginalProps {
   lgToXl?: boolean;
 }
 
+/**
+ * @deprecated Bruk useBreakpoint-hook fra @helsenorge/designsystem-react i stedet
+ */
 export default function layoutChange<T extends React.Component, OriginalProps>(
   COMPONENT: React.ComponentClass<OriginalProps & { ref?: React.RefObject<T> }> | React.FC<OriginalProps & { ref?: React.RefObject<T> }>
 ): React.ForwardRefExoticComponent<React.PropsWithoutRef<OriginalProps> & React.RefAttributes<T>> {

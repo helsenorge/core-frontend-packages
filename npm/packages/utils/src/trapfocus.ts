@@ -6,8 +6,11 @@ import { getDocumentActiveElement } from './focus-utils';
 
 type TabbableElement = FocusableElement & HTMLInputElement;
 
-/* Class som ved init låser fokuset inne i én DOMElement. Bruksområder er f.eks Modalvinduer.
-Tar imot en DomNode (HTMLElement eller string) som fokuset skal låses i. */
+/**
+ * Class som ved init låser fokuset inne i én DOMElement. Bruksområder er f.eks Modalvinduer.
+ * Tar imot en DomNode (HTMLElement eller string) som fokuset skal låses i.
+ * @deprecated Bruk useFocusTrap-hook fra @helsenorge/designsystem-react i stedet
+ */
 export class TrapFocus {
   domNode: TabbableElement | null;
   previouslyFocusedItem: TabbableElement | null;
