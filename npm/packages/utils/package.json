@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "32.5.0",
+  "version": "33.0.0-beta.2",
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
   "repository": {
     "type": "git",
@@ -33,17 +33,17 @@
   "type": "module",
   "sideEffects": false,
   "peerDependencies": {
-    "@helsenorge/designsystem-react": "^8.0.0"
+    "@helsenorge/designsystem-react": "^8.0.0 || ^9.0.0-beta"
   },
   "devDependencies": {
-    "@helsenorge/designsystem-react": "^8.5.1",
-    "@helsenorge/library-build": "^32.3.2"
+    "@helsenorge/designsystem-react": "^8.6.0",
+    "@helsenorge/library-build": "^33.0.0-beta.2"
   },
   "dependencies": {
     "classnames": "^2.5.1",
     "date-fns": "^3.6.0",
     "history": "^5.3.0",
-    "react-router-dom": "^6.26.0",
+    "react-router-dom": "^6.27.0",
     "tabbable": "^6.2.0"
   }
 }
