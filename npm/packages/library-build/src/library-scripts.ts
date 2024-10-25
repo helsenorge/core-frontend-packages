@@ -6,12 +6,13 @@ const require = createRequire(import.meta.url);
 const sync = require('cross-spawn').sync;
 const args = process.argv.slice(2);
 
-const scriptIndex = args.findIndex(x => x === 'start' || x === 'test' || x === 'copy');
+const scriptIndex = args.findIndex(x => x === 'start' || x === 'build' || x === 'test' || x === 'copy');
 const script = scriptIndex === -1 ? args[0] : args[scriptIndex];
 const nodeArgs = scriptIndex > 0 ? args.slice(0, scriptIndex) : [];
 
 switch (script) {
   case 'start':
+  case 'build':
   case 'test':
   case 'copy': {
     const result = sync('node', nodeArgs.concat(require.resolve('./' + script)).concat(args.slice(scriptIndex + 1)), {
