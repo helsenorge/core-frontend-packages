@@ -12,7 +12,7 @@ import { usePseudoClasses } from '@helsenorge/designsystem-react/hooks/usePseudo
 import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/utils/refs';
 
-import { FormMode, useUuid } from '@helsenorge/designsystem-react';
+import { FormOnColor, useUuid } from '@helsenorge/designsystem-react';
 
 import FileElement, { Type } from './file';
 
@@ -359,7 +359,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   return (
     <ErrorWrapper errorText={errorText} errorTextId={errorTextUuid}>
       <div className={wrapperClasses} data-testid={wrapperTestId}>
-        {renderLabel(label, inputButtonId, FormMode.onwhite)}
+        {renderLabel(label, inputButtonId, FormOnColor.onwhite)}
         {helpElement}
         {loading && <Loader size={'tiny'} className={styles.dropzone__loader} />}
         {renderFiles()}

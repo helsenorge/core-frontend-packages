@@ -4,7 +4,7 @@ import ReactAutosuggest, { AutosuggestPropsBase, InputProps, RenderSuggestion } 
 
 import ErrorWrapper from '@helsenorge/designsystem-react/components/ErrorWrapper';
 import { renderLabel } from '@helsenorge/designsystem-react/components/Label';
-import { FormMode } from '@helsenorge/designsystem-react/constants';
+import { FormOnColor } from '@helsenorge/designsystem-react/constants';
 import { useUuid } from '@helsenorge/designsystem-react/hooks/useUuid';
 import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 
@@ -69,7 +69,7 @@ const Autosuggest: React.FC<Props<Suggestion>> = props => {
   return (
     <ErrorWrapper errorText={props.errorText} errorTextId={errorTextUuid} className={props.errorWrapperClassName}>
       <div className={props.className}>
-        {renderLabel(props.label, inputId, props.error ? FormMode.oninvalid : FormMode.onwhite)}
+        {renderLabel(props.label, inputId, props.error ? FormOnColor.oninvalid : FormOnColor.onwhite)}
         <ReactAutosuggest
           theme={styles}
           suggestions={props.suggestions}
