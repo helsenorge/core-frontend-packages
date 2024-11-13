@@ -39,6 +39,7 @@
   },
   "devDependencies": {
     "@types/cross-spawn": "^6.0.6",
+    "@types/yargs": "^17.0.33",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -61,7 +62,8 @@
     "typed-scss-modules": "^8.0.1",
     "typescript": "~5.5.4",
     "vitest": "^2.1.4",
-    "whatwg-fetch": "^3.6.20"
+    "whatwg-fetch": "^3.6.20",
+    "yargs": "^17.7.2"
   },
   "engineStrict": true,
   "engines": {
