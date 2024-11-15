@@ -1,17 +1,14 @@
-module.exports = {
-  'react/no-danger': 'error',
-  'prettier/prettier': 'error',
-  'arrow-body-style': 'off',
-  'prefer-arrow-callback': 'off',
+export default {
+  // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/src/configs/recommended.ts
   '@typescript-eslint/explicit-function-return-type': 'warn',
-  '@typescript-eslint/no-empty-interface': 'warn',
-  '@typescript-eslint/no-explicit-any': 'error',
-  'react/jsx-no-literals': 'error',
-  'react/display-name': 'warn',
-  'react/jsx-uses-react': 'off',
-  'react/react-in-jsx-scope': 'off',
+  // https://github.com/eslint/eslint/blob/main/packages/js/src/configs/eslint-recommended.js
+  'arrow-body-style': 'off',
   'no-console': 'error',
-  'no-debugger': 'error',
+  'prefer-arrow-callback': 'off',
+  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/index.js
+  'react/display-name': 'warn',
+  'react/jsx-no-literals': 'error',
+  'react/no-danger': 'error',
   'import/order': [
     'warn',
     {
