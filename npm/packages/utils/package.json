@@ -33,7 +33,7 @@
   "type": "module",
   "sideEffects": false,
   "peerDependencies": {
-    "@helsenorge/designsystem-react": "^9.0.0"
+    "@helsenorge/designsystem-react": "^9.0.0 | ^10.0.0-beta"
   },
   "devDependencies": {
     "@helsenorge/designsystem-react": "^9.0.0",
