@@ -96,6 +96,20 @@ describe('merge', () => {
         });
       });
     });
+
+    describe('Gitt at objektet a ikke eksisterer i argument 2', () => {
+      describe('Når merge kalles', () => {
+        it('Så returnerer den a-objektet fra argument 1 ', () => {
+          const merged = merge({ a: { header: { title: 'foo' } } }, { b: 'bar', c: 'bar' });
+
+          expect(merged).toEqual({
+            a: { header: { title: 'foo' } },
+            b: 'bar',
+            c: 'bar',
+          });
+        });
+      });
+    });
   });
   describe('Gitt at a har en objekt-verdi i argument 1 med flere underverdier', () => {
     describe('Gitt at a har en objekt-verdi i argument 2 med flere underverdier', () => {

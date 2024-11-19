@@ -9,7 +9,7 @@ export const merge = <D extends object, O extends object>(defaults: D, overrides
   const merged: D & O = { ...defaults, ...overrides };
 
   for (const key in merged) {
-    if (typeof defaults[key] === 'object' && !Array.isArray(defaults[key]) && defaults[key] !== null) {
+    if (typeof defaults[key] === 'object' && !Array.isArray(defaults[key]) && defaults[key] !== null && key in overrides) {
       merged[key] = merge(defaults[key], overrides[key]);
     } else {
       if ((!overrides || !overrides[key]) && !!defaults[key]) {
