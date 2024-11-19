@@ -40,7 +40,7 @@
   },
   "peerDependencies": {
     "@helsenorge/core-utils": "^34.0.0-beta",
-    "@helsenorge/designsystem-react": "^9.0.0 | ^10.0.0-beta",
+    "@helsenorge/designsystem-react": "^9.0.0 || ^10.0.0-beta",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
