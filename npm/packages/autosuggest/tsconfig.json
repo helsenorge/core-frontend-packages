@@ -1,11 +1,6 @@
 {
   "extends": "./node_modules/@helsenorge/library-build/config/tsconfig.global.json",
   "compilerOptions": {
-    "strict": false, // TODO: Fjern i forbindelse med ny autosuggest slik at strict=true
-    "noImplicitAny": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowUnreachableCode": false,
-    "strictNullChecks": true,
     "outDir": "lib"
   },
   "include": ["src"],
