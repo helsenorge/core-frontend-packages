@@ -17,6 +17,7 @@ export class TrapFocus {
   focusableItems: Array<TabbableElement>;
 
   constructor(domNode: HTMLElement | string, isTriggerWithinTrappedArea: boolean = false) {
+    this.focusableItems = [];
     this.domNode = typeof domNode === 'string' ? (document.querySelector(domNode) as TabbableElement) : (domNode as TabbableElement);
     const activeElement = getDocumentActiveElement(domNode);
     this.previouslyFocusedItem = activeElement ? (activeElement as TabbableElement) : (document.activeElement as TabbableElement);

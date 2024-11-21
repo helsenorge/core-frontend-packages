@@ -21,6 +21,6 @@ export default function mount<T>(WrappedComponent: ComponentClass<T & Props> | R
     }
   }
 
-  (Mount as ComponentClass<{}>).displayName = `Mount(${componentName})`;
+  (Mount as ComponentClass<T & Props>).displayName = `Mount(${componentName})`;
   return Mount;
 }

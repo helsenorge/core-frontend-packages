@@ -4,28 +4,30 @@
  * @param wait wait for x time
  * @param immediate run now
  */
-/* eslint-disable @typescript-eslint/no-this-alias, prefer-rest-params */
+export function debounce<T extends (...args: unknown[]) => void>(
+  func: T,
+  wait: number,
+  immediate?: boolean
+): (...args: Parameters<T>) => void {
+  let timeout: ReturnType<typeof setTimeout> | null = null;
 
-export function debounce(func: Function, wait: number, immediate?: boolean): () => void {
-  let timeout: ReturnType<typeof setTimeout> | null;
+  return function (this: ThisParameterType<T>, ...args: Parameters<T>): void {
+    const later = (): void => {
+      timeout = null;
+      if (!immediate) {
+        func.apply(this, args);
+      }
+    };
 
-  return function (): void {
-    const context: Function = this,
-      args: IArguments = arguments,
-      later: () => void = (): void => {
-        timeout = null;
-        if (!immediate) {
-          func.apply(context, args);
-        }
-      },
-      callNow = immediate && !timeout;
+    const callNow = immediate && !timeout;
 
-    if (timeout) clearTimeout(timeout);
+    if (timeout) {
+      clearTimeout(timeout);
+    }
     timeout = setTimeout(later, wait);
+
     if (callNow) {
-      func.apply(context, args);
+      func.apply(this, args);
     }
   };
 }
-
-/* eslint-enable @typescript-eslint/no-this-alias, prefer-rest-params */
