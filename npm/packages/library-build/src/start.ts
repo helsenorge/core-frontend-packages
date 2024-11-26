@@ -49,11 +49,11 @@ const __dirname = path.dirname(__filename);
           const basedir = path.dirname(pathname);
           return source.replace(/(url\(['"]?)(\.\.?\/)([^'")]+['"]?\))/g, '$1'.concat(basedir.replace(/\\/g, '\\\\'), '/$2$3'));
         },
-      }),
+      }) as esbuild.Plugin,
       sassPlugin({
         filter: /.(s[ac]ss|css)$/,
         type: 'style',
-      }),
+      }) as esbuild.Plugin,
       {
         name: 'resolve-fonts',
         setup(build): void {
