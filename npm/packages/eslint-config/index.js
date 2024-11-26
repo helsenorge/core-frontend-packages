@@ -1,11 +1,13 @@
 // @ts-check
 
-import eslint from '@eslint/js';
+import js from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
-import reactPlugin from 'eslint-plugin-react';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
 import testingLibrary from 'eslint-plugin-testing-library';
+import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 import rules from './rules.js';
@@ -14,29 +16,36 @@ export const defaultFiles = ['**/*.[jt]s?(x)'];
 export const testFiles = ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'];
 
 export const configs = [
-  // https://typescript-eslint.io/getting-started/
-  eslint.configs.recommended,
-  ...tseslint.configs.recommended,
-  // React
   {
-    files: defaultFiles,
-    // https://github.com/jsx-eslint/eslint-plugin-react?tab=readme-ov-file#configuration-new-eslintconfigjs
-    ...reactPlugin.configs.flat.recommended,
     settings: {
       react: {
         version: 'detect',
       },
     },
+    plugins: {
+      react,
+    },
+    rules: {
+      ...react.configs.recommended.rules,
+      ...react.configs['jsx-runtime'].rules,
+    },
   },
+  { ignores: ['dist'] },
   {
+    extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: defaultFiles,
-    ...reactPlugin.configs.flat['jsx-runtime'],
-  },
-  // Helsenorge custom config
-  {
-    files: defaultFiles,
-    plugins: { import: importPlugin },
-    rules,
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+    },
+    plugins: {
+      'react-hooks': reactHooks,
+      import: importPlugin,
+    },
+    rules: {
+      ...reactHooks.configs.recommended.rules,
+      ...rules,
+    },
   },
   // Tests
   {
