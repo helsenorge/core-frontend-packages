@@ -1,4 +1,4 @@
-import { UserConfigFn, defineConfig } from 'vitest/config';
+import { UserConfigFn, coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export const getConfig: UserConfigFn = () => {
   return {
@@ -20,6 +20,8 @@ export const getConfig: UserConfigFn = () => {
       coverage: {
         enabled: true,
         reporter: ['cobertura', 'lcov', 'json'],
+        include: ['src/**'],
+        exclude: [...coverageConfigDefaults.exclude, '**/__devonly__/**', '**/__mocks__/**', '**/mocks/**'],
       },
       reporters: ['default', 'junit'],
       outputFile: {
