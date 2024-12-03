@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/library-build",
-  "version": "33.5.1",
+  "version": "34.0.0-beta.4",
   "publishConfig": {
     "directory": "lib",
     "access": "public"
@@ -44,7 +44,7 @@
     "react-dom": "^18.3.1"
   },
   "dependencies": {
-    "@helsenorge/eslint-config": "^33.0.0",
+    "@helsenorge/eslint-config": "^34.0.0-beta.4",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.0.1",
     "@testing-library/user-event": "^14.5.2",
@@ -54,14 +54,14 @@
     "@vitest/coverage-v8": "^2.1.4",
     "copyfiles": "^2.4.1",
     "cross-spawn": "^7.0.3",
-    "esbuild": "^0.21.5",
+    "esbuild": "~0.24.0",
     "esbuild-sass-plugin": "^3.3.1",
     "jsdom": "^25.0.1",
     "postcss": "^8.4.47",
     "postcss-modules": "^6.0.0",
     "rimraf": "^6.0.1",
     "typed-scss-modules": "^8.0.1",
-    "typescript": "~5.5.4",
+    "typescript": "~5.7.2",
     "vitest": "^2.1.4",
     "whatwg-fetch": "^3.6.20",
     "yargs": "^17.7.2"
