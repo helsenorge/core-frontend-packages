@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "34.0.0-beta.4",
+  "version": "33.5.1",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -39,8 +39,8 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^34.0.0-beta",
-    "@helsenorge/designsystem-react": "^9.0.0 || ^10.0.0-beta",
+    "@helsenorge/core-utils": "^33.0.0",
+    "@helsenorge/designsystem-react": "^9.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
@@ -48,10 +48,10 @@
     "react-hook-form": "^7.53.1"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^34.0.0-beta.4",
-    "@helsenorge/designsystem-react": "^9.0.0",
-    "@helsenorge/library-build": "^34.0.0-beta.4",
-    "npm-run-all": "^4.1.5",
+    "@helsenorge/core-utils": "^33.5.1",
+    "@helsenorge/designsystem-react": "^9.4.1",
+    "@helsenorge/library-build": "^33.5.1",
+    "npm-run-all2": "^7.0.1",
     "react-hook-form": "^7.53.1"
   },
   "dependencies": {
