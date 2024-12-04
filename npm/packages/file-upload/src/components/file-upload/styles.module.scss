@@ -1,3 +1,4 @@
+@use 'sass:map';
 @import '@helsenorge/designsystem-react/scss/spacers';
 @import '@helsenorge/designsystem-react/scss/breakpoints';
 @import '@helsenorge/designsystem-react/scss/palette';
@@ -33,7 +34,7 @@
       border-radius: 0.5rem;
       margin-top: getSpacer(m);
 
-      @media (min-width: map-get($grid-breakpoints, md)) {
+      @media (min-width: map.get($grid-breakpoints, md)) {
         padding: 0.7rem 1rem;
       }
 
