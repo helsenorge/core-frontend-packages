@@ -9,13 +9,4 @@ export enum LanguageLocales {
   SAMI_NORTHERN = 'se-NO',
 }
 
-export enum VimeoSubtitleLanguageCodes {
-  NORWEGIAN = 'nb',
-  NORWEGIAN_NYNORSK = 'nn',
-  ENGLISH = 'en-GB', // Må være på dette formatet
-  LITHUANIAN = 'lt',
-  POLISH = 'pl',
-  RUSSIAN = 'ru',
-  ROMANIAN = 'ro',
-  SAMI_NORTHERN = 'se',
-}
+export default LanguageLocales;
