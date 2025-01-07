@@ -24,7 +24,7 @@
   "scripts": {
     "eslint": "eslint -c index.js **/*.{js,ts}",
     "eslint:fix": "npm run eslint -- --fix",
-    "prettier": "prettier --check **/*.{js,ts,md,json}",
+    "prettier": "prettier --check \"**/*.{js,ts,md,json}\"",
     "prettier:fix": "npm run prettier -- --write"
   },
   "devDependencies": {

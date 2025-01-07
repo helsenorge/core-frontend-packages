@@ -31,7 +31,7 @@
     "eslint:fix": "npm run eslint -- --fix",
     "stylelint": "stylelint src/**/*.{css,scss}",
     "stylelint:fix": "npm run stylelint -- --fix",
-    "prettier": "prettier --check src/**/*.{js,jsx,ts,tsx,css,scss,md,json}",
+    "prettier": "prettier --check \"src/**/*.{ts,tsx,js,jsx,css,scss,md,json}\"",
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^34.0.0-beta.4",
-    "@helsenorge/designsystem-react": "^9.4.2",
+    "@helsenorge/designsystem-react": "10.0.0-beta.3",
     "@helsenorge/library-build": "^34.0.0-beta.4",
     "npm-run-all2": "^7.0.1",
     "react-hook-form": "^7.53.1"
