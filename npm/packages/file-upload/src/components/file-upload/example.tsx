@@ -20,7 +20,7 @@ interface FormData {
   fileupload2: UploadFile;
 }
 
-export const FileUploadExample: React.FC<{}> = () => {
+export const FileUploadExample: React.FC = () => {
   const [defaultFiles] = React.useState<UploadFile[]>([new UploadFile([], 'hello2.jpeg', 'id123', 200000, { type: 'image/jpeg' })]);
   const [acceptedFiles1, setAcceptedFiles1] = React.useState<UploadFile[]>([]);
   const [disableButton, setDisableButton] = React.useState(false);
@@ -104,8 +104,8 @@ export const FileUploadExample: React.FC<{}> = () => {
         inputId="fileupload2"
         label={
           <Label
-            labelTexts={[{ text: 'Last opp hva du vil', type: 'semibold' }]}
-            sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: 'Ingen begrensninger her' }]} />}
+            labelTexts={[{ text: 'Last opp hva du vil' }]}
+            sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: 'Ingen begrensninger her', type: 'subdued' }]} />}
           />
         }
         shouldUploadMultiple
@@ -130,8 +130,13 @@ export const FileUploadExample: React.FC<{}> = () => {
           inputId="fileupload2"
           label={
             <Label
-              labelTexts={[{ text: 'Last opp et bilde', type: 'semibold' }]}
-              sublabel={<Sublabel id={sublabelId2} sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb' }]} />}
+              labelTexts={[{ text: 'Last opp et bilde' }]}
+              sublabel={
+                <Sublabel
+                  id={sublabelId2}
+                  sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb', type: 'subdued' }]}
+                />
+              }
             />
           }
           acceptedFiles={useFileUpload2.acceptedFiles}
@@ -157,11 +162,16 @@ export const FileUploadExample: React.FC<{}> = () => {
             inputId="fileupload1"
             label={
               <Label
-                labelTexts={[{ text: 'Last opp en eller to bilder', type: 'semibold' }]}
+                labelTexts={[{ text: 'Last opp en eller to bilder' }]}
                 sublabel={
                   <Sublabel
                     id={sublabelId}
-                    sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb per fil og maks 400kb over alle filer' }]}
+                    sublabelTexts={[
+                      {
+                        text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb per fil og maks 400kb over alle filer',
+                        type: 'subdued',
+                      },
+                    ]}
                   />
                 }
               />

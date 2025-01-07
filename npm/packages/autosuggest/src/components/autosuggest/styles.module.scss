@@ -16,7 +16,7 @@
   width: 100%;
   border: 2px solid $neutral700;
   background: $white;
-  padding: getSpacer(xs) getSpacer(s) getSpacer(xs) getSpacer(s);
+  padding: getSpacer(xs) getSpacer(s);
   outline: none;
 
   @media (min-width: map.get($grid-breakpoints, md)) {

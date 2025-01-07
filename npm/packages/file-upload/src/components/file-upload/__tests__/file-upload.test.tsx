@@ -38,8 +38,8 @@ const FileUploadExample: React.FC<Props> = props => {
 
   React.useEffect(() => {
     if (useFileUpload1) {
-      acceptedFiles && useFileUpload1.setAcceptedFiles(acceptedFiles);
-      rejectedFiles && useFileUpload1.setRejectedFiles(rejectedFiles);
+      if (acceptedFiles) useFileUpload1.setAcceptedFiles(acceptedFiles);
+      if (rejectedFiles) useFileUpload1.setRejectedFiles(rejectedFiles);
     }
   }, [useFileUpload1]);
 
@@ -67,8 +67,13 @@ const FileUploadExample: React.FC<Props> = props => {
         errorText={useFormReturn.formState.errors.fileupload?.message}
         label={
           <Label
-            labelTexts={[{ text: 'Last opp et bilde', type: 'semibold' }]}
-            sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb' }]} />}
+            labelTexts={[{ text: 'Last opp et bilde' }]}
+            sublabel={
+              <Sublabel
+                id={sublabelId}
+                sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb', type: 'subdued' }]}
+              />
+            }
           />
         }
         acceptedFiles={useFileUpload1.acceptedFiles}
@@ -118,10 +123,7 @@ describe('FileUpload', () => {
             aria-describedby={sublabelId}
             inputId="id"
             label={
-              <Label
-                labelTexts={[{ text: labelText, type: 'semibold' }]}
-                sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: sublabelText }]} />}
-              />
+              <Label labelTexts={[{ text: labelText }]} sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: sublabelText }]} />} />
             }
             wrapperTestId={'test01'}
           />
@@ -148,10 +150,7 @@ describe('FileUpload', () => {
             visualDropZone
             dropzoneStatusText="Drop filer her"
             label={
-              <Label
-                labelTexts={[{ text: labelText, type: 'semibold' }]}
-                sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: sublabelText }]} />}
-              />
+              <Label labelTexts={[{ text: labelText }]} sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: sublabelText }]} />} />
             }
           />
         );
