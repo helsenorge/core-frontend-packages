@@ -10,8 +10,12 @@ import {
   isSameMonth as isSameMonthDF,
   FormatOptions,
 } from 'date-fns';
-import { nb } from 'date-fns/locale';
+import { enGB } from 'date-fns/locale/en-GB';
+import { nb } from 'date-fns/locale/nb';
+import { nn } from 'date-fns/locale/nn';
+import { se } from 'date-fns/locale/se';
 
+import LanguageLocales from './constants/languages';
 import { capitalize as ucfirst } from './string-utils';
 
 /**
@@ -52,9 +56,26 @@ export enum DateFormat {
 }
 
 /**
- * Initialiserer date-fns med norsk bokmål locale
+ * Laster date-fns locale for et begrenset utvalg språk.
  */
-export const initialize = (): void => setDefaultOptions({ locale: nb });
+export const loadLocale = (
+  language: LanguageLocales.NORWEGIAN | LanguageLocales.NORWEGIAN_NYNORSK | LanguageLocales.ENGLISH | LanguageLocales.SAMI_NORTHERN
+): void => {
+  switch (language) {
+    case LanguageLocales.NORWEGIAN:
+      setDefaultOptions({ locale: nb });
+      break;
+    case LanguageLocales.NORWEGIAN_NYNORSK:
+      setDefaultOptions({ locale: nn });
+      break;
+    case LanguageLocales.ENGLISH:
+      setDefaultOptions({ locale: enGB });
+      break;
+    case LanguageLocales.SAMI_NORTHERN:
+      setDefaultOptions({ locale: se });
+      break;
+  }
+};
 
 /**
  * Parser en dato-streng til en gyldig Date.
