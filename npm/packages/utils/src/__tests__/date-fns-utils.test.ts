@@ -1,6 +1,7 @@
 import { parse, subDays, addMinutes, subMinutes, format, setDefaultOptions } from 'date-fns';
-import { enGB, nb } from 'date-fns/locale';
+import { nb } from 'date-fns/locale';
 
+import LanguageLocales from '../constants/languages';
 import * as dateUtils from '../date-fns-utils';
 
 describe('date-fns-utils', () => {
@@ -10,15 +11,22 @@ describe('date-fns-utils', () => {
     // eslint-disable-next-line no-console
     console.log('Current Timezone:', Intl.DateTimeFormat().resolvedOptions().timeZone);
   });
-  describe('Når initialize har blitt kalt', () => {
-    it('Så formatteres datoer med norsk bokmål', () => {
-      const date = parse('22.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
 
-      setDefaultOptions({ locale: enGB });
-      expect(format(date, 'EEEE')).toEqual('Friday');
+  describe('Når loadLocale kalles', () => {
+    it('Så formatteres datoer med riktig locale', () => {
+      const date = parse('19.05.2020 08:32', 'dd.MM.yyyy HH:mm', new Date());
 
-      dateUtils.initialize();
-      expect(format(date, 'EEEE')).toEqual('fredag');
+      dateUtils.loadLocale(LanguageLocales.ENGLISH);
+      expect(format(date, 'EEEE')).toEqual('Tuesday');
+
+      dateUtils.loadLocale(LanguageLocales.NORWEGIAN);
+      expect(format(date, 'EEEE')).toEqual('tirsdag');
+
+      dateUtils.loadLocale(LanguageLocales.NORWEGIAN_NYNORSK);
+      expect(format(date, 'EEEE')).toEqual('tysdag');
+
+      dateUtils.loadLocale(LanguageLocales.SAMI_NORTHERN);
+      expect(format(date, 'EEEE')).toEqual('maŋŋebárga');
     });
   });
 
