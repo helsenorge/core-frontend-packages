@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "33.11.0",
+  "version": "33.12.1",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -48,7 +48,7 @@
     "react-hook-form": "^7.53.1"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^33.11.0",
+    "@helsenorge/core-utils": "^33.12.1",
     "@helsenorge/designsystem-react": "^9.7.0",
     "@helsenorge/library-build": "^33.5.1",
     "npm-run-all2": "^7.0.1",
