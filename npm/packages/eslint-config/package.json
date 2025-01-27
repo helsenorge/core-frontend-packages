@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "34.0.0-beta.7",
+  "version": "34.0.0",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
