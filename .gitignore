@@ -142,3 +142,10 @@ artifacts/
 *.pidb
 *.svclog
 *.scc
+
+# Devspace
+.devspace/
+
+# Helm Chart
+Chart.lock
+*.tgz
