@@ -30,6 +30,29 @@ describe('date-fns-utils', () => {
     });
   });
 
+  describe('Når getLocale kalles med et språk som støttes', () => {
+    it('Så returneres riktig locale fra date-fns', () => {
+      const enLocale = dateUtils.getLocale(LanguageLocales.ENGLISH);
+      expect(enLocale.code).toEqual('en-GB');
+
+      const nbLocale = dateUtils.getLocale(LanguageLocales.NORWEGIAN);
+      expect(nbLocale.code).toEqual('nb');
+
+      const nnLocale = dateUtils.getLocale(LanguageLocales.NORWEGIAN_NYNORSK);
+      expect(nnLocale.code).toEqual('nn');
+
+      const seLocale = dateUtils.getLocale(LanguageLocales.SAMI_NORTHERN);
+      expect(seLocale.code).toEqual('se');
+    });
+  });
+
+  describe('Når getLocale kalles med et språk som ikke støttes', () => {
+    it('Så returneres default locale fra date-fns', () => {
+      const defaultLOcale = dateUtils.getLocale(LanguageLocales.ROMANIAN);
+      expect(defaultLOcale.code).toEqual('nb');
+    });
+  });
+
   describe('Når safeParseJSON blir kalt', () => {
     describe('Når safeParseJSON blir kalt med en gyldig Date', () => {
       it('Så returneres datoen som en Date', () => {

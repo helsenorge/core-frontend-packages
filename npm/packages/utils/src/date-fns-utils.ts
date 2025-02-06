@@ -9,6 +9,7 @@ import {
   startOfDay as startOfDayDF,
   isSameMonth as isSameMonthDF,
   FormatOptions,
+  Locale,
 } from 'date-fns';
 import { enGB } from 'date-fns/locale/en-GB';
 import { nb } from 'date-fns/locale/nb';
@@ -74,6 +75,24 @@ export const loadLocale = (
     case LanguageLocales.SAMI_NORTHERN:
       setDefaultOptions({ locale: se });
       break;
+  }
+};
+
+/**
+ * Returnerer date-fns locale for et begrenset utvalg språk.
+ */
+export const getLocale = (language: LanguageLocales): Locale => {
+  switch (language) {
+    case LanguageLocales.NORWEGIAN:
+      return nb;
+    case LanguageLocales.NORWEGIAN_NYNORSK:
+      return nn;
+    case LanguageLocales.ENGLISH:
+      return enGB;
+    case LanguageLocales.SAMI_NORTHERN:
+      return se;
+    default:
+      return nb;
   }
 };
 
