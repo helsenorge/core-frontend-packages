@@ -9,6 +9,7 @@ export default {
   'react/display-name': 'warn',
   'react/jsx-no-literals': 'error',
   'react/no-danger': 'error',
+  'import/no-duplicates': ['error', { 'prefer-inline': true, considerQueryString: true }],
   'import/order': [
     'warn',
     {
