@@ -36,3 +36,23 @@ For developing locally you should follow these steps:
 - Other npm errors and troubles:
     - Delete all node_modules and package-lock.json and try reinstalling all packages.
         - ```npm i``` and ```npm run build``` in root
+
+## Development chores
+
+## Updating dependencies
+
+```bash
+npm i -g npm-check-updates
+ncu -u \
+    --deep \
+    -x typescript \
+    -x esbuild \
+    -x react \
+    -x react-dom \
+    -x react-router-dom \
+    -x @types/react \
+    -x @types/react-dom \
+    -x @types/node \
+    -x bootstrap \
+    -x conventional-changelog-cli
+```
