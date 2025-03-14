@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "34.6.0",
+  "version": "34.7.1",
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
   "repository": {
     "type": "git",

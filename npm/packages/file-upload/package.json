@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "34.6.0",
+  "version": "34.7.1",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -48,7 +48,7 @@
     "react-hook-form": "^7.54.2"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^34.6.0",
+    "@helsenorge/core-utils": "^34.7.1",
     "@helsenorge/designsystem-react": "^10.6.2",
     "@helsenorge/library-build": "^34.1.2",
     "npm-run-all2": "^7.0.2",
