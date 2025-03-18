@@ -20,7 +20,7 @@
   "sideEffects": false,
   "scripts": {
     "prestart": "rimraf dist",
-    "start": "node node_modules/@helsenorge/library-build/library-scripts.js start --entry ./src/__devonly__/index.tsx --name testpage",
+    "start": "vite dev --port 3000 --open",
     "clean": "rimraf lib",
     "typed-scss-modules": "typed-scss-modules \"src/**/*.module.scss\" --nameFormat none --exportType default --includePaths node_modules ../../../node_modules",
     "prebuild": "npm-run-all clean typed-scss-modules",
