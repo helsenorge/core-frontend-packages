@@ -1,8 +1,8 @@
 @use 'sass:map';
-@import '@helsenorge/designsystem-react/scss/palette';
-@import '@helsenorge/designsystem-react/scss/spacers';
-@import '@helsenorge/designsystem-react/scss/breakpoints';
-@import '@helsenorge/designsystem-react/scss/font-settings';
+@use '@helsenorge/designsystem-react/scss/palette' as palette;
+@use '@helsenorge/designsystem-react/scss/spacers' as spacers;
+@use '@helsenorge/designsystem-react/scss/breakpoints' as breakpoints;
+@use '@helsenorge/designsystem-react/scss/font-settings' as font-settings;
 
 // CSS-klassenavn er hentet fra https://github.com/moroshko/react-autosuggest?tab=readme-ov-file#theme-optional
 .container {
@@ -11,55 +11,55 @@
 
 .input {
   font-family: inherit;
-  font-size: $font-size-sm;
+  font-size: font-settings.$font-size-sm;
   line-height: 1.5rem;
   width: 100%;
-  border: 2px solid $neutral700;
-  background: $white;
-  padding: getSpacer(xs) getSpacer(s);
+  border: 2px solid palette.$neutral700;
+  background: palette.$white;
+  padding: spacers.getSpacer(xs) spacers.getSpacer(s);
   outline: none;
 
-  @media (min-width: map.get($grid-breakpoints, md)) {
+  @media (min-width: map.get(breakpoints.$grid-breakpoints, md)) {
     line-height: 1.625rem;
-    font-size: $font-size-md;
+    font-size: font-settings.$font-size-md;
   }
 
   &:focus,
   &:focus-within {
-    background: $white;
-    border-color: $neutral900;
-    box-shadow: 0 0 0 2px $neutral900;
+    background: palette.$white;
+    border-color: palette.$neutral900;
+    box-shadow: 0 0 0 2px palette.$neutral900;
   }
 
   &:hover {
-    background: $neutral50;
-    border-color: $neutral700;
-    box-shadow: 0 0 0 1px $neutral700;
+    background: palette.$neutral50;
+    border-color: palette.$neutral700;
+    box-shadow: 0 0 0 1px palette.$neutral700;
 
     &:focus-within {
-      border-color: $black;
-      box-shadow: 0 0 0 2px $black;
+      border-color: palette.$black;
+      box-shadow: 0 0 0 2px palette.$black;
     }
   }
 }
 
 .suggestion {
   cursor: pointer;
-  background: $white;
-  padding: getSpacer(s);
+  background: palette.$white;
+  padding: spacers.getSpacer(s);
   line-height: 1.5rem;
 
-  @media (min-width: map.get($grid-breakpoints, md)) {
+  @media (min-width: map.get(breakpoints.$grid-breakpoints, md)) {
     line-height: 1.625rem;
   }
 
   &:not(:last-child) {
-    border-bottom: 1px solid $neutral50;
+    border-bottom: 1px solid palette.$neutral50;
   }
 }
 
 .suggestionHighlighted {
-  background: $neutral200;
+  background: palette.$neutral200;
 }
 
 .suggestionsContainer {
@@ -67,8 +67,8 @@
   height: auto;
   overflow-x: auto;
   max-height: 15.625rem;
-  border: 2px solid $neutral800;
-  box-shadow: 0 0 0 2px $neutral800;
+  border: 2px solid palette.$neutral800;
+  box-shadow: 0 0 0 2px palette.$neutral800;
   margin-top: 0.5rem;
   position: absolute;
   width: 100%;
@@ -76,7 +76,7 @@
   left: 0;
   top: 3.25rem;
 
-  @media (min-width: map.get($grid-breakpoints, md)) {
+  @media (min-width: map.get(breakpoints.$grid-breakpoints, md)) {
     top: 3.5rem;
   }
 }
