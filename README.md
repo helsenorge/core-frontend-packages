@@ -45,14 +45,11 @@ For developing locally you should follow these steps:
 npm i -g npm-check-updates
 ncu -u \
     --deep \
-    -x typescript \
-    -x esbuild \
     -x react \
     -x react-dom \
     -x react-router-dom \
     -x @types/react \
     -x @types/react-dom \
     -x @types/node \
-    -x bootstrap \
     -x conventional-changelog-cli
 ```
