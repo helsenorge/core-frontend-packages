@@ -45,13 +45,13 @@
     "react-dom": "^18.0.0"
   },
   "optionalDependencies": {
-    "react-hook-form": "^7.54.2"
+    "react-hook-form": "^7.56.1"
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^35.0.0-beta.10",
     "@helsenorge/designsystem-react": "11.0.0-beta.3",
     "@helsenorge/library-build": "^35.0.0-beta.10",
     "npm-run-all2": "^7.0.2",
-    "react-hook-form": "^7.54.2"
+    "react-hook-form": "^7.56.1"
   }
 }
