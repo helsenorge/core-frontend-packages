@@ -16,10 +16,17 @@ const pairListToQueryString = (pairList: Array<{ key: string; value: string }>):
 };
 
 /**
+ * Returnerer URLSearchParams basert på window.location.search
+ */
+export const getSearchParams = (): URLSearchParams => {
+  return new URLSearchParams(window.location.search);
+};
+
+/**
  * Returnerer en objekt med alle URL params basert på window.location.search
  */
 export const getQueryStrings = (): {} => {
-  return Object.fromEntries(new URLSearchParams(window.location.search));
+  return Object.fromEntries(getSearchParams());
 };
 
 /**
