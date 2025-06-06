@@ -12,3 +12,9 @@ export const getUrlHostname = (url: string): string | undefined => {
     return;
   }
 };
+
+/**
+ * Sjekk om URL bruker https eller ikke
+ * @returns true dersom protokollen er https
+ */
+export const isHttps = (): boolean => window.location.protocol === 'https:';
