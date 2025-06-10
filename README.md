@@ -91,3 +91,18 @@ ncu -u \
     -x @types/node \
     -x conventional-changelog-cli
 ```
+
+## Documentation
+
+Build using docker:
+
+```bash
+docker build -f documentation.Dockerfile --build-arg PAT=$env:HNDEV_PAT -t helsenorge/frontenddocs/static .
+docker run -p 8080:8080 --rm -it --name helsenorge-frontenddocs-static helsenorge/frontenddocs/static
+```
+
+Available sites:
+
+- http://localhost:8080/cmstest/
+- http://localhost:8080/documentation/
+- http://localhost:8080/tjenestertest/
