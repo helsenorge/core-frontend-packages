@@ -33,10 +33,10 @@
   "type": "module",
   "sideEffects": false,
   "peerDependencies": {
-    "@helsenorge/designsystem-react": ">=11.0.0"
+    "@helsenorge/designsystem-react": ">=12.0.0-beta"
   },
   "devDependencies": {
-    "@helsenorge/designsystem-react": "^11.2.0",
+    "@helsenorge/designsystem-react": "12.0.0-beta.1",
     "@helsenorge/library-build": "^35.4.0",
     "@types/node": "^22.13.10"
   },
