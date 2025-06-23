@@ -8,8 +8,6 @@ describe('date-fns-utils', () => {
   beforeEach(() => {
     setDefaultOptions({ locale: nb });
     process.env.TZ = 'Europe/Oslo';
-    // eslint-disable-next-line no-console
-    console.log('Current Timezone:', Intl.DateTimeFormat().resolvedOptions().timeZone);
   });
 
   describe('Når loadLocale kalles', () => {

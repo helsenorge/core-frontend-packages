@@ -1,6 +1,5 @@
 import { vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
-import 'whatwg-fetch';
 
 declare global {
   interface Window {
