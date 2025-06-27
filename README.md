@@ -85,7 +85,7 @@ ncu -u \
     --deep \
     -x react \
     -x react-dom \
-    -x react-router-dom \
+    -x react-router \
     -x @types/react \
     -x @types/react-dom \
     -x @types/node \

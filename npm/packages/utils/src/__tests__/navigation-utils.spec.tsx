@@ -1,4 +1,4 @@
-import { Location } from 'react-router-dom';
+import { Location } from 'react-router';
 import { vi } from 'vitest';
 
 import { navigate, navigateAdd, goBackOrUp } from '../navigation-utils';
@@ -6,7 +6,7 @@ import { navigate, navigateAdd, goBackOrUp } from '../navigation-utils';
 describe('Navigation-utils', () => {
   let globalNavigationTrail = [];
   const mockedNavigate = vi.fn();
-  vi.mock('react-router-dom', async importOriginal => {
+  vi.mock('react-router', async importOriginal => {
     const actual = await importOriginal();
 
     return {
