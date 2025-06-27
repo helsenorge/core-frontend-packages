@@ -1,4 +1,4 @@
-import { Location, NavigationType, NavigateFunction } from 'react-router-dom';
+import { Location, NavigationType, NavigateFunction } from 'react-router';
 
 interface Navigation {
   location: Location | undefined;
