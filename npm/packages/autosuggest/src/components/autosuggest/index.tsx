@@ -19,7 +19,11 @@ export interface Suggestion {
 interface Props<T>
   extends Pick<
     AutosuggestPropsBase<T>,
-    'focusInputOnSuggestionClick' | 'onSuggestionsClearRequested' | 'onSuggestionSelected' | 'onSuggestionsFetchRequested'
+    | 'focusInputOnSuggestionClick'
+    | 'onSuggestionsClearRequested'
+    | 'onSuggestionSelected'
+    | 'onSuggestionsFetchRequested'
+    | 'shouldRenderSuggestions'
   > {
   /** En array med suggestions som skal vises */
   suggestions: Array<T>;
