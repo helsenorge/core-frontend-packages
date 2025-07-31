@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "35.6.1",
+  "version": "36.0.0-beta.4",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
@@ -33,20 +33,20 @@
     "typescript": "~5.8.3"
   },
   "dependencies": {
-    "@eslint/js": "^9.25.1",
-    "@typescript-eslint/eslint-plugin": "^8.31.0",
-    "eslint": "^9.25.1",
-    "eslint-config-prettier": "^10.1.2",
-    "eslint-plugin-import": "^2.31.0",
+    "@eslint/js": "^9.32.0",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "eslint": "^9.32.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-testing-library": "^7.1.1",
-    "globals": "^16.0.0",
-    "lint-staged": "^15.5.1",
-    "prettier": "^3.5.3",
-    "stylelint": "^16.19.1",
-    "stylelint-config-standard-scss": "^14.0.0",
-    "typescript-eslint": "^8.31.0"
+    "eslint-plugin-testing-library": "^7.6.3",
+    "globals": "^16.3.0",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.2",
+    "stylelint": "^16.23.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "typescript-eslint": "^8.38.0"
   }
 }
