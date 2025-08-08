@@ -84,6 +84,7 @@ const Autosuggest: React.FC<Props<Suggestion>> = props => {
           getSuggestionValue={getSuggestionValue}
           renderSuggestion={props.renderSuggestion ? props.renderSuggestion : renderSuggestion}
           focusInputOnSuggestionClick={props.focusInputOnSuggestionClick || false}
+          shouldRenderSuggestions={props.shouldRenderSuggestions}
         />
       </div>
     </ErrorWrapper>
