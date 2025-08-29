@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "36.0.0-beta.7",
+  "version": "35.9.0",
   "main": "index.js",
   "publishConfig": {
     "directory": "lib",
@@ -39,19 +39,19 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": ">=36.0.0-beta",
-    "@helsenorge/designsystem-react": ">=12.0.0-beta",
+    "@helsenorge/core-utils": ">=35.0.0",
+    "@helsenorge/designsystem-react": ">=11.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
   "optionalDependencies": {
-    "react-hook-form": "^7.62.0"
+    "react-hook-form": "^7.56.1"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^36.0.0-beta.7",
-    "@helsenorge/designsystem-react": "12.0.0-beta.3",
-    "@helsenorge/library-build": "^36.0.0-beta.7",
-    "npm-run-all2": "^8.0.4",
-    "react-hook-form": "^7.62.0"
+    "@helsenorge/core-utils": "^35.9.0",
+    "@helsenorge/designsystem-react": "^11.7.0",
+    "@helsenorge/library-build": "^35.9.0",
+    "npm-run-all2": "^7.0.2",
+    "react-hook-form": "^7.56.1"
   }
 }
