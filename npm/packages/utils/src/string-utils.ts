@@ -90,3 +90,38 @@ export const isValid = (s: string): boolean => {
     !/<.*?>/g.test(unescapeHtmlEntities(unescapeHexEntities(s)))
   );
 };
+
+/**
+ * Oppretter en JSON-streng av verdien
+ * @param value - verdien som skal stringifyes
+ * @returns en JSON-streng av verdien
+ */
+export function safeStableStringify(value: unknown): string {
+  const seen = new WeakSet();
+
+  const stringify = (val: unknown): unknown => {
+    if (val && typeof val === 'object') {
+      if (seen.has(val)) {
+        // Dropp sirkulære referanser
+        return undefined;
+      }
+
+      seen.add(val);
+
+      if (Array.isArray(val)) {
+        return val.map(stringify);
+      }
+
+      const keys = Object.keys(val as Record<string, unknown>).sort();
+      const out: Record<string, unknown> = {};
+
+      for (const k of keys) {
+        out[k] = stringify((val as Record<string, unknown>)[k]);
+      }
+
+      return out;
+    }
+    return val;
+  };
+  return JSON.stringify(stringify(value));
+}

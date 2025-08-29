@@ -1,4 +1,4 @@
-import { vi } from 'vitest';
+import { vi, describe, it, expect } from 'vitest';
 
 import * as stringFunctions from '../string-utils';
 
@@ -192,6 +192,61 @@ describe('String-utils', () => {
       it('Så returnerer den true', () => {
         const s = stringFunctions.isValid('This is a normal string');
         expect(s).toBeTruthy();
+      });
+    });
+  });
+
+  // Nye tester for safeStableStringify
+  describe('Gitt at safeStableStringify skal sjekkes', () => {
+    describe('Når et objekt har nøkler i tilfeldig rekkefølge', () => {
+      it('Så blir nøkler sortert alfabetisk i output', () => {
+        const obj1 = { b: 1, a: 2 } as const;
+        const str = stringFunctions.safeStableStringify(obj1);
+        expect(str).toEqual('{"a":2,"b":1}');
+      });
+    });
+
+    describe('Når objektet er nøstet', () => {
+      it('Så blir alle nivåer sortert forutsigbart', () => {
+        const obj = { b: { y: 2, x: 1 }, a: { b: 1, a: 2 } } as const;
+        const str = stringFunctions.safeStableStringify(obj);
+        expect(str).toEqual('{"a":{"a":2,"b":1},"b":{"x":1,"y":2}}');
+      });
+    });
+
+    describe('Når objektet inneholder arrays', () => {
+      it('Så beholdes rekkefølgen i arrays og objekter inni sorteres', () => {
+        const obj = { a: [{ b: 2, a: 1 }, 3] };
+        const str = stringFunctions.safeStableStringify(obj);
+        expect(str).toEqual('{"a":[{"a":1,"b":2},3]}');
+      });
+    });
+
+    describe('Når objektet inneholder sirkulære referanser', () => {
+      it('Så ignoreres sirkulære referanser trygt', () => {
+        const root: any = { name: 'root' };
+        root.self = root; // sirkulær
+        const str = stringFunctions.safeStableStringify(root);
+        expect(str).toEqual('{"name":"root"}');
+      });
+    });
+
+    describe('Når to like objekter har ulik nøkkelrekkefølge', () => {
+      it('Så gir de lik serialisering', () => {
+        const o1 = { z: 1, a: 2, m: 3 };
+        const o2 = { a: 2, m: 3, z: 1 };
+        const s1 = stringFunctions.safeStableStringify(o1);
+        const s2 = stringFunctions.safeStableStringify(o2);
+        expect(s1).toEqual(s2);
+      });
+    });
+
+    describe('Når det sendes primitive verdier', () => {
+      it('Så blir de serialisert på samme måte som JSON.stringify', () => {
+        expect(stringFunctions.safeStableStringify('abc')).toEqual(JSON.stringify('abc'));
+        expect(stringFunctions.safeStableStringify(42)).toEqual(JSON.stringify(42));
+        expect(stringFunctions.safeStableStringify(true)).toEqual(JSON.stringify(true));
+        expect(stringFunctions.safeStableStringify(null as unknown as any)).toEqual(JSON.stringify(null));
       });
     });
   });
