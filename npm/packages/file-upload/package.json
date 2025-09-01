@@ -39,7 +39,7 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": ">=36.0.0-beta",
+    "@helsenorge/core-utils": ">=36.0.0",
     "@helsenorge/designsystem-react": ">=12.0.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
@@ -48,9 +48,9 @@
     "react-hook-form": "^7.62.0"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^36.0.0-beta.8",
+    "@helsenorge/core-utils": "^36.0.0",
     "@helsenorge/designsystem-react": "12.0.1",
-    "@helsenorge/library-build": "^36.0.0-beta.8",
+    "@helsenorge/library-build": "^36.0.0",
     "npm-run-all2": "^8.0.4",
     "react-hook-form": "^7.62.0"
   }
