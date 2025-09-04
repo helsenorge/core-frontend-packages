@@ -106,3 +106,15 @@ Available sites:
 - http://localhost:8080/cmstest/
 - http://localhost:8080/documentation/
 - http://localhost:8080/tjenestertest/
+
+## Playwright tests
+
+```bash
+cd web # Or other folder with Playwright tests
+# Only necessary the first time
+npx playwright install
+# Run tests
+npx playwright test
+# or use the UI
+npx playwright test --ui
+```
