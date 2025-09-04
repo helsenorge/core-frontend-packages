@@ -3,7 +3,7 @@ import { UserConfigFn, coverageConfigDefaults, defineConfig } from 'vitest/confi
 export const getConfig: UserConfigFn = () => {
   return {
     test: {
-      include: ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'],
+      include: ['src/**/__tests__/**/*.[jt]s?(x)', 'src/**/?(*.)+(spec|test).[jt]s?(x)'],
       globals: true,
       environment: 'jsdom',
       environmentOptions: {
