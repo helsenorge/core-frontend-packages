@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useId } from 'react';
 
 import classNames from 'classnames';
 
@@ -12,7 +12,7 @@ import { usePseudoClasses } from '@helsenorge/designsystem-react/hooks/usePseudo
 import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/utils/refs';
 
-import { FormOnColor, useUuid } from '@helsenorge/designsystem-react';
+import { FormOnColor } from '@helsenorge/designsystem-react';
 
 import FileElement, { Type } from './file';
 
@@ -125,7 +125,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     dropzoneStatusText,
     error,
     errorText,
-    errorTextId,
+    errorTextId: errorTextIdProp,
     fileElementClassName,
     helpElement,
     hideDeleteButton,
@@ -152,7 +152,8 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   const mergedRefs = mergeRefs([ref, refObject]);
   const inputButtonId = inputId + '-button';
   const dropzoneTextId = inputId + 'dropzonetext';
-  const errorTextUuid = useUuid(errorTextId);
+  const errorTextIdFallback = useId();
+  const errorTextId = errorTextIdProp || errorTextIdFallback;
 
   interface DragFileEvent extends React.DragEvent<HTMLInputElement> {
     target: EventTarget & { accept: string };
@@ -167,7 +168,9 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   }, [defaultFiles]);
 
   React.useEffect(() => {
-    calledFakeOnChange && triggerOnChangeEvent();
+    if (calledFakeOnChange) {
+      triggerOnChangeEvent();
+    }
   }, [calledFakeOnChange]);
 
   /** Setter validFileTypes array til string format som <input/> forventer */
@@ -217,23 +220,30 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     if (!calledFakeOnChange && refObject && refObject.current && refObject.current.files) {
       const filteredNewFiles = getNewFiles([...refObject.current.files] as UploadFile[]);
       setInputFiles([...acceptedFiles, ...rejectedFiles, ...filteredNewFiles]);
-      onChangeFile && onChangeFile(filteredNewFiles);
+      if (onChangeFile) {
+        onChangeFile(filteredNewFiles);
+      }
     } else {
       setCalledFakeOnChange(false);
     }
-
-    props.onChange && props.onChange(event);
+    if (props.onChange) {
+      props.onChange(event);
+    }
   };
 
   const onDropHandler = (e: DragFileEvent): void => {
     const filteredNewFiles = getNewFiles([...e.dataTransfer.files] as UploadFile[]);
     setInputFiles([...acceptedFiles, ...rejectedFiles, ...filteredNewFiles]);
     setCalledFakeOnChange(true);
-    onChangeFile && onChangeFile(filteredNewFiles);
+    if (onChangeFile) {
+      onChangeFile(filteredNewFiles);
+    }
   };
 
   const onOpenClick = (): void => {
-    refObject.current && refObject.current.click();
+    if (refObject.current) {
+      refObject.current.click();
+    }
   };
 
   const onDeleteHandler = (fileId: string): void => {
@@ -241,13 +251,15 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     const newRejectedFiles = rejectedFiles.filter(f => f.id !== fileId);
     setInputFiles([...newAcceptedFiles, ...newRejectedFiles]);
     setCalledFakeOnChange(true);
-    onDeleteFile && onDeleteFile(fileId);
+    if (onDeleteFile) {
+      onDeleteFile(fileId);
+    }
   };
 
   const renderUploadButton = (): React.JSX.Element | undefined => {
     return (
       <Button
-        aria-describedby={[dropzoneTextId, getAriaDescribedBy(props, errorTextUuid)].filter(Boolean).join(' ')}
+        aria-describedby={[dropzoneTextId, getAriaDescribedBy(props, errorTextId)].filter(Boolean).join(' ')}
         variant="borderless"
         concept={error ? 'destructive' : 'normal'}
         id={inputButtonId}
@@ -357,7 +369,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
   const wrapperClasses = classNames(styles.dropzone, wrapperClassName);
 
   return (
-    <ErrorWrapper errorText={errorText} errorTextId={errorTextUuid}>
+    <ErrorWrapper errorText={errorText} errorTextId={errorTextId}>
       <div className={wrapperClasses} data-testid={wrapperTestId}>
         {renderLabel(label, inputButtonId, FormOnColor.onwhite)}
         {helpElement}
