@@ -1,6 +1,6 @@
-import { vi } from 'vitest';
+import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest';
 
-import { isMobileUA, handleIOSSafariUA } from '../user-agents-utils';
+import { isMobileUA } from '../user-agents-utils';
 
 describe('User-agents-utils', () => {
   const originalUserAgent = global.navigator.userAgent;
@@ -30,13 +30,6 @@ describe('User-agents-utils', () => {
         expect(mobile).toBeFalsy();
       });
     });
-
-    describe('Når handleIOSSafariUA kalles', () => {
-      it('Så er body uendret', () => {
-        handleIOSSafariUA();
-        expect(document.body.classList.contains('ios-safari')).toBeFalsy();
-      });
-    });
   });
 
   describe('Gitt at window.navigator er satt til android', () => {
@@ -47,20 +40,6 @@ describe('User-agents-utils', () => {
 
         const mobile = isMobileUA();
         expect(mobile).toBeTruthy();
-        global.navigator.userAgent = originalUserAgent;
-      });
-    });
-  });
-
-  describe('Gitt at window.navigator er satt til safari', () => {
-    describe('Når handleIOSSafariUA kalles', () => {
-      it('Så ...', () => {
-        global.navigator.userAgent =
-          'Mozilla/5.0 (iPhone; CPU iPhone OS 12_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.1 Mobile/15E148 Safari/604.1';
-
-        handleIOSSafariUA();
-
-        expect(document.body.classList.contains('ios-safari')).toBeTruthy();
         global.navigator.userAgent = originalUserAgent;
       });
     });
