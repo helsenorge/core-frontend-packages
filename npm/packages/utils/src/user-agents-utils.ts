@@ -52,21 +52,6 @@ export const isMobileUA = (): boolean => {
   return check;
 };
 
-/**
- * Legger til 'ios-safari' className på body når nettleseren er safari (native check on user agent)
- */
-export const handleIOSSafariUA = (): void => {
-  if (!document.body.classList.contains('ios-safari')) {
-    const ua = window.navigator.userAgent;
-    const iOS = isAppleMobileDevice();
-    const webkit = !!ua.match(/WebKit/i);
-    const iOSSafari = iOS && webkit && !ua.match(/CriOS/i) && !ua.match(/OPiOS/i);
-    if (iOSSafari) {
-      document.body.classList.add('ios-safari');
-    }
-  }
-};
-
 export const isAndroid = (): boolean => {
   return navigator.userAgent.toLowerCase().indexOf('android') > -1;
 };
