@@ -1,11 +1,10 @@
-import * as React from 'react';
+import React, { useId } from 'react';
 
 import ReactAutosuggest, { AutosuggestPropsBase, InputProps, RenderSuggestion } from 'react-autosuggest';
 
 import ErrorWrapper from '@helsenorge/designsystem-react/components/ErrorWrapper';
 import { renderLabel } from '@helsenorge/designsystem-react/components/Label';
 import { FormOnColor } from '@helsenorge/designsystem-react/constants';
-import { useUuid } from '@helsenorge/designsystem-react/hooks/useUuid';
 import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 
 import styles from './styles.module.scss';
@@ -60,18 +59,20 @@ const renderSuggestion = (suggestion: Suggestion): React.JSX.Element => (
 const getSuggestionValue = (suggestion: Suggestion): string => (suggestion.label ? suggestion.label : '');
 
 const Autosuggest: React.FC<Props<Suggestion>> = props => {
-  const inputId = useUuid(props.inputProps.id);
-  const errorTextUuid = useUuid(props.errorTextId);
+  const inputIdFallback = useId();
+  const inputId = props.inputProps.id || inputIdFallback;
+  const errorTextIdFallback = useId();
+  const errorTextId = props.errorTextId || errorTextIdFallback;
 
   const inputProps: InputProps<Suggestion> = {
     ...props.inputProps,
     id: inputId,
     'aria-invalid': props.error,
-    'aria-describedby': getAriaDescribedBy({ ...props.inputProps, ...props }, errorTextUuid),
+    'aria-describedby': getAriaDescribedBy({ ...props.inputProps, ...props }, errorTextId),
   };
 
   return (
-    <ErrorWrapper errorText={props.errorText} errorTextId={errorTextUuid} className={props.errorWrapperClassName}>
+    <ErrorWrapper errorText={props.errorText} errorTextId={errorTextId} className={props.errorWrapperClassName}>
       <div className={props.className}>
         {renderLabel(props.label, inputId, props.error ? FormOnColor.oninvalid : FormOnColor.onwhite)}
         <ReactAutosuggest
