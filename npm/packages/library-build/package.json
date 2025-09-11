@@ -38,7 +38,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.18.0",
+    "@types/node": "^22.18.1",
     "@types/yargs": "^17.0.33",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
@@ -58,10 +58,10 @@
     "esbuild": "~0.25.9",
     "jsdom": "^26.1.0",
     "rimraf": "^6.0.1",
-    "sass": "^1.91.0",
-    "sass-embedded": "^1.91.0",
+    "sass": "^1.92.1",
+    "sass-embedded": "^1.92.1",
     "typescript": "~5.9.2",
-    "vite": "^6.3.5",
+    "vite": "^6.3.6",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
     "yargs": "^18.0.0"
