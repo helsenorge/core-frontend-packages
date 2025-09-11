@@ -52,7 +52,7 @@
     "@types/copyfiles": "^2.4.4",
     "@types/react": "^18.3.24",
     "@types/react-dom": "^18.3.7",
-    "@vitejs/plugin-react": "^4.7.0",
+    "@vitejs/plugin-react": "^5.0.2",
     "@vitest/coverage-v8": "^3.2.4",
     "copyfiles": "^2.4.1",
     "esbuild": "~0.25.9",
@@ -61,7 +61,7 @@
     "sass": "^1.92.1",
     "sass-embedded": "^1.92.1",
     "typescript": "~5.9.2",
-    "vite": "^6.3.6",
+    "vite": "^7.1.5",
     "vite-tsconfig-paths": "^5.1.4",
     "vitest": "^3.2.4",
     "yargs": "^18.0.0"
