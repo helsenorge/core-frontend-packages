@@ -77,6 +77,42 @@ For developing locally you should follow these steps:
 
 ## Development chores
 
+### Self-hosting React / ReactDOM ESM bundles
+
+We vendor specific versions of `react` and `react-dom/client` (and their transitive ESM dependencies) from https://esm.sh so they can be served locally from `/core/static/js` without external network calls at runtime.
+
+Script:
+
+```bash
+# Fetch version 19.1.1
+./download-imports.sh 19.1.1
+
+# or
+VERSION=19.1.1 ./download-imports.sh
+```
+
+This creates (example):
+
+```
+web/static-scripts/react/19.1.1/...
+web/static-scripts/react-dom/19.1.1/...
+```
+
+Imports inside those files are rewritten to absolute paths under `/core/static/js/...` which matches the server mapping for `web/static-scripts`.
+
+If adding a new React version, commit the generated folders so consumers using that version don't hit the network.
+
+Implementation details:
+- `scripts/fetch-esm-react.mjs` recursively downloads any esm.sh root-absolute or full URLs referenced by the initial React and ReactDOM client entry points.
+- Distinguishes query-string variations by appending a suffix before `.js` (e.g. `_target_es2022`).
+- Additional transitive packages (e.g. `scheduler`) are stored under their own directory (e.g. `web/static-scripts/scheduler/<version>/`).
+
+Limitations / notes:
+- Designed for React + ReactDOM; extending to more packages just add entries in `PACKAGES` inside the script.
+- Very naive import regex (works for esm.sh output); complex cases may require refinement.
+- Re-run script if upstream output format changes.
+
+
 ## Updating dependencies
 
 ```bash
