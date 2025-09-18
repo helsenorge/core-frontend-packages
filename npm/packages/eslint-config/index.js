@@ -1,6 +1,7 @@
 // @ts-check
 
 import js from '@eslint/js';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import prettierConfig from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
@@ -13,6 +14,7 @@ import tseslint from 'typescript-eslint';
 import rules from './rules.js';
 
 export const defaultFiles = ['**/*.[jt]s?(x)'];
+export const defaultIgnores = ['**/dist/**', '**/lib/**', '**/public/**', '**/build/**', '**/coverage/**'];
 export const testFiles = ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'];
 
 export const configs = [
@@ -30,7 +32,6 @@ export const configs = [
       ...react.configs['jsx-runtime'].rules,
     },
   },
-  { ignores: ['dist'] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: defaultFiles,
@@ -64,4 +65,4 @@ export const configs = [
   prettierConfig,
 ];
 
-export default tseslint.config(...configs);
+export default defineConfig([...configs, globalIgnores(defaultIgnores)]);
