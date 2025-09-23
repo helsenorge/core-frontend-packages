@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^37.0.0-beta.1",
-    "@helsenorge/designsystem-react": "12.2.0",
+    "@helsenorge/designsystem-react": "12.4.0",
     "@helsenorge/library-build": "^37.0.0-beta.1",
     "npm-run-all2": "^8.0.4",
     "react-hook-form": "^7.62.0"
