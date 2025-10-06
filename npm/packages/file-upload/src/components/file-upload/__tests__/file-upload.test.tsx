@@ -18,7 +18,7 @@ class MockDataTransfer {
   };
 }
 
-global.DataTransfer = MockDataTransfer;
+vi.stubGlobal('DataTransfer', MockDataTransfer);
 
 const FileUploadExample: React.FC<Props> = props => {
   const { acceptedFiles, rejectedFiles } = props;
@@ -111,6 +111,9 @@ const FileUploadExample2: React.FC = () => {
 FileUploadExample2.displayName = 'FileUploadExample2';
 
 describe('FileUpload', () => {
+  afterAll(() => {
+    vi.unstubAllGlobals();
+  });
   describe('Gitt at FileUpload skal vises vanlig', () => {
     describe('Når komponentet rendres', () => {
       it('Så det synlig', () => {
