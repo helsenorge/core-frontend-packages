@@ -105,4 +105,6 @@ export default {
   ],
   // https://typescript-eslint.io/rules/no-import-type-side-effects/
   '@typescript-eslint/no-import-type-side-effects': 'error',
+  // https://typescript-eslint.io/rules/consistent-type-imports/
+  '@typescript-eslint/consistent-type-imports': ['error', { fixStyle: 'inline-type-imports' }],
 };
