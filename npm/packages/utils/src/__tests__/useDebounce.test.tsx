@@ -1,4 +1,4 @@
-import { ChangeEvent, ReactElement, useState } from 'react';
+import { type ChangeEvent, type ReactElement, useState } from 'react';
 
 import { fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
