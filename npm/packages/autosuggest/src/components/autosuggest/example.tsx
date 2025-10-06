@@ -1,18 +1,19 @@
 /* eslint-disable no-console */
 import * as React from 'react';
 
-import {
+import { useForm, type SubmitHandler } from 'react-hook-form';
+
+import type {
   SuggestionsFetchRequested,
   SuggestionsFetchRequestedParams,
   OnSuggestionSelected,
   OnSuggestionsClearRequested,
 } from 'react-autosuggest';
-import { useForm, SubmitHandler } from 'react-hook-form';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
 import Spacer from '@helsenorge/designsystem-react/components/Spacer';
 
-import Autosuggest, { Suggestion } from '.';
+import Autosuggest, { type Suggestion } from '.';
 
 interface ExampleForm {
   value: string;

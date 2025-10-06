@@ -1,4 +1,4 @@
-import { UploadFile, MimeTypes } from '.';
+import type { UploadFile, MimeTypes } from '.';
 
 export type SingleFileValidation = (firstParam: UploadFile, ...args: unknown[]) => true | string;
 export type AllFilesValidation = (firstParam: UploadFile[], ...args: unknown[]) => true | string;

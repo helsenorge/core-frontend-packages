@@ -1,5 +1,5 @@
 import react from '@vitejs/plugin-react';
-import { UserConfigFnPromise, defineConfig } from 'vite';
+import { type UserConfigFnPromise, defineConfig } from 'vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
 export const getConfig: UserConfigFnPromise = async () => {

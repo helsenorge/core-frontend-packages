@@ -1,6 +1,6 @@
 import React, { useId } from 'react';
 
-import ReactAutosuggest, { AutosuggestPropsBase, InputProps, RenderSuggestion } from 'react-autosuggest';
+import ReactAutosuggest, { type AutosuggestPropsBase, type InputProps, type RenderSuggestion } from 'react-autosuggest';
 
 import ErrorWrapper from '@helsenorge/designsystem-react/components/ErrorWrapper';
 import { renderLabel } from '@helsenorge/designsystem-react/components/Label';
