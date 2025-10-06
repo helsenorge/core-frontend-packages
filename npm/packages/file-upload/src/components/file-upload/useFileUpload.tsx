@@ -2,9 +2,15 @@ import React from 'react';
 
 import type { UploadFile } from '.';
 import type { AllFilesValidation, SingleFileValidation } from './validate-utils';
-import type { FieldValues, UseFormRegister, ValidateResult, Path, RegisterOptions, UseFormRegisterReturn, PathValue } from 'react-hook-form';
-
-
+import type {
+  FieldValues,
+  UseFormRegister,
+  ValidateResult,
+  Path,
+  RegisterOptions,
+  UseFormRegisterReturn,
+  PathValue,
+} from 'react-hook-form';
 
 type UseFileUploadReturn<T extends FieldValues> = {
   register: UseFormRegister<T>;
