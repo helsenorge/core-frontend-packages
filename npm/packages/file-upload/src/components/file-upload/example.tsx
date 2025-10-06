@@ -13,7 +13,7 @@ import Validation from '@helsenorge/designsystem-react/components/Validation';
 import { useFileUpload } from './useFileUpload';
 import { validateNumberOfFiles, validateFileSize, validateFileType, validateTotalFileSize } from './validate-utils';
 
-import FileUpload, { MimeTypes, OnDeleteHandler, OnChangeHandler, UploadFile } from '.';
+import FileUpload, { type MimeTypes, type OnDeleteHandler, type OnChangeHandler, UploadFile } from '.';
 
 interface FormData {
   fileupload: UploadFile;

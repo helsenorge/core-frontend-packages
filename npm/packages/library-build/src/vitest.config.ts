@@ -1,4 +1,4 @@
-import { UserConfigFn, coverageConfigDefaults, defineConfig } from 'vitest/config';
+import { type UserConfigFn, coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export const getConfig: UserConfigFn = () => {
   return {
