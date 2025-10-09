@@ -7,6 +7,7 @@ import importPlugin from 'eslint-plugin-import';
 import jsxA11y from 'eslint-plugin-jsx-a11y';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+import reactRefresh from 'eslint-plugin-react-refresh';
 import testingLibrary from 'eslint-plugin-testing-library';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
@@ -30,7 +31,7 @@ export const configs = [
   },
   {
     files: defaultFiles,
-    extends: [js.configs.recommended, tseslint.configs.recommended, 'react-hooks/recommended'],
+    extends: [js.configs.recommended, tseslint.configs.recommended, 'react-hooks/recommended', reactRefresh.configs.vite],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
