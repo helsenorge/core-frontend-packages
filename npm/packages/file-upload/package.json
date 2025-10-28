@@ -39,8 +39,8 @@
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^37.0.0-beta",
-    "@helsenorge/designsystem-react": "^13.0.0-beta",
+    "@helsenorge/core-utils": "^37.0.0-0",
+    "@helsenorge/designsystem-react": "^13.0.0-0",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0"
   },
