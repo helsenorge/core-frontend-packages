@@ -75,6 +75,8 @@ For developing locally you should follow these steps:
     - Delete all node_modules and package-lock.json and try reinstalling all packages.
         - ```npm i``` and ```npm run build``` in root
 
+## Development chores
+
 ## Updating dependencies
 
 ```bash
@@ -91,6 +93,15 @@ ncu -u \
 ```
 
 ## Documentation
+
+Create a `{componentname}.stories.tsx` file in the same folder where the component code is.
+
+Run Storybook locally to develop your component:
+
+```
+cd npm/packages/storybook
+npm run start
+```
 
 Build using docker:
 
