@@ -75,8 +75,6 @@ For developing locally you should follow these steps:
     - Delete all node_modules and package-lock.json and try reinstalling all packages.
         - ```npm i``` and ```npm run build``` in root
 
-## Development chores
-
 ## Updating dependencies
 
 ```bash
