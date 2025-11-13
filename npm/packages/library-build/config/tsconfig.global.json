@@ -21,7 +21,7 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "erasableSyntaxOnly": false, // default true i vite, men fungerer ikke med enums fra EntitiesGenerator
+    "erasableSyntaxOnly": false, // default true i vite, men fungerer ikke med enums fra EntitiesGenerator eller SonarQube
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
