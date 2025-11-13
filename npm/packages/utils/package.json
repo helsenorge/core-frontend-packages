@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "37.0.0-beta.12",
+  "version": "37.0.0-beta.13",
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
   "repository": {
     "type": "git",
@@ -33,7 +33,7 @@
   "type": "module",
   "sideEffects": false,
   "devDependencies": {
-    "@helsenorge/library-build": "^37.0.0-beta.12"
+    "@helsenorge/library-build": "^37.0.0-beta.13"
   },
   "dependencies": {
     "date-fns": "^4.1.0"
