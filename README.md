@@ -112,9 +112,7 @@ docker run -p 8080:8080 --rm -it --name helsenorge-frontenddocs-static helsenorg
 
 Available sites:
 
-- http://localhost:8080/cmstest/
-- http://localhost:8080/documentation/
-- http://localhost:8080/tjenestertest/
+- http://localhost:8080/storybook/
 
 ## Playwright tests
 
