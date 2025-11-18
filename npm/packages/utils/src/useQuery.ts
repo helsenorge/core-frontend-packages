@@ -154,6 +154,13 @@ export function useQuery<TData, TArgs extends unknown[] = []>(options: UseQueryO
         return;
       }
 
+      if (!manual && entry.state.error && entry.state.updatedAt) {
+        const timeSinceError = Date.now() - entry.state.updatedAt;
+        if (timeSinceError < staleTime) {
+          return; // Don't retry errors within staleTime window
+        }
+      }
+
       const currentRequestId = ++requestIdRef.current;
 
       // Avbryt forrige forespørsel
@@ -210,6 +217,7 @@ export function useQuery<TData, TArgs extends unknown[] = []>(options: UseQueryO
           entry.state = {
             ...entry.state,
             error: err,
+            updatedAt: Date.now(),
             loading: false,
           };
           onError?.(err);
@@ -223,7 +231,7 @@ export function useQuery<TData, TArgs extends unknown[] = []>(options: UseQueryO
 
       entry.promise = p;
     },
-    [getEntry, enabled, keepPreviousData, queryFn, args, onSuccess, onError, isFresh, mergeFn, placeholderData, queryKey]
+    [getEntry, enabled, keepPreviousData, queryFn, args, onSuccess, onError, isFresh, mergeFn, placeholderData, queryKey, staleTime]
   );
 
   useEffect(() => {
