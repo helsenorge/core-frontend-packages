@@ -3,6 +3,5 @@
   "compilerOptions": {
     "outDir": "lib"
   },
-  "include": ["src"],
-  "exclude": ["src/**/*test*", "src/**/*spec*", "src/__devonly__", "**/*.stories.tsx"]
+  "include": ["src"]
 }
