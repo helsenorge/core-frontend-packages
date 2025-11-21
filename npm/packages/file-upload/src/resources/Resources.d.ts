@@ -9,6 +9,10 @@ export type HNCoreFileUploadNPMJS = {
    * slett
    */
   deleteText: string;
+  /**
+   * Last opp
+   */
+  chooseFilesText: string;
 };
 
 /* eslint:enable */
