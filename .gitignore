@@ -149,3 +149,5 @@ artifacts/
 # Helm Chart
 Chart.lock
 *.tgz
+
+**/mockServiceWorker.js
