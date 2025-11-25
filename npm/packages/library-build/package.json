@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/library-build",
-  "version": "37.0.1",
+  "version": "37.0.2",
   "publishConfig": {
     "directory": "lib",
     "access": "public"
@@ -44,7 +44,7 @@
     "react-dom": "^19.2.0"
   },
   "dependencies": {
-    "@helsenorge/eslint-config": "^37.0.1",
+    "@helsenorge/eslint-config": "^37.0.2",
     "@helsenorge/typed-scss-modules": "^9.0.7",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
