@@ -7,7 +7,6 @@ import * as dateUtils from '../date-fns-utils';
 describe('date-fns-utils', () => {
   beforeEach(() => {
     setDefaultOptions({ locale: nb });
-    process.env.TZ = 'Europe/Oslo';
   });
 
   describe('Når loadLocale kalles', () => {
