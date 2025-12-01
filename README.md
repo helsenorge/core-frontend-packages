@@ -12,46 +12,7 @@ Questions about the code or project can be askes at [ROX Slack channel](https://
 
 ## Internal documentation
 
-https://confluence.atlassian.nhn.no/display/HR2/@helsenorge+NPM+pakker
-
-## Setup - Backend
-
-1. Følg [how-to for oppsett av kubernetes](https://confluence.atlassian.nhn.no/display/HR2/HOW-TO:+Kubernetes+Lokalt)
-2. Følg [how-to for installasjon av hncli](https://confluence.atlassian.nhn.no/display/HR2/HNCli+-+Lokal+installasjon)
-3. Deploy tjenesten til kubernetes
-    ```powershell
-    devspace deploy
-    # Nås nå på
-    # - http://corefrontend-internalapi.localtest.me:30080
-    # - http://corefrontend-externalapi.localtest.me:30080
-    ```
-4. Konfigurer
-    ```powershell
-    dotnet-hncli dev config deploy --env-config dev-mot-k8s
-    ```
-5. Du kan nå enten
-    - A) Kjør hele løsningsområdet inni kubernetes basert på lokalt bygd image
-        ```powershell
-        # Dette innbærer for alle komponenter
-        # - Docker image for hele løsningsområdet bygges lokalt
-        # - Kubernetes podens image byttes ut med lokalt image for hele løsningsområdet
-        devspace dev
-        ```
-    - B) Kjør utvalgte komponenter inni kubernetes basert på lokalt bygd image
-        ```powershell
-        # Dette innbærer bare for valgt komponent
-        # - Docker image for internalapi bygges lokalt
-        # - Kubernetes podens image byttes ut med lokalt image bare for internalapi
-        # - Det vil bli kjørt devspace deploy av de andre komponentene i løsningsområdet
-        devspace dev "internalapi"
-        # For å kjøre devspace dev av flere enkelt komponenter så kan man separere med mellomrom som under
-        devspace dev "internalapi externalapi"
-        ```
-    - C) Kjør api på din lokale maskin, configurert mot kubernetes resurser, med riktig launch-profile. Evt F5 i Visual Studio.
-        ```powershell
-        dotnet watch run --launch-profile InternalApi --project .\Source\InternalApi\
-        dotnet watch run --launch-profile ExternalApi --project .\Source\ExternalApi\
-        ```
+https://confluence.nhn.no/display/HR2/@helsenorge+NPM+pakker
 
 ## Setup - Frontend
 
