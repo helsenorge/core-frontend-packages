@@ -40,8 +40,8 @@
   "devDependencies": {
     "@types/node": "^24.10.1",
     "@types/yargs": "^17.0.35",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1"
   },
   "dependencies": {
     "@helsenorge/eslint-config": "^37.2.1",
