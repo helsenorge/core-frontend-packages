@@ -45,7 +45,7 @@
   },
   "dependencies": {
     "@helsenorge/eslint-config": "^37.7.0",
-    "@helsenorge/typed-scss-modules": "^9.0.8",
+    "@helsenorge/typed-scss-modules": "^9.0.9",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
