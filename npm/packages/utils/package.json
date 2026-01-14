@@ -17,7 +17,7 @@
     "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "test": "vitest",
+    "test": "cross-env TZ=Europe/Oslo vitest",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "prettier --check \"src/**/*.{ts,tsx,js,jsx,css,scss,md,json}\"",
