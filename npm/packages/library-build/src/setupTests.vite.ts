@@ -39,26 +39,32 @@ const MatchMediaMock = vi.fn((query: string) => ({
 
 vi.stubGlobal('matchMedia', MatchMediaMock);
 
-const IntersectionObserverMock = vi.fn(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
-}));
+const IntersectionObserverMock = vi.fn(
+  class {
+    observe = vi.fn();
+    unobserve = vi.fn();
+    disconnect = vi.fn();
+  }
+);
 
 vi.stubGlobal('IntersectionObserver', IntersectionObserverMock);
 
-const ResizeObserverMock = vi.fn(() => ({
-  observe: vi.fn(),
-  unobserve: vi.fn(),
-  disconnect: vi.fn(),
-}));
+const ResizeObserverMock = vi.fn(
+  class {
+    observe = vi.fn();
+    unobserve = vi.fn();
+    disconnect = vi.fn();
+  }
+);
 
 vi.stubGlobal('ResizeObserver', ResizeObserverMock);
 
-const MutationObserverMock = vi.fn(() => ({
-  observe: vi.fn(),
-  disconnect: vi.fn(),
-}));
+const MutationObserverMock = vi.fn(
+  class {
+    observe = vi.fn();
+    disconnect = vi.fn();
+  }
+);
 
 vi.stubGlobal('MutationObserver', MutationObserverMock);
 
