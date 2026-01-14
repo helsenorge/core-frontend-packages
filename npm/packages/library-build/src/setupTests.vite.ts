@@ -1,5 +1,19 @@
+import fetchPolyfill, { Request as RequestPolyfill } from 'node-fetch';
 import { vi } from 'vitest';
 import '@testing-library/jest-dom/vitest';
+
+// @todo: Fjern etter oppdatering til vitest 4, fjern da også dependency til node-fetch
+// https://github.com/reduxjs/redux-toolkit/issues/4966#issuecomment-3115230061
+Object.defineProperty(global, 'fetch', {
+  // MSW will overwrite this to intercept requests
+  writable: true,
+  value: fetchPolyfill,
+});
+
+Object.defineProperty(global, 'Request', {
+  writable: false,
+  value: RequestPolyfill,
+});
 
 declare global {
   interface Window {
@@ -15,8 +29,9 @@ window.HN = {
   PortalCommands: {},
 };
 
-const MatchMediaMock = vi.fn(() => ({
-  matches: true,
+const MatchMediaMock = vi.fn((query: string) => ({
+  // @todo Her burde vi finne ut i hvilke tilfeller den skal være true, og bare sette den til true i de tilfellene
+  matches: query !== '(prefers-reduced-motion)',
   addListener: vi.fn(),
   addEventListener: vi.fn(),
   removeEventListener: vi.fn(),

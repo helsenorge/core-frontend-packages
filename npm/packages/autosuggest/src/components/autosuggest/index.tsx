@@ -15,15 +15,14 @@ export interface Suggestion {
   optionalLabel?: string;
 }
 
-interface Props<T>
-  extends Pick<
-    AutosuggestPropsBase<T>,
-    | 'focusInputOnSuggestionClick'
-    | 'onSuggestionsClearRequested'
-    | 'onSuggestionSelected'
-    | 'onSuggestionsFetchRequested'
-    | 'shouldRenderSuggestions'
-  > {
+interface Props<T> extends Pick<
+  AutosuggestPropsBase<T>,
+  | 'focusInputOnSuggestionClick'
+  | 'onSuggestionsClearRequested'
+  | 'onSuggestionSelected'
+  | 'onSuggestionsFetchRequested'
+  | 'shouldRenderSuggestions'
+> {
   /** En array med suggestions som skal vises */
   suggestions: Array<T>;
   /** Props som sendes ned til ReactAutosuggest */

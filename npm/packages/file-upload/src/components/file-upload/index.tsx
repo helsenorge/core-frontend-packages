@@ -44,8 +44,7 @@ export type OnChangeHandler = (files: UploadFile[]) => void;
 export type OnDeleteHandler = (fileId: string) => void;
 
 export interface Props
-  extends React.PropsWithChildren<{}>,
-    Pick<React.InputHTMLAttributes<HTMLInputElement>, 'accept' | 'aria-describedby' | 'onChange'> {
+  extends React.PropsWithChildren<{}>, Pick<React.InputHTMLAttributes<HTMLInputElement>, 'accept' | 'aria-describedby' | 'onChange'> {
   /** Filer som har gått gjennom validering */
   acceptedFiles?: UploadFile[];
   /** Filer som har feilet validering */
