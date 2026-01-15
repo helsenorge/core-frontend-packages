@@ -41,7 +41,7 @@
     "build": "tsc",
     "postbuild": "npm-run-all chmod exports",
     "chmod": "chmod +x lib/library-scripts.js",
-    "exports": "./lib/library-scripts.js exports",
+    "exports": "node ./lib/library-scripts.js exports",
     "watch": "tsc --watch",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "eslint:fix": "npm run eslint -- --fix",
