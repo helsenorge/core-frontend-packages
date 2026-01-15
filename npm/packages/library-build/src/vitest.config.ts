@@ -14,7 +14,7 @@ export const getConfig: ViteUserConfigFn = () => {
           url: 'http://tjenester.helsenorge.utvikling',
         },
       },
-      setupFiles: ['node_modules/@helsenorge/library-build/setupTests.vite'],
+      setupFiles: ['@helsenorge/library-build/setupTests.vite'],
       css: {
         modules: {
           classNameStrategy: 'non-scoped',

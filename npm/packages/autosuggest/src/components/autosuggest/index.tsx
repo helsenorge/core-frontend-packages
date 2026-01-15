@@ -15,7 +15,7 @@ export interface Suggestion {
   optionalLabel?: string;
 }
 
-interface Props<T> extends Pick<
+export interface Props<T> extends Pick<
   AutosuggestPropsBase<T>,
   | 'focusInputOnSuggestionClick'
   | 'onSuggestionsClearRequested'
