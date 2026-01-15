@@ -1,4 +1,4 @@
-#! /usr/bin/env node
+#!/usr/bin/env node
 
 import { spawnSync } from 'node:child_process';
 import { createRequire } from 'node:module';
@@ -12,9 +12,9 @@ const args = hideBin(process.argv);
 
 yargs(args)
   .command({
-    command: 'build',
+    command: 'exports',
     handler: () => {
-      const result = spawnSync('node', [require.resolve('./build'), ...args.slice(1)], {
+      const result = spawnSync('node', [require.resolve('./exports'), ...args.slice(1)], {
         stdio: 'inherit',
       });
       if (result.status) {

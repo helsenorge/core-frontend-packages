@@ -1,9 +1,7 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "37.8.2",
-  "main": "index.js",
+  "version": "37.8.1",
   "publishConfig": {
-    "directory": "lib",
     "access": "public"
   },
   "author": "Norsk helsenett SF",
@@ -14,7 +12,7 @@
   "description": "Komponent for opplasting av filer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/helsenorge/core-frontend-packages"
+    "url": "git+https://github.com/helsenorge/core-frontend-packages.git"
   },
   "type": "module",
   "sideEffects": false,
@@ -23,9 +21,11 @@
     "start": "vite dev --port 3000 --open",
     "clean": "rimraf lib",
     "typed-scss-modules": "typed-scss-modules \"src/**/*.module.scss\" --nameFormat none --exportType default --includePaths node_modules ../../../node_modules",
-    "prebuild": "npm-run-all clean typed-scss-modules",
+    "prebuild": "npm run clean",
     "build": "tsc",
-    "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md --include=src/**/*.{scss,scss.d.ts}",
+    "postbuild": "npm-run-all copy exports",
+    "copy": "library-scripts copy --include=src/**/*.{scss,scss.d.ts} --rm=lib/**/__*__ --rm=lib/**/*.stories.*",
+    "exports": "library-scripts exports",
     "watch": "tsc --watch",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "eslint:fix": "npm run eslint -- --fix",
@@ -35,8 +35,7 @@
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
     "typecheck": "tsc --noEmit",
-    "test": "vitest",
-    "prepublishOnly": "npm run build"
+    "test": "vitest"
   },
   "peerDependencies": {
     "@helsenorge/core-utils": "^37.0.0",
@@ -48,11 +47,19 @@
     "react-hook-form": "^7.66.1"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^37.8.2",
+    "@helsenorge/core-utils": "^37.8.1",
     "@helsenorge/designsystem-react": "^13.3.0",
-    "@helsenorge/library-build": "^37.8.2",
+    "@helsenorge/library-build": "^37.8.1",
     "@storybook/react-vite": "^10.0.8",
     "npm-run-all2": "^8.0.4",
     "react-hook-form": "^7.66.1"
+  },
+  "exports": {
+    "./components/file-upload": "./lib/components/file-upload/index.js",
+    "./components/file-upload/file": "./lib/components/file-upload/file.js",
+    "./components/file-upload/useFileUpload": "./lib/components/file-upload/useFileUpload.js",
+    "./components/file-upload/validate-utils": "./lib/components/file-upload/validate-utils.js",
+    "./package.json": "./package.json",
+    "./resources": "./lib/resources/index.js"
   }
 }

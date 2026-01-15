@@ -1,8 +1,8 @@
 {
-  "extends": "./node_modules/@helsenorge/library-build/config/tsconfig.global.json",
+  "extends": "@helsenorge/library-build/config/tsconfig.global.json",
   "compilerOptions": {
-    "outDir": "lib"
+    "outDir": "lib",
+    "rootDir": "src"
   },
-  "include": ["src"],
-  "exclude": ["**/*.stories.tsx"]
+  "include": ["src"]
 }

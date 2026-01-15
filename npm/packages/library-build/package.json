@@ -1,8 +1,7 @@
 {
   "name": "@helsenorge/library-build",
-  "version": "37.8.2",
+  "version": "37.8.1",
   "publishConfig": {
-    "directory": "lib",
     "access": "public"
   },
   "author": "Norsk helsenett SF",
@@ -13,25 +12,43 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/helsenorge/core-frontend-packages"
+    "url": "git+https://github.com/helsenorge/core-frontend-packages.git"
   },
   "bin": {
-    "library-scripts": "./library-scripts.js"
+    "library-scripts": "./lib/library-scripts.js"
+  },
+  "files": [
+    "config",
+    "lib"
+  ],
+  "exports": {
+    "./config/tsconfig.global.json": "./config/tsconfig.global.json",
+    "./config/tsconfig.node.json": "./config/tsconfig.node.json",
+    "./config/tsconfig.vite.json": "./config/tsconfig.vite.json",
+    "./copy": "./lib/copy.js",
+    "./exports": "./lib/exports.js",
+    "./library-scripts": "./lib/library-scripts.js",
+    "./package.json": "./package.json",
+    "./setupTests.vite": "./lib/setupTests.vite.js",
+    "./vite.config": "./lib/vite.config.js",
+    "./vitest.config": "./lib/vitest.config.js"
   },
   "type": "module",
   "sideEffects": false,
   "scripts": {
-    "prebuild": "rimraf lib",
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
     "build": "tsc",
-    "postbuild": "node lib/library-scripts.js copy --root=README.md --root=config/**/*",
+    "postbuild": "npm-run-all chmod exports",
+    "chmod": "chmod +x lib/library-scripts.js",
+    "exports": "./lib/library-scripts.js exports",
     "watch": "tsc --watch",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "prettier --check \"src/**/*.{ts,tsx,js,jsx,css,scss,md,json}\"",
     "prettier:fix": "npm run prettier -- --write",
     "pretypecheck": "tsc -v",
-    "typecheck": "tsc --noEmit",
-    "prepublishOnly": "npm run build"
+    "typecheck": "tsc --noEmit"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
@@ -44,7 +61,7 @@
     "react-dom": "^19.2.1"
   },
   "dependencies": {
-    "@helsenorge/eslint-config": "^37.8.2",
+    "@helsenorge/eslint-config": "^37.8.1",
     "@helsenorge/typed-scss-modules": "^9.0.9",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
@@ -53,9 +70,8 @@
     "@types/react": "^19.2.6",
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^5.1.1",
-    "@vitest/coverage-v8": "^3.2.4",
+    "@vitest/coverage-v8": "^4.0.6",
     "copyfiles": "^2.4.1",
-    "esbuild": "~0.27.0",
     "jsdom": "^26.1.0",
     "node-fetch": "^3.3.2",
     "rimraf": "^6.1.2",
@@ -64,7 +80,7 @@
     "typescript": "~5.9.3",
     "vite": "^7.2.4",
     "vite-tsconfig-paths": "^5.1.4",
-    "vitest": "^3.2.4",
+    "vitest": "^4.0.6",
     "yargs": "^18.0.0"
   },
   "engineStrict": true,
