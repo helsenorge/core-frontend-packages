@@ -1,4 +1,3 @@
-import { createRequire } from 'node:module';
 import path from 'path';
 
 import copyfiles from 'copyfiles';
@@ -6,18 +5,17 @@ import { rimraf } from 'rimraf';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-const require = createRequire(import.meta.url);
-import { createPackageJsonFile } from './files.js';
-
 interface Arguments {
+  outDir: string;
   root: string[];
   include: string[];
   utils: string[];
   rm: string[];
 }
 
-const { root, include, utils, rm } = yargs(hideBin(process.argv))
+const { outDir, root, include, utils, rm } = yargs(hideBin(process.argv))
   .options({
+    outDir: { describe: 'Output directory', type: 'string', default: 'lib' },
     root: { describe: 'Files to copy to root directory', type: 'array', default: [] },
     include: { describe: 'Files to copy from src to lib, replacing "src" with "lib"', type: 'array', default: [] },
     utils: { describe: 'Files to copy to lib/utils', type: 'array', default: [] },
@@ -25,15 +23,7 @@ const { root, include, utils, rm } = yargs(hideBin(process.argv))
   })
   .parse() as Arguments;
 
-const originalPackageJson = path.resolve(process.cwd(), 'package.json');
-
-const {
-  name: packageName,
-  publishConfig: { directory: outputDirectory },
-} = require(originalPackageJson);
-
-const outputPath = path.resolve(process.cwd(), outputDirectory);
-const newPackageJson = path.resolve(outputPath, 'package.json');
+const outputPath = path.resolve(process.cwd(), outDir);
 
 Promise.all([
   new Promise<void>((resolve, reject) =>
@@ -47,6 +37,4 @@ Promise.all([
       ? copyfiles([...utils, path.resolve(outputPath, 'utils')], { up: true, error: true }, e => (e ? reject(e) : resolve()))
       : resolve()
   ),
-])
-  .then(() => (rm ? rimraf(rm, { glob: true }) : Promise.resolve(true)))
-  .then(() => createPackageJsonFile(packageName, originalPackageJson, newPackageJson));
+]).then(() => (rm ? rimraf(rm, { glob: true }) : Promise.resolve(true)));
