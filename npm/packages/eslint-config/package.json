@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "37.8.1",
+  "version": "37.8.3",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
@@ -18,7 +18,7 @@
   "description": "Helsenorges eslint-regler",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/helsenorge/core-frontend-packages.git"
+    "url": "https://github.com/helsenorge/core-frontend-packages"
   },
   "license": "MIT",
   "scripts": {
