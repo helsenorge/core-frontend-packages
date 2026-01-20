@@ -18,7 +18,7 @@
   "description": "Helsenorges eslint-regler",
   "repository": {
     "type": "git",
-    "url": "https://github.com/helsenorge/core-frontend-packages"
+    "url": "git+https://github.com/helsenorge/core-frontend-packages.git"
   },
   "license": "MIT",
   "scripts": {
