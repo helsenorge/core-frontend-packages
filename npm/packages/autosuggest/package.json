@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "37.8.1",
+  "version": "37.8.3",
   "publishConfig": {
     "access": "public"
   },
