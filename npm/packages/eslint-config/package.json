@@ -7,6 +7,7 @@
   },
   "files": [
     "index.js",
+    "prettier.config.js",
     "rules.js",
     "stylelint.config.js"
   ],
