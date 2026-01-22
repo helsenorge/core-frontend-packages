@@ -31,13 +31,12 @@ export const configs = [
   },
   {
     files: defaultFiles,
-    extends: [js.configs.recommended, tseslint.configs.recommended, 'react-hooks/recommended', reactRefresh.configs.vite],
+    extends: [js.configs.recommended, tseslint.configs.recommended, reactRefresh.configs.vite],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
     },
     plugins: {
-      'react-hooks': reactHooks,
       import: importPlugin,
     },
     rules: {
@@ -59,6 +58,8 @@ export const configs = [
   },
   // https://github.com/prettier/eslint-config-prettier
   eslintConfigPrettier,
+  // https://www.npmjs.com/package/eslint-plugin-react-hooks
+  reactHooks.configs.flat.recommended,
 ];
 
 export default defineConfig([...configs, globalIgnores(defaultIgnores)]);
