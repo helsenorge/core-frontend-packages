@@ -59,7 +59,7 @@ export const configs = [
   // https://github.com/prettier/eslint-config-prettier
   eslintConfigPrettier,
   // https://www.npmjs.com/package/eslint-plugin-react-hooks
-  reactHooks.configs.flat.recommended,
+  reactHooks.configs.flat['recommended-latest'],
 ];
 
 export default defineConfig([...configs, globalIgnores(defaultIgnores)]);
