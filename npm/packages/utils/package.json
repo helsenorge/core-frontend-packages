@@ -20,6 +20,7 @@
     "./types/entities": "./lib/types/entities.js",
     "./url": "./lib/url.js",
     "./useDebounce": "./lib/useDebounce.js",
+    "./useKeepPreviousData": "./lib/useKeepPreviousData.js",
     "./useQuery": "./lib/useQuery.js",
     "./user-agents-utils": "./lib/user-agents-utils.js",
     "./validation-utils": "./lib/validation-utils.js"
