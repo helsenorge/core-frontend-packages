@@ -32,7 +32,7 @@ export const getConfig: ViteUserConfigFn = () => {
       },
       server: {
         deps: {
-          inline: ['@helsenorge/designsystem-react', '@helsenorge/datepicker', '@helsenorge/lightbox', '@portabletext/react'],
+          inline: [/@helsenorge/, '@portabletext/react'],
         },
       },
     },
