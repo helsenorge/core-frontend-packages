@@ -38,8 +38,8 @@
     "test": "vitest"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^37.0.0",
-    "@helsenorge/designsystem-react": "^13.0.0",
+    "@helsenorge/core-utils": "^38.0.0-beta",
+    "@helsenorge/designsystem-react": "^38.0.0-beta",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
