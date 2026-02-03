@@ -16,6 +16,9 @@
   },
   "type": "module",
   "sideEffects": false,
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "prestart": "rimraf dist",
     "start": "vite dev --port 3000 --open",
