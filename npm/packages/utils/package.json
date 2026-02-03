@@ -1,23 +1,42 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "37.10.0",
+  "version": "37.8.3",
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
   "repository": {
     "type": "git",
-    "url": "https://github.com/helsenorge/core-frontend-packages"
+    "url": "git+https://github.com/helsenorge/core-frontend-packages.git"
   },
-  "main": "index.js",
+  "files": [
+    "lib"
+  ],
+  "exports": {
+    "./blob": "./lib/blob.js",
+    "./constants/languages": "./lib/constants/languages.js",
+    "./date-fns-utils": "./lib/date-fns-utils.js",
+    "./html-entities": "./lib/html-entities.js",
+    "./object-utils": "./lib/object-utils.js",
+    "./package.json": "./package.json",
+    "./string-utils": "./lib/string-utils.js",
+    "./types/entities": "./lib/types/entities.js",
+    "./url": "./lib/url.js",
+    "./useDebounce": "./lib/useDebounce.js",
+    "./useKeepPreviousData": "./lib/useKeepPreviousData.js",
+    "./useQuery": "./lib/useQuery.js",
+    "./user-agents-utils": "./lib/user-agents-utils.js",
+    "./validation-utils": "./lib/validation-utils.js"
+  },
   "publishConfig": {
-    "directory": "lib",
     "access": "public"
   },
   "scripts": {
-    "prebuild": "rimraf lib",
+    "clean": "rimraf lib",
+    "prebuild": "npm run clean",
     "build": "tsc",
-    "postbuild": "node node_modules/@helsenorge/library-build/library-scripts.js copy --root=README.md",
+    "postbuild": "npm-run-all copy exports",
+    "copy": "library-scripts copy --rm=lib/**/__*__ --rm=lib/**/*.stories.*",
+    "exports": "library-scripts exports",
     "watch": "tsc --watch",
-    "prepublishOnly": "npm run build",
-    "test": "vitest",
+    "test": "cross-env TZ=Europe/Oslo vitest",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
     "eslint:fix": "npm run eslint -- --fix",
     "prettier": "prettier --check \"src/**/*.{ts,tsx,js,jsx,css,scss,md,json}\"",
@@ -33,7 +52,7 @@
   "type": "module",
   "sideEffects": false,
   "devDependencies": {
-    "@helsenorge/library-build": "^37.10.0"
+    "@helsenorge/library-build": "^37.8.3"
   },
   "dependencies": {
     "date-fns": "^4.1.0"
