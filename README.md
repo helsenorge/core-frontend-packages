@@ -87,6 +87,16 @@ npx playwright test --ui
 
 ## Version and publish
 
+Opprette første betaversjon av ny major (overgang fra v37.x.y => v38.0.0-beta.0)
+
 ```bash
-npm version prerelease --preid=alpha --workspaces --include-workspace-root -m "chore: release alpha %s"
+npm run release:premajor
 ```
+
+Lage nye betaversjoner (v38.0.0-beta.0 => v38.0.0-beta.1):
+
+```bash
+npm run release:beta
+```
+
+@todo Dokumentere overgang fra beta til vanlig major
