@@ -99,4 +99,10 @@ Lage nye betaversjoner (v38.0.0-beta.0 => v38.0.0-beta.1):
 npm run release:beta
 ```
 
+Etter at du har kjørt release-scriptet, må du pushe endringene til origin, og 
+
+```bash
+git push --tags
+```
+
 @todo Dokumentere overgang fra beta til vanlig major
