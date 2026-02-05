@@ -1,12 +1,13 @@
 {
   "name": "@helsenorge/eslint-config",
-  "version": "37.11.0",
+  "version": "38.0.0-beta.11",
   "main": "index.js",
   "publishConfig": {
     "access": "public"
   },
   "files": [
     "index.js",
+    "prettier.config.js",
     "rules.js",
     "stylelint.config.js"
   ],
@@ -18,7 +19,7 @@
   "description": "Helsenorges eslint-regler",
   "repository": {
     "type": "git",
-    "url": "https://github.com/helsenorge/core-frontend-packages"
+    "url": "git+https://github.com/helsenorge/core-frontend-packages.git"
   },
   "license": "MIT",
   "scripts": {
@@ -33,21 +34,21 @@
     "typescript": "~5.9.3"
   },
   "dependencies": {
-    "@eslint/js": "^9.39.1",
-    "@typescript-eslint/eslint-plugin": "^8.47.0",
-    "eslint": "^9.39.1",
+    "@eslint/js": "^9.39.2",
+    "@typescript-eslint/eslint-plugin": "^8.54.0",
+    "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.5",
-    "eslint-plugin-react-hooks": "^6.1.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "eslint-plugin-testing-library": "^7.13.5",
-    "globals": "^16.5.0",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.0",
+    "eslint-plugin-testing-library": "^7.15.4",
+    "globals": "^17.3.0",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.6.2",
-    "stylelint": "^16.26.0",
-    "stylelint-config-standard-scss": "^15.0.1",
-    "typescript-eslint": "^8.47.0"
+    "prettier": "^3.8.1",
+    "stylelint": "^17.1.1",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "typescript-eslint": "^8.54.0"
   }
 }
