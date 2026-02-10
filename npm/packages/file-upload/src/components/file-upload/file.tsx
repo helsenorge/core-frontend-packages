@@ -13,8 +13,7 @@ import TrashCan from '@helsenorge/designsystem-react/components/Icons/TrashCan';
 import WordDocument from '@helsenorge/designsystem-react/components/Icons/WordDocument';
 import XmlFile from '@helsenorge/designsystem-react/components/Icons/XmlFile';
 import Modal from '@helsenorge/designsystem-react/components/Modal';
-
-import { theme } from '@helsenorge/designsystem-react';
+import { palette } from '@helsenorge/designsystem-react/theme/palette';
 
 import styles from './styles.module.scss';
 
@@ -127,7 +126,7 @@ export default class FileElement extends React.Component<FileProps, FileState> {
           })}
           onClick={confirmDelete ? this.setConfirmDelete : this.deleteFile}
         >
-          <Icon color={theme.palette.cherry500} svgIcon={TrashCan} />
+          <Icon color={palette.cherry500} svgIcon={TrashCan} />
           <>
             {deleteText}
             {!dontShowHardcodedText && 'Slett'}

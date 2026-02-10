@@ -8,11 +8,10 @@ import Icon from '@helsenorge/designsystem-react/components/Icon';
 import Upload from '@helsenorge/designsystem-react/components/Icons/Upload';
 import { renderLabel } from '@helsenorge/designsystem-react/components/Label';
 import Loader from '@helsenorge/designsystem-react/components/Loader';
+import { FormOnColor } from '@helsenorge/designsystem-react/constants';
 import { usePseudoClasses } from '@helsenorge/designsystem-react/hooks/usePseudoClasses';
 import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/utils/refs';
-
-import { FormOnColor } from '@helsenorge/designsystem-react';
 
 import FileElement, { Type } from './file';
 
