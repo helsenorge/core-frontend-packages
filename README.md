@@ -105,4 +105,11 @@ Etter at du har kjørt release-scriptet, må du pushe endringene til origin, og 
 git push origin tag v38.0.0-beta.10
 ```
 
+### Publisere betaversjon til npmjs.org
+
+```bash
+cd npm/packages/eslint-config # Eller annen pakke :-)
+npm publish --tag beta --registry https://registry.npmjs.org/
+```
+
 @todo Dokumentere overgang fra beta til vanlig major
