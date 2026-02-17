@@ -16,7 +16,6 @@ window.HN = {
 };
 
 const MatchMediaMock = vi.fn((query: string) => ({
-  // @todo Her burde vi finne ut i hvilke tilfeller den skal være true, og bare sette den til true i de tilfellene
   matches: query !== '(prefers-reduced-motion)',
   addListener: vi.fn(),
   addEventListener: vi.fn(),
