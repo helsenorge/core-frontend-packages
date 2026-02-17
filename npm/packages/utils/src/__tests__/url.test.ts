@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest';
 
-import { getUrlHostname, isHttps } from '../url';
+import { getUrlHostname, isHttps, normalizePath, normalizeQuery } from '../url';
 
 if (typeof window !== 'undefined') {
   const oldWindowLocation = window.location;
@@ -58,6 +58,45 @@ describe('isHttps', () => {
         expect(isHttps()).toBe(true);
 
         window.location.protocol = originalProtocol;
+      });
+    });
+  });
+});
+describe('normalizePath', () => {
+  describe('Gitt at path ikke starter med /', () => {
+    describe('Når normalizePath kalles', () => {
+      test('Så returnerer den path med / foran', () => {
+        expect(normalizePath('test')).toBe('/test');
+      });
+    });
+  });
+
+  describe('Gitt at path slutter med /', () => {
+    describe('Når normalizePath kalles', () => {
+      test('Så returnerer den path uten / på slutten', () => {
+        expect(normalizePath('/test/')).toBe('/test');
+      });
+
+      test('Så returnerer den rotsiden uendret', () => {
+        expect(normalizePath('/')).toBe('/');
+      });
+    });
+  });
+});
+
+describe('normalizeQuery', () => {
+  describe('Gitt at query ikke starter med ?', () => {
+    describe('Når normalizeQuery kalles', () => {
+      test('Så returnerer den query med ? foran', () => {
+        expect(normalizeQuery('key=value')).toBe('?key=value');
+      });
+    });
+  });
+
+  describe('Gitt at query slutter med &', () => {
+    describe('Når normalizeQuery kalles', () => {
+      test('Så returnerer den query uten & på slutten', () => {
+        expect(normalizeQuery('?key=value&')).toBe('?key=value');
       });
     });
   });
