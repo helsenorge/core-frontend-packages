@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import { useEffect, useId, useState } from 'react';
 
 import classNames from 'classnames';
 
@@ -14,36 +14,14 @@ import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessi
 import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/utils/refs';
 
 import FileElement, { Type } from './file';
+import { UploadFile, type MimeTypes, type OnChangeHandler, type OnDeleteHandler } from './types';
 
 import styles from './styles.module.scss';
 
-export class UploadFile extends File {
-  id: string;
-  fileSize: number;
-
-  constructor(fileBits: BlobPart[], fileName: string, id?: string, fileSize?: number, options?: FilePropertyBag) {
-    super(fileBits, fileName, options);
-    this.id = id || fileName;
-    this.fileSize = fileSize || this.size;
-  }
-}
-
-export type MimeTypes =
-  | 'image/jpeg'
-  | 'image/jpg'
-  | 'image/png'
-  | 'application/pdf'
-  | 'image/gif'
-  | 'image/tiff'
-  | 'image/bmp'
-  | 'image/tif';
-
-export type OnChangeHandler = (files: UploadFile[]) => void;
-
-export type OnDeleteHandler = (fileId: string) => void;
+export { UploadFile, type MimeTypes, type OnChangeHandler, type OnDeleteHandler };
 
 export interface Props
-  extends React.PropsWithChildren<{}>, Pick<React.InputHTMLAttributes<HTMLInputElement>, 'accept' | 'aria-describedby' | 'onChange'> {
+  extends React.PropsWithChildren<unknown>, Pick<React.InputHTMLAttributes<HTMLInputElement>, 'accept' | 'aria-describedby' | 'onChange'> {
   /** Filer som har gått gjennom validering */
   acceptedFiles?: UploadFile[];
   /** Filer som har feilet validering */
@@ -106,9 +84,11 @@ export interface Props
   wrapperClassName?: string;
   /** Id som benyttes for å hente ut hele Dropzone i automatiske tester */
   wrapperTestId?: string;
+  /** Ref passed to the component */
+  ref?: React.Ref<HTMLInputElement | null>;
 }
 
-const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputElement>) => {
+const FileUpload: React.FC<Props> = props => {
   const {
     acceptedFiles = [],
     rejectedFiles = [],
@@ -141,11 +121,12 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     visualDropZone,
     wrapperClassName,
     wrapperTestId,
+    ref,
     ...rest
   } = props;
 
-  const [dragover, setDragover] = React.useState(false);
-  const [calledFakeOnChange, setCalledFakeOnChange] = React.useState(false);
+  const [dragover, setDragover] = useState(false);
+  const [calledFakeOnChange, setCalledFakeOnChange] = useState(false);
   const { refObject } = usePseudoClasses<HTMLInputElement>(isMutableRefObject(ref) ? ref : null);
   const mergedRefs = mergeRefs([ref, refObject]);
   const inputButtonId = inputId + '-button';
@@ -157,7 +138,35 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     target: EventTarget & { accept: string };
   }
 
-  React.useEffect(() => {
+  /** Fyller inn <input/> med de nye filene */
+  const setInputFiles = (files: UploadFile[]): void => {
+    const dataTransfer = new DataTransfer();
+    files.forEach(file => {
+      dataTransfer.items.add(file);
+    });
+    if (refObject.current) {
+      // eslint-disable-next-line react-hooks/immutability
+      refObject.current.files = dataTransfer.files;
+    }
+  };
+
+  /** Filtrerer files og returnerer de vi ikke har fra før */
+  const getNewFiles = (files: UploadFile[]): UploadFile[] => {
+    files.forEach(f => typeof f.id === 'undefined' && (f.id = f.name));
+    files.forEach(f => typeof f.fileSize === 'undefined' && (f.fileSize = f.size));
+    const filteredNewFiles = acceptedFiles?.length ? files.filter(file => acceptedFiles.every(af => file.id !== af.id)) : files;
+    return rejectedFiles?.length ? filteredNewFiles.filter(file => rejectedFiles.every(rf => file.id !== rf.id)) : filteredNewFiles;
+  };
+
+  /** Aktiverer onChange til <input/> elementet */
+  const triggerOnChangeEvent = (): void => {
+    if (refObject.current) {
+      const event = new Event('change', { bubbles: true });
+      refObject.current.dispatchEvent(event);
+    }
+  };
+
+  useEffect(() => {
     if (typeof defaultFiles !== 'undefined' && defaultFiles.length > 0) {
       const filteredDefaultFiles = getNewFiles(defaultFiles);
       setInputFiles(filteredDefaultFiles);
@@ -165,7 +174,7 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     }
   }, [defaultFiles]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (calledFakeOnChange) {
       triggerOnChangeEvent();
     }
@@ -184,33 +193,6 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
     }
 
     return validFileTypesString;
-  };
-
-  /** Filtrerer files og returnerer de vi ikke har fra før */
-  const getNewFiles = (files: UploadFile[]): UploadFile[] => {
-    files.forEach(f => typeof f.id === 'undefined' && (f.id = f.name));
-    files.forEach(f => typeof f.fileSize === 'undefined' && (f.fileSize = f.size));
-    const filteredNewFiles = acceptedFiles?.length ? files.filter(file => acceptedFiles.every(af => file.id !== af.id)) : files;
-    return rejectedFiles?.length ? filteredNewFiles.filter(file => rejectedFiles.every(rf => file.id !== rf.id)) : filteredNewFiles;
-  };
-
-  /** Fyller inn <input/> med de nye filene */
-  const setInputFiles = (files: UploadFile[]): void => {
-    const dataTransfer = new DataTransfer();
-    files.forEach(file => {
-      dataTransfer.items.add(file);
-    });
-    if (refObject.current) {
-      refObject.current.files = dataTransfer.files;
-    }
-  };
-
-  /** Aktiverer onChange til <input/> elementet */
-  const triggerOnChangeEvent = (): void => {
-    if (refObject.current) {
-      const event = new Event('change', { bubbles: true });
-      refObject.current.dispatchEvent(event);
-    }
   };
 
   /** Oppdaterer <input/> filer med onChange event sine filer eller internalFilesState hvis det er satt */
@@ -379,8 +361,6 @@ const FileUpload = React.forwardRef((props: Props, ref: React.Ref<HTMLInputEleme
       </div>
     </ErrorWrapper>
   );
-});
-
-FileUpload.displayName = 'FileUpload';
+};
 
 export default FileUpload;
