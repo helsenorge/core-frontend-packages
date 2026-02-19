@@ -60,6 +60,7 @@
   "exports": {
     "./components/file-upload": "./lib/components/file-upload/index.js",
     "./components/file-upload/file": "./lib/components/file-upload/file.js",
+    "./components/file-upload/types": "./lib/components/file-upload/types.js",
     "./components/file-upload/useFileUpload": "./lib/components/file-upload/useFileUpload.js",
     "./components/file-upload/validate-utils": "./lib/components/file-upload/validate-utils.js",
     "./package.json": "./package.json",
