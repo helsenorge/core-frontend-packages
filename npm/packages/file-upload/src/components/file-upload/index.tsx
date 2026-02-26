@@ -145,7 +145,6 @@ const FileUpload: React.FC<Props> = props => {
       dataTransfer.items.add(file);
     });
     if (refObject.current) {
-      // eslint-disable-next-line react-hooks/immutability
       refObject.current.files = dataTransfer.files;
     }
   };
@@ -351,7 +350,7 @@ const FileUpload: React.FC<Props> = props => {
   return (
     <ErrorWrapper errorText={errorText} errorTextId={errorTextId}>
       <div className={wrapperClasses} data-testid={wrapperTestId}>
-        {renderLabel(label, inputButtonId, FormOnColor.onwhite)}
+        {renderLabel({ label, inputId: inputButtonId, onColor: FormOnColor.onwhite })}
         {helpElement}
         {loading && <Loader size={'tiny'} className={styles.dropzone__loader} />}
         {renderFiles()}

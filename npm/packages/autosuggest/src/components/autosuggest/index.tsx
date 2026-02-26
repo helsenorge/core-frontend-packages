@@ -73,7 +73,7 @@ const Autosuggest: React.FC<Props<Suggestion>> = props => {
   return (
     <ErrorWrapper errorText={props.errorText} errorTextId={errorTextId} className={props.errorWrapperClassName}>
       <div className={props.className}>
-        {renderLabel(props.label, inputId, props.error ? FormOnColor.oninvalid : FormOnColor.onwhite)}
+        {renderLabel({ label: props.label, inputId, onColor: props.error ? FormOnColor.oninvalid : FormOnColor.onwhite })}
         <ReactAutosuggest
           theme={styles}
           suggestions={props.suggestions}
