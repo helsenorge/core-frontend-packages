@@ -36,7 +36,6 @@ interface FileProps {
   confirmText?: string;
   cancelText?: string;
   confirmDelete?: boolean;
-  dontShowHardcodedText?: boolean;
 }
 
 interface FileState {
@@ -115,7 +114,7 @@ export default class FileElement extends React.Component<FileProps, FileState> {
   };
 
   renderDeleteButton() {
-    const { shouldRenderDeleteButton, loading, dontShowHardcodedText, deleteText, confirmDelete } = this.props;
+    const { shouldRenderDeleteButton, loading, deleteText, confirmDelete } = this.props;
     if (shouldRenderDeleteButton && !loading) {
       return (
         <Button
@@ -127,10 +126,7 @@ export default class FileElement extends React.Component<FileProps, FileState> {
           onClick={confirmDelete ? this.setConfirmDelete : this.deleteFile}
         >
           <Icon color={palette.cherry500} svgIcon={TrashCan} />
-          <>
-            {deleteText}
-            {!dontShowHardcodedText && 'Slett'}
-          </>
+          <>{deleteText}</>
         </Button>
       );
     }

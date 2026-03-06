@@ -2,18 +2,22 @@ import { useEffect, useId, useState } from 'react';
 
 import classNames from 'classnames';
 
+import type { HNCoreFileUploadNPMJS } from '../../resources/Resources';
+
 import Button from '@helsenorge/designsystem-react/components/Button';
 import ErrorWrapper from '@helsenorge/designsystem-react/components/ErrorWrapper';
 import Icon from '@helsenorge/designsystem-react/components/Icon';
 import Upload from '@helsenorge/designsystem-react/components/Icons/Upload';
 import { renderLabel } from '@helsenorge/designsystem-react/components/Label';
 import Loader from '@helsenorge/designsystem-react/components/Loader';
-import { FormOnColor } from '@helsenorge/designsystem-react/constants';
+import { FormOnColor, LanguageLocales } from '@helsenorge/designsystem-react/constants';
+import { useLanguage } from '@helsenorge/designsystem-react/hooks/useLanguage';
 import { usePseudoClasses } from '@helsenorge/designsystem-react/hooks/usePseudoClasses';
 import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/utils/refs';
 
 import FileElement, { Type } from './file';
+import { getResources } from './resourceHelper';
 import { UploadFile, type MimeTypes, type OnChangeHandler, type OnDeleteHandler } from './types';
 
 import styles from './styles.module.scss';
@@ -60,8 +64,6 @@ export interface Props
   visualDropZone?: boolean;
   /**  Egen tekst for status på dropzone */
   dropzoneStatusText?: string;
-  /**  Egen Tekst for sletting av filer */
-  deleteText?: string;
   /**  Egen bekreft sletting tekst */
   verifyDeleteText?: string;
   /**  Egen bekreft tekst */
@@ -78,14 +80,14 @@ export interface Props
   shouldUploadMultiple?: boolean;
   /** Filelementklasse som også kan endre knapp link og svg */
   fileElementClassName?: string;
-  /** Tekst som vises på knapp for å velge filer. Default tekst er "Velg filer" */
-  chooseFilesText?: string;
   /** ClassName som plasseres på wrapper */
   wrapperClassName?: string;
   /** Id som benyttes for å hente ut hele Dropzone i automatiske tester */
   wrapperTestId?: string;
-  /** Ref passed to the component */
+  /** Ref som gis til komponenten */
   ref?: React.Ref<HTMLInputElement | null>;
+  /** Ressursfiler for komponenten */
+  resources?: Partial<HNCoreFileUploadNPMJS>;
 }
 
 const FileUpload: React.FC<Props> = props => {
@@ -94,11 +96,9 @@ const FileUpload: React.FC<Props> = props => {
     rejectedFiles = [],
     cancelText,
     children,
-    chooseFilesText,
     confirmDelete,
     confirmText,
     defaultFiles,
-    deleteText,
     disabled,
     dropzoneStatusText,
     error,
@@ -121,6 +121,7 @@ const FileUpload: React.FC<Props> = props => {
     visualDropZone,
     wrapperClassName,
     wrapperTestId,
+    resources,
     ref,
     ...rest
   } = props;
@@ -134,6 +135,13 @@ const FileUpload: React.FC<Props> = props => {
   const errorTextIdFallback = useId();
   const errorTextId = errorTextIdProp || errorTextIdFallback;
 
+  const { language } = useLanguage<LanguageLocales>(LanguageLocales.NORWEGIAN);
+  const defaultResources = getResources(language);
+  const mergedResources: HNCoreFileUploadNPMJS = {
+    ...defaultResources,
+    ...resources,
+  };
+
   interface DragFileEvent extends React.DragEvent<HTMLInputElement> {
     target: EventTarget & { accept: string };
   }
@@ -145,6 +153,7 @@ const FileUpload: React.FC<Props> = props => {
       dataTransfer.items.add(file);
     });
     if (refObject.current) {
+      // eslint-disable-next-line react-hooks/immutability
       refObject.current.files = dataTransfer.files;
     }
   };
@@ -247,7 +256,7 @@ const FileUpload: React.FC<Props> = props => {
         wrapperClassName={classNames(styles.dropzone__uploadButton, uploadButtonClassName)}
       >
         <Icon svgIcon={Upload} />
-        {chooseFilesText || 'Last opp'}
+        {mergedResources.chooseFilesText}
       </Button>
     );
   };
@@ -311,12 +320,11 @@ const FileUpload: React.FC<Props> = props => {
               deleteFile={onDeleteHandler}
               onOpenFile={onOpenFile}
               onRequestLink={onRequestLink}
-              deleteText={deleteText}
+              deleteText={mergedResources.deleteText}
               verifyDeleteText={verifyDeleteText}
               confirmText={confirmText}
               cancelText={cancelText}
               confirmDelete={confirmDelete}
-              dontShowHardcodedText={!!deleteText}
               customClass={fileElementClassName}
             />
           ))}
@@ -332,12 +340,11 @@ const FileUpload: React.FC<Props> = props => {
               deleteFile={onDeleteHandler}
               onOpenFile={onOpenFile}
               onRequestLink={onRequestLink}
-              deleteText={deleteText}
+              deleteText={mergedResources.deleteText}
               verifyDeleteText={verifyDeleteText}
               confirmText={confirmText}
               cancelText={cancelText}
               confirmDelete={confirmDelete}
-              dontShowHardcodedText={!!deleteText}
               customClass={fileElementClassName}
             />
           ))}
