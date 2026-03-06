@@ -6,7 +6,7 @@
  */
 export type HNCoreFileUploadNPMJS = {
   /**
-   * slett
+   * Slett
    */
   deleteText: string;
   /**
