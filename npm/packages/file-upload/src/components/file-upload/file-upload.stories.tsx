@@ -1,16 +1,22 @@
 /* eslint-disable no-console */
 import * as React from 'react';
+import { useState } from 'react';
 
 import { useForm } from 'react-hook-form';
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
 import Button from '@helsenorge/designsystem-react/components/Button';
+import Dropdown from '@helsenorge/designsystem-react/components/Dropdown';
 import FormGroup from '@helsenorge/designsystem-react/components/FormGroup';
+import Globe from '@helsenorge/designsystem-react/components/Icons/Globe';
 import Label, { Sublabel } from '@helsenorge/designsystem-react/components/Label';
 import Spacer from '@helsenorge/designsystem-react/components/Spacer';
 import Title from '@helsenorge/designsystem-react/components/Title';
 import Validation from '@helsenorge/designsystem-react/components/Validation';
+import LanguageProvider from '@helsenorge/designsystem-react/utils/language';
+
+import { LanguageLocales } from '@helsenorge/designsystem-react';
 
 import { useFileUpload } from './useFileUpload';
 import { validateNumberOfFiles, validateFileSize, validateFileType, validateTotalFileSize } from './validate-utils';
@@ -211,4 +217,35 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: () => <FileUploadExample />,
+};
+
+const WithLanguageProviderExample: React.FC = args => {
+  const [language, setLanguage] = useState<LanguageLocales>(LanguageLocales.NORWEGIAN);
+
+  return (
+    <LanguageProvider<LanguageLocales> language={language}>
+      <Dropdown svgIcon={Globe} triggerText="Velg språk">
+        <Dropdown.SingleSelectItem text={'English'} asChild>
+          <button onClick={() => setLanguage(LanguageLocales.ENGLISH)} />
+        </Dropdown.SingleSelectItem>
+        <Dropdown.SingleSelectItem text={'Samisk'} asChild>
+          <button onClick={() => setLanguage(LanguageLocales.SAMI_NORTHERN)} />
+        </Dropdown.SingleSelectItem>
+        <Dropdown.SingleSelectItem text={'Nynorsk'} asChild>
+          <button onClick={() => setLanguage(LanguageLocales.NORWEGIAN_NYNORSK)} />
+        </Dropdown.SingleSelectItem>
+        <Dropdown.SingleSelectItem text={'Bokmål'} asChild defaultSelected>
+          <button onClick={() => setLanguage(LanguageLocales.NORWEGIAN)} />
+        </Dropdown.SingleSelectItem>
+      </Dropdown>
+      <Spacer />
+      <FileUploadExample {...args} />
+    </LanguageProvider>
+  );
+};
+
+export const WithLanguageProvider: Story = {
+  render: args => {
+    return <WithLanguageProviderExample {...args} />;
+  },
 };

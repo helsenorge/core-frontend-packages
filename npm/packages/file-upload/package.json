@@ -60,10 +60,15 @@
   "exports": {
     "./components/file-upload": "./lib/components/file-upload/index.js",
     "./components/file-upload/file": "./lib/components/file-upload/file.js",
+    "./components/file-upload/resourceHelper": "./lib/components/file-upload/resourceHelper.js",
     "./components/file-upload/types": "./lib/components/file-upload/types.js",
     "./components/file-upload/useFileUpload": "./lib/components/file-upload/useFileUpload.js",
     "./components/file-upload/validate-utils": "./lib/components/file-upload/validate-utils.js",
     "./package.json": "./package.json",
-    "./resources": "./lib/resources/index.js"
+    "./resources": "./lib/resources/index.js",
+    "./resources/HN.Core.FileUpload.NPM.JS.en-GB.json": "./lib/resources/HN.Core.FileUpload.NPM.JS.en-GB.json",
+    "./resources/HN.Core.FileUpload.NPM.JS.nb-NO.json": "./lib/resources/HN.Core.FileUpload.NPM.JS.nb-NO.json",
+    "./resources/HN.Core.FileUpload.NPM.JS.nn-NO.json": "./lib/resources/HN.Core.FileUpload.NPM.JS.nn-NO.json",
+    "./resources/HN.Core.FileUpload.NPM.JS.se-NO.json": "./lib/resources/HN.Core.FileUpload.NPM.JS.se-NO.json"
   }
 }

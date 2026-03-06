@@ -85,7 +85,6 @@ const FileUploadExample: React.FC<Props> = props => {
         {...props}
         inputId={fileupload}
         dropzoneStatusText="Slipp filer her"
-        chooseFilesText={'Last opp'}
         errorTextId="errorTextId"
       />
       <Button type="submit">{'Send inn'}</Button>
