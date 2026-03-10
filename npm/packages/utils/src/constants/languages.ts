@@ -7,6 +7,8 @@ export enum LanguageLocales {
   RUSSIAN = 'ru-RU',
   ROMANIAN = 'ro-RO',
   SAMI_NORTHERN = 'se-NO',
+  FRENCH = 'fr-FR',
+  UKRAINIAN = 'uk-UA',
 }
 
 export default LanguageLocales;
