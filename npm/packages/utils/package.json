@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/core-utils",
-  "version": "38.0.0-beta.18",
+  "version": "38.0.0",
   "description": "Samling av ulike verktøy og hjelpefunksjoner for bruk på Helsenorge",
   "repository": {
     "type": "git",
@@ -52,7 +52,7 @@
   "type": "module",
   "sideEffects": false,
   "devDependencies": {
-    "@helsenorge/library-build": "^38.0.0-beta.18"
+    "@helsenorge/library-build": "^38.0.0"
   },
   "dependencies": {
     "date-fns": "^4.1.0"
