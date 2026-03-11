@@ -87,37 +87,41 @@ npx playwright test --ui
 
 ## Version and publish
 
-Opprette første betaversjon av ny major (overgang fra v37.x.y => v38.0.0-beta.0)
+Alle disse kommandoene kjøres enten fra branch der man jobber med beta, eller fra master.
 
-```bash
-npm run release:premajor
-```
-
-Lage nye betaversjoner (v38.0.0-beta.0 => v38.0.0-beta.1):
-
-```bash
-npm run release:beta
-```
-
-Etter at du har kjørt release-scriptet, må du pushe endringene til origin, og også pushe tagene for å starte et bygg som vil publisere den nye versjonen:
+NB! Etter at du har kjørt release-scriptet, må du pushe endringene til origin, og også pushe tagene for å starte et bygg som vil publisere den nye versjonen:
 
 ```bash
 git push origin tag v38.0.0-beta.10
 ```
 
-Opprette første versjon av ny major (overgang fra v38.0.0-beta.0 => v38.0.0)
+### Opprette første betaversjon av ny major (overgang fra v37.x.y => v38.0.0-beta.0)
+
+```bash
+npm run release:premajor
+```
+
+###  Lage nye betaversjoner (v38.0.0-beta.0 => v38.0.0-beta.1):
+
+```bash
+npm run release:beta
+```
+
+### Opprette første versjon av ny major (overgang fra v38.0.0-beta.0 => v38.0.0)
+
+Før du slipper en ny major, må du ta i bruk en versjon av designsystemet som ikke er beta (både dependencies og peerDependencies).
 
 ```bash
 npm run release:major
 ```
 
-Opprette ny minor (overgang fra v38.0.0 => v38.1.0)
+### Opprette ny minor (overgang fra v38.0.0 => v38.1.0)
 
 ```bash
 npm run release:minor
 ```
 
-Opprette ny patch (overgang fra v38.1.0 => v38.1.1)
+### Opprette ny patch (overgang fra v38.1.0 => v38.1.1)
 
 ```bash
 npm run release:patch
