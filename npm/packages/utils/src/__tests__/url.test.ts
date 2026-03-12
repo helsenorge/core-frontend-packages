@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest';
 
-import { getUrlHostname, isHttps, normalizePath, normalizeQuery } from '../url';
+import { getUrlHostname, isHttps, normalizePath, normalizeQuery, tryCreateUrl } from '../url';
 
 if (typeof window !== 'undefined') {
   const oldWindowLocation = window.location;
@@ -16,6 +16,26 @@ if (typeof window !== 'undefined') {
     },
   });
 }
+
+describe('tryCreateUrl', () => {
+  describe('Gitt at URL er www.helsenorge.no', () => {
+    describe('Når tryCreateUrl kalles ', () => {
+      test('Så returnerer den en URL-objekt', () => {
+        const result = tryCreateUrl('https://www.helsenorge.no');
+        expect(result).toBeInstanceOf(URL);
+        expect(result?.href).toBe('https://www.helsenorge.no/');
+      });
+    });
+  });
+  describe('Gitt at URL er ugyldig', () => {
+    describe('Når tryCreateUrl kalles ', () => {
+      test('Så returnerer den undefined', () => {
+        const result = tryCreateUrl('httpnrk.no');
+        expect(result).toBeUndefined();
+      });
+    });
+  });
+});
 
 describe('getUrlHostname', () => {
   describe('Gitt at domene er www.helsenorge.no', () => {

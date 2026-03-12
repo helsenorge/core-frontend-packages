@@ -1,16 +1,27 @@
 /**
+ * Forsøker å lage en URL-objekt fra en streng, og returnerer undefined dersom strengen ikke er en gyldig URL
+ * @param url En gyldig URL, f.eks. https://www.helsenorge.no/sykdom/
+ * @returns URL-objekt dersom strengen er en gyldig URL, ellers undefined
+ */
+export const tryCreateUrl = (url: string): URL | undefined => {
+  try {
+    const urlObject = new URL(url);
+
+    return urlObject;
+  } catch {
+    return;
+  }
+};
+
+/**
  * Hent hostname fra en URL
  * @param url En gyldig URL, f.eks. https://www.helsenorge.no/sykdom/
  * @returns hostname, f.eks. www.helsenorge.no
  */
 export const getUrlHostname = (url: string): string | undefined => {
-  try {
-    const urlObject = new URL(url);
+  const urlObject = tryCreateUrl(url);
 
-    return urlObject.hostname;
-  } catch {
-    return;
-  }
+  return urlObject?.hostname;
 };
 
 /**
