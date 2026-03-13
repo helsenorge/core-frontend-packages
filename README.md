@@ -23,7 +23,6 @@ For developing locally you should follow these steps:
 1. Clone the repository
 2. Run ```npm i```in root folder
 3. Run ```npm run build``` in build folder
-    - To build what is needed for a specific package you can run ```npm run build -- --scope=@helsenorge/core-framework``` in root folder
 4. Run the specific package you are going to work on inside the package. Check the specific run scripts for each package.
 
 
