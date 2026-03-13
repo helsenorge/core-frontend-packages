@@ -35,17 +35,14 @@ export const isHttps = (): boolean => window.location.protocol === 'https:';
  * @param path Path som skal normaliseres (uten query string eller domene)
  * @returns Normalisert path
  */
-export const normalizePath = (path: string): string => {
-  // Path skal alltid starte med /
-  if (!path.startsWith('/')) {
-    path = '/' + path;
-  }
-  // Path skal ikke slutte med /, med mindre det er rotsiden
-  if (path.endsWith('/') && path !== '/') {
-    path = path.slice(0, -1);
-  }
+export const normalizePath = (...parts: (string | undefined)[]): string => {
+  const joined = parts
+    .filter((p): p is string => !!p)
+    .flatMap(p => p.split('/'))
+    .filter(Boolean)
+    .join('/');
 
-  return path;
+  return `/${joined}`;
 };
 
 /**
