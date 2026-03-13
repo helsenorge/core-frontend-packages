@@ -102,6 +102,70 @@ describe('normalizePath', () => {
       });
     });
   });
+
+  describe('Gitt at path er en tom streng', () => {
+    describe('Når normalizePath kalles', () => {
+      test('Så returnerer den /', () => {
+        expect(normalizePath('')).toBe('/');
+      });
+    });
+  });
+
+  describe('Gitt at path allerede er normalisert', () => {
+    describe('Når normalizePath kalles', () => {
+      test('Så returnerer den path uendret', () => {
+        expect(normalizePath('/base/path')).toBe('/base/path');
+      });
+    });
+  });
+
+  describe('Gitt at path inneholder doble skråstreker', () => {
+    describe('Når normalizePath kalles', () => {
+      test('Så kollapser den doble skråstreker', () => {
+        expect(normalizePath('//a//b//')).toBe('/a/b');
+      });
+
+      test('Så kollapser den mange skråstreker', () => {
+        expect(normalizePath('///a///')).toBe('/a');
+      });
+    });
+  });
+
+  describe('Gitt at path har flere segmenter', () => {
+    describe('Når normalizePath kalles', () => {
+      test('Så beholder den alle segmenter', () => {
+        expect(normalizePath('/base/nested/path/sub')).toBe('/base/nested/path/sub');
+      });
+
+      test('Så fjerner den avsluttende skråstrek', () => {
+        expect(normalizePath('a/b/')).toBe('/a/b');
+      });
+    });
+  });
+
+  describe('Gitt at normalizePath kalles med flere argumenter', () => {
+    describe('Når normalizePath kalles', () => {
+      test('Så slår den sammen to segmenter', () => {
+        expect(normalizePath('base', 'path')).toBe('/base/path');
+      });
+
+      test('Så slår den sammen flere segmenter', () => {
+        expect(normalizePath('a', 'b', 'c', 'd')).toBe('/a/b/c/d');
+      });
+
+      test('Så ignorerer den undefined-argumenter', () => {
+        expect(normalizePath(undefined, 'a', undefined, 'b')).toBe('/a/b');
+      });
+
+      test('Så ignorerer den tomme strenger', () => {
+        expect(normalizePath('', 'a', '', 'b')).toBe('/a/b');
+      });
+
+      test('Så håndterer den segmenter som allerede inneholder skråstreker', () => {
+        expect(normalizePath('/base/nested/', '/path/sub')).toBe('/base/nested/path/sub');
+      });
+    });
+  });
 });
 
 describe('normalizeQuery', () => {
