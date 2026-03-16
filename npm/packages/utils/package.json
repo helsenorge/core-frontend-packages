@@ -52,7 +52,8 @@
   "type": "module",
   "sideEffects": false,
   "devDependencies": {
-    "@helsenorge/library-build": "^38.0.2"
+    "@helsenorge/library-build": "^38.0.2",
+    "npm-run-all2": "^8.0.4"
   },
   "dependencies": {
     "date-fns": "^4.1.0"
