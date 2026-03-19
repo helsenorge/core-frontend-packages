@@ -4,3 +4,5 @@
 CHANGELOG.md
 mockServiceWorker.js
 README.md
+npm/packages/framework-utils/src/amplitude/ampli/index.ts
+npm/packages/framework-utils/ampli.json
