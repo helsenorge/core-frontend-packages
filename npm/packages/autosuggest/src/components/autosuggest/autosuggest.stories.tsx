@@ -15,13 +15,13 @@ import type {
 import Button from '@helsenorge/designsystem-react/components/Button';
 import Spacer from '@helsenorge/designsystem-react/components/Spacer';
 
-import Autosuggest, { type Suggestion } from '.';
+import Autosuggest, { type Props as AutosuggestProps, type Suggestion } from '.';
 
 interface ExampleForm {
   value: string;
 }
 
-const AutosuggestExample: React.FC = () => {
+const AutosuggestExample: React.FC<AutosuggestProps<Suggestion>> = args => {
   const [suggestions, setSuggestions] = React.useState<Suggestion[]>([]);
 
   const {
@@ -64,6 +64,7 @@ const AutosuggestExample: React.FC = () => {
       <Spacer />
       <form onSubmit={handleSubmit(onSubmit)}>
         <Autosuggest
+          {...args}
           inputProps={{
             type: 'search',
             value: getValues('value'),
@@ -104,6 +105,11 @@ const meta = {
     label: 'Søk i behandlinger og undersøkelser',
     onSuggestionsFetchRequested: fn(),
   },
+  argTypes: {
+    containerProps: {
+      control: { type: 'object' },
+    },
+  },
 } satisfies Meta<typeof Autosuggest>;
 
 export default meta;
@@ -111,5 +117,5 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: () => <AutosuggestExample />,
+  render: args => <AutosuggestExample {...args} />,
 };

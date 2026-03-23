@@ -1,4 +1,4 @@
-import React, { useId } from 'react';
+import { useId } from 'react';
 
 import ReactAutosuggest, { type AutosuggestPropsBase, type InputProps, type RenderSuggestion } from 'react-autosuggest';
 
@@ -17,6 +17,7 @@ export interface Suggestion {
 
 export interface Props<T> extends Pick<
   AutosuggestPropsBase<T>,
+  | 'containerProps'
   | 'focusInputOnSuggestionClick'
   | 'onSuggestionsClearRequested'
   | 'onSuggestionSelected'
@@ -75,6 +76,7 @@ const Autosuggest: React.FC<Props<Suggestion>> = props => {
       <div className={props.className}>
         {renderLabel({ label: props.label, inputId, onColor: props.error ? FormOnColor.oninvalid : FormOnColor.onwhite })}
         <ReactAutosuggest
+          containerProps={props.containerProps}
           theme={styles}
           suggestions={props.suggestions}
           inputProps={inputProps}
