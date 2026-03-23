@@ -131,7 +131,7 @@ const FileUpload: React.FC<Props> = props => {
   const { refObject } = usePseudoClasses<HTMLInputElement>(isMutableRefObject(ref) ? ref : null);
   const mergedRefs = mergeRefs([ref, refObject]);
   const inputButtonId = inputId + '-button';
-  const dropzoneTextId = inputId + 'dropzonetext';
+  const dropzoneTextId = visualDropZone ? inputId + 'dropzonetext' : undefined;
   const errorTextIdFallback = useId();
   const errorTextId = errorTextIdProp || errorTextIdFallback;
 
