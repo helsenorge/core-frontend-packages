@@ -208,19 +208,39 @@ describe('FileUpload', () => {
       });
     });
   });
+  describe('Gitt at FileUpload rendres uten visualDropZone', () => {
+    describe('Når komponentet rendres', () => {
+      it('Så har opplastingsknappen ingen aria-describedby fra dropzone-teksten', () => {
+        render(<FileUpload inputId="id" dropzoneStatusText="Slipp filer her" />);
+
+        const uploadButton = screen.getByRole('button', { name: 'Last opp' });
+        expect(uploadButton).not.toHaveAccessibleDescription(expect.stringContaining('Slipp filer her'));
+      });
+    });
+  });
+  describe('Gitt at FileUpload rendres med visualDropZone', () => {
+    describe('Når komponentet rendres', () => {
+      it('Så har opplastingsknappen aria-describedby som inkluderer dropzone-teksten', () => {
+        render(<FileUpload inputId="id" visualDropZone dropzoneStatusText="Slipp filer her" />);
+
+        const uploadButton = screen.getByRole('button', { name: 'Last opp' });
+        expect(uploadButton).toHaveAccessibleDescription(expect.stringContaining('Slipp filer her'));
+      });
+    });
+  });
   describe('Gitt at FileUpload har har validering satt', () => {
     describe('Når validering ikke er riktig', () => {
       it('Så vises feilmelding', async () => {
         render(<FileUploadExample inputId={'input01'} />);
 
         const uploadButton = screen.getByRole('button', { name: 'Last opp et bilde' });
-        expect(uploadButton).toHaveAccessibleDescription('Slipp filer her Gyldige filformater er jpeg, png og pdf, maks 300kb');
+        expect(uploadButton).toHaveAccessibleDescription('Gyldige filformater er jpeg, png og pdf, maks 300kb');
 
         const submitButton = screen.getByRole('button', { name: 'Send inn' });
         await userEvent.click(submitButton);
 
         expect(uploadButton).toHaveAccessibleDescription(
-          'Slipp filer her Gyldige filformater er jpeg, png og pdf, maks 300kb Det må lastes en til to bilder'
+          'Gyldige filformater er jpeg, png og pdf, maks 300kb Det må lastes en til to bilder'
         );
       });
     });

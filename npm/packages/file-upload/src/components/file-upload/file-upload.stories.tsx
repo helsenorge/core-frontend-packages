@@ -39,6 +39,7 @@ const FileUploadExample: React.FC = () => {
   const validFileTypes1: MimeTypes[] = ['image/jpeg', 'image/png', 'application/pdf'];
   const sublabelId = 'sublabelId';
   const sublabelId2 = 'sublabelId2';
+  const sublabelId3 = 'sublabelId3';
   const maxFiles = 2;
   const dropzoneText = !disableButton ? 'Eller dra filer hit' : 'Du har lagt til maksimalt antall filer';
 
@@ -109,7 +110,7 @@ const FileUploadExample: React.FC = () => {
       <br />
       <FileUpload
         aria-describedby={sublabelId}
-        inputId="fileupload2"
+        inputId="fileupload1"
         label={
           <Label
             labelTexts={[{ text: 'Last opp hva du vil' }]}
@@ -162,18 +163,18 @@ const FileUploadExample: React.FC = () => {
         <br />
         <FormGroup error={useFormReturn.formState.errors.fileupload?.message}>
           <FileUpload
-            aria-describedby={sublabelId}
+            aria-describedby={sublabelId3}
             defaultFiles={defaultFiles}
             disabled={disableButton}
             dropzoneStatusText={dropzoneText}
             error={!!useFormReturn.formState.errors.fileupload}
-            inputId="fileupload1"
+            inputId="fileupload3"
             label={
               <Label
                 labelTexts={[{ text: 'Last opp en eller to bilder' }]}
                 sublabel={
                   <Sublabel
-                    id={sublabelId}
+                    id={sublabelId3}
                     sublabelTexts={[
                       {
                         text: 'Gyldige filformater er jpeg, png og pdf, maks 300kb per fil og maks 400kb over alle filer',
