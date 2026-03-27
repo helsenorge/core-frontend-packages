@@ -133,3 +133,12 @@ npm run release:patch
 cd npm/packages/eslint-config # Eller annen pakke :-)
 npm publish --tag beta --registry https://registry.npmjs.org/
 ```
+
+### Publisere betaversjon av enkeltpakke
+
+```bash
+cd npm/packages/pdf-preview # Eller annen pakke :-)
+# NB! Endre "version" manuelt i npm/packages/pdf-preview/package.json til f.eks. "38.2.2-pdfbeta"
+npm run build
+npm publish --tag beta
+```
