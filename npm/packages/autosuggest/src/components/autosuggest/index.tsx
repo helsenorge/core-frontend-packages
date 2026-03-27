@@ -42,6 +42,8 @@ export interface Props<T> extends Pick<
   errorWrapperClassName?: string;
   /** Tilpasset funksjon for å definere markup'en som rendres for en suggestion i suggestionslisten */
   renderSuggestion?: RenderSuggestion<T>;
+  /** Egendefinert ID for ReactAutosuggest-komponenten */
+  id?: string;
 }
 
 const renderSuggestion = (suggestion: Suggestion): React.JSX.Element => (
@@ -76,6 +78,7 @@ const Autosuggest: React.FC<Props<Suggestion>> = props => {
       <div className={props.className}>
         {renderLabel({ label: props.label, inputId, onColor: props.error ? FormOnColor.oninvalid : FormOnColor.onwhite })}
         <ReactAutosuggest
+          id={props.id}
           containerProps={props.containerProps}
           theme={styles}
           suggestions={props.suggestions}
