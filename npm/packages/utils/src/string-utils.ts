@@ -125,3 +125,28 @@ export function safeStableStringify(value: unknown): string {
   };
   return JSON.stringify(stringify(value));
 }
+
+const emailRegex = /([^.@\s]+)(\.[^.@\s]+)*@([^.@\s]+\.)+([^.@\s]+)/g;
+const numberRegex = /\d[\d\s]*\d/g;
+
+/**
+ * Fjerner sensitivt tekstinnhold som f.eks. e-post, fødselsnummer, telefon eller kontonummer
+ * @param value - streng som skal renses
+ * @returns inputstreng hvor sensitivt tekstinnhold er erstattet med placeholder-tekst
+ */
+export const removeSensitiveContent = (value: string): string => {
+  value = value.replace(emailRegex, '* e-post *');
+  value = value.replace(numberRegex, '* tall *');
+
+  const mvhIndex = value.toLowerCase().indexOf('mvh');
+  if (mvhIndex !== -1) {
+    value = value.substring(0, mvhIndex);
+  }
+
+  const hilsenIndex = value.toLowerCase().indexOf('hilsen');
+  if (hilsenIndex !== -1) {
+    value = value.substring(0, hilsenIndex);
+  }
+
+  return value;
+};
