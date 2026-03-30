@@ -196,6 +196,57 @@ describe('String-utils', () => {
     });
   });
 
+  describe('Gitt at removeSensitiveContent skal sjekkes', () => {
+    describe('Når det sendes en streng med e-postadresser', () => {
+      it('Så erstattes e-postadressene med "* e-post *"', () => {
+        const result = stringFunctions.removeSensitiveContent('Min e-post er test@nhn.no eller annen@test.com hadetbra');
+        expect(result).toEqual('Min e-post er * e-post * eller * e-post * hadetbra');
+      });
+    });
+
+    describe('Når det sendes en streng med telefonnummer', () => {
+      it('Så erstattes telefonnummeret med "* tall *"', () => {
+        const result = stringFunctions.removeSensitiveContent('Mitt telefonnr er 900 98 988');
+        expect(result).toEqual('Mitt telefonnr er * tall *');
+      });
+    });
+
+    describe('Når det sendes en streng med fødselsnummer med mellomrom', () => {
+      it('Så erstattes tallene inkludert mellomrom med "* tall *"', () => {
+        const result = stringFunctions.removeSensitiveContent('Mitt fødselsnr er 131169 00216 og jeg er linedanser');
+        expect(result).toEqual('Mitt fødselsnr er * tall * og jeg er linedanser');
+      });
+    });
+
+    describe('Når det sendes en streng med et enkeltstående siffer', () => {
+      it('Så beholdes sifferet uendret', () => {
+        const result = stringFunctions.removeSensitiveContent('Jeg er 1 person');
+        expect(result).toEqual('Jeg er 1 person');
+      });
+    });
+
+    describe('Når det sendes en streng med to sammenhengende sifre', () => {
+      it('Så erstattes de med "* tall *"', () => {
+        const result = stringFunctions.removeSensitiveContent('Jeg er 12 år');
+        expect(result).toEqual('Jeg er * tall * år');
+      });
+    });
+
+    describe('Når det sendes en streng som inneholder "mvh"', () => {
+      it('Så fjernes alt fra og med "mvh"', () => {
+        const result = stringFunctions.removeSensitiveContent('Her er min beskjed mvh Line');
+        expect(result).toEqual('Her er min beskjed ');
+      });
+    });
+
+    describe('Når det sendes en streng som inneholder "hilsen"', () => {
+      it('Så fjernes alt fra og med "hilsen"', () => {
+        const result = stringFunctions.removeSensitiveContent('Her er min beskjed hilsen Line');
+        expect(result).toEqual('Her er min beskjed ');
+      });
+    });
+  });
+
   // Nye tester for safeStableStringify
   describe('Gitt at safeStableStringify skal sjekkes', () => {
     describe('Når et objekt har nøkler i tilfeldig rekkefølge', () => {
