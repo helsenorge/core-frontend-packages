@@ -47,15 +47,15 @@
     "react-dom": "^19.0.0"
   },
   "optionalDependencies": {
-    "react-hook-form": "^7.71.2"
+    "react-hook-form": "^7.72.0"
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^38.4.2",
     "@helsenorge/designsystem-react": "^14.2.1",
     "@helsenorge/library-build": "^38.4.2",
-    "@storybook/react-vite": "^10.2.19",
+    "@storybook/react-vite": "^10.3.3",
     "npm-run-all2": "^8.0.4",
-    "react-hook-form": "^7.71.2"
+    "react-hook-form": "^7.72.0"
   },
   "exports": {
     "./components/file-upload": "./lib/components/file-upload/index.js",
