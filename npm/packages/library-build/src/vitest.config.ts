@@ -22,9 +22,9 @@ export const getConfig: ViteUserConfigFn = () => {
       },
       coverage: {
         enabled: true,
-        reporter: ['cobertura', 'lcov', 'json'],
-        include: ['src/**'],
-        exclude: [...coverageConfigDefaults.exclude, '**/__devonly__/**', '**/__mocks__/**', '**/mocks/**'],
+        reporter: ['cobertura', 'lcov'],
+        include: ['src/**/*.{ts,tsx}'],
+        exclude: [...coverageConfigDefaults.exclude, '**/__devonly__/**', '**/__mocks__/**', '**/mocks/**', '**/__data__/**'],
       },
       reporters: ['default', 'junit'],
       outputFile: {
