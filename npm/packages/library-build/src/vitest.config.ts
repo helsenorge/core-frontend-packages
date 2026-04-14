@@ -1,10 +1,12 @@
 import react from '@vitejs/plugin-react';
-import tsconfigPaths from 'vite-tsconfig-paths';
 import { type ViteUserConfigFn, coverageConfigDefaults, defineConfig } from 'vitest/config';
 
 export const getConfig: ViteUserConfigFn = () => {
   return {
-    plugins: [react(), tsconfigPaths()],
+    plugins: [react()],
+    resolve: {
+      tsconfigPaths: true,
+    },
     test: {
       include: ['src/**/__tests__/**/*.[jt]s?(x)', 'src/**/?(*.)+(spec|test).[jt]s?(x)'],
       globals: true,
