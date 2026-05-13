@@ -3,7 +3,7 @@
 This is the **Helsenorge Core Frontend** monorepo: a TypeScript/React codebase producing npm packages and micro frontends for
 [helsenorge.no](https://helsenorge.no) (Norway's national health portal).
 
-Requires Node `^24.0.0` and npm `>=11.0.0`.
+Requires Node `^24.0.0 || ^26.0.0` and npm `>=11.0.0`.
 
 ---
 
