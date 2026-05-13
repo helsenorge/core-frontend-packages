@@ -23,9 +23,48 @@ paste-and-go in any consumer repo and self-skip when the change is irrelevant.
 If you trigger this skill but the user's actual request is something narrower (e.g. "summarize the changes in this branch" without wiki
 output), confirm before producing the full guide. The output is opinionated and Norwegian — make sure that's what they want.
 
-## Step 1: Gather inputs
+## Step 1: Determine mode and gather inputs
 
-You need:
+There are two modes. Identify which applies before doing anything else.
+
+### Mode A — Single-change update (the normal case)
+
+You are on a short-lived branch (a few commits) that branches off from a feature branch such as `feature/core-v39`. The migration guide
+already exists. You are adding one new entry for the change(s) on the current branch.
+
+**How to detect:**
+
+- Run `git branch --show-current` to get the current branch name.
+- Run `git fetch origin --quiet` then `git log --no-merges --oneline origin/feature/core-vXX..HEAD` — if this returns a small number of
+  commits (typically 1–3) and a `feature/core-vXX` branch exists on origin, you are almost certainly in Mode A.
+- Confirm: `git log --no-merges --oneline origin/master..origin/feature/core-vXX` will show many more commits, confirming that the feature
+  branch itself has substantial history vs master.
+
+**Inputs you need:**
+
+- The feature branch this will be merged into (e.g. `feature/core-v39`). Infer from the branch topology above; ask if unclear.
+- The existing migration guide file. Look for `migration-guide-v*.md` in the repo root; if found, read it.
+
+**What to do in Mode A:**
+
+- Analyse only the commits on the current branch (`origin/feature/core-vXX..HEAD`). Do not re-analyse the full feature branch.
+- Identify and classify only the new changes (Steps 2–3 below, scoped to `HEAD` vs `origin/feature/core-vXX`).
+- Add only the new entries to the existing guide (Step 4–5). Do not re-verify or rewrite existing entries unless you spot a clear factual
+  error in one that is directly related to what you are adding.
+- Skip Step 6 (preamble) — it already exists.
+
+### Mode B — Full branch comparison
+
+You are comparing an entire feature branch (e.g. `feature/core-v39`) against `master`, either to create a new guide from scratch or to do a
+comprehensive update of an existing one.
+
+**How to detect:**
+
+- The user explicitly names a feature branch to compare against master.
+- Or: the current branch IS the feature branch (e.g. `git branch --show-current` returns `feature/core-v39`).
+- Or: `git log --no-merges --oneline origin/master..HEAD` shows many commits (dozens), indicating this is the full feature branch.
+
+**Inputs you need:**
 
 - **Feature branch name** (e.g. `feature/core-v39`). Required.
 - **Existing migration guide path** (optional). If the user is updating a partially-written guide, they should hand you the markdown file or
@@ -33,27 +72,30 @@ You need:
 - **Target output path** (optional). Default: `migration-guide-<sanitized-branch>.md` in the current directory, where slashes in the branch
   name become hyphens.
 
-If the feature branch isn't obvious from context, ask. If you see a partial guide in the conversation or as an attachment, treat that as the
-existing guide.
+If you cannot determine the mode from context, ask the user before proceeding.
 
 ## Step 2: Discover changes
+
+**For Mode A**, substitute `origin/feature/core-vXX` for `origin/master` in every command below (compare current branch against the feature
+branch, not master).
+
+**For Mode B**, compare `origin/<branch>` against `origin/master`.
 
 Run in this order:
 
 1. `git fetch origin --quiet`
-2. `git log --no-merges --oneline origin/master..origin/<branch>` — commit overview.
-3. `git diff --name-only origin/master..origin/<branch> | grep -E "^packages/[^/]+/" | awk -F/ '{print $1"/"$2}' | sort -u` — changed
-   packages.
+2. `git log --no-merges --oneline <base>..HEAD` (Mode A) or `origin/master..origin/<branch>` (Mode B) — commit overview.
+3. `git diff --name-only <base>..<tip> | grep -E "^npm/packages/[^/]+/" | awk -F/ '{print $1"/"$2"/"$3}' | sort -u` — changed packages.
 
 For each changed package, gather signals in order of trustworthiness:
 
 - **`<pkg>/CHANGELOG.md` diff** — primary source when present.
 - **`<pkg>/package.json` diff** — version bump (major = breaking signal) and dep changes.
-- **Deleted files** — `git diff --diff-filter=D --name-only origin/master..origin/<branch> -- <pkg>`.
+- **Deleted files** — `git diff --diff-filter=D --name-only <base>..<tip> -- <pkg>`.
 - **Public API surface** — diff the `exports` field in `<pkg>/package.json` for removed or renamed entry points (the codebase uses subpath
   exports per feature, not barrel files, so each removed key is a removed public surface). For deeper signal on a specific entry, diff its
   `./lib/<name>/index.js` source.
-- **Commit messages** — `git log --no-merges --pretty=format:"%h %s%n%b" origin/master..origin/<branch> -- <pkg>` when CHANGELOG is thin.
+- **Commit messages** — `git log --no-merges --pretty=format:"%h %s%n%b" <base>..<tip> -- <pkg>` when CHANGELOG is thin.
 - **Targeted file diffs** — only when you suspect a breaking change you can't otherwise confirm.
 
 Be efficient. Don't load the full package diff. Follow signals.
@@ -74,9 +116,12 @@ Skip pure internal changes (refactors with no API change, lint fixes, test impro
 
 ## Step 4: Reconcile with existing guide
 
-If the user gave you an existing guide, read it and mark which changes are already documented. **Verify every factual claim in every
-existing entry against your own diff analysis.** Correct errors and outdated information — do not assume an existing guide is correct. Keep
-style and structure only where the facts check out. Merge in what's missing.
+**Mode A:** Read the existing guide. Identify the new entries you need to add based on your Step 2–3 analysis. Add them in the right
+position (see Step 7 for ordering). Do not touch existing entries.
+
+**Mode B:** Read the existing guide (if any) and mark which changes are already documented. **Verify every factual claim in every existing
+entry against your own diff analysis.** Correct errors and outdated information — do not assume an existing guide is correct. Keep style and
+structure only where the facts check out. Merge in what's missing.
 
 ## Step 5: Write each entry
 
@@ -237,9 +282,8 @@ If the existing guide has its own order, respect it.
 
 Write the guide to the output path. Then summarize briefly in chat:
 
-- Number of entries (new + carried over).
-- Changes you found but were unsure how to classify — list them so the user can decide.
-- Existing entries you preserved unchanged.
-- Output file path.
+- **Mode A:** The new entry (or entries) added, and the output file path.
+- **Mode B:** Number of entries (new + carried over), any changes you found but were unsure how to classify (list them so the user can
+  decide), existing entries you preserved unchanged, and the output file path.
 
 Don't paste the full guide back into chat unless the user asks. They'll read the file.
