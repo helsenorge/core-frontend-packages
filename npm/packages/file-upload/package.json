@@ -51,7 +51,7 @@
   },
   "devDependencies": {
     "@helsenorge/core-utils": "^39.0.0-beta.0",
-    "@helsenorge/designsystem-react": "^14.2.1",
+    "@helsenorge/designsystem-react": "^14.9.1",
     "@helsenorge/library-build": "^39.0.0-beta.0",
     "@storybook/react-vite": "^10.2.19",
     "npm-run-all2": "^8.0.4",
