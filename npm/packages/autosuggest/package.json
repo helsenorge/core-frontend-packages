@@ -45,7 +45,7 @@
     "test": "vitest"
   },
   "peerDependencies": {
-    "@helsenorge/designsystem-react": "^14.2.1",
+    "@helsenorge/designsystem-react": "^14.4.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
