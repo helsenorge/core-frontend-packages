@@ -1,4 +1,4 @@
-import { base64ToBlob, downloadFileInBrowser } from '../blob';
+import { base64ToArrayBuffer, base64ToBlob, downloadFileInBrowser } from '../blob';
 
 vi.stubGlobal('URL', {
   createObjectURL: vi.fn().mockReturnValue('blob:http://localhost/fake-blob-url'),
@@ -12,6 +12,16 @@ describe('Gitt at base64ToBlob kalles', () => {
 
       expect(result).toBeInstanceOf(Blob);
       expect(result.type).toBe('application/pdf');
+    });
+  });
+});
+
+describe('Gitt at base64ToArrayBuffer kalles', () => {
+  describe('Når input er base64-encoded tekst', () => {
+    it('Så returnerer den en ArrayBuffer', async () => {
+      const result = base64ToArrayBuffer('SGVsbG8gV29ybGQ=');
+
+      expect(result).toBeInstanceOf(ArrayBuffer);
     });
   });
 });

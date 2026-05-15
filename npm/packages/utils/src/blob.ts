@@ -1,15 +1,32 @@
+const base64ToUint8Array = (base64: string): Uint8Array<ArrayBuffer> => {
+  const binaryStr = atob(base64);
+  const len = binaryStr.length;
+  const bytes = new Uint8Array(len);
+
+  for (let i = 0; i < len; i++) {
+    bytes[i] = binaryStr.charCodeAt(i);
+  }
+
+  return bytes;
+};
+
+/**
+ * Konverterer en base64-streng til en ArrayBuffer
+ * @param base64 String som skal konverteres til ArrayBuffer
+ */
+export const base64ToArrayBuffer = (base64: string): ArrayBuffer => {
+  const array = base64ToUint8Array(base64);
+
+  return array.buffer;
+};
+
 /**
  * Konverterer en base64-streng til en Blob
  * @param base64 String som skal konverteres til Blob
  * @param type MIME-type, f.eks. 'application/pdf'
  */
 export const base64ToBlob = (base64: string, type: string): Blob => {
-  const binaryStr = atob(base64);
-  const len = binaryStr.length;
-  const bytes = new Uint8Array(len);
-  for (let i = 0; i < len; i++) {
-    bytes[i] = binaryStr.charCodeAt(i);
-  }
+  const bytes = base64ToUint8Array(base64);
 
   return new Blob([bytes], { type });
 };
