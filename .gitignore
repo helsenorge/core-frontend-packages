@@ -148,3 +148,5 @@ Chart.lock
 *.tgz
 
 **/mockServiceWorker.js
+
+*.lscache
