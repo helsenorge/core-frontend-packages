@@ -128,6 +128,7 @@ const FileUpload: React.FC<Props> = props => {
 
   const [dragover, setDragover] = useState(false);
   const [calledFakeOnChange, setCalledFakeOnChange] = useState(false);
+  // eslint-disable-next-line react-hooks/refs -- @todo rett opp i
   const { refObject } = usePseudoClasses<HTMLInputElement>(isMutableRefObject(ref) ? ref : null);
   const mergedRefs = mergeRefs([ref, refObject]);
   const inputButtonId = inputId + '-button';
@@ -178,6 +179,7 @@ const FileUpload: React.FC<Props> = props => {
     if (typeof defaultFiles !== 'undefined' && defaultFiles.length > 0) {
       const filteredDefaultFiles = getNewFiles(defaultFiles);
       setInputFiles(filteredDefaultFiles);
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- @todo rett opp i
       setCalledFakeOnChange(true);
     }
   }, [defaultFiles]);

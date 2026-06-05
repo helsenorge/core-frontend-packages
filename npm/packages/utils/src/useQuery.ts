@@ -235,6 +235,7 @@ export function useQuery<TData, TArgs extends unknown[] = []>(options: UseQueryO
   );
 
   useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- @todo Rett opp i
     startFetch();
   }, [keyString, startFetch]);
 
@@ -248,6 +249,7 @@ export function useQuery<TData, TArgs extends unknown[] = []>(options: UseQueryO
   const refetch = useCallback(() => startFetch(true), [startFetch]);
   const fetchNext = useCallback((nextArgs: TArgs) => startFetch(true, nextArgs, true), [startFetch]);
 
+  // eslint-disable-next-line react-hooks/refs -- @todo Må rettes opp i
   const entry = getEntry();
   const data = entry.state.data;
   const isStale = !isFresh(entry);

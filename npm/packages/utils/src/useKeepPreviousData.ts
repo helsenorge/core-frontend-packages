@@ -16,6 +16,7 @@ function useKeepPreviousData<T>(data: T | undefined): T | undefined {
     }
   }, [data]);
 
+  // eslint-disable-next-line react-hooks/refs -- @todo Må rettes opp i
   return data !== undefined ? data : ref.current;
 }
 
