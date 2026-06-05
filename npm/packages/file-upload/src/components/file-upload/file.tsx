@@ -17,6 +17,7 @@ import { palette } from '@helsenorge/designsystem-react/theme/palette';
 
 import styles from './styles.module.scss';
 
+// eslint-disable-next-line react-refresh/only-export-components -- @Todo rett opp i V40
 export enum Type {
   verified = 'verified',
   rejected = 'rejected',
@@ -76,7 +77,7 @@ export default class FileElement extends React.Component<FileProps, FileState> {
     this.deleteFile = this.deleteFile.bind(this);
   }
 
-  handleClick(event: React.FormEvent<{}>): void {
+  handleClick(event: React.FormEvent): void {
     const { fileId, onOpenFile } = this.props;
     if (onOpenFile && fileId) {
       onOpenFile(fileId);

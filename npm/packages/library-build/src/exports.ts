@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import * as fs from 'fs';
 import * as path from 'path';
 
@@ -38,8 +39,6 @@ function run() {
   const exportMap: Record<string, string> = {
     './package.json': './package.json',
   };
-
-  let totalFilesFound = 0;
 
   dirsToScan.forEach(dirEntry => {
     const dirPath = path.resolve(cwd, dirEntry);
@@ -110,8 +109,6 @@ function run() {
         exportKey = `./${baseName}`;
         exportMap[exportKey] = fullPath;
       }
-
-      totalFilesFound++;
     });
   });
 

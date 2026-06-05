@@ -15,7 +15,7 @@ import tseslint from 'typescript-eslint';
 import rules from './rules.js';
 
 export const defaultFiles = ['**/*.[jt]s?(x)'];
-export const defaultIgnores = ['**/dist/**', '**/lib/**', '**/public/**', '**/build/**', '**/coverage/**'];
+export const defaultIgnores = ['**/dist/**', '**/lib/**', '**/public/**', '**/build/**', '**/coverage/**', '!npm/packages/build/**'];
 export const testFiles = ['**/__tests__/**/*.[jt]s?(x)', '**/?(*.)+(spec|test).[jt]s?(x)'];
 
 export const configs = [
