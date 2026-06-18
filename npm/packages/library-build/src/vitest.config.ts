@@ -37,6 +37,7 @@ export const getConfig: ViteUserConfigFn = () => {
           inline: [/@helsenorge/, '@portabletext/react'],
         },
       },
+      execArgv: ['--no-webstorage'],
     },
   };
 };
