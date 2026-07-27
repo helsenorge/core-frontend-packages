@@ -165,7 +165,9 @@ export function useQuery<TData, TArgs extends unknown[] = []>(options: UseQueryO
 
       // Avbryt forrige forespørsel
       // @todo Dette fører til en AbortError, som må håndteres av oss spesielt siden vi nok ikke vil logge dette
-      if (entry.abort) entry.abort.abort();
+      if (entry.abort) {
+        entry.abort.abort();
+      }
       const abort = new AbortController();
       entry.abort = abort;
 
@@ -255,9 +257,13 @@ export function useQuery<TData, TArgs extends unknown[] = []>(options: UseQueryO
   const isStale = !isFresh(entry);
 
   let status: LocalQueryResult<TData, TArgs>['status'] = 'idle';
-  if (entry.state.loading) status = 'loading';
-  else if (entry.state.error) status = 'error';
-  else if (entry.state.data !== undefined) status = 'success';
+  if (entry.state.loading) {
+    status = 'loading';
+  } else if (entry.state.error) {
+    status = 'error';
+  } else if (entry.state.data !== undefined) {
+    status = 'success';
+  }
 
   return {
     data,
