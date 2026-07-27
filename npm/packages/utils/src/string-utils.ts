@@ -5,7 +5,9 @@ import { unescapeHexEntities, unescapeHtmlEntities } from './html-entities';
  * @param s - streng som skal sjekkes
  */
 export const isEmpty = (string: string | undefined | null): boolean => {
-  if (string && string.trim) string = string.trim();
+  if (string && string.trim) {
+    string = string.trim();
+  }
   return string === '' || string === null || string === undefined;
 };
 
@@ -14,7 +16,7 @@ export const isEmpty = (string: string | undefined | null): boolean => {
  * @param s - streng som skal sjekkes
  */
 export const hasInvalidCharacters = (s: string): boolean => {
-  return /[""!#¤%=?`´^¨~*:;£${[\]}|§€><|]/.test(s);
+  return /["!#¤%=?`´^¨~*:;£${[\]}§€><|]/.test(s);
 };
 
 /**
@@ -40,8 +42,9 @@ export const decapitalize = (s: string): string => {
  * @param phoneNumber - string or number of the phone number
  */
 export const isNorwegianPhoneNumber = (phoneNumber: string | number): boolean => {
-  const regexString = '^(0047|[+]47)?[4|9][0-9]{7,7}$';
-  return new RegExp(regexString, 'i').test(phoneNumber.toString().replace(new RegExp(' ', 'g'), ''));
+  const numberWithoutWhitespace = phoneNumber.toString().replace(/\s/g, '');
+  const regex = /^(0047|\+47)?[49]\d{7}$/;
+  return regex.test(numberWithoutWhitespace);
 };
 
 /**
@@ -69,7 +72,7 @@ const regexEmoticonsRule =
  * @param s - string som skal sjekkes
  */
 export const invalidNodes = (s: string): string[] => {
-  const tagsMatches = unescapeHtmlEntities(unescapeHexEntities(s)).match(/<.*?>/g);
+  const tagsMatches = unescapeHtmlEntities(unescapeHexEntities(s)).match(/<[^<>]*>/g);
   const tags = tagsMatches ? tagsMatches.map(i => i.toString()) : [];
 
   const emoticonsMatches = s.match(regexEmoticonsRule);
@@ -84,10 +87,10 @@ export const invalidNodes = (s: string): string[] => {
  */
 export const isValid = (s: string): boolean => {
   return (
-    !/<.*?>/g.test(s) &&
+    !/<[^<>]*>/g.test(s) &&
     !regexEmoticonsRule.test(s) &&
-    !/<.*?>/g.test(unescapeHtmlEntities(s)) &&
-    !/<.*?>/g.test(unescapeHtmlEntities(unescapeHexEntities(s)))
+    !/<[^<>]*>/g.test(unescapeHtmlEntities(s)) &&
+    !/<[^<>]*>/g.test(unescapeHtmlEntities(unescapeHexEntities(s)))
   );
 };
 
@@ -126,7 +129,20 @@ export function safeStableStringify(value: unknown): string {
   return JSON.stringify(stringify(value));
 }
 
-const emailRegex = /([^.@\s]+)(\.[^.@\s]+)*@([^.@\s]+\.)+([^.@\s]+)/g;
+const prefix = `(?<=^|[\\s("'])`;
+const localPart = `[^\\s@.]+(?:\\.[^\\s@.]+)*`;
+const domainPart = `[^\\s@.]+\\.[^\\s@.]+(?:\\.[^\\s@.]+)*`;
+const emailRegex = new RegExp(`${prefix}${localPart}@${domainPart}`, 'g');
+
+/**
+ * Erstatter e-postadresser med en placeholder
+ * @param value - streng som kan inneholde e-postadresser
+ * @returns inputstreng med e-postadresser maskert
+ */
+export const removeEmail = (value: string): string => {
+  return value.replace(emailRegex, '* e-post *');
+};
+
 const numberRegex = /\d[\d\s]*\d/g;
 
 /**
@@ -135,7 +151,7 @@ const numberRegex = /\d[\d\s]*\d/g;
  * @returns inputstreng hvor sensitivt tekstinnhold er erstattet med placeholder-tekst
  */
 export const removeSensitiveContent = (value: string): string => {
-  value = value.replace(emailRegex, '* e-post *');
+  value = removeEmail(value);
   value = value.replace(numberRegex, '* tall *');
 
   const mvhIndex = value.toLowerCase().indexOf('mvh');

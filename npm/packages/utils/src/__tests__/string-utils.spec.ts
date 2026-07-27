@@ -247,6 +247,15 @@ describe('String-utils', () => {
     });
   });
 
+  describe('Gitt at removeEmail skal sjekkes', () => {
+    describe('Når det sendes en streng med e-postadresse', () => {
+      it('Så erstattes e-postadressen med standard placeholder', () => {
+        const result = stringFunctions.removeEmail('Min e-post er test@nhn.no');
+        expect(result).toEqual('Min e-post er * e-post *');
+      });
+    });
+  });
+
   // Nye tester for safeStableStringify
   describe('Gitt at safeStableStringify skal sjekkes', () => {
     describe('Når et objekt har nøkler i tilfeldig rekkefølge', () => {
