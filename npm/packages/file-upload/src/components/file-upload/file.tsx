@@ -63,7 +63,9 @@ const fileType = (fileName: string, className?: string) => {
       default:
         return <Icon svgIcon={ImgFile} className={className} />;
     }
-  } else return '';
+  } else {
+    return '';
+  }
 };
 
 export default class FileElement extends React.Component<FileProps, FileState> {

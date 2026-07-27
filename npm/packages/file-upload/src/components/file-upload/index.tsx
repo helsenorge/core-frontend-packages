@@ -306,7 +306,9 @@ const FileUpload: React.FC<Props> = props => {
   };
 
   const renderFiles = (): React.JSX.Element | undefined => {
-    if (rejectedFiles.length === 0 && acceptedFiles.length === 0) return;
+    if (rejectedFiles.length === 0 && acceptedFiles.length === 0) {
+      return;
+    }
 
     return (
       <ul className={styles.dropzone__files}>
