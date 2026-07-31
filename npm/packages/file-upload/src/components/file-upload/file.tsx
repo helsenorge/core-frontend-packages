@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 
+import type { VerificationStatus } from './types';
+
 import Button from '@helsenorge/designsystem-react/components/Button';
 import Icon from '@helsenorge/designsystem-react/components/Icon';
 import ImgFile from '@helsenorge/designsystem-react/components/Icons/ImgFile';
@@ -17,11 +19,6 @@ import { palette } from '@helsenorge/designsystem-react/theme/palette';
 
 import styles from './styles.module.scss';
 
-// eslint-disable-next-line react-refresh/only-export-components -- @Todo rett opp i V40
-export enum Type {
-  verified = 'verified',
-  rejected = 'rejected',
-}
 interface FileProps {
   loading: boolean;
   shouldRenderDeleteButton: boolean;
@@ -31,7 +28,7 @@ interface FileProps {
   customClass?: string;
   fileId?: string;
   fileName: string;
-  type: Type;
+  type: VerificationStatus;
   deleteText?: string;
   verifyDeleteText?: string;
   confirmText?: string;

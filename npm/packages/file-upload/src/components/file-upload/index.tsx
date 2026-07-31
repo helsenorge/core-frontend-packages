@@ -16,9 +16,9 @@ import { usePseudoClasses } from '@helsenorge/designsystem-react/hooks/usePseudo
 import { getAriaDescribedBy } from '@helsenorge/designsystem-react/utils/accessibility';
 import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/utils/refs';
 
-import FileElement, { Type } from './file';
+import FileElement from './file';
 import { getResources } from './resourceHelper';
-import { UploadFile, type MimeTypes, type OnChangeHandler, type OnDeleteHandler } from './types';
+import { VerificationStatus, UploadFile, type MimeTypes, type OnChangeHandler, type OnDeleteHandler  } from './types';
 
 import styles from './styles.module.scss';
 
@@ -317,7 +317,7 @@ const FileUpload: React.FC<Props> = props => {
             <FileElement
               key={rf.name + i}
               fileId={rf.id}
-              type={Type.rejected}
+              type={VerificationStatus.rejected}
               fileName={rf.name}
               loading={!!loading}
               shouldRenderDeleteButton
@@ -337,7 +337,7 @@ const FileUpload: React.FC<Props> = props => {
             <FileElement
               key={`${af.name}${i}`}
               fileId={af.id}
-              type={Type.verified}
+              type={VerificationStatus.verified}
               fileName={af.name}
               loading={!!loading}
               shouldRenderDeleteButton={!hideDeleteButton}
