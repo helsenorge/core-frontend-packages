@@ -186,6 +186,14 @@ Tests run with `jsdom`, `globals: true`, and `url: 'http://tjenester.helsenorge.
 `@helsenorge/library-build/vitest.config` (for npm packages) or `@helsenorge/core-build/vitest.config` (for microweb/web). Per-package
 `vitest.config.ts` only extends, not replaces.
 
+### Test structure and naming (Gitt–Når–Så)
+
+Write tests in Norwegian and structure them in **Gitt–Når–Så** order using nested `describe` blocks:
+
+- `describe('Gitt ...', ...)`
+- `describe('Når ...', ...)`
+- `it('Så ...', ...)`
+
 ### Versioning & release
 
 All packages are versioned together (monorepo). Releases use the root-level scripts:
