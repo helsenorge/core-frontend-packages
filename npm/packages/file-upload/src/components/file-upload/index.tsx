@@ -249,7 +249,7 @@ const FileUpload: React.FC<Props> = props => {
   const renderUploadButton = (): React.JSX.Element | undefined => {
     return (
       <Button
-        aria-describedby={[dropzoneTextId, getAriaDescribedBy(props, errorTextId)].filter(Boolean).join(' ')}
+        aria-describedby={[dropzoneTextId, getAriaDescribedBy(props, errorTextId)].filter(Boolean).join(' ') || undefined}
         variant="borderless"
         concept={error ? 'destructive' : 'normal'}
         id={inputButtonId}
