@@ -18,7 +18,7 @@ import { isMutableRefObject, mergeRefs } from '@helsenorge/designsystem-react/ut
 
 import FileElement from './file';
 import { getResources } from './resourceHelper';
-import { VerificationStatus, UploadFile, type MimeTypes, type OnChangeHandler, type OnDeleteHandler  } from './types';
+import { VerificationStatus, UploadFile, type MimeTypes, type OnChangeHandler, type OnDeleteHandler } from './types';
 
 import styles from './styles.module.scss';
 
@@ -249,7 +249,7 @@ const FileUpload: React.FC<Props> = props => {
   const renderUploadButton = (): React.JSX.Element | undefined => {
     return (
       <Button
-        aria-describedby={[dropzoneTextId, getAriaDescribedBy(props, errorTextId)].filter(Boolean).join(' ')}
+        aria-describedby={[dropzoneTextId, getAriaDescribedBy(props, errorTextId)].filter(Boolean).join(' ') || undefined}
         variant="borderless"
         concept={error ? 'destructive' : 'normal'}
         id={inputButtonId}
