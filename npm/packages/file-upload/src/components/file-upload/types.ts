@@ -22,3 +22,8 @@ export type MimeTypes =
 export type OnChangeHandler = (files: UploadFile[]) => void;
 
 export type OnDeleteHandler = (fileId: string) => void;
+
+export enum VerificationStatus {
+  verified = 'verified',
+  rejected = 'rejected',
+}
