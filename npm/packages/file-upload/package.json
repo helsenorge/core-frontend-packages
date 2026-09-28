@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/file-upload",
-  "version": "39.10.1",
+  "version": "39.10.2",
   "publishConfig": {
     "access": "public"
   },
@@ -50,9 +50,9 @@
     "react-hook-form": "^7.76.0"
   },
   "devDependencies": {
-    "@helsenorge/core-utils": "^39.10.1",
+    "@helsenorge/core-utils": "^39.10.2",
     "@helsenorge/designsystem-react": "^15.4.0",
-    "@helsenorge/library-build": "^39.10.1",
+    "@helsenorge/library-build": "^39.10.2",
     "@storybook/react-vite": "^10.4.0",
     "npm-run-all2": "^9.0.1",
     "react-hook-form": "^7.76.0"
