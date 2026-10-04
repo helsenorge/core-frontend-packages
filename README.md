@@ -95,7 +95,26 @@ NB! Etter at du har kjørt release-scriptet, må du pushe endringene til origin,
 git push origin tag v38.0.0-beta.10
 ```
 
+### Oppdatere peerDependencies før ny major
+
+`scripts/update-peer-dependencies.ts` oppdaterer `peerDependencies` (ikke `dependencies`/`devDependencies`) i alle pakker i monorepoet:
+
+- Interne `@helsenorge/*`-pakker settes til CoreFrontend-versjonen, f.eks. `^40.0.0-beta` eller `^40`
+- `@helsenorge/designsystem-react`, `@helsenorge/datepicker` og `@helsenorge/lightbox` settes til designsystem-versjonen, f.eks. `^16.0.0-beta` eller `^16`
+
+Scriptet spør om du vil bruke betaversjon, og hvilken majorversjon av CoreFrontend-pakkene og designsystemet du vil bruke:
+
+```bash
+node scripts/update-peer-dependencies.ts
+```
+
+Endringene blir med i commiten som lages av release-scriptet.
+
 ### Opprette første betaversjon av ny major (overgang fra v37.x.y => v38.0.0-beta.0)
+
+1. Oppdater `dependencies` og `devDependencies` til betaversjon av designsystemet manuelt (f.eks. `^16.0.0-beta.0`).
+2. Kjør `node scripts/update-peer-dependencies.ts` og svar J på betaversjon (f.eks. 40 og 16).
+3. Opprett betaversjonen:
 
 ```bash
 npm run release:premajor
@@ -110,6 +129,10 @@ npm run release:beta
 ### Opprette første versjon av ny major (overgang fra v38.0.0-beta.0 => v38.0.0)
 
 Før du slipper en ny major, må du ta i bruk en versjon av designsystemet som ikke er beta (både dependencies og peerDependencies).
+
+1. Oppdater `dependencies` og `devDependencies` til versjon av designsystemet som ikke er beta manuelt (f.eks. `^16.0.0`).
+2. Kjør `node scripts/update-peer-dependencies.ts` og svar N på betaversjon (f.eks. 38 og 16).
+3. Opprett majorversjonen:
 
 ```bash
 npm run release:major
