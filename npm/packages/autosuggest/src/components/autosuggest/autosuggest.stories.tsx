@@ -20,6 +20,14 @@ interface ExampleForm {
   value: string;
 }
 
+const behandlinger: Suggestion[] = [
+  { label: 'Gastroskopi', value: 'Gastroskopi', optionalLabel: 'Undersøkelse av spiserør, magesekk og tolvfingertarm' },
+  { label: 'Koloskopi', value: 'Koloskopi', optionalLabel: 'Undersøkelse av tykktarmen' },
+  { label: 'MR av kne', value: 'MR av kne' },
+  { label: 'Grå stær-operasjon', value: 'Grå stær-operasjon' },
+  { label: 'Hofteprotese', value: 'Hofteprotese' },
+];
+
 const AutosuggestExample: React.FC<AutosuggestProps<Suggestion>> = args => {
   const [suggestions, setSuggestions] = React.useState<Suggestion[]>([]);
 
@@ -32,31 +40,25 @@ const AutosuggestExample: React.FC<AutosuggestProps<Suggestion>> = args => {
   } = useForm<ExampleForm>({ defaultValues: { value: '' } });
 
   const onSuggestionsFetchRequested: SuggestionsFetchRequested = (requestParams: SuggestionsFetchRequestedParams) => {
-    console.log('onSuggestionsFetchRequested', requestParams.value);
+    args.onSuggestionsFetchRequested(requestParams);
 
-    setSuggestions([
-      { label: 'First suggestion', value: 'First suggestion' },
-      { label: 'Second suggestion', value: 'Second suggestion', optionalLabel: 'this is my optional label' },
-      { label: 'Third suggestion', value: 'Third suggestion' },
-      { label: 'Fourth suggestion', value: 'Fourth suggestion' },
-    ]);
+    const query = requestParams.value.trim().toLowerCase();
+    setSuggestions(args.suggestions.filter(suggestion => suggestion.label.toLowerCase().includes(query)));
   };
 
   const onSuggestionsSelected: OnSuggestionSelected<Suggestion> = (e, data) => {
-    console.log('onSuggestionsSelected', data.suggestion, e);
+    args.onSuggestionSelected?.(e, data);
 
     setValue('value', data.suggestion.value);
   };
 
   const onSuggestionsClearRequested: OnSuggestionsClearRequested = () => {
-    console.log('onSuggestionsClearRequested');
+    args.onSuggestionsClearRequested?.();
 
     setSuggestions([]);
   };
 
-  const onSubmit: SubmitHandler<ExampleForm> = data => {
-    console.log('onSubmit', data);
-  };
+  const onSubmit: SubmitHandler<ExampleForm> = fn();
 
   return (
     <>
@@ -68,17 +70,16 @@ const AutosuggestExample: React.FC<AutosuggestProps<Suggestion>> = args => {
             type: 'search',
             value: getValues('value'),
             ...register('value', {
-              required: 'Du må velge et alternativ',
-              validate: value => (value === 'First suggestion' ? 'Du kan ikke velge dette alternativet' : undefined),
+              required: 'Du må velge en behandling eller undersøkelse',
+              validate: value => (value === 'Hofteprotese' ? 'Hofteprotese kan ikke velges i dette eksempelet' : undefined),
             }),
           }}
-          label={'Søk i behandlinger og undersøkelser'}
           suggestions={suggestions}
           onSuggestionsFetchRequested={onSuggestionsFetchRequested}
           onSuggestionsClearRequested={onSuggestionsClearRequested}
           onSuggestionSelected={onSuggestionsSelected}
-          error={!!errors.value}
-          errorText={errors.value?.message}
+          error={args.error || !!errors.value}
+          errorText={errors.value?.message ?? args.errorText}
         />
         <Spacer />
         <Button type="submit">{'Send inn'}</Button>
@@ -91,30 +92,37 @@ const meta = {
   title: '@helsenorge/autosuggest/components/Autosuggest',
   component: Autosuggest,
   args: {
-    suggestions: [
-      { label: 'First suggestion', value: 'First suggestion' },
-      { label: 'Second suggestion', value: 'Second suggestion', optionalLabel: 'this is my optional label' },
-      { label: 'Third suggestion', value: 'Third suggestion' },
-      { label: 'Fourth suggestion', value: 'Fourth suggestion' },
-    ],
+    suggestions: behandlinger,
     inputProps: {
       value: '',
       onChange: fn(),
     },
     label: 'Søk i behandlinger og undersøkelser',
+    error: false,
+    errorText: undefined,
     onSuggestionsFetchRequested: fn(),
+    onSuggestionsClearRequested: fn(),
+    onSuggestionSelected: fn(),
   },
   argTypes: {
     containerProps: {
       control: { type: 'object' },
     },
+    inputProps: { control: false },
+    renderSuggestion: { control: false },
   },
+  render: (args): React.JSX.Element => <AutosuggestExample {...args} />,
 } satisfies Meta<typeof Autosuggest>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  render: args => <AutosuggestExample {...args} />,
+export const Default: Story = {};
+
+export const WithError: Story = {
+  args: {
+    error: true,
+    errorText: 'Du må velge en behandling eller undersøkelse',
+  },
 };
