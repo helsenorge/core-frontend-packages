@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 
 import { useForm } from 'react-hook-form';
+import { fn } from 'storybook/test';
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
 
@@ -20,15 +21,17 @@ import { LanguageLocales } from '@helsenorge/designsystem-react';
 import { useFileUpload } from './useFileUpload';
 import { validateNumberOfFiles, validateFileSize, validateFileType, validateTotalFileSize } from './validate-utils';
 
-import FileUpload, { type MimeTypes, type OnDeleteHandler, type OnChangeHandler, UploadFile } from '.';
+import FileUpload, { type MimeTypes, type OnDeleteHandler, type OnChangeHandler, type Props, UploadFile } from '.';
 
 interface FormData {
   fileupload: UploadFile;
   fileupload2: UploadFile;
 }
 
-const FileUploadExample: React.FC = () => {
-  const [defaultFiles] = React.useState<UploadFile[]>([new UploadFile([], 'hello2.jpeg', 'id123', 200000, { type: 'image/jpeg' })]);
+type ExampleCallbacks = Pick<Props, 'onChangeFile' | 'onDeleteFile' | 'onOpenFile' | 'onRequestLink'>;
+
+const FileUploadExample: React.FC<ExampleCallbacks> = callbacks => {
+  const [defaultFiles] = React.useState<UploadFile[]>([new UploadFile([], 'henvisning.jpeg', 'id123', 200000, { type: 'image/jpeg' })]);
   const [acceptedFiles1, setAcceptedFiles1] = React.useState<UploadFile[]>([]);
   const [disableButton, setDisableButton] = React.useState(false);
   const [disableButton2, setDisableButton2] = React.useState(false);
@@ -43,12 +46,12 @@ const FileUploadExample: React.FC = () => {
   const dropzoneText = !disableButton ? 'Eller dra filer hit' : 'Du har lagt til maksimalt antall filer';
 
   const onChange1: OnChangeHandler = (newFiles: UploadFile[]): void => {
-    console.log('files added', newFiles);
+    callbacks.onChangeFile?.(newFiles);
     setAcceptedFiles1([...acceptedFiles1, ...newFiles]);
   };
 
   const onDelete1: OnDeleteHandler = fileId => {
-    console.log('file deleted', fileId);
+    callbacks.onDeleteFile?.(fileId);
     setAcceptedFiles1(acceptedFiles1.filter((af: UploadFile) => af.id !== fileId));
   };
 
@@ -56,7 +59,7 @@ const FileUploadExample: React.FC = () => {
     useFormReturn.register,
     [validateFileSize(0, 300000, 'Filen må være under 300kb'), validateFileType(validFileTypes1, 'Feil filtype')],
     [
-      validateNumberOfFiles(1, maxFiles, 'Det må lastes en til to bilder'),
+      validateNumberOfFiles(1, maxFiles, 'Du må laste opp ett eller to bilder'),
       validateTotalFileSize(0, 400000, 'Samlet filstørrelse må være under 400kb'),
     ]
   );
@@ -64,7 +67,7 @@ const FileUploadExample: React.FC = () => {
   const useFileUpload2 = useFileUpload(
     useFormReturn.register,
     [validateFileSize(0, 300000, 'Filen må være under 300kb'), validateFileType(validFileTypes1, 'Feil filtype')],
-    [validateNumberOfFiles(1, 1, 'Det må lastes et bilde')]
+    [validateNumberOfFiles(1, 1, 'Du må laste opp ett bilde')]
   );
 
   React.useEffect(() => {
@@ -76,34 +79,31 @@ const FileUploadExample: React.FC = () => {
   }, [useFileUpload2.acceptedFiles, useFileUpload2.rejectedFiles]);
 
   const onChange2: OnChangeHandler = (newFiles: UploadFile[]): void => {
-    console.log('files added', newFiles);
+    callbacks.onChangeFile?.(newFiles);
   };
 
   const onDelete2: OnDeleteHandler = fileId => {
-    console.log('file deleted', fileId);
+    callbacks.onDeleteFile?.(fileId);
   };
 
   const onOpenFile = (fileId: string): void => {
-    console.log('file ' + fileId + ' was opened');
+    callbacks.onOpenFile?.(fileId);
   };
 
   const onRequestLink = (fileId: string): string => {
-    console.log('link was requested for ' + fileId);
-    return 'file:///' + fileId;
+    callbacks.onRequestLink?.(fileId);
+    return '#' + fileId;
   };
 
-  // eslint-disable-next-line
-  const onSubmit = (data: FormData): any => {
-    console.log('onSubmit data:', data);
-  };
+  const onSubmit = (): void => {};
 
   return (
     <form onSubmit={useFormReturn.handleSubmit(onSubmit)}>
       <Title htmlMarkup={'h2'} appearance={'title2'}>
-        {'(Støtter react-hook-form):'}
+        {'Med react-hook-form'}
       </Title>
       <br />
-      <Title htmlMarkup={'h2'} appearance={'title2'}>
+      <Title htmlMarkup={'h3'} appearance={'title3'}>
         {'Uten validering'}
       </Title>
       <br />
@@ -112,8 +112,8 @@ const FileUploadExample: React.FC = () => {
         inputId="fileupload1"
         label={
           <Label
-            labelTexts={[{ text: 'Last opp hva du vil' }]}
-            sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: 'Ingen begrensninger her', type: 'subdued' }]} />}
+            labelTexts={[{ text: 'Last opp vedlegg til meldingen' }]}
+            sublabel={<Sublabel id={sublabelId} sublabelTexts={[{ text: 'Du kan legge ved så mange filer du vil', type: 'subdued' }]} />}
           />
         }
         shouldUploadMultiple
@@ -123,11 +123,11 @@ const FileUploadExample: React.FC = () => {
         onRequestLink={onRequestLink}
         onChangeFile={onChange1}
       />
-      <Title htmlMarkup={'h2'} appearance={'title2'}>
+      <Title htmlMarkup={'h3'} appearance={'title3'}>
         {'Med validering'}
       </Title>
       <Validation errorTitle={!useFormReturn.formState.isValid ? 'Sjekk at alt er riktig utfylt' : undefined}>
-        <Title htmlMarkup={'h3'} appearance={'title3'}>
+        <Title htmlMarkup={'h4'} appearance={'title4'}>
           {'Uten dropzone'}
         </Title>
         <br />
@@ -138,7 +138,7 @@ const FileUploadExample: React.FC = () => {
           inputId="fileupload2"
           label={
             <Label
-              labelTexts={[{ text: 'Last opp et bilde' }]}
+              labelTexts={[{ text: 'Last opp bilde av henvisningen' }]}
               sublabel={
                 <Sublabel
                   id={sublabelId2}
@@ -156,8 +156,8 @@ const FileUploadExample: React.FC = () => {
           {...useFileUpload2.register(fileupload2, { validate: () => true })}
           onChangeFile={onChange2}
         />
-        <Title htmlMarkup={'h3'} appearance={'title3'}>
-          {'Med dropzone (Er også wrappet av FormGroup, dette trengs ikke, men støttes)'}
+        <Title htmlMarkup={'h4'} appearance={'title4'}>
+          {'Med dropzone (er også wrappet av FormGroup, dette trengs ikke, men støttes)'}
         </Title>
         <br />
         <FormGroup error={useFormReturn.formState.errors.fileupload?.message}>
@@ -170,7 +170,7 @@ const FileUploadExample: React.FC = () => {
             inputId="fileupload3"
             label={
               <Label
-                labelTexts={[{ text: 'Last opp en eller to bilder' }]}
+                labelTexts={[{ text: 'Last opp ett eller to bilder av utslettet' }]}
                 sublabel={
                   <Sublabel
                     id={sublabelId3}
@@ -203,23 +203,101 @@ const FileUploadExample: React.FC = () => {
   );
 };
 
+const vedlegg = [
+  new UploadFile([], 'henvisning.pdf', 'henvisning', 180000, { type: 'application/pdf' }),
+  new UploadFile([], 'bilde-av-utslett.jpeg', 'utslett', 240000, { type: 'image/jpeg' }),
+];
+
+const FileUploadWithState: React.FC<Props> = props => {
+  const [acceptedFiles, setAcceptedFiles] = useState<UploadFile[]>(props.acceptedFiles ?? []);
+
+  return (
+    <FileUpload
+      {...props}
+      acceptedFiles={acceptedFiles}
+      onChangeFile={(newFiles): void => {
+        props.onChangeFile?.(newFiles);
+        setAcceptedFiles(prev => [...prev, ...newFiles]);
+      }}
+      onDeleteFile={(fileId): void => {
+        props.onDeleteFile?.(fileId);
+        setAcceptedFiles(prev => prev.filter(file => file.id !== fileId));
+      }}
+    />
+  );
+};
+
 const meta = {
   title: '@helsenorge/file-upload/components/FileUpload',
   component: FileUpload,
   args: {
     inputId: 'fileupload',
+    label: (
+      <Label
+        labelTexts={[{ text: 'Last opp vedlegg' }]}
+        sublabel={
+          <Sublabel id="fileupload-sublabel" sublabelTexts={[{ text: 'Gyldige filformater er jpeg, png og pdf', type: 'subdued' }]} />
+        }
+      />
+    ),
+    'aria-describedby': 'fileupload-sublabel',
+    acceptedFiles: [],
+    rejectedFiles: [],
+    validFileTypes: ['image/jpeg', 'image/png', 'application/pdf'],
+    shouldUploadMultiple: true,
+    disabled: false,
+    loading: false,
+    visualDropZone: false,
+    dropzoneStatusText: '',
+    hideDeleteButton: false,
+    confirmDelete: false,
+    errorText: '',
+    onChangeFile: fn(),
+    onDeleteFile: fn(),
+    onOpenFile: fn(),
+    onRequestLink: fn(),
   },
+  argTypes: {
+    label: { control: false },
+    acceptedFiles: { control: false },
+    rejectedFiles: { control: false },
+    defaultFiles: { control: false },
+    helpElement: { control: false },
+    validFileTypes: {
+      control: { type: 'check' },
+      options: ['image/jpeg', 'image/jpg', 'image/png', 'application/pdf', 'image/gif', 'image/tiff', 'image/bmp', 'image/tif'],
+    },
+  },
+  render: (args): React.JSX.Element => <FileUploadWithState {...args} />,
 } satisfies Meta<typeof FileUpload>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  render: () => <FileUploadExample />,
+export const Default: Story = {};
+
+export const WithFiles: Story = {
+  args: {
+    acceptedFiles: vedlegg,
+    rejectedFiles: [new UploadFile([], 'stort-bilde.tiff', 'stort-bilde', 5000000, { type: 'image/tiff' })],
+    errorText: 'Filen stort-bilde.tiff har ugyldig filformat',
+    confirmDelete: true,
+  },
 };
 
-const WithLanguageProviderExample: React.FC = args => {
+export const Dropzone: Story = {
+  args: {
+    visualDropZone: true,
+    dropzoneStatusText: 'Eller dra filer hit',
+  },
+};
+
+export const WithValidation: Story = {
+  render: (args): React.JSX.Element => <FileUploadExample {...args} />,
+};
+
+const WithLanguageProviderExample: React.FC<ExampleCallbacks> = args => {
   const [language, setLanguage] = useState<LanguageLocales>(LanguageLocales.NORWEGIAN);
 
   return (
@@ -245,7 +323,5 @@ const WithLanguageProviderExample: React.FC = args => {
 };
 
 export const WithLanguageProvider: Story = {
-  render: args => {
-    return <WithLanguageProviderExample {...args} />;
-  },
+  render: (args): React.JSX.Element => <WithLanguageProviderExample {...args} />,
 };
