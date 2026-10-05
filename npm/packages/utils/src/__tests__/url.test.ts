@@ -1,6 +1,6 @@
 import { describe, test, expect } from 'vitest';
 
-import { getUrlHostname, isHttps, normalizePath, normalizeQuery, tryCreateUrl } from '../url';
+import { getUrlHostname, isExternalHttpUrl, isHttps, normalizePath, normalizeQuery, tryCreateUrl } from '../url';
 
 if (typeof window !== 'undefined') {
   const oldWindowLocation = window.location;
@@ -181,6 +181,32 @@ describe('normalizeQuery', () => {
     describe('Når normalizeQuery kalles', () => {
       test('Så returnerer den query uten & på slutten', () => {
         expect(normalizeQuery('?key=value&')).toBe('?key=value');
+      });
+    });
+  });
+});
+
+describe('isExternalHttpUrl', () => {
+  describe.each([
+    ['en absolutt HTTPS-URL', 'https://www.ahus.no'],
+    ['en absolutt HTTP-URL', 'http://www.ahus.no'],
+    ['en relativ URL', '/behandlinger'],
+  ])('Gitt at URL-en er %s', (_, url) => {
+    describe('Når isExternalHttpUrl kalles', () => {
+      test('Så returnerer den true', () => {
+        expect(isExternalHttpUrl(url)).toBe(true);
+      });
+    });
+  });
+
+  describe.each([
+    ['ugyldig', 'http://[ugyldig'],
+    ['en e-postadresse', 'mailto:test@example.com'],
+    ['en JavaScript-URL', 'javascript:void(0)'],
+  ])('Gitt at URL-en er %s', (_, url) => {
+    describe('Når isExternalHttpUrl kalles', () => {
+      test('Så returnerer den false', () => {
+        expect(isExternalHttpUrl(url)).toBe(false);
       });
     });
   });
