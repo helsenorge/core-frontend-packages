@@ -83,6 +83,6 @@
   "engineStrict": true,
   "engines": {
     "node": "^24.0.0 || ^26.0.0",
-    "npm": ">=11.0.0"
+    "npm": ">=11.17.0"
   }
 }

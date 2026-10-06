@@ -62,5 +62,9 @@
   "dependencies": {
     "@types/react-autosuggest": "^10.1.11",
     "react-autosuggest": "^10.1.0"
+  },
+  "engines": {
+    "node": "^24.0.0 || ^26.0.0",
+    "npm": ">=11.17.0"
   }
 }
