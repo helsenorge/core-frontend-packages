@@ -40,7 +40,7 @@
     "prebuild": "npm run clean",
     "build": "tsc",
     "postbuild": "npm-run-all chmod exports",
-    "chmod": "chmod +x lib/library-scripts.js",
+    "chmod": "node -e \"require('fs').chmodSync('lib/library-scripts.js', 0o755)\"",
     "exports": "node ./lib/library-scripts.js exports",
     "watch": "tsc --watch",
     "eslint": "eslint src/**/*.{js,jsx,ts,tsx}",
@@ -61,7 +61,7 @@
   },
   "dependencies": {
     "@helsenorge/eslint-config": "^40.0.0-beta.2",
-    "@helsenorge/typed-scss-modules": "^10.0.0",
+    "@helsenorge/typed-scss-modules": "^10.0.1",
     "@testing-library/jest-dom": "^7.0.0",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
