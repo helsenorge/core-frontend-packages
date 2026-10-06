@@ -41,8 +41,8 @@
     "test": "vitest"
   },
   "peerDependencies": {
-    "@helsenorge/core-utils": "^40.0.0-beta",
-    "@helsenorge/designsystem-react": "^16.0.0",
+    "@helsenorge/core-utils": "^40",
+    "@helsenorge/designsystem-react": "^16",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
