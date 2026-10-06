@@ -69,5 +69,9 @@
     "./resources/HN.Core.FileUpload.NPM.JS.nb-NO.json": "./lib/resources/HN.Core.FileUpload.NPM.JS.nb-NO.json",
     "./resources/HN.Core.FileUpload.NPM.JS.nn-NO.json": "./lib/resources/HN.Core.FileUpload.NPM.JS.nn-NO.json",
     "./resources/HN.Core.FileUpload.NPM.JS.se-NO.json": "./lib/resources/HN.Core.FileUpload.NPM.JS.se-NO.json"
+  },
+  "engines": {
+    "node": "^24.0.0 || ^26.0.0",
+    "npm": ">=11.17.0"
   }
 }
