@@ -114,18 +114,38 @@ Each candidate fits one of:
 
 Skip pure internal changes (refactors with no API change, lint fixes, test improvements). They don't belong in a migration guide.
 
+### Full entry or minor change?
+
+Then decide which of two tiers each change belongs to:
+
+- **Full entry** — an h2 section with a human summary and an agent-prompt (Step 5). Use this for changes that need real migration work or
+  judgement: removed functionality without a 1:1 replacement, changed signatures, changed defaults, required config changes, major
+  peer-dependency upgrades that the consumer must perform themselves.
+- **Minor change ("mindre endring")** — one bullet in the `## Andre endringer` section (see Step 5). Use this for small, low-impact changes
+  where the fix is obvious from one line: a renamed type/export, an export moved to a new import path, a removed unused or deprecated prop,
+  major bumps of transitive dependencies pulled in by core packages, and informational changes in build output.
+
+If you are unsure which tier a change belongs to, ask the user.
+
 ## Step 4: Reconcile with existing guide
 
-**Mode A:** Read the existing guide. Identify the new entries you need to add based on your Step 2–3 analysis. Add them in the right
-position (see Step 7 for ordering). Do not touch existing entries.
+Read **both** the h2 entries and the `## Andre endringer` bullet list in the existing guide. A finding counts as already documented if it is
+covered by an h2 entry **or** by a bullet in `Andre endringer`. Discard already-documented findings — do not add a duplicate, and do not
+promote an existing bullet to a full entry (or vice versa) unless the user asks.
 
-**Mode B:** Read the existing guide (if any) and mark which changes are already documented. **Verify every factual claim in every existing
-entry against your own diff analysis.** Correct errors and outdated information — do not assume an existing guide is correct. Keep style and
+**Mode A:** Identify the new entries and bullets you need to add based on your Step 2–3 analysis. Add full entries in the right position
+(see Step 7 for ordering) and append minor changes as bullets to `## Andre endringer` (create the section if it does not exist). Do not
+touch existing entries or bullets.
+
+**Mode B:** Mark which changes are already documented. **Verify every factual claim in every existing entry and every existing bullet
+against your own diff analysis.** Correct errors and outdated information — do not assume an existing guide is correct. Keep style and
 structure only where the facts check out. Merge in what's missing.
 
 ## Step 5: Write each entry
 
-Each entry has three parts.
+Full entries are described below. Minor changes are bullets (see "Andre endringer" after the example entry).
+
+Each full entry has three parts.
 
 ### h2 heading
 
@@ -200,6 +220,23 @@ Migrer fra HelpTooltip til DictionaryBubble.
 ```
 ````
 
+## Andre endringer
+
+The last section of the guide is `## Andre endringer`, a bullet list of minor changes. It has no agent-prompts. Each bullet:
+
+- Is one line in Norwegian.
+- Names the package, gives the exact old and new names or import paths (in backticks), and says briefly what the reader should do. Use `→`
+  between old and new.
+- Has no code blocks.
+
+```markdown
+## Andre endringer
+
+- `@helsenorge/pdf-preview`: typen `PDFModalViewerProps` heter nå `PdfModalViewerProps`.
+- `@helsenorge/core-framework`: propsene `hide` og `mobileOnly` er fjernet fra `PageHeader`. Fjern dem der de brukes.
+- `@helsenorge/core-cms`: `isAccordionBlock` er flyttet til `@helsenorge/core-cms/richtext/components/accordionblock/is-accordion-block`.
+```
+
 ## Step 6: Add the super-agent-prompt preamble
 
 Immediately after the h1 title, insert a blockquote that serves as both a human explanation and a top-level instruction for any agent that
@@ -209,6 +246,8 @@ receives the entire guide as input. The preamble must:
 - Include a **dependency-update step (steg 0)** that the agent must complete before following any per-section prompts. See below.
 - Instruct agents to work through all remaining sections in order, follow each agent-prompt, and start every section with the applicability
   check.
+- Instruct agents to finish by going through `## Andre endringer`: for each bullet, search for the old name or import path and update it if
+  found.
 
 ### Dependency-update step in the preamble
 
@@ -219,7 +258,9 @@ The Helsenorge ecosystem has two distinct package families with different versio
    `for d in npm/packages/*/; do node -e "const p=require('./$d/package.json'); if(p.name?.startsWith('@helsenorge/')) console.log(p.name)" 2>/dev/null; done`
    These are versioned together and covered by this guide.
 2. **Designsystem packages** — `@helsenorge/designsystem-react` and related packages (e.g. `@helsenorge/lightbox`,
-   `@helsenorge/datepicker`). These follow a separate version scheme and may have their own beta for the next major.
+   `@helsenorge/datepicker`). These follow a separate version scheme and may have their own beta for the next major. The required
+   designsystem major may already be released as stable — check both the `latest` and `beta` dist-tags at guide-generation time and write
+   the preamble to match.
 
 Consumers may also depend on other `@helsenorge/*` packages not in either list above — those are outside the scope of this guide.
 
@@ -256,8 +297,9 @@ Adapt version number, package names, and beta versions based on what you found i
 >      finn siste beta: npm dist-tag ls @helsenorge/core-framework
 >      Oppdater alle til samme beta-versjon (f.eks. 39.0.0-beta.0).
 >    - Designsystem-pakker (designsystem-react, lightbox, datepicker, osv.):
->      finn siste beta: npm dist-tag ls @helsenorge/designsystem-react
->      Oppdater til beta hvis tilgjengelig. Behold gjeldende versjon hvis ikke.
+>      se dist-tags med npm dist-tag ls @helsenorge/designsystem-react.
+>      Bruk siste stabile versjon av påkrevd major hvis den er utgitt
+>      (latest), ellers siste beta av samme major.
 >    - Andre @helsenorge-pakker som ikke er nevnt over:
 >      ikke oppdater disse — de er utenfor scope for denne migreringen.
 >
@@ -271,19 +313,24 @@ Adapt version number, package names, and beta versions based on what you found i
 >
 > **Steg 1 og utover:** Gå gjennom alle seksjoner i rekkefølge. For hver seksjon: følg instruksene i agent-prompten nøyaktig. Start alltid
 > med applicability-sjekken — hopp over seksjoner som ikke er relevante for dette prosjektet, og noter det i PR-beskrivelsen.
+>
+> **Til slutt:** Gå gjennom punktlisten under «Andre endringer». Den har ingen agent-prompter. For hvert punkt: søk etter det gamle navnet
+> eller import-pathen, og oppdater treffene. Noter i PR-beskrivelsen hvilke punkter som ikke var relevante.
 ````
 
 ## Step 7: Order the guide
 
-Roughly: breaking API changes → default-value changes → required config changes → dependency / tooling changes (informational) at the end.
-If the existing guide has its own order, respect it.
+Roughly: breaking API changes → default-value changes → required config changes → dependency / tooling changes (informational). If the
+existing guide has its own order, respect it. `## Andre endringer` is always the last section.
 
 ## Step 8: Write and summarize
 
 Write the guide to the output path. Then summarize briefly in chat:
 
-- **Mode A:** The new entry (or entries) added, and the output file path.
-- **Mode B:** Number of entries (new + carried over), any changes you found but were unsure how to classify (list them so the user can
-  decide), existing entries you preserved unchanged, and the output file path.
+- **Mode A:** The new entries and `Andre endringer` bullets added, findings discarded because they were already documented, and the output
+  file path.
+- **Mode B:** Number of entries and bullets (new + carried over), findings discarded because they were already documented, any changes you
+  found but were unsure how to classify (list them so the user can decide), existing entries you preserved unchanged, and the output file
+  path.
 
 Don't paste the full guide back into chat unless the user asks. They'll read the file.
