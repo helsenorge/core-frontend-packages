@@ -62,10 +62,13 @@ export const normalizeQuery = (query: string): string => {
   return query;
 };
 
+/**
+ * Sjekker om en URL går til en annen nettside.
+ */
 export const isExternalHttpUrl = (url: string): boolean => {
   try {
-    const { protocol } = new URL(url, window.location.origin);
-    return protocol === 'https:' || protocol === 'http:';
+    const { protocol, origin } = new URL(url, window.location.origin);
+    return (protocol === 'https:' || protocol === 'http:') && origin !== window.location.origin;
   } catch {
     return false;
   }

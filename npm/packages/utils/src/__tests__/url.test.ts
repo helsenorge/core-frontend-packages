@@ -190,7 +190,11 @@ describe('isExternalHttpUrl', () => {
   describe.each([
     ['en absolutt HTTPS-URL', 'https://www.ahus.no'],
     ['en absolutt HTTP-URL', 'http://www.ahus.no'],
-    ['en relativ URL', '/behandlinger'],
+    ['en protokollrelativ URL', '//www.ahus.no'],
+    ['en URL med store bokstaver i protokollen', 'HTTPS://www.ahus.no'],
+    ['en URL med mellomrom foran', '  https://www.ahus.no'],
+    ['en URL med brukernavn', 'https://www.helsenorge.no@www.ahus.no'],
+    ['en URL med brukernavn og passord', 'https://bruker:passord@www.ahus.no'],
   ])('Gitt at URL-en er %s', (_, url) => {
     describe('Når isExternalHttpUrl kalles', () => {
       test('Så returnerer den true', () => {
@@ -200,13 +204,25 @@ describe('isExternalHttpUrl', () => {
   });
 
   describe.each([
+    ['en relativ URL', '/behandlinger'],
+    ['en relativ URL uten skråstrek', 'behandlinger'],
+    ['en query', '?side=2'],
+    ['et fragment', '#innhold'],
+    ['en tom streng', ''],
+    ['en absolutt URL på samme nettside', `${window.location.origin}/behandlinger`],
     ['ugyldig', 'http://[ugyldig'],
     ['en e-postadresse', 'mailto:test@example.com'],
     ['en JavaScript-URL', 'javascript:void(0)'],
+    ['en JavaScript-URL med tab og linjeskift', '\tjava\nscript:alert(1)'],
+    ['en data-URL', 'data:text/html,<script>alert(1)</script>'],
+    ['undefined', undefined],
+    ['null', null],
+    ['et tall', 123],
+    ['et objekt', {}],
   ])('Gitt at URL-en er %s', (_, url) => {
     describe('Når isExternalHttpUrl kalles', () => {
       test('Så returnerer den false', () => {
-        expect(isExternalHttpUrl(url)).toBe(false);
+        expect(isExternalHttpUrl(url as unknown as string)).toBe(false);
       });
     });
   });
