@@ -56,10 +56,17 @@
     margin: 0;
     list-style-type: none;
 
-    &__file {
+    &__file-container {
       display: flex;
-      padding: 0.1rem;
       align-items: center;
+      flex-wrap: wrap;
+      column-gap: var(--core-space-s);
+      padding: 0.1rem;
+
+      &__file {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
@@ -73,9 +80,5 @@
 
   &__uploadButton::after {
     z-index: 1;
-  }
-
-  &__deleteButton {
-    margin-left: 1rem;
   }
 }

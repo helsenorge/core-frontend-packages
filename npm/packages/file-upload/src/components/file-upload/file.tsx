@@ -120,7 +120,7 @@ export default class FileElement extends React.Component<FileProps, FileState> {
         <Button
           variant="borderless"
           concept={'destructive'}
-          wrapperClassName={classNames(styles.dropzone__deleteButton, {
+          wrapperClassName={classNames({
             [`${this.props.customClass}__button`]: this.props.customClass,
           })}
           onClick={confirmDelete ? this.setConfirmDelete : this.deleteFile}
@@ -159,18 +159,20 @@ export default class FileElement extends React.Component<FileProps, FileState> {
       <React.Fragment>
         <li
           className={classNames({
-            [styles['dropzone__files__file']]: !this.props.customClass,
+            [styles['dropzone__files__file-container']]: !this.props.customClass,
             [`${this.props.customClass}`]: this.props.customClass,
             [`${this.props.customClass}--${this.props.type}`]: this.props.customClass,
           })}
         >
-          {fileType(
-            this.props.fileName,
-            classNames({
-              [`${this.props.customClass}__svgicon`]: this.props.customClass,
-            })
-          )}
-          {this.renderFile()}
+          <span className={styles['dropzone__files__file-container__file']}>
+            {fileType(
+              this.props.fileName,
+              classNames({
+                [`${this.props.customClass}__svgicon`]: this.props.customClass,
+              })
+            )}
+            {this.renderFile()}
+          </span>
           {this.renderDeleteButton()}
         </li>
         {this.props.confirmDelete && this.renderConfirmDelete()}

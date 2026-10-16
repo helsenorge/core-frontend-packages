@@ -1,8 +1,8 @@
 export type Styles = {
   dropzone: string;
-  dropzone__deleteButton: string;
   dropzone__files: string;
-  dropzone__files__file: string;
+  'dropzone__files__file-container': string;
+  'dropzone__files__file-container__file': string;
   dropzone__loader: string;
   dropzone__uploadButton: string;
   'dropzone__visual-dropzone': string;

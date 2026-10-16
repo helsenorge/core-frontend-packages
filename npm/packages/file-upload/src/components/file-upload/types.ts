@@ -10,14 +10,7 @@ export class UploadFile extends File {
 }
 
 export type MimeTypes =
-  | 'image/jpeg'
-  | 'image/jpg'
-  | 'image/png'
-  | 'application/pdf'
-  | 'image/gif'
-  | 'image/tiff'
-  | 'image/bmp'
-  | 'image/tif';
+  'image/jpeg' | 'image/jpg' | 'image/png' | 'application/pdf' | 'image/gif' | 'image/tiff' | 'image/bmp' | 'image/tif';
 
 export type OnChangeHandler = (files: UploadFile[]) => void;
 
