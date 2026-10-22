@@ -3,13 +3,18 @@ name: Publish
 on:
   push:
     tags:
-      - '*'
+      - 'v*'
+
+env:
+  PUBLISH_DELAY: 30
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
+    env:
+      NPM_TAG: ${{ contains(github.ref, 'beta') && 'beta' || 'latest' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -20,74 +25,66 @@ jobs:
         run: npm install -g npm@11.17.0
 
       # eslint-config
-      - run: npm i --ignore-scripts
+      - name: Install eslint-config
+        run: npm i --ignore-scripts
         working-directory: npm/packages/eslint-config
-      - if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta')
+      - name: Publish eslint-config
         continue-on-error: true
-        run: npm publish --provenance --tag beta
+        run: npm publish --provenance --tag "$NPM_TAG"
         working-directory: npm/packages/eslint-config
-
-      - if: startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, 'beta')
-        continue-on-error: true
-        run: npm publish --provenance
-        working-directory: npm/packages/eslint-config
+      - name: Wait ${{ env.PUBLISH_DELAY }}s after eslint-config
+        run: sleep "$PUBLISH_DELAY"
 
       # library-build
-      - run: npm i --ignore-scripts
+      - name: Install library-build
+        run: npm i --ignore-scripts
         working-directory: npm/packages/library-build
-      - run: npm run build
+      - name: Build library-build
+        run: npm run build
         working-directory: npm/packages/library-build
-      - if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta')
+      - name: Publish library-build
         continue-on-error: true
-        run: npm publish --provenance --tag beta
+        run: npm publish --provenance --tag "$NPM_TAG"
         working-directory: npm/packages/library-build
-
-      - if: startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, 'beta')
-        continue-on-error: true
-        run: npm publish --provenance
-        working-directory: npm/packages/library-build
+      - name: Wait ${{ env.PUBLISH_DELAY }}s after library-build
+        run: sleep "$PUBLISH_DELAY"
 
       # utils
-      - run: npm i --ignore-scripts
+      - name: Install utils
+        run: npm i --ignore-scripts
         working-directory: npm/packages/utils
-      - run: npm run build
+      - name: Build utils
+        run: npm run build
         working-directory: npm/packages/utils
-      - if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta')
+      - name: Publish utils
         continue-on-error: true
-        run: npm publish --provenance --tag beta
+        run: npm publish --provenance --tag "$NPM_TAG"
         working-directory: npm/packages/utils
-
-      - if: startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, 'beta')
-        continue-on-error: true
-        run: npm publish --provenance
-        working-directory: npm/packages/utils
+      - name: Wait ${{ env.PUBLISH_DELAY }}s after utils
+        run: sleep "$PUBLISH_DELAY"
 
       # autosuggest
-      - run: npm i --ignore-scripts
+      - name: Install autosuggest
+        run: npm i --ignore-scripts
         working-directory: npm/packages/autosuggest
-      - run: npm run build
+      - name: Build autosuggest
+        run: npm run build
         working-directory: npm/packages/autosuggest
-      - if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta')
+      - name: Publish autosuggest
         continue-on-error: true
-        run: npm publish --provenance --tag beta
+        run: npm publish --provenance --tag "$NPM_TAG"
         working-directory: npm/packages/autosuggest
-
-      - if: startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, 'beta')
-        continue-on-error: true
-        run: npm publish --provenance
-        working-directory: npm/packages/autosuggest
+      - name: Wait ${{ env.PUBLISH_DELAY }}s after autosuggest
+        run: sleep "$PUBLISH_DELAY"
 
       # file-upload
-      - run: npm i --ignore-scripts
+      - name: Install file-upload
+        run: npm i --ignore-scripts
         working-directory: npm/packages/file-upload
-      - run: npm run build
+      - name: Build file-upload
+        run: npm run build
         working-directory: npm/packages/file-upload
-      - if: startsWith(github.ref, 'refs/tags/v') && contains(github.ref, 'beta')
+      - name: Publish file-upload
         continue-on-error: true
-        run: npm publish --provenance --tag beta
-        working-directory: npm/packages/file-upload
-
-      - if: startsWith(github.ref, 'refs/tags/v') && !contains(github.ref, 'beta')
-        continue-on-error: true
-        run: npm publish --provenance
+        run: npm publish --provenance --tag "$NPM_TAG"
         working-directory: npm/packages/file-upload
