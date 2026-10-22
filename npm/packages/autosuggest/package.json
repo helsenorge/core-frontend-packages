@@ -1,6 +1,6 @@
 {
   "name": "@helsenorge/autosuggest",
-  "version": "40.1.0",
+  "version": "40.1.1",
   "publishConfig": {
     "access": "public"
   },
@@ -54,7 +54,7 @@
   },
   "devDependencies": {
     "@helsenorge/designsystem-react": "^16.0.0",
-    "@helsenorge/library-build": "^40.1.0",
+    "@helsenorge/library-build": "^40.1.1",
     "@storybook/react-vite": "^10.4.0",
     "npm-run-all2": "^9.0.0",
     "react-hook-form": "^7.76.0"
