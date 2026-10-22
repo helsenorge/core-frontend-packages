@@ -6,7 +6,7 @@ on:
       - 'v*'
 
 env:
-  PUBLISH_DELAY: 30
+  PUBLISH_DELAY: 60
 
 jobs:
   publish:
