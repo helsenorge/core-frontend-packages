@@ -28,7 +28,11 @@
     "prettier": "prettier --check \"**/*.{js,ts,md,json}\"",
     "prettier:fix": "npm run prettier -- --write"
   },
+  "peerDependencies": {
+    "@helsenorge/designsystem-react": "^16"
+  },
   "devDependencies": {
+    "@helsenorge/designsystem-react": "^16.2.0",
     "typescript": "~6.0.3"
   },
   "dependencies": {
